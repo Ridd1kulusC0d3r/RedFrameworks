@@ -1,39 +1,27 @@
 # GitHub Pages Deployment
 
-The repository contains a complete GitHub Pages pipeline in `.github/workflows/pages.yml`.
+The repository contains a GitHub Pages pipeline in `.github/workflows/pages.yml`.
 
-## What is already automated
+## Automated flow
 
-The workflow:
+The workflow checks out the repository, installs Python/PyYAML, builds the static catalog from `frameworks.yaml`, `catalog.yaml` and `relationships.yaml`, configures Pages, uploads the artifact and deploys it.
 
-1. checks out the repository;
-2. installs Python and PyYAML;
-3. builds the static catalog from `frameworks.yaml` and `catalog.yaml`;
-4. generates the Pages artifact;
-5. deploys through GitHub's official Pages actions.
-
-The site build itself is validated by the regular documentation CI.
-
-## One-time repository setting
-
-GitHub requires Pages to be enabled once at repository level before `actions/configure-pages` can deploy.
-
-In GitHub:
-
-1. open **Settings**;
-2. open **Pages**;
-3. under **Build and deployment**, set **Source** to **GitHub Actions**.
-
-After that, run **Build and deploy knowledge base** from the Actions tab, or push any relevant catalog/site change to `main`.
+The regular documentation CI also builds the site before merge.
 
 ## Expected public address
 
-For the current repository name, GitHub Pages normally publishes at:
-
 `https://ridd1kulusc0d3r.github.io/RedFrameworks/`
 
-Do not advertise that address as live until the first deployment succeeds.
+## Enablement behavior
 
-## Why the workflow does not self-enable Pages
+The workflow now uses `actions/configure-pages@v5` with `enablement: true`, so it attempts to enable Pages automatically.
 
-GitHub's `actions/configure-pages` supports an enablement mode, but enabling Pages requires repository administration / Pages write permissions beyond the default `GITHUB_TOKEN`. Keeping enablement explicit avoids requiring a long-lived privileged token or secret merely to flip a one-time repository setting.
+If the repository token is not allowed to perform the administrative enablement, the fallback is one manual repository setting:
+
+**Settings → Pages → Build and deployment → Source: GitHub Actions**
+
+No long-lived privileged token should be added merely to automate that one switch.
+
+## Deployment triggers
+
+Deployment runs when `main` changes catalog data, relationship data, site code, the build script or the Pages workflow. It can also be triggered manually.
