@@ -1,38 +1,38 @@
 updated: "2026-09-29"
-schema_version: "2.0"
+schema_version: "3.0"
 relationships:
-  - {from: mitre-attack, to: atomic-red-team, relation: behavior-to-validation, confidence: high}
-  - {from: mitre-attack, to: mitre-caldera, relation: behavior-to-emulation, confidence: high}
-  - {from: mitre-attack, to: mitre-d3fend, relation: behavior-to-countermeasure, confidence: high}
-  - {from: mitre-attack, to: sigma, relation: behavior-to-detection, confidence: high}
-  - {from: mitre-attack, to: ttpforge, relation: behavior-to-simulation, confidence: high}
-  - {from: mitre-attack, to: vectr, relation: behavior-to-measurement, confidence: high}
-  - {from: mitre-attack, to: attack-flow, relation: behavior-to-sequencing, confidence: high}
-  - {from: mitre-attack, to: ctid-adversary-emulation, relation: behavior-to-emulation-plan, confidence: high}
-  - {from: mitre-attack, to: mitre-atlas, relation: enterprise-to-ai-context-bridge, confidence: medium}
-  - {from: atomic-red-team, to: splunk-attack-range, relation: simulation-to-telemetry, confidence: high}
-  - {from: openaev, to: mitre-attack, relation: validation-to-behavior, confidence: high}
-  - {from: openaev, to: vectr, relation: validation-to-measurement, confidence: medium}
-  - {from: mitre-atlas, to: pyrit, relation: ai-threat-model-to-assessment, confidence: high}
-  - {from: mitre-atlas, to: garak, relation: ai-threat-model-to-evaluation, confidence: high}
-  - {from: mitre-atlas, to: owasp-genai, relation: ai-threat-model-to-application-risk, confidence: medium}
-  - {from: mitre-atlas, to: nist-ai-rmf-genai, relation: ai-threat-model-to-risk-governance, confidence: medium}
-  - {from: owasp-genai, to: pyrit, relation: application-risk-to-assessment, confidence: medium}
-  - {from: mitre-d3fend, to: sigma, relation: countermeasure-to-detection-context, confidence: medium}
-  - {from: sigma, to: velociraptor, relation: detection-to-investigation, confidence: medium}
-  - {from: bloodhound, to: azurehound, relation: graph-to-data-collection, confidence: high}
-  - {from: bloodhound, to: roadtools, relation: identity-graph-to-research, confidence: medium}
-  - {from: cloudfox, to: stratus-red-team, relation: discovery-to-validation, confidence: medium}
-  - {from: cloudfox, to: pacu, relation: discovery-to-assessment, confidence: medium}
-  - {from: kubehound, to: stratus-red-team, relation: attack-path-to-validation, confidence: medium}
-  - {from: microburst, to: stormspotter, relation: azure-assessment-to-graph-context, confidence: medium}
-  - {from: tiber-eu, to: attack-flow, relation: threat-led-scenario-modeling, confidence: high}
-  - {from: cbest, to: attack-flow, relation: threat-led-scenario-modeling, confidence: high}
-  - {from: crest-tlpt, to: attack-flow, relation: assurance-to-scenario-modeling, confidence: medium}
-  - {from: tiber-eu, to: ctid-adversary-emulation, relation: threat-led-to-emulation-planning, confidence: medium}
-  - {from: infection-monkey, to: mitre-attack, relation: emulation-to-behavior, confidence: high}
-  - {from: realm, to: mitre-attack, relation: emulation-to-behavior, confidence: high}
-  - {from: owasp-mastg, to: mobsf, relation: testing-guide-to-assessment-platform, confidence: medium}
-  - {from: mobsf, to: frida, relation: static-dynamic-to-instrumentation, confidence: medium}
-  - {from: owasp-iot-istg, to: expliot, relation: testing-guide-to-assessment-framework, confidence: medium}
-  - {from: owasp-iot-istg, to: routersploit, relation: testing-guide-to-embedded-assessment, confidence: medium}
+  - {from: mitre-attack, to: atomic-red-team, relation: behavior-to-validation, confidence: high, provenance: curated-crosswalk, source_refs: [mitre-attack, atomic-red-team]}
+  - {from: mitre-attack, to: mitre-caldera, relation: behavior-to-emulation, confidence: high, provenance: curated-crosswalk, source_refs: [mitre-attack, mitre-caldera]}
+  - {from: mitre-attack, to: mitre-d3fend, relation: behavior-to-countermeasure, confidence: high, provenance: curated-crosswalk, source_refs: [mitre-attack, mitre-d3fend]}
+  - {from: mitre-attack, to: sigma, relation: behavior-to-detection, confidence: high, provenance: curated-crosswalk, source_refs: [mitre-attack, sigma]}
+  - {from: mitre-attack, to: ttpforge, relation: behavior-to-simulation, confidence: high, provenance: curated-crosswalk, source_refs: [mitre-attack, ttpforge]}
+  - {from: mitre-attack, to: vectr, relation: behavior-to-measurement, confidence: high, provenance: curated-crosswalk, source_refs: [mitre-attack, vectr]}
+  - {from: mitre-attack, to: attack-flow, relation: behavior-to-sequencing, confidence: high, provenance: curated-crosswalk, source_refs: [mitre-attack, attack-flow]}
+  - {from: mitre-attack, to: ctid-adversary-emulation, relation: behavior-to-emulation-plan, confidence: high, provenance: curated-crosswalk, source_refs: [mitre-attack, ctid-adversary-emulation]}
+  - {from: mitre-attack, to: mitre-atlas, relation: enterprise-to-ai-context-bridge, confidence: medium, provenance: curated-crosswalk, source_refs: [mitre-attack, mitre-atlas]}
+  - {from: atomic-red-team, to: splunk-attack-range, relation: simulation-to-telemetry, confidence: high, provenance: curated-crosswalk, source_refs: [atomic-red-team, splunk-attack-range]}
+  - {from: openaev, to: mitre-attack, relation: validation-to-behavior, confidence: high, provenance: curated-crosswalk, source_refs: [openaev, mitre-attack]}
+  - {from: openaev, to: vectr, relation: validation-to-measurement, confidence: medium, provenance: curated-crosswalk, source_refs: [openaev, vectr]}
+  - {from: mitre-atlas, to: pyrit, relation: ai-threat-model-to-assessment, confidence: high, provenance: curated-crosswalk, source_refs: [mitre-atlas, pyrit]}
+  - {from: mitre-atlas, to: garak, relation: ai-threat-model-to-evaluation, confidence: high, provenance: curated-crosswalk, source_refs: [mitre-atlas, garak]}
+  - {from: mitre-atlas, to: owasp-genai, relation: ai-threat-model-to-application-risk, confidence: medium, provenance: curated-crosswalk, source_refs: [mitre-atlas, owasp-genai]}
+  - {from: mitre-atlas, to: nist-ai-rmf-genai, relation: ai-threat-model-to-risk-governance, confidence: medium, provenance: curated-crosswalk, source_refs: [mitre-atlas, nist-ai-rmf-genai]}
+  - {from: owasp-genai, to: pyrit, relation: application-risk-to-assessment, confidence: medium, provenance: curated-crosswalk, source_refs: [owasp-genai, pyrit]}
+  - {from: mitre-d3fend, to: sigma, relation: countermeasure-to-detection-context, confidence: medium, provenance: curated-crosswalk, source_refs: [mitre-d3fend, sigma]}
+  - {from: sigma, to: velociraptor, relation: detection-to-investigation, confidence: medium, provenance: curated-crosswalk, source_refs: [sigma, velociraptor]}
+  - {from: bloodhound, to: azurehound, relation: graph-to-data-collection, confidence: high, provenance: curated-crosswalk, source_refs: [bloodhound, azurehound]}
+  - {from: bloodhound, to: roadtools, relation: identity-graph-to-research, confidence: medium, provenance: curated-crosswalk, source_refs: [bloodhound, roadtools]}
+  - {from: cloudfox, to: stratus-red-team, relation: discovery-to-validation, confidence: medium, provenance: curated-crosswalk, source_refs: [cloudfox, stratus-red-team]}
+  - {from: cloudfox, to: pacu, relation: discovery-to-assessment, confidence: medium, provenance: curated-crosswalk, source_refs: [cloudfox, pacu]}
+  - {from: kubehound, to: stratus-red-team, relation: attack-path-to-validation, confidence: medium, provenance: curated-crosswalk, source_refs: [kubehound, stratus-red-team]}
+  - {from: microburst, to: stormspotter, relation: azure-assessment-to-graph-context, confidence: medium, provenance: curated-crosswalk, source_refs: [microburst, stormspotter]}
+  - {from: tiber-eu, to: attack-flow, relation: threat-led-scenario-modeling, confidence: high, provenance: curated-crosswalk, source_refs: [tiber-eu, attack-flow]}
+  - {from: cbest, to: attack-flow, relation: threat-led-scenario-modeling, confidence: high, provenance: curated-crosswalk, source_refs: [cbest, attack-flow]}
+  - {from: crest-tlpt, to: attack-flow, relation: assurance-to-scenario-modeling, confidence: medium, provenance: curated-crosswalk, source_refs: [crest-tlpt, attack-flow]}
+  - {from: tiber-eu, to: ctid-adversary-emulation, relation: threat-led-to-emulation-planning, confidence: medium, provenance: curated-crosswalk, source_refs: [tiber-eu, ctid-adversary-emulation]}
+  - {from: infection-monkey, to: mitre-attack, relation: emulation-to-behavior, confidence: high, provenance: curated-crosswalk, source_refs: [infection-monkey, mitre-attack]}
+  - {from: realm, to: mitre-attack, relation: emulation-to-behavior, confidence: high, provenance: curated-crosswalk, source_refs: [realm, mitre-attack]}
+  - {from: owasp-mastg, to: mobsf, relation: testing-guide-to-assessment-platform, confidence: medium, provenance: curated-crosswalk, source_refs: [owasp-mastg, mobsf]}
+  - {from: mobsf, to: frida, relation: static-dynamic-to-instrumentation, confidence: medium, provenance: curated-crosswalk, source_refs: [mobsf, frida]}
+  - {from: owasp-iot-istg, to: expliot, relation: testing-guide-to-assessment-framework, confidence: medium, provenance: curated-crosswalk, source_refs: [owasp-iot-istg, expliot]}
+  - {from: owasp-iot-istg, to: routersploit, relation: testing-guide-to-embedded-assessment, confidence: medium, provenance: curated-crosswalk, source_refs: [owasp-iot-istg, routersploit]}
