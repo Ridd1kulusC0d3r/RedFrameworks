@@ -1,0 +1,27 @@
+scenario:
+  id: "PT-IDENTITY-001"
+  name: "Identity telemetry validation"
+  business_service: "Example identity service"
+  threat_basis: "Training scenario"
+  attack_version: "19.2"
+  execution_date: "2026-09-29"
+  authorization: "lab-only example"
+  phase: "retest"
+  domain: "identity"
+
+weights:
+  telemetry: 0.20
+  detection: 0.25
+  analyst_response: 0.20
+  containment: 0.20
+  evidence: 0.15
+
+scores:
+  telemetry: 92
+  detection: 84
+  analyst_response: 78
+  containment: 76
+  evidence: 90
+
+evidence_level: "E3"
+result: "pass"
