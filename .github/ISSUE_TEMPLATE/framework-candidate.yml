@@ -1,7 +1,6 @@
 name: Framework / project candidate
 description: Propose a framework, standard, platform or tool for catalog review.
 title: "[candidate] "
-labels: ["catalog-review"]
 body:
   - type: markdown
     attributes:
