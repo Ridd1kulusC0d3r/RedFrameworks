@@ -1,0 +1,130 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ridd1kulusc0d3r.github.io/RedFrameworks/schemas/catalog.schema.json",
+  "title": "RedFrameworks cross-domain catalog",
+  "type": "object",
+  "required": [
+    "updated",
+    "schema_version",
+    "entries",
+    "watchlist"
+  ],
+  "properties": {
+    "updated": {
+      "type": "string",
+      "format": "date"
+    },
+    "schema_version": {
+      "type": "string"
+    },
+    "entries": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "name",
+          "type",
+          "domains",
+          "status",
+          "model",
+          "role"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z0-9][a-z0-9-]*$"
+          },
+          "name": {
+            "type": "string",
+            "minLength": 2
+          },
+          "aliases": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "type": {
+            "type": "string",
+            "minLength": 2
+          },
+          "domains": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string"
+            }
+          },
+          "status": {
+            "enum": [
+              "verified",
+              "community",
+              "commercial",
+              "legacy"
+            ]
+          },
+          "model": {
+            "type": "string",
+            "minLength": 2
+          },
+          "url": {
+            "type": "string",
+            "format": "uri"
+          },
+          "role": {
+            "type": "string",
+            "minLength": 3
+          },
+          "evidence_tier": {
+            "enum": [
+              "A",
+              "B",
+              "C",
+              "D"
+            ]
+          },
+          "last_reviewed": {
+            "type": "string",
+            "format": "date"
+          }
+        },
+        "additionalProperties": true
+      }
+    },
+    "watchlist": {
+      "type": "array",
+      "items": {
+        "oneOf": [
+          {
+            "type": "string",
+            "minLength": 2
+          },
+          {
+            "type": "object",
+            "required": [
+              "name"
+            ],
+            "properties": {
+              "name": {
+                "type": "string",
+                "minLength": 2
+              },
+              "domains": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "note": {
+                "type": "string"
+              }
+            },
+            "additionalProperties": true
+          }
+        ]
+      }
+    }
+  },
+  "additionalProperties": true
+}

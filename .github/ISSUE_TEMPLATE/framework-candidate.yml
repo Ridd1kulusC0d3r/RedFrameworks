@@ -1,0 +1,55 @@
+name: Framework / project candidate
+description: Propose a framework, standard, platform or tool for catalog review.
+title: "[candidate] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Candidates are reviewed for provenance, maintenance, taxonomy and defensive relevance before promotion.
+  - type: input
+    id: name
+    attributes:
+      label: Project name
+      placeholder: Example Project
+    validations:
+      required: true
+  - type: input
+    id: upstream
+    attributes:
+      label: Canonical upstream
+      placeholder: https://...
+    validations:
+      required: true
+  - type: dropdown
+    id: type
+    attributes:
+      label: Proposed category
+      options:
+        - methodology / standard
+        - knowledge model
+        - assessment tool
+        - adversary emulation / validation
+        - detection / response
+        - cloud / identity / Kubernetes
+        - mobile / IoT / embedded
+        - AI / GenAI
+        - commercial platform
+        - other
+    validations:
+      required: true
+  - type: textarea
+    id: case
+    attributes:
+      label: Why it belongs
+      description: Explain scope, maintenance state, licensing and analyst value.
+    validations:
+      required: true
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Verification
+      options:
+        - label: I checked that this is the canonical upstream.
+          required: true
+        - label: I am not relying only on a secondary "awesome list" or marketing article.
+          required: true

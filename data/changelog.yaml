@@ -1,0 +1,27 @@
+schema_version: "1.0"
+releases:
+  - version: "3.0.0"
+    date: "2026-09-29"
+    changes:
+      - type: added
+        area: data-integrity
+        items: ["JSON Schema validation", "duplicate ID checks", "broken relationship checks"]
+      - type: added
+        area: knowledge-graph
+        items: ["entity pages", "relationship confidence", "static API", "STIX 2.1 export"]
+      - type: added
+        area: analyst-experience
+        items: ["URL-persisted filters", "factual comparison", "CSV export", "JSON export", "EN/PT/ES UI"]
+      - type: added
+        area: evidence-engineering
+        items: ["scenario schema", "E3 evidence bundle", "coverage trend example"]
+      - type: added
+        area: automation
+        items: ["upstream health review", "contributor review", "versioned release workflow"]
+      - type: changed
+        entity: openaev
+        from: "OpenBAS"
+        to: "OpenAEV"
+      - type: status-change
+        entities: ["DetectionLab", "Havoc"]
+        to: legacy

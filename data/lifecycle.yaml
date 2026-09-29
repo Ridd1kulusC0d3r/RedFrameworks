@@ -1,0 +1,20 @@
+updated: "2026-09-29"
+schema_version: "1.0"
+events:
+  - entity: openaev
+    event: renamed
+    previous_name: "OpenBAS"
+    current_name: "OpenAEV"
+    status: verified
+    reviewed: "2026-09-29"
+    note: "Historical alias retained for search and migration context."
+  - entity: detectionlab
+    event: moved-to-legacy
+    status: legacy
+    reviewed: "2026-09-29"
+    note: "Retained for historical and lab-design context; upstream is no longer actively maintained."
+  - entity: havoc
+    event: moved-to-legacy
+    status: legacy
+    reviewed: "2026-09-29"
+    note: "Canonical repository is archived; retained as a historical ecosystem reference."

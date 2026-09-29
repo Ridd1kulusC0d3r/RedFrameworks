@@ -1,0 +1,38 @@
+scenario_id: "RF-IDENTITY-001"
+name: "Identity telemetry and response validation"
+authorization: "Authorized lab or explicitly approved assessment only"
+business_context: "Validate whether identity-related behavior is observable, detected, triaged and contained."
+threat_basis: "Threat-informed training scenario based on common identity-abuse behavior."
+mappings:
+  attack: ["T1078", "T1087"]
+  atlas: []
+  d3fend: []
+flow:
+  - step: 1
+    objective: "Exercise an approved test identity and confirm expected authentication telemetry."
+  - step: 2
+    objective: "Generate approved account-discovery behavior and observe telemetry."
+  - step: 3
+    objective: "Measure detection, analyst recognition and containment workflow."
+telemetry:
+  - source: "Identity provider audit logs"
+    expectation: "Authentication event is timestamped and correlated to the approved test identity."
+  - source: "Endpoint or workload telemetry"
+    expectation: "Discovery activity is observable with enough context for triage."
+detections:
+  - name: "Approved identity anomaly validation"
+    expected: true
+    format: "SIEM analytic"
+  - name: "Discovery behavior validation"
+    expected: true
+    format: "Sigma-compatible analytic concept"
+response:
+  expected: "Analyst recognizes the scenario, documents context and follows the approved containment workflow."
+evidence:
+  target_level: "E3"
+  required:
+    - "Source-system event"
+    - "Security telemetry"
+    - "Alert or analytic result"
+    - "Analyst response record"
+    - "Retest outcome"

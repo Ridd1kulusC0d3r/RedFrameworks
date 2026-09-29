@@ -1,252 +1,367 @@
+<div align="center">
+
 # RedFrameworks
 
-> A practical reference for penetration testing, red teaming, adversary emulation, threat-informed testing, and defensive validation.
+### Threat-Informed Offensive Security Knowledge Graph
 
-[![Status](https://img.shields.io/badge/status-active-success)](#)
-[![Focus](https://img.shields.io/badge/focus-red%20team%20%7C%20adversary%20emulation-red)](#)
-[![ATT%26CK](https://img.shields.io/badge/mapped%20to-MITRE%20ATT%26CK-blue)](https://attack.mitre.org/)
+**Methodologies · Adversary Emulation · Cloud · AI Security · Purple Team · Detection Validation · Evidence Engineering**
 
-## Why this repository exists
+[![Documentation quality](https://github.com/Ridd1kulusC0d3r/RedFrameworks/actions/workflows/quality.yml/badge.svg)](https://github.com/Ridd1kulusC0d3r/RedFrameworks/actions/workflows/quality.yml)
+[![Pages](https://github.com/Ridd1kulusC0d3r/RedFrameworks/actions/workflows/pages.yml/badge.svg)](https://github.com/Ridd1kulusC0d3r/RedFrameworks/actions/workflows/pages.yml)
+[![Freshness](https://github.com/Ridd1kulusC0d3r/RedFrameworks/actions/workflows/freshness.yml/badge.svg)](https://github.com/Ridd1kulusC0d3r/RedFrameworks/actions/workflows/freshness.yml)
+[![ATT&CK](https://img.shields.io/badge/knowledge-MITRE%20ATT%26CK-6f42c1)](https://attack.mitre.org/)
+[![STIX 2.1](https://img.shields.io/badge/export-STIX%202.1-blue)](docs/api.md)
 
-Security testing frameworks answer different questions. PTES helps structure an engagement. NIST SP 800-115 provides a formal testing and assessment model. OWASP WSTG focuses on web applications. MITRE ATT&CK gives a behavioral vocabulary. Adversary emulation plans connect threat intelligence to realistic testing. D3FEND helps translate observed offensive behavior into defensive countermeasure concepts.
+[**Live Knowledge Base**](https://ridd1kulusc0d3r.github.io/RedFrameworks/) ·
+[**Roadmaps**](docs/roadmaps/README.md) ·
+[**Static API**](docs/api.md) ·
+[**Gap Analysis**](docs/gap-analysis.md) ·
+[**Contributing**](CONTRIBUTING.md)
 
-This repository brings those perspectives together without pretending they are interchangeable.
+</div>
 
-The goal is not to collect every red-team link on the internet. The goal is to help an analyst choose a methodology, structure an engagement, connect activity to adversary behavior, and produce evidence that defenders can actually use.
+---
 
-## Repository map
+## What is RedFrameworks?
 
-| Area | Purpose |
-|---|---|
-| [Taxonomy](docs/taxonomy.md) | Separate methodologies, knowledge models, tools, validation platforms and domain guides |
-| [PTES](PTES.md) | Engagement lifecycle based on the Penetration Testing Execution Standard |
-| [Framework Matrix](docs/framework-matrix.md) | Compare major testing and threat-informed frameworks |
-| [Threat-Led Testing](docs/threat-led-testing.md) | TIBER-EU, CBEST, CREST TLPT / STAR and regulated testing |
-| [Adversary Emulation](docs/adversary-emulation.md) | Turn CTI into controlled, measurable emulation plans |
-| [AI / GenAI Security](docs/ai-security.md) | ATLAS, OWASP GenAI, NIST AI RMF, PyRIT and garak |
-| [Cloud Red Teaming](docs/cloud-red-teaming.md) | Scope cloud assessments across identity, control plane, workloads and telemetry |
-| [Cloud-Native Ecosystem](docs/cloud-native-ecosystem.md) | CloudFox, Pacu, Stratus, AzureHound, KubeHound and related roles |
-| [Detection & Validation](docs/detection-validation.md) | Purple team, BAS, Sigma, Velociraptor and continuous validation |
-| [Mobile & IoT](docs/mobile-iot.md) | OWASP mobile / IoT methodologies and assessment ecosystem |
-| [Operational Tooling](docs/tooling-landscape.md) | Separate operational platforms from methodologies |
-| [Research Watchlist](docs/watchlist.md) | Candidates requiring provenance, maintenance or scope verification |
-| [Reporting & Evidence](docs/reporting-and-evidence.md) | Convert technical observations into reproducible evidence and remediation |
-| [Framework data](frameworks.yaml) | Machine-readable methodology / knowledge-model catalog |
-| [Cross-domain catalog](catalog.yaml) | Machine-readable tooling and platform catalog |\n| [Relationship graph](relationships.yaml) | Curated links between behavior models, validation, telemetry and defensive outcomes |\n| [2026 catalog expansion](docs/catalog-expansion-2026.md) | Promotion, legacy and watchlist decisions |\n| [Next Evolutions](docs/next-evolutions.md) | Platform v3 engineering roadmap |
-| [Examples](docs/examples.md) | ATT&CK Navigator, Attack Flow and purple-team measurement examples |
-| Browsable catalog | Generated from YAML and deployed by the GitHub Pages workflow; see [Pages deployment](docs/pages-deployment.md) |
+RedFrameworks is a curated reference for **authorized penetration testing, threat-led red teaming, adversary emulation, purple-team validation, detection engineering and security research**.
+
+It deliberately separates methodologies from tools, knowledge models from execution platforms, validation from mere activity, current projects from legacy references, and verified upstreams from research candidates.
+
+The objective is not to collect every offensive-security repository on the internet. The internet is already handling that particular form of chaos rather efficiently.
+
+> **What am I testing, why does it matter, how should it be modeled, what evidence should exist, and did defensive capability improve after the retest?**
+
+---
+
+## Live platform
+
+**https://ridd1kulusc0d3r.github.io/RedFrameworks/**
+
+The public site is generated directly from the repository data and includes:
+
+- search and multi-dimensional filters;
+- shareable URL state;
+- EN / PT-BR / ES interface;
+- factual comparison;
+- CSV / JSON export;
+- per-entity pages;
+- provenance scores;
+- knowledge-graph relationships;
+- distribution and coverage visuals;
+- static JSON API;
+- STIX 2.1 export.
+
+---
 
 ## Operating model
 
-```text
-Threat Intelligence
-        │
-        ▼
-Adversary / Technique Selection
-        │
-        ▼
-Scope + Rules of Engagement
-        │
-        ▼
-Test / Emulation Plan
-        │
-        ▼
-Execution + Evidence Collection
-        │
-        ▼
-ATT&CK Mapping + Detection Review
-        │
-        ▼
-Defensive Gaps + Remediation
-        │
-        ▼
-Retest / Validation
-```
+~~~mermaid
+flowchart LR
+    TI["Threat Intelligence"] --> BEH["Behavior / Scenario"]
+    BEH --> SCOPE["Scope + Rules of Engagement"]
+    SCOPE --> TEST["Controlled Validation"]
+    TEST --> TEL["Telemetry"]
+    TEL --> DET["Detection"]
+    DET --> RESP["Analyst Response"]
+    RESP --> REM["Remediation"]
+    REM --> RETEST["Retest"]
+    RETEST --> EVID["Evidence E0-E3"]
 
-This deliberately separates **testing** from **validation**. A red-team activity that ends with "we got access" produces an anecdote. A mature activity also records what was observable, what was detected, what failed, which controls reduced impact, and whether fixes survived a retest.
+    style TI fill:#241117,stroke:#e0445e,color:#fff
+    style EVID fill:#12241b,stroke:#5dd59a,color:#fff
+~~~
 
-## Layered ecosystem
+A mature engagement does not stop at “we obtained access.” It records what was observable, what was detected, what response occurred, which control changed and whether that change survived retesting.
 
-The repository now uses six layers instead of pretending every security project is a "framework":
+---
 
-### 1. Methodologies and assurance
+## Knowledge graph
 
-- **PTES** and **NIST SP 800-115** for engagement structure.
-- **TIBER-EU**, **CBEST** and **CREST TLPT / STAR** for threat-led and intelligence-led testing.
-- **OWASP WSTG**, **MASTG** and **IoT ISTG** for domain-specific assessment guidance.
+~~~mermaid
+flowchart TD
+    ATTACK["MITRE ATT&CK"]
+    ATLAS["MITRE ATLAS"]
+    D3FEND["MITRE D3FEND"]
+    FLOW["Attack Flow"]
+    ATOMIC["Atomic Red Team"]
+    CALDERA["MITRE CALDERA"]
+    TTP["TTPForge"]
+    SIGMA["Sigma"]
+    VECTR["VECTR"]
+    OPENAEV["OpenAEV"]
+    PYRIT["PyRIT"]
+    GARAK["garak"]
 
-### 2. Adversary and defensive knowledge models
+    ATTACK --> ATOMIC
+    ATTACK --> CALDERA
+    ATTACK --> TTP
+    ATTACK --> SIGMA
+    ATTACK --> D3FEND
+    ATTACK --> FLOW
+    ATTACK -. AI context .-> ATLAS
+    OPENAEV --> ATTACK
+    ATTACK --> VECTR
+    ATLAS --> PYRIT
+    ATLAS --> GARAK
 
-- **MITRE ATT&CK** for adversary behavior.
-- **MITRE ATLAS** for AI-system adversary behavior.
-- **Attack Flow** for multi-step relationships.
-- **MITRE D3FEND** for defensive countermeasure concepts.
-- **MITRE Engage** for adversary engagement and deception planning.
+    style ATTACK fill:#40151f,stroke:#ff778c,color:#fff
+    style ATLAS fill:#1c2433,stroke:#8fc5ff,color:#fff
+    style D3FEND fill:#14281e,stroke:#5dd59a,color:#fff
+~~~
 
-### 3. Emulation and validation
+Canonical graph data: [relationships.yaml](relationships.yaml)
 
-- **Atomic Red Team** for focused behavior validation.
-- **MITRE CALDERA** for repeatable adversary emulation.
-- **Stratus Red Team** for granular cloud emulation.
-- **OpenAEV** for exercise, BAS and security-validation orchestration.
+---
 
-### 4. Operational assessment platforms
+## Six-layer ecosystem
 
-Examples include **BloodHound / AzureHound**, **CloudFox**, **Pacu**, **KubeHound**, **MobSF**, **Frida**, and authorized adversary-emulation platforms.
+| Layer | Main question | Examples |
+|---|---|---|
+| **Methodology & assurance** | How should the engagement be governed? | PTES, NIST SP 800-115, TIBER-EU, CBEST |
+| **Knowledge models** | How do we describe behavior and defense? | ATT&CK, ATLAS, D3FEND, Attack Flow |
+| **Emulation & validation** | How do we reproduce behavior safely? | Atomic Red Team, CALDERA, TTPForge, OpenAEV |
+| **Operational assessment** | Which platform supports the authorized test? | BloodHound, CloudFox, Pacu, MobSF |
+| **Detection & response** | How do we represent and validate defense? | Sigma, Velociraptor, VECTR, Splunk Attack Range |
+| **Domain guidance** | What changes for a specific technology? | WSTG, MASTG, IoT ISTG, cloud guidance |
 
-These are tools, not methodologies. Their value depends on the test objective, Rules of Engagement, evidence quality and defensive outcome.
+See [taxonomy](docs/taxonomy.md).
 
-### 5. Detection and response ecosystem
+---
 
-- **Sigma** for portable detection logic.
-- **YARA** for pattern-based detection and analysis.
-- **Velociraptor** for endpoint visibility and threat hunting.
-- commercial BAS / exposure-validation platforms for continuous validation.
+## Choose by objective
 
-### 6. AI security
-
-- **OWASP GenAI Security Project** for application risk guidance.
-- **MITRE ATLAS** for AI adversary tactics and techniques.
-- **NIST AI RMF GenAI Profile** for risk-management framing.
-- **Microsoft PyRIT** and **NVIDIA garak** for structured AI security assessment.
-
-See [Taxonomy](docs/taxonomy.md) for classification rules.
-
-## Choosing a framework
-
-| Need | Start with | Add |
+| Objective | Start with | Add |
 |---|---|---|
 | Traditional penetration test | PTES | NIST SP 800-115 |
 | Web application assessment | OWASP WSTG | PTES |
-| Threat-led red team | TIBER-EU / CBEST / CREST TLPT where applicable | ATT&CK + CTID Emulation Library + Attack Flow |
-| Purple-team validation | ATT&CK | Atomic Red Team + D3FEND + Sigma |
-| Formal assessment governance | NIST SP 800-115 | PTES |
-| Cloud assessment | Provider rules + PTES | ATT&CK + Stratus + attack-path analysis |
-| Kubernetes assessment | cloud-native threat model | KubeHound + posture / configuration validation |
-| AI / GenAI assessment | OWASP GenAI + ATLAS | NIST AI RMF + PyRIT / garak |
-| Mobile assessment | OWASP MASVS / MASTG | MobSF + dynamic instrumentation |
-| IoT assessment | OWASP IoT ISTG / ISVS | ecosystem-specific evidence model |
-| Continuous validation | ATT&CK | Atomic tests / OpenAEV / BAS + detection engineering |
+| Threat-led testing | TIBER-EU / CBEST / CREST TLPT | ATT&CK + Attack Flow |
+| Purple-team validation | ATT&CK | Atomic Red Team + VECTR + Sigma |
+| Cloud assessment | PTES + provider rules | CloudFox + Stratus + attack-path analysis |
+| Kubernetes | cloud-native threat model | KubeHound + validation tooling |
+| AI / GenAI | OWASP GenAI + ATLAS | NIST AI RMF + PyRIT / garak |
+| Mobile | OWASP MASVS / MASTG | MobSF + dynamic instrumentation |
+| IoT / embedded | OWASP IoT ISTG / ISVS | ecosystem-specific testing |
+| Continuous validation | ATT&CK | OpenAEV / BAS + detection engineering |
 
-## Minimum engagement artifacts
+---
 
-Every serious engagement should produce at least:
+## Data pipeline
 
-1. **Authorization and Rules of Engagement**
-2. **Scope and exclusions**
-3. **Threat or test hypothesis**
-4. **Technique / scenario map**
-5. **Execution log and evidence**
-6. **Finding register**
-7. **Detection and telemetry observations**
-8. **Remediation plan**
-9. **Retest result**
-10. **Executive summary**
+~~~mermaid
+flowchart LR
+    F["frameworks.yaml"] --> V["Schema + Integrity Validation"]
+    C["catalog.yaml"] --> V
+    R["relationships.yaml"] --> V
+    L["Lifecycle data"] --> V
 
-A screenshot without timestamps, context, affected asset, reproduction notes and impact is decoration, not evidence.
+    V --> N["Normalized Catalog"]
+    N --> P["GitHub Pages"]
+    N --> API["Static API"]
+    N --> ENT["Entity Pages"]
+    N --> STIX["STIX 2.1"]
+    N --> GRAPH["Knowledge Graph"]
 
-## Threat-informed workflow
+    HEALTH["Upstream Health"] --> N
+    FRESH["Freshness Review"] --> N
 
-A useful threat-informed red-team cycle is:
+    style V fill:#22131a,stroke:#e0445e,color:#fff
+    style N fill:#111b25,stroke:#8fc5ff,color:#fff
+    style GRAPH fill:#12241b,stroke:#5dd59a,color:#fff
+~~~
 
-```text
-1. Define business crown jewels
-2. Identify relevant adversaries / behaviors
-3. Select ATT&CK techniques
-4. Build attack-flow scenarios
-5. Define success and abort criteria
-6. Execute under Rules of Engagement
-7. Capture telemetry and analyst response
-8. Map findings to defensive controls
-9. Recommend countermeasures
-10. Retest and measure improvement
-```
+### Canonical data
 
-## Metrics that matter
-
-Avoid vanity metrics such as "number of exploits executed." Better measures include:
-
-- percentage of emulated techniques observed in telemetry;
-- percentage detected automatically;
-- mean time to analyst recognition;
-- mean time to containment;
-- proportion of findings reproduced after remediation;
-- percentage of high-impact attack paths blocked;
-- coverage of critical assets and identities;
-- ATT&CK technique coverage by evidence quality;
-- detection fidelity and false-positive burden.
-
-## Evidence quality model
-
-Use four evidence levels:
-
-| Level | Meaning |
+| File | Purpose |
 |---|---|
-| E0 | Claim only, no supporting evidence |
-| E1 | Screenshot or manual observation |
-| E2 | Reproducible technical evidence with timestamps and context |
-| E3 | Correlated evidence across source system, security telemetry and analyst response |
+| [frameworks.yaml](frameworks.yaml) | methodologies, standards and knowledge models |
+| [catalog.yaml](catalog.yaml) | tools, platforms, commercial products and watchlist |
+| [relationships.yaml](relationships.yaml) | curated graph edges |
+| [data/lifecycle.yaml](data/lifecycle.yaml) | renames, legacy transitions and lifecycle events |
+| [data/changelog.yaml](data/changelog.yaml) | machine-readable platform history |
+| [schemas/](schemas/) | JSON Schemas and validation contracts |
 
-Prefer E2 or E3 for material findings.
+---
 
-## Safety and authorization
+## Provenance model
 
-This repository is intended for **authorized security testing, lab work, defensive validation and research**.
+| Tier | Meaning |
+|---|---|
+| **A** | regulator, standard, foundation or primary official documentation |
+| **B** | canonical maintainer repository or official vendor documentation |
+| **C** | traceable community source |
+| **D** | research candidate / insufficiently verified |
 
-Before any execution:
+The generated site also computes a provenance score from evidence tier, review recency, lifecycle state and available upstream-maintenance signals.
 
-- obtain explicit authorization;
-- document scope and exclusions;
-- define stop conditions;
-- protect collected data;
-- avoid destructive actions unless explicitly approved;
-- ensure production-impact risks are understood;
-- retain an audit trail.
+A provenance score is a **curation signal**, not a universal ranking of political candidates, security products, breakfast cereals, or anything else humans enjoy ranking.
 
-## Primary references
+---
 
-- PTES: https://www.pentest-standard.org/
-- NIST SP 800-115: https://csrc.nist.gov/pubs/sp/800/115/final
-- OWASP WSTG: https://wstg.owasp.org/
-- MITRE ATT&CK: https://attack.mitre.org/
-- Center for Threat-Informed Defense: https://ctid.mitre.org/
-- Adversary Emulation Library: https://ctid.mitre.org/resources/adversary-emulation-library/
-- Attack Flow: https://attackflow.org/
-- MITRE D3FEND: https://d3fend.mitre.org/
-- MITRE CALDERA: https://caldera.mitre.org/
-- Atomic Red Team: https://github.com/redcanaryco/atomic-red-team
+## Evidence engineering
 
-## Roadmap
+~~~mermaid
+flowchart LR
+    E0["E0 · Claim"] --> E1["E1 · Observation"]
+    E1 --> E2["E2 · Reproducible Evidence"]
+    E2 --> E3["E3 · Correlated Evidence"]
 
-- [x] Rebuild repository structure
-- [x] Expand PTES lifecycle
-- [x] Add framework comparison matrix
-- [x] Add adversary-emulation methodology
-- [x] Add cloud red-team guidance
-- [x] Add reporting and evidence model
-- [x] Add machine-readable framework catalog
-- [x] Add assessment templates
-- [x] Add automated link validation
-- [x] Add threat-led testing frameworks
-- [x] Add AI / GenAI security layer
-- [x] Add cloud-native / Kubernetes layer
-- [x] Add mobile and IoT layer
-- [x] Add tooling taxonomy and watchlist
-- [x] Add ATT&CK Navigator examples
-- [x] Add Attack Flow examples
-- [x] Add purple-team measurement templates
-- [x] Add automated framework freshness checks
-- [x] Generate browsable catalog from YAML
-- [x] Add GitHub Pages build and deployment workflow
+    E3 --> SRC["Source event"]
+    E3 --> TEL["Security telemetry"]
+    E3 --> ALERT["Detection"]
+    E3 --> RESP["Analyst response"]
+    E3 --> RET["Retest"]
 
-> The deployment workflow now attempts to enable/configure Pages automatically. If GitHub denies that administrative change, the only fallback is **Settings → Pages → Source: GitHub Actions**. See [Pages deployment](docs/pages-deployment.md).
+    style E0 fill:#281315,stroke:#8b1e1e,color:#fff
+    style E3 fill:#11271b,stroke:#5dd59a,color:#fff
+~~~
 
-### Continuous roadmap
+Structured examples:
 
-The original roadmap is complete. New work should now be driven by catalog freshness, evidence quality, standards changes and validated community contributions rather than permanent unchecked boxes.
+- [Scenario schema](schemas/scenario.schema.json)
+- [Validation scenarios](examples/scenarios/)
+- [Evidence bundles](examples/evidence/)
+- [Coverage trends](examples/trends/)
+- [Evidence engineering](docs/evidence-engineering.md)
 
-## Contribution philosophy
+---
 
-New content should improve decision-making, repeatability or evidence quality. Do not add tools merely because they are popular. A useful contribution explains **where it fits, what problem it solves, what evidence it produces, and how it connects to defensive outcomes**.
+## Repository map
 
-See [CONTRIBUTING.md](CONTRIBUTING.md).
+| Area | Contents |
+|---|---|
+| [docs/](docs/) | methodologies, taxonomy, reporting, evidence and domain guidance |
+| [docs/roadmaps/](docs/roadmaps/) | platform, analyst, data, evidence and research roadmaps |
+| [examples/attack-navigator/](examples/attack-navigator/) | ATT&CK Navigator layers |
+| [examples/attack-flow/](examples/attack-flow/) | Attack Flow / STIX examples |
+| [examples/scenarios/](examples/scenarios/) | structured defensive-validation scenarios |
+| [examples/evidence/](examples/evidence/) | E0-E3 evidence examples |
+| [schemas/](schemas/) | machine-readable contracts |
+| [scripts/](scripts/) | validation, build, freshness, upstream health and STIX export |
+| [site/](site/) | static web interface |
+| [.github/workflows/](.github/workflows/) | CI, Pages, review automation and releases |
+
+---
+
+## Roadmaps
+
+~~~mermaid
+flowchart LR
+    V1["v1 · Knowledge Base"] --> V2["v2 · Interactive Catalog"]
+    V2 --> V3["v3 · Knowledge Graph"]
+    V3 --> V4["v4 · Continuous Intelligence"]
+    V4 --> V5["v5 · Ecosystem API"]
+
+    style V1 fill:#14261d,stroke:#5dd59a,color:#fff
+    style V2 fill:#14261d,stroke:#5dd59a,color:#fff
+    style V3 fill:#40151f,stroke:#ff778c,color:#fff
+~~~
+
+- [Platform roadmap](docs/roadmaps/platform-roadmap.md)
+- [Analyst roadmap](docs/roadmaps/analyst-roadmap.md)
+- [Data & provenance roadmap](docs/roadmaps/data-roadmap.md)
+- [Evidence roadmap](docs/roadmaps/evidence-roadmap.md)
+- [Research promotion roadmap](docs/roadmaps/research-roadmap.md)
+
+---
+
+## Research watchlist
+
+Candidates requiring additional verification remain in:
+
+- [Research watchlist](docs/watchlist.md)
+- [Gap analysis](docs/gap-analysis.md)
+
+Promotion requires a canonical upstream, maintenance state, license/commercial model, correct taxonomy, clear use case and review date.
+
+---
+
+## Automation
+
+| Workflow | Purpose |
+|---|---|
+| **Documentation quality** | links, schemas, integrity, examples, STIX and site build |
+| **Catalog freshness** | review-date cadence |
+| **Upstream health review** | archive, availability, activity and release signals |
+| **Catalog contribution review** | PR taxonomy / schema / reference validation |
+| **Build and deploy knowledge base** | Pages, API, entity pages and STIX |
+| **Versioned catalog release** | release assets for v* tags |
+
+---
+
+## Static API & STIX
+
+Documentation: [docs/api.md](docs/api.md)
+
+Public base:
+
+~~~text
+https://ridd1kulusc0d3r.github.io/RedFrameworks/
+~~~
+
+Generated endpoints:
+
+~~~text
+/api/version.json
+/api/catalog.json
+/api/frameworks.json
+/api/relationships.json
+/api/watchlist.json
+/api/redframeworks-stix-2.1.json
+/api/opencti-import-manifest.json
+/data/upstream-health.json
+~~~
+
+---
+
+## Safety & authorization
+
+RedFrameworks is intended for authorized security testing, labs, defensive validation, threat-informed research and detection/response engineering.
+
+Before execution, define authorization, scope, exclusions, stop conditions, evidence handling and production-impact constraints.
+
+The repository focuses on **methodology, modeling, evidence and defensive validation**, not destructive operational procedures.
+
+---
+
+## Project status
+
+### Platform v3 · Knowledge Graph
+
+| Capability | Status |
+|---|---|
+| Schema-driven data | ✅ |
+| Cross-file integrity validation | ✅ |
+| Knowledge graph | ✅ |
+| Entity pages | ✅ |
+| Provenance scoring | ✅ |
+| Static API | ✅ |
+| STIX 2.1 export | ✅ |
+| Upstream lifecycle review | ✅ |
+| Factual comparison | ✅ |
+| CSV / JSON export | ✅ |
+| EN / PT-BR / ES UI | ✅ |
+| Evidence engineering | ✅ |
+| Versioned release workflow | ✅ |
+
+See [CHANGELOG.md](CHANGELOG.md).
+
+---
+
+## Contributing
+
+Contributions should improve decision quality, provenance, repeatability, defensive measurement, evidence quality, taxonomy or interoperability.
+
+Read [CONTRIBUTING.md](CONTRIBUTING.md) and [review policy](docs/review-policy.md) before promoting a new entry.
+
+---
+
+<div align="center">
+
+**RedFrameworks**
+
+*Threat → Behavior → Validation → Detection → Evidence → Retest*
+
+[Live Knowledge Base](https://ridd1kulusc0d3r.github.io/RedFrameworks/) · [API](docs/api.md) · [Roadmaps](docs/roadmaps/README.md)
+
+</div>
