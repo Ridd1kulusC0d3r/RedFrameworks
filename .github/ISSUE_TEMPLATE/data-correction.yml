@@ -1,0 +1,33 @@
+name: Data / provenance correction
+description: Report a rename, archive state, bad relationship, stale link or classification problem.
+title: "[data] "
+labels: ["data-quality"]
+body:
+  - type: dropdown
+    id: kind
+    attributes:
+      label: Correction type
+      options:
+        - renamed / successor
+        - archived / legacy
+        - URL / upstream
+        - taxonomy
+        - relationship
+        - review date / freshness
+        - API / site data
+        - other
+    validations:
+      required: true
+  - type: input
+    id: entity
+    attributes:
+      label: Entity ID or name
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Primary-source evidence
+      description: Include canonical documentation or maintainer-controlled sources.
+    validations:
+      required: true
