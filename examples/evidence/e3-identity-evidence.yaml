@@ -1,0 +1,22 @@
+evidence_bundle:
+  id: "E3-RF-IDENTITY-001"
+  scenario_id: "RF-IDENTITY-001"
+  level: "E3"
+  purpose: "Correlate source activity, security telemetry and analyst response."
+  authorization: "Lab-only example; replace with engagement-specific authorization reference."
+  timeline:
+    - phase: "source-event"
+      expected_artifact: "Timestamped identity-provider audit event"
+    - phase: "telemetry"
+      expected_artifact: "Correlated endpoint, workload or control-plane event"
+    - phase: "detection"
+      expected_artifact: "Alert or analytic result with rule/version context"
+    - phase: "response"
+      expected_artifact: "Analyst triage decision and approved containment record"
+    - phase: "retest"
+      expected_artifact: "Evidence that remediation or tuning survived a controlled retest"
+  integrity:
+    hash_sensitive_exports: true
+    redact_secrets: true
+    record_timezone: true
+    record_collection_method: true
