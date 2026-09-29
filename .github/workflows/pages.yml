@@ -6,6 +6,7 @@ on:
       - "frameworks.yaml"
       - "catalog.yaml"
       - "relationships.yaml"
+      - "data/**"
       - "schemas/**"
       - "examples/trends/**"
       - "site/**"
