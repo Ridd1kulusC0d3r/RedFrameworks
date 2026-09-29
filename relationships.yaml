@@ -1,0 +1,21 @@
+updated: "2026-09-29"
+schema_version: "1.0"
+relationships:
+  - {from: mitre-attack, to: atomic-red-team, relation: behavior-to-validation}
+  - {from: mitre-attack, to: mitre-caldera, relation: behavior-to-emulation}
+  - {from: mitre-attack, to: mitre-d3fend, relation: behavior-to-countermeasure}
+  - {from: mitre-attack, to: sigma, relation: behavior-to-detection}
+  - {from: mitre-attack, to: ttpforge, relation: behavior-to-simulation}
+  - {from: mitre-attack, to: vectr, relation: behavior-to-measurement}
+  - {from: atomic-red-team, to: splunk-attack-range, relation: simulation-to-telemetry}
+  - {from: openaev, to: mitre-attack, relation: validation-to-behavior}
+  - {from: mitre-atlas, to: pyrit, relation: ai-threat-model-to-assessment}
+  - {from: mitre-atlas, to: garak, relation: ai-threat-model-to-evaluation}
+  - {from: bloodhound, to: azurehound, relation: graph-to-data-collection}
+  - {from: bloodhound, to: roadtools, relation: identity-graph-to-research}
+  - {from: cloudfox, to: stratus-red-team, relation: discovery-to-validation}
+  - {from: kubehound, to: stratus-red-team, relation: attack-path-to-validation}
+  - {from: tiber-eu, to: attack-flow, relation: threat-led-scenario-modeling}
+  - {from: cbest, to: attack-flow, relation: threat-led-scenario-modeling}
+  - {from: infection-monkey, to: mitre-attack, relation: emulation-to-behavior}
+  - {from: realm, to: mitre-attack, relation: emulation-to-behavior}
