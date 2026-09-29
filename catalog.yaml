@@ -1,5 +1,5 @@
 updated: "2026-09-29"
-schema_version: "1.0"
+schema_version: "2.0"
 
 entries:
   - id: stratus-red-team
@@ -47,14 +47,17 @@ entries:
     url: "https://kubehound.io/"
     role: "Kubernetes attack-path graphing"
 
-  - id: openbas
-    name: "OpenBAS"
-    type: "validation-platform"
-    domains: ["purple-team", "bas", "enterprise"]
+  - id: openaev
+    name: "OpenAEV"
+    aliases: ["OpenBAS"]
+    type: "adversarial-exposure-validation"
+    domains: ["purple-team", "bas", "aev", "enterprise"]
     status: "verified"
     model: "open-source"
-    url: "https://docs.openbas.io/"
-    role: "breach-and-attack simulation and security validation"
+    url: "https://docs.openaev.io/"
+    role: "adversarial exposure validation, attack simulation and security validation"
+    evidence_tier: "A"
+    last_reviewed: "2026-09-29"
 
   - id: sigma
     name: "Sigma"
@@ -183,6 +186,182 @@ entries:
     model: "commercial"
     role: "security control validation"
 
+  - id: metasploit-framework
+    name: "Metasploit Framework"
+    type: "assessment-framework"
+    domains: ["enterprise", "network", "application-security"]
+    status: "verified"
+    model: "open-source"
+    url: "https://github.com/rapid7/metasploit-framework"
+    role: "general-purpose authorized penetration-testing framework"
+    evidence_tier: "B"
+    last_reviewed: "2026-09-29"
+
+  - id: bloodhound
+    name: "BloodHound"
+    type: "attack-path-analysis"
+    domains: ["identity", "active-directory", "entra-id"]
+    status: "verified"
+    model: "open-source"
+    url: "https://github.com/SpecterOps/BloodHound"
+    role: "identity relationship and attack-path analysis"
+    evidence_tier: "B"
+    last_reviewed: "2026-09-29"
+
+  - id: infection-monkey
+    name: "Infection Monkey"
+    type: "adversary-emulation-platform"
+    domains: ["enterprise", "network", "security-validation"]
+    status: "verified"
+    model: "open-source"
+    url: "https://github.com/guardicore/monkey"
+    role: "automated adversary emulation and resilience validation"
+    evidence_tier: "B"
+    last_reviewed: "2026-09-29"
+
+  - id: ttpforge
+    name: "TTPForge"
+    type: "attack-simulation-framework"
+    domains: ["purple-team", "detection", "enterprise"]
+    status: "verified"
+    model: "open-source"
+    url: "https://github.com/facebookincubator/TTPForge"
+    role: "repeatable TTP simulation expressed as structured definitions"
+    evidence_tier: "B"
+    last_reviewed: "2026-09-29"
+
+  - id: vectr
+    name: "VECTR"
+    type: "purple-team-platform"
+    domains: ["purple-team", "detection", "measurement"]
+    status: "verified"
+    model: "open-source"
+    url: "https://github.com/SecurityRiskAdvisors/VECTR"
+    role: "track red/blue test results and measure detection and prevention outcomes"
+    evidence_tier: "B"
+    last_reviewed: "2026-09-29"
+
+  - id: splunk-attack-range
+    name: "Splunk Attack Range"
+    type: "detection-lab-platform"
+    domains: ["purple-team", "detection", "aws", "azure", "gcp"]
+    status: "verified"
+    model: "open-source"
+    url: "https://github.com/splunk/attack_range"
+    role: "build instrumented environments for simulation and detection engineering"
+    evidence_tier: "B"
+    last_reviewed: "2026-09-29"
+
+  - id: realm
+    name: "Realm"
+    type: "adversary-emulation-platform"
+    domains: ["enterprise", "adversary-emulation", "automation"]
+    status: "verified"
+    model: "open-source"
+    url: "https://github.com/spellshift/realm"
+    role: "cross-platform adversary emulation focused on automation and reliability"
+    evidence_tier: "B"
+    last_reviewed: "2026-09-29"
+
+  - id: adaptixc2
+    name: "AdaptixC2"
+    type: "operational-platform"
+    domains: ["adversary-emulation"]
+    status: "verified"
+    model: "open-source"
+    url: "https://github.com/Adaptix-Framework/AdaptixC2"
+    role: "modular platform for authorized red-team and adversary-emulation engagements"
+    evidence_tier: "B"
+    last_reviewed: "2026-09-29"
+
+  - id: empire
+    name: "Empire"
+    type: "operational-platform"
+    domains: ["adversary-emulation", "post-exploitation"]
+    status: "verified"
+    model: "open-source"
+    url: "https://github.com/BC-SECURITY/Empire"
+    role: "post-exploitation and adversary-emulation framework for authorized testing"
+    evidence_tier: "B"
+    last_reviewed: "2026-09-29"
+
+  - id: roadtools
+    name: "ROADtools"
+    type: "identity-assessment-toolkit"
+    domains: ["entra-id", "azure", "identity"]
+    status: "verified"
+    model: "open-source"
+    url: "https://github.com/dirkjanm/ROADtools"
+    role: "Microsoft Entra ID assessment and research toolkit"
+    evidence_tier: "B"
+    last_reviewed: "2026-09-29"
+
+  - id: microburst
+    name: "MicroBurst"
+    type: "cloud-assessment-toolkit"
+    domains: ["azure", "cloud"]
+    status: "verified"
+    model: "open-source"
+    url: "https://github.com/NetSPI/MicroBurst"
+    role: "collection of scripts for Microsoft Azure security assessment"
+    evidence_tier: "B"
+    last_reviewed: "2026-09-29"
+
+  - id: stormspotter
+    name: "Stormspotter"
+    type: "attack-path-analysis"
+    domains: ["azure", "cloud", "graph"]
+    status: "community"
+    model: "open-source"
+    url: "https://github.com/Azure/Stormspotter"
+    role: "Azure resource relationship visualization and security analysis"
+    evidence_tier: "B"
+    last_reviewed: "2026-09-29"
+
+  - id: expliot
+    name: "EXPLIoT"
+    type: "iot-assessment-framework"
+    domains: ["iot", "embedded"]
+    status: "verified"
+    model: "open-source"
+    url: "https://gitlab.com/expliot_framework/expliot"
+    role: "extensible IoT security testing framework"
+    evidence_tier: "A"
+    last_reviewed: "2026-09-29"
+
+  - id: routersploit
+    name: "RouterSploit"
+    type: "embedded-assessment-framework"
+    domains: ["iot", "embedded", "network"]
+    status: "community"
+    model: "open-source"
+    url: "https://github.com/threat9/routersploit"
+    role: "embedded-device security assessment framework"
+    evidence_tier: "B"
+    last_reviewed: "2026-09-29"
+
+  - id: detectionlab
+    name: "DetectionLab"
+    type: "detection-lab"
+    domains: ["purple-team", "detection", "lab"]
+    status: "legacy"
+    model: "open-source"
+    url: "https://github.com/clong/DetectionLab"
+    role: "historically important instrumented Windows detection lab; no longer actively maintained"
+    evidence_tier: "B"
+    last_reviewed: "2026-09-29"
+
+  - id: havoc
+    name: "Havoc"
+    type: "operational-platform"
+    domains: ["adversary-emulation"]
+    status: "legacy"
+    model: "open-source"
+    url: "https://github.com/HavocFramework/Havoc"
+    role: "historically notable red-team platform; canonical repository is archived"
+    evidence_tier: "B"
+    last_reviewed: "2026-09-29"
+
 watchlist:
   - OpenART
   - Basilisk
@@ -191,14 +370,66 @@ watchlist:
   - Highflame RED
   - DeepTeam
   - advent-prompt-pwn
-  - Realm
   - redStack
   - Suijin
   - GHARF
   - T3MP3ST
   - Hexstrike-redteam
   - ONIST Framework
+  - PowerZure
   - Kraken
+  - ctrsploit
+  - Kubesploit
+  - RedCloudOS
   - EmbedXPL-Forge
   - IoTPTF
   - IoTHackBot
+  - Covenant
+  - Koadic
+  - SilentTrinity
+  - Pupy
+  - TrevorC2
+  - DNSCat2
+  - Faction C2
+  - PowerSploit
+  - Nishang
+  - SharpSploit
+  - CrackMapExec
+  - APTSimulator
+  - Laccolith
+  - BEAR-C2
+  - Foojank
+  - Gloamfire
+  - LazyOwn
+  - SeersX
+  - Woodpecker
+  - HunterX
+  - CPTF ARM Edition
+  - OffensiveCloud
+  - Advanced IoT Exploitation Framework v2.0
+  - RTOSploit
+  - Cosmos Orbit
+  - Elaina-C2
+  - Wyrm
+  - PExpAgent
+  - PhantomStrike
+  - OPFOR
+  - Bounty Hunter
+  - Temperance
+  - Peekaboo
+  - VANGUARD
+  - Skyhawk Security Autonomous Purple Team
+  - Cloudtoolkit
+  - Ax Framework
+  - Strix
+  - Autopwn
+  - SANDEVISTAN
+  - intSpLoiT
+  - Pentester Playbook
+  - Arsenal
+  - offsec-toolkit
+  - RedGuard Suite
+  - GoSecOps
+  - hos_vortex
+  - secops-chaos
+  - The 360 Cyber Shield
