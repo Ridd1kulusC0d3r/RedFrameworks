@@ -1,0 +1,30 @@
+{
+  "scenario": "RF-IDENTITY-001",
+  "metric_definition": "Illustrative defensive-validation trend data; not production measurements.",
+  "periods": [
+    {
+      "period": "baseline",
+      "telemetry": 55,
+      "detection": 35,
+      "analyst_response": 40,
+      "containment": 30,
+      "evidence": 50
+    },
+    {
+      "period": "iteration-1",
+      "telemetry": 75,
+      "detection": 62,
+      "analyst_response": 58,
+      "containment": 52,
+      "evidence": 72
+    },
+    {
+      "period": "iteration-2",
+      "telemetry": 92,
+      "detection": 84,
+      "analyst_response": 78,
+      "containment": 76,
+      "evidence": 90
+    }
+  ]
+}
