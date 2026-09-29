@@ -31,7 +31,7 @@ def parse_date(value):
     except ValueError:
         return None
 
-def provenance_score(item):
+def provenance_score(item, health=None):
     tier_points = {"A": 80, "B": 70, "C": 55, "D": 30}
     status_delta = {"verified": 10, "community": 2, "commercial": 4, "legacy": -18, "watchlist": -20}
     score = tier_points.get(item.get("evidence_tier"), 50)
@@ -47,12 +47,32 @@ def provenance_score(item):
             score -= 10
         elif age > 180:
             score -= 5
+    if health:
+        signal = health.get("health")
+        if signal == "healthy":
+            score += 5
+        elif signal == "stale":
+            score -= 7
+        elif signal == "archived":
+            score -= 18
+        elif signal == "unreachable":
+            score -= 12
     return max(0, min(100, score))
+
+def enrich_provenance(item, health_by_id):
+    health = health_by_id.get(item["id"])
+    item["provenance_score"] = provenance_score(item, health)
+    item["upstream_health"] = health.get("health") if health else "not-checked"
+    item["last_activity"] = health.get("pushed_at") if health else None
+    item["latest_release"] = health.get("latest_release") if health else None
 
 def normalize():
     framework_doc = load_yaml(ROOT / "frameworks.yaml")
     catalog_doc = load_yaml(ROOT / "catalog.yaml")
     rel_doc = load_yaml(ROOT / "relationships.yaml")
+    health_path = ROOT / "upstream-health.json"
+    health_doc = json.loads(health_path.read_text(encoding="utf-8")) if health_path.exists() else {"repositories": []}
+    health_by_id = {row["id"]: row for row in health_doc.get("repositories", [])}
     items = []
 
     for entry in framework_doc.get("frameworks", []):
@@ -70,7 +90,7 @@ def normalize():
             "evidence_tier": entry.get("evidence_tier", "A"),
             "last_reviewed": entry.get("last_reviewed", framework_doc.get("updated")),
         }
-        item["provenance_score"] = provenance_score(item)
+        enrich_provenance(item, health_by_id)
         items.append(item)
 
     for entry in catalog_doc.get("entries", []):
@@ -88,7 +108,7 @@ def normalize():
             "evidence_tier": entry.get("evidence_tier", "B" if entry.get("url") else "C"),
             "last_reviewed": entry.get("last_reviewed", catalog_doc.get("updated")),
         }
-        item["provenance_score"] = provenance_score(item)
+        enrich_provenance(item, health_by_id)
         items.append(item)
 
     for candidate in catalog_doc.get("watchlist", []):
@@ -109,7 +129,7 @@ def normalize():
             "evidence_tier": "D",
             "last_reviewed": catalog_doc.get("updated"),
         }
-        item["provenance_score"] = provenance_score(item)
+        enrich_provenance(item, health_by_id)
         items.append(item)
 
     known = {item["id"] for item in items}
@@ -202,6 +222,9 @@ def main():
     if output.exists():
         shutil.rmtree(output)
     shutil.copytree(ROOT / "site", output)
+    schemas_source = ROOT / "schemas"
+    if schemas_source.exists():
+        shutil.copytree(schemas_source, output / "schemas")
 
     payload = normalize()
     framework_doc = payload.pop("_framework_doc")
