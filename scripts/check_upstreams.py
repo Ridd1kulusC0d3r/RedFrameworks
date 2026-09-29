@@ -26,9 +26,9 @@ def github_repo(url):
     parts = [part for part in parsed.path.split("/") if part]
     return (parts[0], parts[1].removesuffix(".git")) if len(parts) >= 2 else None
 
-def fetch_repo(owner, repo):
+def fetch_json(url):
     request = Request(
-        f"https://api.github.com/repos/{owner}/{repo}",
+        url,
         headers={"Accept": "application/vnd.github+json", "User-Agent": "RedFrameworks-health-check"}
     )
     try:
@@ -38,6 +38,19 @@ def fetch_repo(owner, repo):
         return error.code, {"message": str(error)}
     except URLError as error:
         return 0, {"message": str(error)}
+
+def fetch_repo(owner, repo):
+    return fetch_json(f"https://api.github.com/repos/{owner}/{repo}")
+
+def fetch_latest_release(owner, repo):
+    code, payload = fetch_json(f"https://api.github.com/repos/{owner}/{repo}/releases/latest")
+    if code != 200:
+        return None
+    return {
+        "tag": payload.get("tag_name"),
+        "published_at": payload.get("published_at"),
+        "url": payload.get("html_url"),
+    }
 
 def main():
     parser = argparse.ArgumentParser()
@@ -71,10 +84,12 @@ def main():
             health = "stale"
         else:
             health = "healthy"
+        latest_release = fetch_latest_release(owner, repo)
         rows.append({
             "id": entry["id"], "name": entry["name"], "repository": payload.get("full_name"),
             "health": health, "archived": bool(payload.get("archived")), "pushed_at": pushed,
-            "age_days": age, "default_branch": payload.get("default_branch"), "html_url": payload.get("html_url")
+            "age_days": age, "default_branch": payload.get("default_branch"), "html_url": payload.get("html_url"),
+            "latest_release": latest_release
         })
 
     actionable = [row for row in rows if row["health"] in {"archived", "unreachable"}]
@@ -82,9 +97,10 @@ def main():
     data = {"generated_at": now.isoformat(), "checked": len(rows), "actionable_count": len(actionable), "stale_count": len(stale), "repositories": rows}
     Path(args.json).write_text(json.dumps(data, indent=2) + "\n", encoding="utf-8")
 
-    lines = ["# Upstream health report", "", f"- Checked: **{len(rows)}**", f"- Actionable: **{len(actionable)}**", f"- Stale: **{len(stale)}**", "", "| Project | Repository | Health | Last push |", "|---|---|---|---|"]
+    lines = ["# Upstream health report", "", f"- Checked: **{len(rows)}**", f"- Actionable: **{len(actionable)}**", f"- Stale: **{len(stale)}**", "", "| Project | Repository | Health | Last push | Latest release |", "|---|---|---|---|---|"]
     for row in rows:
-        lines.append(f"| {row['name']} | {row['repository']} | {row['health']} | {row.get('pushed_at') or '—'} |")
+        release = row.get("latest_release") or {}
+        lines.append(f"| {row['name']} | {row['repository']} | {row['health']} | {row.get('pushed_at') or '—'} | {release.get('tag') or '—'} |")
     Path(args.report).write_text("\n".join(lines) + "\n", encoding="utf-8")
     print(json.dumps({"checked": len(rows), "actionable_count": len(actionable), "stale_count": len(stale)}))
 
