@@ -1,0 +1,86 @@
+name: Catalog freshness
+
+on:
+  schedule:
+    - cron: "23 9 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  freshness:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.13"
+
+      - name: Install dependency
+        run: python -m pip install --disable-pip-version-check PyYAML
+
+      - name: Build freshness report
+        id: freshness
+        shell: bash
+        run: |
+          python scripts/check_freshness.py --report freshness-report.md --json freshness-report.json
+          echo "stale_count=$(python -c 'import json; print(json.load(open("freshness-report.json"))["stale_count"])')" >> "$GITHUB_OUTPUT"
+          cat freshness-report.md >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Open or update freshness issue
+        if: steps.freshness.outputs.stale_count != '0'
+        uses: actions/github-script@v8
+        with:
+          script: |
+            const fs = require("fs");
+            const title = "[automation] Catalog freshness review required";
+            const body = fs.readFileSync("freshness-report.md", "utf8");
+            const { data: issues } = await github.rest.issues.listForRepo({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              state: "open",
+              per_page: 100
+            });
+            const existing = issues.find(i => i.title === title);
+            if (existing) {
+              await github.rest.issues.update({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: existing.number,
+                body
+              });
+            } else {
+              await github.rest.issues.create({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                title,
+                body
+              });
+            }
+
+      - name: Close resolved freshness issue
+        if: steps.freshness.outputs.stale_count == '0'
+        uses: actions/github-script@v8
+        with:
+          script: |
+            const title = "[automation] Catalog freshness review required";
+            const { data: issues } = await github.rest.issues.listForRepo({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              state: "open",
+              per_page: 100
+            });
+            const existing = issues.find(i => i.title === title);
+            if (existing) {
+              await github.rest.issues.update({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: existing.number,
+                state: "closed"
+              });
+            }

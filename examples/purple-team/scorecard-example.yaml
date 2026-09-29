@@ -1,0 +1,42 @@
+scenario:
+  id: "PT-EXAMPLE-001"
+  name: "Identity telemetry validation"
+  business_service: "Example identity service"
+  threat_basis: "Training scenario"
+  attack_version: "19.2"
+  execution_date: "2026-09-29"
+  authorization: "lab-only example"
+
+weights:
+  telemetry: 0.20
+  detection: 0.25
+  analyst_response: 0.20
+  containment: 0.20
+  evidence: 0.15
+
+techniques:
+  - id: "T1078"
+    relevance: "high"
+    execution: "confirmed"
+    telemetry: "sufficient"
+    detection: "reliable"
+    analyst_response: "effective"
+    containment: "effective"
+    evidence: "E3"
+    result: "pass"
+
+  - id: "T1087"
+    relevance: "medium"
+    execution: "confirmed"
+    telemetry: "sufficient"
+    detection: "weak"
+    analyst_response: "delayed"
+    containment: "partial"
+    evidence: "E2"
+    result: "partial"
+
+timing_minutes:
+  automated_detection: 2
+  analyst_recognition: 7
+  triage_decision: 11
+  containment: 18

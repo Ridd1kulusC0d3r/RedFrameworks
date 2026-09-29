@@ -1,0 +1,93 @@
+{
+  "type": "bundle",
+  "id": "bundle--c97a3a82-5be2-4dd3-a7c7-bf08746d381d",
+  "objects": [
+    {
+      "type": "extension-definition",
+      "id": "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4",
+      "spec_version": "2.1",
+      "name": "Attack Flow",
+      "description": "Extends STIX 2.1 with features to create Attack Flows.",
+      "created": "2022-08-02T19:34:35.143Z",
+      "modified": "2022-08-02T19:34:35.143Z",
+      "created_by_ref": "identity--d673f8cb-c168-42da-8ed4-0cb26725f86c",
+      "schema": "https://center-for-threat-informed-defense.github.io/attack-flow/stix/attack-flow-schema-2.0.0.json",
+      "version": "2.0.0",
+      "extension_types": ["new-sdo"]
+    },
+    {
+      "type": "identity",
+      "spec_version": "2.1",
+      "id": "identity--d673f8cb-c168-42da-8ed4-0cb26725f86c",
+      "created": "2022-08-02T19:34:35.143Z",
+      "modified": "2022-08-02T19:34:35.143Z",
+      "name": "MITRE Center for Threat-Informed Defense",
+      "identity_class": "organization"
+    },
+    {
+      "type": "identity",
+      "spec_version": "2.1",
+      "id": "identity--a4f80245-e9ad-4b41-8804-d74d0d88fe77",
+      "created": "2026-09-29T00:00:00.000Z",
+      "modified": "2026-09-29T00:00:00.000Z",
+      "name": "RedFrameworks",
+      "identity_class": "organization"
+    },
+    {
+      "type": "attack-flow",
+      "spec_version": "2.1",
+      "id": "attack-flow--15f6402f-1fe8-4f62-a847-ef37252e912b",
+      "created_by_ref": "identity--a4f80245-e9ad-4b41-8804-d74d0d88fe77",
+      "created": "2026-09-29T00:00:00.000Z",
+      "modified": "2026-09-29T00:00:00.000Z",
+      "name": "Identity telemetry validation",
+      "description": "Authorized validation flow for identity, discovery telemetry and analyst response.",
+      "scope": "emulation-plan",
+      "start_refs": ["attack-action--7af82022-167b-469b-beb2-29f0a9878dad"],
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {"extension_type": "new-sdo"}
+      }
+    },
+    {
+      "type": "attack-action",
+      "spec_version": "2.1",
+      "id": "attack-action--7af82022-167b-469b-beb2-29f0a9878dad",
+      "created": "2026-09-29T00:00:00.000Z",
+      "modified": "2026-09-29T00:00:00.000Z",
+      "name": "Authorized valid-account activity",
+      "technique_id": "T1078",
+      "description": "Use an approved test identity to validate authentication telemetry and expected detection behavior.",
+      "effect_refs": ["attack-action--945769ba-123e-493c-9f13-c4e30a9c3ba1"],
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {"extension_type": "new-sdo"}
+      }
+    },
+    {
+      "type": "attack-action",
+      "spec_version": "2.1",
+      "id": "attack-action--945769ba-123e-493c-9f13-c4e30a9c3ba1",
+      "created": "2026-09-29T00:00:00.000Z",
+      "modified": "2026-09-29T00:00:00.000Z",
+      "name": "Account-discovery observation",
+      "technique_id": "T1087",
+      "description": "Validate that approved account-discovery behavior is represented in telemetry and triage context.",
+      "effect_refs": ["attack-action--16c0ff4c-f590-45e6-a085-ccf2f5e196cf"],
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {"extension_type": "new-sdo"}
+      }
+    },
+    {
+      "type": "attack-action",
+      "spec_version": "2.1",
+      "id": "attack-action--16c0ff4c-f590-45e6-a085-ccf2f5e196cf",
+      "created": "2026-09-29T00:00:00.000Z",
+      "modified": "2026-09-29T00:00:00.000Z",
+      "name": "Process-discovery observation",
+      "technique_id": "T1057",
+      "description": "Measure whether the final approved discovery behavior is observable, detected and investigated.",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {"extension_type": "new-sdo"}
+      }
+    }
+  ]
+}
