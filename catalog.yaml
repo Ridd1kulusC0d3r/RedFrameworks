@@ -1,0 +1,204 @@
+updated: "2026-09-29"
+schema_version: "1.0"
+
+entries:
+  - id: stratus-red-team
+    name: "Stratus Red Team"
+    type: "emulation-tool"
+    domains: ["aws", "azure", "gcp", "entra-id", "kubernetes"]
+    status: "verified"
+    model: "open-source"
+    url: "https://github.com/DataDog/stratus-red-team"
+    role: "granular cloud adversary emulation"
+
+  - id: cloudfox
+    name: "CloudFox"
+    type: "assessment-tool"
+    domains: ["aws", "azure", "gcp"]
+    status: "verified"
+    model: "open-source"
+    url: "https://github.com/BishopFox/cloudfox"
+    role: "cloud situational awareness and attack-path discovery"
+
+  - id: pacu
+    name: "Pacu"
+    type: "assessment-framework"
+    domains: ["aws"]
+    status: "verified"
+    model: "open-source"
+    url: "https://github.com/RhinoSecurityLabs/pacu"
+    role: "AWS offensive security assessment"
+
+  - id: azurehound
+    name: "AzureHound"
+    type: "data-collector"
+    domains: ["azure", "entra-id", "identity"]
+    status: "verified"
+    model: "open-source"
+    url: "https://github.com/SpecterOps/AzureHound"
+    role: "Azure / Entra data collection for BloodHound"
+
+  - id: kubehound
+    name: "KubeHound"
+    type: "attack-path-analysis"
+    domains: ["kubernetes"]
+    status: "verified"
+    model: "open-source"
+    url: "https://kubehound.io/"
+    role: "Kubernetes attack-path graphing"
+
+  - id: openbas
+    name: "OpenBAS"
+    type: "validation-platform"
+    domains: ["purple-team", "bas", "enterprise"]
+    status: "verified"
+    model: "open-source"
+    url: "https://docs.openbas.io/"
+    role: "breach-and-attack simulation and security validation"
+
+  - id: sigma
+    name: "Sigma"
+    type: "detection-format"
+    domains: ["detection", "siem"]
+    status: "verified"
+    model: "open"
+    url: "https://sigmahq.io/"
+    role: "portable structured detection rules"
+
+  - id: velociraptor
+    name: "Velociraptor"
+    type: "dfir-hunting-platform"
+    domains: ["endpoint", "dfir", "threat-hunting"]
+    status: "verified"
+    model: "open-source"
+    url: "https://docs.velociraptor.app/"
+    role: "endpoint visibility, collection and threat hunting"
+
+  - id: mobsf
+    name: "MobSF"
+    type: "mobile-assessment-platform"
+    domains: ["android", "ios", "mobile"]
+    status: "verified"
+    model: "open-source"
+    url: "https://github.com/MobSF/Mobile-Security-Framework-MobSF"
+    role: "static and dynamic mobile application security assessment"
+
+  - id: frida
+    name: "Frida"
+    type: "dynamic-instrumentation"
+    domains: ["mobile", "desktop", "reverse-engineering"]
+    status: "verified"
+    model: "open-source"
+    url: "https://frida.re/"
+    role: "dynamic instrumentation"
+
+  - id: pyrit
+    name: "Microsoft PyRIT"
+    type: "ai-red-team-framework"
+    domains: ["ai-genai"]
+    status: "verified"
+    model: "open-source"
+    url: "https://github.com/microsoft/PyRIT"
+    role: "structured AI risk identification and red-team assessment"
+
+  - id: garak
+    name: "NVIDIA garak"
+    type: "ai-assessment-tool"
+    domains: ["ai-genai"]
+    status: "verified"
+    model: "open-source"
+    url: "https://github.com/NVIDIA/garak"
+    role: "LLM vulnerability and failure-mode assessment"
+
+  - id: sliver
+    name: "Sliver"
+    type: "operational-platform"
+    domains: ["adversary-emulation"]
+    status: "community"
+    model: "open-source"
+    role: "authorized adversary-emulation operations"
+
+  - id: mythic
+    name: "Mythic"
+    type: "operational-platform"
+    domains: ["adversary-emulation"]
+    status: "community"
+    model: "open-source"
+    role: "collaborative adversary-emulation operations"
+
+  - id: poshc2
+    name: "PoshC2"
+    type: "operational-platform"
+    domains: ["adversary-emulation"]
+    status: "community"
+    model: "open-source"
+    url: "https://github.com/nettitude/PoshC2"
+    role: "authorized adversary-emulation operations"
+
+  - id: cobalt-strike
+    name: "Cobalt Strike"
+    type: "operational-platform"
+    domains: ["adversary-emulation"]
+    status: "commercial"
+    model: "commercial"
+    role: "commercial adversary-simulation platform"
+
+  - id: safebreach
+    name: "SafeBreach"
+    type: "security-validation-platform"
+    domains: ["bas", "purple-team"]
+    status: "commercial"
+    model: "commercial"
+    role: "continuous security validation"
+
+  - id: attackiq
+    name: "AttackIQ"
+    type: "security-validation-platform"
+    domains: ["bas", "purple-team"]
+    status: "commercial"
+    model: "commercial"
+    role: "security control validation"
+
+  - id: cymulate
+    name: "Cymulate"
+    type: "security-validation-platform"
+    domains: ["bas", "exposure-validation"]
+    status: "commercial"
+    model: "commercial"
+    role: "continuous security validation"
+
+  - id: pentera
+    name: "Pentera"
+    type: "security-validation-platform"
+    domains: ["automated-validation"]
+    status: "commercial"
+    model: "commercial"
+    role: "automated security validation"
+
+  - id: picus
+    name: "Picus Security"
+    type: "security-validation-platform"
+    domains: ["bas", "purple-team"]
+    status: "commercial"
+    model: "commercial"
+    role: "security control validation"
+
+watchlist:
+  - OpenART
+  - Basilisk
+  - VIGILANT
+  - AutoPT
+  - Highflame RED
+  - DeepTeam
+  - advent-prompt-pwn
+  - Realm
+  - redStack
+  - Suijin
+  - GHARF
+  - T3MP3ST
+  - Hexstrike-redteam
+  - ONIST Framework
+  - Kraken
+  - EmbedXPL-Forge
+  - IoTPTF
+  - IoTHackBot
