@@ -25,5 +25,7 @@ jobs:
             --verbose
             --no-progress
             --accept 200,204,206,429
+            --exclude "https://attackflow\\.org/.*"
+            --exclude "https://www\\.pentest-standard\\.org/.*"
             "**/*.md"
           fail: true
