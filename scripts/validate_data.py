@@ -78,7 +78,22 @@ def main():
         if parsed.scheme not in {"http", "https"} or not parsed.netloc:
             raise SystemExit(f"Invalid URL for {entry['id']}: {url}")
 
-    print(f"OK integrity: {len(entries)} entries, {len(seen)} relationships, {len(watch)} watchlist candidates")
+    scenario_schema = load_json(ROOT / "schemas/scenario.schema.json")
+    scenario_validator = Draft202012Validator(scenario_schema, format_checker=FormatChecker())
+    scenario_count = 0
+    for path in sorted((ROOT / "examples/scenarios").glob("*.yaml")):
+        scenario = load_yaml(path)
+        errors = sorted(scenario_validator.iter_errors(scenario), key=lambda e: list(e.absolute_path))
+        if errors:
+            lines = []
+            for error in errors:
+                location = ".".join(str(x) for x in error.absolute_path) or "<root>"
+                lines.append(f"{path.relative_to(ROOT)}:{location}: {error.message}")
+            raise SystemExit("\n".join(lines))
+        scenario_count += 1
+        print(f"OK scenario schema: {path.relative_to(ROOT)}")
+
+    print(f"OK integrity: {len(entries)} entries, {len(seen)} relationships, {len(watch)} watchlist candidates, {scenario_count} scenarios")
 
 if __name__ == "__main__":
     main()
