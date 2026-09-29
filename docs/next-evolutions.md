@@ -1,53 +1,85 @@
-# Next Evolutions — Platform v3
+# Platform v3 Completion & v4 Roadmap
 
-The original roadmap is complete. The next phase is turning the catalog into a continuously maintained **Offensive Security Knowledge Graph**.
+Platform v3 turns RedFrameworks into a schema-driven Offensive Security Knowledge Graph.
 
-## P0 — data integrity
+## Platform v3 — complete
+
+### Data integrity
 
 - [x] Browsable catalog generated from YAML
 - [x] Interactive filters and status model
 - [x] Curated relationship dataset
 - [x] Evidence tiers and expanded watchlist
 - [x] Freshness automation
-- [x] GitHub Pages deployment workflow
-- [ ] Add JSON Schema validation for `frameworks.yaml`, `catalog.yaml` and `relationships.yaml`
-- [ ] Add duplicate / broken-ID validation across data files
-- [ ] Add canonical-upstream health checks that distinguish archived, stale and unreachable projects
+- [x] GitHub Pages deployment
+- [x] JSON Schema validation
+- [x] Duplicate-ID / duplicate-name / broken-reference validation
+- [x] Canonical upstream checks for archive, staleness and availability
 
-## P1 — knowledge graph
+### Knowledge graph
 
-- [x] Relationship explorer on the public site
-- [ ] Export relationships as STIX 2.1 objects
-- [ ] Generate OpenCTI-compatible bundles
-- [ ] Enrich ATT&CK ↔ ATLAS ↔ D3FEND relationships
-- [ ] Add per-entity pages with inbound / outbound relationships
-- [ ] Add query presets such as "show cloud validation platforms"
+- [x] Relationship explorer
+- [x] STIX 2.1 export
+- [x] OpenCTI-oriented import manifest
+- [x] ATT&CK ↔ ATLAS ↔ D3FEND ecosystem enrichment
+- [x] Per-entity pages with inbound / outbound relationships
+- [x] Analyst decision-path presets
 
-## P1 — intelligence and freshness
+### Intelligence & provenance
 
-- [ ] Collect upstream release date, archive state and last meaningful activity
-- [ ] Generate provenance scores from evidence tier + maintenance + source ownership
-- [ ] Open review issues only when meaningful upstream changes occur
-- [ ] Track renames, successors and deprecations explicitly
+- [x] Upstream release metadata
+- [x] Archive state and last activity
+- [x] Provenance scoring
+- [x] Meaningful lifecycle-change issue automation
+- [x] Rename / legacy tracking
 
-## P2 — analyst experience
+### Analyst experience
 
-- [ ] Persist filters in the URL
-- [ ] Add side-by-side factual comparison views
-- [ ] Add CSV / JSON export for filtered catalog views
-- [ ] Add multilingual presentation while keeping canonical data in English
-- [ ] Improve keyboard / screen-reader navigation
+- [x] Filters persisted in URL
+- [x] Factual side-by-side comparison
+- [x] CSV / JSON export
+- [x] EN / PT-BR / ES presentation
+- [x] Keyboard-accessible graph controls
+- [x] Domain and trend visuals
 
-## P2 — evidence engineering
+### Evidence engineering
 
-- [ ] Add example detection-to-emulation mappings
-- [ ] Add reusable scenario schema: CTI → ATT&CK/ATLAS → flow → telemetry → detection → response
-- [ ] Add E0–E3 evidence bundles
-- [ ] Add coverage and retest trend reports
+- [x] Detection-to-validation scenario example
+- [x] Reusable scenario schema
+- [x] E3 evidence bundle example
+- [x] Coverage / retest trend dataset
 
-## P3 — ecosystem
+### Ecosystem
 
-- [ ] Publish versioned catalog releases
-- [ ] Add contributor review automation for taxonomy and provenance
-- [ ] Add a static read-only API
-- [ ] Generate a machine-readable changelog for promotions, demotions, renames and legacy transitions
+- [x] Versioned release manifest and tag-driven release workflow
+- [x] Contributor review automation
+- [x] Static read-only API
+- [x] Machine-readable changelog
+- [x] Lifecycle dataset
+
+## Platform v4 — continuous intelligence
+
+### Standards intelligence
+
+- [ ] Track ATT&CK / ATLAS / OWASP / NIST version changes as first-class events
+- [ ] Generate semantic diffs between catalog releases
+- [ ] Track framework successors and official deprecations from primary sources
+
+### Relationship intelligence
+
+- [ ] Add technique-level ATT&CK ↔ D3FEND examples backed by primary mappings
+- [ ] Add richer AI security crosswalks without implying false equivalence
+- [ ] Add relationship provenance / source references per edge
+
+### Measurement intelligence
+
+- [ ] Generate longitudinal coverage dashboards from imported scorecards
+- [ ] Add retest-regression comparison views
+- [ ] Add evidence-quality trend visualization by scenario and domain
+
+### Ecosystem integration
+
+- [ ] Version the static API formally
+- [ ] Publish reproducible catalog snapshots
+- [ ] Add OpenCTI enrichment examples
+- [ ] Add consumer examples for Python, TypeScript and shell
