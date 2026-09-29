@@ -33,7 +33,7 @@ def parse_date(value):
 
 def provenance_score(item, health=None):
     tier_points = {"A": 80, "B": 70, "C": 55, "D": 30}
-    status_delta = {"verified": 10, "community": 2, "commercial": 4, "legacy": -18, "watchlist": -20}
+    status_delta = {"verified": 10, "community": 2, "commercial": 4, "legacy": -18, "watchlist": -20, "not-verified": -20}
     score = tier_points.get(item.get("evidence_tier"), 50)
     score += status_delta.get(item.get("status"), 0)
     if item.get("url"):
@@ -107,6 +107,7 @@ def normalize():
             "source": "catalog.yaml",
             "evidence_tier": entry.get("evidence_tier", "B" if entry.get("url") else "C"),
             "last_reviewed": entry.get("last_reviewed", catalog_doc.get("updated")),
+            "verification_note": entry.get("verification_note"),
         }
         enrich_provenance(item, health_by_id)
         items.append(item)
