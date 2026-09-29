@@ -1,6 +1,13 @@
 name: Catalog freshness
 
 on:
+  push:
+    branches: [main]
+    paths:
+      - "frameworks.yaml"
+      - "catalog.yaml"
+      - "scripts/check_freshness.py"
+      - ".github/workflows/freshness.yml"
   schedule:
     - cron: "23 9 * * 1"
   workflow_dispatch:
