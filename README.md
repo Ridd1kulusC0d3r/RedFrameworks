@@ -5,7 +5,6 @@
 [![Status](https://img.shields.io/badge/status-active-success)](#)
 [![Focus](https://img.shields.io/badge/focus-red%20team%20%7C%20adversary%20emulation-red)](#)
 [![ATT%26CK](https://img.shields.io/badge/mapped%20to-MITRE%20ATT%26CK-blue)](https://attack.mitre.org/)
-[![License](https://img.shields.io/badge/content-reference-lightgrey)](#)
 
 ## Why this repository exists
 
