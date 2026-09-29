@@ -70,6 +70,9 @@ def normalize():
     framework_doc = load_yaml(ROOT / "frameworks.yaml")
     catalog_doc = load_yaml(ROOT / "catalog.yaml")
     rel_doc = load_yaml(ROOT / "relationships.yaml")
+    standards_doc = load_yaml(ROOT / "data/standards-intelligence.yaml") if (ROOT / "data/standards-intelligence.yaml").exists() else {"standards": []}
+    ai_crosswalk_doc = load_yaml(ROOT / "data/ai-crosswalk.yaml") if (ROOT / "data/ai-crosswalk.yaml").exists() else {"crosswalks": []}
+    d3fend_doc = load_yaml(ROOT / "data/attack-d3fend-examples.yaml") if (ROOT / "data/attack-d3fend-examples.yaml").exists() else {"examples": []}
     health_path = ROOT / "upstream-health.json"
     health_doc = json.loads(health_path.read_text(encoding="utf-8")) if health_path.exists() else {"repositories": []}
     health_by_id = {row["id"]: row for row in health_doc.get("repositories", [])}
@@ -150,6 +153,9 @@ def normalize():
         "_framework_doc": framework_doc,
         "_catalog_doc": catalog_doc,
         "_relationships_doc": rel_doc,
+        "_standards_doc": standards_doc,
+        "_ai_crosswalk_doc": ai_crosswalk_doc,
+        "_d3fend_doc": d3fend_doc,
     }
 
 def entity_page(item, relationships, item_map):
@@ -198,37 +204,75 @@ def entity_page(item, relationships, item_map):
 </body>
 </html>"""
 
+def write_json(path, value):
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(json.dumps(value, indent=2, ensure_ascii=False, default=str) + "\n", encoding="utf-8")
+
 def write_api(output, payload):
     api = output / "api"
-    api.mkdir(parents=True, exist_ok=True)
+    v1 = api / "v1"
+    v2 = api / "v2"
+    v1.mkdir(parents=True, exist_ok=True)
+    v2.mkdir(parents=True, exist_ok=True)
+
     items = payload["items"]
-    (api / "catalog.json").write_text(json.dumps(items, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
-    (api / "relationships.json").write_text(json.dumps(payload["relationships"], indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
-    (api / "frameworks.json").write_text(json.dumps(payload["_framework_doc"], indent=2, ensure_ascii=False, default=str) + "\n", encoding="utf-8")
-    (api / "watchlist.json").write_text(json.dumps(payload["_catalog_doc"].get("watchlist", []), indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+    relationships = payload["relationships"]
+    not_verified = [item for item in items if item.get("status") == "not-verified"]
+
+    # v1 compatibility contract
+    write_json(v1 / "catalog.json", items)
+    write_json(v1 / "relationships.json", relationships)
+
+    # v2 enriched contract
+    write_json(v2 / "catalog.json", items)
+    write_json(v2 / "relationships.json", relationships)
+    write_json(v2 / "frameworks.json", payload["_framework_doc"])
+    write_json(v2 / "not-verified.json", not_verified)
+    write_json(v2 / "standards.json", payload["_standards_doc"])
+    write_json(v2 / "ai-crosswalk.json", payload["_ai_crosswalk_doc"])
+    write_json(v2 / "attack-d3fend.json", payload["_d3fend_doc"])
+
     lifecycle_path = ROOT / "data/lifecycle.yaml"
     changelog_path = ROOT / "data/changelog.yaml"
     release_dir = ROOT / "data/releases"
     if lifecycle_path.exists():
-        (api / "lifecycle.json").write_text(json.dumps(load_yaml(lifecycle_path), indent=2, ensure_ascii=False, default=str) + "\n", encoding="utf-8")
+        lifecycle = load_yaml(lifecycle_path)
+        write_json(v2 / "lifecycle.json", lifecycle)
     if changelog_path.exists():
-        (api / "changelog.json").write_text(json.dumps(load_yaml(changelog_path), indent=2, ensure_ascii=False, default=str) + "\n", encoding="utf-8")
+        changelog = load_yaml(changelog_path)
+        write_json(v2 / "changelog.json", changelog)
     if release_dir.exists():
-        target = api / "releases"
+        target = v2 / "releases"
         target.mkdir(parents=True, exist_ok=True)
         for release in release_dir.glob("*.json"):
             shutil.copy2(release, target / release.name)
 
-    (api / "version.json").write_text(json.dumps({
-        "schema": "RedFrameworks static API v1",
+    # Unversioned compatibility aliases point to the v2 shape.
+    write_json(api / "catalog.json", items)
+    write_json(api / "relationships.json", relationships)
+    write_json(api / "frameworks.json", payload["_framework_doc"])
+    write_json(api / "not-verified.json", not_verified)
+    write_json(api / "standards.json", payload["_standards_doc"])
+    write_json(api / "watchlist.json", payload["_catalog_doc"].get("watchlist", []))
+
+    version = {
+        "api": "RedFrameworks Static API",
+        "current": "v2",
+        "supported": ["v1", "v2"],
         "updated": payload["updated"],
         "entries": len(items),
-        "relationships": len(payload["relationships"]),
-        "endpoints": [
-            "catalog.json", "frameworks.json", "relationships.json", "watchlist.json",
-            "lifecycle.json", "changelog.json", "releases/"
-        ]
-    }, indent=2) + "\n", encoding="utf-8")
+        "not_verified": len(not_verified),
+        "relationships": len(relationships),
+        "contracts": {
+            "v1": ["catalog.json", "relationships.json"],
+            "v2": [
+                "catalog.json", "relationships.json", "frameworks.json",
+                "not-verified.json", "standards.json", "ai-crosswalk.json",
+                "attack-d3fend.json", "lifecycle.json", "changelog.json", "releases/"
+            ]
+        }
+    }
+    write_json(api / "version.json", version)
 
 def main():
     parser = argparse.ArgumentParser()
@@ -247,7 +291,17 @@ def main():
     framework_doc = payload.pop("_framework_doc")
     catalog_doc = payload.pop("_catalog_doc")
     relationships_doc = payload.pop("_relationships_doc")
-    private_docs = {"_framework_doc": framework_doc, "_catalog_doc": catalog_doc, "_relationships_doc": relationships_doc}
+    standards_doc = payload.pop("_standards_doc")
+    ai_crosswalk_doc = payload.pop("_ai_crosswalk_doc")
+    d3fend_doc = payload.pop("_d3fend_doc")
+    private_docs = {
+        "_framework_doc": framework_doc,
+        "_catalog_doc": catalog_doc,
+        "_relationships_doc": relationships_doc,
+        "_standards_doc": standards_doc,
+        "_ai_crosswalk_doc": ai_crosswalk_doc,
+        "_d3fend_doc": d3fend_doc,
+    }
 
     data_dir = output / "data"
     data_dir.mkdir(parents=True, exist_ok=True)
@@ -256,6 +310,15 @@ def main():
     trend_source = ROOT / "examples/trends/coverage-trend.json"
     if trend_source.exists():
         shutil.copy2(trend_source, data_dir / "coverage-trend.json")
+
+    metrics_dir = ROOT / "generated-metrics"
+    if metrics_dir.exists():
+        for metric_file in metrics_dir.glob("*.json"):
+            shutil.copy2(metric_file, data_dir / metric_file.name)
+
+    write_json(data_dir / "standards-intelligence.json", standards_doc)
+    write_json(data_dir / "ai-crosswalk.json", ai_crosswalk_doc)
+    write_json(data_dir / "attack-d3fend.json", d3fend_doc)
 
     payload.update(private_docs)
     write_api(output, payload)
