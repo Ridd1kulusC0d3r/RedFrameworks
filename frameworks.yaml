@@ -1,0 +1,76 @@
+updated: "2026-09-29"
+repository: "Ridd1kulusC0d3r/RedFrameworks"
+
+frameworks:
+  - id: ptes
+    name: "Penetration Testing Execution Standard"
+    category: "engagement-methodology"
+    url: "https://www.pentest-standard.org/"
+    best_for:
+      - "penetration testing lifecycle"
+      - "engagement structure"
+
+  - id: nist-sp-800-115
+    name: "NIST SP 800-115"
+    category: "assessment-guidance"
+    url: "https://csrc.nist.gov/pubs/sp/800/115/final"
+    best_for:
+      - "formal security assessment programs"
+      - "planning and reporting"
+
+  - id: owasp-wstg
+    name: "OWASP Web Security Testing Guide"
+    category: "application-security"
+    url: "https://wstg.owasp.org/"
+    best_for:
+      - "web application testing"
+      - "web service testing"
+
+  - id: mitre-attack
+    name: "MITRE ATT&CK"
+    category: "adversary-behavior"
+    url: "https://attack.mitre.org/"
+    best_for:
+      - "TTP mapping"
+      - "threat-informed testing"
+      - "detection engineering"
+
+  - id: ctid-adversary-emulation
+    name: "CTID Adversary Emulation Library"
+    category: "adversary-emulation"
+    url: "https://ctid.mitre.org/resources/adversary-emulation-library/"
+    best_for:
+      - "intelligence-driven emulation"
+      - "full and micro emulation plans"
+
+  - id: attack-flow
+    name: "Attack Flow"
+    category: "behavior-modeling"
+    url: "https://attackflow.org/"
+    best_for:
+      - "multi-step attack paths"
+      - "behavior sequencing"
+
+  - id: d3fend
+    name: "MITRE D3FEND"
+    category: "defensive-knowledge-graph"
+    url: "https://d3fend.mitre.org/"
+    best_for:
+      - "countermeasure mapping"
+      - "purple-team analysis"
+
+  - id: atomic-red-team
+    name: "Atomic Red Team"
+    category: "control-validation"
+    url: "https://github.com/redcanaryco/atomic-red-team"
+    best_for:
+      - "portable ATT&CK-mapped tests"
+      - "detection validation"
+
+  - id: mitre-caldera
+    name: "MITRE CALDERA"
+    category: "emulation-automation"
+    url: "https://caldera.mitre.org/"
+    best_for:
+      - "automated adversary emulation"
+      - "repeatable assessment workflows"
