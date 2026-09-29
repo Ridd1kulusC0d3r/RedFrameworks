@@ -26,7 +26,7 @@ jobs:
           python scripts/validate_examples.py
           python scripts/build_site.py --output _site-release
           python scripts/export_stix.py --output-dir exports
-          tar -czf "redframeworks-${GITHUB_REF_NAME}.tar.gz" frameworks.yaml catalog.yaml relationships.yaml schemas exports _site-release/api docs examples
+          tar -czf "redframeworks-${GITHUB_REF_NAME}.tar.gz" frameworks.yaml catalog.yaml relationships.yaml data schemas exports _site-release/api docs examples
       - name: Publish GitHub release
         env:
           GH_TOKEN: ${{ github.token }}
