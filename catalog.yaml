@@ -1,5 +1,5 @@
 updated: "2026-09-29"
-schema_version: "2.0"
+schema_version: "3.0"
 
 entries:
   - id: stratus-red-team
@@ -362,74 +362,774 @@ entries:
     evidence_tier: "B"
     last_reviewed: "2026-09-29"
 
-watchlist:
-  - OpenART
-  - Basilisk
-  - VIGILANT
-  - AutoPT
-  - Highflame RED
-  - DeepTeam
-  - advent-prompt-pwn
-  - redStack
-  - Suijin
-  - GHARF
-  - T3MP3ST
-  - Hexstrike-redteam
-  - ONIST Framework
-  - PowerZure
-  - Kraken
-  - ctrsploit
-  - Kubesploit
-  - RedCloudOS
-  - EmbedXPL-Forge
-  - IoTPTF
-  - IoTHackBot
-  - Covenant
-  - Koadic
-  - SilentTrinity
-  - Pupy
-  - TrevorC2
-  - DNSCat2
-  - Faction C2
-  - PowerSploit
-  - Nishang
-  - SharpSploit
-  - CrackMapExec
-  - APTSimulator
-  - Laccolith
-  - BEAR-C2
-  - Foojank
-  - Gloamfire
-  - LazyOwn
-  - SeersX
-  - Woodpecker
-  - HunterX
-  - CPTF ARM Edition
-  - OffensiveCloud
-  - Advanced IoT Exploitation Framework v2.0
-  - RTOSploit
-  - Cosmos Orbit
-  - Elaina-C2
-  - Wyrm
-  - PExpAgent
-  - PhantomStrike
-  - OPFOR
-  - Bounty Hunter
-  - Temperance
-  - Peekaboo
-  - VANGUARD
-  - Skyhawk Security Autonomous Purple Team
-  - Cloudtoolkit
-  - Ax Framework
-  - Strix
-  - Autopwn
-  - SANDEVISTAN
-  - intSpLoiT
-  - Pentester Playbook
-  - Arsenal
-  - offsec-toolkit
-  - RedGuard Suite
-  - GoSecOps
-  - hos_vortex
-  - secops-chaos
-  - The 360 Cyber Shield
+  - id: openart
+    name: "OpenART"
+    type: "ai-security-candidate"
+    domains: ["ai-genai", "research"]
+    status: "not-verified"
+    model: "unknown"
+    role: "Research candidate included for completeness; NOT VERIFIED. Do not treat as recommended until canonical provenance, maintenance, licensing and scope are confirmed."
+    verification_note: "NOT VERIFIED — research candidate only."
+    evidence_tier: "D"
+    last_reviewed: "2026-09-29"
+
+  - id: basilisk
+    name: "Basilisk"
+    type: "ai-security-candidate"
+    domains: ["ai-genai", "research"]
+    status: "not-verified"
+    model: "unknown"
+    role: "Research candidate included for completeness; NOT VERIFIED. Do not treat as recommended until canonical provenance, maintenance, licensing and scope are confirmed."
+    verification_note: "NOT VERIFIED — research candidate only."
+    evidence_tier: "D"
+    last_reviewed: "2026-09-29"
+
+  - id: vigilant
+    name: "VIGILANT"
+    type: "ai-security-candidate"
+    domains: ["ai-genai", "research"]
+    status: "not-verified"
+    model: "unknown"
+    role: "Research candidate included for completeness; NOT VERIFIED. Do not treat as recommended until canonical provenance, maintenance, licensing and scope are confirmed."
+    verification_note: "NOT VERIFIED — research candidate only."
+    evidence_tier: "D"
+    last_reviewed: "2026-09-29"
+
+  - id: autopt
+    name: "AutoPT"
+    type: "ai-security-candidate"
+    domains: ["ai-genai", "research"]
+    status: "not-verified"
+    model: "unknown"
+    role: "Research candidate included for completeness; NOT VERIFIED. Do not treat as recommended until canonical provenance, maintenance, licensing and scope are confirmed."
+    verification_note: "NOT VERIFIED — research candidate only."
+    evidence_tier: "D"
+    last_reviewed: "2026-09-29"
+
+  - id: highflame-red
+    name: "Highflame RED"
+    type: "ai-security-candidate"
+    domains: ["ai-genai", "research"]
+    status: "not-verified"
+    model: "unknown"
+    role: "Research candidate included for completeness; NOT VERIFIED. Do not treat as recommended until canonical provenance, maintenance, licensing and scope are confirmed."
+    verification_note: "NOT VERIFIED — research candidate only."
+    evidence_tier: "D"
+    last_reviewed: "2026-09-29"
+
+  - id: deepteam
+    name: "DeepTeam"
+    type: "ai-security-candidate"
+    domains: ["ai-genai", "research"]
+    status: "not-verified"
+    model: "unknown"
+    role: "Research candidate included for completeness; NOT VERIFIED. Do not treat as recommended until canonical provenance, maintenance, licensing and scope are confirmed."
+    verification_note: "NOT VERIFIED — research candidate only."
+    evidence_tier: "D"
+    last_reviewed: "2026-09-29"
+
+  - id: advent-prompt-pwn
+    name: "advent-prompt-pwn"
+    type: "ai-security-candidate"
+    domains: ["ai-genai", "research"]
+    status: "not-verified"
+    model: "unknown"
+    role: "Research candidate included for completeness; NOT VERIFIED. Do not treat as recommended until canonical provenance, maintenance, licensing and scope are confirmed."
+    verification_note: "NOT VERIFIED — research candidate only."
+    evidence_tier: "D"
+    last_reviewed: "2026-09-29"
+
+  - id: strix
+    name: "Strix"
+    type: "ai-security-candidate"
+    domains: ["ai-genai", "research"]
+    status: "not-verified"
+    model: "unknown"
+    role: "Research candidate included for completeness; NOT VERIFIED. Do not treat as recommended until canonical provenance, maintenance, licensing and scope are confirmed."
+    verification_note: "NOT VERIFIED — research candidate only."
+    evidence_tier: "D"
+    last_reviewed: "2026-09-29"
+
+  - id: autopwn
+    name: "Autopwn"
+    type: "ai-security-candidate"
+    domains: ["ai-genai", "research"]
+    status: "not-verified"
+    model: "unknown"
+    role: "Research candidate included for completeness; NOT VERIFIED. Do not treat as recommended until canonical provenance, maintenance, licensing and scope are confirmed."
+    verification_note: "NOT VERIFIED — research candidate only."
+    evidence_tier: "D"
+    last_reviewed: "2026-09-29"
+
+  - id: hunterx
+    name: "HunterX"
+    type: "ai-security-candidate"
+    domains: ["ai-genai", "research"]
+    status: "not-verified"
+    model: "unknown"
+    role: "Research candidate included for completeness; NOT VERIFIED. Do not treat as recommended until canonical provenance, maintenance, licensing and scope are confirmed."
+    verification_note: "NOT VERIFIED — research candidate only."
+    evidence_tier: "D"
+    last_reviewed: "2026-09-29"
+
+  - id: vanguard
+    name: "VANGUARD"
+    type: "ai-security-candidate"
+    domains: ["ai-genai", "research"]
+    status: "not-verified"
+    model: "unknown"
+    role: "Research candidate included for completeness; NOT VERIFIED. Do not treat as recommended until canonical provenance, maintenance, licensing and scope are confirmed."
+    verification_note: "NOT VERIFIED — research candidate only."
+    evidence_tier: "D"
+    last_reviewed: "2026-09-29"
+
+  - id: aptsimulator
+    name: "APTSimulator"
+    type: "adversary-emulation-candidate"
+    domains: ["adversary-emulation", "research"]
+    status: "not-verified"
+    model: "unknown"
+    role: "Research candidate included for completeness; NOT VERIFIED. Do not treat as recommended until canonical provenance, maintenance, licensing and scope are confirmed."
+    verification_note: "NOT VERIFIED — research candidate only."
+    evidence_tier: "D"
+    last_reviewed: "2026-09-29"
+
+  - id: laccolith
+    name: "Laccolith"
+    type: "adversary-emulation-candidate"
+    domains: ["adversary-emulation", "research"]
+    status: "not-verified"
+    model: "unknown"
+    role: "Research candidate included for completeness; NOT VERIFIED. Do not treat as recommended until canonical provenance, maintenance, licensing and scope are confirmed."
+    verification_note: "NOT VERIFIED — research candidate only."
+    evidence_tier: "D"
+    last_reviewed: "2026-09-29"
+
+  - id: bear-c2
+    name: "BEAR-C2"
+    type: "adversary-emulation-candidate"
+    domains: ["adversary-emulation", "research"]
+    status: "not-verified"
+    model: "unknown"
+    role: "Research candidate included for completeness; NOT VERIFIED. Do not treat as recommended until canonical provenance, maintenance, licensing and scope are confirmed."
+    verification_note: "NOT VERIFIED — research candidate only."
+    evidence_tier: "D"
+    last_reviewed: "2026-09-29"
+
+  - id: gloamfire
+    name: "Gloamfire"
+    type: "adversary-emulation-candidate"
+    domains: ["adversary-emulation", "research"]
+    status: "not-verified"
+    model: "unknown"
+    role: "Research candidate included for completeness; NOT VERIFIED. Do not treat as recommended until canonical provenance, maintenance, licensing and scope are confirmed."
+    verification_note: "NOT VERIFIED — research candidate only."
+    evidence_tier: "D"
+    last_reviewed: "2026-09-29"
+
+  - id: woodpecker
+    name: "Woodpecker"
+    type: "adversary-emulation-candidate"
+    domains: ["adversary-emulation", "research"]
+    status: "not-verified"
+    model: "unknown"
+    role: "Research candidate included for completeness; NOT VERIFIED. Do not treat as recommended until canonical provenance, maintenance, licensing and scope are confirmed."
+    verification_note: "NOT VERIFIED — research candidate only."
+    evidence_tier: "D"
+    last_reviewed: "2026-09-29"
+
+  - id: opfor
+    name: "OPFOR"
+    type: "adversary-emulation-candidate"
+    domains: ["adversary-emulation", "research"]
+    status: "not-verified"
+    model: "unknown"
+    role: "Research candidate included for completeness; NOT VERIFIED. Do not treat as recommended until canonical provenance, maintenance, licensing and scope are confirmed."
+    verification_note: "NOT VERIFIED — research candidate only."
+    evidence_tier: "D"
+    last_reviewed: "2026-09-29"
+
+  - id: bounty-hunter
+    name: "Bounty Hunter"
+    type: "adversary-emulation-candidate"
+    domains: ["adversary-emulation", "research"]
+    status: "not-verified"
+    model: "unknown"
+    role: "Research candidate included for completeness; NOT VERIFIED. Do not treat as recommended until canonical provenance, maintenance, licensing and scope are confirmed."
+    verification_note: "NOT VERIFIED — research candidate only."
+    evidence_tier: "D"
+    last_reviewed: "2026-09-29"
+
+  - id: temperance
+    name: "Temperance"
+    type: "adversary-emulation-candidate"
+    domains: ["adversary-emulation", "research"]
+    status: "not-verified"
+    model: "unknown"
+    role: "Research candidate included for completeness; NOT VERIFIED. Do not treat as recommended until canonical provenance, maintenance, licensing and scope are confirmed."
+    verification_note: "NOT VERIFIED — research candidate only."
+    evidence_tier: "D"
+    last_reviewed: "2026-09-29"
+
+  - id: peekaboo
+    name: "Peekaboo"
+    type: "adversary-emulation-candidate"
+    domains: ["adversary-emulation", "research"]
+    status: "not-verified"
+    model: "unknown"
+    role: "Research candidate included for completeness; NOT VERIFIED. Do not treat as recommended until canonical provenance, maintenance, licensing and scope are confirmed."
+    verification_note: "NOT VERIFIED — research candidate only."
+    evidence_tier: "D"
+    last_reviewed: "2026-09-29"
+
+  - id: foojank
+    name: "Foojank"
+    type: "operational-platform-candidate"
+    domains: ["adversary-emulation", "research"]
+    status: "not-verified"
+    model: "unknown"
+    role: "Research candidate included for completeness; NOT VERIFIED. Do not treat as recommended until canonical provenance, maintenance, licensing and scope are confirmed."
+    verification_note: "NOT VERIFIED — research candidate only."
+    evidence_tier: "D"
+    last_reviewed: "2026-09-29"
+
+  - id: lazyown
+    name: "LazyOwn"
+    type: "operational-platform-candidate"
+    domains: ["adversary-emulation", "research"]
+    status: "not-verified"
+    model: "unknown"
+    role: "Research candidate included for completeness; NOT VERIFIED. Do not treat as recommended until canonical provenance, maintenance, licensing and scope are confirmed."
+    verification_note: "NOT VERIFIED — research candidate only."
+    evidence_tier: "D"
+    last_reviewed: "2026-09-29"
+
+  - id: seersx
+    name: "SeersX"
+    type: "operational-platform-candidate"
+    domains: ["adversary-emulation", "research"]
+    status: "not-verified"
+    model: "unknown"
+    role: "Research candidate included for completeness; NOT VERIFIED. Do not treat as recommended until canonical provenance, maintenance, licensing and scope are confirmed."
+    verification_note: "NOT VERIFIED — research candidate only."
+    evidence_tier: "D"
+    last_reviewed: "2026-09-29"
+
+  - id: cosmos-orbit
+    name: "Cosmos Orbit"
+    type: "operational-platform-candidate"
+    domains: ["adversary-emulation", "research"]
+    status: "not-verified"
+    model: "unknown"
+    role: "Research candidate included for completeness; NOT VERIFIED. Do not treat as recommended until canonical provenance, maintenance, licensing and scope are confirmed."
+    verification_note: "NOT VERIFIED — research candidate only."
+    evidence_tier: "D"
+    last_reviewed: "2026-09-29"
+
+  - id: elaina-c2
+    name: "Elaina-C2"
+    type: "operational-platform-candidate"
+    domains: ["adversary-emulation", "research"]
+    status: "not-verified"
+    model: "unknown"
+    role: "Research candidate included for completeness; NOT VERIFIED. Do not treat as recommended until canonical provenance, maintenance, licensing and scope are confirmed."
+    verification_note: "NOT VERIFIED — research candidate only."
+    evidence_tier: "D"
+    last_reviewed: "2026-09-29"
+
+  - id: wyrm
+    name: "Wyrm"
+    type: "operational-platform-candidate"
+    domains: ["adversary-emulation", "research"]
+    status: "not-verified"
+    model: "unknown"
+    role: "Research candidate included for completeness; NOT VERIFIED. Do not treat as recommended until canonical provenance, maintenance, licensing and scope are confirmed."
+    verification_note: "NOT VERIFIED — research candidate only."
+    evidence_tier: "D"
+    last_reviewed: "2026-09-29"
+
+  - id: pexpagent
+    name: "PExpAgent"
+    type: "operational-platform-candidate"
+    domains: ["adversary-emulation", "research"]
+    status: "not-verified"
+    model: "unknown"
+    role: "Research candidate included for completeness; NOT VERIFIED. Do not treat as recommended until canonical provenance, maintenance, licensing and scope are confirmed."
+    verification_note: "NOT VERIFIED — research candidate only."
+    evidence_tier: "D"
+    last_reviewed: "2026-09-29"
+
+  - id: phantomstrike
+    name: "PhantomStrike"
+    type: "operational-platform-candidate"
+    domains: ["adversary-emulation", "research"]
+    status: "not-verified"
+    model: "unknown"
+    role: "Research candidate included for completeness; NOT VERIFIED. Do not treat as recommended until canonical provenance, maintenance, licensing and scope are confirmed."
+    verification_note: "NOT VERIFIED — research candidate only."
+    evidence_tier: "D"
+    last_reviewed: "2026-09-29"
+
+  - id: covenant
+    name: "Covenant"
+    type: "operational-platform-candidate"
+    domains: ["adversary-emulation", "research"]
+    status: "not-verified"
+    model: "unknown"
+    role: "Research candidate included for completeness; NOT VERIFIED. Do not treat as recommended until canonical provenance, maintenance, licensing and scope are confirmed."
+    verification_note: "NOT VERIFIED — research candidate only."
+    evidence_tier: "D"
+    last_reviewed: "2026-09-29"
+
+  - id: koadic
+    name: "Koadic"
+    type: "operational-platform-candidate"
+    domains: ["adversary-emulation", "research"]
+    status: "not-verified"
+    model: "unknown"
+    role: "Research candidate included for completeness; NOT VERIFIED. Do not treat as recommended until canonical provenance, maintenance, licensing and scope are confirmed."
+    verification_note: "NOT VERIFIED — research candidate only."
+    evidence_tier: "D"
+    last_reviewed: "2026-09-29"
+
+  - id: silenttrinity
+    name: "SilentTrinity"
+    type: "operational-platform-candidate"
+    domains: ["adversary-emulation", "research"]
+    status: "not-verified"
+    model: "unknown"
+    role: "Research candidate included for completeness; NOT VERIFIED. Do not treat as recommended until canonical provenance, maintenance, licensing and scope are confirmed."
+    verification_note: "NOT VERIFIED — research candidate only."
+    evidence_tier: "D"
+    last_reviewed: "2026-09-29"
+
+  - id: pupy
+    name: "Pupy"
+    type: "operational-platform-candidate"
+    domains: ["adversary-emulation", "research"]
+    status: "not-verified"
+    model: "unknown"
+    role: "Research candidate included for completeness; NOT VERIFIED. Do not treat as recommended until canonical provenance, maintenance, licensing and scope are confirmed."
+    verification_note: "NOT VERIFIED — research candidate only."
+    evidence_tier: "D"
+    last_reviewed: "2026-09-29"
+
+  - id: trevorc2
+    name: "TrevorC2"
+    type: "operational-platform-candidate"
+    domains: ["adversary-emulation", "research"]
+    status: "not-verified"
+    model: "unknown"
+    role: "Research candidate included for completeness; NOT VERIFIED. Do not treat as recommended until canonical provenance, maintenance, licensing and scope are confirmed."
+    verification_note: "NOT VERIFIED — research candidate only."
+    evidence_tier: "D"
+    last_reviewed: "2026-09-29"
+
+  - id: dnscat2
+    name: "DNSCat2"
+    type: "operational-platform-candidate"
+    domains: ["adversary-emulation", "research"]
+    status: "not-verified"
+    model: "unknown"
+    role: "Research candidate included for completeness; NOT VERIFIED. Do not treat as recommended until canonical provenance, maintenance, licensing and scope are confirmed."
+    verification_note: "NOT VERIFIED — research candidate only."
+    evidence_tier: "D"
+    last_reviewed: "2026-09-29"
+
+  - id: faction-c2
+    name: "Faction C2"
+    type: "operational-platform-candidate"
+    domains: ["adversary-emulation", "research"]
+    status: "not-verified"
+    model: "unknown"
+    role: "Research candidate included for completeness; NOT VERIFIED. Do not treat as recommended until canonical provenance, maintenance, licensing and scope are confirmed."
+    verification_note: "NOT VERIFIED — research candidate only."
+    evidence_tier: "D"
+    last_reviewed: "2026-09-29"
+
+  - id: redstack
+    name: "redStack"
+    type: "automation-toolkit-candidate"
+    domains: ["automation", "offensive-security", "research"]
+    status: "not-verified"
+    model: "unknown"
+    role: "Research candidate included for completeness; NOT VERIFIED. Do not treat as recommended until canonical provenance, maintenance, licensing and scope are confirmed."
+    verification_note: "NOT VERIFIED — research candidate only."
+    evidence_tier: "D"
+    last_reviewed: "2026-09-29"
+
+  - id: suijin
+    name: "Suijin"
+    type: "automation-toolkit-candidate"
+    domains: ["automation", "offensive-security", "research"]
+    status: "not-verified"
+    model: "unknown"
+    role: "Research candidate included for completeness; NOT VERIFIED. Do not treat as recommended until canonical provenance, maintenance, licensing and scope are confirmed."
+    verification_note: "NOT VERIFIED — research candidate only."
+    evidence_tier: "D"
+    last_reviewed: "2026-09-29"
+
+  - id: gharf
+    name: "GHARF"
+    type: "automation-toolkit-candidate"
+    domains: ["automation", "offensive-security", "research"]
+    status: "not-verified"
+    model: "unknown"
+    role: "Research candidate included for completeness; NOT VERIFIED. Do not treat as recommended until canonical provenance, maintenance, licensing and scope are confirmed."
+    verification_note: "NOT VERIFIED — research candidate only."
+    evidence_tier: "D"
+    last_reviewed: "2026-09-29"
+
+  - id: t3mp3st
+    name: "T3MP3ST"
+    type: "automation-toolkit-candidate"
+    domains: ["automation", "offensive-security", "research"]
+    status: "not-verified"
+    model: "unknown"
+    role: "Research candidate included for completeness; NOT VERIFIED. Do not treat as recommended until canonical provenance, maintenance, licensing and scope are confirmed."
+    verification_note: "NOT VERIFIED — research candidate only."
+    evidence_tier: "D"
+    last_reviewed: "2026-09-29"
+
+  - id: hexstrike-redteam
+    name: "Hexstrike-redteam"
+    type: "automation-toolkit-candidate"
+    domains: ["automation", "offensive-security", "research"]
+    status: "not-verified"
+    model: "unknown"
+    role: "Research candidate included for completeness; NOT VERIFIED. Do not treat as recommended until canonical provenance, maintenance, licensing and scope are confirmed."
+    verification_note: "NOT VERIFIED — research candidate only."
+    evidence_tier: "D"
+    last_reviewed: "2026-09-29"
+
+  - id: onist-framework
+    name: "ONIST Framework"
+    type: "automation-toolkit-candidate"
+    domains: ["automation", "offensive-security", "research"]
+    status: "not-verified"
+    model: "unknown"
+    role: "Research candidate included for completeness; NOT VERIFIED. Do not treat as recommended until canonical provenance, maintenance, licensing and scope are confirmed."
+    verification_note: "NOT VERIFIED — research candidate only."
+    evidence_tier: "D"
+    last_reviewed: "2026-09-29"
+
+  - id: offsec-toolkit
+    name: "offsec-toolkit"
+    type: "automation-toolkit-candidate"
+    domains: ["automation", "offensive-security", "research"]
+    status: "not-verified"
+    model: "unknown"
+    role: "Research candidate included for completeness; NOT VERIFIED. Do not treat as recommended until canonical provenance, maintenance, licensing and scope are confirmed."
+    verification_note: "NOT VERIFIED — research candidate only."
+    evidence_tier: "D"
+    last_reviewed: "2026-09-29"
+
+  - id: redguard-suite
+    name: "RedGuard Suite"
+    type: "automation-toolkit-candidate"
+    domains: ["automation", "offensive-security", "research"]
+    status: "not-verified"
+    model: "unknown"
+    role: "Research candidate included for completeness; NOT VERIFIED. Do not treat as recommended until canonical provenance, maintenance, licensing and scope are confirmed."
+    verification_note: "NOT VERIFIED — research candidate only."
+    evidence_tier: "D"
+    last_reviewed: "2026-09-29"
+
+  - id: gosecops
+    name: "GoSecOps"
+    type: "automation-toolkit-candidate"
+    domains: ["automation", "offensive-security", "research"]
+    status: "not-verified"
+    model: "unknown"
+    role: "Research candidate included for completeness; NOT VERIFIED. Do not treat as recommended until canonical provenance, maintenance, licensing and scope are confirmed."
+    verification_note: "NOT VERIFIED — research candidate only."
+    evidence_tier: "D"
+    last_reviewed: "2026-09-29"
+
+  - id: hos-vortex
+    name: "hos_vortex"
+    type: "automation-toolkit-candidate"
+    domains: ["automation", "offensive-security", "research"]
+    status: "not-verified"
+    model: "unknown"
+    role: "Research candidate included for completeness; NOT VERIFIED. Do not treat as recommended until canonical provenance, maintenance, licensing and scope are confirmed."
+    verification_note: "NOT VERIFIED — research candidate only."
+    evidence_tier: "D"
+    last_reviewed: "2026-09-29"
+
+  - id: sandevistan
+    name: "SANDEVISTAN"
+    type: "automation-toolkit-candidate"
+    domains: ["automation", "offensive-security", "research"]
+    status: "not-verified"
+    model: "unknown"
+    role: "Research candidate included for completeness; NOT VERIFIED. Do not treat as recommended until canonical provenance, maintenance, licensing and scope are confirmed."
+    verification_note: "NOT VERIFIED — research candidate only."
+    evidence_tier: "D"
+    last_reviewed: "2026-09-29"
+
+  - id: intsploit
+    name: "intSpLoiT"
+    type: "automation-toolkit-candidate"
+    domains: ["automation", "offensive-security", "research"]
+    status: "not-verified"
+    model: "unknown"
+    role: "Research candidate included for completeness; NOT VERIFIED. Do not treat as recommended until canonical provenance, maintenance, licensing and scope are confirmed."
+    verification_note: "NOT VERIFIED — research candidate only."
+    evidence_tier: "D"
+    last_reviewed: "2026-09-29"
+
+  - id: pentester-playbook
+    name: "Pentester Playbook"
+    type: "automation-toolkit-candidate"
+    domains: ["automation", "offensive-security", "research"]
+    status: "not-verified"
+    model: "unknown"
+    role: "Research candidate included for completeness; NOT VERIFIED. Do not treat as recommended until canonical provenance, maintenance, licensing and scope are confirmed."
+    verification_note: "NOT VERIFIED — research candidate only."
+    evidence_tier: "D"
+    last_reviewed: "2026-09-29"
+
+  - id: arsenal
+    name: "Arsenal"
+    type: "automation-toolkit-candidate"
+    domains: ["automation", "offensive-security", "research"]
+    status: "not-verified"
+    model: "unknown"
+    role: "Research candidate included for completeness; NOT VERIFIED. Do not treat as recommended until canonical provenance, maintenance, licensing and scope are confirmed."
+    verification_note: "NOT VERIFIED — research candidate only."
+    evidence_tier: "D"
+    last_reviewed: "2026-09-29"
+
+  - id: powerzure
+    name: "PowerZure"
+    type: "cloud-security-candidate"
+    domains: ["cloud", "kubernetes", "research"]
+    status: "not-verified"
+    model: "unknown"
+    role: "Research candidate included for completeness; NOT VERIFIED. Do not treat as recommended until canonical provenance, maintenance, licensing and scope are confirmed."
+    verification_note: "NOT VERIFIED — research candidate only."
+    evidence_tier: "D"
+    last_reviewed: "2026-09-29"
+
+  - id: kraken
+    name: "Kraken"
+    type: "cloud-security-candidate"
+    domains: ["cloud", "kubernetes", "research"]
+    status: "not-verified"
+    model: "unknown"
+    role: "Research candidate included for completeness; NOT VERIFIED. Do not treat as recommended until canonical provenance, maintenance, licensing and scope are confirmed."
+    verification_note: "NOT VERIFIED — research candidate only."
+    evidence_tier: "D"
+    last_reviewed: "2026-09-29"
+
+  - id: ctrsploit
+    name: "ctrsploit"
+    type: "cloud-security-candidate"
+    domains: ["cloud", "kubernetes", "research"]
+    status: "not-verified"
+    model: "unknown"
+    role: "Research candidate included for completeness; NOT VERIFIED. Do not treat as recommended until canonical provenance, maintenance, licensing and scope are confirmed."
+    verification_note: "NOT VERIFIED — research candidate only."
+    evidence_tier: "D"
+    last_reviewed: "2026-09-29"
+
+  - id: kubesploit
+    name: "Kubesploit"
+    type: "cloud-security-candidate"
+    domains: ["cloud", "kubernetes", "research"]
+    status: "not-verified"
+    model: "unknown"
+    role: "Research candidate included for completeness; NOT VERIFIED. Do not treat as recommended until canonical provenance, maintenance, licensing and scope are confirmed."
+    verification_note: "NOT VERIFIED — research candidate only."
+    evidence_tier: "D"
+    last_reviewed: "2026-09-29"
+
+  - id: redcloudos
+    name: "RedCloudOS"
+    type: "cloud-security-candidate"
+    domains: ["cloud", "kubernetes", "research"]
+    status: "not-verified"
+    model: "unknown"
+    role: "Research candidate included for completeness; NOT VERIFIED. Do not treat as recommended until canonical provenance, maintenance, licensing and scope are confirmed."
+    verification_note: "NOT VERIFIED — research candidate only."
+    evidence_tier: "D"
+    last_reviewed: "2026-09-29"
+
+  - id: cptf-arm-edition
+    name: "CPTF ARM Edition"
+    type: "cloud-security-candidate"
+    domains: ["cloud", "kubernetes", "research"]
+    status: "not-verified"
+    model: "unknown"
+    role: "Research candidate included for completeness; NOT VERIFIED. Do not treat as recommended until canonical provenance, maintenance, licensing and scope are confirmed."
+    verification_note: "NOT VERIFIED — research candidate only."
+    evidence_tier: "D"
+    last_reviewed: "2026-09-29"
+
+  - id: offensivecloud
+    name: "OffensiveCloud"
+    type: "cloud-security-candidate"
+    domains: ["cloud", "kubernetes", "research"]
+    status: "not-verified"
+    model: "unknown"
+    role: "Research candidate included for completeness; NOT VERIFIED. Do not treat as recommended until canonical provenance, maintenance, licensing and scope are confirmed."
+    verification_note: "NOT VERIFIED — research candidate only."
+    evidence_tier: "D"
+    last_reviewed: "2026-09-29"
+
+  - id: cloudtoolkit
+    name: "Cloudtoolkit"
+    type: "cloud-security-candidate"
+    domains: ["cloud", "kubernetes", "research"]
+    status: "not-verified"
+    model: "unknown"
+    role: "Research candidate included for completeness; NOT VERIFIED. Do not treat as recommended until canonical provenance, maintenance, licensing and scope are confirmed."
+    verification_note: "NOT VERIFIED — research candidate only."
+    evidence_tier: "D"
+    last_reviewed: "2026-09-29"
+
+  - id: ax-framework
+    name: "Ax Framework"
+    type: "cloud-security-candidate"
+    domains: ["cloud", "kubernetes", "research"]
+    status: "not-verified"
+    model: "unknown"
+    role: "Research candidate included for completeness; NOT VERIFIED. Do not treat as recommended until canonical provenance, maintenance, licensing and scope are confirmed."
+    verification_note: "NOT VERIFIED — research candidate only."
+    evidence_tier: "D"
+    last_reviewed: "2026-09-29"
+
+  - id: secops-chaos
+    name: "secops-chaos"
+    type: "cloud-security-candidate"
+    domains: ["cloud", "kubernetes", "research"]
+    status: "not-verified"
+    model: "unknown"
+    role: "Research candidate included for completeness; NOT VERIFIED. Do not treat as recommended until canonical provenance, maintenance, licensing and scope are confirmed."
+    verification_note: "NOT VERIFIED — research candidate only."
+    evidence_tier: "D"
+    last_reviewed: "2026-09-29"
+
+  - id: embedxpl-forge
+    name: "EmbedXPL-Forge"
+    type: "iot-embedded-candidate"
+    domains: ["iot", "embedded", "research"]
+    status: "not-verified"
+    model: "unknown"
+    role: "Research candidate included for completeness; NOT VERIFIED. Do not treat as recommended until canonical provenance, maintenance, licensing and scope are confirmed."
+    verification_note: "NOT VERIFIED — research candidate only."
+    evidence_tier: "D"
+    last_reviewed: "2026-09-29"
+
+  - id: iotptf
+    name: "IoTPTF"
+    type: "iot-embedded-candidate"
+    domains: ["iot", "embedded", "research"]
+    status: "not-verified"
+    model: "unknown"
+    role: "Research candidate included for completeness; NOT VERIFIED. Do not treat as recommended until canonical provenance, maintenance, licensing and scope are confirmed."
+    verification_note: "NOT VERIFIED — research candidate only."
+    evidence_tier: "D"
+    last_reviewed: "2026-09-29"
+
+  - id: iothackbot
+    name: "IoTHackBot"
+    type: "iot-embedded-candidate"
+    domains: ["iot", "embedded", "research"]
+    status: "not-verified"
+    model: "unknown"
+    role: "Research candidate included for completeness; NOT VERIFIED. Do not treat as recommended until canonical provenance, maintenance, licensing and scope are confirmed."
+    verification_note: "NOT VERIFIED — research candidate only."
+    evidence_tier: "D"
+    last_reviewed: "2026-09-29"
+
+  - id: advanced-iot-exploitation-framework-v2-0
+    name: "Advanced IoT Exploitation Framework v2.0"
+    type: "iot-embedded-candidate"
+    domains: ["iot", "embedded", "research"]
+    status: "not-verified"
+    model: "unknown"
+    role: "Research candidate included for completeness; NOT VERIFIED. Do not treat as recommended until canonical provenance, maintenance, licensing and scope are confirmed."
+    verification_note: "NOT VERIFIED — research candidate only."
+    evidence_tier: "D"
+    last_reviewed: "2026-09-29"
+
+  - id: rtosploit
+    name: "RTOSploit"
+    type: "iot-embedded-candidate"
+    domains: ["iot", "embedded", "research"]
+    status: "not-verified"
+    model: "unknown"
+    role: "Research candidate included for completeness; NOT VERIFIED. Do not treat as recommended until canonical provenance, maintenance, licensing and scope are confirmed."
+    verification_note: "NOT VERIFIED — research candidate only."
+    evidence_tier: "D"
+    last_reviewed: "2026-09-29"
+
+  - id: the-360-cyber-shield
+    name: "The 360 Cyber Shield"
+    type: "purple-team-candidate"
+    domains: ["purple-team", "security-validation", "research"]
+    status: "not-verified"
+    model: "unknown"
+    role: "Research candidate included for completeness; NOT VERIFIED. Do not treat as recommended until canonical provenance, maintenance, licensing and scope are confirmed."
+    verification_note: "NOT VERIFIED — research candidate only."
+    evidence_tier: "D"
+    last_reviewed: "2026-09-29"
+
+  - id: skyhawk-security-autonomous-purple-team
+    name: "Skyhawk Security Autonomous Purple Team"
+    type: "purple-team-candidate"
+    domains: ["purple-team", "security-validation", "research"]
+    status: "not-verified"
+    model: "unknown"
+    role: "Research candidate included for completeness; NOT VERIFIED. Do not treat as recommended until canonical provenance, maintenance, licensing and scope are confirmed."
+    verification_note: "NOT VERIFIED — research candidate only."
+    evidence_tier: "D"
+    last_reviewed: "2026-09-29"
+
+  - id: powersploit
+    name: "PowerSploit"
+    type: "legacy-review-candidate"
+    domains: ["legacy-review", "research"]
+    status: "not-verified"
+    model: "unknown"
+    role: "Research candidate included for completeness; NOT VERIFIED. Do not treat as recommended until canonical provenance, maintenance, licensing and scope are confirmed."
+    verification_note: "NOT VERIFIED — research candidate only."
+    evidence_tier: "D"
+    last_reviewed: "2026-09-29"
+
+  - id: nishang
+    name: "Nishang"
+    type: "legacy-review-candidate"
+    domains: ["legacy-review", "research"]
+    status: "not-verified"
+    model: "unknown"
+    role: "Research candidate included for completeness; NOT VERIFIED. Do not treat as recommended until canonical provenance, maintenance, licensing and scope are confirmed."
+    verification_note: "NOT VERIFIED — research candidate only."
+    evidence_tier: "D"
+    last_reviewed: "2026-09-29"
+
+  - id: sharpsploit
+    name: "SharpSploit"
+    type: "legacy-review-candidate"
+    domains: ["legacy-review", "research"]
+    status: "not-verified"
+    model: "unknown"
+    role: "Research candidate included for completeness; NOT VERIFIED. Do not treat as recommended until canonical provenance, maintenance, licensing and scope are confirmed."
+    verification_note: "NOT VERIFIED — research candidate only."
+    evidence_tier: "D"
+    last_reviewed: "2026-09-29"
+
+  - id: crackmapexec
+    name: "CrackMapExec"
+    type: "legacy-review-candidate"
+    domains: ["legacy-review", "research"]
+    status: "not-verified"
+    model: "unknown"
+    role: "Research candidate included for completeness; NOT VERIFIED. Do not treat as recommended until canonical provenance, maintenance, licensing and scope are confirmed."
+    verification_note: "NOT VERIFIED — research candidate only."
+    evidence_tier: "D"
+    last_reviewed: "2026-09-29"
+
+watchlist: []
