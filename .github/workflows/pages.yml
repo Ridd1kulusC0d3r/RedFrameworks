@@ -6,8 +6,12 @@ on:
       - "frameworks.yaml"
       - "catalog.yaml"
       - "relationships.yaml"
+      - "schemas/**"
+      - "examples/trends/**"
       - "site/**"
       - "scripts/build_site.py"
+      - "scripts/export_stix.py"
+      - "scripts/check_upstreams.py"
       - ".github/workflows/pages.yml"
   workflow_dispatch:
 permissions:
@@ -29,8 +33,14 @@ jobs:
           python-version: "3.13"
       - name: Install build dependency
         run: python -m pip install --disable-pip-version-check PyYAML
-      - name: Build catalog site
+      - name: Collect public upstream health signals
+        run: python scripts/check_upstreams.py --json upstream-health.json --report upstream-health.md
+      - name: Build catalog site, entity pages and API
         run: python scripts/build_site.py --output _site
+      - name: Generate STIX/OpenCTI export
+        run: python scripts/export_stix.py --output-dir _site/api
+      - name: Publish upstream health dataset
+        run: cp upstream-health.json _site/data/upstream-health.json
       - name: Configure or enable Pages
         uses: actions/configure-pages@v5
         with:
