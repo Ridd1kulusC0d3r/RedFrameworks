@@ -1,7 +1,6 @@
 name: Data / provenance correction
 description: Report a rename, archive state, bad relationship, stale link or classification problem.
 title: "[data] "
-labels: ["data-quality"]
 body:
   - type: dropdown
     id: kind
