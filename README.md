@@ -18,12 +18,21 @@ The goal is not to collect every red-team link on the internet. The goal is to h
 
 | Area | Purpose |
 |---|---|
+| [Taxonomy](docs/taxonomy.md) | Separate methodologies, knowledge models, tools, validation platforms and domain guides |
 | [PTES](PTES.md) | Engagement lifecycle based on the Penetration Testing Execution Standard |
 | [Framework Matrix](docs/framework-matrix.md) | Compare major testing and threat-informed frameworks |
+| [Threat-Led Testing](docs/threat-led-testing.md) | TIBER-EU, CBEST, CREST TLPT / STAR and regulated testing |
 | [Adversary Emulation](docs/adversary-emulation.md) | Turn CTI into controlled, measurable emulation plans |
+| [AI / GenAI Security](docs/ai-security.md) | ATLAS, OWASP GenAI, NIST AI RMF, PyRIT and garak |
 | [Cloud Red Teaming](docs/cloud-red-teaming.md) | Scope cloud assessments across identity, control plane, workloads and telemetry |
+| [Cloud-Native Ecosystem](docs/cloud-native-ecosystem.md) | CloudFox, Pacu, Stratus, AzureHound, KubeHound and related roles |
+| [Detection & Validation](docs/detection-validation.md) | Purple team, BAS, Sigma, Velociraptor and continuous validation |
+| [Mobile & IoT](docs/mobile-iot.md) | OWASP mobile / IoT methodologies and assessment ecosystem |
+| [Operational Tooling](docs/tooling-landscape.md) | Separate operational platforms from methodologies |
+| [Research Watchlist](docs/watchlist.md) | Candidates requiring provenance, maintenance or scope verification |
 | [Reporting & Evidence](docs/reporting-and-evidence.md) | Convert technical observations into reproducible evidence and remediation |
-| [Machine-readable catalog](frameworks.yaml) | Structured framework metadata for future automation |
+| [Framework data](frameworks.yaml) | Machine-readable methodology / knowledge-model catalog |
+| [Cross-domain catalog](catalog.yaml) | Machine-readable tooling and platform catalog |
 
 ## Operating model
 
@@ -54,27 +63,52 @@ Retest / Validation
 
 This deliberately separates **testing** from **validation**. A red-team activity that ends with "we got access" produces an anecdote. A mature activity also records what was observable, what was detected, what failed, which controls reduced impact, and whether fixes survived a retest.
 
-## Core framework families
+## Layered ecosystem
 
-### Engagement and assessment methodology
+The repository now uses six layers instead of pretending every security project is a "framework":
 
-- **PTES** — practical penetration-testing lifecycle and technical guidance.
-- **NIST SP 800-115** — formal guidance for planning, conducting, analysing and reporting technical security assessments.
-- **OSSTMM** — methodology focused on operational security testing and measurable controls.
-- **OWASP WSTG** — web application and web-service security testing methodology.
+### 1. Methodologies and assurance
 
-### Threat-informed red teaming
+- **PTES** and **NIST SP 800-115** for engagement structure.
+- **TIBER-EU**, **CBEST** and **CREST TLPT / STAR** for threat-led and intelligence-led testing.
+- **OWASP WSTG**, **MASTG** and **IoT ISTG** for domain-specific assessment guidance.
 
-- **MITRE ATT&CK** — common vocabulary for adversary tactics, techniques and procedures.
-- **Center for Threat-Informed Defense Adversary Emulation Library** — intelligence-driven emulation plans for testing defensive capabilities.
-- **Attack Flow** — represents sequences and relationships between adversary behaviors rather than isolated techniques.
-- **MITRE D3FEND** — defensive knowledge graph that helps connect offensive techniques to countermeasure concepts.
+### 2. Adversary and defensive knowledge models
 
-### Validation and repeatability
+- **MITRE ATT&CK** for adversary behavior.
+- **MITRE ATLAS** for AI-system adversary behavior.
+- **Attack Flow** for multi-step relationships.
+- **MITRE D3FEND** for defensive countermeasure concepts.
+- **MITRE Engage** for adversary engagement and deception planning.
 
-- **Atomic Red Team** — portable tests mapped to ATT&CK for focused security-control validation.
-- **MITRE CALDERA** — automation platform for adversary emulation and security assessment.
-- **Breach and Attack Simulation (BAS)** — useful when the objective is repeatable control validation at scale rather than human-led red teaming.
+### 3. Emulation and validation
+
+- **Atomic Red Team** for focused behavior validation.
+- **MITRE CALDERA** for repeatable adversary emulation.
+- **Stratus Red Team** for granular cloud emulation.
+- **OpenBAS** for exercise, BAS and security-validation orchestration.
+
+### 4. Operational assessment platforms
+
+Examples include **BloodHound / AzureHound**, **CloudFox**, **Pacu**, **KubeHound**, **MobSF**, **Frida**, and authorized adversary-emulation platforms.
+
+These are tools, not methodologies. Their value depends on the test objective, Rules of Engagement, evidence quality and defensive outcome.
+
+### 5. Detection and response ecosystem
+
+- **Sigma** for portable detection logic.
+- **YARA** for pattern-based detection and analysis.
+- **Velociraptor** for endpoint visibility and threat hunting.
+- commercial BAS / exposure-validation platforms for continuous validation.
+
+### 6. AI security
+
+- **OWASP GenAI Security Project** for application risk guidance.
+- **MITRE ATLAS** for AI adversary tactics and techniques.
+- **NIST AI RMF GenAI Profile** for risk-management framing.
+- **Microsoft PyRIT** and **NVIDIA garak** for structured AI security assessment.
+
+See [Taxonomy](docs/taxonomy.md) for classification rules.
 
 ## Choosing a framework
 
@@ -82,11 +116,15 @@ This deliberately separates **testing** from **validation**. A red-team activity
 |---|---|---|
 | Traditional penetration test | PTES | NIST SP 800-115 |
 | Web application assessment | OWASP WSTG | PTES |
-| Threat-led red team | ATT&CK | CTID Emulation Library + Attack Flow |
-| Purple-team validation | ATT&CK | Atomic Red Team + D3FEND |
+| Threat-led red team | TIBER-EU / CBEST / CREST TLPT where applicable | ATT&CK + CTID Emulation Library + Attack Flow |
+| Purple-team validation | ATT&CK | Atomic Red Team + D3FEND + Sigma |
 | Formal assessment governance | NIST SP 800-115 | PTES |
-| Cloud assessment | Provider rules + PTES | ATT&CK Cloud techniques + cloud threat model |
-| Continuous validation | ATT&CK | Atomic tests / BAS + detection engineering |
+| Cloud assessment | Provider rules + PTES | ATT&CK + Stratus + attack-path analysis |
+| Kubernetes assessment | cloud-native threat model | KubeHound + posture / configuration validation |
+| AI / GenAI assessment | OWASP GenAI + ATLAS | NIST AI RMF + PyRIT / garak |
+| Mobile assessment | OWASP MASVS / MASTG | MobSF + dynamic instrumentation |
+| IoT assessment | OWASP IoT ISTG / ISVS | ecosystem-specific evidence model |
+| Continuous validation | ATT&CK | Atomic tests / OpenBAS / BAS + detection engineering |
 
 ## Minimum engagement artifacts
 
@@ -187,11 +225,19 @@ Before any execution:
 - [x] Add machine-readable framework catalog
 - [ ] Add ATT&CK Navigator examples
 - [ ] Add Attack Flow examples
-- [ ] Add assessment templates
+- [x] Add assessment templates
+- [x] Add automated link validation
+- [x] Add threat-led testing frameworks
+- [x] Add AI / GenAI security layer
+- [x] Add cloud-native / Kubernetes layer
+- [x] Add mobile and IoT layer
+- [x] Add tooling taxonomy and watchlist
 - [ ] Add GitHub Pages documentation
-- [ ] Add automated link validation
-- [ ] Add framework freshness checks
+- [ ] Add automated framework freshness checks
+- [ ] Add ATT&CK Navigator examples
+- [ ] Add Attack Flow examples
 - [ ] Add purple-team measurement templates
+- [ ] Generate browsable catalog from YAML
 
 ## Contribution philosophy
 

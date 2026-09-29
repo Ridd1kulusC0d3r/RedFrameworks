@@ -1,76 +1,148 @@
 updated: "2026-09-29"
 repository: "Ridd1kulusC0d3r/RedFrameworks"
+schema_version: "2.0"
 
 frameworks:
   - id: ptes
     name: "Penetration Testing Execution Standard"
-    category: "engagement-methodology"
+    type: "methodology"
+    domain: ["enterprise"]
+    status: "verified"
     url: "https://www.pentest-standard.org/"
-    best_for:
-      - "penetration testing lifecycle"
-      - "engagement structure"
+    best_for: ["penetration testing lifecycle", "engagement structure"]
 
   - id: nist-sp-800-115
     name: "NIST SP 800-115"
-    category: "assessment-guidance"
+    type: "assessment-guidance"
+    domain: ["enterprise"]
+    status: "verified"
     url: "https://csrc.nist.gov/pubs/sp/800/115/final"
-    best_for:
-      - "formal security assessment programs"
-      - "planning and reporting"
+    best_for: ["formal security assessment programs", "planning and reporting"]
 
   - id: owasp-wstg
     name: "OWASP Web Security Testing Guide"
-    category: "application-security"
+    type: "domain-testing-guide"
+    domain: ["web"]
+    status: "verified"
     url: "https://wstg.owasp.org/"
-    best_for:
-      - "web application testing"
-      - "web service testing"
+    best_for: ["web application testing", "web service testing"]
+
+  - id: owasp-mastg
+    name: "OWASP Mobile Application Security Testing Guide"
+    type: "domain-testing-guide"
+    domain: ["mobile"]
+    status: "verified"
+    url: "https://mas.owasp.org/MASTG/"
+    best_for: ["mobile application security testing"]
+
+  - id: owasp-iot-istg
+    name: "OWASP IoT Security Testing Guide"
+    type: "domain-testing-guide"
+    domain: ["iot", "embedded"]
+    status: "verified"
+    url: "https://owasp.org/projects/iot-security-testing-guide"
+    best_for: ["IoT penetration testing methodology", "IoT test cases"]
 
   - id: mitre-attack
     name: "MITRE ATT&CK"
-    category: "adversary-behavior"
+    type: "knowledge-base"
+    domain: ["enterprise", "cloud", "mobile"]
+    status: "verified"
     url: "https://attack.mitre.org/"
-    best_for:
-      - "TTP mapping"
-      - "threat-informed testing"
-      - "detection engineering"
+    best_for: ["TTP mapping", "threat-informed testing", "detection engineering"]
 
-  - id: ctid-adversary-emulation
-    name: "CTID Adversary Emulation Library"
-    category: "adversary-emulation"
-    url: "https://ctid.mitre.org/resources/adversary-emulation-library/"
-    best_for:
-      - "intelligence-driven emulation"
-      - "full and micro emulation plans"
+  - id: mitre-atlas
+    name: "MITRE ATLAS"
+    type: "knowledge-base"
+    domain: ["ai-genai"]
+    status: "verified"
+    url: "https://atlas.mitre.org/"
+    best_for: ["AI adversary behavior modeling", "AI threat-informed testing"]
+
+  - id: mitre-d3fend
+    name: "MITRE D3FEND"
+    type: "defensive-knowledge-base"
+    domain: ["enterprise", "detection"]
+    status: "verified"
+    url: "https://d3fend.mitre.org/"
+    best_for: ["countermeasure mapping", "purple-team analysis"]
 
   - id: attack-flow
     name: "Attack Flow"
-    category: "behavior-modeling"
+    type: "behavior-model"
+    domain: ["enterprise", "cloud"]
+    status: "verified"
     url: "https://attackflow.org/"
-    best_for:
-      - "multi-step attack paths"
-      - "behavior sequencing"
+    best_for: ["multi-step attack paths", "behavior sequencing"]
 
-  - id: d3fend
-    name: "MITRE D3FEND"
-    category: "defensive-knowledge-graph"
-    url: "https://d3fend.mitre.org/"
-    best_for:
-      - "countermeasure mapping"
-      - "purple-team analysis"
+  - id: ctid-adversary-emulation
+    name: "CTID Adversary Emulation Library"
+    type: "emulation-library"
+    domain: ["enterprise"]
+    status: "verified"
+    url: "https://ctid.mitre.org/resources/adversary-emulation-library/"
+    best_for: ["intelligence-driven emulation", "full and micro emulation plans"]
+
+  - id: tiber-eu
+    name: "TIBER-EU"
+    type: "threat-led-testing-framework"
+    domain: ["regulated", "financial"]
+    status: "verified"
+    url: "https://www.ecb.europa.eu/paym/cyber-resilience/tiber-eu/html/index.en.html"
+    best_for: ["threat-intelligence-based ethical red teaming", "DORA-aligned TLPT"]
+
+  - id: cbest
+    name: "CBEST"
+    type: "threat-led-testing-framework"
+    domain: ["regulated", "financial", "uk"]
+    status: "verified"
+    url: "https://www.bankofengland.co.uk/financial-stability/operational-resilience-of-the-financial-sector/cbest-threat-intelligence-led-assessments-implementation-guide"
+    best_for: ["UK financial-sector intelligence-led testing", "regulator-led resilience assessment"]
+
+  - id: crest-tlpt
+    name: "CREST Threat-Led Penetration Testing"
+    type: "assurance-framework"
+    domain: ["enterprise", "regulated"]
+    status: "verified"
+    url: "https://www.crest-approved.org/cyber-service-categories/red-teaming/"
+    best_for: ["threat-led assurance", "provider and service quality structure"]
+
+  - id: mitre-engage
+    name: "MITRE Engage"
+    type: "adversary-engagement-framework"
+    domain: ["enterprise", "deception"]
+    status: "verified"
+    url: "https://engage.mitre.org/"
+    best_for: ["adversary engagement planning", "deception and denial concepts"]
+
+  - id: owasp-genai
+    name: "OWASP GenAI Security Project"
+    type: "application-security-guidance"
+    domain: ["ai-genai"]
+    status: "verified"
+    url: "https://genai.owasp.org/"
+    best_for: ["GenAI application risk modeling", "LLM risk mitigation"]
+
+  - id: nist-ai-rmf-genai
+    name: "NIST AI RMF Generative AI Profile"
+    type: "risk-management-guidance"
+    domain: ["ai-genai"]
+    status: "verified"
+    url: "https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-generative-artificial-intelligence"
+    best_for: ["AI governance", "GenAI risk management"]
 
   - id: atomic-red-team
     name: "Atomic Red Team"
-    category: "control-validation"
+    type: "control-validation"
+    domain: ["enterprise", "detection"]
+    status: "verified"
     url: "https://github.com/redcanaryco/atomic-red-team"
-    best_for:
-      - "portable ATT&CK-mapped tests"
-      - "detection validation"
+    best_for: ["portable ATT&CK-mapped tests", "detection validation"]
 
   - id: mitre-caldera
     name: "MITRE CALDERA"
-    category: "emulation-automation"
+    type: "emulation-automation"
+    domain: ["enterprise"]
+    status: "verified"
     url: "https://caldera.mitre.org/"
-    best_for:
-      - "automated adversary emulation"
-      - "repeatable assessment workflows"
+    best_for: ["automated adversary emulation", "repeatable assessment workflows"]

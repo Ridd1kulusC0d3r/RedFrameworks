@@ -38,3 +38,10 @@ When adding a framework, include:
 ## Style
 
 Prefer concise Markdown, tables and diagrams. Explain why something matters before adding another link.
+
+
+## Catalog quality gate
+
+Before adding a project to the core catalog, follow [docs/review-policy.md](docs/review-policy.md).
+
+Every entry must identify its canonical upstream, type, domain, status and review date. New or uncertain projects belong in the research watchlist until their provenance and maintenance state are verified.
