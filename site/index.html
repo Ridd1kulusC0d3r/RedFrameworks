@@ -3,28 +3,47 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="RedFrameworks: a curated, threat-informed offensive security knowledge base and validation catalog.">
-  <meta name="theme-color" content="#09090b">
-  <title>RedFrameworks · Offensive Security Knowledge Base</title>
+  <meta name="description" content="RedFrameworks: threat-informed offensive security knowledge graph, validation catalog and defensive evidence reference.">
+  <meta name="theme-color" content="#07080a">
+  <title>RedFrameworks · Threat-Informed Security Knowledge Graph</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <a class="skip-link" href="#catalog-section">Skip to catalog</a>
   <div class="noise" aria-hidden="true"></div>
+
   <header class="topbar">
     <a class="brand" href="#top"><span class="brand-mark">RF</span><span>RedFrameworks</span></a>
-    <nav><a href="#paths">Paths</a><a href="#graph">Graph</a><a href="#catalog-section">Catalog</a><a href="https://github.com/Ridd1kulusC0d3r/RedFrameworks">GitHub ↗</a></nav>
+    <nav aria-label="Primary">
+      <a href="#paths" data-i18n="nav_paths">Paths</a>
+      <a href="#visuals" data-i18n="nav_visuals">Visuals</a>
+      <a href="#graph" data-i18n="nav_graph">Graph</a>
+      <a href="#catalog-section" data-i18n="nav_catalog">Catalog</a>
+      <a href="#roadmap" data-i18n="nav_roadmap">Roadmap</a>
+    </nav>
+    <div class="top-actions">
+      <label class="language-label"><span class="sr-only">Language</span>
+        <select id="language" aria-label="Language">
+          <option value="en">EN</option><option value="pt">PT</option><option value="es">ES</option>
+        </select>
+      </label>
+      <a class="github-link" href="https://github.com/Ridd1kulusC0d3r/RedFrameworks">GitHub ↗</a>
+    </div>
   </header>
 
   <header id="top" class="hero">
     <div class="hero-grid">
       <div>
-        <p class="eyebrow"><span class="pulse"></span> Curated · threat-informed · machine-readable</p>
-        <h1>Offensive security,<br><span>mapped to defensive outcomes.</span></h1>
-        <p class="lede">A structured knowledge base for methodologies, adversary models, validation platforms, domain guides and reviewed tooling. Less “awesome list”, more analyst-grade reference.</p>
+        <p class="eyebrow"><span class="pulse"></span><span data-i18n="hero_eyebrow">Curated · threat-informed · machine-readable</span></p>
+        <h1><span data-i18n="hero_title_1">Offensive security,</span><br><em data-i18n="hero_title_2">mapped to defensive outcomes.</em></h1>
+        <p class="lede" data-i18n="hero_lede">A structured knowledge graph for methodologies, adversary models, validation platforms, defensive evidence and reviewed tooling.</p>
         <div class="hero-actions">
-          <a class="button primary" href="#catalog-section">Explore catalog</a>
-          <a class="button" href="#graph">Explore relationships</a>
-          <a class="button" href="https://github.com/Ridd1kulusC0d3r/RedFrameworks/tree/main/examples">Machine-readable examples ↗</a>
+          <a class="button primary" href="#catalog-section" data-i18n="explore_catalog">Explore catalog</a>
+          <a class="button" href="#graph" data-i18n="explore_graph">Explore graph</a>
+          <a class="button" href="api/version.json">API ↗</a>
+        </div>
+        <div class="hero-meta">
+          <span>YAML → JSON → Graph</span><span>STIX 2.1</span><span>E0–E3 Evidence</span><span>ATT&CK · ATLAS · D3FEND</span>
         </div>
       </div>
       <aside class="hero-terminal" aria-label="Operational model">
@@ -48,19 +67,36 @@ REMEDIATE → RETEST</code></pre>
     <section id="stats" class="stats" aria-label="Catalog statistics"></section>
 
     <section id="paths" class="section">
-      <div class="section-head"><div><p class="kicker">Decision paths</p><h2>Start with the question, not the tool.</h2></div><p>Use these presets to slice the catalog by analyst objective.</p></div>
+      <div class="section-head">
+        <div><p class="kicker" data-i18n="decision_paths">Decision paths</p><h2 data-i18n="start_question">Start with the question, not the tool.</h2></div>
+        <p data-i18n="paths_copy">Presets focus the catalog on a security objective without pretending one tool fits every engagement.</p>
+      </div>
       <div class="path-grid">
-        <button class="path-card" data-query="penetration assessment"><b>01</b><strong>Pentest</strong><span>PTES · NIST · WSTG · assessment</span></button>
-        <button class="path-card" data-query="threat-led attack-flow"><b>02</b><strong>Threat-led</strong><span>TIBER-EU · CBEST · Attack Flow</span></button>
-        <button class="path-card" data-query="purple detection validation"><b>03</b><strong>Purple Team</strong><span>ATT&CK · VECTR · TTPForge · Sigma</span></button>
-        <button class="path-card" data-query="cloud azure aws gcp kubernetes"><b>04</b><strong>Cloud</strong><span>Stratus · CloudFox · BloodHound · KubeHound</span></button>
-        <button class="path-card" data-query="ai-genai"><b>05</b><strong>AI / GenAI</strong><span>ATLAS · OWASP GenAI · PyRIT · garak</span></button>
-        <button class="path-card" data-query="iot embedded mobile"><b>06</b><strong>Edge</strong><span>MASTG · ISTG · EXPLIoT · MobSF</span></button>
+        <button class="path-card" data-query="ptes nist wstg assessment methodology"><b>01</b><strong>Pentest</strong><span>PTES · NIST · WSTG</span></button>
+        <button class="path-card" data-query="tiber cbest threat-led attack-flow"><b>02</b><strong>Threat-led</strong><span>TIBER-EU · CBEST · Attack Flow</span></button>
+        <button class="path-card" data-query="purple detection validation vectr sigma ttpforge"><b>03</b><strong>Purple Team</strong><span>VECTR · TTPForge · Sigma</span></button>
+        <button class="path-card" data-query="cloud azure aws gcp kubernetes identity"><b>04</b><strong>Cloud</strong><span>Stratus · CloudFox · KubeHound</span></button>
+        <button class="path-card" data-query="ai-genai atlas pyrit garak"><b>05</b><strong>AI / GenAI</strong><span>ATLAS · PyRIT · garak</span></button>
+        <button class="path-card" data-query="iot embedded mobile expliot mobsf"><b>06</b><strong>Edge</strong><span>MASTG · ISTG · EXPLIoT</span></button>
+      </div>
+    </section>
+
+    <section id="visuals" class="section">
+      <div class="section-head">
+        <div><p class="kicker" data-i18n="visual_intel">Visual intelligence</p><h2 data-i18n="see_shape">See the shape of the catalog.</h2></div>
+        <p data-i18n="visual_copy">Distribution and trend views are generated from the same machine-readable data used by the catalog.</p>
+      </div>
+      <div class="visual-grid">
+        <article class="panel visual-card"><div class="visual-head"><h3 data-i18n="top_domains">Top domains</h3><span data-i18n="live_catalog">live catalog</span></div><div id="domain-chart" class="bar-chart" aria-label="Top domains chart"></div></article>
+        <article class="panel visual-card"><div class="visual-head"><h3 data-i18n="coverage_trend">Coverage trend</h3><span data-i18n="example_data">example data</span></div><svg id="trend-chart" viewBox="0 0 620 260" role="img" aria-label="Coverage trend chart"></svg><div id="trend-legend" class="trend-legend"></div></article>
       </div>
     </section>
 
     <section id="graph" class="section">
-      <div class="section-head"><div><p class="kicker">Knowledge graph</p><h2>See how the ecosystem connects.</h2></div><label class="graph-picker">Focus entity<select id="graph-select"></select></label></div>
+      <div class="section-head">
+        <div><p class="kicker" data-i18n="knowledge_graph">Knowledge graph</p><h2 data-i18n="connections">See how the ecosystem connects.</h2></div>
+        <label class="graph-picker"><span data-i18n="focus_entity">Focus entity</span><select id="graph-select"></select></label>
+      </div>
       <div class="graph-panel">
         <svg id="relationship-graph" viewBox="0 0 900 420" role="img" aria-label="Relationship graph"></svg>
         <div id="graph-detail" class="graph-detail"></div>
@@ -68,26 +104,44 @@ REMEDIATE → RETEST</code></pre>
     </section>
 
     <section id="catalog-section" class="section">
-      <div class="section-head"><div><p class="kicker">Catalog</p><h2>Search the ecosystem.</h2></div><p id="updated-label"></p></div>
+      <div class="section-head">
+        <div><p class="kicker" data-i18n="catalog">Catalog</p><h2 data-i18n="search_ecosystem">Search the ecosystem.</h2></div>
+        <p id="updated-label"></p>
+      </div>
+
       <section class="panel controls">
-        <label class="search-field">Search<input id="search" type="search" placeholder="ATT&CK, cloud, AEV, identity, AI..." autocomplete="off"></label>
-        <label>Type<select id="type-filter"><option value="">All types</option></select></label>
-        <label>Domain<select id="domain-filter"><option value="">All domains</option></select></label>
-        <label>Status<select id="status-filter"><option value="">All statuses</option></select></label>
-        <label>Model<select id="model-filter"><option value="">All models</option></select></label>
+        <label class="search-field"><span data-i18n="search">Search</span><input id="search" type="search" placeholder="ATT&CK, cloud, identity, AI..." autocomplete="off"></label>
+        <label><span data-i18n="type">Type</span><select id="type-filter"><option value="" data-i18n="all_types">All types</option></select></label>
+        <label><span data-i18n="domain">Domain</span><select id="domain-filter"><option value="" data-i18n="all_domains">All domains</option></select></label>
+        <label><span data-i18n="status">Status</span><select id="status-filter"><option value="" data-i18n="all_statuses">All statuses</option></select></label>
+        <label><span data-i18n="model">Model</span><select id="model-filter"><option value="" data-i18n="all_models">All models</option></select></label>
       </section>
+
       <section class="toolbar">
         <div><strong id="result-count">Loading catalog…</strong><span id="filter-summary"></span></div>
         <div class="toolbar-actions">
-          <label class="sort-label">Sort<select id="sort"><option value="name">Name</option><option value="status">Status</option><option value="review">Review date</option></select></label>
-          <button id="density" type="button">Compact view</button><button id="reset" type="button">Reset</button>
+          <label class="sort-label"><span data-i18n="sort">Sort</span><select id="sort"><option value="name">Name</option><option value="status">Status</option><option value="review">Review date</option><option value="provenance">Provenance</option></select></label>
+          <button id="export-json" type="button">JSON ↓</button>
+          <button id="export-csv" type="button">CSV ↓</button>
+          <button id="density" type="button" data-i18n="compact_view">Compact view</button>
+          <button id="reset" type="button" data-i18n="reset">Reset</button>
         </div>
       </section>
       <section id="catalog" class="grid" aria-live="polite"></section>
     </section>
 
+    <section id="roadmap" class="section">
+      <div class="section-head"><div><p class="kicker" data-i18n="roadmap">Roadmap</p><h2 data-i18n="platform_evolution">Platform evolution.</h2></div><a href="https://github.com/Ridd1kulusC0d3r/RedFrameworks/blob/main/docs/next-evolutions.md">Full roadmap ↗</a></div>
+      <div class="roadmap-grid">
+        <article class="roadmap-card done"><span>v1</span><h3>Knowledge Base</h3><p>Taxonomy, methodology, evidence, templates and machine-readable catalogs.</p><b>Complete</b></article>
+        <article class="roadmap-card done"><span>v2</span><h3>Interactive Catalog</h3><p>Pages, filters, relationship graph, freshness, ATT&CK Navigator and Attack Flow.</p><b>Complete</b></article>
+        <article class="roadmap-card active"><span>v3</span><h3>Knowledge Graph</h3><p>Schemas, provenance, STIX, entity pages, API, comparison, multilingual UI and evidence engineering.</p><b>Current</b></article>
+        <article class="roadmap-card"><span>v4</span><h3>Continuous Intelligence</h3><p>Release intelligence, richer standards mappings, ecosystem change tracking and contributor automation.</p><b>Next</b></article>
+      </div>
+    </section>
+
     <section class="section evidence">
-      <div class="section-head"><div><p class="kicker">Evidence discipline</p><h2>Claims need provenance.</h2></div></div>
+      <div class="section-head"><div><p class="kicker" data-i18n="evidence_discipline">Evidence discipline</p><h2 data-i18n="claims_provenance">Claims need provenance.</h2></div></div>
       <div class="evidence-grid">
         <article><span>A</span><h3>Authoritative</h3><p>Standards, regulators, foundations and official project documentation.</p></article>
         <article><span>B</span><h3>Canonical upstream</h3><p>Maintainer-controlled repositories or official vendor documentation.</p></article>
@@ -97,7 +151,17 @@ REMEDIATE → RETEST</code></pre>
     </section>
   </main>
 
-  <footer><div><strong>RedFrameworks</strong><p>Authorized testing · research · threat-informed defense · continuous validation.</p></div><a href="https://github.com/Ridd1kulusC0d3r/RedFrameworks">Source on GitHub ↗</a></footer>
+  <aside id="compare-dock" class="compare-dock" hidden>
+    <div><strong id="compare-count">0 selected</strong><span data-i18n="compare_hint">Select up to 3 entries.</span></div>
+    <div><button id="clear-compare" type="button" data-i18n="clear">Clear</button><button id="open-compare" class="primary" type="button" data-i18n="compare">Compare</button></div>
+  </aside>
+
+  <dialog id="compare-dialog">
+    <div class="dialog-head"><div><p class="kicker">Comparison</p><h2 data-i18n="factual_comparison">Factual comparison</h2></div><button id="close-compare" type="button" aria-label="Close">×</button></div>
+    <div id="compare-table" class="compare-table-wrap"></div>
+  </dialog>
+
+  <footer><div><strong>RedFrameworks</strong><p>Authorized testing · research · threat-informed defense · continuous validation.</p></div><div class="footer-links"><a href="api/version.json">API</a><a href="https://github.com/Ridd1kulusC0d3r/RedFrameworks">GitHub ↗</a></div></footer>
   <script src="app.js"></script>
 </body>
 </html>
