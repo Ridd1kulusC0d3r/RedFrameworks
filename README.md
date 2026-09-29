@@ -33,6 +33,8 @@ The goal is not to collect every red-team link on the internet. The goal is to h
 | [Reporting & Evidence](docs/reporting-and-evidence.md) | Convert technical observations into reproducible evidence and remediation |
 | [Framework data](frameworks.yaml) | Machine-readable methodology / knowledge-model catalog |
 | [Cross-domain catalog](catalog.yaml) | Machine-readable tooling and platform catalog |
+| [Examples](docs/examples.md) | ATT&CK Navigator, Attack Flow and purple-team measurement examples |
+| Browsable catalog | Generated from YAML and deployed by the GitHub Pages workflow |
 
 ## Operating model
 
@@ -223,8 +225,6 @@ Before any execution:
 - [x] Add cloud red-team guidance
 - [x] Add reporting and evidence model
 - [x] Add machine-readable framework catalog
-- [ ] Add ATT&CK Navigator examples
-- [ ] Add Attack Flow examples
 - [x] Add assessment templates
 - [x] Add automated link validation
 - [x] Add threat-led testing frameworks
@@ -232,12 +232,16 @@ Before any execution:
 - [x] Add cloud-native / Kubernetes layer
 - [x] Add mobile and IoT layer
 - [x] Add tooling taxonomy and watchlist
-- [ ] Add GitHub Pages documentation
-- [ ] Add automated framework freshness checks
-- [ ] Add ATT&CK Navigator examples
-- [ ] Add Attack Flow examples
-- [ ] Add purple-team measurement templates
-- [ ] Generate browsable catalog from YAML
+- [x] Add ATT&CK Navigator examples
+- [x] Add Attack Flow examples
+- [x] Add purple-team measurement templates
+- [x] Add automated framework freshness checks
+- [x] Generate browsable catalog from YAML
+- [x] Add GitHub Pages build and deployment workflow
+
+### Continuous roadmap
+
+The original roadmap is complete. New work should now be driven by catalog freshness, evidence quality, standards changes and validated community contributions rather than permanent unchecked boxes.
 
 ## Contribution philosophy
 

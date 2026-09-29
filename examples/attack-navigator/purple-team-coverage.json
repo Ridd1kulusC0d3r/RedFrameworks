@@ -1,0 +1,62 @@
+{
+  "name": "RedFrameworks - Purple Team Coverage Example",
+  "versions": {
+    "attack": "19.2",
+    "navigator": "5.3.2",
+    "layer": "4.5"
+  },
+  "domain": "enterprise-attack",
+  "description": "Example purple-team coverage view. Score is a local composite of telemetry, detection and response validation.",
+  "sorting": 2,
+  "layout": {
+    "layout": "side",
+    "aggregateFunction": "average",
+    "showID": true,
+    "showName": true,
+    "showAggregateScores": true,
+    "countUnscored": false
+  },
+  "techniques": [
+    {
+      "techniqueID": "T1078.004",
+      "score": 90,
+      "comment": "Cloud-account scenario produced expected telemetry and alert; containment workflow validated.",
+      "enabled": true,
+      "metadata": [
+        {"name": "telemetry", "value": "sufficient"},
+        {"name": "detection", "value": "reliable"},
+        {"name": "response", "value": "effective"}
+      ],
+      "links": [],
+      "showSubtechniques": false
+    },
+    {
+      "techniqueID": "T1087",
+      "score": 65,
+      "comment": "Expected events are present; analytic fidelity and triage context need tuning.",
+      "enabled": true,
+      "metadata": [
+        {"name": "telemetry", "value": "sufficient"},
+        {"name": "detection", "value": "weak"},
+        {"name": "response", "value": "delayed"}
+      ],
+      "links": [],
+      "showSubtechniques": true
+    }
+  ],
+  "gradient": {
+    "colors": ["#8b1e1e", "#d5a021", "#2b7a4b"],
+    "minValue": 0,
+    "maxValue": 100
+  },
+  "legendItems": [
+    {"label": "gap", "color": "#8b1e1e"},
+    {"label": "partial", "color": "#d5a021"},
+    {"label": "validated", "color": "#2b7a4b"}
+  ],
+  "metadata": [{"name": "purpose", "value": "purple-team measurement example"}],
+  "links": [],
+  "showTacticRowBackground": true,
+  "tacticRowBackground": "#f2f2f2",
+  "selectTechniquesAcrossTactics": true
+}

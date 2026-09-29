@@ -1,0 +1,70 @@
+{
+  "name": "RedFrameworks - Threat-Informed Validation Example",
+  "versions": {
+    "attack": "19.2",
+    "navigator": "5.3.2",
+    "layer": "4.5"
+  },
+  "domain": "enterprise-attack",
+  "description": "Example layer for authorized threat-informed validation. Scores represent local validation maturity, not MITRE severity.",
+  "filters": {
+    "platforms": ["Windows", "Linux", "Identity Provider", "SaaS", "IaaS"]
+  },
+  "sorting": 0,
+  "layout": {
+    "layout": "side",
+    "aggregateFunction": "average",
+    "showID": true,
+    "showName": true,
+    "showAggregateScores": true,
+    "countUnscored": false
+  },
+  "hideDisabled": false,
+  "techniques": [
+    {
+      "techniqueID": "T1078",
+      "score": 75,
+      "comment": "Identity telemetry and detection validated; analyst-response timing still under review.",
+      "enabled": true,
+      "metadata": [{"name": "evidence", "value": "E2"}],
+      "links": [],
+      "showSubtechniques": true
+    },
+    {
+      "techniqueID": "T1087",
+      "score": 50,
+      "comment": "Telemetry is available; detection logic is only partially validated.",
+      "enabled": true,
+      "metadata": [{"name": "evidence", "value": "E2"}],
+      "links": [],
+      "showSubtechniques": true
+    },
+    {
+      "techniqueID": "T1057",
+      "score": 25,
+      "comment": "Planned validation item; no current coverage claim.",
+      "enabled": true,
+      "metadata": [{"name": "evidence", "value": "E0"}],
+      "links": [],
+      "showSubtechniques": false
+    }
+  ],
+  "gradient": {
+    "colors": ["#8b1e1e", "#d5a021", "#2b7a4b"],
+    "minValue": 0,
+    "maxValue": 100
+  },
+  "legendItems": [
+    {"label": "planned / unvalidated", "color": "#8b1e1e"},
+    {"label": "partial", "color": "#d5a021"},
+    {"label": "validated", "color": "#2b7a4b"}
+  ],
+  "metadata": [
+    {"name": "repository", "value": "RedFrameworks"},
+    {"name": "purpose", "value": "defensive validation example"}
+  ],
+  "links": [],
+  "showTacticRowBackground": true,
+  "tacticRowBackground": "#f2f2f2",
+  "selectTechniquesAcrossTactics": true
+}

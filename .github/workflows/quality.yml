@@ -16,7 +16,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Check Markdown links
         uses: lycheeverse/lychee-action@v2
@@ -29,3 +29,31 @@ jobs:
             --exclude "https://www\\.pentest-standard\\.org/.*"
             "**/*.md"
           fail: true
+
+  structure:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.13"
+
+      - name: Install validation dependency
+        run: python -m pip install --disable-pip-version-check PyYAML
+
+      - name: Compile scripts
+        run: python -m compileall -q scripts
+
+      - name: Validate machine-readable examples
+        run: python scripts/validate_examples.py
+
+      - name: Build browsable catalog
+        run: python scripts/build_site.py --output _site-test
+
+      - name: Validate freshness metadata
+        run: |
+          python scripts/check_freshness.py --report freshness-report.md --json freshness-report.json
+          cat freshness-report.md >> "$GITHUB_STEP_SUMMARY"

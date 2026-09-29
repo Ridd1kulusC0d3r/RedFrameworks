@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="RedFrameworks: curated offensive security, threat-informed defense and validation knowledge base.">
+  <title>RedFrameworks Knowledge Base</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-inner">
+      <p class="eyebrow">Ridd1kulusC0d3r / RedFrameworks</p>
+      <h1>Threat-informed security, without the tool-dump chaos.</h1>
+      <p class="lede">Browse methodologies, knowledge models, validation platforms, domain guides and reviewed operational tooling from one structured catalog.</p>
+      <nav>
+        <a href="https://github.com/Ridd1kulusC0d3r/RedFrameworks">Repository</a>
+        <a href="https://github.com/Ridd1kulusC0d3r/RedFrameworks/tree/main/docs">Documentation</a>
+        <a href="https://github.com/Ridd1kulusC0d3r/RedFrameworks/tree/main/examples">Examples</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="stats" class="stats" aria-label="Catalog statistics"></section>
+
+    <section class="panel controls">
+      <label>
+        Search
+        <input id="search" type="search" placeholder="ATT&CK, cloud, AI, TIBER, detection..." autocomplete="off">
+      </label>
+      <label>
+        Type
+        <select id="type-filter"><option value="">All types</option></select>
+      </label>
+      <label>
+        Domain
+        <select id="domain-filter"><option value="">All domains</option></select>
+      </label>
+      <label>
+        Status
+        <select id="status-filter"><option value="">All statuses</option></select>
+      </label>
+      <label>
+        Model
+        <select id="model-filter"><option value="">All models</option></select>
+      </label>
+    </section>
+
+    <section class="toolbar">
+      <p id="result-count">Loading catalog…</p>
+      <button id="reset" type="button">Reset filters</button>
+    </section>
+
+    <section id="catalog" class="grid" aria-live="polite"></section>
+
+    <section class="panel docs">
+      <h2>Operational model</h2>
+      <div class="flow">
+        <span>Threat intelligence</span><b>→</b><span>Scenario</span><b>→</b><span>Authorized validation</span><b>→</b><span>Telemetry</span><b>→</b><span>Detection</span><b>→</b><span>Response</span><b>→</b><span>Retest</span>
+      </div>
+      <p>The catalog deliberately separates standards, methodologies, knowledge models and tools. A large command set is not a methodology. Humanity survives another taxonomy crisis.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>RedFrameworks · curated for authorized testing, labs, research and defensive validation.</p>
+  </footer>
+  <script src="app.js"></script>
+</body>
+</html>
