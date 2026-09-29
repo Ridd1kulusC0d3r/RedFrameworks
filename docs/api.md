@@ -1,50 +1,55 @@
-# Static API
+# Static API v2
 
-The GitHub Pages build exposes a read-only API generated from the canonical YAML data.
-
-## Endpoints
-
-| Endpoint | Purpose |
-|---|---|
-| `/api/version.json` | API version, dataset date and object counts |
-| `/api/catalog.json` | normalized frameworks, platforms and tools |
-| `/api/frameworks.json` | canonical framework dataset |
-| `/api/relationships.json` | knowledge-graph edges |
-| `/api/watchlist.json` | research candidates |
-| `/api/lifecycle.json` | renames, legacy transitions and lifecycle events |
-| `/api/changelog.json` | machine-readable platform changes |
-| `/api/releases/v3.0.0.json` | versioned release manifest |
-| `/api/redframeworks-stix-2.1.json` | STIX 2.1 bundle |
-| `/api/opencti-import-manifest.json` | OpenCTI-oriented import metadata |
-| `/data/upstream-health.json` | public GitHub upstream health signals |
+RedFrameworks publishes a read-only API generated from the canonical repository data.
 
 Base URL:
 
 `https://ridd1kulusc0d3r.github.io/RedFrameworks/`
 
+## Version contract
+
+| Path | Status | Purpose |
+|---|---|---|
+| `/api/version.json` | current | API discovery and supported versions |
+| `/api/v1/` | compatibility | original catalog + relationship contract |
+| `/api/v2/` | current | enriched v4 intelligence contract |
+| `/api/` | compatibility alias | convenient unversioned access |
+
+## v2 endpoints
+
+| Endpoint | Purpose |
+|---|---|
+| `/api/v2/catalog.json` | normalized frameworks, platforms, tools and NOT VERIFIED research candidates |
+| `/api/v2/not-verified.json` | research candidates requiring verification |
+| `/api/v2/frameworks.json` | canonical frameworks dataset |
+| `/api/v2/relationships.json` | graph edges with confidence and provenance |
+| `/api/v2/standards.json` | standards/version intelligence |
+| `/api/v2/ai-crosswalk.json` | conceptual AI security crosswalk |
+| `/api/v2/attack-d3fend.json` | selected defensive relationship examples |
+| `/api/v2/lifecycle.json` | renames, legacy transitions and lifecycle events |
+| `/api/v2/changelog.json` | machine-readable platform changes |
+| `/api/v2/releases/` | release manifests |
+
+Additional generated artifacts:
+
+- `/api/redframeworks-stix-2.1.json`
+- `/api/opencti-import-manifest.json`
+- `/data/upstream-health.json`
+- `/data/coverage-series.json`
+- `/data/regressions.json`
+- `/data/evidence-trend.json`
+
+## Consumer examples
+
+See:
+
+- `examples/consumers/python.py`
+- `examples/consumers/typescript.ts`
+- `examples/consumers/shell.sh`
+- `examples/opencti/README.md`
+
 ## Stability
 
-The API is generated, read-only and intended for research, dashboards and defensive-security integrations.
+Stable integration keys are entity IDs, not display names.
 
-Consumers should use IDs rather than display names as stable keys.
-
-## Provenance fields
-
-Normalized objects can include:
-
-- evidence tier;
-- last review date;
-- provenance score;
-- upstream health;
-- last upstream activity;
-- latest release metadata.
-
-A provenance score is a curation signal. It is not a universal product ranking.
-
-## Interoperability
-
-The Pages build also generates:
-
-- a STIX 2.1 bundle containing catalog objects and relationships;
-- an OpenCTI import manifest describing the generated STIX asset;
-- per-entity HTML pages using the same stable IDs as the API.
+The v2 contract adds provenance, verification-state, standards intelligence and measurement datasets without silently redefining v1.

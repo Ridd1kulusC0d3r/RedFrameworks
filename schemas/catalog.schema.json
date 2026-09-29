@@ -61,7 +61,8 @@
               "verified",
               "community",
               "commercial",
-              "legacy"
+              "legacy",
+              "not-verified"
             ]
           },
           "model": {
@@ -87,6 +88,9 @@
           "last_reviewed": {
             "type": "string",
             "format": "date"
+          },
+          "verification_note": {
+            "type": "string"
           }
         },
         "additionalProperties": true

@@ -1,0 +1,49 @@
+updated: "2026-09-29"
+schema_version: "1.0"
+crosswalk_type: "conceptual-crosswalk"
+warning: "Entries connect complementary frameworks and guidance. They are not direct one-to-one equivalence mappings."
+sources:
+  - id: "mitre-atlas"
+    version: "2026.09"
+    url: "https://github.com/mitre-atlas/atlas-data/releases"
+    role: "adversary behavior knowledge base for AI-enabled systems"
+
+  - id: "owasp-genai-2026"
+    version: "2026"
+    url: "https://genai.owasp.org/resource/owasp-genai-llm-top-10-2026/"
+    role: "application risk guidance for LLM and GenAI systems"
+
+  - id: "owasp-agentic-2026"
+    version: "2026"
+    url: "https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/"
+    role: "agentic application risk guidance"
+
+  - id: "nist-ai-600-1"
+    version: "600-1"
+    url: "https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-generative-artificial-intelligence"
+    role: "cross-sector generative AI risk-management profile"
+
+crosswalks:
+  - from: "mitre-atlas"
+    to: "owasp-genai-2026"
+    relation: "behavior-model-to-application-risk"
+    confidence: "medium"
+    rationale: "ATLAS describes adversary behavior; OWASP organizes application security risks."
+
+  - from: "mitre-atlas"
+    to: "owasp-agentic-2026"
+    relation: "behavior-model-to-agentic-risk"
+    confidence: "medium"
+    rationale: "ATLAS includes agentic AI techniques; OWASP provides agentic application risk guidance."
+
+  - from: "owasp-genai-2026"
+    to: "nist-ai-600-1"
+    relation: "application-risk-to-risk-management"
+    confidence: "medium"
+    rationale: "Application-level risks can inform broader organizational risk management."
+
+  - from: "owasp-agentic-2026"
+    to: "nist-ai-600-1"
+    relation: "agentic-risk-to-risk-management"
+    confidence: "medium"
+    rationale: "Agentic application risks can be governed through a broader AI risk-management program."
