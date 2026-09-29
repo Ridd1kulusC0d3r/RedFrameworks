@@ -32,7 +32,7 @@ The goal is not to collect every red-team link on the internet. The goal is to h
 | [Research Watchlist](docs/watchlist.md) | Candidates requiring provenance, maintenance or scope verification |
 | [Reporting & Evidence](docs/reporting-and-evidence.md) | Convert technical observations into reproducible evidence and remediation |
 | [Framework data](frameworks.yaml) | Machine-readable methodology / knowledge-model catalog |
-| [Cross-domain catalog](catalog.yaml) | Machine-readable tooling and platform catalog |
+| [Cross-domain catalog](catalog.yaml) | Machine-readable tooling and platform catalog |\n| [Relationship graph](relationships.yaml) | Curated links between behavior models, validation, telemetry and defensive outcomes |\n| [2026 catalog expansion](docs/catalog-expansion-2026.md) | Promotion, legacy and watchlist decisions |\n| [Next Evolutions](docs/next-evolutions.md) | Platform v3 engineering roadmap |
 | [Examples](docs/examples.md) | ATT&CK Navigator, Attack Flow and purple-team measurement examples |
 | Browsable catalog | Generated from YAML and deployed by the GitHub Pages workflow; see [Pages deployment](docs/pages-deployment.md) |
 
@@ -88,7 +88,7 @@ The repository now uses six layers instead of pretending every security project 
 - **Atomic Red Team** for focused behavior validation.
 - **MITRE CALDERA** for repeatable adversary emulation.
 - **Stratus Red Team** for granular cloud emulation.
-- **OpenBAS** for exercise, BAS and security-validation orchestration.
+- **OpenAEV** for exercise, BAS and security-validation orchestration.
 
 ### 4. Operational assessment platforms
 
@@ -126,7 +126,7 @@ See [Taxonomy](docs/taxonomy.md) for classification rules.
 | AI / GenAI assessment | OWASP GenAI + ATLAS | NIST AI RMF + PyRIT / garak |
 | Mobile assessment | OWASP MASVS / MASTG | MobSF + dynamic instrumentation |
 | IoT assessment | OWASP IoT ISTG / ISVS | ecosystem-specific evidence model |
-| Continuous validation | ATT&CK | Atomic tests / OpenBAS / BAS + detection engineering |
+| Continuous validation | ATT&CK | Atomic tests / OpenAEV / BAS + detection engineering |
 
 ## Minimum engagement artifacts
 
@@ -239,7 +239,7 @@ Before any execution:
 - [x] Generate browsable catalog from YAML
 - [x] Add GitHub Pages build and deployment workflow
 
-> Deployment pipeline is complete and its site build is validated. GitHub still requires a one-time repository setting: **Settings → Pages → Source: GitHub Actions**. See [Pages deployment](docs/pages-deployment.md).
+> The deployment workflow now attempts to enable/configure Pages automatically. If GitHub denies that administrative change, the only fallback is **Settings → Pages → Source: GitHub Actions**. See [Pages deployment](docs/pages-deployment.md).
 
 ### Continuous roadmap
 

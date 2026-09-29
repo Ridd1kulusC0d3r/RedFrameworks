@@ -3,69 +3,101 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="RedFrameworks: curated offensive security, threat-informed defense and validation knowledge base.">
-  <title>RedFrameworks Knowledge Base</title>
+  <meta name="description" content="RedFrameworks: a curated, threat-informed offensive security knowledge base and validation catalog.">
+  <meta name="theme-color" content="#09090b">
+  <title>RedFrameworks · Offensive Security Knowledge Base</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="hero">
-    <div class="hero-inner">
-      <p class="eyebrow">Ridd1kulusC0d3r / RedFrameworks</p>
-      <h1>Threat-informed security, without the tool-dump chaos.</h1>
-      <p class="lede">Browse methodologies, knowledge models, validation platforms, domain guides and reviewed operational tooling from one structured catalog.</p>
-      <nav>
-        <a href="https://github.com/Ridd1kulusC0d3r/RedFrameworks">Repository</a>
-        <a href="https://github.com/Ridd1kulusC0d3r/RedFrameworks/tree/main/docs">Documentation</a>
-        <a href="https://github.com/Ridd1kulusC0d3r/RedFrameworks/tree/main/examples">Examples</a>
-      </nav>
+  <div class="noise" aria-hidden="true"></div>
+  <header class="topbar">
+    <a class="brand" href="#top"><span class="brand-mark">RF</span><span>RedFrameworks</span></a>
+    <nav><a href="#paths">Paths</a><a href="#graph">Graph</a><a href="#catalog-section">Catalog</a><a href="https://github.com/Ridd1kulusC0d3r/RedFrameworks">GitHub ↗</a></nav>
+  </header>
+
+  <header id="top" class="hero">
+    <div class="hero-grid">
+      <div>
+        <p class="eyebrow"><span class="pulse"></span> Curated · threat-informed · machine-readable</p>
+        <h1>Offensive security,<br><span>mapped to defensive outcomes.</span></h1>
+        <p class="lede">A structured knowledge base for methodologies, adversary models, validation platforms, domain guides and reviewed tooling. Less “awesome list”, more analyst-grade reference.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#catalog-section">Explore catalog</a>
+          <a class="button" href="#graph">Explore relationships</a>
+          <a class="button" href="https://github.com/Ridd1kulusC0d3r/RedFrameworks/tree/main/examples">Machine-readable examples ↗</a>
+        </div>
+      </div>
+      <aside class="hero-terminal" aria-label="Operational model">
+        <div class="terminal-head"><span></span><span></span><span></span><b>operating-model</b></div>
+        <pre><code>THREAT INTELLIGENCE
+        ↓
+BEHAVIOR / SCENARIO
+        ↓
+AUTHORIZED VALIDATION
+        ↓
+TELEMETRY → DETECTION
+        ↓
+ANALYST RESPONSE
+        ↓
+REMEDIATE → RETEST</code></pre>
+      </aside>
     </div>
   </header>
 
   <main>
     <section id="stats" class="stats" aria-label="Catalog statistics"></section>
 
-    <section class="panel controls">
-      <label>
-        Search
-        <input id="search" type="search" placeholder="ATT&CK, cloud, AI, TIBER, detection..." autocomplete="off">
-      </label>
-      <label>
-        Type
-        <select id="type-filter"><option value="">All types</option></select>
-      </label>
-      <label>
-        Domain
-        <select id="domain-filter"><option value="">All domains</option></select>
-      </label>
-      <label>
-        Status
-        <select id="status-filter"><option value="">All statuses</option></select>
-      </label>
-      <label>
-        Model
-        <select id="model-filter"><option value="">All models</option></select>
-      </label>
-    </section>
-
-    <section class="toolbar">
-      <p id="result-count">Loading catalog…</p>
-      <button id="reset" type="button">Reset filters</button>
-    </section>
-
-    <section id="catalog" class="grid" aria-live="polite"></section>
-
-    <section class="panel docs">
-      <h2>Operational model</h2>
-      <div class="flow">
-        <span>Threat intelligence</span><b>→</b><span>Scenario</span><b>→</b><span>Authorized validation</span><b>→</b><span>Telemetry</span><b>→</b><span>Detection</span><b>→</b><span>Response</span><b>→</b><span>Retest</span>
+    <section id="paths" class="section">
+      <div class="section-head"><div><p class="kicker">Decision paths</p><h2>Start with the question, not the tool.</h2></div><p>Use these presets to slice the catalog by analyst objective.</p></div>
+      <div class="path-grid">
+        <button class="path-card" data-query="penetration assessment"><b>01</b><strong>Pentest</strong><span>PTES · NIST · WSTG · assessment</span></button>
+        <button class="path-card" data-query="threat-led attack-flow"><b>02</b><strong>Threat-led</strong><span>TIBER-EU · CBEST · Attack Flow</span></button>
+        <button class="path-card" data-query="purple detection validation"><b>03</b><strong>Purple Team</strong><span>ATT&CK · VECTR · TTPForge · Sigma</span></button>
+        <button class="path-card" data-query="cloud azure aws gcp kubernetes"><b>04</b><strong>Cloud</strong><span>Stratus · CloudFox · BloodHound · KubeHound</span></button>
+        <button class="path-card" data-query="ai-genai"><b>05</b><strong>AI / GenAI</strong><span>ATLAS · OWASP GenAI · PyRIT · garak</span></button>
+        <button class="path-card" data-query="iot embedded mobile"><b>06</b><strong>Edge</strong><span>MASTG · ISTG · EXPLIoT · MobSF</span></button>
       </div>
-      <p>The catalog deliberately separates standards, methodologies, knowledge models and tools. A large command set is not a methodology. Humanity survives another taxonomy crisis.</p>
+    </section>
+
+    <section id="graph" class="section">
+      <div class="section-head"><div><p class="kicker">Knowledge graph</p><h2>See how the ecosystem connects.</h2></div><label class="graph-picker">Focus entity<select id="graph-select"></select></label></div>
+      <div class="graph-panel">
+        <svg id="relationship-graph" viewBox="0 0 900 420" role="img" aria-label="Relationship graph"></svg>
+        <div id="graph-detail" class="graph-detail"></div>
+      </div>
+    </section>
+
+    <section id="catalog-section" class="section">
+      <div class="section-head"><div><p class="kicker">Catalog</p><h2>Search the ecosystem.</h2></div><p id="updated-label"></p></div>
+      <section class="panel controls">
+        <label class="search-field">Search<input id="search" type="search" placeholder="ATT&CK, cloud, AEV, identity, AI..." autocomplete="off"></label>
+        <label>Type<select id="type-filter"><option value="">All types</option></select></label>
+        <label>Domain<select id="domain-filter"><option value="">All domains</option></select></label>
+        <label>Status<select id="status-filter"><option value="">All statuses</option></select></label>
+        <label>Model<select id="model-filter"><option value="">All models</option></select></label>
+      </section>
+      <section class="toolbar">
+        <div><strong id="result-count">Loading catalog…</strong><span id="filter-summary"></span></div>
+        <div class="toolbar-actions">
+          <label class="sort-label">Sort<select id="sort"><option value="name">Name</option><option value="status">Status</option><option value="review">Review date</option></select></label>
+          <button id="density" type="button">Compact view</button><button id="reset" type="button">Reset</button>
+        </div>
+      </section>
+      <section id="catalog" class="grid" aria-live="polite"></section>
+    </section>
+
+    <section class="section evidence">
+      <div class="section-head"><div><p class="kicker">Evidence discipline</p><h2>Claims need provenance.</h2></div></div>
+      <div class="evidence-grid">
+        <article><span>A</span><h3>Authoritative</h3><p>Standards, regulators, foundations and official project documentation.</p></article>
+        <article><span>B</span><h3>Canonical upstream</h3><p>Maintainer-controlled repositories or official vendor documentation.</p></article>
+        <article><span>C</span><h3>Community</h3><p>Useful secondary material with a traceable upstream.</p></article>
+        <article><span>D</span><h3>Watchlist</h3><p>Unverified, mirrored, unclear or insufficiently maintained candidates.</p></article>
+      </div>
     </section>
   </main>
 
-  <footer>
-    <p>RedFrameworks · curated for authorized testing, labs, research and defensive validation.</p>
-  </footer>
+  <footer><div><strong>RedFrameworks</strong><p>Authorized testing · research · threat-informed defense · continuous validation.</p></div><a href="https://github.com/Ridd1kulusC0d3r/RedFrameworks">Source on GitHub ↗</a></footer>
   <script src="app.js"></script>
 </body>
 </html>
