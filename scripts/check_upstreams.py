@@ -71,7 +71,8 @@ def main():
         owner, repo = target
         code, payload = fetch_repo(owner, repo)
         if code != 200:
-            rows.append({"id": entry["id"], "name": entry["name"], "repository": f"{owner}/{repo}", "health": "unreachable", "http_status": code})
+            health = "rate-limited" if code == 403 else "unreachable"
+            rows.append({"id": entry["id"], "name": entry["name"], "repository": f"{owner}/{repo}", "health": health, "http_status": code})
             continue
         pushed = payload.get("pushed_at")
         age = None
