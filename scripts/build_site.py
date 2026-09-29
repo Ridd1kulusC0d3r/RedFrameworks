@@ -160,7 +160,7 @@ def entity_page(item, relationships, item_map):
         direction = "→" if edge["from"] == item["id"] else "←"
         if other:
             relation_rows.append(
-                f'<li><span>{html.escape(edge["relation"])}</span> {direction} '
+                f'<li><span>{html.escape(edge["relation"])} · {html.escape(edge.get("confidence", "unrated"))}</span> {direction} '
                 f'<a href="../{html.escape(other_id)}/">{html.escape(other["name"])}</a></li>'
             )
     domains = "".join(f'<span class="badge">{html.escape(value)}</span>' for value in item.get("domains", []))
@@ -205,12 +205,28 @@ def write_api(output, payload):
     (api / "relationships.json").write_text(json.dumps(payload["relationships"], indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     (api / "frameworks.json").write_text(json.dumps(payload["_framework_doc"], indent=2, ensure_ascii=False, default=str) + "\n", encoding="utf-8")
     (api / "watchlist.json").write_text(json.dumps(payload["_catalog_doc"].get("watchlist", []), indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+    lifecycle_path = ROOT / "data/lifecycle.yaml"
+    changelog_path = ROOT / "data/changelog.yaml"
+    release_dir = ROOT / "data/releases"
+    if lifecycle_path.exists():
+        (api / "lifecycle.json").write_text(json.dumps(load_yaml(lifecycle_path), indent=2, ensure_ascii=False, default=str) + "\n", encoding="utf-8")
+    if changelog_path.exists():
+        (api / "changelog.json").write_text(json.dumps(load_yaml(changelog_path), indent=2, ensure_ascii=False, default=str) + "\n", encoding="utf-8")
+    if release_dir.exists():
+        target = api / "releases"
+        target.mkdir(parents=True, exist_ok=True)
+        for release in release_dir.glob("*.json"):
+            shutil.copy2(release, target / release.name)
+
     (api / "version.json").write_text(json.dumps({
         "schema": "RedFrameworks static API v1",
         "updated": payload["updated"],
         "entries": len(items),
         "relationships": len(payload["relationships"]),
-        "endpoints": ["catalog.json", "frameworks.json", "relationships.json", "watchlist.json"]
+        "endpoints": [
+            "catalog.json", "frameworks.json", "relationships.json", "watchlist.json",
+            "lifecycle.json", "changelog.json", "releases/"
+        ]
     }, indent=2) + "\n", encoding="utf-8")
 
 def main():
