@@ -34,7 +34,7 @@ The goal is not to collect every red-team link on the internet. The goal is to h
 | [Framework data](frameworks.yaml) | Machine-readable methodology / knowledge-model catalog |
 | [Cross-domain catalog](catalog.yaml) | Machine-readable tooling and platform catalog |
 | [Examples](docs/examples.md) | ATT&CK Navigator, Attack Flow and purple-team measurement examples |
-| Browsable catalog | Generated from YAML and deployed by the GitHub Pages workflow |
+| Browsable catalog | Generated from YAML and deployed by the GitHub Pages workflow; see [Pages deployment](docs/pages-deployment.md) |
 
 ## Operating model
 
@@ -238,6 +238,8 @@ Before any execution:
 - [x] Add automated framework freshness checks
 - [x] Generate browsable catalog from YAML
 - [x] Add GitHub Pages build and deployment workflow
+
+> Deployment pipeline is complete and its site build is validated. GitHub still requires a one-time repository setting: **Settings → Pages → Source: GitHub Actions**. See [Pages deployment](docs/pages-deployment.md).
 
 ### Continuous roadmap
 
