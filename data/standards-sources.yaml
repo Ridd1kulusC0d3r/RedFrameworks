@@ -1,0 +1,32 @@
+updated: "2026-09-29"
+schema_version: "1.0"
+sources:
+  - id: mitre-attack
+    probe: "html-regex"
+    url: "https://attack.mitre.org/resources/versions/"
+    pattern: "ATT&CK v([0-9]+\\.[0-9]+)"
+    expected: "19.2"
+
+  - id: mitre-atlas
+    probe: "github-latest-release"
+    url: "https://api.github.com/repos/mitre-atlas/atlas-data/releases/latest"
+    tag_prefix: "v"
+    expected: "2026.09"
+
+  - id: mitre-d3fend
+    probe: "html-regex"
+    url: "https://d3fend.mitre.org/resources/"
+    pattern: "Version - ([0-9]+\\.[0-9]+\\.[0-9]+)"
+    expected: "1.6.0"
+
+  - id: owasp-genai-llm-top10
+    probe: "html-regex"
+    url: "https://genai.owasp.org/initiative/owasp-top-10-for-llm-and-genai/"
+    pattern: "Top 10 for LLM Applications ([0-9]{4})"
+    expected: "2026"
+
+  - id: nist-ai-600-1
+    probe: "html-regex"
+    url: "https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-generative-artificial-intelligence"
+    pattern: "NIST Trustworthy and Responsible AI - ([0-9]+-[0-9]+)"
+    expected: "600-1"
