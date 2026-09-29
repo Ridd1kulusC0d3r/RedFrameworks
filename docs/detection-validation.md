@@ -8,9 +8,11 @@ Purple teaming is a feedback loop, not a meeting where a red team and blue team 
 |---|---|---|
 | Behavior model | MITRE ATT&CK | Describe what is being tested |
 | Atomic validation | Atomic Red Team | Reproduce focused behavior |
-| Automated emulation | MITRE CALDERA, Stratus Red Team | Execute repeatable scenarios |
-| BAS / exercise platform | OpenBAS | Orchestrate simulations and validations |
+| Automated emulation | MITRE CALDERA, Stratus Red Team, TTPForge | Execute repeatable scenarios |
+| AEV / validation platform | OpenAEV (formerly OpenBAS) | Orchestrate simulations, validation and exposure-validation workflows |
+| Measurement | VECTR | Track test cases and defensive outcomes |
 | Detection representation | Sigma, YARA | Describe detection logic / patterns |
+| Detection lab | Splunk Attack Range | Generate instrumented telemetry for detection engineering |
 | Endpoint investigation | Velociraptor | Hunt and collect endpoint evidence |
 | Defensive mapping | MITRE D3FEND | Connect behavior to countermeasure concepts |
 
@@ -36,37 +38,22 @@ Retest
 
 ## Commercial BAS / exposure validation landscape
 
-Examples include:
+Examples include SafeBreach, AttackIQ, Cymulate, Pentera, Picus Security, SCYTHE and XM Cyber.
 
-- SafeBreach
-- AttackIQ
-- Cymulate
-- Pentera
-- Picus Security
-- SCYTHE
-- XM Cyber
-
-These should be treated as **commercial platforms**, not standards. Capabilities and licensing change rapidly, so product comparisons should always be date-stamped.
+Treat these as **commercial platforms**, not standards. Product capabilities and licensing change rapidly, so comparisons should always be date-stamped.
 
 ## Detection metrics
 
-Track separately:
-
-- telemetry availability;
-- analytic existence;
-- analytic fidelity;
-- alert triage quality;
-- analyst recognition;
-- containment effectiveness;
-- time to detect;
-- time to contain;
-- regression status.
+Track telemetry availability, analytic existence, analytic fidelity, alert quality, analyst recognition, containment effectiveness, time to detect, time to contain and regression status separately.
 
 ## References
 
-- OpenBAS: https://docs.openbas.io/
+- OpenAEV: https://docs.openaev.io/
 - Sigma: https://sigmahq.io/
 - MITRE D3FEND: https://d3fend.mitre.org/
 - MITRE CALDERA: https://caldera.mitre.org/
 - Atomic Red Team: https://github.com/redcanaryco/atomic-red-team
+- VECTR: https://github.com/SecurityRiskAdvisors/VECTR
+- TTPForge: https://github.com/facebookincubator/TTPForge
+- Splunk Attack Range: https://github.com/splunk/attack_range
 - Velociraptor: https://docs.velociraptor.app/
