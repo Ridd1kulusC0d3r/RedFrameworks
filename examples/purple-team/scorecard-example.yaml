@@ -6,6 +6,8 @@ scenario:
   attack_version: "19.2"
   execution_date: "2026-09-29"
   authorization: "lab-only example"
+  phase: "example"
+  domain: "identity"
 
 weights:
   telemetry: 0.20
@@ -13,6 +15,16 @@ weights:
   analyst_response: 0.20
   containment: 0.20
   evidence: 0.15
+
+scores:
+  telemetry: 85
+  detection: 68
+  analyst_response: 72
+  containment: 70
+  evidence: 80
+
+evidence_level: "E2"
+result: "partial"
 
 techniques:
   - id: "T1078"
