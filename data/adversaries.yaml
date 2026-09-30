@@ -1,0 +1,334 @@
+updated: "2026-09-29"
+schema_version: "1.0"
+source_model: "MITRE ATT&CK group pages with supplemental public-source context"
+
+adversaries:
+  - id: apt28
+    name: "APT28"
+    attack_id: "G0007"
+    aliases: ["Fancy Bear", "Sofacy", "Sednit", "STRONTIUM", "Forest Blizzard", "FROZENLAKE"]
+    actor_type: "state-sponsored"
+    attribution: "MITRE ATT&CK attributes the group to Russia's GRU Unit 26165."
+    motivation: ["espionage", "strategic intelligence"]
+    focus_regions: ["Europe", "NATO member countries", "global"]
+    sectors: ["government", "defense", "research", "international organizations"]
+    defensive_focus: ["identity security", "email security", "endpoint telemetry", "cloud identity"]
+    profile_version: "5.3"
+    last_modified: "2026-07-31"
+    source: "https://attack.mitre.org/groups/G0007/"
+    source_tier: "A"
+
+  - id: apt29
+    name: "APT29"
+    attack_id: "G0016"
+    aliases: ["Cozy Bear", "The Dukes", "NOBELIUM", "UNC2452", "Midnight Blizzard"]
+    actor_type: "state-sponsored"
+    attribution: "MITRE ATT&CK attributes the group to Russia's Foreign Intelligence Service (SVR)."
+    motivation: ["espionage", "strategic intelligence"]
+    focus_regions: ["Europe", "NATO member countries", "global"]
+    sectors: ["government", "research", "think tanks", "technology"]
+    defensive_focus: ["cloud identity", "supply-chain risk", "identity security", "email security"]
+    profile_version: "6.2"
+    last_modified: "2026-07-31"
+    source: "https://attack.mitre.org/groups/G0016/"
+    source_tier: "A"
+
+  - id: sandworm
+    name: "Sandworm Team"
+    attack_id: "G0034"
+    aliases: ["Voodoo Bear", "IRIDIUM", "Seashell Blizzard", "APT44"]
+    actor_type: "state-sponsored"
+    attribution: "MITRE ATT&CK attributes the group to Russia's GRU Unit 74455."
+    motivation: ["disruption", "destructive operations", "strategic objectives"]
+    focus_regions: ["Ukraine", "Europe", "global"]
+    sectors: ["government", "energy", "critical infrastructure", "international organizations"]
+    defensive_focus: ["critical infrastructure resilience", "ICS monitoring", "identity security", "recovery engineering"]
+    profile_version: "4.2"
+    last_modified: "2026-07-31"
+    source: "https://attack.mitre.org/groups/G0034/"
+    source_tier: "A"
+
+  - id: turla
+    name: "Turla"
+    attack_id: "G0010"
+    aliases: ["Waterbug", "Snake", "Venomous Bear", "Secret Blizzard"]
+    actor_type: "state-sponsored"
+    attribution: "MITRE ATT&CK reports attribution to Russia's Federal Security Service (FSB)."
+    motivation: ["espionage", "strategic intelligence"]
+    focus_regions: ["Europe", "global"]
+    sectors: ["government", "diplomatic", "defense", "education", "research", "pharmaceutical"]
+    defensive_focus: ["network telemetry", "endpoint visibility", "email security", "identity monitoring"]
+    profile_version: "5.1"
+    last_modified: "2026-07-31"
+    source: "https://attack.mitre.org/groups/G0010/"
+    source_tier: "A"
+
+  - id: gamaredon
+    name: "Gamaredon Group"
+    attack_id: "G0047"
+    aliases: ["Primitive Bear", "ACTINIUM", "Armageddon", "Aqua Blizzard"]
+    actor_type: "state-sponsored"
+    attribution: "MITRE ATT&CK reports public attribution to Russia's FSB Center 18."
+    motivation: ["espionage", "strategic intelligence"]
+    focus_regions: ["Ukraine"]
+    sectors: ["government", "military", "law enforcement", "non-governmental organizations"]
+    defensive_focus: ["email security", "endpoint telemetry", "network telemetry", "user-awareness signals"]
+    profile_version: "3.3"
+    last_modified: "2026-07-31"
+    source: "https://attack.mitre.org/groups/G0047/"
+    source_tier: "A"
+
+  - id: apt41
+    name: "APT41"
+    attack_id: "G0096"
+    aliases: ["Wicked Panda", "Brass Typhoon", "BARIUM"]
+    actor_type: "mixed"
+    attribution: "MITRE ATT&CK describes APT41 as a Chinese state-sponsored espionage group that has also conducted financially motivated operations."
+    motivation: ["espionage", "financial"]
+    focus_regions: ["Asia", "Europe", "North America", "global"]
+    sectors: ["healthcare", "telecommunications", "technology", "finance", "education", "retail", "gaming"]
+    defensive_focus: ["internet-facing services", "identity security", "web telemetry", "database monitoring"]
+    profile_version: "4.2"
+    last_modified: "2026-07-31"
+    source: "https://attack.mitre.org/groups/G0096/"
+    source_tier: "A"
+
+  - id: volt-typhoon
+    name: "Volt Typhoon"
+    attack_id: "G1017"
+    aliases: ["Vanguard Panda", "DEV-0391", "UNC3236", "Voltzite", "Insidious Taurus"]
+    actor_type: "state-sponsored"
+    attribution: "MITRE ATT&CK describes Volt Typhoon as a PRC state-sponsored actor."
+    motivation: ["strategic access", "pre-positioning"]
+    focus_regions: ["United States", "Guam"]
+    sectors: ["critical infrastructure", "communications", "operational technology"]
+    defensive_focus: ["network-device monitoring", "identity security", "edge-device inventory", "OT segmentation"]
+    profile_version: "2.0"
+    last_modified: "2026-07-31"
+    source: "https://attack.mitre.org/groups/G1017/"
+    source_tier: "A"
+
+  - id: salt-typhoon
+    name: "Salt Typhoon"
+    attack_id: "G1045"
+    aliases: []
+    actor_type: "state-sponsored"
+    attribution: "MITRE ATT&CK describes Salt Typhoon as a PRC state-backed actor."
+    motivation: ["espionage", "strategic intelligence"]
+    focus_regions: ["United States", "global telecommunications"]
+    sectors: ["telecommunications", "internet service providers", "network infrastructure"]
+    defensive_focus: ["network-device monitoring", "telecommunications security", "identity security", "configuration integrity"]
+    profile_version: "1.0"
+    last_modified: "2026-07-31"
+    source: "https://attack.mitre.org/groups/G1045/"
+    source_tier: "A"
+
+  - id: mustang-panda
+    name: "Mustang Panda"
+    attack_id: "G0129"
+    aliases: ["TA416", "RedDelta", "BRONZE PRESIDENT", "STATELY TAURUS", "CAMARO DRAGON", "EARTH PRETA"]
+    actor_type: "state-sponsored"
+    attribution: "MITRE ATT&CK describes Mustang Panda as a China-based cyber espionage threat actor."
+    motivation: ["espionage", "strategic intelligence"]
+    focus_regions: ["Asia", "Europe", "United States"]
+    sectors: ["government", "diplomatic", "non-governmental organizations", "research", "religious institutions"]
+    defensive_focus: ["email security", "endpoint telemetry", "identity monitoring", "document-analysis workflows"]
+    profile_version: "3.0"
+    last_modified: "2026-07-31"
+    source: "https://attack.mitre.org/groups/G0129/"
+    source_tier: "A"
+
+  - id: blacktech
+    name: "BlackTech"
+    attack_id: "G0098"
+    aliases: ["Palmerworm"]
+    actor_type: "suspected-state-linked"
+    attribution: "MITRE ATT&CK describes BlackTech as a suspected Chinese cyber espionage group."
+    motivation: ["espionage"]
+    focus_regions: ["Taiwan", "Japan", "Hong Kong", "United States"]
+    sectors: ["media", "construction", "engineering", "electronics", "finance"]
+    defensive_focus: ["network infrastructure", "endpoint telemetry", "certificate monitoring", "identity security"]
+    profile_version: "2.0"
+    last_modified: "2026-07-31"
+    source: "https://attack.mitre.org/groups/G0098/"
+    source_tier: "A"
+
+  - id: lazarus
+    name: "Lazarus Group"
+    attack_id: "G0032"
+    aliases: ["Labyrinth Chollima", "HIDDEN COBRA", "ZINC", "Diamond Sleet"]
+    actor_type: "state-sponsored"
+    attribution: "MITRE ATT&CK attributes Lazarus Group to North Korea's Reconnaissance General Bureau (RGB), while noting umbrella-name overlap."
+    motivation: ["espionage", "financial", "strategic objectives"]
+    focus_regions: ["global"]
+    sectors: ["government", "technology", "financial services", "cryptocurrency", "defense"]
+    defensive_focus: ["identity security", "endpoint telemetry", "software-supply-chain", "financial-fraud monitoring"]
+    profile_version: "5.0"
+    last_modified: "2026-07-31"
+    source: "https://attack.mitre.org/groups/G0032/"
+    source_tier: "A"
+
+  - id: kimsuky
+    name: "Kimsuky"
+    attack_id: "G0094"
+    aliases: ["Emerald Sleet", "THALLIUM", "APT43", "TA427"]
+    actor_type: "state-sponsored"
+    attribution: "MITRE ATT&CK describes Kimsuky as a DPRK-based cyber espionage group."
+    motivation: ["espionage", "strategic intelligence"]
+    focus_regions: ["South Korea", "United States", "Japan", "Europe"]
+    sectors: ["government", "think tanks", "education", "business services", "manufacturing"]
+    defensive_focus: ["email security", "identity protection", "research-community awareness", "cloud-account monitoring"]
+    profile_version: "5.2"
+    last_modified: "2026-07-31"
+    source: "https://attack.mitre.org/groups/G0094/"
+    source_tier: "A"
+
+  - id: muddywater
+    name: "MuddyWater"
+    attack_id: "G0069"
+    aliases: ["MERCURY", "Seedworm", "Mango Sandstorm", "TA450"]
+    actor_type: "state-sponsored"
+    attribution: "MITRE ATT&CK assesses MuddyWater as a subordinate element within Iran's Ministry of Intelligence and Security (MOIS)."
+    motivation: ["espionage", "strategic intelligence"]
+    focus_regions: ["Middle East", "Asia", "Africa", "Europe", "North America"]
+    sectors: ["government", "telecommunications", "finance", "defense", "energy"]
+    defensive_focus: ["identity security", "endpoint telemetry", "remote-access monitoring", "email security"]
+    profile_version: "7.0"
+    last_modified: "2026-07-31"
+    source: "https://attack.mitre.org/groups/G0069/"
+    source_tier: "A"
+
+  - id: oilrig
+    name: "OilRig"
+    attack_id: "G0049"
+    aliases: ["APT34", "Helix Kitten", "Hazel Sandstorm", "EUROPIUM", "Crambus"]
+    actor_type: "state-sponsored"
+    attribution: "MITRE ATT&CK describes OilRig as a suspected Iranian threat group working on behalf of the Iranian government."
+    motivation: ["espionage", "strategic intelligence"]
+    focus_regions: ["Middle East", "international"]
+    sectors: ["finance", "government", "energy", "chemical", "telecommunications"]
+    defensive_focus: ["identity security", "cloud accounts", "supply-chain relationships", "email security"]
+    profile_version: "5.0"
+    last_modified: "2026-07-31"
+    source: "https://attack.mitre.org/groups/G0049/"
+    source_tier: "A"
+
+  - id: transparent-tribe
+    name: "Transparent Tribe"
+    attack_id: "G0134"
+    aliases: ["APT36", "Mythic Leopard", "ProjectM"]
+    actor_type: "suspected-state-linked"
+    attribution: "MITRE ATT&CK describes Transparent Tribe as a suspected Pakistan-based threat group."
+    motivation: ["espionage"]
+    focus_regions: ["India", "Afghanistan", "South Asia"]
+    sectors: ["diplomatic", "defense", "research", "education"]
+    defensive_focus: ["email security", "endpoint telemetry", "domain monitoring", "user-awareness signals"]
+    profile_version: "1.2"
+    last_modified: "2026-07-31"
+    source: "https://attack.mitre.org/groups/G0134/"
+    source_tier: "A"
+
+  - id: apt32
+    name: "APT32"
+    attack_id: "G0050"
+    aliases: ["SeaLotus", "OceanLotus", "Canvas Cyclone", "BISMUTH"]
+    actor_type: "suspected-state-linked"
+    attribution: "MITRE ATT&CK describes APT32 as a suspected Vietnam-based threat group."
+    motivation: ["espionage"]
+    focus_regions: ["Southeast Asia", "global"]
+    sectors: ["government", "private sector", "media", "civil society"]
+    defensive_focus: ["web telemetry", "email security", "endpoint visibility", "identity monitoring"]
+    profile_version: "3.0"
+    last_modified: "2026-07-31"
+    source: "https://attack.mitre.org/groups/G0050/"
+    source_tier: "A"
+
+  - id: patchwork
+    name: "Patchwork"
+    attack_id: "G0040"
+    aliases: ["Hangover Group", "Dropping Elephant", "MONSOON"]
+    actor_type: "unresolved-attribution"
+    attribution: "MITRE ATT&CK notes Patchwork has not been definitively attributed and describes circumstantial evidence suggesting a possible Indian or pro-Indian nexus."
+    motivation: ["espionage"]
+    focus_regions: ["South Asia", "international"]
+    sectors: ["government", "diplomatic", "think tanks"]
+    defensive_focus: ["email security", "document-analysis workflows", "endpoint telemetry", "user-awareness signals"]
+    profile_version: "1.7"
+    last_modified: "2026-07-31"
+    source: "https://attack.mitre.org/groups/G0040/"
+    source_tier: "A"
+
+  - id: sidewinder
+    name: "Sidewinder"
+    attack_id: "G0121"
+    aliases: ["T-APT-04", "Rattlesnake"]
+    actor_type: "suspected-state-linked"
+    attribution: "MITRE ATT&CK describes Sidewinder as a suspected Indian threat actor group."
+    motivation: ["espionage"]
+    focus_regions: ["Pakistan", "China", "Nepal", "Afghanistan", "Asia"]
+    sectors: ["government", "military", "business"]
+    defensive_focus: ["email security", "web telemetry", "endpoint visibility", "user-awareness signals"]
+    profile_version: "1.2"
+    last_modified: "2026-07-31"
+    source: "https://attack.mitre.org/groups/G0121/"
+    source_tier: "A"
+
+  - id: scattered-spider
+    name: "Scattered Spider"
+    attack_id: "G1015"
+    aliases: ["Roasted 0ktapus", "Octo Tempest", "Storm-0875", "UNC3944"]
+    actor_type: "cybercrime"
+    attribution: "MITRE ATT&CK describes Scattered Spider as a native English-speaking cybercriminal group."
+    motivation: ["financial"]
+    focus_regions: ["global"]
+    sectors: ["technology", "telecommunications", "hospitality", "retail", "managed services", "manufacturing", "finance"]
+    defensive_focus: ["help-desk controls", "identity security", "MFA resilience", "cloud administration monitoring"]
+    profile_version: "3.0"
+    last_modified: "2026-07-31"
+    source: "https://attack.mitre.org/groups/G1015/"
+    source_tier: "A"
+
+  - id: fin7
+    name: "FIN7"
+    attack_id: "G0046"
+    aliases: ["Carbon Spider", "Sangria Tempest", "GOLD NIAGARA"]
+    actor_type: "cybercrime"
+    attribution: "MITRE ATT&CK describes FIN7 as a financially motivated threat group."
+    motivation: ["financial"]
+    focus_regions: ["United States", "global"]
+    sectors: ["retail", "hospitality", "finance", "cloud services", "transportation", "pharmaceutical", "utilities"]
+    defensive_focus: ["identity security", "endpoint telemetry", "payment-system monitoring", "cloud monitoring"]
+    profile_version: "4.1"
+    last_modified: "2026-07-31"
+    source: "https://attack.mitre.org/groups/G0046/"
+    source_tier: "A"
+
+  - id: wizard-spider
+    name: "Wizard Spider"
+    attack_id: "G0102"
+    aliases: ["Grim Spider", "FIN12", "Periwinkle Tempest", "Pistachio Tempest"]
+    actor_type: "cybercrime"
+    attribution: "MITRE ATT&CK describes Wizard Spider as a Russia-based financially motivated threat group."
+    motivation: ["financial", "ransomware"]
+    focus_regions: ["global"]
+    sectors: ["healthcare", "large enterprises", "critical services"]
+    defensive_focus: ["ransomware resilience", "identity security", "endpoint telemetry", "recovery engineering"]
+    profile_version: "4.1"
+    last_modified: "2026-07-31"
+    source: "https://attack.mitre.org/groups/G0102/"
+    source_tier: "A"
+
+  - id: ta505
+    name: "TA505"
+    attack_id: "G0092"
+    aliases: ["Hive0065", "Spandex Tempest", "CHIMBORAZO"]
+    actor_type: "cybercrime"
+    attribution: "MITRE ATT&CK describes TA505 as a cybercriminal group active since at least 2014."
+    motivation: ["financial"]
+    focus_regions: ["global"]
+    sectors: ["enterprise", "finance", "commercial organizations"]
+    defensive_focus: ["email security", "endpoint telemetry", "identity security", "ransomware resilience"]
+    profile_version: "3.0"
+    last_modified: "2026-07-31"
+    source: "https://attack.mitre.org/groups/G0092/"
+    source_tier: "A"
