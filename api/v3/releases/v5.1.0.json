@@ -1,0 +1,23 @@
+{
+  "version": "5.1.0",
+  "date": "2026-09-29",
+  "codename": "Adversary Intelligence",
+  "status": "release-manifest",
+  "capabilities": [
+    "13 additional CTI incident-response resilience and vulnerability frameworks",
+    "22 source-attributed adversary profiles",
+    "adversary alias and attribution context",
+    "CTI research source library",
+    "dedicated adversary pages",
+    "adversary search and filters",
+    "API v3 adversary datasets",
+    "three original intelligence SVG visuals",
+    "expanded CTI knowledge-graph relationships"
+  ],
+  "compatibility": {
+    "api_v1": true,
+    "api_v2": true,
+    "api_v3": "current"
+  },
+  "safety": "Adversary material is descriptive, source-attributed and oriented to defensive prioritization, research, resilience, detection and evidence."
+}

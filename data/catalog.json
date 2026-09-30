@@ -1,0 +1,5873 @@
+{
+  "updated": "2026-09-30",
+  "items": [
+    {
+      "id": "adaptixc2",
+      "name": "AdaptixC2",
+      "aliases": [],
+      "type": "operational-platform",
+      "domains": [
+        "adversary-emulation"
+      ],
+      "status": "verified",
+      "model": "open-source",
+      "url": "https://github.com/Adaptix-Framework/AdaptixC2",
+      "summary": "modular platform for authorized red-team and adversary-emulation engagements",
+      "source": "catalog.yaml",
+      "kind": "tool",
+      "version": null,
+      "evidence_tier": "B",
+      "last_reviewed": "2026-09-29",
+      "verification_note": null,
+      "provenance_score": 95,
+      "upstream_health": "healthy",
+      "last_activity": "2026-09-24T22:01:37Z",
+      "latest_release": null
+    },
+    {
+      "id": "advanced-iot-exploitation-framework-v2-0",
+      "name": "advanced-iot-exploitation-framework-v2-0",
+      "aliases": [],
+      "type": "iot-embedded-candidate",
+      "domains": [
+        "iot",
+        "embedded",
+        "device-security",
+        "research"
+      ],
+      "status": "not-verified",
+      "model": "unknown",
+      "url": null,
+      "summary": "Research candidate for IoT security testing and lab validation; NOT VERIFIED pending canonical provenance, maintenance and module-scope review.",
+      "source": "catalog.yaml",
+      "kind": "tool",
+      "version": null,
+      "evidence_tier": "D",
+      "last_reviewed": "2026-09-30",
+      "verification_note": "NOT VERIFIED — research candidate only.",
+      "provenance_score": 15,
+      "upstream_health": "not-checked",
+      "last_activity": null,
+      "latest_release": null
+    },
+    {
+      "id": "advent-prompt-pwn",
+      "name": "advent-prompt-pwn",
+      "aliases": [],
+      "type": "ai-security-candidate",
+      "domains": [
+        "ai-genai",
+        "research"
+      ],
+      "status": "not-verified",
+      "model": "unknown",
+      "url": null,
+      "summary": "Research candidate included for completeness; NOT VERIFIED. Do not treat as recommended until canonical provenance, maintenance, licensing and scope are confirmed.",
+      "source": "catalog.yaml",
+      "kind": "tool",
+      "version": null,
+      "evidence_tier": "D",
+      "last_reviewed": "2026-09-29",
+      "verification_note": "NOT VERIFIED — research candidate only.",
+      "provenance_score": 15,
+      "upstream_health": "not-checked",
+      "last_activity": null,
+      "latest_release": null
+    },
+    {
+      "id": "aegis-adversary-emulation",
+      "name": "AEGIS",
+      "aliases": [],
+      "type": "autonomous-emulation-research-candidate",
+      "domains": [
+        "adversary-emulation",
+        "ai-security",
+        "automation",
+        "research"
+      ],
+      "status": "not-verified",
+      "model": "unknown",
+      "url": null,
+      "summary": "Research candidate described as architecture-aware adversary emulation; NOT VERIFIED pending canonical provenance and scope review.",
+      "source": "catalog.yaml",
+      "kind": "tool",
+      "version": null,
+      "evidence_tier": "D",
+      "last_reviewed": "2026-09-30",
+      "verification_note": "NOT VERIFIED — research candidate only.",
+      "provenance_score": 15,
+      "upstream_health": "not-checked",
+      "last_activity": null,
+      "latest_release": null
+    },
+    {
+      "id": "aibas360",
+      "name": "aiBAS360",
+      "aliases": [],
+      "type": "bas-research-candidate",
+      "domains": [
+        "breach-attack-simulation",
+        "purple-team",
+        "ai-security",
+        "research"
+      ],
+      "status": "not-verified",
+      "model": "unknown",
+      "url": null,
+      "summary": "Research candidate described as AI-assisted breach-and-attack simulation; NOT VERIFIED pending product and primary-source validation.",
+      "source": "catalog.yaml",
+      "kind": "tool",
+      "version": null,
+      "evidence_tier": "D",
+      "last_reviewed": "2026-09-30",
+      "verification_note": "NOT VERIFIED — research candidate only.",
+      "provenance_score": 15,
+      "upstream_health": "not-checked",
+      "last_activity": null,
+      "latest_release": null
+    },
+    {
+      "id": "aptsimulator",
+      "name": "APTSimulator",
+      "aliases": [],
+      "type": "adversary-emulation-candidate",
+      "domains": [
+        "adversary-emulation",
+        "research"
+      ],
+      "status": "not-verified",
+      "model": "unknown",
+      "url": null,
+      "summary": "Research candidate included for completeness; NOT VERIFIED. Do not treat as recommended until canonical provenance, maintenance, licensing and scope are confirmed.",
+      "source": "catalog.yaml",
+      "kind": "tool",
+      "version": null,
+      "evidence_tier": "D",
+      "last_reviewed": "2026-09-29",
+      "verification_note": "NOT VERIFIED — research candidate only.",
+      "provenance_score": 15,
+      "upstream_health": "not-checked",
+      "last_activity": null,
+      "latest_release": null
+    },
+    {
+      "id": "arsenal",
+      "name": "arsenal",
+      "aliases": [],
+      "type": "security-reference-candidate",
+      "domains": [
+        "security-assessment",
+        "reference",
+        "toolkit",
+        "research"
+      ],
+      "status": "not-verified",
+      "model": "unknown",
+      "url": null,
+      "summary": "Research candidate described as a mixed offensive/defensive security reference repository; NOT VERIFIED pending canonical provenance and scope review.",
+      "source": "catalog.yaml",
+      "kind": "tool",
+      "version": null,
+      "evidence_tier": "D",
+      "last_reviewed": "2026-09-30",
+      "verification_note": "NOT VERIFIED — research candidate only.",
+      "provenance_score": 15,
+      "upstream_health": "not-checked",
+      "last_activity": null,
+      "latest_release": null
+    },
+    {
+      "id": "atomic-red-team",
+      "name": "Atomic Red Team",
+      "aliases": [],
+      "type": "control-validation",
+      "domains": [
+        "enterprise",
+        "detection"
+      ],
+      "status": "verified",
+      "model": "reference",
+      "url": "https://github.com/redcanaryco/atomic-red-team",
+      "summary": "portable ATT&CK-mapped tests; detection validation",
+      "source": "frameworks.yaml",
+      "kind": "framework",
+      "version": null,
+      "evidence_tier": "A",
+      "last_reviewed": "2026-09-29",
+      "provenance_score": 100,
+      "upstream_health": "healthy",
+      "last_activity": "2026-09-28T11:25:17Z",
+      "latest_release": null
+    },
+    {
+      "id": "attack-flow",
+      "name": "Attack Flow",
+      "aliases": [],
+      "type": "behavior-model",
+      "domains": [
+        "enterprise",
+        "cloud"
+      ],
+      "status": "verified",
+      "model": "reference",
+      "url": "https://attackflow.org/",
+      "summary": "multi-step attack paths; behavior sequencing",
+      "source": "frameworks.yaml",
+      "kind": "framework",
+      "version": null,
+      "evidence_tier": "A",
+      "last_reviewed": "2026-09-29",
+      "provenance_score": 100,
+      "upstream_health": "not-checked",
+      "last_activity": null,
+      "latest_release": null
+    },
+    {
+      "id": "attackiq",
+      "name": "AttackIQ",
+      "aliases": [],
+      "type": "security-validation-platform",
+      "domains": [
+        "bas",
+        "purple-team"
+      ],
+      "status": "commercial",
+      "model": "commercial",
+      "url": null,
+      "summary": "security control validation",
+      "source": "catalog.yaml",
+      "kind": "tool",
+      "version": null,
+      "evidence_tier": "C",
+      "last_reviewed": "2026-09-30",
+      "verification_note": null,
+      "provenance_score": 64,
+      "upstream_health": "not-checked",
+      "last_activity": null,
+      "latest_release": null
+    },
+    {
+      "id": "autopt",
+      "name": "AutoPT",
+      "aliases": [],
+      "type": "ai-security-candidate",
+      "domains": [
+        "ai-genai",
+        "research"
+      ],
+      "status": "not-verified",
+      "model": "unknown",
+      "url": null,
+      "summary": "Research candidate included for completeness; NOT VERIFIED. Do not treat as recommended until canonical provenance, maintenance, licensing and scope are confirmed.",
+      "source": "catalog.yaml",
+      "kind": "tool",
+      "version": null,
+      "evidence_tier": "D",
+      "last_reviewed": "2026-09-29",
+      "verification_note": "NOT VERIFIED — research candidate only.",
+      "provenance_score": 15,
+      "upstream_health": "not-checked",
+      "last_activity": null,
+      "latest_release": null
+    },
+    {
+      "id": "autopwn",
+      "name": "autopwn",
+      "aliases": [],
+      "type": "ai-security-candidate",
+      "domains": [
+        "ai-security",
+        "vulnerability-research",
+        "automation",
+        "research"
+      ],
+      "status": "not-verified",
+      "model": "unknown",
+      "url": null,
+      "summary": "Research candidate described as AI-assisted vulnerability-research automation; NOT VERIFIED pending canonical provenance, research scope and safety review.",
+      "source": "catalog.yaml",
+      "kind": "tool",
+      "version": null,
+      "evidence_tier": "D",
+      "last_reviewed": "2026-09-30",
+      "verification_note": "NOT VERIFIED — research candidate only.",
+      "provenance_score": 15,
+      "upstream_health": "not-checked",
+      "last_activity": null,
+      "latest_release": null
+    },
+    {
+      "id": "ax-framework",
+      "name": "ax-framework",
+      "aliases": [],
+      "type": "cloud-infrastructure-candidate",
+      "domains": [
+        "cloud",
+        "automation",
+        "assessment-infrastructure",
+        "research"
+      ],
+      "status": "not-verified",
+      "model": "unknown",
+      "url": null,
+      "summary": "Research candidate described as cloud infrastructure automation for authorized security-assessment environments; NOT VERIFIED pending provenance and maintenance review.",
+      "source": "catalog.yaml",
+      "kind": "tool",
+      "version": null,
+      "evidence_tier": "D",
+      "last_reviewed": "2026-09-30",
+      "verification_note": "NOT VERIFIED — research candidate only.",
+      "provenance_score": 15,
+      "upstream_health": "not-checked",
+      "last_activity": null,
+      "latest_release": null
+    },
+    {
+      "id": "azurehound",
+      "name": "AzureHound",
+      "aliases": [],
+      "type": "data-collector",
+      "domains": [
+        "azure",
+        "entra-id",
+        "identity"
+      ],
+      "status": "verified",
+      "model": "open-source",
+      "url": "https://github.com/SpecterOps/AzureHound",
+      "summary": "Azure / Entra data collection for BloodHound",
+      "source": "catalog.yaml",
+      "kind": "tool",
+      "version": null,
+      "evidence_tier": "B",
+      "last_reviewed": "2026-09-30",
+      "verification_note": null,
+      "provenance_score": 95,
+      "upstream_health": "healthy",
+      "last_activity": "2026-09-21T21:01:40Z",
+      "latest_release": {
+        "tag": "v3.1.1",
+        "published_at": "2026-09-08T14:42:08Z",
+        "url": "https://github.com/SpecterOps/AzureHound/releases/tag/v3.1.1"
+      }
+    },
+    {
+      "id": "basilisk",
+      "name": "Basilisk",
+      "aliases": [],
+      "type": "ai-security-candidate",
+      "domains": [
+        "ai-genai",
+        "research"
+      ],
+      "status": "not-verified",
+      "model": "unknown",
+      "url": null,
+      "summary": "Research candidate included for completeness; NOT VERIFIED. Do not treat as recommended until canonical provenance, maintenance, licensing and scope are confirmed.",
+      "source": "catalog.yaml",
+      "kind": "tool",
+      "version": null,
+      "evidence_tier": "D",
+      "last_reviewed": "2026-09-29",
+      "verification_note": "NOT VERIFIED — research candidate only.",
+      "provenance_score": 15,
+      "upstream_health": "not-checked",
+      "last_activity": null,
+      "latest_release": null
+    },
+    {
+      "id": "bear-c2",
+      "name": "bear-c2",
+      "aliases": [],
+      "type": "operational-platform-research-candidate",
+      "domains": [
+        "adversary-emulation",
+        "operational-platform",
+        "research"
+      ],
+      "status": "not-verified",
+      "model": "unknown",
+      "url": null,
+      "summary": "Research candidate associated with adversary-emulation platform research; retained only as non-recommended context until provenance and maintenance are verified.",
+      "source": "catalog.yaml",
+      "kind": "tool",
+      "version": null,
+      "evidence_tier": "D",
+      "last_reviewed": "2026-09-30",
+      "verification_note": "NOT VERIFIED — research candidate only.",
+      "provenance_score": 15,
+      "upstream_health": "not-checked",
+      "last_activity": null,
+      "latest_release": null
+    },
+    {
+      "id": "blindspot-adversary-simulator",
+      "name": "BlindSpot",
+      "aliases": [],
+      "type": "adversary-simulation-research-candidate",
+      "domains": [
+        "security-validation",
+        "purple-team",
+        "adversary-emulation",
+        "research"
+      ],
+      "status": "not-verified",
+      "model": "unknown",
+      "url": null,
+      "summary": "Research candidate described as adversary simulation and defensive validation; NOT VERIFIED pending canonical provenance review.",
+      "source": "catalog.yaml",
+      "kind": "tool",
+      "version": null,
+      "evidence_tier": "D",
+      "last_reviewed": "2026-09-30",
+      "verification_note": "NOT VERIFIED — research candidate only.",
+      "provenance_score": 15,
+      "upstream_health": "not-checked",
+      "last_activity": null,
+      "latest_release": null
+    },
+    {
+      "id": "bloodhound",
+      "name": "BloodHound",
+      "aliases": [],
+      "type": "attack-path-analysis",
+      "domains": [
+        "identity",
+        "active-directory",
+        "entra-id"
+      ],
+      "status": "verified",
+      "model": "open-source",
+      "url": "https://github.com/SpecterOps/BloodHound",
+      "summary": "identity relationship and attack-path analysis",
+      "source": "catalog.yaml",
+      "kind": "tool",
+      "version": null,
+      "evidence_tier": "B",
+      "last_reviewed": "2026-09-29",
+      "verification_note": null,
+      "provenance_score": 95,
+      "upstream_health": "healthy",
+      "last_activity": "2026-09-29T20:13:15Z",
+      "latest_release": {
+        "tag": "v9.7.1",
+        "published_at": "2026-09-17T18:02:39Z",
+        "url": "https://github.com/SpecterOps/BloodHound/releases/tag/v9.7.1"
+      }
+    },
+    {
+      "id": "bounty-hunter",
+      "name": "bounty-hunter",
+      "aliases": [],
+      "type": "caldera-research-candidate",
+      "domains": [
+        "adversary-emulation",
+        "caldera",
+        "automation",
+        "research"
+      ],
+      "status": "not-verified",
+      "model": "unknown",
+      "url": null,
+      "summary": "Research candidate described as automated adversary-emulation research around CALDERA-style orchestration; NOT VERIFIED pending canonical source review.",
+      "source": "catalog.yaml",
+      "kind": "tool",
+      "version": null,
+      "evidence_tier": "D",
+      "last_reviewed": "2026-09-30",
+      "verification_note": "NOT VERIFIED — research candidate only.",
+      "provenance_score": 15,
+      "upstream_health": "not-checked",
+      "last_activity": null,
+      "latest_release": null
+    },
+    {
+      "id": "burp-suite",
+      "name": "Burp Suite",
+      "aliases": [],
+      "type": "web-assessment-platform",
+      "domains": [
+        "web",
+        "api",
+        "application-security"
+      ],
+      "status": "verified",
+      "model": "commercial-community",
+      "url": "https://portswigger.net/burp",
+      "summary": "interactive web application security assessment platform",
+      "source": "catalog.yaml",
+      "kind": "tool",
+      "version": null,
+      "evidence_tier": "A",
+      "last_reviewed": "2026-09-29",
+      "verification_note": null,
+      "provenance_score": 100,
+      "upstream_health": "not-checked",
+      "last_activity": null,
+      "latest_release": null
+    },
+    {
+      "id": "cartography",
+      "name": "Cartography",
+      "aliases": [],
+      "type": "security-graph-platform",
+      "domains": [
+        "cloud",
+        "identity",
+        "attack-path-analysis"
+      ],
+      "status": "verified",
+      "model": "open-source",
+      "url": "https://github.com/lyft/cartography",
+      "summary": "asset relationship graphing for security and exposure analysis",
+      "source": "catalog.yaml",
+      "kind": "tool",
+      "version": null,
+      "evidence_tier": "B",
+      "last_reviewed": "2026-09-29",
+      "verification_note": null,
+      "provenance_score": 90,
+      "upstream_health": "rate-limited",
+      "last_activity": null,
+      "latest_release": null
+    },
+    {
+      "id": "cbest",
+      "name": "CBEST",
+      "aliases": [],
+      "type": "threat-led-testing-framework",
+      "domains": [
+        "regulated",
+        "financial",
+        "uk"
+      ],
+      "status": "verified",
+      "model": "reference",
+      "url": "https://www.bankofengland.co.uk/financial-stability/operational-resilience-of-the-financial-sector/cbest-threat-intelligence-led-assessments-implementation-guide",
+      "summary": "UK financial-sector intelligence-led testing; regulator-led resilience assessment",
+      "source": "frameworks.yaml",
+      "kind": "framework",
+      "version": null,
+      "evidence_tier": "A",
+      "last_reviewed": "2026-09-29",
+      "provenance_score": 100,
+      "upstream_health": "not-checked",
+      "last_activity": null,
+      "latest_release": null
+    },
+    {
+      "id": "checkov",
+      "name": "Checkov",
+      "aliases": [],
+      "type": "iac-security-scanner",
+      "domains": [
+        "infrastructure-as-code",
+        "cloud",
+        "secure-development"
+      ],
+      "status": "verified",
+      "model": "open-source-commercial",
+      "url": "https://www.checkov.io/",
+      "summary": "policy and misconfiguration analysis for infrastructure-as-code",
+      "source": "catalog.yaml",
+      "kind": "tool",
+      "version": null,
+      "evidence_tier": "B",
+      "last_reviewed": "2026-09-29",
+      "verification_note": null,
+      "provenance_score": 90,
+      "upstream_health": "not-checked",
+      "last_activity": null,
+      "latest_release": null
+    },
+    {
+      "id": "cis-controls",
+      "name": "CIS Critical Security Controls",
+      "aliases": [],
+      "type": "security-control-framework",
+      "domains": [
+        "enterprise",
+        "defense",
+        "governance"
+      ],
+      "status": "verified",
+      "model": "reference",
+      "url": "https://www.cisecurity.org/controls/v8-1",
+      "summary": "prioritized security safeguards; defensive capability assessment; security program baselining",
+      "source": "frameworks.yaml",
+      "kind": "framework",
+      "version": "8.1",
+      "evidence_tier": "A",
+      "last_reviewed": "2026-09-29",
+      "provenance_score": 100,
+      "upstream_health": "not-checked",
+      "last_activity": null,
+      "latest_release": null
+    },
+    {
+      "id": "cisa-cpg",
+      "name": "CISA Cross-Sector Cybersecurity Performance Goals",
+      "aliases": [],
+      "type": "security-outcomes-framework",
+      "domains": [
+        "critical-infrastructure",
+        "defense",
+        "governance"
+      ],
+      "status": "verified",
+      "model": "reference",
+      "url": "https://www.cisa.gov/cybersecurity-performance-goals",
+      "summary": "high-impact security outcomes; critical-infrastructure baselines; security maturity improvement",
+      "source": "frameworks.yaml",
+      "kind": "framework",
+      "version": null,
+      "evidence_tier": "A",
+      "last_reviewed": "2026-09-29",
+      "provenance_score": 100,
+      "upstream_health": "not-checked",
+      "last_activity": null,
+      "latest_release": null
+    },
+    {
+      "id": "cisa-ztmm-2",
+      "name": "CISA Zero Trust Maturity Model",
+      "aliases": [],
+      "type": "zero-trust-maturity-model",
+      "domains": [
+        "zero-trust",
+        "identity",
+        "devices",
+        "network",
+        "applications",
+        "data"
+      ],
+      "status": "verified",
+      "model": "reference",
+      "url": "https://www.cisa.gov/sites/default/files/2023-04/zero_trust_maturity_model_v2_508.pdf",
+      "summary": "zero trust maturity planning; identity and device modernization; visibility and analytics planning",
+      "source": "frameworks.yaml",
+      "kind": "framework",
+      "version": "2.0",
+      "evidence_tier": "A",
+      "last_reviewed": "2026-09-30",
+      "provenance_score": 100,
+      "upstream_health": "not-checked",
+      "last_activity": null,
+      "latest_release": null
+    },
+    {
+      "id": "cloudfox",
+      "name": "CloudFox",
+      "aliases": [],
+      "type": "assessment-tool",
+      "domains": [
+        "aws",
+        "azure",
+        "gcp"
+      ],
+      "status": "verified",
+      "model": "open-source",
+      "url": "https://github.com/BishopFox/cloudfox",
+      "summary": "cloud situational awareness and attack-path discovery",
+      "source": "catalog.yaml",
+      "kind": "tool",
+      "version": null,
+      "evidence_tier": "B",
+      "last_reviewed": "2026-09-30",
+      "verification_note": null,
+      "provenance_score": 95,
+      "upstream_health": "healthy",
+      "last_activity": "2026-08-20T18:39:52Z",
+      "latest_release": {
+        "tag": "v2.0.5",
+        "published_at": "2026-05-26T15:13:52Z",
+        "url": "https://github.com/BishopFox/cloudfox/releases/tag/v2.0.5"
+      }
+    },
+    {
+      "id": "cloudtoolkit",
+      "name": "cloudtoolkit",
+      "aliases": [],
+      "type": "cloud-toolkit-candidate",
+      "domains": [
+        "cloud",
+        "multi-cloud",
+        "security-assessment",
+        "research"
+      ],
+      "status": "not-verified",
+      "model": "unknown",
+      "url": null,
+      "summary": "Research candidate described as a multi-cloud security-assessment toolkit; NOT VERIFIED pending canonical provenance and supported-provider validation.",
+      "source": "catalog.yaml",
+      "kind": "tool",
+      "version": null,
+      "evidence_tier": "D",
+      "last_reviewed": "2026-09-30",
+      "verification_note": "NOT VERIFIED — research candidate only.",
+      "provenance_score": 15,
+      "upstream_health": "not-checked",
+      "last_activity": null,
+      "latest_release": null
+    },
+    {
+      "id": "cobalt-strike",
+      "name": "Cobalt Strike",
+      "aliases": [],
+      "type": "operational-platform",
+      "domains": [
+        "adversary-emulation"
+      ],
+      "status": "commercial",
+      "model": "commercial",
+      "url": null,
+      "summary": "commercial adversary-simulation platform",
+      "source": "catalog.yaml",
+      "kind": "tool",
+      "version": null,
+      "evidence_tier": "C",
+      "last_reviewed": "2026-09-30",
+      "verification_note": null,
+      "provenance_score": 64,
+      "upstream_health": "not-checked",
+      "last_activity": null,
+      "latest_release": null
+    },
+    {
+      "id": "cosmos-orbit",
+      "name": "Cosmos Orbit",
+      "aliases": [],
+      "type": "operational-platform-candidate",
+      "domains": [
+        "adversary-emulation",
+        "research"
+      ],
+      "status": "not-verified",
+      "model": "unknown",
+      "url": null,
+      "summary": "Research candidate included for completeness; NOT VERIFIED. Do not treat as recommended until canonical provenance, maintenance, licensing and scope are confirmed.",
+      "source": "catalog.yaml",
+      "kind": "tool",
+      "version": null,
+      "evidence_tier": "D",
+      "last_reviewed": "2026-09-29",
+      "verification_note": "NOT VERIFIED — research candidate only.",
+      "provenance_score": 15,
+      "upstream_health": "not-checked",
+      "last_activity": null,
+      "latest_release": null
+    },
+    {
+      "id": "covenant",
+      "name": "Covenant",
+      "aliases": [],
+      "type": "operational-platform-candidate",
+      "domains": [
+        "adversary-emulation",
+        "research"
+      ],
+      "status": "not-verified",
+      "model": "unknown",
+      "url": null,
+      "summary": "Research candidate included for completeness; NOT VERIFIED. Do not treat as recommended until canonical provenance, maintenance, licensing and scope are confirmed.",
+      "source": "catalog.yaml",
+      "kind": "tool",
+      "version": null,
+      "evidence_tier": "D",
+      "last_reviewed": "2026-09-29",
+      "verification_note": "NOT VERIFIED — research candidate only.",
+      "provenance_score": 15,
+      "upstream_health": "not-checked",
+      "last_activity": null,
+      "latest_release": null
+    },
+    {
+      "id": "cptf-arm-edition",
+      "name": "cptf-arm-edition",
+      "aliases": [],
+      "type": "cloud-toolkit-candidate",
+      "domains": [
+        "cloud",
+        "arm64",
+        "lab-environment",
+        "research"
+      ],
+      "status": "not-verified",
+      "model": "unknown",
+      "url": null,
+      "summary": "Research candidate described as an ARM64-oriented cloud-security lab/toolkit bundle; NOT VERIFIED pending canonical source, maintenance and licensing review.",
+      "source": "catalog.yaml",
+      "kind": "tool",
+      "version": null,
+      "evidence_tier": "D",
+      "last_reviewed": "2026-09-30",
+      "verification_note": "NOT VERIFIED — research candidate only.",
+      "provenance_score": 15,
+      "upstream_health": "not-checked",
+      "last_activity": null,
+      "latest_release": null
+    },
+    {
+      "id": "crackmapexec",
+      "name": "CrackMapExec",
+      "aliases": [],
+      "type": "legacy-review-candidate",
+      "domains": [
+        "legacy-review",
+        "research"
+      ],
+      "status": "not-verified",
+      "model": "unknown",
+      "url": null,
+      "summary": "Research candidate included for completeness; NOT VERIFIED. Do not treat as recommended until canonical provenance, maintenance, licensing and scope are confirmed.",
+      "source": "catalog.yaml",
+      "kind": "tool",
+      "version": null,
+      "evidence_tier": "D",
+      "last_reviewed": "2026-09-29",
+      "verification_note": "NOT VERIFIED — research candidate only.",
+      "provenance_score": 15,
+      "upstream_health": "not-checked",
+      "last_activity": null,
+      "latest_release": null
+    },
+    {
+      "id": "crest-tlpt",
+      "name": "CREST Threat-Led Penetration Testing",
+      "aliases": [],
+      "type": "assurance-framework",
+      "domains": [
+        "enterprise",
+        "regulated"
+      ],
+      "status": "verified",
+      "model": "reference",
+      "url": "https://www.crest-approved.org/cyber-service-categories/red-teaming/",
+      "summary": "threat-led assurance; provider and service quality structure",
+      "source": "frameworks.yaml",
+      "kind": "framework",
+      "version": null,
+      "evidence_tier": "A",
+      "last_reviewed": "2026-09-29",
+      "provenance_score": 100,
+      "upstream_health": "not-checked",
+      "last_activity": null,
+      "latest_release": null
+    },
+    {
+      "id": "csa-ccm",
+      "name": "CSA Cloud Controls Matrix",
+      "aliases": [],
+      "type": "cloud-control-framework",
+      "domains": [
+        "cloud",
+        "governance",
+        "assurance"
+      ],
+      "status": "verified",
+      "model": "reference",
+      "url": "https://cloudsecurityalliance.org/research/cloud-controls-matrix",
+      "summary": "cloud security assurance; cloud control assessment; cloud compliance mapping",
+      "source": "frameworks.yaml",
+      "kind": "framework",
+      "version": "4.1",
+      "evidence_tier": "A",
+      "last_reviewed": "2026-09-29",
+      "provenance_score": 100,
+      "upstream_health": "not-checked",
+      "last_activity": null,
+      "latest_release": null
+    },
+    {
+      "id": "csa-security-guidance-v5",
+      "name": "CSA Security Guidance for Cloud Computing",
+      "aliases": [],
+      "type": "cloud-security-guidance",
+      "domains": [
+        "cloud",
+        "identity",
+        "workload-security",
+        "incident-response",
+        "resilience"
+      ],
+      "status": "verified",
+      "model": "reference",
+      "url": "https://cloudsecurityalliance.org/artifacts/security-guidance-v5",
+      "summary": "cloud security architecture; cloud governance; cloud monitoring and resilience",
+      "source": "frameworks.yaml",
+      "kind": "framework",
+      "version": "5",
+      "evidence_tier": "A",
+      "last_reviewed": "2026-09-30",
+      "provenance_score": 100,
+      "upstream_health": "not-checked",
+      "last_activity": null,
+      "latest_release": null
+    },
+    {
+      "id": "ctid-adversary-emulation",
+      "name": "CTID Adversary Emulation Library",
+      "aliases": [],
+      "type": "emulation-library",
+      "domains": [
+        "enterprise"
+      ],
+      "status": "verified",
+      "model": "reference",
+      "url": "https://ctid.mitre.org/resources/adversary-emulation-library/",
+      "summary": "intelligence-driven emulation; full and micro emulation plans",
+      "source": "frameworks.yaml",
+      "kind": "framework",
+      "version": null,
+      "evidence_tier": "A",
+      "last_reviewed": "2026-09-29",
+      "provenance_score": 100,
+      "upstream_health": "not-checked",
+      "last_activity": null,
+      "latest_release": null
+    },
+    {
+      "id": "ctrsploit",
+      "name": "ctrsploit",
+      "aliases": [],
+      "type": "cloud-security-candidate",
+      "domains": [
+        "cloud",
+        "kubernetes",
+        "research"
+      ],
+      "status": "not-verified",
+      "model": "unknown",
+      "url": null,
+      "summary": "Research candidate included for completeness; NOT VERIFIED. Do not treat as recommended until canonical provenance, maintenance, licensing and scope are confirmed.",
+      "source": "catalog.yaml",
+      "kind": "tool",
+      "version": null,
+      "evidence_tier": "D",
+      "last_reviewed": "2026-09-29",
+      "verification_note": "NOT VERIFIED — research candidate only.",
+      "provenance_score": 15,
+      "upstream_health": "not-checked",
+      "last_activity": null,
+      "latest_release": null
+    },
+    {
+      "id": "cyber-kill-chain",
+      "name": "Cyber Kill Chain",
+      "aliases": [],
+      "type": "intrusion-lifecycle-model",
+      "domains": [
+        "threat-intelligence",
+        "adversary-analysis",
+        "detection"
+      ],
+      "status": "verified",
+      "model": "reference",
+      "url": "https://www.lockheedmartin.com/en-us/capabilities/cyber/cyber-kill-chain.html",
+      "summary": "intrusion lifecycle analysis; adversary campaign framing; defensive intervention points",
+      "source": "frameworks.yaml",
+      "kind": "framework",
+      "version": null,
+      "evidence_tier": "A",
+      "last_reviewed": "2026-09-29",
+      "provenance_score": 100,
+      "upstream_health": "not-checked",
+      "last_activity": null,
+      "latest_release": null
+    },
+    {
+      "id": "cymulate",
+      "name": "Cymulate",
+      "aliases": [],
+      "type": "security-validation-platform",
+      "domains": [
+        "bas",
+        "exposure-validation"
+      ],
+      "status": "commercial",
+      "model": "commercial",
+      "url": null,
+      "summary": "continuous security validation",
+      "source": "catalog.yaml",
+      "kind": "tool",
+      "version": null,
+      "evidence_tier": "C",
+      "last_reviewed": "2026-09-30",
+      "verification_note": null,
+      "provenance_score": 64,
+      "upstream_health": "not-checked",
+      "last_activity": null,
+      "latest_release": null
+    },
+    {
+      "id": "deepattacker",
+      "name": "DeepAttacker",
+      "aliases": [],
+      "type": "agentic-simulation-research-candidate",
+      "domains": [
+        "adversary-emulation",
+        "ai-security",
+        "multi-agent",
+        "research"
+      ],
+      "status": "not-verified",
+      "model": "unknown",
+      "url": null,
+      "summary": "Research candidate described as multi-agent breach and attack simulation; NOT VERIFIED pending primary-source review.",
+      "source": "catalog.yaml",
+      "kind": "tool",
+      "version": null,
+      "evidence_tier": "D",
+      "last_reviewed": "2026-09-30",
+      "verification_note": "NOT VERIFIED — research candidate only.",
+      "provenance_score": 15,
+      "upstream_health": "not-checked",
+      "last_activity": null,
+      "latest_release": null
+    },
+    {
+      "id": "deepteam",
+      "name": "DeepTeam",
+      "aliases": [],
+      "type": "ai-security-candidate",
+      "domains": [
+        "ai-genai",
+        "research"
+      ],
+      "status": "not-verified",
+      "model": "unknown",
+      "url": null,
+      "summary": "Research candidate included for completeness; NOT VERIFIED. Do not treat as recommended until canonical provenance, maintenance, licensing and scope are confirmed.",
+      "source": "catalog.yaml",
+      "kind": "tool",
+      "version": null,
+      "evidence_tier": "D",
+      "last_reviewed": "2026-09-29",
+      "verification_note": "NOT VERIFIED — research candidate only.",
+      "provenance_score": 15,
+      "upstream_health": "not-checked",
+      "last_activity": null,
+      "latest_release": null
+    },
+    {
+      "id": "detectionlab",
+      "name": "DetectionLab",
+      "aliases": [],
+      "type": "detection-lab",
+      "domains": [
+        "purple-team",
+        "detection",
+        "lab"
+      ],
+      "status": "legacy",
+      "model": "open-source",
+      "url": "https://github.com/clong/DetectionLab",
+      "summary": "historically important instrumented Windows detection lab; no longer actively maintained",
+      "source": "catalog.yaml",
+      "kind": "tool",
+      "version": null,
+      "evidence_tier": "B",
+      "last_reviewed": "2026-09-29",
+      "verification_note": null,
+      "provenance_score": 55,
+      "upstream_health": "stale",
+      "last_activity": "2024-07-06T21:27:28Z",
+      "latest_release": null
+    },
+    {
+      "id": "dnscat2",
+      "name": "DNSCat2",
+      "aliases": [],
+      "type": "operational-platform-candidate",
+      "domains": [
+        "adversary-emulation",
+        "research"
+      ],
+      "status": "not-verified",
+      "model": "unknown",
+      "url": null,
+      "summary": "Research candidate included for completeness; NOT VERIFIED. Do not treat as recommended until canonical provenance, maintenance, licensing and scope are confirmed.",
+      "source": "catalog.yaml",
+      "kind": "tool",
+      "version": null,
+      "evidence_tier": "D",
+      "last_reviewed": "2026-09-29",
+      "verification_note": "NOT VERIFIED — research candidate only.",
+      "provenance_score": 15,
+      "upstream_health": "not-checked",
+      "last_activity": null,
+      "latest_release": null
+    },
+    {
+      "id": "elaina-c2",
+      "name": "Elaina-C2",
+      "aliases": [],
+      "type": "operational-platform-candidate",
+      "domains": [
+        "adversary-emulation",
+        "research"
+      ],
+      "status": "not-verified",
+      "model": "unknown",
+      "url": null,
+      "summary": "Research candidate included for completeness; NOT VERIFIED. Do not treat as recommended until canonical provenance, maintenance, licensing and scope are confirmed.",
+      "source": "catalog.yaml",
+      "kind": "tool",
+      "version": null,
+      "evidence_tier": "D",
+      "last_reviewed": "2026-09-29",
+      "verification_note": "NOT VERIFIED — research candidate only.",
+      "provenance_score": 15,
+      "upstream_health": "not-checked",
+      "last_activity": null,
+      "latest_release": null
+    },
+    {
+      "id": "embedxpl-forge",
+      "name": "embedxpl-forge",
+      "aliases": [],
+      "type": "iot-embedded-candidate",
+      "domains": [
+        "iot",
+        "embedded",
+        "device-security",
+        "research"
+      ],
+      "status": "not-verified",
+      "model": "unknown",
+      "url": null,
+      "summary": "Research candidate described as a large IoT and network-device security testing framework; NOT VERIFIED pending canonical provenance and module-count validation.",
+      "source": "catalog.yaml",
+      "kind": "tool",
+      "version": null,
+      "evidence_tier": "D",
+      "last_reviewed": "2026-09-30",
+      "verification_note": "NOT VERIFIED — research candidate only.",
+      "provenance_score": 15,
+      "upstream_health": "not-checked",
+      "last_activity": null,
+      "latest_release": null
+    },
+    {
+      "id": "empire",
+      "name": "Empire",
+      "aliases": [],
+      "type": "operational-platform",
+      "domains": [
+        "adversary-emulation",
+        "post-exploitation"
+      ],
+      "status": "verified",
+      "model": "open-source",
+      "url": "https://github.com/BC-SECURITY/Empire",
+      "summary": "post-exploitation and adversary-emulation framework for authorized testing",
+      "source": "catalog.yaml",
+      "kind": "tool",
+      "version": null,
+      "evidence_tier": "B",
+      "last_reviewed": "2026-09-29",
+      "verification_note": null,
+      "provenance_score": 95,
+      "upstream_health": "healthy",
+      "last_activity": "2026-09-08T14:45:24Z",
+      "latest_release": {
+        "tag": "v7.0.2",
+        "published_at": "2026-09-08T14:45:24Z",
+        "url": "https://github.com/BC-SECURITY/Empire/releases/tag/v7.0.2"
+      }
+    },
+    {
+      "id": "etsi-en-303-645",
+      "name": "ETSI EN 303 645 Consumer IoT Security",
+      "aliases": [],
+      "type": "iot-security-standard",
+      "domains": [
+        "iot",
+        "consumer-iot",
+        "product-security",
+        "privacy"
+      ],
+      "status": "verified",
+      "model": "reference",
+      "url": "https://www.etsi.org/deliver/etsi_en/303600_303699/303645/03.01.03_60/en_303645v030103p.pdf",
+      "summary": "consumer IoT baseline security; secure product development; IoT outcome-focused assurance",
+      "source": "frameworks.yaml",
+      "kind": "framework",
+      "version": "3.1.3",
+      "evidence_tier": "A",
+      "last_reviewed": "2026-09-30",
+      "provenance_score": 100,
+      "upstream_health": "not-checked",
+      "last_activity": null,
+      "latest_release": null
+    },
+    {
+      "id": "expliot",
+      "name": "EXPLIoT",
+      "aliases": [],
+      "type": "iot-assessment-framework",
+      "domains": [
+        "iot",
+        "embedded"
+      ],
+      "status": "verified",
+      "model": "open-source",
+      "url": "https://gitlab.com/expliot_framework/expliot",
+      "summary": "extensible IoT security testing framework",
+      "source": "catalog.yaml",
+      "kind": "tool",
+      "version": null,
+      "evidence_tier": "A",
+      "last_reviewed": "2026-09-29",
+      "verification_note": null,
+      "provenance_score": 100,
+      "upstream_health": "not-checked",
+      "last_activity": null,
+      "latest_release": null
+    },
+    {
+      "id": "faction-c2",
+      "name": "Faction C2",
+      "aliases": [],
+      "type": "operational-platform-candidate",
+      "domains": [
+        "adversary-emulation",
+        "research"
+      ],
+      "status": "not-verified",
+      "model": "unknown",
+      "url": null,
+      "summary": "Research candidate included for completeness; NOT VERIFIED. Do not treat as recommended until canonical provenance, maintenance, licensing and scope are confirmed.",
+      "source": "catalog.yaml",
+      "kind": "tool",
+      "version": null,
+      "evidence_tier": "D",
+      "last_reviewed": "2026-09-29",
+      "verification_note": "NOT VERIFIED — research candidate only.",
+      "provenance_score": 15,
+      "upstream_health": "not-checked",
+      "last_activity": null,
+      "latest_release": null
+    },
+    {
+      "id": "falco",
+      "name": "Falco",
+      "aliases": [],
+      "type": "runtime-detection-platform",
+      "domains": [
+        "cloud-native",
+        "containers",
+        "kubernetes",
+        "detection"
+      ],
+      "status": "verified",
+      "model": "open-source",
+      "url": "https://falco.org/",
+      "summary": "runtime security detection for cloud-native environments",
+      "source": "catalog.yaml",
+      "kind": "tool",
+      "version": null,
+      "evidence_tier": "A",
+      "last_reviewed": "2026-09-29",
+      "verification_note": null,
+      "provenance_score": 100,
+      "upstream_health": "not-checked",
+      "last_activity": null,
+      "latest_release": null
+    },
+    {
+      "id": "first-cvss",
+      "name": "FIRST Common Vulnerability Scoring System",
+      "aliases": [],
+      "type": "vulnerability-scoring-framework",
+      "domains": [
+        "vulnerability-management",
+        "risk",
+        "product-security"
+      ],
+      "status": "verified",
+      "model": "reference",
+      "url": "https://www.first.org/cvss/v4.0/",
+      "summary": "vulnerability severity communication; environmental context; vulnerability assessment",
+      "source": "frameworks.yaml",
+      "kind": "framework",
+      "version": "4.0",
+      "evidence_tier": "A",
+      "last_reviewed": "2026-09-29",
+      "provenance_score": 100,
+      "upstream_health": "not-checked",
+      "last_activity": null,
+      "latest_release": null
+    },
+    {
+      "id": "first-csirt-services",
+      "name": "FIRST CSIRT Services Framework",
+      "aliases": [],
+      "type": "incident-response-services-framework",
+      "domains": [
+        "incident-response",
+        "csirt",
+        "operations"
+      ],
+      "status": "verified",
+      "model": "reference",
+      "url": "https://www.first.org/standards/frameworks/csirts/csirt_services_framework_v2-1",
+      "summary": "CSIRT service portfolios; incident management capability design; team maturity planning",
+      "source": "frameworks.yaml",
+      "kind": "framework",
+      "version": "2.1",
+      "evidence_tier": "A",
+      "last_reviewed": "2026-09-29",
+      "provenance_score": 100,
+      "upstream_health": "not-checked",
+      "last_activity": null,
+      "latest_release": null
+    },
+    {
+      "id": "first-epss",
+      "name": "FIRST Exploit Prediction Scoring System",
+      "aliases": [],
+      "type": "vulnerability-prioritization-model",
+      "domains": [
+        "vulnerability-management",
+        "threat-intelligence",
+        "risk"
+      ],
+      "status": "verified",
+      "model": "reference",
+      "url": "https://www.first.org/epss/",
+      "summary": "exploitation-likelihood estimation; vulnerability prioritization; risk-based remediation",
+      "source": "frameworks.yaml",
+      "kind": "framework",
+      "version": null,
+      "evidence_tier": "A",
+      "last_reviewed": "2026-09-29",
+      "provenance_score": 100,
+      "upstream_health": "not-checked",
+      "last_activity": null,
+      "latest_release": null
+    },
+    {
+      "id": "first-tlp-2",
+      "name": "FIRST Traffic Light Protocol",
+      "aliases": [],
+      "type": "information-sharing-standard",
+      "domains": [
+        "threat-intelligence",
+        "information-sharing",
+        "csirt"
+      ],
+      "status": "verified",
+      "model": "reference",
+      "url": "https://www.first.org/tlp/",
+      "summary": "sharing-boundary markings; CTI dissemination handling; CSIRT collaboration",
+      "source": "frameworks.yaml",
+      "kind": "framework",
+      "version": "2.0",
+      "evidence_tier": "A",
+      "last_reviewed": "2026-09-29",
+      "provenance_score": 100,
+      "upstream_health": "not-checked",
+      "last_activity": null,
+      "latest_release": null
+    },
+    {
+      "id": "foojank",
+      "name": "foojank",
+      "aliases": [],
+      "type": "operational-platform-candidate",
+      "domains": [
+        "adversary-emulation",
+        "operational-platform",
+        "research"
+      ],
+      "status": "not-verified",
+      "model": "unknown",
+      "url": null,
+      "summary": "Research candidate described as a collaborative red-team operational platform; retained for ecosystem mapping only until provenance, maintenance, licensing and scope are verified.",
+      "source": "catalog.yaml",
+      "kind": "tool",
+      "version": null,
+      "evidence_tier": "D",
+      "last_reviewed": "2026-09-30",
+      "verification_note": "NOT VERIFIED — research candidate only.",
+      "provenance_score": 15,
+      "upstream_health": "not-checked",
+      "last_activity": null,
+      "latest_release": null
+    },
+    {
+      "id": "frida",
+      "name": "Frida",
+      "aliases": [],
+      "type": "dynamic-instrumentation",
+      "domains": [
+        "mobile",
+        "desktop",
+        "reverse-engineering"
+      ],
+      "status": "verified",
+      "model": "open-source",
+      "url": "https://frida.re/",
+      "summary": "dynamic instrumentation",
+      "source": "catalog.yaml",
+      "kind": "tool",
+      "version": null,
+      "evidence_tier": "B",
+      "last_reviewed": "2026-09-30",
+      "verification_note": null,
+      "provenance_score": 90,
+      "upstream_health": "not-checked",
+      "last_activity": null,
+      "latest_release": null
+    },
+    {
+      "id": "gharf",
+      "name": "GHARF",
+      "aliases": [],
+      "type": "automation-toolkit-candidate",
+      "domains": [
+        "automation",
+        "offensive-security",
+        "research"
+      ],
+      "status": "not-verified",
+      "model": "unknown",
+      "url": null,
+      "summary": "Research candidate included for completeness; NOT VERIFIED. Do not treat as recommended until canonical provenance, maintenance, licensing and scope are confirmed.",
+      "source": "catalog.yaml",
+      "kind": "tool",
+      "version": null,
+      "evidence_tier": "D",
+      "last_reviewed": "2026-09-29",
+      "verification_note": "NOT VERIFIED — research candidate only.",
+      "provenance_score": 15,
+      "upstream_health": "not-checked",
+      "last_activity": null,
+      "latest_release": null
+    },
+    {
+      "id": "ghidra",
+      "name": "Ghidra",
+      "aliases": [],
+      "type": "reverse-engineering-platform",
+      "domains": [
+        "reverse-engineering",
+        "malware-analysis",
+        "software-security"
+      ],
+      "status": "verified",
+      "model": "open-source",
+      "url": "https://github.com/NationalSecurityAgency/ghidra",
+      "summary": "software reverse engineering and binary analysis",
+      "source": "catalog.yaml",
+      "kind": "tool",
+      "version": null,
+      "evidence_tier": "A",
+      "last_reviewed": "2026-09-29",
+      "verification_note": null,
+      "provenance_score": 100,
+      "upstream_health": "rate-limited",
+      "last_activity": null,
+      "latest_release": null
+    },
+    {
+      "id": "gloamfire",
+      "name": "gloamfire",
+      "aliases": [],
+      "type": "detection-validation-candidate",
+      "domains": [
+        "purple-team",
+        "detection-validation",
+        "attack-replay",
+        "research"
+      ],
+      "status": "not-verified",
+      "model": "unknown",
+      "url": null,
+      "summary": "Research candidate described as controlled attack-replay and detection-validation tooling; NOT VERIFIED pending canonical provenance and maintenance review.",
+      "source": "catalog.yaml",
+      "kind": "tool",
+      "version": null,
+      "evidence_tier": "D",
+      "last_reviewed": "2026-09-30",
+      "verification_note": "NOT VERIFIED — research candidate only.",
+      "provenance_score": 15,
+      "upstream_health": "not-checked",
+      "last_activity": null,
+      "latest_release": null
+    },
+    {
+      "id": "gosecops",
+      "name": "GoSecOps",
+      "aliases": [],
+      "type": "automation-toolkit-candidate",
+      "domains": [
+        "automation",
+        "offensive-security",
+        "research"
+      ],
+      "status": "not-verified",
+      "model": "unknown",
+      "url": null,
+      "summary": "Research candidate included for completeness; NOT VERIFIED. Do not treat as recommended until canonical provenance, maintenance, licensing and scope are confirmed.",
+      "source": "catalog.yaml",
+      "kind": "tool",
+      "version": null,
+      "evidence_tier": "D",
+      "last_reviewed": "2026-09-29",
+      "verification_note": "NOT VERIFIED — research candidate only.",
+      "provenance_score": 15,
+      "upstream_health": "not-checked",
+      "last_activity": null,
+      "latest_release": null
+    },
+    {
+      "id": "havoc",
+      "name": "Havoc",
+      "aliases": [],
+      "type": "operational-platform",
+      "domains": [
+        "adversary-emulation"
+      ],
+      "status": "legacy",
+      "model": "open-source",
+      "url": "https://github.com/HavocFramework/Havoc",
+      "summary": "historically notable red-team platform; canonical repository is archived",
+      "source": "catalog.yaml",
+      "kind": "tool",
+      "version": null,
+      "evidence_tier": "B",
+      "last_reviewed": "2026-09-29",
+      "verification_note": null,
+      "provenance_score": 44,
+      "upstream_health": "archived",
+      "last_activity": "2025-12-18T15:10:21Z",
+      "latest_release": null
+    },
+    {
+      "id": "hexstrike-redteam",
+      "name": "Hexstrike-redteam",
+      "aliases": [],
+      "type": "automation-toolkit-candidate",
+      "domains": [
+        "automation",
+        "offensive-security",
+        "research"
+      ],
+      "status": "not-verified",
+      "model": "unknown",
+      "url": null,
+      "summary": "Research candidate included for completeness; NOT VERIFIED. Do not treat as recommended until canonical provenance, maintenance, licensing and scope are confirmed.",
+      "source": "catalog.yaml",
+      "kind": "tool",
+      "version": null,
+      "evidence_tier": "D",
+      "last_reviewed": "2026-09-29",
+      "verification_note": "NOT VERIFIED — research candidate only.",
+      "provenance_score": 15,
+      "upstream_health": "not-checked",
+      "last_activity": null,
+      "latest_release": null
+    },
+    {
+      "id": "highflame-red",
+      "name": "Highflame RED",
+      "aliases": [],
+      "type": "ai-security-candidate",
+      "domains": [
+        "ai-genai",
+        "research"
+      ],
+      "status": "not-verified",
+      "model": "unknown",
+      "url": null,
+      "summary": "Research candidate included for completeness; NOT VERIFIED. Do not treat as recommended until canonical provenance, maintenance, licensing and scope are confirmed.",
+      "source": "catalog.yaml",
+      "kind": "tool",
+      "version": null,
+      "evidence_tier": "D",
+      "last_reviewed": "2026-09-29",
+      "verification_note": "NOT VERIFIED — research candidate only.",
+      "provenance_score": 15,
+      "upstream_health": "not-checked",
+      "last_activity": null,
+      "latest_release": null
+    },
+    {
+      "id": "hos-vortex",
+      "name": "hos_vortex",
+      "aliases": [],
+      "type": "automation-toolkit-candidate",
+      "domains": [
+        "automation",
+        "offensive-security",
+        "research"
+      ],
+      "status": "not-verified",
+      "model": "unknown",
+      "url": null,
+      "summary": "Research candidate included for completeness; NOT VERIFIED. Do not treat as recommended until canonical provenance, maintenance, licensing and scope are confirmed.",
+      "source": "catalog.yaml",
+      "kind": "tool",
+      "version": null,
+      "evidence_tier": "D",
+      "last_reviewed": "2026-09-29",
+      "verification_note": "NOT VERIFIED — research candidate only.",
+      "provenance_score": 15,
+      "upstream_health": "not-checked",
+      "last_activity": null,
+      "latest_release": null
+    },
+    {
+      "id": "hunterx",
+      "name": "HunterX",
+      "aliases": [],
+      "type": "ai-security-candidate",
+      "domains": [
+        "ai-genai",
+        "research"
+      ],
+      "status": "not-verified",
+      "model": "unknown",
+      "url": null,
+      "summary": "Research candidate included for completeness; NOT VERIFIED. Do not treat as recommended until canonical provenance, maintenance, licensing and scope are confirmed.",
+      "source": "catalog.yaml",
+      "kind": "tool",
+      "version": null,
+      "evidence_tier": "D",
+      "last_reviewed": "2026-09-29",
+      "verification_note": "NOT VERIFIED — research candidate only.",
+      "provenance_score": 15,
+      "upstream_health": "not-checked",
+      "last_activity": null,
+      "latest_release": null
+    },
+    {
+      "id": "infection-monkey",
+      "name": "Infection Monkey",
+      "aliases": [],
+      "type": "adversary-emulation-platform",
+      "domains": [
+        "enterprise",
+        "network",
+        "security-validation"
+      ],
+      "status": "verified",
+      "model": "open-source",
+      "url": "https://github.com/guardicore/monkey",
+      "summary": "automated adversary emulation and resilience validation",
+      "source": "catalog.yaml",
+      "kind": "tool",
+      "version": null,
+      "evidence_tier": "B",
+      "last_reviewed": "2026-09-29",
+      "verification_note": null,
+      "provenance_score": 83,
+      "upstream_health": "stale",
+      "last_activity": "2025-05-01T13:34:05Z",
+      "latest_release": {
+        "tag": "v2.3.0",
+        "published_at": "2023-09-19T16:53:21Z",
+        "url": "https://github.com/guardicore/monkey/releases/tag/v2.3.0"
+      }
+    },
+    {
+      "id": "intsploit",
+      "name": "intsploit",
+      "aliases": [],
+      "type": "security-framework-candidate",
+      "domains": [
+        "security-assessment",
+        "toolkit",
+        "automation",
+        "research"
+      ],
+      "status": "not-verified",
+      "model": "unknown",
+      "url": null,
+      "summary": "Research candidate described as a modular security-assessment framework; NOT VERIFIED pending canonical provenance, module inventory and maintenance review.",
+      "source": "catalog.yaml",
+      "kind": "tool",
+      "version": null,
+      "evidence_tier": "D",
+      "last_reviewed": "2026-09-30",
+      "verification_note": "NOT VERIFIED — research candidate only.",
+      "provenance_score": 15,
+      "upstream_health": "not-checked",
+      "last_activity": null,
+      "latest_release": null
+    },
+    {
+      "id": "iothackbot",
+      "name": "IoTHackBot",
+      "aliases": [],
+      "type": "iot-embedded-candidate",
+      "domains": [
+        "iot",
+        "embedded",
+        "research"
+      ],
+      "status": "not-verified",
+      "model": "unknown",
+      "url": null,
+      "summary": "Research candidate included for completeness; NOT VERIFIED. Do not treat as recommended until canonical provenance, maintenance, licensing and scope are confirmed.",
+      "source": "catalog.yaml",
+      "kind": "tool",
+      "version": null,
+      "evidence_tier": "D",
+      "last_reviewed": "2026-09-29",
+      "verification_note": "NOT VERIFIED — research candidate only.",
+      "provenance_score": 15,
+      "upstream_health": "not-checked",
+      "last_activity": null,
+      "latest_release": null
+    },
+    {
+      "id": "iotptf",
+      "name": "iotptf",
+      "aliases": [],
+      "type": "iot-security-candidate",
+      "domains": [
+        "iot",
+        "embedded",
+        "firmware",
+        "research"
+      ],
+      "status": "not-verified",
+      "model": "unknown",
+      "url": null,
+      "summary": "Research candidate for IoT product-security and firmware-analysis testing; NOT VERIFIED pending canonical source and maintenance review.",
+      "source": "catalog.yaml",
+      "kind": "tool",
+      "version": null,
+      "evidence_tier": "D",
+      "last_reviewed": "2026-09-30",
+      "verification_note": "NOT VERIFIED — research candidate only.",
+      "provenance_score": 15,
+      "upstream_health": "not-checked",
+      "last_activity": null,
+      "latest_release": null
+    },
+    {
+      "id": "iso-iec-27001-2022",
+      "name": "ISO/IEC 27001:2022",
+      "aliases": [],
+      "type": "information-security-management-standard",
+      "domains": [
+        "governance",
+        "risk-management",
+        "enterprise",
+        "assurance"
+      ],
+      "status": "verified",
+      "model": "reference",
+      "url": "https://www.iso.org/standard/27001",
+      "summary": "information security management systems; risk-based security governance; continuous improvement",
+      "source": "frameworks.yaml",
+      "kind": "framework",
+      "version": "2022",
+      "evidence_tier": "A",
+      "last_reviewed": "2026-09-30",
+      "provenance_score": 100,
+      "upstream_health": "not-checked",
+      "last_activity": null,
+      "latest_release": null
+    },
+    {
+      "id": "iso-iec-27005-2022",
+      "name": "ISO/IEC 27005:2022",
+      "aliases": [],
+      "type": "information-security-risk-guidance",
+      "domains": [
+        "risk-management",
+        "governance",
+        "enterprise"
+      ],
+      "status": "verified",
+      "model": "reference",
+      "url": "https://www.iso.org/standard/80585.html",
+      "summary": "information security risk identification; risk assessment; risk treatment",
+      "source": "frameworks.yaml",
+      "kind": "framework",
+      "version": "2022",
+      "evidence_tier": "A",
+      "last_reviewed": "2026-09-30",
+      "provenance_score": 100,
+      "upstream_health": "not-checked",
+      "last_activity": null,
+      "latest_release": null
+    },
+    {
+      "id": "koadic",
+      "name": "Koadic",
+      "aliases": [],
+      "type": "operational-platform-candidate",
+      "domains": [
+        "adversary-emulation",
+        "research"
+      ],
+      "status": "not-verified",
+      "model": "unknown",
+      "url": null,
+      "summary": "Research candidate included for completeness; NOT VERIFIED. Do not treat as recommended until canonical provenance, maintenance, licensing and scope are confirmed.",
+      "source": "catalog.yaml",
+      "kind": "tool",
+      "version": null,
+      "evidence_tier": "D",
+      "last_reviewed": "2026-09-29",
+      "verification_note": "NOT VERIFIED — research candidate only.",
+      "provenance_score": 15,
+      "upstream_health": "not-checked",
+      "last_activity": null,
+      "latest_release": null
+    },
+    {
+      "id": "kraken",
+      "name": "Kraken",
+      "aliases": [],
+      "type": "cloud-security-candidate",
+      "domains": [
+        "cloud",
+        "kubernetes",
+        "research"
+      ],
+      "status": "not-verified",
+      "model": "unknown",
+      "url": null,
+      "summary": "Research candidate included for completeness; NOT VERIFIED. Do not treat as recommended until canonical provenance, maintenance, licensing and scope are confirmed.",
+      "source": "catalog.yaml",
+      "kind": "tool",
+      "version": null,
+      "evidence_tier": "D",
+      "last_reviewed": "2026-09-29",
+      "verification_note": "NOT VERIFIED — research candidate only.",
+      "provenance_score": 15,
+      "upstream_health": "not-checked",
+      "last_activity": null,
+      "latest_release": null
+    },
+    {
+      "id": "kube-bench",
+      "name": "kube-bench",
+      "aliases": [],
+      "type": "kubernetes-benchmark-assessment",
+      "domains": [
+        "kubernetes",
+        "cloud-native",
+        "configuration"
+      ],
+      "status": "verified",
+      "model": "open-source",
+      "url": "https://github.com/aquasecurity/kube-bench",
+      "summary": "Kubernetes configuration assessment against CIS benchmark guidance",
+      "source": "catalog.yaml",
+      "kind": "tool",
+      "version": null,
+      "evidence_tier": "B",
+      "last_reviewed": "2026-09-29",
+      "verification_note": null,
+      "provenance_score": 90,
+      "upstream_health": "rate-limited",
+      "last_activity": null,
+      "latest_release": null
+    },
+    {
+      "id": "kubehound",
+      "name": "KubeHound",
+      "aliases": [],
+      "type": "attack-path-analysis",
+      "domains": [
+        "kubernetes"
+      ],
+      "status": "verified",
+      "model": "open-source",
+      "url": "https://kubehound.io/",
+      "summary": "Kubernetes attack-path graphing",
+      "source": "catalog.yaml",
+      "kind": "tool",
+      "version": null,
+      "evidence_tier": "B",
+      "last_reviewed": "2026-09-30",
+      "verification_note": null,
+      "provenance_score": 90,
+      "upstream_health": "not-checked",
+      "last_activity": null,
+      "latest_release": null
+    },
+    {
+      "id": "kubesploit",
+      "name": "Kubesploit",
+      "aliases": [],
+      "type": "cloud-security-candidate",
+      "domains": [
+        "cloud",
+        "kubernetes",
+        "research"
+      ],
+      "status": "not-verified",
+      "model": "unknown",
+      "url": null,
+      "summary": "Research candidate included for completeness; NOT VERIFIED. Do not treat as recommended until canonical provenance, maintenance, licensing and scope are confirmed.",
+      "source": "catalog.yaml",
+      "kind": "tool",
+      "version": null,
+      "evidence_tier": "D",
+      "last_reviewed": "2026-09-29",
+      "verification_note": "NOT VERIFIED — research candidate only.",
+      "provenance_score": 15,
+      "upstream_health": "not-checked",
+      "last_activity": null,
+      "latest_release": null
+    },
+    {
+      "id": "laccolith",
+      "name": "laccolith",
+      "aliases": [],
+      "type": "adversary-emulation-research-candidate",
+      "domains": [
+        "adversary-emulation",
+        "virtualization",
+        "research"
+      ],
+      "status": "not-verified",
+      "model": "unknown",
+      "url": null,
+      "summary": "Research candidate associated with virtualization-based adversary-emulation research; NOT VERIFIED pending canonical provenance and research-scope review.",
+      "source": "catalog.yaml",
+      "kind": "tool",
+      "version": null,
+      "evidence_tier": "D",
+      "last_reviewed": "2026-09-30",
+      "verification_note": "NOT VERIFIED — research candidate only.",
+      "provenance_score": 15,
+      "upstream_health": "not-checked",
+      "last_activity": null,
+      "latest_release": null
+    },
+    {
+      "id": "lazyown",
+      "name": "LazyOwn",
+      "aliases": [],
+      "type": "operational-platform-candidate",
+      "domains": [
+        "adversary-emulation",
+        "research"
+      ],
+      "status": "not-verified",
+      "model": "unknown",
+      "url": null,
+      "summary": "Research candidate included for completeness; NOT VERIFIED. Do not treat as recommended until canonical provenance, maintenance, licensing and scope are confirmed.",
+      "source": "catalog.yaml",
+      "kind": "tool",
+      "version": null,
+      "evidence_tier": "D",
+      "last_reviewed": "2026-09-29",
+      "verification_note": "NOT VERIFIED — research candidate only.",
+      "provenance_score": 15,
+      "upstream_health": "not-checked",
+      "last_activity": null,
+      "latest_release": null
+    },
+    {
+      "id": "maliab",
+      "name": "MALIAB",
+      "aliases": [],
+      "type": "adversary-simulation-research-candidate",
+      "domains": [
+        "adversary-emulation",
+        "cti",
+        "automation",
+        "research"
+      ],
+      "status": "not-verified",
+      "model": "unknown",
+      "url": null,
+      "summary": "Research candidate described as CTI-informed adversary-behavior simulation; NOT VERIFIED pending canonical provenance, maintenance, licensing and scope review.",
+      "source": "catalog.yaml",
+      "kind": "tool",
+      "version": null,
+      "evidence_tier": "D",
+      "last_reviewed": "2026-09-30",
+      "verification_note": "NOT VERIFIED — research candidate only.",
+      "provenance_score": 15,
+      "upstream_health": "not-checked",
+      "last_activity": null,
+      "latest_release": null
+    },
+    {
+      "id": "metasploit-framework",
+      "name": "Metasploit Framework",
+      "aliases": [],
+      "type": "assessment-framework",
+      "domains": [
+        "enterprise",
+        "network",
+        "application-security"
+      ],
+      "status": "verified",
+      "model": "open-source",
+      "url": "https://github.com/rapid7/metasploit-framework",
+      "summary": "general-purpose authorized penetration-testing framework",
+      "source": "catalog.yaml",
+      "kind": "tool",
+      "version": null,
+      "evidence_tier": "B",
+      "last_reviewed": "2026-09-29",
+      "verification_note": null,
+      "provenance_score": 95,
+      "upstream_health": "healthy",
+      "last_activity": "2026-09-30T12:34:04Z",
+      "latest_release": null
+    },
+    {
+      "id": "microburst",
+      "name": "MicroBurst",
+      "aliases": [],
+      "type": "cloud-assessment-toolkit",
+      "domains": [
+        "azure",
+        "cloud"
+      ],
+      "status": "verified",
+      "model": "open-source",
+      "url": "https://github.com/NetSPI/MicroBurst",
+      "summary": "collection of scripts for Microsoft Azure security assessment",
+      "source": "catalog.yaml",
+      "kind": "tool",
+      "version": null,
+      "evidence_tier": "B",
+      "last_reviewed": "2026-09-29",
+      "verification_note": null,
+      "provenance_score": 95,
+      "upstream_health": "healthy",
+      "last_activity": "2026-06-29T14:43:59Z",
+      "latest_release": null
+    },
+    {
+      "id": "pyrit",
+      "name": "Microsoft PyRIT",
+      "aliases": [],
+      "type": "ai-red-team-framework",
+      "domains": [
+        "ai-genai"
+      ],
+      "status": "verified",
+      "model": "open-source",
+      "url": "https://github.com/microsoft/PyRIT",
+      "summary": "structured AI risk identification and red-team assessment",
+      "source": "catalog.yaml",
+      "kind": "tool",
+      "version": null,
+      "evidence_tier": "B",
+      "last_reviewed": "2026-09-30",
+      "verification_note": null,
+      "provenance_score": 95,
+      "upstream_health": "healthy",
+      "last_activity": "2026-09-30T14:16:33Z",
+      "latest_release": {
+        "tag": "v1.1.0",
+        "published_at": "2026-09-04T22:19:28Z",
+        "url": "https://github.com/microsoft/PyRIT/releases/tag/v1.1.0"
+      }
+    },
+    {
+      "id": "misp-galaxy",
+      "name": "MISP Galaxy",
+      "aliases": [],
+      "type": "threat-intelligence-knowledge-model",
+      "domains": [
+        "threat-intelligence",
+        "adversary-analysis",
+        "information-sharing"
+      ],
+      "status": "verified",
+      "model": "reference",
+      "url": "https://www.misp-project.org/galaxy.html",
+      "summary": "threat actor clusters; structured CTI vocabularies; cross-platform intelligence enrichment",
+      "source": "frameworks.yaml",
+      "kind": "framework",
+      "version": null,
+      "evidence_tier": "A",
+      "last_reviewed": "2026-09-29",
+      "provenance_score": 100,
+      "upstream_health": "not-checked",
+      "last_activity": null,
+      "latest_release": null
+    },
+    {
+      "id": "mitre-atlas",
+      "name": "MITRE ATLAS",
+      "aliases": [],
+      "type": "knowledge-base",
+      "domains": [
+        "ai-genai"
+      ],
+      "status": "verified",
+      "model": "reference",
+      "url": "https://atlas.mitre.org/",
+      "summary": "AI adversary behavior modeling; AI threat-informed testing",
+      "source": "frameworks.yaml",
+      "kind": "framework",
+      "version": null,
+      "evidence_tier": "A",
+      "last_reviewed": "2026-09-29",
+      "provenance_score": 100,
+      "upstream_health": "not-checked",
+      "last_activity": null,
+      "latest_release": null
+    },
+    {
+      "id": "mitre-attack",
+      "name": "MITRE ATT&CK",
+      "aliases": [],
+      "type": "knowledge-base",
+      "domains": [
+        "enterprise",
+        "cloud",
+        "mobile"
+      ],
+      "status": "verified",
+      "model": "reference",
+      "url": "https://attack.mitre.org/",
+      "summary": "TTP mapping; threat-informed testing; detection engineering",
+      "source": "frameworks.yaml",
+      "kind": "framework",
+      "version": null,
+      "evidence_tier": "A",
+      "last_reviewed": "2026-09-29",
+      "provenance_score": 100,
+      "upstream_health": "not-checked",
+      "last_activity": null,
+      "latest_release": null
+    },
+    {
+      "id": "mitre-caldera",
+      "name": "MITRE CALDERA",
+      "aliases": [],
+      "type": "emulation-automation",
+      "domains": [
+        "enterprise"
+      ],
+      "status": "verified",
+      "model": "reference",
+      "url": "https://caldera.mitre.org/",
+      "summary": "automated adversary emulation; repeatable assessment workflows",
+      "source": "frameworks.yaml",
+      "kind": "framework",
+      "version": null,
+      "evidence_tier": "A",
+      "last_reviewed": "2026-09-29",
+      "provenance_score": 100,
+      "upstream_health": "not-checked",
+      "last_activity": null,
+      "latest_release": null
+    },
+    {
+      "id": "mitre-capec",
+      "name": "MITRE CAPEC",
+      "aliases": [],
+      "type": "attack-pattern-knowledge-base",
+      "domains": [
+        "application-security",
+        "threat-modeling",
+        "software-security"
+      ],
+      "status": "verified",
+      "model": "reference",
+      "url": "https://capec.mitre.org/",
+      "summary": "attack pattern modeling; threat modeling; weakness-to-attack reasoning",
+      "source": "frameworks.yaml",
+      "kind": "framework",
+      "version": null,
+      "evidence_tier": "A",
+      "last_reviewed": "2026-09-29",
+      "provenance_score": 100,
+      "upstream_health": "not-checked",
+      "last_activity": null,
+      "latest_release": null
+    },
+    {
+      "id": "mitre-cwe",
+      "name": "MITRE CWE",
+      "aliases": [],
+      "type": "weakness-knowledge-base",
+      "domains": [
+        "application-security",
+        "software-security",
+        "hardware-security"
+      ],
+      "status": "verified",
+      "model": "reference",
+      "url": "https://cwe.mitre.org/",
+      "summary": "weakness classification; root-cause mapping; software security analysis",
+      "source": "frameworks.yaml",
+      "kind": "framework",
+      "version": "4.20",
+      "evidence_tier": "A",
+      "last_reviewed": "2026-09-29",
+      "provenance_score": 100,
+      "upstream_health": "not-checked",
+      "last_activity": null,
+      "latest_release": null
+    },
+    {
+      "id": "mitre-car",
+      "name": "MITRE Cyber Analytics Repository",
+      "aliases": [],
+      "type": "detection-analytics-knowledge-base",
+      "domains": [
+        "detection",
+        "threat-hunting",
+        "enterprise"
+      ],
+      "status": "verified",
+      "model": "reference",
+      "url": "https://car.mitre.org/",
+      "summary": "ATT&CK-aligned analytics; detection engineering; analytic rationale",
+      "source": "frameworks.yaml",
+      "kind": "framework",
+      "version": null,
+      "evidence_tier": "A",
+      "last_reviewed": "2026-09-29",
+      "provenance_score": 100,
+      "upstream_health": "not-checked",
+      "last_activity": null,
+      "latest_release": null
+    },
+    {
+      "id": "mitre-d3fend",
+      "name": "MITRE D3FEND",
+      "aliases": [],
+      "type": "defensive-knowledge-base",
+      "domains": [
+        "enterprise",
+        "detection"
+      ],
+      "status": "verified",
+      "model": "reference",
+      "url": "https://d3fend.mitre.org/",
+      "summary": "countermeasure mapping; purple-team analysis",
+      "source": "frameworks.yaml",
+      "kind": "framework",
+      "version": null,
+      "evidence_tier": "A",
+      "last_reviewed": "2026-09-29",
+      "provenance_score": 100,
+      "upstream_health": "not-checked",
+      "last_activity": null,
+      "latest_release": null
+    },
+    {
+      "id": "mitre-engage",
+      "name": "MITRE Engage",
+      "aliases": [],
+      "type": "adversary-engagement-framework",
+      "domains": [
+        "enterprise",
+        "deception"
+      ],
+      "status": "verified",
+      "model": "reference",
+      "url": "https://engage.mitre.org/",
+      "summary": "adversary engagement planning; deception and denial concepts",
+      "source": "frameworks.yaml",
+      "kind": "framework",
+      "version": null,
+      "evidence_tier": "A",
+      "last_reviewed": "2026-09-29",
+      "provenance_score": 100,
+      "upstream_health": "not-checked",
+      "last_activity": null,
+      "latest_release": null
+    },
+    {
+      "id": "mobsf",
+      "name": "MobSF",
+      "aliases": [],
+      "type": "mobile-assessment-platform",
+      "domains": [
+        "android",
+        "ios",
+        "mobile"
+      ],
+      "status": "verified",
+      "model": "open-source",
+      "url": "https://github.com/MobSF/Mobile-Security-Framework-MobSF",
+      "summary": "static and dynamic mobile application security assessment",
+      "source": "catalog.yaml",
+      "kind": "tool",
+      "version": null,
+      "evidence_tier": "B",
+      "last_reviewed": "2026-09-30",
+      "verification_note": null,
+      "provenance_score": 95,
+      "upstream_health": "healthy",
+      "last_activity": "2026-09-30T02:16:06Z",
+      "latest_release": {
+        "tag": "v4.5.3",
+        "published_at": "2026-09-21T02:52:26Z",
+        "url": "https://github.com/MobSF/Mobile-Security-Framework-MobSF/releases/tag/v4.5.3"
+      }
+    },
+    {
+      "id": "mythic",
+      "name": "Mythic",
+      "aliases": [],
+      "type": "operational-platform",
+      "domains": [
+        "adversary-emulation"
+      ],
+      "status": "community",
+      "model": "open-source",
+      "url": null,
+      "summary": "collaborative adversary-emulation operations",
+      "source": "catalog.yaml",
+      "kind": "tool",
+      "version": null,
+      "evidence_tier": "C",
+      "last_reviewed": "2026-09-30",
+      "verification_note": null,
+      "provenance_score": 62,
+      "upstream_health": "not-checked",
+      "last_activity": null,
+      "latest_release": null
+    },
+    {
+      "id": "nishang",
+      "name": "Nishang",
+      "aliases": [],
+      "type": "legacy-review-candidate",
+      "domains": [
+        "legacy-review",
+        "research"
+      ],
+      "status": "not-verified",
+      "model": "unknown",
+      "url": null,
+      "summary": "Research candidate included for completeness; NOT VERIFIED. Do not treat as recommended until canonical provenance, maintenance, licensing and scope are confirmed.",
+      "source": "catalog.yaml",
+      "kind": "tool",
+      "version": null,
+      "evidence_tier": "D",
+      "last_reviewed": "2026-09-29",
+      "verification_note": "NOT VERIFIED — research candidate only.",
+      "provenance_score": 15,
+      "upstream_health": "not-checked",
+      "last_activity": null,
+      "latest_release": null
+    },
+    {
+      "id": "nist-ai-rmf-genai",
+      "name": "NIST AI RMF Generative AI Profile",
+      "aliases": [],
+      "type": "risk-management-guidance",
+      "domains": [
+        "ai-genai"
+      ],
+      "status": "verified",
+      "model": "reference",
+      "url": "https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-generative-artificial-intelligence",
+      "summary": "AI governance; GenAI risk management",
+      "source": "frameworks.yaml",
+      "kind": "framework",
+      "version": null,
+      "evidence_tier": "A",
+      "last_reviewed": "2026-09-29",
+      "provenance_score": 100,
+      "upstream_health": "not-checked",
+      "last_activity": null,
+      "latest_release": null
+    },
+    {
+      "id": "nist-csf-2",
+      "name": "NIST Cybersecurity Framework 2.0",
+      "aliases": [],
+      "type": "cybersecurity-risk-framework",
+      "domains": [
+        "enterprise",
+        "governance",
+        "risk-management"
+      ],
+      "status": "verified",
+      "model": "reference",
+      "url": "https://www.nist.gov/cyberframework",
+      "summary": "cybersecurity risk governance; capability mapping; security program communication",
+      "source": "frameworks.yaml",
+      "kind": "framework",
+      "version": "2.0",
+      "evidence_tier": "A",
+      "last_reviewed": "2026-09-29",
+      "provenance_score": 100,
+      "upstream_health": "not-checked",
+      "last_activity": null,
+      "latest_release": null
+    },
+    {
+      "id": "nist-nice",
+      "name": "NIST NICE Workforce Framework for Cybersecurity",
+      "aliases": [],
+      "type": "workforce-framework",
+      "domains": [
+        "workforce",
+        "education",
+        "governance"
+      ],
+      "status": "verified",
+      "model": "reference",
+      "url": "https://csrc.nist.gov/pubs/sp/800/181/r1/final",
+      "summary": "cybersecurity work roles; skills and knowledge mapping; learning-path design",
+      "source": "frameworks.yaml",
+      "kind": "framework",
+      "version": "SP 800-181 Rev. 1",
+      "evidence_tier": "A",
+      "last_reviewed": "2026-09-29",
+      "provenance_score": 100,
+      "upstream_health": "not-checked",
+      "last_activity": null,
+      "latest_release": null
+    },
+    {
+      "id": "nist-ssdf",
+      "name": "NIST Secure Software Development Framework",
+      "aliases": [],
+      "type": "secure-development-framework",
+      "domains": [
+        "secure-development",
+        "software-supply-chain",
+        "application-security"
+      ],
+      "status": "verified",
+      "model": "reference",
+      "url": "https://csrc.nist.gov/pubs/sp/800/218/final",
+      "summary": "secure SDLC practices; software producer assurance; software supply-chain risk reduction",
+      "source": "frameworks.yaml",
+      "kind": "framework",
+      "version": "1.1",
+      "evidence_tier": "A",
+      "last_reviewed": "2026-09-29",
+      "provenance_score": 100,
+      "upstream_health": "not-checked",
+      "last_activity": null,
+      "latest_release": null
+    },
+    {
+      "id": "nist-sp-800-115",
+      "name": "NIST SP 800-115",
+      "aliases": [],
+      "type": "assessment-guidance",
+      "domains": [
+        "enterprise"
+      ],
+      "status": "verified",
+      "model": "reference",
+      "url": "https://csrc.nist.gov/pubs/sp/800/115/final",
+      "summary": "formal security assessment programs; planning and reporting",
+      "source": "frameworks.yaml",
+      "kind": "framework",
+      "version": null,
+      "evidence_tier": "A",
+      "last_reviewed": "2026-09-29",
+      "provenance_score": 100,
+      "upstream_health": "not-checked",
+      "last_activity": null,
+      "latest_release": null
+    },
+    {
+      "id": "nist-sp-800-160-v2-r1",
+      "name": "NIST SP 800-160 Vol. 2 Rev. 1",
+      "aliases": [],
+      "type": "cyber-resilience-engineering",
+      "domains": [
+        "resilience",
+        "security-engineering",
+        "advanced-threats"
+      ],
+      "status": "verified",
+      "model": "reference",
+      "url": "https://csrc.nist.gov/pubs/sp/800/160/v2/r1/final",
+      "summary": "cyber resilience engineering; advanced threat resilience; survivable system design",
+      "source": "frameworks.yaml",
+      "kind": "framework",
+      "version": "Vol. 2 Rev. 1",
+      "evidence_tier": "A",
+      "last_reviewed": "2026-09-29",
+      "provenance_score": 100,
+      "upstream_health": "not-checked",
+      "last_activity": null,
+      "latest_release": null
+    },
+    {
+      "id": "nist-sp-800-161-r1",
+      "name": "NIST SP 800-161 Rev. 1",
+      "aliases": [],
+      "type": "supply-chain-risk-framework",
+      "domains": [
+        "software-supply-chain",
+        "third-party-risk",
+        "governance"
+      ],
+      "status": "verified",
+      "model": "reference",
+      "url": "https://csrc.nist.gov/pubs/sp/800/161/r1/upd1/final",
+      "summary": "cybersecurity supply-chain risk management; supplier assurance; acquisition risk",
+      "source": "frameworks.yaml",
+      "kind": "framework",
+      "version": "Rev. 1 / Update 1",
+      "evidence_tier": "A",
+      "last_reviewed": "2026-09-30",
+      "provenance_score": 100,
+      "upstream_health": "not-checked",
+      "last_activity": null,
+      "latest_release": null
+    },
+    {
+      "id": "nist-sp-800-190",
+      "name": "NIST SP 800-190 Application Container Security Guide",
+      "aliases": [],
+      "type": "container-security-guidance",
+      "domains": [
+        "containers",
+        "cloud-native",
+        "application-security"
+      ],
+      "status": "verified",
+      "model": "reference",
+      "url": "https://csrc.nist.gov/pubs/sp/800/190/final",
+      "summary": "container security architecture; container threat analysis; container security recommendations",
+      "source": "frameworks.yaml",
+      "kind": "framework",
+      "version": "SP 800-190",
+      "evidence_tier": "A",
+      "last_reviewed": "2026-09-30",
+      "provenance_score": 100,
+      "upstream_health": "not-checked",
+      "last_activity": null,
+      "latest_release": null
+    },
+    {
+      "id": "nist-sp-800-207",
+      "name": "NIST SP 800-207 Zero Trust Architecture",
+      "aliases": [],
+      "type": "security-architecture-framework",
+      "domains": [
+        "identity",
+        "enterprise",
+        "zero-trust"
+      ],
+      "status": "verified",
+      "model": "reference",
+      "url": "https://csrc.nist.gov/pubs/sp/800/207/final",
+      "summary": "zero trust architecture; identity-centric security design; security architecture assessment",
+      "source": "frameworks.yaml",
+      "kind": "framework",
+      "version": "SP 800-207",
+      "evidence_tier": "A",
+      "last_reviewed": "2026-09-29",
+      "provenance_score": 100,
+      "upstream_health": "not-checked",
+      "last_activity": null,
+      "latest_release": null
+    },
+    {
+      "id": "nist-sp-800-53-r5",
+      "name": "NIST SP 800-53 Rev. 5",
+      "aliases": [],
+      "type": "security-control-catalog",
+      "domains": [
+        "enterprise",
+        "governance",
+        "controls"
+      ],
+      "status": "verified",
+      "model": "reference",
+      "url": "https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final",
+      "summary": "security and privacy control baselines; control assessment planning; assurance mapping",
+      "source": "frameworks.yaml",
+      "kind": "framework",
+      "version": "Rev. 5 / Release 5.2.0",
+      "evidence_tier": "A",
+      "last_reviewed": "2026-09-29",
+      "provenance_score": 100,
+      "upstream_health": "not-checked",
+      "last_activity": null,
+      "latest_release": null
+    },
+    {
+      "id": "nist-sp-800-61-r3",
+      "name": "NIST SP 800-61 Rev. 3",
+      "aliases": [],
+      "type": "incident-response-guidance",
+      "domains": [
+        "incident-response",
+        "governance",
+        "csf"
+      ],
+      "status": "verified",
+      "model": "reference",
+      "url": "https://csrc.nist.gov/pubs/sp/800/61/r3/final",
+      "summary": "incident response governance; CSF 2.0 incident-response integration; detection-response-recovery planning",
+      "source": "frameworks.yaml",
+      "kind": "framework",
+      "version": "Rev. 3",
+      "evidence_tier": "A",
+      "last_reviewed": "2026-09-29",
+      "provenance_score": 100,
+      "upstream_health": "not-checked",
+      "last_activity": null,
+      "latest_release": null
+    },
+    {
+      "id": "nist-sp-800-63-4",
+      "name": "NIST SP 800-63-4 Digital Identity Guidelines",
+      "aliases": [],
+      "type": "digital-identity-framework",
+      "domains": [
+        "identity",
+        "authentication",
+        "federation"
+      ],
+      "status": "verified",
+      "model": "reference",
+      "url": "https://csrc.nist.gov/pubs/sp/800/63/4/final",
+      "summary": "identity proofing; authentication assurance; federation requirements",
+      "source": "frameworks.yaml",
+      "kind": "framework",
+      "version": "Rev. 4",
+      "evidence_tier": "A",
+      "last_reviewed": "2026-09-30",
+      "provenance_score": 100,
+      "upstream_health": "not-checked",
+      "last_activity": null,
+      "latest_release": null
+    },
+    {
+      "id": "nuclei",
+      "name": "Nuclei",
+      "aliases": [],
+      "type": "template-driven-assessment-tool",
+      "domains": [
+        "web",
+        "network",
+        "cloud",
+        "application-security"
+      ],
+      "status": "verified",
+      "model": "open-source",
+      "url": "https://github.com/projectdiscovery/nuclei",
+      "summary": "template-driven security assessment and exposure validation",
+      "source": "catalog.yaml",
+      "kind": "tool",
+      "version": null,
+      "evidence_tier": "B",
+      "last_reviewed": "2026-09-29",
+      "verification_note": null,
+      "provenance_score": 95,
+      "upstream_health": "healthy",
+      "last_activity": "2026-09-30T14:53:08Z",
+      "latest_release": {
+        "tag": "v3.11.1",
+        "published_at": "2026-08-08T12:21:32Z",
+        "url": "https://github.com/projectdiscovery/nuclei/releases/tag/v3.11.1"
+      }
+    },
+    {
+      "id": "garak",
+      "name": "NVIDIA garak",
+      "aliases": [],
+      "type": "ai-assessment-tool",
+      "domains": [
+        "ai-genai"
+      ],
+      "status": "verified",
+      "model": "open-source",
+      "url": "https://github.com/NVIDIA/garak",
+      "summary": "LLM vulnerability and failure-mode assessment",
+      "source": "catalog.yaml",
+      "kind": "tool",
+      "version": null,
+      "evidence_tier": "B",
+      "last_reviewed": "2026-09-30",
+      "verification_note": null,
+      "provenance_score": 95,
+      "upstream_health": "healthy",
+      "last_activity": "2026-09-16T21:54:58Z",
+      "latest_release": {
+        "tag": "v0.17.0",
+        "published_at": "2026-09-09T18:56:03Z",
+        "url": "https://github.com/NVIDIA/garak/releases/tag/v0.17.0"
+      }
+    },
+    {
+      "id": "oasis-cacao-2",
+      "name": "OASIS CACAO Security Playbooks",
+      "aliases": [],
+      "type": "security-playbook-standard",
+      "domains": [
+        "incident-response",
+        "orchestration",
+        "threat-intelligence"
+      ],
+      "status": "verified",
+      "model": "reference",
+      "url": "https://docs.oasis-open.org/cacao/security-playbooks/v2.0/security-playbooks-v2.0.html",
+      "summary": "structured security playbooks; response workflow exchange; orchestration documentation",
+      "source": "frameworks.yaml",
+      "kind": "framework",
+      "version": "2.0 CS01",
+      "evidence_tier": "A",
+      "last_reviewed": "2026-09-29",
+      "provenance_score": 100,
+      "upstream_health": "not-checked",
+      "last_activity": null,
+      "latest_release": null
+    },
+    {
+      "id": "oasis-csaf-2",
+      "name": "OASIS Common Security Advisory Framework",
+      "aliases": [],
+      "type": "security-advisory-standard",
+      "domains": [
+        "vulnerability-management",
+        "information-sharing",
+        "software-supply-chain"
+      ],
+      "status": "verified",
+      "model": "reference",
+      "url": "https://docs.oasis-open.org/csaf/csaf/v2.0/csaf-v2.0.html",
+      "summary": "machine-readable security advisories; product vulnerability status; remediation information exchange",
+      "source": "frameworks.yaml",
+      "kind": "framework",
+      "version": "2.0 / Errata 01",
+      "evidence_tier": "A",
+      "last_reviewed": "2026-09-29",
+      "provenance_score": 100,
+      "upstream_health": "not-checked",
+      "last_activity": null,
+      "latest_release": null
+    },
+    {
+      "id": "oasis-stix-2-1",
+      "name": "OASIS STIX 2.1",
+      "aliases": [],
+      "type": "threat-intelligence-data-model",
+      "domains": [
+        "threat-intelligence",
+        "information-sharing",
+        "interoperability"
+      ],
+      "status": "verified",
+      "model": "reference",
+      "url": "https://docs.oasis-open.org/cti/stix/v2.1/stix-v2.1.html",
+      "summary": "machine-readable cyber threat intelligence; actor and campaign modeling; CTI interoperability",
+      "source": "frameworks.yaml",
+      "kind": "framework",
+      "version": "2.1 / Errata 01",
+      "evidence_tier": "A",
+      "last_reviewed": "2026-09-29",
+      "provenance_score": 100,
+      "upstream_health": "not-checked",
+      "last_activity": null,
+      "latest_release": null
+    },
+    {
+      "id": "oasis-taxii-2-1",
+      "name": "OASIS TAXII 2.1",
+      "aliases": [],
+      "type": "threat-intelligence-transport-standard",
+      "domains": [
+        "threat-intelligence",
+        "information-sharing",
+        "interoperability"
+      ],
+      "status": "verified",
+      "model": "reference",
+      "url": "https://docs.oasis-open.org/cti/taxii/v2.1/taxii-v2.1.html",
+      "summary": "CTI exchange APIs; collection-based intelligence sharing; STIX transport workflows",
+      "source": "frameworks.yaml",
+      "kind": "framework",
+      "version": "2.1",
+      "evidence_tier": "A",
+      "last_reviewed": "2026-09-29",
+      "provenance_score": 100,
+      "upstream_health": "not-checked",
+      "last_activity": null,
+      "latest_release": null
+    },
+    {
+      "id": "offensivecloud",
+      "name": "OffensiveCloud",
+      "aliases": [],
+      "type": "cloud-security-candidate",
+      "domains": [
+        "cloud",
+        "kubernetes",
+        "research"
+      ],
+      "status": "not-verified",
+      "model": "unknown",
+      "url": null,
+      "summary": "Research candidate included for completeness; NOT VERIFIED. Do not treat as recommended until canonical provenance, maintenance, licensing and scope are confirmed.",
+      "source": "catalog.yaml",
+      "kind": "tool",
+      "version": null,
+      "evidence_tier": "D",
+      "last_reviewed": "2026-09-29",
+      "verification_note": "NOT VERIFIED — research candidate only.",
+      "provenance_score": 15,
+      "upstream_health": "not-checked",
+      "last_activity": null,
+      "latest_release": null
+    },
+    {
+      "id": "offsec-toolkit",
+      "name": "offsec-toolkit",
+      "aliases": [],
+      "type": "automation-toolkit-candidate",
+      "domains": [
+        "automation",
+        "offensive-security",
+        "research"
+      ],
+      "status": "not-verified",
+      "model": "unknown",
+      "url": null,
+      "summary": "Research candidate included for completeness; NOT VERIFIED. Do not treat as recommended until canonical provenance, maintenance, licensing and scope are confirmed.",
+      "source": "catalog.yaml",
+      "kind": "tool",
+      "version": null,
+      "evidence_tier": "D",
+      "last_reviewed": "2026-09-29",
+      "verification_note": "NOT VERIFIED — research candidate only.",
+      "provenance_score": 15,
+      "upstream_health": "not-checked",
+      "last_activity": null,
+      "latest_release": null
+    },
+    {
+      "id": "onist-framework",
+      "name": "ONIST Framework",
+      "aliases": [],
+      "type": "automation-toolkit-candidate",
+      "domains": [
+        "automation",
+        "offensive-security",
+        "research"
+      ],
+      "status": "not-verified",
+      "model": "unknown",
+      "url": null,
+      "summary": "Research candidate included for completeness; NOT VERIFIED. Do not treat as recommended until canonical provenance, maintenance, licensing and scope are confirmed.",
+      "source": "catalog.yaml",
+      "kind": "tool",
+      "version": null,
+      "evidence_tier": "D",
+      "last_reviewed": "2026-09-29",
+      "verification_note": "NOT VERIFIED — research candidate only.",
+      "provenance_score": 15,
+      "upstream_health": "not-checked",
+      "last_activity": null,
+      "latest_release": null
+    },
+    {
+      "id": "ocsf",
+      "name": "Open Cybersecurity Schema Framework",
+      "aliases": [],
+      "type": "security-data-schema",
+      "domains": [
+        "detection",
+        "telemetry",
+        "data-engineering"
+      ],
+      "status": "verified",
+      "model": "reference",
+      "url": "https://ocsf.io/",
+      "summary": "security event normalization; telemetry interoperability; detection data engineering",
+      "source": "frameworks.yaml",
+      "kind": "framework",
+      "version": null,
+      "evidence_tier": "A",
+      "last_reviewed": "2026-09-29",
+      "provenance_score": 100,
+      "upstream_health": "not-checked",
+      "last_activity": null,
+      "latest_release": null
+    },
+    {
+      "id": "openaev",
+      "name": "OpenAEV",
+      "aliases": [
+        "OpenBAS"
+      ],
+      "type": "adversarial-exposure-validation",
+      "domains": [
+        "purple-team",
+        "bas",
+        "aev",
+        "enterprise"
+      ],
+      "status": "verified",
+      "model": "open-source",
+      "url": "https://docs.openaev.io/",
+      "summary": "adversarial exposure validation, attack simulation and security validation",
+      "source": "catalog.yaml",
+      "kind": "tool",
+      "version": null,
+      "evidence_tier": "A",
+      "last_reviewed": "2026-09-29",
+      "verification_note": null,
+      "provenance_score": 100,
+      "upstream_health": "not-checked",
+      "last_activity": null,
+      "latest_release": null
+    },
+    {
+      "id": "openart",
+      "name": "OpenART",
+      "aliases": [],
+      "type": "ai-security-candidate",
+      "domains": [
+        "ai-genai",
+        "research"
+      ],
+      "status": "not-verified",
+      "model": "unknown",
+      "url": null,
+      "summary": "Research candidate included for completeness; NOT VERIFIED. Do not treat as recommended until canonical provenance, maintenance, licensing and scope are confirmed.",
+      "source": "catalog.yaml",
+      "kind": "tool",
+      "version": null,
+      "evidence_tier": "D",
+      "last_reviewed": "2026-09-29",
+      "verification_note": "NOT VERIFIED — research candidate only.",
+      "provenance_score": 15,
+      "upstream_health": "not-checked",
+      "last_activity": null,
+      "latest_release": null
+    },
+    {
+      "id": "openssf-osps-baseline",
+      "name": "OpenSSF Open Source Project Security Baseline",
+      "aliases": [],
+      "type": "open-source-security-baseline",
+      "domains": [
+        "open-source",
+        "software-supply-chain",
+        "secure-development"
+      ],
+      "status": "verified",
+      "model": "reference",
+      "url": "https://baseline.openssf.org/versions/2026-08-28",
+      "summary": "open-source project security controls; repository assurance; maturity-based project security",
+      "source": "frameworks.yaml",
+      "kind": "framework",
+      "version": "2026.08.28",
+      "evidence_tier": "A",
+      "last_reviewed": "2026-09-30",
+      "provenance_score": 100,
+      "upstream_health": "not-checked",
+      "last_activity": null,
+      "latest_release": null
+    },
+    {
+      "id": "openssf-scorecard",
+      "name": "OpenSSF Scorecard",
+      "aliases": [],
+      "type": "software-supply-chain-assessment",
+      "domains": [
+        "software-supply-chain",
+        "open-source",
+        "secure-development"
+      ],
+      "status": "verified",
+      "model": "reference",
+      "url": "https://openssf.org/scorecard/",
+      "summary": "open-source project security posture; supply-chain risk signals; repository assurance",
+      "source": "frameworks.yaml",
+      "kind": "framework",
+      "version": null,
+      "evidence_tier": "A",
+      "last_reviewed": "2026-09-29",
+      "provenance_score": 100,
+      "upstream_health": "not-checked",
+      "last_activity": null,
+      "latest_release": null
+    },
+    {
+      "id": "opfor",
+      "name": "opfor",
+      "aliases": [],
+      "type": "adversary-emulation-candidate",
+      "domains": [
+        "adversary-emulation",
+        "threat-informed-testing",
+        "automation",
+        "research"
+      ],
+      "status": "not-verified",
+      "model": "unknown",
+      "url": null,
+      "summary": "Research candidate described as modular adversary-emulation orchestration with behavior-oriented scenario modeling; NOT VERIFIED pending canonical provenance review.",
+      "source": "catalog.yaml",
+      "kind": "tool",
+      "version": null,
+      "evidence_tier": "D",
+      "last_reviewed": "2026-09-30",
+      "verification_note": "NOT VERIFIED — research candidate only.",
+      "provenance_score": 15,
+      "upstream_health": "not-checked",
+      "last_activity": null,
+      "latest_release": null
+    },
+    {
+      "id": "osquery",
+      "name": "osquery",
+      "aliases": [],
+      "type": "endpoint-telemetry-platform",
+      "domains": [
+        "endpoint",
+        "telemetry",
+        "threat-hunting"
+      ],
+      "status": "verified",
+      "model": "open-source",
+      "url": "https://www.osquery.io/",
+      "summary": "SQL-based endpoint instrumentation and security telemetry",
+      "source": "catalog.yaml",
+      "kind": "tool",
+      "version": null,
+      "evidence_tier": "B",
+      "last_reviewed": "2026-09-29",
+      "verification_note": null,
+      "provenance_score": 90,
+      "upstream_health": "not-checked",
+      "last_activity": null,
+      "latest_release": null
+    },
+    {
+      "id": "owasp-api-top10",
+      "name": "OWASP API Security Top 10",
+      "aliases": [],
+      "type": "application-risk-framework",
+      "domains": [
+        "api",
+        "web",
+        "application-security"
+      ],
+      "status": "verified",
+      "model": "reference",
+      "url": "https://owasp.org/www-project-api-security/",
+      "summary": "API risk awareness; API assessment scoping; API security requirements",
+      "source": "frameworks.yaml",
+      "kind": "framework",
+      "version": "2023",
+      "evidence_tier": "A",
+      "last_reviewed": "2026-09-29",
+      "provenance_score": 100,
+      "upstream_health": "not-checked",
+      "last_activity": null,
+      "latest_release": null
+    },
+    {
+      "id": "owasp-asvs",
+      "name": "OWASP Application Security Verification Standard",
+      "aliases": [],
+      "type": "application-security-standard",
+      "domains": [
+        "web",
+        "application-security",
+        "secure-development"
+      ],
+      "status": "verified",
+      "model": "reference",
+      "url": "https://owasp.org/www-project-application-security-verification-standard/",
+      "summary": "application security requirements; technical control verification; security testing baselines",
+      "source": "frameworks.yaml",
+      "kind": "framework",
+      "version": "5.0.0",
+      "evidence_tier": "A",
+      "last_reviewed": "2026-09-29",
+      "provenance_score": 100,
+      "upstream_health": "not-checked",
+      "last_activity": null,
+      "latest_release": null
+    },
+    {
+      "id": "owasp-genai",
+      "name": "OWASP GenAI Security Project",
+      "aliases": [],
+      "type": "application-security-guidance",
+      "domains": [
+        "ai-genai"
+      ],
+      "status": "verified",
+      "model": "reference",
+      "url": "https://genai.owasp.org/",
+      "summary": "GenAI application risk modeling; LLM risk mitigation",
+      "source": "frameworks.yaml",
+      "kind": "framework",
+      "version": null,
+      "evidence_tier": "A",
+      "last_reviewed": "2026-09-29",
+      "provenance_score": 100,
+      "upstream_health": "not-checked",
+      "last_activity": null,
+      "latest_release": null
+    },
+    {
+      "id": "owasp-iot-istg",
+      "name": "OWASP IoT Security Testing Guide",
+      "aliases": [],
+      "type": "domain-testing-guide",
+      "domains": [
+        "iot",
+        "embedded"
+      ],
+      "status": "verified",
+      "model": "reference",
+      "url": "https://owasp.org/projects/iot-security-testing-guide",
+      "summary": "IoT penetration testing methodology; IoT test cases",
+      "source": "frameworks.yaml",
+      "kind": "framework",
+      "version": null,
+      "evidence_tier": "A",
+      "last_reviewed": "2026-09-29",
+      "provenance_score": 100,
+      "upstream_health": "not-checked",
+      "last_activity": null,
+      "latest_release": null
+    },
+    {
+      "id": "owasp-isvs",
+      "name": "OWASP IoT Security Verification Standard",
+      "aliases": [],
+      "type": "iot-security-standard",
+      "domains": [
+        "iot",
+        "embedded",
+        "product-security"
+      ],
+      "status": "verified",
+      "model": "reference",
+      "url": "https://owasp.org/www-project-iot-security-verification-standard/",
+      "summary": "IoT security requirements; embedded-system assurance; IoT product testing scope",
+      "source": "frameworks.yaml",
+      "kind": "framework",
+      "version": null,
+      "evidence_tier": "A",
+      "last_reviewed": "2026-09-29",
+      "provenance_score": 100,
+      "upstream_health": "not-checked",
+      "last_activity": null,
+      "latest_release": null
+    },
+    {
+      "id": "owasp-mastg",
+      "name": "OWASP Mobile Application Security Testing Guide",
+      "aliases": [],
+      "type": "domain-testing-guide",
+      "domains": [
+        "mobile"
+      ],
+      "status": "verified",
+      "model": "reference",
+      "url": "https://mas.owasp.org/MASTG/",
+      "summary": "mobile application security testing",
+      "source": "frameworks.yaml",
+      "kind": "framework",
+      "version": null,
+      "evidence_tier": "A",
+      "last_reviewed": "2026-09-29",
+      "provenance_score": 100,
+      "upstream_health": "not-checked",
+      "last_activity": null,
+      "latest_release": null
+    },
+    {
+      "id": "owasp-masvs",
+      "name": "OWASP Mobile Application Security Verification Standard",
+      "aliases": [],
+      "type": "mobile-security-standard",
+      "domains": [
+        "mobile",
+        "android",
+        "ios"
+      ],
+      "status": "verified",
+      "model": "reference",
+      "url": "https://mas.owasp.org/MASVS/",
+      "summary": "mobile security requirements; mobile application assurance; mobile assessment criteria",
+      "source": "frameworks.yaml",
+      "kind": "framework",
+      "version": "2.1.0",
+      "evidence_tier": "A",
+      "last_reviewed": "2026-09-29",
+      "provenance_score": 100,
+      "upstream_health": "not-checked",
+      "last_activity": null,
+      "latest_release": null
+    },
+    {
+      "id": "owasp-samm",
+      "name": "OWASP Software Assurance Maturity Model",
+      "aliases": [],
+      "type": "software-security-maturity-model",
+      "domains": [
+        "application-security",
+        "secure-development",
+        "governance"
+      ],
+      "status": "verified",
+      "model": "reference",
+      "url": "https://owasp.org/www-project-samm/",
+      "summary": "software security maturity assessment; secure SDLC improvement; program measurement",
+      "source": "frameworks.yaml",
+      "kind": "framework",
+      "version": "2.2.0",
+      "evidence_tier": "A",
+      "last_reviewed": "2026-09-29",
+      "provenance_score": 100,
+      "upstream_health": "not-checked",
+      "last_activity": null,
+      "latest_release": null
+    },
+    {
+      "id": "owasp-scvs",
+      "name": "OWASP Software Component Verification Standard",
+      "aliases": [],
+      "type": "software-supply-chain-standard",
+      "domains": [
+        "software-supply-chain",
+        "secure-development",
+        "sbom"
+      ],
+      "status": "verified",
+      "model": "reference",
+      "url": "https://scvs.owasp.org/",
+      "summary": "component assurance; SBOM maturity; software supply-chain verification",
+      "source": "frameworks.yaml",
+      "kind": "framework",
+      "version": "1.0",
+      "evidence_tier": "A",
+      "last_reviewed": "2026-09-30",
+      "provenance_score": 100,
+      "upstream_health": "not-checked",
+      "last_activity": null,
+      "latest_release": null
+    },
+    {
+      "id": "owasp-top10-2025",
+      "name": "OWASP Top 10:2025",
+      "aliases": [],
+      "type": "application-risk-framework",
+      "domains": [
+        "web",
+        "application-security",
+        "secure-development"
+      ],
+      "status": "verified",
+      "model": "reference",
+      "url": "https://top10.owasp.org/2025/",
+      "summary": "web application risk awareness; application security prioritization; secure-development education",
+      "source": "frameworks.yaml",
+      "kind": "framework",
+      "version": "2025",
+      "evidence_tier": "A",
+      "last_reviewed": "2026-09-30",
+      "provenance_score": 100,
+      "upstream_health": "not-checked",
+      "last_activity": null,
+      "latest_release": null
+    },
+    {
+      "id": "owasp-wstg",
+      "name": "OWASP Web Security Testing Guide",
+      "aliases": [],
+      "type": "domain-testing-guide",
+      "domains": [
+        "web"
+      ],
+      "status": "verified",
+      "model": "reference",
+      "url": "https://wstg.owasp.org/",
+      "summary": "web application testing; web service testing",
+      "source": "frameworks.yaml",
+      "kind": "framework",
+      "version": null,
+      "evidence_tier": "A",
+      "last_reviewed": "2026-09-29",
+      "provenance_score": 100,
+      "upstream_health": "not-checked",
+      "last_activity": null,
+      "latest_release": null
+    },
+    {
+      "id": "owasp-zap",
+      "name": "OWASP ZAP",
+      "aliases": [],
+      "type": "web-assessment-platform",
+      "domains": [
+        "web",
+        "api",
+        "application-security"
+      ],
+      "status": "verified",
+      "model": "open-source",
+      "url": "https://www.zaproxy.org/",
+      "summary": "web application security testing proxy and automation platform",
+      "source": "catalog.yaml",
+      "kind": "tool",
+      "version": null,
+      "evidence_tier": "A",
+      "last_reviewed": "2026-09-29",
+      "verification_note": null,
+      "provenance_score": 100,
+      "upstream_health": "not-checked",
+      "last_activity": null,
+      "latest_release": null
+    },
+    {
+      "id": "pacu",
+      "name": "Pacu",
+      "aliases": [],
+      "type": "assessment-framework",
+      "domains": [
+        "aws"
+      ],
+      "status": "verified",
+      "model": "open-source",
+      "url": "https://github.com/RhinoSecurityLabs/pacu",
+      "summary": "AWS offensive security assessment",
+      "source": "catalog.yaml",
+      "kind": "tool",
+      "version": null,
+      "evidence_tier": "B",
+      "last_reviewed": "2026-09-30",
+      "verification_note": null,
+      "provenance_score": 95,
+      "upstream_health": "healthy",
+      "last_activity": "2026-05-19T22:31:37Z",
+      "latest_release": {
+        "tag": "v1.7.0",
+        "published_at": "2026-03-23T17:29:16Z",
+        "url": "https://github.com/RhinoSecurityLabs/pacu/releases/tag/v1.7.0"
+      }
+    },
+    {
+      "id": "peekaboo",
+      "name": "peekaboo",
+      "aliases": [],
+      "type": "safe-emulation-candidate",
+      "domains": [
+        "adversary-emulation",
+        "sandbox",
+        "purple-team",
+        "research"
+      ],
+      "status": "not-verified",
+      "model": "unknown",
+      "url": null,
+      "summary": "Research candidate described as sandbox-oriented modular threat emulation for defensive validation; NOT VERIFIED pending primary-source review.",
+      "source": "catalog.yaml",
+      "kind": "tool",
+      "version": null,
+      "evidence_tier": "D",
+      "last_reviewed": "2026-09-30",
+      "verification_note": "NOT VERIFIED — research candidate only.",
+      "provenance_score": 15,
+      "upstream_health": "not-checked",
+      "last_activity": null,
+      "latest_release": null
+    },
+    {
+      "id": "ptes",
+      "name": "Penetration Testing Execution Standard",
+      "aliases": [],
+      "type": "methodology",
+      "domains": [
+        "enterprise"
+      ],
+      "status": "verified",
+      "model": "reference",
+      "url": "https://www.pentest-standard.org/",
+      "summary": "penetration testing lifecycle; engagement structure",
+      "source": "frameworks.yaml",
+      "kind": "framework",
+      "version": null,
+      "evidence_tier": "A",
+      "last_reviewed": "2026-09-29",
+      "provenance_score": 100,
+      "upstream_health": "not-checked",
+      "last_activity": null,
+      "latest_release": null
+    },
+    {
+      "id": "pentera",
+      "name": "Pentera",
+      "aliases": [],
+      "type": "security-validation-platform",
+      "domains": [
+        "automated-validation"
+      ],
+      "status": "commercial",
+      "model": "commercial",
+      "url": null,
+      "summary": "automated security validation",
+      "source": "catalog.yaml",
+      "kind": "tool",
+      "version": null,
+      "evidence_tier": "C",
+      "last_reviewed": "2026-09-30",
+      "verification_note": null,
+      "provenance_score": 64,
+      "upstream_health": "not-checked",
+      "last_activity": null,
+      "latest_release": null
+    },
+    {
+      "id": "pentester-playbook",
+      "name": "pentester-playbook",
+      "aliases": [],
+      "type": "methodology-toolkit-candidate",
+      "domains": [
+        "methodology",
+        "security-assessment",
+        "reference",
+        "research"
+      ],
+      "status": "not-verified",
+      "model": "unknown",
+      "url": null,
+      "summary": "Research candidate described as a broad security-assessment playbook and reference collection; NOT VERIFIED pending canonical source and content review.",
+      "source": "catalog.yaml",
+      "kind": "tool",
+      "version": null,
+      "evidence_tier": "D",
+      "last_reviewed": "2026-09-30",
+      "verification_note": "NOT VERIFIED — research candidate only.",
+      "provenance_score": 15,
+      "upstream_health": "not-checked",
+      "last_activity": null,
+      "latest_release": null
+    },
+    {
+      "id": "pexpagent",
+      "name": "pexpagent",
+      "aliases": [],
+      "type": "ai-operational-research-candidate",
+      "domains": [
+        "adversary-emulation",
+        "ai-security",
+        "automation",
+        "research"
+      ],
+      "status": "not-verified",
+      "model": "unknown",
+      "url": null,
+      "summary": "Research candidate described as AI-assisted environment-analysis tooling for controlled post-assessment research; NOT VERIFIED pending provenance and safety-scope review.",
+      "source": "catalog.yaml",
+      "kind": "tool",
+      "version": null,
+      "evidence_tier": "D",
+      "last_reviewed": "2026-09-30",
+      "verification_note": "NOT VERIFIED — research candidate only.",
+      "provenance_score": 15,
+      "upstream_health": "not-checked",
+      "last_activity": null,
+      "latest_release": null
+    },
+    {
+      "id": "phantomstrike",
+      "name": "phantomstrike",
+      "aliases": [],
+      "type": "operational-platform-candidate",
+      "domains": [
+        "adversary-emulation",
+        "operational-platform",
+        "research"
+      ],
+      "status": "not-verified",
+      "model": "unknown",
+      "url": null,
+      "summary": "Research candidate described as a red-team operational framework; retained only as non-recommended catalog context until independently verified.",
+      "source": "catalog.yaml",
+      "kind": "tool",
+      "version": null,
+      "evidence_tier": "D",
+      "last_reviewed": "2026-09-30",
+      "verification_note": "NOT VERIFIED — research candidate only.",
+      "provenance_score": 15,
+      "upstream_health": "not-checked",
+      "last_activity": null,
+      "latest_release": null
+    },
+    {
+      "id": "picus",
+      "name": "Picus Security",
+      "aliases": [],
+      "type": "security-validation-platform",
+      "domains": [
+        "bas",
+        "purple-team"
+      ],
+      "status": "commercial",
+      "model": "commercial",
+      "url": null,
+      "summary": "security control validation",
+      "source": "catalog.yaml",
+      "kind": "tool",
+      "version": null,
+      "evidence_tier": "C",
+      "last_reviewed": "2026-09-30",
+      "verification_note": null,
+      "provenance_score": 64,
+      "upstream_health": "not-checked",
+      "last_activity": null,
+      "latest_release": null
+    },
+    {
+      "id": "poshc2",
+      "name": "PoshC2",
+      "aliases": [],
+      "type": "operational-platform",
+      "domains": [
+        "adversary-emulation"
+      ],
+      "status": "community",
+      "model": "open-source",
+      "url": "https://github.com/nettitude/PoshC2",
+      "summary": "authorized adversary-emulation operations",
+      "source": "catalog.yaml",
+      "kind": "tool",
+      "version": null,
+      "evidence_tier": "B",
+      "last_reviewed": "2026-09-30",
+      "verification_note": null,
+      "provenance_score": 87,
+      "upstream_health": "healthy",
+      "last_activity": "2025-11-20T13:55:21Z",
+      "latest_release": {
+        "tag": "v9.0",
+        "published_at": "2024-06-11T15:11:03Z",
+        "url": "https://github.com/nettitude/PoshC2/releases/tag/v9.0"
+      }
+    },
+    {
+      "id": "powersploit",
+      "name": "PowerSploit",
+      "aliases": [],
+      "type": "legacy-review-candidate",
+      "domains": [
+        "legacy-review",
+        "research"
+      ],
+      "status": "not-verified",
+      "model": "unknown",
+      "url": null,
+      "summary": "Research candidate included for completeness; NOT VERIFIED. Do not treat as recommended until canonical provenance, maintenance, licensing and scope are confirmed.",
+      "source": "catalog.yaml",
+      "kind": "tool",
+      "version": null,
+      "evidence_tier": "D",
+      "last_reviewed": "2026-09-29",
+      "verification_note": "NOT VERIFIED — research candidate only.",
+      "provenance_score": 15,
+      "upstream_health": "not-checked",
+      "last_activity": null,
+      "latest_release": null
+    },
+    {
+      "id": "powerzure",
+      "name": "PowerZure",
+      "aliases": [],
+      "type": "cloud-security-candidate",
+      "domains": [
+        "cloud",
+        "kubernetes",
+        "research"
+      ],
+      "status": "not-verified",
+      "model": "unknown",
+      "url": null,
+      "summary": "Research candidate included for completeness; NOT VERIFIED. Do not treat as recommended until canonical provenance, maintenance, licensing and scope are confirmed.",
+      "source": "catalog.yaml",
+      "kind": "tool",
+      "version": null,
+      "evidence_tier": "D",
+      "last_reviewed": "2026-09-29",
+      "verification_note": "NOT VERIFIED — research candidate only.",
+      "provenance_score": 15,
+      "upstream_health": "not-checked",
+      "last_activity": null,
+      "latest_release": null
+    },
+    {
+      "id": "prowler",
+      "name": "Prowler",
+      "aliases": [],
+      "type": "cloud-security-assessment",
+      "domains": [
+        "aws",
+        "azure",
+        "gcp",
+        "cloud"
+      ],
+      "status": "verified",
+      "model": "open-source-commercial",
+      "url": "https://prowler.com/",
+      "summary": "multi-cloud security posture and control assessment",
+      "source": "catalog.yaml",
+      "kind": "tool",
+      "version": null,
+      "evidence_tier": "B",
+      "last_reviewed": "2026-09-29",
+      "verification_note": null,
+      "provenance_score": 90,
+      "upstream_health": "not-checked",
+      "last_activity": null,
+      "latest_release": null
+    },
+    {
+      "id": "pupy",
+      "name": "Pupy",
+      "aliases": [],
+      "type": "operational-platform-candidate",
+      "domains": [
+        "adversary-emulation",
+        "research"
+      ],
+      "status": "not-verified",
+      "model": "unknown",
+      "url": null,
+      "summary": "Research candidate included for completeness; NOT VERIFIED. Do not treat as recommended until canonical provenance, maintenance, licensing and scope are confirmed.",
+      "source": "catalog.yaml",
+      "kind": "tool",
+      "version": null,
+      "evidence_tier": "D",
+      "last_reviewed": "2026-09-29",
+      "verification_note": "NOT VERIFIED — research candidate only.",
+      "provenance_score": 15,
+      "upstream_health": "not-checked",
+      "last_activity": null,
+      "latest_release": null
+    },
+    {
+      "id": "purple-team-playground",
+      "name": "Purple Team Playground",
+      "aliases": [],
+      "type": "purple-team-testbed-candidate",
+      "domains": [
+        "purple-team",
+        "testbed",
+        "security-validation",
+        "research"
+      ],
+      "status": "not-verified",
+      "model": "unknown",
+      "url": null,
+      "summary": "Research candidate for customizable purple-team and adversary-simulation lab environments; NOT VERIFIED pending canonical provenance review.",
+      "source": "catalog.yaml",
+      "kind": "tool",
+      "version": null,
+      "evidence_tier": "D",
+      "last_reviewed": "2026-09-30",
+      "verification_note": "NOT VERIFIED — research candidate only.",
+      "provenance_score": 15,
+      "upstream_health": "not-checked",
+      "last_activity": null,
+      "latest_release": null
+    },
+    {
+      "id": "realm",
+      "name": "Realm",
+      "aliases": [],
+      "type": "adversary-emulation-platform",
+      "domains": [
+        "enterprise",
+        "adversary-emulation",
+        "automation"
+      ],
+      "status": "verified",
+      "model": "open-source",
+      "url": "https://github.com/spellshift/realm",
+      "summary": "cross-platform adversary emulation focused on automation and reliability",
+      "source": "catalog.yaml",
+      "kind": "tool",
+      "version": null,
+      "evidence_tier": "B",
+      "last_reviewed": "2026-09-29",
+      "verification_note": null,
+      "provenance_score": 95,
+      "upstream_health": "healthy",
+      "last_activity": "2026-09-18T14:43:49Z",
+      "latest_release": {
+        "tag": "v0.4.0",
+        "published_at": "2026-04-19T18:46:59Z",
+        "url": "https://github.com/spellshift/realm/releases/tag/v0.4.0"
+      }
+    },
+    {
+      "id": "redamon",
+      "name": "redamon",
+      "aliases": [],
+      "type": "autonomous-security-research-candidate",
+      "domains": [
+        "security-assessment",
+        "automation",
+        "ai-security",
+        "research"
+      ],
+      "status": "not-verified",
+      "model": "unknown",
+      "url": null,
+      "summary": "Research candidate described as automated security-assessment orchestration; NOT VERIFIED pending canonical provenance and maintenance review.",
+      "source": "catalog.yaml",
+      "kind": "tool",
+      "version": null,
+      "evidence_tier": "D",
+      "last_reviewed": "2026-09-30",
+      "verification_note": "NOT VERIFIED — research candidate only.",
+      "provenance_score": 15,
+      "upstream_health": "not-checked",
+      "last_activity": null,
+      "latest_release": null
+    },
+    {
+      "id": "redcloudos",
+      "name": "RedCloudOS",
+      "aliases": [],
+      "type": "cloud-security-candidate",
+      "domains": [
+        "cloud",
+        "kubernetes",
+        "research"
+      ],
+      "status": "not-verified",
+      "model": "unknown",
+      "url": null,
+      "summary": "Research candidate included for completeness; NOT VERIFIED. Do not treat as recommended until canonical provenance, maintenance, licensing and scope are confirmed.",
+      "source": "catalog.yaml",
+      "kind": "tool",
+      "version": null,
+      "evidence_tier": "D",
+      "last_reviewed": "2026-09-29",
+      "verification_note": "NOT VERIFIED — research candidate only.",
+      "provenance_score": 15,
+      "upstream_health": "not-checked",
+      "last_activity": null,
+      "latest_release": null
+    },
+    {
+      "id": "redguard-suite",
+      "name": "RedGuard Suite",
+      "aliases": [],
+      "type": "automation-toolkit-candidate",
+      "domains": [
+        "automation",
+        "offensive-security",
+        "research"
+      ],
+      "status": "not-verified",
+      "model": "unknown",
+      "url": null,
+      "summary": "Research candidate included for completeness; NOT VERIFIED. Do not treat as recommended until canonical provenance, maintenance, licensing and scope are confirmed.",
+      "source": "catalog.yaml",
+      "kind": "tool",
+      "version": null,
+      "evidence_tier": "D",
+      "last_reviewed": "2026-09-29",
+      "verification_note": "NOT VERIFIED — research candidate only.",
+      "provenance_score": 15,
+      "upstream_health": "not-checked",
+      "last_activity": null,
+      "latest_release": null
+    },
+    {
+      "id": "redstack",
+      "name": "redStack",
+      "aliases": [],
+      "type": "automation-toolkit-candidate",
+      "domains": [
+        "automation",
+        "offensive-security",
+        "research"
+      ],
+      "status": "not-verified",
+      "model": "unknown",
+      "url": null,
+      "summary": "Research candidate included for completeness; NOT VERIFIED. Do not treat as recommended until canonical provenance, maintenance, licensing and scope are confirmed.",
+      "source": "catalog.yaml",
+      "kind": "tool",
+      "version": null,
+      "evidence_tier": "D",
+      "last_reviewed": "2026-09-29",
+      "verification_note": "NOT VERIFIED — research candidate only.",
+      "provenance_score": 15,
+      "upstream_health": "not-checked",
+      "last_activity": null,
+      "latest_release": null
+    },
+    {
+      "id": "roadtools",
+      "name": "ROADtools",
+      "aliases": [],
+      "type": "identity-assessment-toolkit",
+      "domains": [
+        "entra-id",
+        "azure",
+        "identity"
+      ],
+      "status": "verified",
+      "model": "open-source",
+      "url": "https://github.com/dirkjanm/ROADtools",
+      "summary": "Microsoft Entra ID assessment and research toolkit",
+      "source": "catalog.yaml",
+      "kind": "tool",
+      "version": null,
+      "evidence_tier": "B",
+      "last_reviewed": "2026-09-29",
+      "verification_note": null,
+      "provenance_score": 95,
+      "upstream_health": "healthy",
+      "last_activity": "2026-08-05T13:43:22Z",
+      "latest_release": null
+    },
+    {
+      "id": "routersploit",
+      "name": "RouterSploit",
+      "aliases": [],
+      "type": "embedded-assessment-framework",
+      "domains": [
+        "iot",
+        "embedded",
+        "network"
+      ],
+      "status": "community",
+      "model": "open-source",
+      "url": "https://github.com/threat9/routersploit",
+      "summary": "embedded-device security assessment framework",
+      "source": "catalog.yaml",
+      "kind": "tool",
+      "version": null,
+      "evidence_tier": "B",
+      "last_reviewed": "2026-09-29",
+      "verification_note": null,
+      "provenance_score": 87,
+      "upstream_health": "healthy",
+      "last_activity": "2026-05-05T14:02:26Z",
+      "latest_release": {
+        "tag": "v3.4.0",
+        "published_at": "2018-10-17T17:30:58Z",
+        "url": "https://github.com/threat9/routersploit/releases/tag/v3.4.0"
+      }
+    },
+    {
+      "id": "rtosploit",
+      "name": "rtosploit",
+      "aliases": [],
+      "type": "rtos-security-candidate",
+      "domains": [
+        "iot",
+        "embedded",
+        "rtos",
+        "firmware",
+        "research"
+      ],
+      "status": "not-verified",
+      "model": "unknown",
+      "url": null,
+      "summary": "Research candidate described as an RTOS-focused firmware security testing framework; NOT VERIFIED pending canonical provenance and supported-platform review.",
+      "source": "catalog.yaml",
+      "kind": "tool",
+      "version": null,
+      "evidence_tier": "D",
+      "last_reviewed": "2026-09-30",
+      "verification_note": "NOT VERIFIED — research candidate only.",
+      "provenance_score": 15,
+      "upstream_health": "not-checked",
+      "last_activity": null,
+      "latest_release": null
+    },
+    {
+      "id": "rust-bucket",
+      "name": "Rust Bucket",
+      "aliases": [],
+      "type": "operational-platform-research-candidate",
+      "domains": [
+        "operational-platform",
+        "red-team",
+        "research"
+      ],
+      "status": "not-verified",
+      "model": "unknown",
+      "url": null,
+      "summary": "Research candidate reported as a Rust-based red-team operational platform; retained only as catalog context until provenance and maintenance are verified.",
+      "source": "catalog.yaml",
+      "kind": "tool",
+      "version": null,
+      "evidence_tier": "D",
+      "last_reviewed": "2026-09-30",
+      "verification_note": "NOT VERIFIED — research candidate only.",
+      "provenance_score": 15,
+      "upstream_health": "not-checked",
+      "last_activity": null,
+      "latest_release": null
+    },
+    {
+      "id": "safebreach",
+      "name": "SafeBreach",
+      "aliases": [],
+      "type": "security-validation-platform",
+      "domains": [
+        "bas",
+        "purple-team"
+      ],
+      "status": "commercial",
+      "model": "commercial",
+      "url": null,
+      "summary": "continuous security validation",
+      "source": "catalog.yaml",
+      "kind": "tool",
+      "version": null,
+      "evidence_tier": "C",
+      "last_reviewed": "2026-09-30",
+      "verification_note": null,
+      "provenance_score": 64,
+      "upstream_health": "not-checked",
+      "last_activity": null,
+      "latest_release": null
+    },
+    {
+      "id": "sandevistan",
+      "name": "sandevistan",
+      "aliases": [],
+      "type": "security-toolkit-candidate",
+      "domains": [
+        "security-assessment",
+        "toolkit",
+        "automation",
+        "research"
+      ],
+      "status": "not-verified",
+      "model": "unknown",
+      "url": null,
+      "summary": "Research candidate described as an aggregated security-tool workspace; NOT VERIFIED pending canonical provenance, included-tool inventory and maintenance review.",
+      "source": "catalog.yaml",
+      "kind": "tool",
+      "version": null,
+      "evidence_tier": "D",
+      "last_reviewed": "2026-09-30",
+      "verification_note": "NOT VERIFIED — research candidate only.",
+      "provenance_score": 15,
+      "upstream_health": "not-checked",
+      "last_activity": null,
+      "latest_release": null
+    },
+    {
+      "id": "scoutsuite",
+      "name": "ScoutSuite",
+      "aliases": [],
+      "type": "cloud-security-auditing",
+      "domains": [
+        "aws",
+        "azure",
+        "gcp",
+        "cloud"
+      ],
+      "status": "verified",
+      "model": "open-source",
+      "url": "https://github.com/nccgroup/ScoutSuite",
+      "summary": "multi-cloud configuration and attack-surface auditing",
+      "source": "catalog.yaml",
+      "kind": "tool",
+      "version": null,
+      "evidence_tier": "B",
+      "last_reviewed": "2026-09-29",
+      "verification_note": null,
+      "provenance_score": 83,
+      "upstream_health": "stale",
+      "last_activity": "2025-09-23T18:33:52Z",
+      "latest_release": null
+    },
+    {
+      "id": "secops-chaos",
+      "name": "secops-chaos",
+      "aliases": [],
+      "type": "cloud-security-candidate",
+      "domains": [
+        "cloud",
+        "kubernetes",
+        "research"
+      ],
+      "status": "not-verified",
+      "model": "unknown",
+      "url": null,
+      "summary": "Research candidate included for completeness; NOT VERIFIED. Do not treat as recommended until canonical provenance, maintenance, licensing and scope are confirmed.",
+      "source": "catalog.yaml",
+      "kind": "tool",
+      "version": null,
+      "evidence_tier": "D",
+      "last_reviewed": "2026-09-29",
+      "verification_note": "NOT VERIFIED — research candidate only.",
+      "provenance_score": 15,
+      "upstream_health": "not-checked",
+      "last_activity": null,
+      "latest_release": null
+    },
+    {
+      "id": "seersx",
+      "name": "SeersX",
+      "aliases": [],
+      "type": "operational-platform-candidate",
+      "domains": [
+        "adversary-emulation",
+        "research"
+      ],
+      "status": "not-verified",
+      "model": "unknown",
+      "url": null,
+      "summary": "Research candidate included for completeness; NOT VERIFIED. Do not treat as recommended until canonical provenance, maintenance, licensing and scope are confirmed.",
+      "source": "catalog.yaml",
+      "kind": "tool",
+      "version": null,
+      "evidence_tier": "D",
+      "last_reviewed": "2026-09-29",
+      "verification_note": "NOT VERIFIED — research candidate only.",
+      "provenance_score": 15,
+      "upstream_health": "not-checked",
+      "last_activity": null,
+      "latest_release": null
+    },
+    {
+      "id": "semgrep",
+      "name": "Semgrep",
+      "aliases": [],
+      "type": "static-analysis-platform",
+      "domains": [
+        "application-security",
+        "secure-development",
+        "code-analysis"
+      ],
+      "status": "verified",
+      "model": "open-source-commercial",
+      "url": "https://semgrep.dev/",
+      "summary": "static analysis and code security rule engine",
+      "source": "catalog.yaml",
+      "kind": "tool",
+      "version": null,
+      "evidence_tier": "B",
+      "last_reviewed": "2026-09-29",
+      "verification_note": null,
+      "provenance_score": 90,
+      "upstream_health": "not-checked",
+      "last_activity": null,
+      "latest_release": null
+    },
+    {
+      "id": "sharpsploit",
+      "name": "SharpSploit",
+      "aliases": [],
+      "type": "legacy-review-candidate",
+      "domains": [
+        "legacy-review",
+        "research"
+      ],
+      "status": "not-verified",
+      "model": "unknown",
+      "url": null,
+      "summary": "Research candidate included for completeness; NOT VERIFIED. Do not treat as recommended until canonical provenance, maintenance, licensing and scope are confirmed.",
+      "source": "catalog.yaml",
+      "kind": "tool",
+      "version": null,
+      "evidence_tier": "D",
+      "last_reviewed": "2026-09-29",
+      "verification_note": "NOT VERIFIED — research candidate only.",
+      "provenance_score": 15,
+      "upstream_health": "not-checked",
+      "last_activity": null,
+      "latest_release": null
+    },
+    {
+      "id": "sigma",
+      "name": "Sigma",
+      "aliases": [],
+      "type": "detection-format",
+      "domains": [
+        "detection",
+        "siem"
+      ],
+      "status": "verified",
+      "model": "open",
+      "url": "https://sigmahq.io/",
+      "summary": "portable structured detection rules",
+      "source": "catalog.yaml",
+      "kind": "tool",
+      "version": null,
+      "evidence_tier": "B",
+      "last_reviewed": "2026-09-30",
+      "verification_note": null,
+      "provenance_score": 90,
+      "upstream_health": "not-checked",
+      "last_activity": null,
+      "latest_release": null
+    },
+    {
+      "id": "silenttrinity",
+      "name": "silenttrinity",
+      "aliases": [],
+      "type": "operational-platform-candidate",
+      "domains": [
+        "adversary-emulation",
+        "operational-platform",
+        "legacy-review",
+        "research"
+      ],
+      "status": "not-verified",
+      "model": "unknown",
+      "url": null,
+      "summary": "Research candidate for historical and ecosystem context around collaborative red-team operations; NOT VERIFIED pending maintenance and lifecycle review.",
+      "source": "catalog.yaml",
+      "kind": "tool",
+      "version": null,
+      "evidence_tier": "D",
+      "last_reviewed": "2026-09-30",
+      "verification_note": "NOT VERIFIED — research candidate only.",
+      "provenance_score": 15,
+      "upstream_health": "not-checked",
+      "last_activity": null,
+      "latest_release": null
+    },
+    {
+      "id": "simple-ics-testbed",
+      "name": "SIMPLE-ICS Testbed",
+      "aliases": [],
+      "type": "industrial-security-testbed-candidate",
+      "domains": [
+        "ics",
+        "ot",
+        "testbed",
+        "adversary-emulation",
+        "research"
+      ],
+      "status": "not-verified",
+      "model": "unknown",
+      "url": null,
+      "summary": "Research candidate for controlled industrial-security and adversary-emulation testbed research; NOT VERIFIED pending primary-source review.",
+      "source": "catalog.yaml",
+      "kind": "tool",
+      "version": null,
+      "evidence_tier": "D",
+      "last_reviewed": "2026-09-30",
+      "verification_note": "NOT VERIFIED — research candidate only.",
+      "provenance_score": 15,
+      "upstream_health": "not-checked",
+      "last_activity": null,
+      "latest_release": null
+    },
+    {
+      "id": "skyhawk-security-autonomous-purple-team",
+      "name": "skyhawk-security-autonomous-purple-team",
+      "aliases": [],
+      "type": "commercial-purple-team-candidate",
+      "domains": [
+        "cloud",
+        "purple-team",
+        "security-validation",
+        "ai-security",
+        "research"
+      ],
+      "status": "not-verified",
+      "model": "unknown",
+      "url": null,
+      "summary": "Research candidate describing an autonomous cloud-focused purple-team capability; NOT VERIFIED pending commercial product and evidence review.",
+      "source": "catalog.yaml",
+      "kind": "tool",
+      "version": null,
+      "evidence_tier": "D",
+      "last_reviewed": "2026-09-30",
+      "verification_note": "NOT VERIFIED — research candidate only.",
+      "provenance_score": 15,
+      "upstream_health": "not-checked",
+      "last_activity": null,
+      "latest_release": null
+    },
+    {
+      "id": "sliver",
+      "name": "Sliver",
+      "aliases": [],
+      "type": "operational-platform",
+      "domains": [
+        "adversary-emulation"
+      ],
+      "status": "community",
+      "model": "open-source",
+      "url": null,
+      "summary": "authorized adversary-emulation operations",
+      "source": "catalog.yaml",
+      "kind": "tool",
+      "version": null,
+      "evidence_tier": "C",
+      "last_reviewed": "2026-09-30",
+      "verification_note": null,
+      "provenance_score": 62,
+      "upstream_health": "not-checked",
+      "last_activity": null,
+      "latest_release": null
+    },
+    {
+      "id": "slsa",
+      "name": "SLSA",
+      "aliases": [],
+      "type": "software-supply-chain-framework",
+      "domains": [
+        "software-supply-chain",
+        "secure-development",
+        "provenance"
+      ],
+      "status": "verified",
+      "model": "reference",
+      "url": "https://slsa.dev/spec/v1.2/",
+      "summary": "software artifact provenance; supply-chain integrity; source and build assurance",
+      "source": "frameworks.yaml",
+      "kind": "framework",
+      "version": "1.2",
+      "evidence_tier": "A",
+      "last_reviewed": "2026-09-29",
+      "provenance_score": 100,
+      "upstream_health": "not-checked",
+      "last_activity": null,
+      "latest_release": null
+    },
+    {
+      "id": "splunk-attack-range",
+      "name": "Splunk Attack Range",
+      "aliases": [],
+      "type": "detection-lab-platform",
+      "domains": [
+        "purple-team",
+        "detection",
+        "aws",
+        "azure",
+        "gcp"
+      ],
+      "status": "verified",
+      "model": "open-source",
+      "url": "https://github.com/splunk/attack_range",
+      "summary": "build instrumented environments for simulation and detection engineering",
+      "source": "catalog.yaml",
+      "kind": "tool",
+      "version": null,
+      "evidence_tier": "B",
+      "last_reviewed": "2026-09-29",
+      "verification_note": null,
+      "provenance_score": 95,
+      "upstream_health": "healthy",
+      "last_activity": "2026-09-28T09:54:50Z",
+      "latest_release": {
+        "tag": "v5.0.0",
+        "published_at": "2026-02-09T12:47:27Z",
+        "url": "https://github.com/splunk/attack_range/releases/tag/v5.0.0"
+      }
+    },
+    {
+      "id": "ssvc",
+      "name": "Stakeholder-Specific Vulnerability Categorization",
+      "aliases": [],
+      "type": "vulnerability-prioritization-framework",
+      "domains": [
+        "vulnerability-management",
+        "risk",
+        "decision-support"
+      ],
+      "status": "verified",
+      "model": "reference",
+      "url": "https://certcc.github.io/SSVC/",
+      "summary": "contextual vulnerability prioritization; stakeholder-specific response decisions; transparent remediation triage",
+      "source": "frameworks.yaml",
+      "kind": "framework",
+      "version": null,
+      "evidence_tier": "A",
+      "last_reviewed": "2026-09-29",
+      "provenance_score": 100,
+      "upstream_health": "not-checked",
+      "last_activity": null,
+      "latest_release": null
+    },
+    {
+      "id": "stormspotter",
+      "name": "Stormspotter",
+      "aliases": [],
+      "type": "attack-path-analysis",
+      "domains": [
+        "azure",
+        "cloud",
+        "graph"
+      ],
+      "status": "community",
+      "model": "open-source",
+      "url": "https://github.com/Azure/Stormspotter",
+      "summary": "Azure resource relationship visualization and security analysis",
+      "source": "catalog.yaml",
+      "kind": "tool",
+      "version": null,
+      "evidence_tier": "B",
+      "last_reviewed": "2026-09-29",
+      "verification_note": null,
+      "provenance_score": 75,
+      "upstream_health": "stale",
+      "last_activity": "2024-01-08T17:20:05Z",
+      "latest_release": {
+        "tag": "v1.0.0b4.4",
+        "published_at": "2021-11-17T18:49:26Z",
+        "url": "https://github.com/Azure/Stormspotter/releases/tag/v1.0.0b4.4"
+      }
+    },
+    {
+      "id": "stratus-red-team",
+      "name": "Stratus Red Team",
+      "aliases": [],
+      "type": "emulation-tool",
+      "domains": [
+        "aws",
+        "azure",
+        "gcp",
+        "entra-id",
+        "kubernetes"
+      ],
+      "status": "verified",
+      "model": "open-source",
+      "url": "https://github.com/DataDog/stratus-red-team",
+      "summary": "granular cloud adversary emulation",
+      "source": "catalog.yaml",
+      "kind": "tool",
+      "version": null,
+      "evidence_tier": "B",
+      "last_reviewed": "2026-09-30",
+      "verification_note": null,
+      "provenance_score": 95,
+      "upstream_health": "healthy",
+      "last_activity": "2026-09-30T15:36:52Z",
+      "latest_release": {
+        "tag": "v2.37.0",
+        "published_at": "2026-09-30T15:36:48Z",
+        "url": "https://github.com/DataDog/stratus-red-team/releases/tag/v2.37.0"
+      }
+    },
+    {
+      "id": "strix",
+      "name": "strix",
+      "aliases": [],
+      "type": "agentic-assessment-candidate",
+      "domains": [
+        "ai-security",
+        "security-assessment",
+        "automation",
+        "research"
+      ],
+      "status": "not-verified",
+      "model": "unknown",
+      "url": null,
+      "summary": "Research candidate described as agentic security-assessment automation; NOT VERIFIED pending primary-source validation and scope review.",
+      "source": "catalog.yaml",
+      "kind": "tool",
+      "version": null,
+      "evidence_tier": "D",
+      "last_reviewed": "2026-09-30",
+      "verification_note": "NOT VERIFIED — research candidate only.",
+      "provenance_score": 15,
+      "upstream_health": "not-checked",
+      "last_activity": null,
+      "latest_release": null
+    },
+    {
+      "id": "suijin",
+      "name": "Suijin",
+      "aliases": [],
+      "type": "automation-toolkit-candidate",
+      "domains": [
+        "automation",
+        "offensive-security",
+        "research"
+      ],
+      "status": "not-verified",
+      "model": "unknown",
+      "url": null,
+      "summary": "Research candidate included for completeness; NOT VERIFIED. Do not treat as recommended until canonical provenance, maintenance, licensing and scope are confirmed.",
+      "source": "catalog.yaml",
+      "kind": "tool",
+      "version": null,
+      "evidence_tier": "D",
+      "last_reviewed": "2026-09-29",
+      "verification_note": "NOT VERIFIED — research candidate only.",
+      "provenance_score": 15,
+      "upstream_health": "not-checked",
+      "last_activity": null,
+      "latest_release": null
+    },
+    {
+      "id": "suricata",
+      "name": "Suricata",
+      "aliases": [],
+      "type": "network-detection-platform",
+      "domains": [
+        "network",
+        "ids",
+        "detection"
+      ],
+      "status": "verified",
+      "model": "open-source",
+      "url": "https://suricata.io/",
+      "summary": "network threat detection, IDS/IPS and security monitoring",
+      "source": "catalog.yaml",
+      "kind": "tool",
+      "version": null,
+      "evidence_tier": "A",
+      "last_reviewed": "2026-09-29",
+      "verification_note": null,
+      "provenance_score": 100,
+      "upstream_health": "not-checked",
+      "last_activity": null,
+      "latest_release": null
+    },
+    {
+      "id": "t3mp3st",
+      "name": "T3MP3ST",
+      "aliases": [],
+      "type": "automation-toolkit-candidate",
+      "domains": [
+        "automation",
+        "offensive-security",
+        "research"
+      ],
+      "status": "not-verified",
+      "model": "unknown",
+      "url": null,
+      "summary": "Research candidate included for completeness; NOT VERIFIED. Do not treat as recommended until canonical provenance, maintenance, licensing and scope are confirmed.",
+      "source": "catalog.yaml",
+      "kind": "tool",
+      "version": null,
+      "evidence_tier": "D",
+      "last_reviewed": "2026-09-29",
+      "verification_note": "NOT VERIFIED — research candidate only.",
+      "provenance_score": 15,
+      "upstream_health": "not-checked",
+      "last_activity": null,
+      "latest_release": null
+    },
+    {
+      "id": "temperance",
+      "name": "temperance",
+      "aliases": [],
+      "type": "adversary-emulation-candidate",
+      "domains": [
+        "adversary-emulation",
+        "security-validation",
+        "research"
+      ],
+      "status": "not-verified",
+      "model": "unknown",
+      "url": null,
+      "summary": "Research candidate for adversary-emulation and security-validation research; NOT VERIFIED pending canonical provenance, maintenance and scope review.",
+      "source": "catalog.yaml",
+      "kind": "tool",
+      "version": null,
+      "evidence_tier": "D",
+      "last_reviewed": "2026-09-30",
+      "verification_note": "NOT VERIFIED — research candidate only.",
+      "provenance_score": 15,
+      "upstream_health": "not-checked",
+      "last_activity": null,
+      "latest_release": null
+    },
+    {
+      "id": "the-360-cyber-shield",
+      "name": "The 360 Cyber Shield",
+      "aliases": [],
+      "type": "purple-team-candidate",
+      "domains": [
+        "purple-team",
+        "security-validation",
+        "research"
+      ],
+      "status": "not-verified",
+      "model": "unknown",
+      "url": null,
+      "summary": "Research candidate included for completeness; NOT VERIFIED. Do not treat as recommended until canonical provenance, maintenance, licensing and scope are confirmed.",
+      "source": "catalog.yaml",
+      "kind": "tool",
+      "version": null,
+      "evidence_tier": "D",
+      "last_reviewed": "2026-09-29",
+      "verification_note": "NOT VERIFIED — research candidate only.",
+      "provenance_score": 15,
+      "upstream_health": "not-checked",
+      "last_activity": null,
+      "latest_release": null
+    },
+    {
+      "id": "tiber-eu",
+      "name": "TIBER-EU",
+      "aliases": [],
+      "type": "threat-led-testing-framework",
+      "domains": [
+        "regulated",
+        "financial"
+      ],
+      "status": "verified",
+      "model": "reference",
+      "url": "https://www.ecb.europa.eu/paym/cyber-resilience/tiber-eu/html/index.en.html",
+      "summary": "threat-intelligence-based ethical red teaming; DORA-aligned TLPT",
+      "source": "frameworks.yaml",
+      "kind": "framework",
+      "version": null,
+      "evidence_tier": "A",
+      "last_reviewed": "2026-09-29",
+      "provenance_score": 100,
+      "upstream_health": "not-checked",
+      "last_activity": null,
+      "latest_release": null
+    },
+    {
+      "id": "trevorc2",
+      "name": "TrevorC2",
+      "aliases": [],
+      "type": "operational-platform-candidate",
+      "domains": [
+        "adversary-emulation",
+        "research"
+      ],
+      "status": "not-verified",
+      "model": "unknown",
+      "url": null,
+      "summary": "Research candidate included for completeness; NOT VERIFIED. Do not treat as recommended until canonical provenance, maintenance, licensing and scope are confirmed.",
+      "source": "catalog.yaml",
+      "kind": "tool",
+      "version": null,
+      "evidence_tier": "D",
+      "last_reviewed": "2026-09-29",
+      "verification_note": "NOT VERIFIED — research candidate only.",
+      "provenance_score": 15,
+      "upstream_health": "not-checked",
+      "last_activity": null,
+      "latest_release": null
+    },
+    {
+      "id": "trivy",
+      "name": "Trivy",
+      "aliases": [],
+      "type": "vulnerability-and-misconfiguration-scanner",
+      "domains": [
+        "containers",
+        "kubernetes",
+        "cloud-native",
+        "software-supply-chain"
+      ],
+      "status": "verified",
+      "model": "open-source",
+      "url": "https://github.com/aquasecurity/trivy",
+      "summary": "vulnerability, misconfiguration, secret and SBOM assessment for cloud-native assets",
+      "source": "catalog.yaml",
+      "kind": "tool",
+      "version": null,
+      "evidence_tier": "B",
+      "last_reviewed": "2026-09-29",
+      "verification_note": null,
+      "provenance_score": 95,
+      "upstream_health": "healthy",
+      "last_activity": "2026-09-30T15:45:17Z",
+      "latest_release": {
+        "tag": "v0.74.0",
+        "published_at": "2026-08-14T11:29:11Z",
+        "url": "https://github.com/aquasecurity/trivy/releases/tag/v0.74.0"
+      }
+    },
+    {
+      "id": "ttpforge",
+      "name": "TTPForge",
+      "aliases": [],
+      "type": "attack-simulation-framework",
+      "domains": [
+        "purple-team",
+        "detection",
+        "enterprise"
+      ],
+      "status": "verified",
+      "model": "open-source",
+      "url": "https://github.com/facebookincubator/TTPForge",
+      "summary": "repeatable TTP simulation expressed as structured definitions",
+      "source": "catalog.yaml",
+      "kind": "tool",
+      "version": null,
+      "evidence_tier": "B",
+      "last_reviewed": "2026-09-29",
+      "verification_note": null,
+      "provenance_score": 95,
+      "upstream_health": "healthy",
+      "last_activity": "2026-09-30T13:53:10Z",
+      "latest_release": {
+        "tag": "v1.5.0",
+        "published_at": "2026-06-03T14:12:25Z",
+        "url": "https://github.com/facebookincubator/TTPForge/releases/tag/v1.5.0"
+      }
+    },
+    {
+      "id": "vanguard",
+      "name": "vanguard",
+      "aliases": [],
+      "type": "agentic-purple-team-candidate",
+      "domains": [
+        "ai-security",
+        "purple-team",
+        "detection-validation",
+        "research"
+      ],
+      "status": "not-verified",
+      "model": "unknown",
+      "url": null,
+      "summary": "Research candidate described as agentic purple-team and telemetry-validation research; NOT VERIFIED pending primary-source and product-scope review.",
+      "source": "catalog.yaml",
+      "kind": "tool",
+      "version": null,
+      "evidence_tier": "D",
+      "last_reviewed": "2026-09-30",
+      "verification_note": "NOT VERIFIED — research candidate only.",
+      "provenance_score": 15,
+      "upstream_health": "not-checked",
+      "last_activity": null,
+      "latest_release": null
+    },
+    {
+      "id": "vectr",
+      "name": "VECTR",
+      "aliases": [],
+      "type": "purple-team-platform",
+      "domains": [
+        "purple-team",
+        "detection",
+        "measurement"
+      ],
+      "status": "verified",
+      "model": "open-source",
+      "url": "https://github.com/SecurityRiskAdvisors/VECTR",
+      "summary": "track red/blue test results and measure detection and prevention outcomes",
+      "source": "catalog.yaml",
+      "kind": "tool",
+      "version": null,
+      "evidence_tier": "B",
+      "last_reviewed": "2026-09-29",
+      "verification_note": null,
+      "provenance_score": 95,
+      "upstream_health": "healthy",
+      "last_activity": "2026-08-14T15:11:50Z",
+      "latest_release": {
+        "tag": "ce-9.14.1",
+        "published_at": "2026-08-14T15:11:50Z",
+        "url": "https://github.com/SecurityRiskAdvisors/VECTR/releases/tag/ce-9.14.1"
+      }
+    },
+    {
+      "id": "velociraptor",
+      "name": "Velociraptor",
+      "aliases": [],
+      "type": "dfir-hunting-platform",
+      "domains": [
+        "endpoint",
+        "dfir",
+        "threat-hunting"
+      ],
+      "status": "verified",
+      "model": "open-source",
+      "url": "https://docs.velociraptor.app/",
+      "summary": "endpoint visibility, collection and threat hunting",
+      "source": "catalog.yaml",
+      "kind": "tool",
+      "version": null,
+      "evidence_tier": "B",
+      "last_reviewed": "2026-09-30",
+      "verification_note": null,
+      "provenance_score": 90,
+      "upstream_health": "not-checked",
+      "last_activity": null,
+      "latest_release": null
+    },
+    {
+      "id": "veris",
+      "name": "VERIS",
+      "aliases": [],
+      "type": "incident-data-framework",
+      "domains": [
+        "incident-response",
+        "risk",
+        "data-modeling",
+        "threat-intelligence"
+      ],
+      "status": "verified",
+      "model": "reference",
+      "url": "https://verisframework.org/",
+      "summary": "structured incident recording; incident data analysis; repeatable breach classification",
+      "source": "frameworks.yaml",
+      "kind": "framework",
+      "version": "1.3.1",
+      "evidence_tier": "A",
+      "last_reviewed": "2026-09-29",
+      "provenance_score": 100,
+      "upstream_health": "not-checked",
+      "last_activity": null,
+      "latest_release": null
+    },
+    {
+      "id": "vigilant",
+      "name": "VIGILANT",
+      "aliases": [],
+      "type": "ai-security-candidate",
+      "domains": [
+        "ai-genai",
+        "research"
+      ],
+      "status": "not-verified",
+      "model": "unknown",
+      "url": null,
+      "summary": "Research candidate included for completeness; NOT VERIFIED. Do not treat as recommended until canonical provenance, maintenance, licensing and scope are confirmed.",
+      "source": "catalog.yaml",
+      "kind": "tool",
+      "version": null,
+      "evidence_tier": "D",
+      "last_reviewed": "2026-09-29",
+      "verification_note": "NOT VERIFIED — research candidate only.",
+      "provenance_score": 15,
+      "upstream_health": "not-checked",
+      "last_activity": null,
+      "latest_release": null
+    },
+    {
+      "id": "volatility3",
+      "name": "Volatility 3",
+      "aliases": [],
+      "type": "memory-forensics-framework",
+      "domains": [
+        "dfir",
+        "memory-forensics",
+        "malware-analysis"
+      ],
+      "status": "verified",
+      "model": "open-source",
+      "url": "https://github.com/volatilityfoundation/volatility3",
+      "summary": "volatile-memory artifact extraction and forensic analysis",
+      "source": "catalog.yaml",
+      "kind": "tool",
+      "version": null,
+      "evidence_tier": "B",
+      "last_reviewed": "2026-09-29",
+      "verification_note": null,
+      "provenance_score": 90,
+      "upstream_health": "rate-limited",
+      "last_activity": null,
+      "latest_release": null
+    },
+    {
+      "id": "wireshark",
+      "name": "Wireshark",
+      "aliases": [],
+      "type": "network-analysis-tool",
+      "domains": [
+        "network",
+        "protocol-analysis",
+        "dfir"
+      ],
+      "status": "verified",
+      "model": "open-source",
+      "url": "https://www.wireshark.org/",
+      "summary": "packet analysis and protocol-level investigation",
+      "source": "catalog.yaml",
+      "kind": "tool",
+      "version": null,
+      "evidence_tier": "A",
+      "last_reviewed": "2026-09-29",
+      "verification_note": null,
+      "provenance_score": 100,
+      "upstream_health": "not-checked",
+      "last_activity": null,
+      "latest_release": null
+    },
+    {
+      "id": "woodpecker",
+      "name": "Woodpecker",
+      "aliases": [],
+      "type": "adversary-emulation-candidate",
+      "domains": [
+        "adversary-emulation",
+        "research"
+      ],
+      "status": "not-verified",
+      "model": "unknown",
+      "url": null,
+      "summary": "Research candidate included for completeness; NOT VERIFIED. Do not treat as recommended until canonical provenance, maintenance, licensing and scope are confirmed.",
+      "source": "catalog.yaml",
+      "kind": "tool",
+      "version": null,
+      "evidence_tier": "D",
+      "last_reviewed": "2026-09-29",
+      "verification_note": "NOT VERIFIED — research candidate only.",
+      "provenance_score": 15,
+      "upstream_health": "not-checked",
+      "last_activity": null,
+      "latest_release": null
+    },
+    {
+      "id": "wyrm",
+      "name": "wyrm",
+      "aliases": [],
+      "type": "operational-platform-candidate",
+      "domains": [
+        "adversary-emulation",
+        "operational-platform",
+        "research"
+      ],
+      "status": "not-verified",
+      "model": "unknown",
+      "url": null,
+      "summary": "Research candidate described as a Rust-based post-assessment operational platform for authorized red-team contexts; NOT VERIFIED pending primary-source review.",
+      "source": "catalog.yaml",
+      "kind": "tool",
+      "version": null,
+      "evidence_tier": "D",
+      "last_reviewed": "2026-09-30",
+      "verification_note": "NOT VERIFIED — research candidate only.",
+      "provenance_score": 15,
+      "upstream_health": "not-checked",
+      "last_activity": null,
+      "latest_release": null
+    },
+    {
+      "id": "yara-x",
+      "name": "YARA-X",
+      "aliases": [],
+      "type": "pattern-matching-platform",
+      "domains": [
+        "malware-analysis",
+        "detection",
+        "threat-hunting"
+      ],
+      "status": "verified",
+      "model": "open-source",
+      "url": "https://github.com/VirusTotal/yara-x",
+      "summary": "modern rule-based pattern matching for malware research and detection",
+      "source": "catalog.yaml",
+      "kind": "tool",
+      "version": null,
+      "evidence_tier": "B",
+      "last_reviewed": "2026-09-29",
+      "verification_note": null,
+      "provenance_score": 90,
+      "upstream_health": "rate-limited",
+      "last_activity": null,
+      "latest_release": null
+    },
+    {
+      "id": "zeek",
+      "name": "Zeek",
+      "aliases": [],
+      "type": "network-security-monitoring",
+      "domains": [
+        "network",
+        "telemetry",
+        "threat-hunting"
+      ],
+      "status": "verified",
+      "model": "open-source",
+      "url": "https://zeek.org/",
+      "summary": "network security monitoring and high-fidelity protocol telemetry",
+      "source": "catalog.yaml",
+      "kind": "tool",
+      "version": null,
+      "evidence_tier": "A",
+      "last_reviewed": "2026-09-29",
+      "verification_note": null,
+      "provenance_score": 100,
+      "upstream_health": "not-checked",
+      "last_activity": null,
+      "latest_release": null
+    }
+  ],
+  "relationships": [
+    {
+      "from": "mitre-attack",
+      "to": "atomic-red-team",
+      "relation": "behavior-to-validation",
+      "confidence": "high",
+      "provenance": "curated-crosswalk",
+      "source_refs": [
+        "mitre-attack",
+        "atomic-red-team"
+      ]
+    },
+    {
+      "from": "mitre-attack",
+      "to": "mitre-caldera",
+      "relation": "behavior-to-emulation",
+      "confidence": "high",
+      "provenance": "curated-crosswalk",
+      "source_refs": [
+        "mitre-attack",
+        "mitre-caldera"
+      ]
+    },
+    {
+      "from": "mitre-attack",
+      "to": "mitre-d3fend",
+      "relation": "behavior-to-countermeasure",
+      "confidence": "high",
+      "provenance": "curated-crosswalk",
+      "source_refs": [
+        "mitre-attack",
+        "mitre-d3fend"
+      ]
+    },
+    {
+      "from": "mitre-attack",
+      "to": "sigma",
+      "relation": "behavior-to-detection",
+      "confidence": "high",
+      "provenance": "curated-crosswalk",
+      "source_refs": [
+        "mitre-attack",
+        "sigma"
+      ]
+    },
+    {
+      "from": "mitre-attack",
+      "to": "ttpforge",
+      "relation": "behavior-to-simulation",
+      "confidence": "high",
+      "provenance": "curated-crosswalk",
+      "source_refs": [
+        "mitre-attack",
+        "ttpforge"
+      ]
+    },
+    {
+      "from": "mitre-attack",
+      "to": "vectr",
+      "relation": "behavior-to-measurement",
+      "confidence": "high",
+      "provenance": "curated-crosswalk",
+      "source_refs": [
+        "mitre-attack",
+        "vectr"
+      ]
+    },
+    {
+      "from": "mitre-attack",
+      "to": "attack-flow",
+      "relation": "behavior-to-sequencing",
+      "confidence": "high",
+      "provenance": "curated-crosswalk",
+      "source_refs": [
+        "mitre-attack",
+        "attack-flow"
+      ]
+    },
+    {
+      "from": "mitre-attack",
+      "to": "ctid-adversary-emulation",
+      "relation": "behavior-to-emulation-plan",
+      "confidence": "high",
+      "provenance": "curated-crosswalk",
+      "source_refs": [
+        "mitre-attack",
+        "ctid-adversary-emulation"
+      ]
+    },
+    {
+      "from": "mitre-attack",
+      "to": "mitre-atlas",
+      "relation": "enterprise-to-ai-context-bridge",
+      "confidence": "medium",
+      "provenance": "curated-crosswalk",
+      "source_refs": [
+        "mitre-attack",
+        "mitre-atlas"
+      ]
+    },
+    {
+      "from": "atomic-red-team",
+      "to": "splunk-attack-range",
+      "relation": "simulation-to-telemetry",
+      "confidence": "high",
+      "provenance": "curated-crosswalk",
+      "source_refs": [
+        "atomic-red-team",
+        "splunk-attack-range"
+      ]
+    },
+    {
+      "from": "openaev",
+      "to": "mitre-attack",
+      "relation": "validation-to-behavior",
+      "confidence": "high",
+      "provenance": "curated-crosswalk",
+      "source_refs": [
+        "openaev",
+        "mitre-attack"
+      ]
+    },
+    {
+      "from": "openaev",
+      "to": "vectr",
+      "relation": "validation-to-measurement",
+      "confidence": "medium",
+      "provenance": "curated-crosswalk",
+      "source_refs": [
+        "openaev",
+        "vectr"
+      ]
+    },
+    {
+      "from": "mitre-atlas",
+      "to": "pyrit",
+      "relation": "ai-threat-model-to-assessment",
+      "confidence": "high",
+      "provenance": "curated-crosswalk",
+      "source_refs": [
+        "mitre-atlas",
+        "pyrit"
+      ]
+    },
+    {
+      "from": "mitre-atlas",
+      "to": "garak",
+      "relation": "ai-threat-model-to-evaluation",
+      "confidence": "high",
+      "provenance": "curated-crosswalk",
+      "source_refs": [
+        "mitre-atlas",
+        "garak"
+      ]
+    },
+    {
+      "from": "mitre-atlas",
+      "to": "owasp-genai",
+      "relation": "ai-threat-model-to-application-risk",
+      "confidence": "medium",
+      "provenance": "curated-crosswalk",
+      "source_refs": [
+        "mitre-atlas",
+        "owasp-genai"
+      ]
+    },
+    {
+      "from": "mitre-atlas",
+      "to": "nist-ai-rmf-genai",
+      "relation": "ai-threat-model-to-risk-governance",
+      "confidence": "medium",
+      "provenance": "curated-crosswalk",
+      "source_refs": [
+        "mitre-atlas",
+        "nist-ai-rmf-genai"
+      ]
+    },
+    {
+      "from": "owasp-genai",
+      "to": "pyrit",
+      "relation": "application-risk-to-assessment",
+      "confidence": "medium",
+      "provenance": "curated-crosswalk",
+      "source_refs": [
+        "owasp-genai",
+        "pyrit"
+      ]
+    },
+    {
+      "from": "mitre-d3fend",
+      "to": "sigma",
+      "relation": "countermeasure-to-detection-context",
+      "confidence": "medium",
+      "provenance": "curated-crosswalk",
+      "source_refs": [
+        "mitre-d3fend",
+        "sigma"
+      ]
+    },
+    {
+      "from": "sigma",
+      "to": "velociraptor",
+      "relation": "detection-to-investigation",
+      "confidence": "medium",
+      "provenance": "curated-crosswalk",
+      "source_refs": [
+        "sigma",
+        "velociraptor"
+      ]
+    },
+    {
+      "from": "bloodhound",
+      "to": "azurehound",
+      "relation": "graph-to-data-collection",
+      "confidence": "high",
+      "provenance": "curated-crosswalk",
+      "source_refs": [
+        "bloodhound",
+        "azurehound"
+      ]
+    },
+    {
+      "from": "bloodhound",
+      "to": "roadtools",
+      "relation": "identity-graph-to-research",
+      "confidence": "medium",
+      "provenance": "curated-crosswalk",
+      "source_refs": [
+        "bloodhound",
+        "roadtools"
+      ]
+    },
+    {
+      "from": "cloudfox",
+      "to": "stratus-red-team",
+      "relation": "discovery-to-validation",
+      "confidence": "medium",
+      "provenance": "curated-crosswalk",
+      "source_refs": [
+        "cloudfox",
+        "stratus-red-team"
+      ]
+    },
+    {
+      "from": "cloudfox",
+      "to": "pacu",
+      "relation": "discovery-to-assessment",
+      "confidence": "medium",
+      "provenance": "curated-crosswalk",
+      "source_refs": [
+        "cloudfox",
+        "pacu"
+      ]
+    },
+    {
+      "from": "kubehound",
+      "to": "stratus-red-team",
+      "relation": "attack-path-to-validation",
+      "confidence": "medium",
+      "provenance": "curated-crosswalk",
+      "source_refs": [
+        "kubehound",
+        "stratus-red-team"
+      ]
+    },
+    {
+      "from": "microburst",
+      "to": "stormspotter",
+      "relation": "azure-assessment-to-graph-context",
+      "confidence": "medium",
+      "provenance": "curated-crosswalk",
+      "source_refs": [
+        "microburst",
+        "stormspotter"
+      ]
+    },
+    {
+      "from": "tiber-eu",
+      "to": "attack-flow",
+      "relation": "threat-led-scenario-modeling",
+      "confidence": "high",
+      "provenance": "curated-crosswalk",
+      "source_refs": [
+        "tiber-eu",
+        "attack-flow"
+      ]
+    },
+    {
+      "from": "cbest",
+      "to": "attack-flow",
+      "relation": "threat-led-scenario-modeling",
+      "confidence": "high",
+      "provenance": "curated-crosswalk",
+      "source_refs": [
+        "cbest",
+        "attack-flow"
+      ]
+    },
+    {
+      "from": "crest-tlpt",
+      "to": "attack-flow",
+      "relation": "assurance-to-scenario-modeling",
+      "confidence": "medium",
+      "provenance": "curated-crosswalk",
+      "source_refs": [
+        "crest-tlpt",
+        "attack-flow"
+      ]
+    },
+    {
+      "from": "tiber-eu",
+      "to": "ctid-adversary-emulation",
+      "relation": "threat-led-to-emulation-planning",
+      "confidence": "medium",
+      "provenance": "curated-crosswalk",
+      "source_refs": [
+        "tiber-eu",
+        "ctid-adversary-emulation"
+      ]
+    },
+    {
+      "from": "infection-monkey",
+      "to": "mitre-attack",
+      "relation": "emulation-to-behavior",
+      "confidence": "high",
+      "provenance": "curated-crosswalk",
+      "source_refs": [
+        "infection-monkey",
+        "mitre-attack"
+      ]
+    },
+    {
+      "from": "realm",
+      "to": "mitre-attack",
+      "relation": "emulation-to-behavior",
+      "confidence": "high",
+      "provenance": "curated-crosswalk",
+      "source_refs": [
+        "realm",
+        "mitre-attack"
+      ]
+    },
+    {
+      "from": "owasp-mastg",
+      "to": "mobsf",
+      "relation": "testing-guide-to-assessment-platform",
+      "confidence": "medium",
+      "provenance": "curated-crosswalk",
+      "source_refs": [
+        "owasp-mastg",
+        "mobsf"
+      ]
+    },
+    {
+      "from": "mobsf",
+      "to": "frida",
+      "relation": "static-dynamic-to-instrumentation",
+      "confidence": "medium",
+      "provenance": "curated-crosswalk",
+      "source_refs": [
+        "mobsf",
+        "frida"
+      ]
+    },
+    {
+      "from": "owasp-iot-istg",
+      "to": "expliot",
+      "relation": "testing-guide-to-assessment-framework",
+      "confidence": "medium",
+      "provenance": "curated-crosswalk",
+      "source_refs": [
+        "owasp-iot-istg",
+        "expliot"
+      ]
+    },
+    {
+      "from": "owasp-iot-istg",
+      "to": "routersploit",
+      "relation": "testing-guide-to-embedded-assessment",
+      "confidence": "medium",
+      "provenance": "curated-crosswalk",
+      "source_refs": [
+        "owasp-iot-istg",
+        "routersploit"
+      ]
+    },
+    {
+      "from": "owasp-asvs",
+      "to": "burp-suite",
+      "relation": "standard-to-assessment-platform",
+      "confidence": "high",
+      "provenance": "curated-crosswalk",
+      "source_refs": [
+        "owasp-asvs",
+        "burp-suite"
+      ]
+    },
+    {
+      "from": "owasp-asvs",
+      "to": "owasp-zap",
+      "relation": "standard-to-assessment-platform",
+      "confidence": "high",
+      "provenance": "curated-crosswalk",
+      "source_refs": [
+        "owasp-asvs",
+        "owasp-zap"
+      ]
+    },
+    {
+      "from": "owasp-api-top10",
+      "to": "burp-suite",
+      "relation": "risk-model-to-assessment-platform",
+      "confidence": "high",
+      "provenance": "curated-crosswalk",
+      "source_refs": [
+        "owasp-api-top10",
+        "burp-suite"
+      ]
+    },
+    {
+      "from": "owasp-api-top10",
+      "to": "owasp-zap",
+      "relation": "risk-model-to-assessment-platform",
+      "confidence": "high",
+      "provenance": "curated-crosswalk",
+      "source_refs": [
+        "owasp-api-top10",
+        "owasp-zap"
+      ]
+    },
+    {
+      "from": "owasp-samm",
+      "to": "nist-ssdf",
+      "relation": "maturity-model-to-secure-development",
+      "confidence": "medium",
+      "provenance": "curated-crosswalk",
+      "source_refs": [
+        "owasp-samm",
+        "nist-ssdf"
+      ]
+    },
+    {
+      "from": "owasp-masvs",
+      "to": "owasp-mastg",
+      "relation": "verification-standard-to-testing-guide",
+      "confidence": "high",
+      "provenance": "curated-crosswalk",
+      "source_refs": [
+        "owasp-masvs",
+        "owasp-mastg"
+      ]
+    },
+    {
+      "from": "owasp-isvs",
+      "to": "owasp-iot-istg",
+      "relation": "verification-standard-to-testing-guide",
+      "confidence": "high",
+      "provenance": "curated-crosswalk",
+      "source_refs": [
+        "owasp-isvs",
+        "owasp-iot-istg"
+      ]
+    },
+    {
+      "from": "nist-ssdf",
+      "to": "semgrep",
+      "relation": "secure-development-to-static-analysis",
+      "confidence": "medium",
+      "provenance": "curated-crosswalk",
+      "source_refs": [
+        "nist-ssdf",
+        "semgrep"
+      ]
+    },
+    {
+      "from": "nist-ssdf",
+      "to": "slsa",
+      "relation": "secure-development-to-supply-chain-assurance",
+      "confidence": "medium",
+      "provenance": "curated-crosswalk",
+      "source_refs": [
+        "nist-ssdf",
+        "slsa"
+      ]
+    },
+    {
+      "from": "slsa",
+      "to": "trivy",
+      "relation": "supply-chain-assurance-to-artifact-assessment",
+      "confidence": "medium",
+      "provenance": "curated-crosswalk",
+      "source_refs": [
+        "slsa",
+        "trivy"
+      ]
+    },
+    {
+      "from": "slsa",
+      "to": "openssf-scorecard",
+      "relation": "supply-chain-assurance-to-project-posture",
+      "confidence": "medium",
+      "provenance": "curated-crosswalk",
+      "source_refs": [
+        "slsa",
+        "openssf-scorecard"
+      ]
+    },
+    {
+      "from": "csa-ccm",
+      "to": "prowler",
+      "relation": "cloud-control-to-assessment",
+      "confidence": "medium",
+      "provenance": "curated-crosswalk",
+      "source_refs": [
+        "csa-ccm",
+        "prowler"
+      ]
+    },
+    {
+      "from": "csa-ccm",
+      "to": "scoutsuite",
+      "relation": "cloud-control-to-assessment",
+      "confidence": "medium",
+      "provenance": "curated-crosswalk",
+      "source_refs": [
+        "csa-ccm",
+        "scoutsuite"
+      ]
+    },
+    {
+      "from": "mitre-cwe",
+      "to": "semgrep",
+      "relation": "weakness-model-to-static-analysis",
+      "confidence": "medium",
+      "provenance": "curated-crosswalk",
+      "source_refs": [
+        "mitre-cwe",
+        "semgrep"
+      ]
+    },
+    {
+      "from": "mitre-capec",
+      "to": "mitre-attack",
+      "relation": "attack-pattern-to-behavior",
+      "confidence": "high",
+      "provenance": "curated-crosswalk",
+      "source_refs": [
+        "mitre-capec",
+        "mitre-attack"
+      ]
+    },
+    {
+      "from": "mitre-car",
+      "to": "zeek",
+      "relation": "analytics-to-network-telemetry",
+      "confidence": "medium",
+      "provenance": "curated-crosswalk",
+      "source_refs": [
+        "mitre-car",
+        "zeek"
+      ]
+    },
+    {
+      "from": "mitre-car",
+      "to": "osquery",
+      "relation": "analytics-to-endpoint-telemetry",
+      "confidence": "medium",
+      "provenance": "curated-crosswalk",
+      "source_refs": [
+        "mitre-car",
+        "osquery"
+      ]
+    },
+    {
+      "from": "ocsf",
+      "to": "zeek",
+      "relation": "schema-to-network-telemetry",
+      "confidence": "medium",
+      "provenance": "curated-crosswalk",
+      "source_refs": [
+        "ocsf",
+        "zeek"
+      ]
+    },
+    {
+      "from": "ocsf",
+      "to": "osquery",
+      "relation": "schema-to-endpoint-telemetry",
+      "confidence": "medium",
+      "provenance": "curated-crosswalk",
+      "source_refs": [
+        "ocsf",
+        "osquery"
+      ]
+    },
+    {
+      "from": "cis-controls",
+      "to": "falco",
+      "relation": "safeguard-to-runtime-detection",
+      "confidence": "medium",
+      "provenance": "curated-crosswalk",
+      "source_refs": [
+        "cis-controls",
+        "falco"
+      ]
+    },
+    {
+      "from": "cis-controls",
+      "to": "suricata",
+      "relation": "safeguard-to-network-detection",
+      "confidence": "medium",
+      "provenance": "curated-crosswalk",
+      "source_refs": [
+        "cis-controls",
+        "suricata"
+      ]
+    },
+    {
+      "from": "first-cvss",
+      "to": "first-epss",
+      "relation": "severity-to-exploitation-likelihood-context",
+      "confidence": "medium",
+      "provenance": "curated-crosswalk",
+      "source_refs": [
+        "first-cvss",
+        "first-epss"
+      ]
+    },
+    {
+      "from": "nist-sp-800-207",
+      "to": "bloodhound",
+      "relation": "zero-trust-to-identity-attack-path-analysis",
+      "confidence": "medium",
+      "provenance": "curated-crosswalk",
+      "source_refs": [
+        "nist-sp-800-207",
+        "bloodhound"
+      ]
+    },
+    {
+      "from": "nist-csf-2",
+      "to": "mitre-attack",
+      "relation": "risk-framework-to-threat-behavior-context",
+      "confidence": "medium",
+      "provenance": "curated-crosswalk",
+      "source_refs": [
+        "nist-csf-2",
+        "mitre-attack"
+      ]
+    },
+    {
+      "from": "openssf-scorecard",
+      "to": "checkov",
+      "relation": "project-posture-to-iac-assessment",
+      "confidence": "medium",
+      "provenance": "curated-crosswalk",
+      "source_refs": [
+        "openssf-scorecard",
+        "checkov"
+      ]
+    },
+    {
+      "from": "oasis-stix-2-1",
+      "to": "oasis-taxii-2-1",
+      "relation": "intelligence-model-to-transport",
+      "confidence": "high",
+      "provenance": "curated-crosswalk",
+      "source_refs": [
+        "oasis-stix-2-1",
+        "oasis-taxii-2-1"
+      ]
+    },
+    {
+      "from": "mitre-attack",
+      "to": "oasis-stix-2-1",
+      "relation": "behavior-model-to-cti-representation",
+      "confidence": "high",
+      "provenance": "curated-crosswalk",
+      "source_refs": [
+        "mitre-attack",
+        "oasis-stix-2-1"
+      ]
+    },
+    {
+      "from": "misp-galaxy",
+      "to": "oasis-stix-2-1",
+      "relation": "knowledge-model-to-cti-representation",
+      "confidence": "medium",
+      "provenance": "curated-crosswalk",
+      "source_refs": [
+        "misp-galaxy",
+        "oasis-stix-2-1"
+      ]
+    },
+    {
+      "from": "misp-galaxy",
+      "to": "mitre-attack",
+      "relation": "threat-actor-context-to-behavior-model",
+      "confidence": "high",
+      "provenance": "curated-crosswalk",
+      "source_refs": [
+        "misp-galaxy",
+        "mitre-attack"
+      ]
+    },
+    {
+      "from": "cyber-kill-chain",
+      "to": "mitre-attack",
+      "relation": "intrusion-lifecycle-to-behavior-model",
+      "confidence": "medium",
+      "provenance": "curated-crosswalk",
+      "source_refs": [
+        "cyber-kill-chain",
+        "mitre-attack"
+      ]
+    },
+    {
+      "from": "oasis-cacao-2",
+      "to": "mitre-d3fend",
+      "relation": "playbook-to-defensive-action-context",
+      "confidence": "medium",
+      "provenance": "curated-crosswalk",
+      "source_refs": [
+        "oasis-cacao-2",
+        "mitre-d3fend"
+      ]
+    },
+    {
+      "from": "oasis-cacao-2",
+      "to": "nist-sp-800-61-r3",
+      "relation": "playbook-to-incident-response",
+      "confidence": "high",
+      "provenance": "curated-crosswalk",
+      "source_refs": [
+        "oasis-cacao-2",
+        "nist-sp-800-61-r3"
+      ]
+    },
+    {
+      "from": "veris",
+      "to": "nist-sp-800-61-r3",
+      "relation": "incident-data-to-response-governance",
+      "confidence": "medium",
+      "provenance": "curated-crosswalk",
+      "source_refs": [
+        "veris",
+        "nist-sp-800-61-r3"
+      ]
+    },
+    {
+      "from": "first-tlp-2",
+      "to": "oasis-stix-2-1",
+      "relation": "sharing-marking-to-cti-exchange",
+      "confidence": "high",
+      "provenance": "curated-crosswalk",
+      "source_refs": [
+        "first-tlp-2",
+        "oasis-stix-2-1"
+      ]
+    },
+    {
+      "from": "first-csirt-services",
+      "to": "nist-sp-800-61-r3",
+      "relation": "csirt-services-to-incident-response",
+      "confidence": "high",
+      "provenance": "curated-crosswalk",
+      "source_refs": [
+        "first-csirt-services",
+        "nist-sp-800-61-r3"
+      ]
+    },
+    {
+      "from": "nist-sp-800-160-v2-r1",
+      "to": "cisa-cpg",
+      "relation": "resilience-engineering-to-security-outcomes",
+      "confidence": "medium",
+      "provenance": "curated-crosswalk",
+      "source_refs": [
+        "nist-sp-800-160-v2-r1",
+        "cisa-cpg"
+      ]
+    },
+    {
+      "from": "ssvc",
+      "to": "first-epss",
+      "relation": "decision-prioritization-to-exploitation-likelihood",
+      "confidence": "medium",
+      "provenance": "curated-crosswalk",
+      "source_refs": [
+        "ssvc",
+        "first-epss"
+      ]
+    },
+    {
+      "from": "ssvc",
+      "to": "first-cvss",
+      "relation": "decision-prioritization-to-severity-context",
+      "confidence": "medium",
+      "provenance": "curated-crosswalk",
+      "source_refs": [
+        "ssvc",
+        "first-cvss"
+      ]
+    },
+    {
+      "from": "oasis-csaf-2",
+      "to": "ssvc",
+      "relation": "security-advisory-to-response-prioritization",
+      "confidence": "medium",
+      "provenance": "curated-crosswalk",
+      "source_refs": [
+        "oasis-csaf-2",
+        "ssvc"
+      ]
+    },
+    {
+      "from": "owasp-top10-2025",
+      "to": "owasp-asvs",
+      "relation": "risk-awareness-to-verification-standard",
+      "confidence": "high",
+      "provenance": "curated-crosswalk",
+      "source_refs": [
+        "owasp-top10-2025",
+        "owasp-asvs"
+      ]
+    },
+    {
+      "from": "nist-sp-800-63-4",
+      "to": "nist-sp-800-207",
+      "relation": "digital-identity-to-zero-trust",
+      "confidence": "high",
+      "provenance": "curated-crosswalk",
+      "source_refs": [
+        "nist-sp-800-63-4",
+        "nist-sp-800-207"
+      ]
+    },
+    {
+      "from": "nist-sp-800-63-4",
+      "to": "bloodhound",
+      "relation": "identity-assurance-to-attack-path-context",
+      "confidence": "medium",
+      "provenance": "curated-crosswalk",
+      "source_refs": [
+        "nist-sp-800-63-4",
+        "bloodhound"
+      ]
+    },
+    {
+      "from": "nist-sp-800-161-r1",
+      "to": "nist-ssdf",
+      "relation": "supply-chain-risk-to-secure-development",
+      "confidence": "high",
+      "provenance": "curated-crosswalk",
+      "source_refs": [
+        "nist-sp-800-161-r1",
+        "nist-ssdf"
+      ]
+    },
+    {
+      "from": "nist-sp-800-161-r1",
+      "to": "slsa",
+      "relation": "supply-chain-risk-to-build-provenance",
+      "confidence": "medium",
+      "provenance": "curated-crosswalk",
+      "source_refs": [
+        "nist-sp-800-161-r1",
+        "slsa"
+      ]
+    },
+    {
+      "from": "nist-sp-800-190",
+      "to": "trivy",
+      "relation": "container-guidance-to-workload-assessment",
+      "confidence": "medium",
+      "provenance": "curated-crosswalk",
+      "source_refs": [
+        "nist-sp-800-190",
+        "trivy"
+      ]
+    },
+    {
+      "from": "nist-sp-800-190",
+      "to": "kube-bench",
+      "relation": "container-guidance-to-kubernetes-benchmark",
+      "confidence": "medium",
+      "provenance": "curated-crosswalk",
+      "source_refs": [
+        "nist-sp-800-190",
+        "kube-bench"
+      ]
+    },
+    {
+      "from": "cisa-ztmm-2",
+      "to": "nist-sp-800-207",
+      "relation": "maturity-model-to-zero-trust-architecture",
+      "confidence": "high",
+      "provenance": "curated-crosswalk",
+      "source_refs": [
+        "cisa-ztmm-2",
+        "nist-sp-800-207"
+      ]
+    },
+    {
+      "from": "openssf-osps-baseline",
+      "to": "openssf-scorecard",
+      "relation": "project-baseline-to-repository-assessment",
+      "confidence": "high",
+      "provenance": "curated-crosswalk",
+      "source_refs": [
+        "openssf-osps-baseline",
+        "openssf-scorecard"
+      ]
+    },
+    {
+      "from": "openssf-osps-baseline",
+      "to": "slsa",
+      "relation": "project-baseline-to-supply-chain-assurance",
+      "confidence": "medium",
+      "provenance": "curated-crosswalk",
+      "source_refs": [
+        "openssf-osps-baseline",
+        "slsa"
+      ]
+    },
+    {
+      "from": "owasp-scvs",
+      "to": "nist-ssdf",
+      "relation": "component-verification-to-secure-development",
+      "confidence": "high",
+      "provenance": "curated-crosswalk",
+      "source_refs": [
+        "owasp-scvs",
+        "nist-ssdf"
+      ]
+    },
+    {
+      "from": "csa-security-guidance-v5",
+      "to": "csa-ccm",
+      "relation": "cloud-guidance-to-control-matrix",
+      "confidence": "high",
+      "provenance": "curated-crosswalk",
+      "source_refs": [
+        "csa-security-guidance-v5",
+        "csa-ccm"
+      ]
+    },
+    {
+      "from": "etsi-en-303-645",
+      "to": "owasp-isvs",
+      "relation": "consumer-iot-to-iot-verification",
+      "confidence": "medium",
+      "provenance": "curated-crosswalk",
+      "source_refs": [
+        "etsi-en-303-645",
+        "owasp-isvs"
+      ]
+    },
+    {
+      "from": "iso-iec-27001-2022",
+      "to": "iso-iec-27005-2022",
+      "relation": "isms-to-risk-management",
+      "confidence": "high",
+      "provenance": "curated-crosswalk",
+      "source_refs": [
+        "iso-iec-27001-2022",
+        "iso-iec-27005-2022"
+      ]
+    },
+    {
+      "from": "iso-iec-27001-2022",
+      "to": "nist-csf-2",
+      "relation": "isms-to-cyber-risk-framework",
+      "confidence": "medium",
+      "provenance": "curated-crosswalk",
+      "source_refs": [
+        "iso-iec-27001-2022",
+        "nist-csf-2"
+      ]
+    }
+  ]
+}

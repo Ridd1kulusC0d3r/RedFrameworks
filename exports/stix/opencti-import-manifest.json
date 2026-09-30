@@ -1,0 +1,7 @@
+{
+  "format": "STIX 2.1",
+  "consumer": "OpenCTI-compatible STIX import pipeline",
+  "generated_sha256": "0763722f7119d3727bea1f11f1ba346fdcb509ff3eac7b64428816c5e7cb3b72",
+  "objects": 286,
+  "bundle_file": "redframeworks-stix-2.1.json"
+}

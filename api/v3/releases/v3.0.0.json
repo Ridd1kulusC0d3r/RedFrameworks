@@ -1,0 +1,30 @@
+{
+  "version": "3.0.0",
+  "date": "2026-09-29",
+  "codename": "Knowledge Graph",
+  "status": "release-manifest",
+  "artifacts": [
+    "frameworks.yaml",
+    "catalog.yaml",
+    "relationships.yaml",
+    "schemas/",
+    "site/api/",
+    "STIX 2.1 bundle",
+    "OpenCTI import manifest",
+    "examples/"
+  ],
+  "capabilities": [
+    "schema validation",
+    "entity pages",
+    "static API",
+    "knowledge graph",
+    "provenance score",
+    "upstream lifecycle checks",
+    "comparison",
+    "CSV/JSON export",
+    "EN/PT/ES presentation",
+    "evidence engineering",
+    "versioned release automation"
+  ],
+  "note": "A GitHub Release is created automatically when a v* tag is pushed."
+}

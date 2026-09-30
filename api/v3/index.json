@@ -1,0 +1,38 @@
+{
+  "api": "RedFrameworks Static API",
+  "current": "v3",
+  "supported": [
+    "v1",
+    "v2",
+    "v3"
+  ],
+  "updated": "2026-09-30",
+  "counts": {
+    "entries": 196,
+    "frameworks": 62,
+    "tools": 134,
+    "books": 10,
+    "certifications": 13,
+    "learning_paths": 7,
+    "adversaries": 42,
+    "intelligence_sources": 13,
+    "emulation_plans": 13,
+    "not_verified": 79,
+    "relationships": 89,
+    "techniques": 2
+  },
+  "endpoints": {
+    "catalog": "catalog.json",
+    "relationships": "relationships.json",
+    "frameworks": "frameworks.json",
+    "resources": "resources.json",
+    "learning_paths": "learning-paths.json",
+    "adversaries": "adversaries.json",
+    "intelligence_sources": "intelligence-sources.json",
+    "emulation_plans": "emulation-plans.json",
+    "verification_queue": "verification-queue.json",
+    "techniques": "techniques.json",
+    "standards": "standards.json",
+    "successors": "successors.json"
+  }
+}

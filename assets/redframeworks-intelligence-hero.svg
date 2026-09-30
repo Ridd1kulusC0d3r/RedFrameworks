@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="420" viewBox="0 0 1400 420">
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#080a0f"/><stop offset="1" stop-color="#121a26"/></linearGradient>
+  <linearGradient id="r" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#f24861"/><stop offset="1" stop-color="#ff8a9c"/></linearGradient>
+  <filter id="glow"><feGaussianBlur stdDeviation="8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+</defs>
+<rect width="1400" height="420" rx="28" fill="url(#bg)"/>
+<g stroke="#253041" opacity=".55"><path d="M0 70H1400M0 140H1400M0 210H1400M0 280H1400M0 350H1400"/><path d="M140 0V420M280 0V420M420 0V420M560 0V420M700 0V420M840 0V420M980 0V420M1120 0V420M1260 0V420"/></g>
+<circle cx="1135" cy="100" r="110" fill="#f24861" opacity=".07"/>
+<circle cx="1135" cy="100" r="70" fill="none" stroke="#f24861" opacity=".16"/>
+<text x="70" y="82" fill="#f24861" font-family="monospace" font-size="18" font-weight="700" letter-spacing="3">REDFRAMEWORKS · V5.1</text>
+<text x="70" y="158" fill="#f6f8fb" font-family="Arial,Helvetica,sans-serif" font-size="56" font-weight="800">OffSec Intelligence</text>
+<text x="70" y="216" fill="#8e99a8" font-family="Arial,Helvetica,sans-serif" font-size="28">Frameworks · Tools · Adversaries · Evidence · Research</text>
+<g font-family="monospace" font-size="15">
+  <rect x="70" y="275" width="195" height="48" rx="10" fill="#151d29" stroke="#344155"/><text x="92" y="305" fill="#63d89a">THREAT INTELLIGENCE</text>
+  <rect x="280" y="275" width="150" height="48" rx="10" fill="#151d29" stroke="#344155"/><text x="307" y="305" fill="#79b9ff">KNOWLEDGE GRAPH</text>
+  <rect x="445" y="275" width="150" height="48" rx="10" fill="#151d29" stroke="#344155"/><text x="480" y="305" fill="#efbd67">VALIDATION</text>
+  <rect x="610" y="275" width="145" height="48" rx="10" fill="#151d29" stroke="#344155"/><text x="648" y="305" fill="#a997ff">EVIDENCE</text>
+</g>
+<g transform="translate(960 175)">
+  <circle r="70" fill="#0c1119" stroke="url(#r)" stroke-width="3" filter="url(#glow)"/>
+  <circle r="45" fill="none" stroke="#344155" stroke-width="2"/>
+  <path d="M-115 0H-70M70 0H115M0-115V-70M0 70V115" stroke="#f24861" stroke-width="2"/>
+  <path d="M-48-48L-88-88M48-48L88-88M48 48L88 88M-48 48L-88 88" stroke="#445269"/>
+  <text x="-28" y="7" fill="#fff" font-family="monospace" font-size="22" font-weight="800">RF</text>
+</g>
+<g transform="translate(1160 168)" font-family="monospace">
+  <text x="0" y="0" fill="#8e99a8" font-size="14">THREAT</text><text x="0" y="26" fill="#f6f8fb" font-size="18">→ BEHAVIOR</text>
+  <text x="0" y="58" fill="#f6f8fb" font-size="18">→ VALIDATION</text><text x="0" y="90" fill="#f6f8fb" font-size="18">→ DETECTION</text>
+  <text x="0" y="122" fill="#f6f8fb" font-size="18">→ EVIDENCE</text><text x="0" y="154" fill="#63d89a" font-size="18">→ RETEST</text>
+</g>
+</svg>

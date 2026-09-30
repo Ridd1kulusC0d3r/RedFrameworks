@@ -1,0 +1,33 @@
+{
+  "version": "4.0.0",
+  "date": "2026-09-29",
+  "codename": "Continuous Intelligence",
+  "status": "release-manifest",
+  "catalog_policy": {
+    "research_candidates_visible": true,
+    "unverified_status": "not-verified",
+    "unverified_evidence_tier": "D",
+    "hidden_watchlist": false
+  },
+  "capabilities": [
+    "standards intelligence",
+    "primary-source version watcher",
+    "successor and deprecation registry",
+    "relationship provenance",
+    "ATT&CK-D3FEND defensive examples",
+    "AI security crosswalk",
+    "scorecard aggregation",
+    "retest regression detection",
+    "evidence maturity trends",
+    "reproducible snapshots",
+    "semantic release diffs",
+    "Static API v2",
+    "OpenCTI interoperability",
+    "Python/TypeScript/shell consumers",
+    "redesigned GitHub Pages"
+  ],
+  "compatibility": {
+    "api_v1": true,
+    "api_v2": "current"
+  }
+}

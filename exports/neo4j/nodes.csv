@@ -1,0 +1,197 @@
+id:ID,name,:LABEL,status,type,domains:string[],url
+ptes,Penetration Testing Execution Standard,Framework,verified,methodology,enterprise,https://www.pentest-standard.org/
+nist-sp-800-115,NIST SP 800-115,Framework,verified,assessment-guidance,enterprise,https://csrc.nist.gov/pubs/sp/800/115/final
+owasp-wstg,OWASP Web Security Testing Guide,Framework,verified,domain-testing-guide,web,https://wstg.owasp.org/
+owasp-mastg,OWASP Mobile Application Security Testing Guide,Framework,verified,domain-testing-guide,mobile,https://mas.owasp.org/MASTG/
+owasp-iot-istg,OWASP IoT Security Testing Guide,Framework,verified,domain-testing-guide,iot;embedded,https://owasp.org/projects/iot-security-testing-guide
+mitre-attack,MITRE ATT&CK,Framework,verified,knowledge-base,enterprise;cloud;mobile,https://attack.mitre.org/
+mitre-atlas,MITRE ATLAS,Framework,verified,knowledge-base,ai-genai,https://atlas.mitre.org/
+mitre-d3fend,MITRE D3FEND,Framework,verified,defensive-knowledge-base,enterprise;detection,https://d3fend.mitre.org/
+attack-flow,Attack Flow,Framework,verified,behavior-model,enterprise;cloud,https://attackflow.org/
+ctid-adversary-emulation,CTID Adversary Emulation Library,Framework,verified,emulation-library,enterprise,https://ctid.mitre.org/resources/adversary-emulation-library/
+tiber-eu,TIBER-EU,Framework,verified,threat-led-testing-framework,regulated;financial,https://www.ecb.europa.eu/paym/cyber-resilience/tiber-eu/html/index.en.html
+cbest,CBEST,Framework,verified,threat-led-testing-framework,regulated;financial;uk,https://www.bankofengland.co.uk/financial-stability/operational-resilience-of-the-financial-sector/cbest-threat-intelligence-led-assessments-implementation-guide
+crest-tlpt,CREST Threat-Led Penetration Testing,Framework,verified,assurance-framework,enterprise;regulated,https://www.crest-approved.org/cyber-service-categories/red-teaming/
+mitre-engage,MITRE Engage,Framework,verified,adversary-engagement-framework,enterprise;deception,https://engage.mitre.org/
+owasp-genai,OWASP GenAI Security Project,Framework,verified,application-security-guidance,ai-genai,https://genai.owasp.org/
+nist-ai-rmf-genai,NIST AI RMF Generative AI Profile,Framework,verified,risk-management-guidance,ai-genai,https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-generative-artificial-intelligence
+atomic-red-team,Atomic Red Team,Framework,verified,control-validation,enterprise;detection,https://github.com/redcanaryco/atomic-red-team
+mitre-caldera,MITRE CALDERA,Framework,verified,emulation-automation,enterprise,https://caldera.mitre.org/
+owasp-asvs,OWASP Application Security Verification Standard,Framework,verified,application-security-standard,web;application-security;secure-development,https://owasp.org/www-project-application-security-verification-standard/
+owasp-samm,OWASP Software Assurance Maturity Model,Framework,verified,software-security-maturity-model,application-security;secure-development;governance,https://owasp.org/www-project-samm/
+owasp-api-top10,OWASP API Security Top 10,Framework,verified,application-risk-framework,api;web;application-security,https://owasp.org/www-project-api-security/
+owasp-masvs,OWASP Mobile Application Security Verification Standard,Framework,verified,mobile-security-standard,mobile;android;ios,https://mas.owasp.org/MASVS/
+owasp-isvs,OWASP IoT Security Verification Standard,Framework,verified,iot-security-standard,iot;embedded;product-security,https://owasp.org/www-project-iot-security-verification-standard/
+nist-csf-2,NIST Cybersecurity Framework 2.0,Framework,verified,cybersecurity-risk-framework,enterprise;governance;risk-management,https://www.nist.gov/cyberframework
+nist-sp-800-53-r5,NIST SP 800-53 Rev. 5,Framework,verified,security-control-catalog,enterprise;governance;controls,https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final
+nist-sp-800-207,NIST SP 800-207 Zero Trust Architecture,Framework,verified,security-architecture-framework,identity;enterprise;zero-trust,https://csrc.nist.gov/pubs/sp/800/207/final
+nist-ssdf,NIST Secure Software Development Framework,Framework,verified,secure-development-framework,secure-development;software-supply-chain;application-security,https://csrc.nist.gov/pubs/sp/800/218/final
+cis-controls,CIS Critical Security Controls,Framework,verified,security-control-framework,enterprise;defense;governance,https://www.cisecurity.org/controls/v8-1
+csa-ccm,CSA Cloud Controls Matrix,Framework,verified,cloud-control-framework,cloud;governance;assurance,https://cloudsecurityalliance.org/research/cloud-controls-matrix
+mitre-capec,MITRE CAPEC,Framework,verified,attack-pattern-knowledge-base,application-security;threat-modeling;software-security,https://capec.mitre.org/
+mitre-cwe,MITRE CWE,Framework,verified,weakness-knowledge-base,application-security;software-security;hardware-security,https://cwe.mitre.org/
+mitre-car,MITRE Cyber Analytics Repository,Framework,verified,detection-analytics-knowledge-base,detection;threat-hunting;enterprise,https://car.mitre.org/
+first-cvss,FIRST Common Vulnerability Scoring System,Framework,verified,vulnerability-scoring-framework,vulnerability-management;risk;product-security,https://www.first.org/cvss/v4.0/
+first-epss,FIRST Exploit Prediction Scoring System,Framework,verified,vulnerability-prioritization-model,vulnerability-management;threat-intelligence;risk,https://www.first.org/epss/
+nist-nice,NIST NICE Workforce Framework for Cybersecurity,Framework,verified,workforce-framework,workforce;education;governance,https://csrc.nist.gov/pubs/sp/800/181/r1/final
+slsa,SLSA,Framework,verified,software-supply-chain-framework,software-supply-chain;secure-development;provenance,https://slsa.dev/spec/v1.2/
+ocsf,Open Cybersecurity Schema Framework,Framework,verified,security-data-schema,detection;telemetry;data-engineering,https://ocsf.io/
+openssf-scorecard,OpenSSF Scorecard,Framework,verified,software-supply-chain-assessment,software-supply-chain;open-source;secure-development,https://openssf.org/scorecard/
+oasis-stix-2-1,OASIS STIX 2.1,Framework,verified,threat-intelligence-data-model,threat-intelligence;information-sharing;interoperability,https://docs.oasis-open.org/cti/stix/v2.1/stix-v2.1.html
+oasis-taxii-2-1,OASIS TAXII 2.1,Framework,verified,threat-intelligence-transport-standard,threat-intelligence;information-sharing;interoperability,https://docs.oasis-open.org/cti/taxii/v2.1/taxii-v2.1.html
+oasis-cacao-2,OASIS CACAO Security Playbooks,Framework,verified,security-playbook-standard,incident-response;orchestration;threat-intelligence,https://docs.oasis-open.org/cacao/security-playbooks/v2.0/security-playbooks-v2.0.html
+first-tlp-2,FIRST Traffic Light Protocol,Framework,verified,information-sharing-standard,threat-intelligence;information-sharing;csirt,https://www.first.org/tlp/
+first-csirt-services,FIRST CSIRT Services Framework,Framework,verified,incident-response-services-framework,incident-response;csirt;operations,https://www.first.org/standards/frameworks/csirts/csirt_services_framework_v2-1
+veris,VERIS,Framework,verified,incident-data-framework,incident-response;risk;data-modeling;threat-intelligence,https://verisframework.org/
+nist-sp-800-61-r3,NIST SP 800-61 Rev. 3,Framework,verified,incident-response-guidance,incident-response;governance;csf,https://csrc.nist.gov/pubs/sp/800/61/r3/final
+nist-sp-800-160-v2-r1,NIST SP 800-160 Vol. 2 Rev. 1,Framework,verified,cyber-resilience-engineering,resilience;security-engineering;advanced-threats,https://csrc.nist.gov/pubs/sp/800/160/v2/r1/final
+cisa-cpg,CISA Cross-Sector Cybersecurity Performance Goals,Framework,verified,security-outcomes-framework,critical-infrastructure;defense;governance,https://www.cisa.gov/cybersecurity-performance-goals
+cyber-kill-chain,Cyber Kill Chain,Framework,verified,intrusion-lifecycle-model,threat-intelligence;adversary-analysis;detection,https://www.lockheedmartin.com/en-us/capabilities/cyber/cyber-kill-chain.html
+misp-galaxy,MISP Galaxy,Framework,verified,threat-intelligence-knowledge-model,threat-intelligence;adversary-analysis;information-sharing,https://www.misp-project.org/galaxy.html
+ssvc,Stakeholder-Specific Vulnerability Categorization,Framework,verified,vulnerability-prioritization-framework,vulnerability-management;risk;decision-support,https://certcc.github.io/SSVC/
+oasis-csaf-2,OASIS Common Security Advisory Framework,Framework,verified,security-advisory-standard,vulnerability-management;information-sharing;software-supply-chain,https://docs.oasis-open.org/csaf/csaf/v2.0/csaf-v2.0.html
+owasp-top10-2025,OWASP Top 10:2025,Framework,verified,application-risk-framework,web;application-security;secure-development,https://top10.owasp.org/2025/
+nist-sp-800-63-4,NIST SP 800-63-4 Digital Identity Guidelines,Framework,verified,digital-identity-framework,identity;authentication;federation,https://csrc.nist.gov/pubs/sp/800/63/4/final
+nist-sp-800-161-r1,NIST SP 800-161 Rev. 1,Framework,verified,supply-chain-risk-framework,software-supply-chain;third-party-risk;governance,https://csrc.nist.gov/pubs/sp/800/161/r1/upd1/final
+nist-sp-800-190,NIST SP 800-190 Application Container Security Guide,Framework,verified,container-security-guidance,containers;cloud-native;application-security,https://csrc.nist.gov/pubs/sp/800/190/final
+cisa-ztmm-2,CISA Zero Trust Maturity Model,Framework,verified,zero-trust-maturity-model,zero-trust;identity;devices;network;applications;data,https://www.cisa.gov/sites/default/files/2023-04/zero_trust_maturity_model_v2_508.pdf
+openssf-osps-baseline,OpenSSF Open Source Project Security Baseline,Framework,verified,open-source-security-baseline,open-source;software-supply-chain;secure-development,https://baseline.openssf.org/versions/2026-08-28
+owasp-scvs,OWASP Software Component Verification Standard,Framework,verified,software-supply-chain-standard,software-supply-chain;secure-development;sbom,https://scvs.owasp.org/
+csa-security-guidance-v5,CSA Security Guidance for Cloud Computing,Framework,verified,cloud-security-guidance,cloud;identity;workload-security;incident-response;resilience,https://cloudsecurityalliance.org/artifacts/security-guidance-v5
+etsi-en-303-645,ETSI EN 303 645 Consumer IoT Security,Framework,verified,iot-security-standard,iot;consumer-iot;product-security;privacy,https://www.etsi.org/deliver/etsi_en/303600_303699/303645/03.01.03_60/en_303645v030103p.pdf
+iso-iec-27001-2022,ISO/IEC 27001:2022,Framework,verified,information-security-management-standard,governance;risk-management;enterprise;assurance,https://www.iso.org/standard/27001
+iso-iec-27005-2022,ISO/IEC 27005:2022,Framework,verified,information-security-risk-guidance,risk-management;governance;enterprise,https://www.iso.org/standard/80585.html
+stratus-red-team,Stratus Red Team,Tool,verified,emulation-tool,aws;azure;gcp;entra-id;kubernetes,https://github.com/DataDog/stratus-red-team
+cloudfox,CloudFox,Tool,verified,assessment-tool,aws;azure;gcp,https://github.com/BishopFox/cloudfox
+pacu,Pacu,Tool,verified,assessment-framework,aws,https://github.com/RhinoSecurityLabs/pacu
+azurehound,AzureHound,Tool,verified,data-collector,azure;entra-id;identity,https://github.com/SpecterOps/AzureHound
+kubehound,KubeHound,Tool,verified,attack-path-analysis,kubernetes,https://kubehound.io/
+openaev,OpenAEV,Tool,verified,adversarial-exposure-validation,purple-team;bas;aev;enterprise,https://docs.openaev.io/
+sigma,Sigma,Tool,verified,detection-format,detection;siem,https://sigmahq.io/
+velociraptor,Velociraptor,Tool,verified,dfir-hunting-platform,endpoint;dfir;threat-hunting,https://docs.velociraptor.app/
+mobsf,MobSF,Tool,verified,mobile-assessment-platform,android;ios;mobile,https://github.com/MobSF/Mobile-Security-Framework-MobSF
+frida,Frida,Tool,verified,dynamic-instrumentation,mobile;desktop;reverse-engineering,https://frida.re/
+pyrit,Microsoft PyRIT,Tool,verified,ai-red-team-framework,ai-genai,https://github.com/microsoft/PyRIT
+garak,NVIDIA garak,Tool,verified,ai-assessment-tool,ai-genai,https://github.com/NVIDIA/garak
+sliver,Sliver,Tool,community,operational-platform,adversary-emulation,
+mythic,Mythic,Tool,community,operational-platform,adversary-emulation,
+poshc2,PoshC2,Tool,community,operational-platform,adversary-emulation,https://github.com/nettitude/PoshC2
+cobalt-strike,Cobalt Strike,Tool,commercial,operational-platform,adversary-emulation,
+safebreach,SafeBreach,Tool,commercial,security-validation-platform,bas;purple-team,
+attackiq,AttackIQ,Tool,commercial,security-validation-platform,bas;purple-team,
+cymulate,Cymulate,Tool,commercial,security-validation-platform,bas;exposure-validation,
+pentera,Pentera,Tool,commercial,security-validation-platform,automated-validation,
+picus,Picus Security,Tool,commercial,security-validation-platform,bas;purple-team,
+metasploit-framework,Metasploit Framework,Tool,verified,assessment-framework,enterprise;network;application-security,https://github.com/rapid7/metasploit-framework
+bloodhound,BloodHound,Tool,verified,attack-path-analysis,identity;active-directory;entra-id,https://github.com/SpecterOps/BloodHound
+infection-monkey,Infection Monkey,Tool,verified,adversary-emulation-platform,enterprise;network;security-validation,https://github.com/guardicore/monkey
+ttpforge,TTPForge,Tool,verified,attack-simulation-framework,purple-team;detection;enterprise,https://github.com/facebookincubator/TTPForge
+vectr,VECTR,Tool,verified,purple-team-platform,purple-team;detection;measurement,https://github.com/SecurityRiskAdvisors/VECTR
+splunk-attack-range,Splunk Attack Range,Tool,verified,detection-lab-platform,purple-team;detection;aws;azure;gcp,https://github.com/splunk/attack_range
+realm,Realm,Tool,verified,adversary-emulation-platform,enterprise;adversary-emulation;automation,https://github.com/spellshift/realm
+adaptixc2,AdaptixC2,Tool,verified,operational-platform,adversary-emulation,https://github.com/Adaptix-Framework/AdaptixC2
+empire,Empire,Tool,verified,operational-platform,adversary-emulation;post-exploitation,https://github.com/BC-SECURITY/Empire
+roadtools,ROADtools,Tool,verified,identity-assessment-toolkit,entra-id;azure;identity,https://github.com/dirkjanm/ROADtools
+microburst,MicroBurst,Tool,verified,cloud-assessment-toolkit,azure;cloud,https://github.com/NetSPI/MicroBurst
+stormspotter,Stormspotter,Tool,community,attack-path-analysis,azure;cloud;graph,https://github.com/Azure/Stormspotter
+expliot,EXPLIoT,Tool,verified,iot-assessment-framework,iot;embedded,https://gitlab.com/expliot_framework/expliot
+routersploit,RouterSploit,Tool,community,embedded-assessment-framework,iot;embedded;network,https://github.com/threat9/routersploit
+detectionlab,DetectionLab,Tool,legacy,detection-lab,purple-team;detection;lab,https://github.com/clong/DetectionLab
+havoc,Havoc,Tool,legacy,operational-platform,adversary-emulation,https://github.com/HavocFramework/Havoc
+openart,OpenART,Tool,not-verified,ai-security-candidate,ai-genai;research,
+basilisk,Basilisk,Tool,not-verified,ai-security-candidate,ai-genai;research,
+vigilant,VIGILANT,Tool,not-verified,ai-security-candidate,ai-genai;research,
+autopt,AutoPT,Tool,not-verified,ai-security-candidate,ai-genai;research,
+highflame-red,Highflame RED,Tool,not-verified,ai-security-candidate,ai-genai;research,
+deepteam,DeepTeam,Tool,not-verified,ai-security-candidate,ai-genai;research,
+advent-prompt-pwn,advent-prompt-pwn,Tool,not-verified,ai-security-candidate,ai-genai;research,
+strix,strix,Tool,not-verified,agentic-assessment-candidate,ai-security;security-assessment;automation;research,
+autopwn,autopwn,Tool,not-verified,ai-security-candidate,ai-security;vulnerability-research;automation;research,
+hunterx,HunterX,Tool,not-verified,ai-security-candidate,ai-genai;research,
+vanguard,vanguard,Tool,not-verified,agentic-purple-team-candidate,ai-security;purple-team;detection-validation;research,
+aptsimulator,APTSimulator,Tool,not-verified,adversary-emulation-candidate,adversary-emulation;research,
+laccolith,laccolith,Tool,not-verified,adversary-emulation-research-candidate,adversary-emulation;virtualization;research,
+bear-c2,bear-c2,Tool,not-verified,operational-platform-research-candidate,adversary-emulation;operational-platform;research,
+gloamfire,gloamfire,Tool,not-verified,detection-validation-candidate,purple-team;detection-validation;attack-replay;research,
+woodpecker,Woodpecker,Tool,not-verified,adversary-emulation-candidate,adversary-emulation;research,
+opfor,opfor,Tool,not-verified,adversary-emulation-candidate,adversary-emulation;threat-informed-testing;automation;research,
+bounty-hunter,bounty-hunter,Tool,not-verified,caldera-research-candidate,adversary-emulation;caldera;automation;research,
+temperance,temperance,Tool,not-verified,adversary-emulation-candidate,adversary-emulation;security-validation;research,
+peekaboo,peekaboo,Tool,not-verified,safe-emulation-candidate,adversary-emulation;sandbox;purple-team;research,
+foojank,foojank,Tool,not-verified,operational-platform-candidate,adversary-emulation;operational-platform;research,
+lazyown,LazyOwn,Tool,not-verified,operational-platform-candidate,adversary-emulation;research,
+seersx,SeersX,Tool,not-verified,operational-platform-candidate,adversary-emulation;research,
+cosmos-orbit,Cosmos Orbit,Tool,not-verified,operational-platform-candidate,adversary-emulation;research,
+elaina-c2,Elaina-C2,Tool,not-verified,operational-platform-candidate,adversary-emulation;research,
+wyrm,wyrm,Tool,not-verified,operational-platform-candidate,adversary-emulation;operational-platform;research,
+pexpagent,pexpagent,Tool,not-verified,ai-operational-research-candidate,adversary-emulation;ai-security;automation;research,
+phantomstrike,phantomstrike,Tool,not-verified,operational-platform-candidate,adversary-emulation;operational-platform;research,
+covenant,Covenant,Tool,not-verified,operational-platform-candidate,adversary-emulation;research,
+koadic,Koadic,Tool,not-verified,operational-platform-candidate,adversary-emulation;research,
+silenttrinity,silenttrinity,Tool,not-verified,operational-platform-candidate,adversary-emulation;operational-platform;legacy-review;research,
+pupy,Pupy,Tool,not-verified,operational-platform-candidate,adversary-emulation;research,
+trevorc2,TrevorC2,Tool,not-verified,operational-platform-candidate,adversary-emulation;research,
+dnscat2,DNSCat2,Tool,not-verified,operational-platform-candidate,adversary-emulation;research,
+faction-c2,Faction C2,Tool,not-verified,operational-platform-candidate,adversary-emulation;research,
+redstack,redStack,Tool,not-verified,automation-toolkit-candidate,automation;offensive-security;research,
+suijin,Suijin,Tool,not-verified,automation-toolkit-candidate,automation;offensive-security;research,
+gharf,GHARF,Tool,not-verified,automation-toolkit-candidate,automation;offensive-security;research,
+t3mp3st,T3MP3ST,Tool,not-verified,automation-toolkit-candidate,automation;offensive-security;research,
+hexstrike-redteam,Hexstrike-redteam,Tool,not-verified,automation-toolkit-candidate,automation;offensive-security;research,
+onist-framework,ONIST Framework,Tool,not-verified,automation-toolkit-candidate,automation;offensive-security;research,
+offsec-toolkit,offsec-toolkit,Tool,not-verified,automation-toolkit-candidate,automation;offensive-security;research,
+redguard-suite,RedGuard Suite,Tool,not-verified,automation-toolkit-candidate,automation;offensive-security;research,
+gosecops,GoSecOps,Tool,not-verified,automation-toolkit-candidate,automation;offensive-security;research,
+hos-vortex,hos_vortex,Tool,not-verified,automation-toolkit-candidate,automation;offensive-security;research,
+sandevistan,sandevistan,Tool,not-verified,security-toolkit-candidate,security-assessment;toolkit;automation;research,
+intsploit,intsploit,Tool,not-verified,security-framework-candidate,security-assessment;toolkit;automation;research,
+pentester-playbook,pentester-playbook,Tool,not-verified,methodology-toolkit-candidate,methodology;security-assessment;reference;research,
+arsenal,arsenal,Tool,not-verified,security-reference-candidate,security-assessment;reference;toolkit;research,
+powerzure,PowerZure,Tool,not-verified,cloud-security-candidate,cloud;kubernetes;research,
+kraken,Kraken,Tool,not-verified,cloud-security-candidate,cloud;kubernetes;research,
+ctrsploit,ctrsploit,Tool,not-verified,cloud-security-candidate,cloud;kubernetes;research,
+kubesploit,Kubesploit,Tool,not-verified,cloud-security-candidate,cloud;kubernetes;research,
+redcloudos,RedCloudOS,Tool,not-verified,cloud-security-candidate,cloud;kubernetes;research,
+cptf-arm-edition,cptf-arm-edition,Tool,not-verified,cloud-toolkit-candidate,cloud;arm64;lab-environment;research,
+offensivecloud,OffensiveCloud,Tool,not-verified,cloud-security-candidate,cloud;kubernetes;research,
+cloudtoolkit,cloudtoolkit,Tool,not-verified,cloud-toolkit-candidate,cloud;multi-cloud;security-assessment;research,
+ax-framework,ax-framework,Tool,not-verified,cloud-infrastructure-candidate,cloud;automation;assessment-infrastructure;research,
+secops-chaos,secops-chaos,Tool,not-verified,cloud-security-candidate,cloud;kubernetes;research,
+embedxpl-forge,embedxpl-forge,Tool,not-verified,iot-embedded-candidate,iot;embedded;device-security;research,
+iotptf,iotptf,Tool,not-verified,iot-security-candidate,iot;embedded;firmware;research,
+iothackbot,IoTHackBot,Tool,not-verified,iot-embedded-candidate,iot;embedded;research,
+advanced-iot-exploitation-framework-v2-0,advanced-iot-exploitation-framework-v2-0,Tool,not-verified,iot-embedded-candidate,iot;embedded;device-security;research,
+rtosploit,rtosploit,Tool,not-verified,rtos-security-candidate,iot;embedded;rtos;firmware;research,
+the-360-cyber-shield,The 360 Cyber Shield,Tool,not-verified,purple-team-candidate,purple-team;security-validation;research,
+skyhawk-security-autonomous-purple-team,skyhawk-security-autonomous-purple-team,Tool,not-verified,commercial-purple-team-candidate,cloud;purple-team;security-validation;ai-security;research,
+powersploit,PowerSploit,Tool,not-verified,legacy-review-candidate,legacy-review;research,
+nishang,Nishang,Tool,not-verified,legacy-review-candidate,legacy-review;research,
+sharpsploit,SharpSploit,Tool,not-verified,legacy-review-candidate,legacy-review;research,
+crackmapexec,CrackMapExec,Tool,not-verified,legacy-review-candidate,legacy-review;research,
+nuclei,Nuclei,Tool,verified,template-driven-assessment-tool,web;network;cloud;application-security,https://github.com/projectdiscovery/nuclei
+owasp-zap,OWASP ZAP,Tool,verified,web-assessment-platform,web;api;application-security,https://www.zaproxy.org/
+burp-suite,Burp Suite,Tool,verified,web-assessment-platform,web;api;application-security,https://portswigger.net/burp
+semgrep,Semgrep,Tool,verified,static-analysis-platform,application-security;secure-development;code-analysis,https://semgrep.dev/
+trivy,Trivy,Tool,verified,vulnerability-and-misconfiguration-scanner,containers;kubernetes;cloud-native;software-supply-chain,https://github.com/aquasecurity/trivy
+prowler,Prowler,Tool,verified,cloud-security-assessment,aws;azure;gcp;cloud,https://prowler.com/
+scoutsuite,ScoutSuite,Tool,verified,cloud-security-auditing,aws;azure;gcp;cloud,https://github.com/nccgroup/ScoutSuite
+cartography,Cartography,Tool,verified,security-graph-platform,cloud;identity;attack-path-analysis,https://github.com/lyft/cartography
+osquery,osquery,Tool,verified,endpoint-telemetry-platform,endpoint;telemetry;threat-hunting,https://www.osquery.io/
+falco,Falco,Tool,verified,runtime-detection-platform,cloud-native;containers;kubernetes;detection,https://falco.org/
+zeek,Zeek,Tool,verified,network-security-monitoring,network;telemetry;threat-hunting,https://zeek.org/
+suricata,Suricata,Tool,verified,network-detection-platform,network;ids;detection,https://suricata.io/
+wireshark,Wireshark,Tool,verified,network-analysis-tool,network;protocol-analysis;dfir,https://www.wireshark.org/
+ghidra,Ghidra,Tool,verified,reverse-engineering-platform,reverse-engineering;malware-analysis;software-security,https://github.com/NationalSecurityAgency/ghidra
+yara-x,YARA-X,Tool,verified,pattern-matching-platform,malware-analysis;detection;threat-hunting,https://github.com/VirusTotal/yara-x
+volatility3,Volatility 3,Tool,verified,memory-forensics-framework,dfir;memory-forensics;malware-analysis,https://github.com/volatilityfoundation/volatility3
+checkov,Checkov,Tool,verified,iac-security-scanner,infrastructure-as-code;cloud;secure-development,https://www.checkov.io/
+kube-bench,kube-bench,Tool,verified,kubernetes-benchmark-assessment,kubernetes;cloud-native;configuration,https://github.com/aquasecurity/kube-bench
+maliab,MALIAB,Tool,not-verified,adversary-simulation-research-candidate,adversary-emulation;cti;automation;research,
+aegis-adversary-emulation,AEGIS,Tool,not-verified,autonomous-emulation-research-candidate,adversary-emulation;ai-security;automation;research,
+deepattacker,DeepAttacker,Tool,not-verified,agentic-simulation-research-candidate,adversary-emulation;ai-security;multi-agent;research,
+redamon,redamon,Tool,not-verified,autonomous-security-research-candidate,security-assessment;automation;ai-security;research,
+aibas360,aiBAS360,Tool,not-verified,bas-research-candidate,breach-attack-simulation;purple-team;ai-security;research,
+blindspot-adversary-simulator,BlindSpot,Tool,not-verified,adversary-simulation-research-candidate,security-validation;purple-team;adversary-emulation;research,
+simple-ics-testbed,SIMPLE-ICS Testbed,Tool,not-verified,industrial-security-testbed-candidate,ics;ot;testbed;adversary-emulation;research,
+purple-team-playground,Purple Team Playground,Tool,not-verified,purple-team-testbed-candidate,purple-team;testbed;security-validation;research,
+rust-bucket,Rust Bucket,Tool,not-verified,operational-platform-research-candidate,operational-platform;red-team;research,

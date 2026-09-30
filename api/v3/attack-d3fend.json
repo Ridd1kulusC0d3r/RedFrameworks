@@ -1,0 +1,38 @@
+{
+  "updated": "2026-09-29",
+  "schema_version": "1.0",
+  "mapping_scope": "defensive context examples",
+  "mapping_note": "These are D3FEND inferred defensive relationships for selected ATT&CK techniques, not one-to-one control equivalence.",
+  "examples": [
+    {
+      "attack_id": "T1078",
+      "attack_name": "Valid Accounts",
+      "source": "https://d3fend.mitre.org/offensive-technique/attack/T1078/",
+      "relationship_type": "d3fend-inferred-relationships",
+      "defensive_actions": [
+        "model",
+        "harden",
+        "detect",
+        "isolate",
+        "evict",
+        "restore"
+      ],
+      "use": "Illustrate how an ATT&CK behavior can be connected to defensive concepts without claiming a single perfect mitigation."
+    },
+    {
+      "attack_id": "T1087",
+      "attack_name": "Account Discovery",
+      "source": "https://d3fend.mitre.org/offensive-technique/attack/T1087/",
+      "relationship_type": "d3fend-inferred-relationships",
+      "defensive_actions": [
+        "model",
+        "harden",
+        "detect",
+        "isolate",
+        "evict",
+        "restore"
+      ],
+      "use": "Illustrate defensive observation and hardening context for discovery behavior."
+    }
+  ]
+}

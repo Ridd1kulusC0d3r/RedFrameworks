@@ -1,0 +1,1148 @@
+{
+  "updated": "2026-09-29",
+  "repository": "Ridd1kulusC0d3r/RedFrameworks",
+  "schema_version": "2.0",
+  "frameworks": [
+    {
+      "id": "ptes",
+      "name": "Penetration Testing Execution Standard",
+      "type": "methodology",
+      "domain": [
+        "enterprise"
+      ],
+      "status": "verified",
+      "url": "https://www.pentest-standard.org/",
+      "best_for": [
+        "penetration testing lifecycle",
+        "engagement structure"
+      ]
+    },
+    {
+      "id": "nist-sp-800-115",
+      "name": "NIST SP 800-115",
+      "type": "assessment-guidance",
+      "domain": [
+        "enterprise"
+      ],
+      "status": "verified",
+      "url": "https://csrc.nist.gov/pubs/sp/800/115/final",
+      "best_for": [
+        "formal security assessment programs",
+        "planning and reporting"
+      ]
+    },
+    {
+      "id": "owasp-wstg",
+      "name": "OWASP Web Security Testing Guide",
+      "type": "domain-testing-guide",
+      "domain": [
+        "web"
+      ],
+      "status": "verified",
+      "url": "https://wstg.owasp.org/",
+      "best_for": [
+        "web application testing",
+        "web service testing"
+      ]
+    },
+    {
+      "id": "owasp-mastg",
+      "name": "OWASP Mobile Application Security Testing Guide",
+      "type": "domain-testing-guide",
+      "domain": [
+        "mobile"
+      ],
+      "status": "verified",
+      "url": "https://mas.owasp.org/MASTG/",
+      "best_for": [
+        "mobile application security testing"
+      ]
+    },
+    {
+      "id": "owasp-iot-istg",
+      "name": "OWASP IoT Security Testing Guide",
+      "type": "domain-testing-guide",
+      "domain": [
+        "iot",
+        "embedded"
+      ],
+      "status": "verified",
+      "url": "https://owasp.org/projects/iot-security-testing-guide",
+      "best_for": [
+        "IoT penetration testing methodology",
+        "IoT test cases"
+      ]
+    },
+    {
+      "id": "mitre-attack",
+      "name": "MITRE ATT&CK",
+      "type": "knowledge-base",
+      "domain": [
+        "enterprise",
+        "cloud",
+        "mobile"
+      ],
+      "status": "verified",
+      "url": "https://attack.mitre.org/",
+      "best_for": [
+        "TTP mapping",
+        "threat-informed testing",
+        "detection engineering"
+      ]
+    },
+    {
+      "id": "mitre-atlas",
+      "name": "MITRE ATLAS",
+      "type": "knowledge-base",
+      "domain": [
+        "ai-genai"
+      ],
+      "status": "verified",
+      "url": "https://atlas.mitre.org/",
+      "best_for": [
+        "AI adversary behavior modeling",
+        "AI threat-informed testing"
+      ]
+    },
+    {
+      "id": "mitre-d3fend",
+      "name": "MITRE D3FEND",
+      "type": "defensive-knowledge-base",
+      "domain": [
+        "enterprise",
+        "detection"
+      ],
+      "status": "verified",
+      "url": "https://d3fend.mitre.org/",
+      "best_for": [
+        "countermeasure mapping",
+        "purple-team analysis"
+      ]
+    },
+    {
+      "id": "attack-flow",
+      "name": "Attack Flow",
+      "type": "behavior-model",
+      "domain": [
+        "enterprise",
+        "cloud"
+      ],
+      "status": "verified",
+      "url": "https://attackflow.org/",
+      "best_for": [
+        "multi-step attack paths",
+        "behavior sequencing"
+      ]
+    },
+    {
+      "id": "ctid-adversary-emulation",
+      "name": "CTID Adversary Emulation Library",
+      "type": "emulation-library",
+      "domain": [
+        "enterprise"
+      ],
+      "status": "verified",
+      "url": "https://ctid.mitre.org/resources/adversary-emulation-library/",
+      "best_for": [
+        "intelligence-driven emulation",
+        "full and micro emulation plans"
+      ]
+    },
+    {
+      "id": "tiber-eu",
+      "name": "TIBER-EU",
+      "type": "threat-led-testing-framework",
+      "domain": [
+        "regulated",
+        "financial"
+      ],
+      "status": "verified",
+      "url": "https://www.ecb.europa.eu/paym/cyber-resilience/tiber-eu/html/index.en.html",
+      "best_for": [
+        "threat-intelligence-based ethical red teaming",
+        "DORA-aligned TLPT"
+      ]
+    },
+    {
+      "id": "cbest",
+      "name": "CBEST",
+      "type": "threat-led-testing-framework",
+      "domain": [
+        "regulated",
+        "financial",
+        "uk"
+      ],
+      "status": "verified",
+      "url": "https://www.bankofengland.co.uk/financial-stability/operational-resilience-of-the-financial-sector/cbest-threat-intelligence-led-assessments-implementation-guide",
+      "best_for": [
+        "UK financial-sector intelligence-led testing",
+        "regulator-led resilience assessment"
+      ]
+    },
+    {
+      "id": "crest-tlpt",
+      "name": "CREST Threat-Led Penetration Testing",
+      "type": "assurance-framework",
+      "domain": [
+        "enterprise",
+        "regulated"
+      ],
+      "status": "verified",
+      "url": "https://www.crest-approved.org/cyber-service-categories/red-teaming/",
+      "best_for": [
+        "threat-led assurance",
+        "provider and service quality structure"
+      ]
+    },
+    {
+      "id": "mitre-engage",
+      "name": "MITRE Engage",
+      "type": "adversary-engagement-framework",
+      "domain": [
+        "enterprise",
+        "deception"
+      ],
+      "status": "verified",
+      "url": "https://engage.mitre.org/",
+      "best_for": [
+        "adversary engagement planning",
+        "deception and denial concepts"
+      ]
+    },
+    {
+      "id": "owasp-genai",
+      "name": "OWASP GenAI Security Project",
+      "type": "application-security-guidance",
+      "domain": [
+        "ai-genai"
+      ],
+      "status": "verified",
+      "url": "https://genai.owasp.org/",
+      "best_for": [
+        "GenAI application risk modeling",
+        "LLM risk mitigation"
+      ]
+    },
+    {
+      "id": "nist-ai-rmf-genai",
+      "name": "NIST AI RMF Generative AI Profile",
+      "type": "risk-management-guidance",
+      "domain": [
+        "ai-genai"
+      ],
+      "status": "verified",
+      "url": "https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-generative-artificial-intelligence",
+      "best_for": [
+        "AI governance",
+        "GenAI risk management"
+      ]
+    },
+    {
+      "id": "atomic-red-team",
+      "name": "Atomic Red Team",
+      "type": "control-validation",
+      "domain": [
+        "enterprise",
+        "detection"
+      ],
+      "status": "verified",
+      "url": "https://github.com/redcanaryco/atomic-red-team",
+      "best_for": [
+        "portable ATT&CK-mapped tests",
+        "detection validation"
+      ]
+    },
+    {
+      "id": "mitre-caldera",
+      "name": "MITRE CALDERA",
+      "type": "emulation-automation",
+      "domain": [
+        "enterprise"
+      ],
+      "status": "verified",
+      "url": "https://caldera.mitre.org/",
+      "best_for": [
+        "automated adversary emulation",
+        "repeatable assessment workflows"
+      ]
+    },
+    {
+      "id": "owasp-asvs",
+      "name": "OWASP Application Security Verification Standard",
+      "type": "application-security-standard",
+      "domain": [
+        "web",
+        "application-security",
+        "secure-development"
+      ],
+      "status": "verified",
+      "version": "5.0.0",
+      "url": "https://owasp.org/www-project-application-security-verification-standard/",
+      "best_for": [
+        "application security requirements",
+        "technical control verification",
+        "security testing baselines"
+      ],
+      "evidence_tier": "A",
+      "last_reviewed": "2026-09-29"
+    },
+    {
+      "id": "owasp-samm",
+      "name": "OWASP Software Assurance Maturity Model",
+      "type": "software-security-maturity-model",
+      "domain": [
+        "application-security",
+        "secure-development",
+        "governance"
+      ],
+      "status": "verified",
+      "version": "2.2.0",
+      "url": "https://owasp.org/www-project-samm/",
+      "best_for": [
+        "software security maturity assessment",
+        "secure SDLC improvement",
+        "program measurement"
+      ],
+      "evidence_tier": "A",
+      "last_reviewed": "2026-09-29"
+    },
+    {
+      "id": "owasp-api-top10",
+      "name": "OWASP API Security Top 10",
+      "type": "application-risk-framework",
+      "domain": [
+        "api",
+        "web",
+        "application-security"
+      ],
+      "status": "verified",
+      "version": "2023",
+      "url": "https://owasp.org/www-project-api-security/",
+      "best_for": [
+        "API risk awareness",
+        "API assessment scoping",
+        "API security requirements"
+      ],
+      "evidence_tier": "A",
+      "last_reviewed": "2026-09-29"
+    },
+    {
+      "id": "owasp-masvs",
+      "name": "OWASP Mobile Application Security Verification Standard",
+      "type": "mobile-security-standard",
+      "domain": [
+        "mobile",
+        "android",
+        "ios"
+      ],
+      "status": "verified",
+      "version": "2.1.0",
+      "url": "https://mas.owasp.org/MASVS/",
+      "best_for": [
+        "mobile security requirements",
+        "mobile application assurance",
+        "mobile assessment criteria"
+      ],
+      "evidence_tier": "A",
+      "last_reviewed": "2026-09-29"
+    },
+    {
+      "id": "owasp-isvs",
+      "name": "OWASP IoT Security Verification Standard",
+      "type": "iot-security-standard",
+      "domain": [
+        "iot",
+        "embedded",
+        "product-security"
+      ],
+      "status": "verified",
+      "url": "https://owasp.org/www-project-iot-security-verification-standard/",
+      "best_for": [
+        "IoT security requirements",
+        "embedded-system assurance",
+        "IoT product testing scope"
+      ],
+      "evidence_tier": "A",
+      "last_reviewed": "2026-09-29"
+    },
+    {
+      "id": "nist-csf-2",
+      "name": "NIST Cybersecurity Framework 2.0",
+      "type": "cybersecurity-risk-framework",
+      "domain": [
+        "enterprise",
+        "governance",
+        "risk-management"
+      ],
+      "status": "verified",
+      "version": "2.0",
+      "url": "https://www.nist.gov/cyberframework",
+      "best_for": [
+        "cybersecurity risk governance",
+        "capability mapping",
+        "security program communication"
+      ],
+      "evidence_tier": "A",
+      "last_reviewed": "2026-09-29"
+    },
+    {
+      "id": "nist-sp-800-53-r5",
+      "name": "NIST SP 800-53 Rev. 5",
+      "type": "security-control-catalog",
+      "domain": [
+        "enterprise",
+        "governance",
+        "controls"
+      ],
+      "status": "verified",
+      "version": "Rev. 5 / Release 5.2.0",
+      "url": "https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final",
+      "best_for": [
+        "security and privacy control baselines",
+        "control assessment planning",
+        "assurance mapping"
+      ],
+      "evidence_tier": "A",
+      "last_reviewed": "2026-09-29"
+    },
+    {
+      "id": "nist-sp-800-207",
+      "name": "NIST SP 800-207 Zero Trust Architecture",
+      "type": "security-architecture-framework",
+      "domain": [
+        "identity",
+        "enterprise",
+        "zero-trust"
+      ],
+      "status": "verified",
+      "version": "SP 800-207",
+      "url": "https://csrc.nist.gov/pubs/sp/800/207/final",
+      "best_for": [
+        "zero trust architecture",
+        "identity-centric security design",
+        "security architecture assessment"
+      ],
+      "evidence_tier": "A",
+      "last_reviewed": "2026-09-29"
+    },
+    {
+      "id": "nist-ssdf",
+      "name": "NIST Secure Software Development Framework",
+      "type": "secure-development-framework",
+      "domain": [
+        "secure-development",
+        "software-supply-chain",
+        "application-security"
+      ],
+      "status": "verified",
+      "version": "1.1",
+      "url": "https://csrc.nist.gov/pubs/sp/800/218/final",
+      "best_for": [
+        "secure SDLC practices",
+        "software producer assurance",
+        "software supply-chain risk reduction"
+      ],
+      "evidence_tier": "A",
+      "last_reviewed": "2026-09-29"
+    },
+    {
+      "id": "cis-controls",
+      "name": "CIS Critical Security Controls",
+      "type": "security-control-framework",
+      "domain": [
+        "enterprise",
+        "defense",
+        "governance"
+      ],
+      "status": "verified",
+      "version": "8.1",
+      "url": "https://www.cisecurity.org/controls/v8-1",
+      "best_for": [
+        "prioritized security safeguards",
+        "defensive capability assessment",
+        "security program baselining"
+      ],
+      "evidence_tier": "A",
+      "last_reviewed": "2026-09-29"
+    },
+    {
+      "id": "csa-ccm",
+      "name": "CSA Cloud Controls Matrix",
+      "type": "cloud-control-framework",
+      "domain": [
+        "cloud",
+        "governance",
+        "assurance"
+      ],
+      "status": "verified",
+      "version": "4.1",
+      "url": "https://cloudsecurityalliance.org/research/cloud-controls-matrix",
+      "best_for": [
+        "cloud security assurance",
+        "cloud control assessment",
+        "cloud compliance mapping"
+      ],
+      "evidence_tier": "A",
+      "last_reviewed": "2026-09-29"
+    },
+    {
+      "id": "mitre-capec",
+      "name": "MITRE CAPEC",
+      "type": "attack-pattern-knowledge-base",
+      "domain": [
+        "application-security",
+        "threat-modeling",
+        "software-security"
+      ],
+      "status": "verified",
+      "url": "https://capec.mitre.org/",
+      "best_for": [
+        "attack pattern modeling",
+        "threat modeling",
+        "weakness-to-attack reasoning"
+      ],
+      "evidence_tier": "A",
+      "last_reviewed": "2026-09-29"
+    },
+    {
+      "id": "mitre-cwe",
+      "name": "MITRE CWE",
+      "type": "weakness-knowledge-base",
+      "domain": [
+        "application-security",
+        "software-security",
+        "hardware-security"
+      ],
+      "status": "verified",
+      "version": "4.20",
+      "url": "https://cwe.mitre.org/",
+      "best_for": [
+        "weakness classification",
+        "root-cause mapping",
+        "software security analysis"
+      ],
+      "evidence_tier": "A",
+      "last_reviewed": "2026-09-29"
+    },
+    {
+      "id": "mitre-car",
+      "name": "MITRE Cyber Analytics Repository",
+      "type": "detection-analytics-knowledge-base",
+      "domain": [
+        "detection",
+        "threat-hunting",
+        "enterprise"
+      ],
+      "status": "verified",
+      "url": "https://car.mitre.org/",
+      "best_for": [
+        "ATT&CK-aligned analytics",
+        "detection engineering",
+        "analytic rationale"
+      ],
+      "evidence_tier": "A",
+      "last_reviewed": "2026-09-29"
+    },
+    {
+      "id": "first-cvss",
+      "name": "FIRST Common Vulnerability Scoring System",
+      "type": "vulnerability-scoring-framework",
+      "domain": [
+        "vulnerability-management",
+        "risk",
+        "product-security"
+      ],
+      "status": "verified",
+      "version": "4.0",
+      "url": "https://www.first.org/cvss/v4.0/",
+      "best_for": [
+        "vulnerability severity communication",
+        "environmental context",
+        "vulnerability assessment"
+      ],
+      "evidence_tier": "A",
+      "last_reviewed": "2026-09-29"
+    },
+    {
+      "id": "first-epss",
+      "name": "FIRST Exploit Prediction Scoring System",
+      "type": "vulnerability-prioritization-model",
+      "domain": [
+        "vulnerability-management",
+        "threat-intelligence",
+        "risk"
+      ],
+      "status": "verified",
+      "url": "https://www.first.org/epss/",
+      "best_for": [
+        "exploitation-likelihood estimation",
+        "vulnerability prioritization",
+        "risk-based remediation"
+      ],
+      "evidence_tier": "A",
+      "last_reviewed": "2026-09-29"
+    },
+    {
+      "id": "nist-nice",
+      "name": "NIST NICE Workforce Framework for Cybersecurity",
+      "type": "workforce-framework",
+      "domain": [
+        "workforce",
+        "education",
+        "governance"
+      ],
+      "status": "verified",
+      "version": "SP 800-181 Rev. 1",
+      "url": "https://csrc.nist.gov/pubs/sp/800/181/r1/final",
+      "best_for": [
+        "cybersecurity work roles",
+        "skills and knowledge mapping",
+        "learning-path design"
+      ],
+      "evidence_tier": "A",
+      "last_reviewed": "2026-09-29"
+    },
+    {
+      "id": "slsa",
+      "name": "SLSA",
+      "type": "software-supply-chain-framework",
+      "domain": [
+        "software-supply-chain",
+        "secure-development",
+        "provenance"
+      ],
+      "status": "verified",
+      "version": "1.2",
+      "url": "https://slsa.dev/spec/v1.2/",
+      "best_for": [
+        "software artifact provenance",
+        "supply-chain integrity",
+        "source and build assurance"
+      ],
+      "evidence_tier": "A",
+      "last_reviewed": "2026-09-29"
+    },
+    {
+      "id": "ocsf",
+      "name": "Open Cybersecurity Schema Framework",
+      "type": "security-data-schema",
+      "domain": [
+        "detection",
+        "telemetry",
+        "data-engineering"
+      ],
+      "status": "verified",
+      "url": "https://ocsf.io/",
+      "best_for": [
+        "security event normalization",
+        "telemetry interoperability",
+        "detection data engineering"
+      ],
+      "evidence_tier": "A",
+      "last_reviewed": "2026-09-29"
+    },
+    {
+      "id": "openssf-scorecard",
+      "name": "OpenSSF Scorecard",
+      "type": "software-supply-chain-assessment",
+      "domain": [
+        "software-supply-chain",
+        "open-source",
+        "secure-development"
+      ],
+      "status": "verified",
+      "url": "https://openssf.org/scorecard/",
+      "best_for": [
+        "open-source project security posture",
+        "supply-chain risk signals",
+        "repository assurance"
+      ],
+      "evidence_tier": "A",
+      "last_reviewed": "2026-09-29"
+    },
+    {
+      "id": "oasis-stix-2-1",
+      "name": "OASIS STIX 2.1",
+      "type": "threat-intelligence-data-model",
+      "domain": [
+        "threat-intelligence",
+        "information-sharing",
+        "interoperability"
+      ],
+      "status": "verified",
+      "version": "2.1 / Errata 01",
+      "url": "https://docs.oasis-open.org/cti/stix/v2.1/stix-v2.1.html",
+      "best_for": [
+        "machine-readable cyber threat intelligence",
+        "actor and campaign modeling",
+        "CTI interoperability"
+      ],
+      "evidence_tier": "A",
+      "last_reviewed": "2026-09-29"
+    },
+    {
+      "id": "oasis-taxii-2-1",
+      "name": "OASIS TAXII 2.1",
+      "type": "threat-intelligence-transport-standard",
+      "domain": [
+        "threat-intelligence",
+        "information-sharing",
+        "interoperability"
+      ],
+      "status": "verified",
+      "version": "2.1",
+      "url": "https://docs.oasis-open.org/cti/taxii/v2.1/taxii-v2.1.html",
+      "best_for": [
+        "CTI exchange APIs",
+        "collection-based intelligence sharing",
+        "STIX transport workflows"
+      ],
+      "evidence_tier": "A",
+      "last_reviewed": "2026-09-29"
+    },
+    {
+      "id": "oasis-cacao-2",
+      "name": "OASIS CACAO Security Playbooks",
+      "type": "security-playbook-standard",
+      "domain": [
+        "incident-response",
+        "orchestration",
+        "threat-intelligence"
+      ],
+      "status": "verified",
+      "version": "2.0 CS01",
+      "url": "https://docs.oasis-open.org/cacao/security-playbooks/v2.0/security-playbooks-v2.0.html",
+      "best_for": [
+        "structured security playbooks",
+        "response workflow exchange",
+        "orchestration documentation"
+      ],
+      "evidence_tier": "A",
+      "last_reviewed": "2026-09-29"
+    },
+    {
+      "id": "first-tlp-2",
+      "name": "FIRST Traffic Light Protocol",
+      "type": "information-sharing-standard",
+      "domain": [
+        "threat-intelligence",
+        "information-sharing",
+        "csirt"
+      ],
+      "status": "verified",
+      "version": "2.0",
+      "url": "https://www.first.org/tlp/",
+      "best_for": [
+        "sharing-boundary markings",
+        "CTI dissemination handling",
+        "CSIRT collaboration"
+      ],
+      "evidence_tier": "A",
+      "last_reviewed": "2026-09-29"
+    },
+    {
+      "id": "first-csirt-services",
+      "name": "FIRST CSIRT Services Framework",
+      "type": "incident-response-services-framework",
+      "domain": [
+        "incident-response",
+        "csirt",
+        "operations"
+      ],
+      "status": "verified",
+      "version": "2.1",
+      "url": "https://www.first.org/standards/frameworks/csirts/csirt_services_framework_v2-1",
+      "best_for": [
+        "CSIRT service portfolios",
+        "incident management capability design",
+        "team maturity planning"
+      ],
+      "evidence_tier": "A",
+      "last_reviewed": "2026-09-29"
+    },
+    {
+      "id": "veris",
+      "name": "VERIS",
+      "type": "incident-data-framework",
+      "domain": [
+        "incident-response",
+        "risk",
+        "data-modeling",
+        "threat-intelligence"
+      ],
+      "status": "verified",
+      "version": "1.3.1",
+      "url": "https://verisframework.org/",
+      "best_for": [
+        "structured incident recording",
+        "incident data analysis",
+        "repeatable breach classification"
+      ],
+      "evidence_tier": "A",
+      "last_reviewed": "2026-09-29"
+    },
+    {
+      "id": "nist-sp-800-61-r3",
+      "name": "NIST SP 800-61 Rev. 3",
+      "type": "incident-response-guidance",
+      "domain": [
+        "incident-response",
+        "governance",
+        "csf"
+      ],
+      "status": "verified",
+      "version": "Rev. 3",
+      "url": "https://csrc.nist.gov/pubs/sp/800/61/r3/final",
+      "best_for": [
+        "incident response governance",
+        "CSF 2.0 incident-response integration",
+        "detection-response-recovery planning"
+      ],
+      "evidence_tier": "A",
+      "last_reviewed": "2026-09-29"
+    },
+    {
+      "id": "nist-sp-800-160-v2-r1",
+      "name": "NIST SP 800-160 Vol. 2 Rev. 1",
+      "type": "cyber-resilience-engineering",
+      "domain": [
+        "resilience",
+        "security-engineering",
+        "advanced-threats"
+      ],
+      "status": "verified",
+      "version": "Vol. 2 Rev. 1",
+      "url": "https://csrc.nist.gov/pubs/sp/800/160/v2/r1/final",
+      "best_for": [
+        "cyber resilience engineering",
+        "advanced threat resilience",
+        "survivable system design"
+      ],
+      "evidence_tier": "A",
+      "last_reviewed": "2026-09-29"
+    },
+    {
+      "id": "cisa-cpg",
+      "name": "CISA Cross-Sector Cybersecurity Performance Goals",
+      "type": "security-outcomes-framework",
+      "domain": [
+        "critical-infrastructure",
+        "defense",
+        "governance"
+      ],
+      "status": "verified",
+      "url": "https://www.cisa.gov/cybersecurity-performance-goals",
+      "best_for": [
+        "high-impact security outcomes",
+        "critical-infrastructure baselines",
+        "security maturity improvement"
+      ],
+      "evidence_tier": "A",
+      "last_reviewed": "2026-09-29"
+    },
+    {
+      "id": "cyber-kill-chain",
+      "name": "Cyber Kill Chain",
+      "type": "intrusion-lifecycle-model",
+      "domain": [
+        "threat-intelligence",
+        "adversary-analysis",
+        "detection"
+      ],
+      "status": "verified",
+      "url": "https://www.lockheedmartin.com/en-us/capabilities/cyber/cyber-kill-chain.html",
+      "best_for": [
+        "intrusion lifecycle analysis",
+        "adversary campaign framing",
+        "defensive intervention points"
+      ],
+      "evidence_tier": "A",
+      "last_reviewed": "2026-09-29"
+    },
+    {
+      "id": "misp-galaxy",
+      "name": "MISP Galaxy",
+      "type": "threat-intelligence-knowledge-model",
+      "domain": [
+        "threat-intelligence",
+        "adversary-analysis",
+        "information-sharing"
+      ],
+      "status": "verified",
+      "url": "https://www.misp-project.org/galaxy.html",
+      "best_for": [
+        "threat actor clusters",
+        "structured CTI vocabularies",
+        "cross-platform intelligence enrichment"
+      ],
+      "evidence_tier": "A",
+      "last_reviewed": "2026-09-29"
+    },
+    {
+      "id": "ssvc",
+      "name": "Stakeholder-Specific Vulnerability Categorization",
+      "type": "vulnerability-prioritization-framework",
+      "domain": [
+        "vulnerability-management",
+        "risk",
+        "decision-support"
+      ],
+      "status": "verified",
+      "url": "https://certcc.github.io/SSVC/",
+      "best_for": [
+        "contextual vulnerability prioritization",
+        "stakeholder-specific response decisions",
+        "transparent remediation triage"
+      ],
+      "evidence_tier": "A",
+      "last_reviewed": "2026-09-29"
+    },
+    {
+      "id": "oasis-csaf-2",
+      "name": "OASIS Common Security Advisory Framework",
+      "type": "security-advisory-standard",
+      "domain": [
+        "vulnerability-management",
+        "information-sharing",
+        "software-supply-chain"
+      ],
+      "status": "verified",
+      "version": "2.0 / Errata 01",
+      "url": "https://docs.oasis-open.org/csaf/csaf/v2.0/csaf-v2.0.html",
+      "best_for": [
+        "machine-readable security advisories",
+        "product vulnerability status",
+        "remediation information exchange"
+      ],
+      "evidence_tier": "A",
+      "last_reviewed": "2026-09-29"
+    },
+    {
+      "id": "owasp-top10-2025",
+      "name": "OWASP Top 10:2025",
+      "type": "application-risk-framework",
+      "domain": [
+        "web",
+        "application-security",
+        "secure-development"
+      ],
+      "status": "verified",
+      "version": "2025",
+      "url": "https://top10.owasp.org/2025/",
+      "best_for": [
+        "web application risk awareness",
+        "application security prioritization",
+        "secure-development education"
+      ],
+      "evidence_tier": "A",
+      "last_reviewed": "2026-09-30"
+    },
+    {
+      "id": "nist-sp-800-63-4",
+      "name": "NIST SP 800-63-4 Digital Identity Guidelines",
+      "type": "digital-identity-framework",
+      "domain": [
+        "identity",
+        "authentication",
+        "federation"
+      ],
+      "status": "verified",
+      "version": "Rev. 4",
+      "url": "https://csrc.nist.gov/pubs/sp/800/63/4/final",
+      "best_for": [
+        "identity proofing",
+        "authentication assurance",
+        "federation requirements"
+      ],
+      "evidence_tier": "A",
+      "last_reviewed": "2026-09-30"
+    },
+    {
+      "id": "nist-sp-800-161-r1",
+      "name": "NIST SP 800-161 Rev. 1",
+      "type": "supply-chain-risk-framework",
+      "domain": [
+        "software-supply-chain",
+        "third-party-risk",
+        "governance"
+      ],
+      "status": "verified",
+      "version": "Rev. 1 / Update 1",
+      "url": "https://csrc.nist.gov/pubs/sp/800/161/r1/upd1/final",
+      "best_for": [
+        "cybersecurity supply-chain risk management",
+        "supplier assurance",
+        "acquisition risk"
+      ],
+      "evidence_tier": "A",
+      "last_reviewed": "2026-09-30"
+    },
+    {
+      "id": "nist-sp-800-190",
+      "name": "NIST SP 800-190 Application Container Security Guide",
+      "type": "container-security-guidance",
+      "domain": [
+        "containers",
+        "cloud-native",
+        "application-security"
+      ],
+      "status": "verified",
+      "version": "SP 800-190",
+      "url": "https://csrc.nist.gov/pubs/sp/800/190/final",
+      "best_for": [
+        "container security architecture",
+        "container threat analysis",
+        "container security recommendations"
+      ],
+      "evidence_tier": "A",
+      "last_reviewed": "2026-09-30"
+    },
+    {
+      "id": "cisa-ztmm-2",
+      "name": "CISA Zero Trust Maturity Model",
+      "type": "zero-trust-maturity-model",
+      "domain": [
+        "zero-trust",
+        "identity",
+        "devices",
+        "network",
+        "applications",
+        "data"
+      ],
+      "status": "verified",
+      "version": "2.0",
+      "url": "https://www.cisa.gov/sites/default/files/2023-04/zero_trust_maturity_model_v2_508.pdf",
+      "best_for": [
+        "zero trust maturity planning",
+        "identity and device modernization",
+        "visibility and analytics planning"
+      ],
+      "evidence_tier": "A",
+      "last_reviewed": "2026-09-30"
+    },
+    {
+      "id": "openssf-osps-baseline",
+      "name": "OpenSSF Open Source Project Security Baseline",
+      "type": "open-source-security-baseline",
+      "domain": [
+        "open-source",
+        "software-supply-chain",
+        "secure-development"
+      ],
+      "status": "verified",
+      "version": "2026.08.28",
+      "url": "https://baseline.openssf.org/versions/2026-08-28",
+      "best_for": [
+        "open-source project security controls",
+        "repository assurance",
+        "maturity-based project security"
+      ],
+      "evidence_tier": "A",
+      "last_reviewed": "2026-09-30"
+    },
+    {
+      "id": "owasp-scvs",
+      "name": "OWASP Software Component Verification Standard",
+      "type": "software-supply-chain-standard",
+      "domain": [
+        "software-supply-chain",
+        "secure-development",
+        "sbom"
+      ],
+      "status": "verified",
+      "version": "1.0",
+      "url": "https://scvs.owasp.org/",
+      "best_for": [
+        "component assurance",
+        "SBOM maturity",
+        "software supply-chain verification"
+      ],
+      "evidence_tier": "A",
+      "last_reviewed": "2026-09-30"
+    },
+    {
+      "id": "csa-security-guidance-v5",
+      "name": "CSA Security Guidance for Cloud Computing",
+      "type": "cloud-security-guidance",
+      "domain": [
+        "cloud",
+        "identity",
+        "workload-security",
+        "incident-response",
+        "resilience"
+      ],
+      "status": "verified",
+      "version": "5",
+      "url": "https://cloudsecurityalliance.org/artifacts/security-guidance-v5",
+      "best_for": [
+        "cloud security architecture",
+        "cloud governance",
+        "cloud monitoring and resilience"
+      ],
+      "evidence_tier": "A",
+      "last_reviewed": "2026-09-30"
+    },
+    {
+      "id": "etsi-en-303-645",
+      "name": "ETSI EN 303 645 Consumer IoT Security",
+      "type": "iot-security-standard",
+      "domain": [
+        "iot",
+        "consumer-iot",
+        "product-security",
+        "privacy"
+      ],
+      "status": "verified",
+      "version": "3.1.3",
+      "url": "https://www.etsi.org/deliver/etsi_en/303600_303699/303645/03.01.03_60/en_303645v030103p.pdf",
+      "best_for": [
+        "consumer IoT baseline security",
+        "secure product development",
+        "IoT outcome-focused assurance"
+      ],
+      "evidence_tier": "A",
+      "last_reviewed": "2026-09-30"
+    },
+    {
+      "id": "iso-iec-27001-2022",
+      "name": "ISO/IEC 27001:2022",
+      "type": "information-security-management-standard",
+      "domain": [
+        "governance",
+        "risk-management",
+        "enterprise",
+        "assurance"
+      ],
+      "status": "verified",
+      "version": "2022",
+      "url": "https://www.iso.org/standard/27001",
+      "best_for": [
+        "information security management systems",
+        "risk-based security governance",
+        "continuous improvement"
+      ],
+      "evidence_tier": "A",
+      "last_reviewed": "2026-09-30"
+    },
+    {
+      "id": "iso-iec-27005-2022",
+      "name": "ISO/IEC 27005:2022",
+      "type": "information-security-risk-guidance",
+      "domain": [
+        "risk-management",
+        "governance",
+        "enterprise"
+      ],
+      "status": "verified",
+      "version": "2022",
+      "url": "https://www.iso.org/standard/80585.html",
+      "best_for": [
+        "information security risk identification",
+        "risk assessment",
+        "risk treatment"
+      ],
+      "evidence_tier": "A",
+      "last_reviewed": "2026-09-30"
+    }
+  ]
+}

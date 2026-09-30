@@ -1,0 +1,880 @@
+{
+  "Event": {
+    "info": "RedFrameworks public framework reference catalog",
+    "date": "2026-09-30",
+    "distribution": "0",
+    "analysis": "2",
+    "threat_level_id": "4",
+    "published": false,
+    "Attribute": [
+      {
+        "type": "text",
+        "category": "External analysis",
+        "to_ids": false,
+        "value": "Penetration Testing Execution Standard",
+        "comment": "RedFrameworks reference: ptes"
+      },
+      {
+        "type": "link",
+        "category": "External analysis",
+        "to_ids": false,
+        "value": "https://www.pentest-standard.org/",
+        "comment": "Canonical reference for Penetration Testing Execution Standard"
+      },
+      {
+        "type": "text",
+        "category": "External analysis",
+        "to_ids": false,
+        "value": "NIST SP 800-115",
+        "comment": "RedFrameworks reference: nist-sp-800-115"
+      },
+      {
+        "type": "link",
+        "category": "External analysis",
+        "to_ids": false,
+        "value": "https://csrc.nist.gov/pubs/sp/800/115/final",
+        "comment": "Canonical reference for NIST SP 800-115"
+      },
+      {
+        "type": "text",
+        "category": "External analysis",
+        "to_ids": false,
+        "value": "OWASP Web Security Testing Guide",
+        "comment": "RedFrameworks reference: owasp-wstg"
+      },
+      {
+        "type": "link",
+        "category": "External analysis",
+        "to_ids": false,
+        "value": "https://wstg.owasp.org/",
+        "comment": "Canonical reference for OWASP Web Security Testing Guide"
+      },
+      {
+        "type": "text",
+        "category": "External analysis",
+        "to_ids": false,
+        "value": "OWASP Mobile Application Security Testing Guide",
+        "comment": "RedFrameworks reference: owasp-mastg"
+      },
+      {
+        "type": "link",
+        "category": "External analysis",
+        "to_ids": false,
+        "value": "https://mas.owasp.org/MASTG/",
+        "comment": "Canonical reference for OWASP Mobile Application Security Testing Guide"
+      },
+      {
+        "type": "text",
+        "category": "External analysis",
+        "to_ids": false,
+        "value": "OWASP IoT Security Testing Guide",
+        "comment": "RedFrameworks reference: owasp-iot-istg"
+      },
+      {
+        "type": "link",
+        "category": "External analysis",
+        "to_ids": false,
+        "value": "https://owasp.org/projects/iot-security-testing-guide",
+        "comment": "Canonical reference for OWASP IoT Security Testing Guide"
+      },
+      {
+        "type": "text",
+        "category": "External analysis",
+        "to_ids": false,
+        "value": "MITRE ATT&CK",
+        "comment": "RedFrameworks reference: mitre-attack"
+      },
+      {
+        "type": "link",
+        "category": "External analysis",
+        "to_ids": false,
+        "value": "https://attack.mitre.org/",
+        "comment": "Canonical reference for MITRE ATT&CK"
+      },
+      {
+        "type": "text",
+        "category": "External analysis",
+        "to_ids": false,
+        "value": "MITRE ATLAS",
+        "comment": "RedFrameworks reference: mitre-atlas"
+      },
+      {
+        "type": "link",
+        "category": "External analysis",
+        "to_ids": false,
+        "value": "https://atlas.mitre.org/",
+        "comment": "Canonical reference for MITRE ATLAS"
+      },
+      {
+        "type": "text",
+        "category": "External analysis",
+        "to_ids": false,
+        "value": "MITRE D3FEND",
+        "comment": "RedFrameworks reference: mitre-d3fend"
+      },
+      {
+        "type": "link",
+        "category": "External analysis",
+        "to_ids": false,
+        "value": "https://d3fend.mitre.org/",
+        "comment": "Canonical reference for MITRE D3FEND"
+      },
+      {
+        "type": "text",
+        "category": "External analysis",
+        "to_ids": false,
+        "value": "Attack Flow",
+        "comment": "RedFrameworks reference: attack-flow"
+      },
+      {
+        "type": "link",
+        "category": "External analysis",
+        "to_ids": false,
+        "value": "https://attackflow.org/",
+        "comment": "Canonical reference for Attack Flow"
+      },
+      {
+        "type": "text",
+        "category": "External analysis",
+        "to_ids": false,
+        "value": "CTID Adversary Emulation Library",
+        "comment": "RedFrameworks reference: ctid-adversary-emulation"
+      },
+      {
+        "type": "link",
+        "category": "External analysis",
+        "to_ids": false,
+        "value": "https://ctid.mitre.org/resources/adversary-emulation-library/",
+        "comment": "Canonical reference for CTID Adversary Emulation Library"
+      },
+      {
+        "type": "text",
+        "category": "External analysis",
+        "to_ids": false,
+        "value": "TIBER-EU",
+        "comment": "RedFrameworks reference: tiber-eu"
+      },
+      {
+        "type": "link",
+        "category": "External analysis",
+        "to_ids": false,
+        "value": "https://www.ecb.europa.eu/paym/cyber-resilience/tiber-eu/html/index.en.html",
+        "comment": "Canonical reference for TIBER-EU"
+      },
+      {
+        "type": "text",
+        "category": "External analysis",
+        "to_ids": false,
+        "value": "CBEST",
+        "comment": "RedFrameworks reference: cbest"
+      },
+      {
+        "type": "link",
+        "category": "External analysis",
+        "to_ids": false,
+        "value": "https://www.bankofengland.co.uk/financial-stability/operational-resilience-of-the-financial-sector/cbest-threat-intelligence-led-assessments-implementation-guide",
+        "comment": "Canonical reference for CBEST"
+      },
+      {
+        "type": "text",
+        "category": "External analysis",
+        "to_ids": false,
+        "value": "CREST Threat-Led Penetration Testing",
+        "comment": "RedFrameworks reference: crest-tlpt"
+      },
+      {
+        "type": "link",
+        "category": "External analysis",
+        "to_ids": false,
+        "value": "https://www.crest-approved.org/cyber-service-categories/red-teaming/",
+        "comment": "Canonical reference for CREST Threat-Led Penetration Testing"
+      },
+      {
+        "type": "text",
+        "category": "External analysis",
+        "to_ids": false,
+        "value": "MITRE Engage",
+        "comment": "RedFrameworks reference: mitre-engage"
+      },
+      {
+        "type": "link",
+        "category": "External analysis",
+        "to_ids": false,
+        "value": "https://engage.mitre.org/",
+        "comment": "Canonical reference for MITRE Engage"
+      },
+      {
+        "type": "text",
+        "category": "External analysis",
+        "to_ids": false,
+        "value": "OWASP GenAI Security Project",
+        "comment": "RedFrameworks reference: owasp-genai"
+      },
+      {
+        "type": "link",
+        "category": "External analysis",
+        "to_ids": false,
+        "value": "https://genai.owasp.org/",
+        "comment": "Canonical reference for OWASP GenAI Security Project"
+      },
+      {
+        "type": "text",
+        "category": "External analysis",
+        "to_ids": false,
+        "value": "NIST AI RMF Generative AI Profile",
+        "comment": "RedFrameworks reference: nist-ai-rmf-genai"
+      },
+      {
+        "type": "link",
+        "category": "External analysis",
+        "to_ids": false,
+        "value": "https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-generative-artificial-intelligence",
+        "comment": "Canonical reference for NIST AI RMF Generative AI Profile"
+      },
+      {
+        "type": "text",
+        "category": "External analysis",
+        "to_ids": false,
+        "value": "Atomic Red Team",
+        "comment": "RedFrameworks reference: atomic-red-team"
+      },
+      {
+        "type": "link",
+        "category": "External analysis",
+        "to_ids": false,
+        "value": "https://github.com/redcanaryco/atomic-red-team",
+        "comment": "Canonical reference for Atomic Red Team"
+      },
+      {
+        "type": "text",
+        "category": "External analysis",
+        "to_ids": false,
+        "value": "MITRE CALDERA",
+        "comment": "RedFrameworks reference: mitre-caldera"
+      },
+      {
+        "type": "link",
+        "category": "External analysis",
+        "to_ids": false,
+        "value": "https://caldera.mitre.org/",
+        "comment": "Canonical reference for MITRE CALDERA"
+      },
+      {
+        "type": "text",
+        "category": "External analysis",
+        "to_ids": false,
+        "value": "OWASP Application Security Verification Standard",
+        "comment": "RedFrameworks reference: owasp-asvs"
+      },
+      {
+        "type": "link",
+        "category": "External analysis",
+        "to_ids": false,
+        "value": "https://owasp.org/www-project-application-security-verification-standard/",
+        "comment": "Canonical reference for OWASP Application Security Verification Standard"
+      },
+      {
+        "type": "text",
+        "category": "External analysis",
+        "to_ids": false,
+        "value": "OWASP Software Assurance Maturity Model",
+        "comment": "RedFrameworks reference: owasp-samm"
+      },
+      {
+        "type": "link",
+        "category": "External analysis",
+        "to_ids": false,
+        "value": "https://owasp.org/www-project-samm/",
+        "comment": "Canonical reference for OWASP Software Assurance Maturity Model"
+      },
+      {
+        "type": "text",
+        "category": "External analysis",
+        "to_ids": false,
+        "value": "OWASP API Security Top 10",
+        "comment": "RedFrameworks reference: owasp-api-top10"
+      },
+      {
+        "type": "link",
+        "category": "External analysis",
+        "to_ids": false,
+        "value": "https://owasp.org/www-project-api-security/",
+        "comment": "Canonical reference for OWASP API Security Top 10"
+      },
+      {
+        "type": "text",
+        "category": "External analysis",
+        "to_ids": false,
+        "value": "OWASP Mobile Application Security Verification Standard",
+        "comment": "RedFrameworks reference: owasp-masvs"
+      },
+      {
+        "type": "link",
+        "category": "External analysis",
+        "to_ids": false,
+        "value": "https://mas.owasp.org/MASVS/",
+        "comment": "Canonical reference for OWASP Mobile Application Security Verification Standard"
+      },
+      {
+        "type": "text",
+        "category": "External analysis",
+        "to_ids": false,
+        "value": "OWASP IoT Security Verification Standard",
+        "comment": "RedFrameworks reference: owasp-isvs"
+      },
+      {
+        "type": "link",
+        "category": "External analysis",
+        "to_ids": false,
+        "value": "https://owasp.org/www-project-iot-security-verification-standard/",
+        "comment": "Canonical reference for OWASP IoT Security Verification Standard"
+      },
+      {
+        "type": "text",
+        "category": "External analysis",
+        "to_ids": false,
+        "value": "NIST Cybersecurity Framework 2.0",
+        "comment": "RedFrameworks reference: nist-csf-2"
+      },
+      {
+        "type": "link",
+        "category": "External analysis",
+        "to_ids": false,
+        "value": "https://www.nist.gov/cyberframework",
+        "comment": "Canonical reference for NIST Cybersecurity Framework 2.0"
+      },
+      {
+        "type": "text",
+        "category": "External analysis",
+        "to_ids": false,
+        "value": "NIST SP 800-53 Rev. 5",
+        "comment": "RedFrameworks reference: nist-sp-800-53-r5"
+      },
+      {
+        "type": "link",
+        "category": "External analysis",
+        "to_ids": false,
+        "value": "https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final",
+        "comment": "Canonical reference for NIST SP 800-53 Rev. 5"
+      },
+      {
+        "type": "text",
+        "category": "External analysis",
+        "to_ids": false,
+        "value": "NIST SP 800-207 Zero Trust Architecture",
+        "comment": "RedFrameworks reference: nist-sp-800-207"
+      },
+      {
+        "type": "link",
+        "category": "External analysis",
+        "to_ids": false,
+        "value": "https://csrc.nist.gov/pubs/sp/800/207/final",
+        "comment": "Canonical reference for NIST SP 800-207 Zero Trust Architecture"
+      },
+      {
+        "type": "text",
+        "category": "External analysis",
+        "to_ids": false,
+        "value": "NIST Secure Software Development Framework",
+        "comment": "RedFrameworks reference: nist-ssdf"
+      },
+      {
+        "type": "link",
+        "category": "External analysis",
+        "to_ids": false,
+        "value": "https://csrc.nist.gov/pubs/sp/800/218/final",
+        "comment": "Canonical reference for NIST Secure Software Development Framework"
+      },
+      {
+        "type": "text",
+        "category": "External analysis",
+        "to_ids": false,
+        "value": "CIS Critical Security Controls",
+        "comment": "RedFrameworks reference: cis-controls"
+      },
+      {
+        "type": "link",
+        "category": "External analysis",
+        "to_ids": false,
+        "value": "https://www.cisecurity.org/controls/v8-1",
+        "comment": "Canonical reference for CIS Critical Security Controls"
+      },
+      {
+        "type": "text",
+        "category": "External analysis",
+        "to_ids": false,
+        "value": "CSA Cloud Controls Matrix",
+        "comment": "RedFrameworks reference: csa-ccm"
+      },
+      {
+        "type": "link",
+        "category": "External analysis",
+        "to_ids": false,
+        "value": "https://cloudsecurityalliance.org/research/cloud-controls-matrix",
+        "comment": "Canonical reference for CSA Cloud Controls Matrix"
+      },
+      {
+        "type": "text",
+        "category": "External analysis",
+        "to_ids": false,
+        "value": "MITRE CAPEC",
+        "comment": "RedFrameworks reference: mitre-capec"
+      },
+      {
+        "type": "link",
+        "category": "External analysis",
+        "to_ids": false,
+        "value": "https://capec.mitre.org/",
+        "comment": "Canonical reference for MITRE CAPEC"
+      },
+      {
+        "type": "text",
+        "category": "External analysis",
+        "to_ids": false,
+        "value": "MITRE CWE",
+        "comment": "RedFrameworks reference: mitre-cwe"
+      },
+      {
+        "type": "link",
+        "category": "External analysis",
+        "to_ids": false,
+        "value": "https://cwe.mitre.org/",
+        "comment": "Canonical reference for MITRE CWE"
+      },
+      {
+        "type": "text",
+        "category": "External analysis",
+        "to_ids": false,
+        "value": "MITRE Cyber Analytics Repository",
+        "comment": "RedFrameworks reference: mitre-car"
+      },
+      {
+        "type": "link",
+        "category": "External analysis",
+        "to_ids": false,
+        "value": "https://car.mitre.org/",
+        "comment": "Canonical reference for MITRE Cyber Analytics Repository"
+      },
+      {
+        "type": "text",
+        "category": "External analysis",
+        "to_ids": false,
+        "value": "FIRST Common Vulnerability Scoring System",
+        "comment": "RedFrameworks reference: first-cvss"
+      },
+      {
+        "type": "link",
+        "category": "External analysis",
+        "to_ids": false,
+        "value": "https://www.first.org/cvss/v4.0/",
+        "comment": "Canonical reference for FIRST Common Vulnerability Scoring System"
+      },
+      {
+        "type": "text",
+        "category": "External analysis",
+        "to_ids": false,
+        "value": "FIRST Exploit Prediction Scoring System",
+        "comment": "RedFrameworks reference: first-epss"
+      },
+      {
+        "type": "link",
+        "category": "External analysis",
+        "to_ids": false,
+        "value": "https://www.first.org/epss/",
+        "comment": "Canonical reference for FIRST Exploit Prediction Scoring System"
+      },
+      {
+        "type": "text",
+        "category": "External analysis",
+        "to_ids": false,
+        "value": "NIST NICE Workforce Framework for Cybersecurity",
+        "comment": "RedFrameworks reference: nist-nice"
+      },
+      {
+        "type": "link",
+        "category": "External analysis",
+        "to_ids": false,
+        "value": "https://csrc.nist.gov/pubs/sp/800/181/r1/final",
+        "comment": "Canonical reference for NIST NICE Workforce Framework for Cybersecurity"
+      },
+      {
+        "type": "text",
+        "category": "External analysis",
+        "to_ids": false,
+        "value": "SLSA",
+        "comment": "RedFrameworks reference: slsa"
+      },
+      {
+        "type": "link",
+        "category": "External analysis",
+        "to_ids": false,
+        "value": "https://slsa.dev/spec/v1.2/",
+        "comment": "Canonical reference for SLSA"
+      },
+      {
+        "type": "text",
+        "category": "External analysis",
+        "to_ids": false,
+        "value": "Open Cybersecurity Schema Framework",
+        "comment": "RedFrameworks reference: ocsf"
+      },
+      {
+        "type": "link",
+        "category": "External analysis",
+        "to_ids": false,
+        "value": "https://ocsf.io/",
+        "comment": "Canonical reference for Open Cybersecurity Schema Framework"
+      },
+      {
+        "type": "text",
+        "category": "External analysis",
+        "to_ids": false,
+        "value": "OpenSSF Scorecard",
+        "comment": "RedFrameworks reference: openssf-scorecard"
+      },
+      {
+        "type": "link",
+        "category": "External analysis",
+        "to_ids": false,
+        "value": "https://openssf.org/scorecard/",
+        "comment": "Canonical reference for OpenSSF Scorecard"
+      },
+      {
+        "type": "text",
+        "category": "External analysis",
+        "to_ids": false,
+        "value": "OASIS STIX 2.1",
+        "comment": "RedFrameworks reference: oasis-stix-2-1"
+      },
+      {
+        "type": "link",
+        "category": "External analysis",
+        "to_ids": false,
+        "value": "https://docs.oasis-open.org/cti/stix/v2.1/stix-v2.1.html",
+        "comment": "Canonical reference for OASIS STIX 2.1"
+      },
+      {
+        "type": "text",
+        "category": "External analysis",
+        "to_ids": false,
+        "value": "OASIS TAXII 2.1",
+        "comment": "RedFrameworks reference: oasis-taxii-2-1"
+      },
+      {
+        "type": "link",
+        "category": "External analysis",
+        "to_ids": false,
+        "value": "https://docs.oasis-open.org/cti/taxii/v2.1/taxii-v2.1.html",
+        "comment": "Canonical reference for OASIS TAXII 2.1"
+      },
+      {
+        "type": "text",
+        "category": "External analysis",
+        "to_ids": false,
+        "value": "OASIS CACAO Security Playbooks",
+        "comment": "RedFrameworks reference: oasis-cacao-2"
+      },
+      {
+        "type": "link",
+        "category": "External analysis",
+        "to_ids": false,
+        "value": "https://docs.oasis-open.org/cacao/security-playbooks/v2.0/security-playbooks-v2.0.html",
+        "comment": "Canonical reference for OASIS CACAO Security Playbooks"
+      },
+      {
+        "type": "text",
+        "category": "External analysis",
+        "to_ids": false,
+        "value": "FIRST Traffic Light Protocol",
+        "comment": "RedFrameworks reference: first-tlp-2"
+      },
+      {
+        "type": "link",
+        "category": "External analysis",
+        "to_ids": false,
+        "value": "https://www.first.org/tlp/",
+        "comment": "Canonical reference for FIRST Traffic Light Protocol"
+      },
+      {
+        "type": "text",
+        "category": "External analysis",
+        "to_ids": false,
+        "value": "FIRST CSIRT Services Framework",
+        "comment": "RedFrameworks reference: first-csirt-services"
+      },
+      {
+        "type": "link",
+        "category": "External analysis",
+        "to_ids": false,
+        "value": "https://www.first.org/standards/frameworks/csirts/csirt_services_framework_v2-1",
+        "comment": "Canonical reference for FIRST CSIRT Services Framework"
+      },
+      {
+        "type": "text",
+        "category": "External analysis",
+        "to_ids": false,
+        "value": "VERIS",
+        "comment": "RedFrameworks reference: veris"
+      },
+      {
+        "type": "link",
+        "category": "External analysis",
+        "to_ids": false,
+        "value": "https://verisframework.org/",
+        "comment": "Canonical reference for VERIS"
+      },
+      {
+        "type": "text",
+        "category": "External analysis",
+        "to_ids": false,
+        "value": "NIST SP 800-61 Rev. 3",
+        "comment": "RedFrameworks reference: nist-sp-800-61-r3"
+      },
+      {
+        "type": "link",
+        "category": "External analysis",
+        "to_ids": false,
+        "value": "https://csrc.nist.gov/pubs/sp/800/61/r3/final",
+        "comment": "Canonical reference for NIST SP 800-61 Rev. 3"
+      },
+      {
+        "type": "text",
+        "category": "External analysis",
+        "to_ids": false,
+        "value": "NIST SP 800-160 Vol. 2 Rev. 1",
+        "comment": "RedFrameworks reference: nist-sp-800-160-v2-r1"
+      },
+      {
+        "type": "link",
+        "category": "External analysis",
+        "to_ids": false,
+        "value": "https://csrc.nist.gov/pubs/sp/800/160/v2/r1/final",
+        "comment": "Canonical reference for NIST SP 800-160 Vol. 2 Rev. 1"
+      },
+      {
+        "type": "text",
+        "category": "External analysis",
+        "to_ids": false,
+        "value": "CISA Cross-Sector Cybersecurity Performance Goals",
+        "comment": "RedFrameworks reference: cisa-cpg"
+      },
+      {
+        "type": "link",
+        "category": "External analysis",
+        "to_ids": false,
+        "value": "https://www.cisa.gov/cybersecurity-performance-goals",
+        "comment": "Canonical reference for CISA Cross-Sector Cybersecurity Performance Goals"
+      },
+      {
+        "type": "text",
+        "category": "External analysis",
+        "to_ids": false,
+        "value": "Cyber Kill Chain",
+        "comment": "RedFrameworks reference: cyber-kill-chain"
+      },
+      {
+        "type": "link",
+        "category": "External analysis",
+        "to_ids": false,
+        "value": "https://www.lockheedmartin.com/en-us/capabilities/cyber/cyber-kill-chain.html",
+        "comment": "Canonical reference for Cyber Kill Chain"
+      },
+      {
+        "type": "text",
+        "category": "External analysis",
+        "to_ids": false,
+        "value": "MISP Galaxy",
+        "comment": "RedFrameworks reference: misp-galaxy"
+      },
+      {
+        "type": "link",
+        "category": "External analysis",
+        "to_ids": false,
+        "value": "https://www.misp-project.org/galaxy.html",
+        "comment": "Canonical reference for MISP Galaxy"
+      },
+      {
+        "type": "text",
+        "category": "External analysis",
+        "to_ids": false,
+        "value": "Stakeholder-Specific Vulnerability Categorization",
+        "comment": "RedFrameworks reference: ssvc"
+      },
+      {
+        "type": "link",
+        "category": "External analysis",
+        "to_ids": false,
+        "value": "https://certcc.github.io/SSVC/",
+        "comment": "Canonical reference for Stakeholder-Specific Vulnerability Categorization"
+      },
+      {
+        "type": "text",
+        "category": "External analysis",
+        "to_ids": false,
+        "value": "OASIS Common Security Advisory Framework",
+        "comment": "RedFrameworks reference: oasis-csaf-2"
+      },
+      {
+        "type": "link",
+        "category": "External analysis",
+        "to_ids": false,
+        "value": "https://docs.oasis-open.org/csaf/csaf/v2.0/csaf-v2.0.html",
+        "comment": "Canonical reference for OASIS Common Security Advisory Framework"
+      },
+      {
+        "type": "text",
+        "category": "External analysis",
+        "to_ids": false,
+        "value": "OWASP Top 10:2025",
+        "comment": "RedFrameworks reference: owasp-top10-2025"
+      },
+      {
+        "type": "link",
+        "category": "External analysis",
+        "to_ids": false,
+        "value": "https://top10.owasp.org/2025/",
+        "comment": "Canonical reference for OWASP Top 10:2025"
+      },
+      {
+        "type": "text",
+        "category": "External analysis",
+        "to_ids": false,
+        "value": "NIST SP 800-63-4 Digital Identity Guidelines",
+        "comment": "RedFrameworks reference: nist-sp-800-63-4"
+      },
+      {
+        "type": "link",
+        "category": "External analysis",
+        "to_ids": false,
+        "value": "https://csrc.nist.gov/pubs/sp/800/63/4/final",
+        "comment": "Canonical reference for NIST SP 800-63-4 Digital Identity Guidelines"
+      },
+      {
+        "type": "text",
+        "category": "External analysis",
+        "to_ids": false,
+        "value": "NIST SP 800-161 Rev. 1",
+        "comment": "RedFrameworks reference: nist-sp-800-161-r1"
+      },
+      {
+        "type": "link",
+        "category": "External analysis",
+        "to_ids": false,
+        "value": "https://csrc.nist.gov/pubs/sp/800/161/r1/upd1/final",
+        "comment": "Canonical reference for NIST SP 800-161 Rev. 1"
+      },
+      {
+        "type": "text",
+        "category": "External analysis",
+        "to_ids": false,
+        "value": "NIST SP 800-190 Application Container Security Guide",
+        "comment": "RedFrameworks reference: nist-sp-800-190"
+      },
+      {
+        "type": "link",
+        "category": "External analysis",
+        "to_ids": false,
+        "value": "https://csrc.nist.gov/pubs/sp/800/190/final",
+        "comment": "Canonical reference for NIST SP 800-190 Application Container Security Guide"
+      },
+      {
+        "type": "text",
+        "category": "External analysis",
+        "to_ids": false,
+        "value": "CISA Zero Trust Maturity Model",
+        "comment": "RedFrameworks reference: cisa-ztmm-2"
+      },
+      {
+        "type": "link",
+        "category": "External analysis",
+        "to_ids": false,
+        "value": "https://www.cisa.gov/sites/default/files/2023-04/zero_trust_maturity_model_v2_508.pdf",
+        "comment": "Canonical reference for CISA Zero Trust Maturity Model"
+      },
+      {
+        "type": "text",
+        "category": "External analysis",
+        "to_ids": false,
+        "value": "OpenSSF Open Source Project Security Baseline",
+        "comment": "RedFrameworks reference: openssf-osps-baseline"
+      },
+      {
+        "type": "link",
+        "category": "External analysis",
+        "to_ids": false,
+        "value": "https://baseline.openssf.org/versions/2026-08-28",
+        "comment": "Canonical reference for OpenSSF Open Source Project Security Baseline"
+      },
+      {
+        "type": "text",
+        "category": "External analysis",
+        "to_ids": false,
+        "value": "OWASP Software Component Verification Standard",
+        "comment": "RedFrameworks reference: owasp-scvs"
+      },
+      {
+        "type": "link",
+        "category": "External analysis",
+        "to_ids": false,
+        "value": "https://scvs.owasp.org/",
+        "comment": "Canonical reference for OWASP Software Component Verification Standard"
+      },
+      {
+        "type": "text",
+        "category": "External analysis",
+        "to_ids": false,
+        "value": "CSA Security Guidance for Cloud Computing",
+        "comment": "RedFrameworks reference: csa-security-guidance-v5"
+      },
+      {
+        "type": "link",
+        "category": "External analysis",
+        "to_ids": false,
+        "value": "https://cloudsecurityalliance.org/artifacts/security-guidance-v5",
+        "comment": "Canonical reference for CSA Security Guidance for Cloud Computing"
+      },
+      {
+        "type": "text",
+        "category": "External analysis",
+        "to_ids": false,
+        "value": "ETSI EN 303 645 Consumer IoT Security",
+        "comment": "RedFrameworks reference: etsi-en-303-645"
+      },
+      {
+        "type": "link",
+        "category": "External analysis",
+        "to_ids": false,
+        "value": "https://www.etsi.org/deliver/etsi_en/303600_303699/303645/03.01.03_60/en_303645v030103p.pdf",
+        "comment": "Canonical reference for ETSI EN 303 645 Consumer IoT Security"
+      },
+      {
+        "type": "text",
+        "category": "External analysis",
+        "to_ids": false,
+        "value": "ISO/IEC 27001:2022",
+        "comment": "RedFrameworks reference: iso-iec-27001-2022"
+      },
+      {
+        "type": "link",
+        "category": "External analysis",
+        "to_ids": false,
+        "value": "https://www.iso.org/standard/27001",
+        "comment": "Canonical reference for ISO/IEC 27001:2022"
+      },
+      {
+        "type": "text",
+        "category": "External analysis",
+        "to_ids": false,
+        "value": "ISO/IEC 27005:2022",
+        "comment": "RedFrameworks reference: iso-iec-27005-2022"
+      },
+      {
+        "type": "link",
+        "category": "External analysis",
+        "to_ids": false,
+        "value": "https://www.iso.org/standard/80585.html",
+        "comment": "Canonical reference for ISO/IEC 27005:2022"
+      }
+    ]
+  }
+}

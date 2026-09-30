@@ -1,0 +1,33 @@
+{
+  "updated": "2026-09-29",
+  "schema_version": "1.0",
+  "transitions": [
+    {
+      "entity": "openaev",
+      "transition": "renamed",
+      "from": "OpenBAS",
+      "to": "OpenAEV",
+      "source": "https://docs.openaev.io/",
+      "status": "current",
+      "note": "Historical alias retained for discoverability."
+    },
+    {
+      "entity": "detectionlab",
+      "transition": "maintenance-status",
+      "from": "active",
+      "to": "legacy",
+      "source": "https://github.com/clong/DetectionLab",
+      "status": "legacy",
+      "note": "Upstream states the project is no longer actively maintained."
+    },
+    {
+      "entity": "havoc",
+      "transition": "archive-status",
+      "from": "active",
+      "to": "archived",
+      "source": "https://github.com/HavocFramework/Havoc",
+      "status": "legacy",
+      "note": "Canonical repository is archived; retained as historical context."
+    }
+  ]
+}

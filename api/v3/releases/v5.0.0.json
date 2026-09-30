@@ -1,0 +1,35 @@
+{
+  "version": "5.0.0",
+  "date": "2026-09-29",
+  "codename": "OffSec Intelligence Portal",
+  "status": "release-manifest",
+  "capabilities": [
+    "20 additional verified frameworks and standards",
+    "expanded public security tool catalog",
+    "books and certification library",
+    "learning paths",
+    "Verification Engine",
+    "human-gated research review PRs",
+    "graph path queries",
+    "technique intelligence",
+    "Neo4j export",
+    "MISP reference export",
+    "ATT&CK Navigator generator",
+    "API v3",
+    "Python and TypeScript clients",
+    "scorecard schema",
+    "domain evidence heatmap",
+    "multi-scenario comparison",
+    "command palette",
+    "local bookmarks",
+    "research workspace",
+    "intelligence timeline",
+    "release provenance attestation"
+  ],
+  "compatibility": {
+    "api_v1": true,
+    "api_v2": true,
+    "api_v3": "current"
+  },
+  "safety": "Catalog and learning content are descriptive and intended for authorized testing, research, labs and defensive validation."
+}

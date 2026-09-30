@@ -1,0 +1,76 @@
+{
+  "records": [
+    {
+      "scenario_id": "PT-EXAMPLE-001",
+      "name": "Identity telemetry validation",
+      "date": "2026-09-29",
+      "phase": "example",
+      "domain": "identity",
+      "scores": {
+        "telemetry": 85,
+        "detection": 68,
+        "analyst_response": 72,
+        "containment": 70,
+        "evidence": 80
+      },
+      "composite": 74.4,
+      "evidence_level": "E2",
+      "result": "partial",
+      "source": "examples/purple-team/scorecard-example.yaml"
+    },
+    {
+      "scenario_id": "PT-IDENTITY-001",
+      "name": "Identity telemetry validation",
+      "date": "2026-07-15",
+      "phase": "baseline",
+      "domain": "identity",
+      "scores": {
+        "telemetry": 55,
+        "detection": 35,
+        "analyst_response": 40,
+        "containment": 30,
+        "evidence": 50
+      },
+      "composite": 41.25,
+      "evidence_level": "E1",
+      "result": "partial",
+      "source": "examples/purple-team/scorecard-baseline.yaml"
+    },
+    {
+      "scenario_id": "PT-IDENTITY-001",
+      "name": "Identity telemetry validation",
+      "date": "2026-08-20",
+      "phase": "iteration-1",
+      "domain": "identity",
+      "scores": {
+        "telemetry": 75,
+        "detection": 62,
+        "analyst_response": 58,
+        "containment": 52,
+        "evidence": 72
+      },
+      "composite": 63.3,
+      "evidence_level": "E2",
+      "result": "partial",
+      "source": "examples/purple-team/scorecard-iteration-1.yaml"
+    },
+    {
+      "scenario_id": "PT-IDENTITY-001",
+      "name": "Identity telemetry validation",
+      "date": "2026-09-29",
+      "phase": "retest",
+      "domain": "identity",
+      "scores": {
+        "telemetry": 92,
+        "detection": 84,
+        "analyst_response": 78,
+        "containment": 76,
+        "evidence": 90
+      },
+      "composite": 83.7,
+      "evidence_level": "E3",
+      "result": "pass",
+      "source": "examples/purple-team/scorecard-retest.yaml"
+    }
+  ]
+}

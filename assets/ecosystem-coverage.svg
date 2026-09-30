@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="500" viewBox="0 0 1400 500">
+<rect width="1400" height="500" rx="28" fill="#090c12"/>
+<text x="60" y="66" fill="#f24861" font-family="monospace" font-size="17" font-weight="700">ECOSYSTEM COVERAGE</text>
+<text x="60" y="108" fill="#f4f7fb" font-family="Arial" font-size="32" font-weight="800">From standards to adversaries, one research surface</text>
+<g font-family="monospace" text-anchor="middle">
+  <g transform="translate(120 180)"><rect width="190" height="110" rx="16" fill="#111822" stroke="#79b9ff"/><text x="95" y="42" fill="#79b9ff" font-size="28" font-weight="800">62</text><text x="95" y="72" fill="#9aa5b4" font-size="12">FRAMEWORKS</text></g>
+  <g transform="translate(340 180)"><rect width="190" height="110" rx="16" fill="#111822" stroke="#f24861"/><text x="95" y="42" fill="#f24861" font-size="28" font-weight="800">125</text><text x="95" y="72" fill="#9aa5b4" font-size="12">CATALOG ENTRIES</text></g>
+  <g transform="translate(560 180)"><rect width="190" height="110" rx="16" fill="#111822" stroke="#efbd67"/><text x="95" y="42" fill="#efbd67" font-size="28" font-weight="800">42</text><text x="95" y="72" fill="#9aa5b4" font-size="12">ADVERSARIES</text></g>
+  <g transform="translate(780 180)"><rect width="190" height="110" rx="16" fill="#111822" stroke="#63d89a"/><text x="95" y="42" fill="#63d89a" font-size="28" font-weight="800">89</text><text x="95" y="72" fill="#9aa5b4" font-size="12">GRAPH EDGES</text></g>
+  <g transform="translate(1000 180)"><rect width="190" height="110" rx="16" fill="#111822" stroke="#a997ff"/><text x="95" y="42" fill="#a997ff" font-size="28" font-weight="800">23</text><text x="95" y="72" fill="#9aa5b4" font-size="12">BOOKS + CERTS</text></g>
+</g>
+<g font-family="Arial" font-size="14" fill="#dce3ec">
+  <rect x="120" y="350" width="190" height="44" rx="10" fill="#121a26" stroke="#2a3546"/><text x="152" y="378">OffSec &amp; AppSec</text>
+  <rect x="330" y="350" width="190" height="44" rx="10" fill="#121a26" stroke="#2a3546"/><text x="375" y="378">Cloud &amp; Identity</text>
+  <rect x="540" y="350" width="190" height="44" rx="10" fill="#121a26" stroke="#2a3546"/><text x="584" y="378">Purple &amp; Detection</text>
+  <rect x="750" y="350" width="190" height="44" rx="10" fill="#121a26" stroke="#2a3546"/><text x="803" y="378">CTI &amp; Adversaries</text>
+  <rect x="960" y="350" width="190" height="44" rx="10" fill="#121a26" stroke="#2a3546"/><text x="1007" y="378">AI &amp; Supply Chain</text>
+</g>
+<text x="60" y="458" fill="#687486" font-family="monospace" font-size="13">Evidence tier · lifecycle · source provenance · verification state · API v3 · STIX · Neo4j · MISP · Navigator</text>
+</svg>

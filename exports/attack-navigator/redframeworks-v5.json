@@ -1,0 +1,57 @@
+{
+  "name": "RedFrameworks v5 validation coverage",
+  "versions": {
+    "attack": "19",
+    "navigator": "4.5",
+    "layer": "4.5"
+  },
+  "domain": "enterprise-attack",
+  "description": "ATT&CK techniques referenced by RedFrameworks defensive-validation examples.",
+  "filters": {
+    "platforms": []
+  },
+  "sorting": 0,
+  "layout": {
+    "layout": "side",
+    "aggregateFunction": "average",
+    "showID": true,
+    "showName": true,
+    "showAggregateScores": false,
+    "countUnscored": false
+  },
+  "hideDisabled": false,
+  "techniques": [
+    {
+      "techniqueID": "T1078",
+      "score": 50,
+      "comment": "Referenced by RedFrameworks validation examples."
+    },
+    {
+      "techniqueID": "T1087",
+      "score": 50,
+      "comment": "Referenced by RedFrameworks validation examples."
+    }
+  ],
+  "gradient": {
+    "colors": [
+      "#ffffff",
+      "#f0bd67",
+      "#f04f67"
+    ],
+    "minValue": 0,
+    "maxValue": 100
+  },
+  "legendItems": [
+    {
+      "label": "Referenced validation technique",
+      "color": "#f04f67"
+    }
+  ],
+  "metadata": [
+    {
+      "name": "source",
+      "value": "RedFrameworks"
+    }
+  ],
+  "links": []
+}

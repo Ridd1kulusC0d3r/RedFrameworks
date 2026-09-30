@@ -1,0 +1,981 @@
+[
+  {
+    "from": "mitre-attack",
+    "to": "atomic-red-team",
+    "relation": "behavior-to-validation",
+    "confidence": "high",
+    "provenance": "curated-crosswalk",
+    "source_refs": [
+      "mitre-attack",
+      "atomic-red-team"
+    ]
+  },
+  {
+    "from": "mitre-attack",
+    "to": "mitre-caldera",
+    "relation": "behavior-to-emulation",
+    "confidence": "high",
+    "provenance": "curated-crosswalk",
+    "source_refs": [
+      "mitre-attack",
+      "mitre-caldera"
+    ]
+  },
+  {
+    "from": "mitre-attack",
+    "to": "mitre-d3fend",
+    "relation": "behavior-to-countermeasure",
+    "confidence": "high",
+    "provenance": "curated-crosswalk",
+    "source_refs": [
+      "mitre-attack",
+      "mitre-d3fend"
+    ]
+  },
+  {
+    "from": "mitre-attack",
+    "to": "sigma",
+    "relation": "behavior-to-detection",
+    "confidence": "high",
+    "provenance": "curated-crosswalk",
+    "source_refs": [
+      "mitre-attack",
+      "sigma"
+    ]
+  },
+  {
+    "from": "mitre-attack",
+    "to": "ttpforge",
+    "relation": "behavior-to-simulation",
+    "confidence": "high",
+    "provenance": "curated-crosswalk",
+    "source_refs": [
+      "mitre-attack",
+      "ttpforge"
+    ]
+  },
+  {
+    "from": "mitre-attack",
+    "to": "vectr",
+    "relation": "behavior-to-measurement",
+    "confidence": "high",
+    "provenance": "curated-crosswalk",
+    "source_refs": [
+      "mitre-attack",
+      "vectr"
+    ]
+  },
+  {
+    "from": "mitre-attack",
+    "to": "attack-flow",
+    "relation": "behavior-to-sequencing",
+    "confidence": "high",
+    "provenance": "curated-crosswalk",
+    "source_refs": [
+      "mitre-attack",
+      "attack-flow"
+    ]
+  },
+  {
+    "from": "mitre-attack",
+    "to": "ctid-adversary-emulation",
+    "relation": "behavior-to-emulation-plan",
+    "confidence": "high",
+    "provenance": "curated-crosswalk",
+    "source_refs": [
+      "mitre-attack",
+      "ctid-adversary-emulation"
+    ]
+  },
+  {
+    "from": "mitre-attack",
+    "to": "mitre-atlas",
+    "relation": "enterprise-to-ai-context-bridge",
+    "confidence": "medium",
+    "provenance": "curated-crosswalk",
+    "source_refs": [
+      "mitre-attack",
+      "mitre-atlas"
+    ]
+  },
+  {
+    "from": "atomic-red-team",
+    "to": "splunk-attack-range",
+    "relation": "simulation-to-telemetry",
+    "confidence": "high",
+    "provenance": "curated-crosswalk",
+    "source_refs": [
+      "atomic-red-team",
+      "splunk-attack-range"
+    ]
+  },
+  {
+    "from": "openaev",
+    "to": "mitre-attack",
+    "relation": "validation-to-behavior",
+    "confidence": "high",
+    "provenance": "curated-crosswalk",
+    "source_refs": [
+      "openaev",
+      "mitre-attack"
+    ]
+  },
+  {
+    "from": "openaev",
+    "to": "vectr",
+    "relation": "validation-to-measurement",
+    "confidence": "medium",
+    "provenance": "curated-crosswalk",
+    "source_refs": [
+      "openaev",
+      "vectr"
+    ]
+  },
+  {
+    "from": "mitre-atlas",
+    "to": "pyrit",
+    "relation": "ai-threat-model-to-assessment",
+    "confidence": "high",
+    "provenance": "curated-crosswalk",
+    "source_refs": [
+      "mitre-atlas",
+      "pyrit"
+    ]
+  },
+  {
+    "from": "mitre-atlas",
+    "to": "garak",
+    "relation": "ai-threat-model-to-evaluation",
+    "confidence": "high",
+    "provenance": "curated-crosswalk",
+    "source_refs": [
+      "mitre-atlas",
+      "garak"
+    ]
+  },
+  {
+    "from": "mitre-atlas",
+    "to": "owasp-genai",
+    "relation": "ai-threat-model-to-application-risk",
+    "confidence": "medium",
+    "provenance": "curated-crosswalk",
+    "source_refs": [
+      "mitre-atlas",
+      "owasp-genai"
+    ]
+  },
+  {
+    "from": "mitre-atlas",
+    "to": "nist-ai-rmf-genai",
+    "relation": "ai-threat-model-to-risk-governance",
+    "confidence": "medium",
+    "provenance": "curated-crosswalk",
+    "source_refs": [
+      "mitre-atlas",
+      "nist-ai-rmf-genai"
+    ]
+  },
+  {
+    "from": "owasp-genai",
+    "to": "pyrit",
+    "relation": "application-risk-to-assessment",
+    "confidence": "medium",
+    "provenance": "curated-crosswalk",
+    "source_refs": [
+      "owasp-genai",
+      "pyrit"
+    ]
+  },
+  {
+    "from": "mitre-d3fend",
+    "to": "sigma",
+    "relation": "countermeasure-to-detection-context",
+    "confidence": "medium",
+    "provenance": "curated-crosswalk",
+    "source_refs": [
+      "mitre-d3fend",
+      "sigma"
+    ]
+  },
+  {
+    "from": "sigma",
+    "to": "velociraptor",
+    "relation": "detection-to-investigation",
+    "confidence": "medium",
+    "provenance": "curated-crosswalk",
+    "source_refs": [
+      "sigma",
+      "velociraptor"
+    ]
+  },
+  {
+    "from": "bloodhound",
+    "to": "azurehound",
+    "relation": "graph-to-data-collection",
+    "confidence": "high",
+    "provenance": "curated-crosswalk",
+    "source_refs": [
+      "bloodhound",
+      "azurehound"
+    ]
+  },
+  {
+    "from": "bloodhound",
+    "to": "roadtools",
+    "relation": "identity-graph-to-research",
+    "confidence": "medium",
+    "provenance": "curated-crosswalk",
+    "source_refs": [
+      "bloodhound",
+      "roadtools"
+    ]
+  },
+  {
+    "from": "cloudfox",
+    "to": "stratus-red-team",
+    "relation": "discovery-to-validation",
+    "confidence": "medium",
+    "provenance": "curated-crosswalk",
+    "source_refs": [
+      "cloudfox",
+      "stratus-red-team"
+    ]
+  },
+  {
+    "from": "cloudfox",
+    "to": "pacu",
+    "relation": "discovery-to-assessment",
+    "confidence": "medium",
+    "provenance": "curated-crosswalk",
+    "source_refs": [
+      "cloudfox",
+      "pacu"
+    ]
+  },
+  {
+    "from": "kubehound",
+    "to": "stratus-red-team",
+    "relation": "attack-path-to-validation",
+    "confidence": "medium",
+    "provenance": "curated-crosswalk",
+    "source_refs": [
+      "kubehound",
+      "stratus-red-team"
+    ]
+  },
+  {
+    "from": "microburst",
+    "to": "stormspotter",
+    "relation": "azure-assessment-to-graph-context",
+    "confidence": "medium",
+    "provenance": "curated-crosswalk",
+    "source_refs": [
+      "microburst",
+      "stormspotter"
+    ]
+  },
+  {
+    "from": "tiber-eu",
+    "to": "attack-flow",
+    "relation": "threat-led-scenario-modeling",
+    "confidence": "high",
+    "provenance": "curated-crosswalk",
+    "source_refs": [
+      "tiber-eu",
+      "attack-flow"
+    ]
+  },
+  {
+    "from": "cbest",
+    "to": "attack-flow",
+    "relation": "threat-led-scenario-modeling",
+    "confidence": "high",
+    "provenance": "curated-crosswalk",
+    "source_refs": [
+      "cbest",
+      "attack-flow"
+    ]
+  },
+  {
+    "from": "crest-tlpt",
+    "to": "attack-flow",
+    "relation": "assurance-to-scenario-modeling",
+    "confidence": "medium",
+    "provenance": "curated-crosswalk",
+    "source_refs": [
+      "crest-tlpt",
+      "attack-flow"
+    ]
+  },
+  {
+    "from": "tiber-eu",
+    "to": "ctid-adversary-emulation",
+    "relation": "threat-led-to-emulation-planning",
+    "confidence": "medium",
+    "provenance": "curated-crosswalk",
+    "source_refs": [
+      "tiber-eu",
+      "ctid-adversary-emulation"
+    ]
+  },
+  {
+    "from": "infection-monkey",
+    "to": "mitre-attack",
+    "relation": "emulation-to-behavior",
+    "confidence": "high",
+    "provenance": "curated-crosswalk",
+    "source_refs": [
+      "infection-monkey",
+      "mitre-attack"
+    ]
+  },
+  {
+    "from": "realm",
+    "to": "mitre-attack",
+    "relation": "emulation-to-behavior",
+    "confidence": "high",
+    "provenance": "curated-crosswalk",
+    "source_refs": [
+      "realm",
+      "mitre-attack"
+    ]
+  },
+  {
+    "from": "owasp-mastg",
+    "to": "mobsf",
+    "relation": "testing-guide-to-assessment-platform",
+    "confidence": "medium",
+    "provenance": "curated-crosswalk",
+    "source_refs": [
+      "owasp-mastg",
+      "mobsf"
+    ]
+  },
+  {
+    "from": "mobsf",
+    "to": "frida",
+    "relation": "static-dynamic-to-instrumentation",
+    "confidence": "medium",
+    "provenance": "curated-crosswalk",
+    "source_refs": [
+      "mobsf",
+      "frida"
+    ]
+  },
+  {
+    "from": "owasp-iot-istg",
+    "to": "expliot",
+    "relation": "testing-guide-to-assessment-framework",
+    "confidence": "medium",
+    "provenance": "curated-crosswalk",
+    "source_refs": [
+      "owasp-iot-istg",
+      "expliot"
+    ]
+  },
+  {
+    "from": "owasp-iot-istg",
+    "to": "routersploit",
+    "relation": "testing-guide-to-embedded-assessment",
+    "confidence": "medium",
+    "provenance": "curated-crosswalk",
+    "source_refs": [
+      "owasp-iot-istg",
+      "routersploit"
+    ]
+  },
+  {
+    "from": "owasp-asvs",
+    "to": "burp-suite",
+    "relation": "standard-to-assessment-platform",
+    "confidence": "high",
+    "provenance": "curated-crosswalk",
+    "source_refs": [
+      "owasp-asvs",
+      "burp-suite"
+    ]
+  },
+  {
+    "from": "owasp-asvs",
+    "to": "owasp-zap",
+    "relation": "standard-to-assessment-platform",
+    "confidence": "high",
+    "provenance": "curated-crosswalk",
+    "source_refs": [
+      "owasp-asvs",
+      "owasp-zap"
+    ]
+  },
+  {
+    "from": "owasp-api-top10",
+    "to": "burp-suite",
+    "relation": "risk-model-to-assessment-platform",
+    "confidence": "high",
+    "provenance": "curated-crosswalk",
+    "source_refs": [
+      "owasp-api-top10",
+      "burp-suite"
+    ]
+  },
+  {
+    "from": "owasp-api-top10",
+    "to": "owasp-zap",
+    "relation": "risk-model-to-assessment-platform",
+    "confidence": "high",
+    "provenance": "curated-crosswalk",
+    "source_refs": [
+      "owasp-api-top10",
+      "owasp-zap"
+    ]
+  },
+  {
+    "from": "owasp-samm",
+    "to": "nist-ssdf",
+    "relation": "maturity-model-to-secure-development",
+    "confidence": "medium",
+    "provenance": "curated-crosswalk",
+    "source_refs": [
+      "owasp-samm",
+      "nist-ssdf"
+    ]
+  },
+  {
+    "from": "owasp-masvs",
+    "to": "owasp-mastg",
+    "relation": "verification-standard-to-testing-guide",
+    "confidence": "high",
+    "provenance": "curated-crosswalk",
+    "source_refs": [
+      "owasp-masvs",
+      "owasp-mastg"
+    ]
+  },
+  {
+    "from": "owasp-isvs",
+    "to": "owasp-iot-istg",
+    "relation": "verification-standard-to-testing-guide",
+    "confidence": "high",
+    "provenance": "curated-crosswalk",
+    "source_refs": [
+      "owasp-isvs",
+      "owasp-iot-istg"
+    ]
+  },
+  {
+    "from": "nist-ssdf",
+    "to": "semgrep",
+    "relation": "secure-development-to-static-analysis",
+    "confidence": "medium",
+    "provenance": "curated-crosswalk",
+    "source_refs": [
+      "nist-ssdf",
+      "semgrep"
+    ]
+  },
+  {
+    "from": "nist-ssdf",
+    "to": "slsa",
+    "relation": "secure-development-to-supply-chain-assurance",
+    "confidence": "medium",
+    "provenance": "curated-crosswalk",
+    "source_refs": [
+      "nist-ssdf",
+      "slsa"
+    ]
+  },
+  {
+    "from": "slsa",
+    "to": "trivy",
+    "relation": "supply-chain-assurance-to-artifact-assessment",
+    "confidence": "medium",
+    "provenance": "curated-crosswalk",
+    "source_refs": [
+      "slsa",
+      "trivy"
+    ]
+  },
+  {
+    "from": "slsa",
+    "to": "openssf-scorecard",
+    "relation": "supply-chain-assurance-to-project-posture",
+    "confidence": "medium",
+    "provenance": "curated-crosswalk",
+    "source_refs": [
+      "slsa",
+      "openssf-scorecard"
+    ]
+  },
+  {
+    "from": "csa-ccm",
+    "to": "prowler",
+    "relation": "cloud-control-to-assessment",
+    "confidence": "medium",
+    "provenance": "curated-crosswalk",
+    "source_refs": [
+      "csa-ccm",
+      "prowler"
+    ]
+  },
+  {
+    "from": "csa-ccm",
+    "to": "scoutsuite",
+    "relation": "cloud-control-to-assessment",
+    "confidence": "medium",
+    "provenance": "curated-crosswalk",
+    "source_refs": [
+      "csa-ccm",
+      "scoutsuite"
+    ]
+  },
+  {
+    "from": "mitre-cwe",
+    "to": "semgrep",
+    "relation": "weakness-model-to-static-analysis",
+    "confidence": "medium",
+    "provenance": "curated-crosswalk",
+    "source_refs": [
+      "mitre-cwe",
+      "semgrep"
+    ]
+  },
+  {
+    "from": "mitre-capec",
+    "to": "mitre-attack",
+    "relation": "attack-pattern-to-behavior",
+    "confidence": "high",
+    "provenance": "curated-crosswalk",
+    "source_refs": [
+      "mitre-capec",
+      "mitre-attack"
+    ]
+  },
+  {
+    "from": "mitre-car",
+    "to": "zeek",
+    "relation": "analytics-to-network-telemetry",
+    "confidence": "medium",
+    "provenance": "curated-crosswalk",
+    "source_refs": [
+      "mitre-car",
+      "zeek"
+    ]
+  },
+  {
+    "from": "mitre-car",
+    "to": "osquery",
+    "relation": "analytics-to-endpoint-telemetry",
+    "confidence": "medium",
+    "provenance": "curated-crosswalk",
+    "source_refs": [
+      "mitre-car",
+      "osquery"
+    ]
+  },
+  {
+    "from": "ocsf",
+    "to": "zeek",
+    "relation": "schema-to-network-telemetry",
+    "confidence": "medium",
+    "provenance": "curated-crosswalk",
+    "source_refs": [
+      "ocsf",
+      "zeek"
+    ]
+  },
+  {
+    "from": "ocsf",
+    "to": "osquery",
+    "relation": "schema-to-endpoint-telemetry",
+    "confidence": "medium",
+    "provenance": "curated-crosswalk",
+    "source_refs": [
+      "ocsf",
+      "osquery"
+    ]
+  },
+  {
+    "from": "cis-controls",
+    "to": "falco",
+    "relation": "safeguard-to-runtime-detection",
+    "confidence": "medium",
+    "provenance": "curated-crosswalk",
+    "source_refs": [
+      "cis-controls",
+      "falco"
+    ]
+  },
+  {
+    "from": "cis-controls",
+    "to": "suricata",
+    "relation": "safeguard-to-network-detection",
+    "confidence": "medium",
+    "provenance": "curated-crosswalk",
+    "source_refs": [
+      "cis-controls",
+      "suricata"
+    ]
+  },
+  {
+    "from": "first-cvss",
+    "to": "first-epss",
+    "relation": "severity-to-exploitation-likelihood-context",
+    "confidence": "medium",
+    "provenance": "curated-crosswalk",
+    "source_refs": [
+      "first-cvss",
+      "first-epss"
+    ]
+  },
+  {
+    "from": "nist-sp-800-207",
+    "to": "bloodhound",
+    "relation": "zero-trust-to-identity-attack-path-analysis",
+    "confidence": "medium",
+    "provenance": "curated-crosswalk",
+    "source_refs": [
+      "nist-sp-800-207",
+      "bloodhound"
+    ]
+  },
+  {
+    "from": "nist-csf-2",
+    "to": "mitre-attack",
+    "relation": "risk-framework-to-threat-behavior-context",
+    "confidence": "medium",
+    "provenance": "curated-crosswalk",
+    "source_refs": [
+      "nist-csf-2",
+      "mitre-attack"
+    ]
+  },
+  {
+    "from": "openssf-scorecard",
+    "to": "checkov",
+    "relation": "project-posture-to-iac-assessment",
+    "confidence": "medium",
+    "provenance": "curated-crosswalk",
+    "source_refs": [
+      "openssf-scorecard",
+      "checkov"
+    ]
+  },
+  {
+    "from": "oasis-stix-2-1",
+    "to": "oasis-taxii-2-1",
+    "relation": "intelligence-model-to-transport",
+    "confidence": "high",
+    "provenance": "curated-crosswalk",
+    "source_refs": [
+      "oasis-stix-2-1",
+      "oasis-taxii-2-1"
+    ]
+  },
+  {
+    "from": "mitre-attack",
+    "to": "oasis-stix-2-1",
+    "relation": "behavior-model-to-cti-representation",
+    "confidence": "high",
+    "provenance": "curated-crosswalk",
+    "source_refs": [
+      "mitre-attack",
+      "oasis-stix-2-1"
+    ]
+  },
+  {
+    "from": "misp-galaxy",
+    "to": "oasis-stix-2-1",
+    "relation": "knowledge-model-to-cti-representation",
+    "confidence": "medium",
+    "provenance": "curated-crosswalk",
+    "source_refs": [
+      "misp-galaxy",
+      "oasis-stix-2-1"
+    ]
+  },
+  {
+    "from": "misp-galaxy",
+    "to": "mitre-attack",
+    "relation": "threat-actor-context-to-behavior-model",
+    "confidence": "high",
+    "provenance": "curated-crosswalk",
+    "source_refs": [
+      "misp-galaxy",
+      "mitre-attack"
+    ]
+  },
+  {
+    "from": "cyber-kill-chain",
+    "to": "mitre-attack",
+    "relation": "intrusion-lifecycle-to-behavior-model",
+    "confidence": "medium",
+    "provenance": "curated-crosswalk",
+    "source_refs": [
+      "cyber-kill-chain",
+      "mitre-attack"
+    ]
+  },
+  {
+    "from": "oasis-cacao-2",
+    "to": "mitre-d3fend",
+    "relation": "playbook-to-defensive-action-context",
+    "confidence": "medium",
+    "provenance": "curated-crosswalk",
+    "source_refs": [
+      "oasis-cacao-2",
+      "mitre-d3fend"
+    ]
+  },
+  {
+    "from": "oasis-cacao-2",
+    "to": "nist-sp-800-61-r3",
+    "relation": "playbook-to-incident-response",
+    "confidence": "high",
+    "provenance": "curated-crosswalk",
+    "source_refs": [
+      "oasis-cacao-2",
+      "nist-sp-800-61-r3"
+    ]
+  },
+  {
+    "from": "veris",
+    "to": "nist-sp-800-61-r3",
+    "relation": "incident-data-to-response-governance",
+    "confidence": "medium",
+    "provenance": "curated-crosswalk",
+    "source_refs": [
+      "veris",
+      "nist-sp-800-61-r3"
+    ]
+  },
+  {
+    "from": "first-tlp-2",
+    "to": "oasis-stix-2-1",
+    "relation": "sharing-marking-to-cti-exchange",
+    "confidence": "high",
+    "provenance": "curated-crosswalk",
+    "source_refs": [
+      "first-tlp-2",
+      "oasis-stix-2-1"
+    ]
+  },
+  {
+    "from": "first-csirt-services",
+    "to": "nist-sp-800-61-r3",
+    "relation": "csirt-services-to-incident-response",
+    "confidence": "high",
+    "provenance": "curated-crosswalk",
+    "source_refs": [
+      "first-csirt-services",
+      "nist-sp-800-61-r3"
+    ]
+  },
+  {
+    "from": "nist-sp-800-160-v2-r1",
+    "to": "cisa-cpg",
+    "relation": "resilience-engineering-to-security-outcomes",
+    "confidence": "medium",
+    "provenance": "curated-crosswalk",
+    "source_refs": [
+      "nist-sp-800-160-v2-r1",
+      "cisa-cpg"
+    ]
+  },
+  {
+    "from": "ssvc",
+    "to": "first-epss",
+    "relation": "decision-prioritization-to-exploitation-likelihood",
+    "confidence": "medium",
+    "provenance": "curated-crosswalk",
+    "source_refs": [
+      "ssvc",
+      "first-epss"
+    ]
+  },
+  {
+    "from": "ssvc",
+    "to": "first-cvss",
+    "relation": "decision-prioritization-to-severity-context",
+    "confidence": "medium",
+    "provenance": "curated-crosswalk",
+    "source_refs": [
+      "ssvc",
+      "first-cvss"
+    ]
+  },
+  {
+    "from": "oasis-csaf-2",
+    "to": "ssvc",
+    "relation": "security-advisory-to-response-prioritization",
+    "confidence": "medium",
+    "provenance": "curated-crosswalk",
+    "source_refs": [
+      "oasis-csaf-2",
+      "ssvc"
+    ]
+  },
+  {
+    "from": "owasp-top10-2025",
+    "to": "owasp-asvs",
+    "relation": "risk-awareness-to-verification-standard",
+    "confidence": "high",
+    "provenance": "curated-crosswalk",
+    "source_refs": [
+      "owasp-top10-2025",
+      "owasp-asvs"
+    ]
+  },
+  {
+    "from": "nist-sp-800-63-4",
+    "to": "nist-sp-800-207",
+    "relation": "digital-identity-to-zero-trust",
+    "confidence": "high",
+    "provenance": "curated-crosswalk",
+    "source_refs": [
+      "nist-sp-800-63-4",
+      "nist-sp-800-207"
+    ]
+  },
+  {
+    "from": "nist-sp-800-63-4",
+    "to": "bloodhound",
+    "relation": "identity-assurance-to-attack-path-context",
+    "confidence": "medium",
+    "provenance": "curated-crosswalk",
+    "source_refs": [
+      "nist-sp-800-63-4",
+      "bloodhound"
+    ]
+  },
+  {
+    "from": "nist-sp-800-161-r1",
+    "to": "nist-ssdf",
+    "relation": "supply-chain-risk-to-secure-development",
+    "confidence": "high",
+    "provenance": "curated-crosswalk",
+    "source_refs": [
+      "nist-sp-800-161-r1",
+      "nist-ssdf"
+    ]
+  },
+  {
+    "from": "nist-sp-800-161-r1",
+    "to": "slsa",
+    "relation": "supply-chain-risk-to-build-provenance",
+    "confidence": "medium",
+    "provenance": "curated-crosswalk",
+    "source_refs": [
+      "nist-sp-800-161-r1",
+      "slsa"
+    ]
+  },
+  {
+    "from": "nist-sp-800-190",
+    "to": "trivy",
+    "relation": "container-guidance-to-workload-assessment",
+    "confidence": "medium",
+    "provenance": "curated-crosswalk",
+    "source_refs": [
+      "nist-sp-800-190",
+      "trivy"
+    ]
+  },
+  {
+    "from": "nist-sp-800-190",
+    "to": "kube-bench",
+    "relation": "container-guidance-to-kubernetes-benchmark",
+    "confidence": "medium",
+    "provenance": "curated-crosswalk",
+    "source_refs": [
+      "nist-sp-800-190",
+      "kube-bench"
+    ]
+  },
+  {
+    "from": "cisa-ztmm-2",
+    "to": "nist-sp-800-207",
+    "relation": "maturity-model-to-zero-trust-architecture",
+    "confidence": "high",
+    "provenance": "curated-crosswalk",
+    "source_refs": [
+      "cisa-ztmm-2",
+      "nist-sp-800-207"
+    ]
+  },
+  {
+    "from": "openssf-osps-baseline",
+    "to": "openssf-scorecard",
+    "relation": "project-baseline-to-repository-assessment",
+    "confidence": "high",
+    "provenance": "curated-crosswalk",
+    "source_refs": [
+      "openssf-osps-baseline",
+      "openssf-scorecard"
+    ]
+  },
+  {
+    "from": "openssf-osps-baseline",
+    "to": "slsa",
+    "relation": "project-baseline-to-supply-chain-assurance",
+    "confidence": "medium",
+    "provenance": "curated-crosswalk",
+    "source_refs": [
+      "openssf-osps-baseline",
+      "slsa"
+    ]
+  },
+  {
+    "from": "owasp-scvs",
+    "to": "nist-ssdf",
+    "relation": "component-verification-to-secure-development",
+    "confidence": "high",
+    "provenance": "curated-crosswalk",
+    "source_refs": [
+      "owasp-scvs",
+      "nist-ssdf"
+    ]
+  },
+  {
+    "from": "csa-security-guidance-v5",
+    "to": "csa-ccm",
+    "relation": "cloud-guidance-to-control-matrix",
+    "confidence": "high",
+    "provenance": "curated-crosswalk",
+    "source_refs": [
+      "csa-security-guidance-v5",
+      "csa-ccm"
+    ]
+  },
+  {
+    "from": "etsi-en-303-645",
+    "to": "owasp-isvs",
+    "relation": "consumer-iot-to-iot-verification",
+    "confidence": "medium",
+    "provenance": "curated-crosswalk",
+    "source_refs": [
+      "etsi-en-303-645",
+      "owasp-isvs"
+    ]
+  },
+  {
+    "from": "iso-iec-27001-2022",
+    "to": "iso-iec-27005-2022",
+    "relation": "isms-to-risk-management",
+    "confidence": "high",
+    "provenance": "curated-crosswalk",
+    "source_refs": [
+      "iso-iec-27001-2022",
+      "iso-iec-27005-2022"
+    ]
+  },
+  {
+    "from": "iso-iec-27001-2022",
+    "to": "nist-csf-2",
+    "relation": "isms-to-cyber-risk-framework",
+    "confidence": "medium",
+    "provenance": "curated-crosswalk",
+    "source_refs": [
+      "iso-iec-27001-2022",
+      "nist-csf-2"
+    ]
+  }
+]

@@ -1,0 +1,108 @@
+[
+  {
+    "id": "T1078",
+    "name": "Valid Accounts",
+    "url": "https://attack.mitre.org/techniques/T1078/",
+    "scenarios": [
+      {
+        "id": "RF-IDENTITY-001",
+        "name": "Identity telemetry and response validation",
+        "source": "examples/scenarios/identity-detection-validation.yaml"
+      }
+    ],
+    "scorecards": [
+      {
+        "scenario_id": "PT-IDENTITY-001",
+        "phase": "baseline",
+        "date": "2026-07-15",
+        "source": "examples/purple-team/scorecard-baseline.yaml"
+      },
+      {
+        "scenario_id": "PT-EXAMPLE-001",
+        "phase": "example",
+        "date": "2026-09-29",
+        "source": "examples/purple-team/scorecard-example.yaml"
+      },
+      {
+        "scenario_id": "PT-IDENTITY-001",
+        "phase": "iteration-1",
+        "date": "2026-08-20",
+        "source": "examples/purple-team/scorecard-iteration-1.yaml"
+      },
+      {
+        "scenario_id": "PT-IDENTITY-001",
+        "phase": "retest",
+        "date": "2026-09-29",
+        "source": "examples/purple-team/scorecard-retest.yaml"
+      }
+    ],
+    "defensive_context": [
+      {
+        "relationship_type": "d3fend-inferred-relationships",
+        "defensive_actions": [
+          "model",
+          "harden",
+          "detect",
+          "isolate",
+          "evict",
+          "restore"
+        ],
+        "source": "https://d3fend.mitre.org/offensive-technique/attack/T1078/",
+        "note": "Illustrate how an ATT&CK behavior can be connected to defensive concepts without claiming a single perfect mitigation."
+      }
+    ]
+  },
+  {
+    "id": "T1087",
+    "name": "Account Discovery",
+    "url": "https://attack.mitre.org/techniques/T1087/",
+    "scenarios": [
+      {
+        "id": "RF-IDENTITY-001",
+        "name": "Identity telemetry and response validation",
+        "source": "examples/scenarios/identity-detection-validation.yaml"
+      }
+    ],
+    "scorecards": [
+      {
+        "scenario_id": "PT-IDENTITY-001",
+        "phase": "baseline",
+        "date": "2026-07-15",
+        "source": "examples/purple-team/scorecard-baseline.yaml"
+      },
+      {
+        "scenario_id": "PT-EXAMPLE-001",
+        "phase": "example",
+        "date": "2026-09-29",
+        "source": "examples/purple-team/scorecard-example.yaml"
+      },
+      {
+        "scenario_id": "PT-IDENTITY-001",
+        "phase": "iteration-1",
+        "date": "2026-08-20",
+        "source": "examples/purple-team/scorecard-iteration-1.yaml"
+      },
+      {
+        "scenario_id": "PT-IDENTITY-001",
+        "phase": "retest",
+        "date": "2026-09-29",
+        "source": "examples/purple-team/scorecard-retest.yaml"
+      }
+    ],
+    "defensive_context": [
+      {
+        "relationship_type": "d3fend-inferred-relationships",
+        "defensive_actions": [
+          "model",
+          "harden",
+          "detect",
+          "isolate",
+          "evict",
+          "restore"
+        ],
+        "source": "https://d3fend.mitre.org/offensive-technique/attack/T1087/",
+        "note": "Illustrate defensive observation and hardening context for discovery behavior."
+      }
+    ]
+  }
+]

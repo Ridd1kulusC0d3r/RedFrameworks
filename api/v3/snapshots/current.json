@@ -1,0 +1,2960 @@
+{
+  "snapshot_schema": "1.0",
+  "version": "current",
+  "dataset_updated": "2026-09-30",
+  "source_sha256": "94e687e64ff3422f4127f667cb5ec08eeba7244eb11fb95613acd8223f58f5bd",
+  "counts": {
+    "entries": 196,
+    "relationships": 89
+  },
+  "entries": [
+    {
+      "id": "adaptixc2",
+      "name": "AdaptixC2",
+      "status": "verified",
+      "type": "operational-platform",
+      "domains": [
+        "adversary-emulation"
+      ],
+      "source": "catalog.yaml"
+    },
+    {
+      "id": "advanced-iot-exploitation-framework-v2-0",
+      "name": "advanced-iot-exploitation-framework-v2-0",
+      "status": "not-verified",
+      "type": "iot-embedded-candidate",
+      "domains": [
+        "device-security",
+        "embedded",
+        "iot",
+        "research"
+      ],
+      "source": "catalog.yaml"
+    },
+    {
+      "id": "advent-prompt-pwn",
+      "name": "advent-prompt-pwn",
+      "status": "not-verified",
+      "type": "ai-security-candidate",
+      "domains": [
+        "ai-genai",
+        "research"
+      ],
+      "source": "catalog.yaml"
+    },
+    {
+      "id": "aegis-adversary-emulation",
+      "name": "AEGIS",
+      "status": "not-verified",
+      "type": "autonomous-emulation-research-candidate",
+      "domains": [
+        "adversary-emulation",
+        "ai-security",
+        "automation",
+        "research"
+      ],
+      "source": "catalog.yaml"
+    },
+    {
+      "id": "aibas360",
+      "name": "aiBAS360",
+      "status": "not-verified",
+      "type": "bas-research-candidate",
+      "domains": [
+        "ai-security",
+        "breach-attack-simulation",
+        "purple-team",
+        "research"
+      ],
+      "source": "catalog.yaml"
+    },
+    {
+      "id": "aptsimulator",
+      "name": "APTSimulator",
+      "status": "not-verified",
+      "type": "adversary-emulation-candidate",
+      "domains": [
+        "adversary-emulation",
+        "research"
+      ],
+      "source": "catalog.yaml"
+    },
+    {
+      "id": "arsenal",
+      "name": "arsenal",
+      "status": "not-verified",
+      "type": "security-reference-candidate",
+      "domains": [
+        "reference",
+        "research",
+        "security-assessment",
+        "toolkit"
+      ],
+      "source": "catalog.yaml"
+    },
+    {
+      "id": "atomic-red-team",
+      "name": "Atomic Red Team",
+      "status": "verified",
+      "type": "control-validation",
+      "domains": [
+        "detection",
+        "enterprise"
+      ],
+      "source": "frameworks.yaml"
+    },
+    {
+      "id": "attack-flow",
+      "name": "Attack Flow",
+      "status": "verified",
+      "type": "behavior-model",
+      "domains": [
+        "cloud",
+        "enterprise"
+      ],
+      "source": "frameworks.yaml"
+    },
+    {
+      "id": "attackiq",
+      "name": "AttackIQ",
+      "status": "commercial",
+      "type": "security-validation-platform",
+      "domains": [
+        "bas",
+        "purple-team"
+      ],
+      "source": "catalog.yaml"
+    },
+    {
+      "id": "autopt",
+      "name": "AutoPT",
+      "status": "not-verified",
+      "type": "ai-security-candidate",
+      "domains": [
+        "ai-genai",
+        "research"
+      ],
+      "source": "catalog.yaml"
+    },
+    {
+      "id": "autopwn",
+      "name": "autopwn",
+      "status": "not-verified",
+      "type": "ai-security-candidate",
+      "domains": [
+        "ai-security",
+        "automation",
+        "research",
+        "vulnerability-research"
+      ],
+      "source": "catalog.yaml"
+    },
+    {
+      "id": "ax-framework",
+      "name": "ax-framework",
+      "status": "not-verified",
+      "type": "cloud-infrastructure-candidate",
+      "domains": [
+        "assessment-infrastructure",
+        "automation",
+        "cloud",
+        "research"
+      ],
+      "source": "catalog.yaml"
+    },
+    {
+      "id": "azurehound",
+      "name": "AzureHound",
+      "status": "verified",
+      "type": "data-collector",
+      "domains": [
+        "azure",
+        "entra-id",
+        "identity"
+      ],
+      "source": "catalog.yaml"
+    },
+    {
+      "id": "basilisk",
+      "name": "Basilisk",
+      "status": "not-verified",
+      "type": "ai-security-candidate",
+      "domains": [
+        "ai-genai",
+        "research"
+      ],
+      "source": "catalog.yaml"
+    },
+    {
+      "id": "bear-c2",
+      "name": "bear-c2",
+      "status": "not-verified",
+      "type": "operational-platform-research-candidate",
+      "domains": [
+        "adversary-emulation",
+        "operational-platform",
+        "research"
+      ],
+      "source": "catalog.yaml"
+    },
+    {
+      "id": "blindspot-adversary-simulator",
+      "name": "BlindSpot",
+      "status": "not-verified",
+      "type": "adversary-simulation-research-candidate",
+      "domains": [
+        "adversary-emulation",
+        "purple-team",
+        "research",
+        "security-validation"
+      ],
+      "source": "catalog.yaml"
+    },
+    {
+      "id": "bloodhound",
+      "name": "BloodHound",
+      "status": "verified",
+      "type": "attack-path-analysis",
+      "domains": [
+        "active-directory",
+        "entra-id",
+        "identity"
+      ],
+      "source": "catalog.yaml"
+    },
+    {
+      "id": "bounty-hunter",
+      "name": "bounty-hunter",
+      "status": "not-verified",
+      "type": "caldera-research-candidate",
+      "domains": [
+        "adversary-emulation",
+        "automation",
+        "caldera",
+        "research"
+      ],
+      "source": "catalog.yaml"
+    },
+    {
+      "id": "burp-suite",
+      "name": "Burp Suite",
+      "status": "verified",
+      "type": "web-assessment-platform",
+      "domains": [
+        "api",
+        "application-security",
+        "web"
+      ],
+      "source": "catalog.yaml"
+    },
+    {
+      "id": "cartography",
+      "name": "Cartography",
+      "status": "verified",
+      "type": "security-graph-platform",
+      "domains": [
+        "attack-path-analysis",
+        "cloud",
+        "identity"
+      ],
+      "source": "catalog.yaml"
+    },
+    {
+      "id": "cbest",
+      "name": "CBEST",
+      "status": "verified",
+      "type": "threat-led-testing-framework",
+      "domains": [
+        "financial",
+        "regulated",
+        "uk"
+      ],
+      "source": "frameworks.yaml"
+    },
+    {
+      "id": "checkov",
+      "name": "Checkov",
+      "status": "verified",
+      "type": "iac-security-scanner",
+      "domains": [
+        "cloud",
+        "infrastructure-as-code",
+        "secure-development"
+      ],
+      "source": "catalog.yaml"
+    },
+    {
+      "id": "cis-controls",
+      "name": "CIS Critical Security Controls",
+      "status": "verified",
+      "type": "security-control-framework",
+      "domains": [
+        "defense",
+        "enterprise",
+        "governance"
+      ],
+      "source": "frameworks.yaml"
+    },
+    {
+      "id": "cisa-cpg",
+      "name": "CISA Cross-Sector Cybersecurity Performance Goals",
+      "status": "verified",
+      "type": "security-outcomes-framework",
+      "domains": [
+        "critical-infrastructure",
+        "defense",
+        "governance"
+      ],
+      "source": "frameworks.yaml"
+    },
+    {
+      "id": "cisa-ztmm-2",
+      "name": "CISA Zero Trust Maturity Model",
+      "status": "verified",
+      "type": "zero-trust-maturity-model",
+      "domains": [
+        "applications",
+        "data",
+        "devices",
+        "identity",
+        "network",
+        "zero-trust"
+      ],
+      "source": "frameworks.yaml"
+    },
+    {
+      "id": "cloudfox",
+      "name": "CloudFox",
+      "status": "verified",
+      "type": "assessment-tool",
+      "domains": [
+        "aws",
+        "azure",
+        "gcp"
+      ],
+      "source": "catalog.yaml"
+    },
+    {
+      "id": "cloudtoolkit",
+      "name": "cloudtoolkit",
+      "status": "not-verified",
+      "type": "cloud-toolkit-candidate",
+      "domains": [
+        "cloud",
+        "multi-cloud",
+        "research",
+        "security-assessment"
+      ],
+      "source": "catalog.yaml"
+    },
+    {
+      "id": "cobalt-strike",
+      "name": "Cobalt Strike",
+      "status": "commercial",
+      "type": "operational-platform",
+      "domains": [
+        "adversary-emulation"
+      ],
+      "source": "catalog.yaml"
+    },
+    {
+      "id": "cosmos-orbit",
+      "name": "Cosmos Orbit",
+      "status": "not-verified",
+      "type": "operational-platform-candidate",
+      "domains": [
+        "adversary-emulation",
+        "research"
+      ],
+      "source": "catalog.yaml"
+    },
+    {
+      "id": "covenant",
+      "name": "Covenant",
+      "status": "not-verified",
+      "type": "operational-platform-candidate",
+      "domains": [
+        "adversary-emulation",
+        "research"
+      ],
+      "source": "catalog.yaml"
+    },
+    {
+      "id": "cptf-arm-edition",
+      "name": "cptf-arm-edition",
+      "status": "not-verified",
+      "type": "cloud-toolkit-candidate",
+      "domains": [
+        "arm64",
+        "cloud",
+        "lab-environment",
+        "research"
+      ],
+      "source": "catalog.yaml"
+    },
+    {
+      "id": "crackmapexec",
+      "name": "CrackMapExec",
+      "status": "not-verified",
+      "type": "legacy-review-candidate",
+      "domains": [
+        "legacy-review",
+        "research"
+      ],
+      "source": "catalog.yaml"
+    },
+    {
+      "id": "crest-tlpt",
+      "name": "CREST Threat-Led Penetration Testing",
+      "status": "verified",
+      "type": "assurance-framework",
+      "domains": [
+        "enterprise",
+        "regulated"
+      ],
+      "source": "frameworks.yaml"
+    },
+    {
+      "id": "csa-ccm",
+      "name": "CSA Cloud Controls Matrix",
+      "status": "verified",
+      "type": "cloud-control-framework",
+      "domains": [
+        "assurance",
+        "cloud",
+        "governance"
+      ],
+      "source": "frameworks.yaml"
+    },
+    {
+      "id": "csa-security-guidance-v5",
+      "name": "CSA Security Guidance for Cloud Computing",
+      "status": "verified",
+      "type": "cloud-security-guidance",
+      "domains": [
+        "cloud",
+        "identity",
+        "incident-response",
+        "resilience",
+        "workload-security"
+      ],
+      "source": "frameworks.yaml"
+    },
+    {
+      "id": "ctid-adversary-emulation",
+      "name": "CTID Adversary Emulation Library",
+      "status": "verified",
+      "type": "emulation-library",
+      "domains": [
+        "enterprise"
+      ],
+      "source": "frameworks.yaml"
+    },
+    {
+      "id": "ctrsploit",
+      "name": "ctrsploit",
+      "status": "not-verified",
+      "type": "cloud-security-candidate",
+      "domains": [
+        "cloud",
+        "kubernetes",
+        "research"
+      ],
+      "source": "catalog.yaml"
+    },
+    {
+      "id": "cyber-kill-chain",
+      "name": "Cyber Kill Chain",
+      "status": "verified",
+      "type": "intrusion-lifecycle-model",
+      "domains": [
+        "adversary-analysis",
+        "detection",
+        "threat-intelligence"
+      ],
+      "source": "frameworks.yaml"
+    },
+    {
+      "id": "cymulate",
+      "name": "Cymulate",
+      "status": "commercial",
+      "type": "security-validation-platform",
+      "domains": [
+        "bas",
+        "exposure-validation"
+      ],
+      "source": "catalog.yaml"
+    },
+    {
+      "id": "deepattacker",
+      "name": "DeepAttacker",
+      "status": "not-verified",
+      "type": "agentic-simulation-research-candidate",
+      "domains": [
+        "adversary-emulation",
+        "ai-security",
+        "multi-agent",
+        "research"
+      ],
+      "source": "catalog.yaml"
+    },
+    {
+      "id": "deepteam",
+      "name": "DeepTeam",
+      "status": "not-verified",
+      "type": "ai-security-candidate",
+      "domains": [
+        "ai-genai",
+        "research"
+      ],
+      "source": "catalog.yaml"
+    },
+    {
+      "id": "detectionlab",
+      "name": "DetectionLab",
+      "status": "legacy",
+      "type": "detection-lab",
+      "domains": [
+        "detection",
+        "lab",
+        "purple-team"
+      ],
+      "source": "catalog.yaml"
+    },
+    {
+      "id": "dnscat2",
+      "name": "DNSCat2",
+      "status": "not-verified",
+      "type": "operational-platform-candidate",
+      "domains": [
+        "adversary-emulation",
+        "research"
+      ],
+      "source": "catalog.yaml"
+    },
+    {
+      "id": "elaina-c2",
+      "name": "Elaina-C2",
+      "status": "not-verified",
+      "type": "operational-platform-candidate",
+      "domains": [
+        "adversary-emulation",
+        "research"
+      ],
+      "source": "catalog.yaml"
+    },
+    {
+      "id": "embedxpl-forge",
+      "name": "embedxpl-forge",
+      "status": "not-verified",
+      "type": "iot-embedded-candidate",
+      "domains": [
+        "device-security",
+        "embedded",
+        "iot",
+        "research"
+      ],
+      "source": "catalog.yaml"
+    },
+    {
+      "id": "empire",
+      "name": "Empire",
+      "status": "verified",
+      "type": "operational-platform",
+      "domains": [
+        "adversary-emulation",
+        "post-exploitation"
+      ],
+      "source": "catalog.yaml"
+    },
+    {
+      "id": "etsi-en-303-645",
+      "name": "ETSI EN 303 645 Consumer IoT Security",
+      "status": "verified",
+      "type": "iot-security-standard",
+      "domains": [
+        "consumer-iot",
+        "iot",
+        "privacy",
+        "product-security"
+      ],
+      "source": "frameworks.yaml"
+    },
+    {
+      "id": "expliot",
+      "name": "EXPLIoT",
+      "status": "verified",
+      "type": "iot-assessment-framework",
+      "domains": [
+        "embedded",
+        "iot"
+      ],
+      "source": "catalog.yaml"
+    },
+    {
+      "id": "faction-c2",
+      "name": "Faction C2",
+      "status": "not-verified",
+      "type": "operational-platform-candidate",
+      "domains": [
+        "adversary-emulation",
+        "research"
+      ],
+      "source": "catalog.yaml"
+    },
+    {
+      "id": "falco",
+      "name": "Falco",
+      "status": "verified",
+      "type": "runtime-detection-platform",
+      "domains": [
+        "cloud-native",
+        "containers",
+        "detection",
+        "kubernetes"
+      ],
+      "source": "catalog.yaml"
+    },
+    {
+      "id": "first-csirt-services",
+      "name": "FIRST CSIRT Services Framework",
+      "status": "verified",
+      "type": "incident-response-services-framework",
+      "domains": [
+        "csirt",
+        "incident-response",
+        "operations"
+      ],
+      "source": "frameworks.yaml"
+    },
+    {
+      "id": "first-cvss",
+      "name": "FIRST Common Vulnerability Scoring System",
+      "status": "verified",
+      "type": "vulnerability-scoring-framework",
+      "domains": [
+        "product-security",
+        "risk",
+        "vulnerability-management"
+      ],
+      "source": "frameworks.yaml"
+    },
+    {
+      "id": "first-epss",
+      "name": "FIRST Exploit Prediction Scoring System",
+      "status": "verified",
+      "type": "vulnerability-prioritization-model",
+      "domains": [
+        "risk",
+        "threat-intelligence",
+        "vulnerability-management"
+      ],
+      "source": "frameworks.yaml"
+    },
+    {
+      "id": "first-tlp-2",
+      "name": "FIRST Traffic Light Protocol",
+      "status": "verified",
+      "type": "information-sharing-standard",
+      "domains": [
+        "csirt",
+        "information-sharing",
+        "threat-intelligence"
+      ],
+      "source": "frameworks.yaml"
+    },
+    {
+      "id": "foojank",
+      "name": "foojank",
+      "status": "not-verified",
+      "type": "operational-platform-candidate",
+      "domains": [
+        "adversary-emulation",
+        "operational-platform",
+        "research"
+      ],
+      "source": "catalog.yaml"
+    },
+    {
+      "id": "frida",
+      "name": "Frida",
+      "status": "verified",
+      "type": "dynamic-instrumentation",
+      "domains": [
+        "desktop",
+        "mobile",
+        "reverse-engineering"
+      ],
+      "source": "catalog.yaml"
+    },
+    {
+      "id": "garak",
+      "name": "NVIDIA garak",
+      "status": "verified",
+      "type": "ai-assessment-tool",
+      "domains": [
+        "ai-genai"
+      ],
+      "source": "catalog.yaml"
+    },
+    {
+      "id": "gharf",
+      "name": "GHARF",
+      "status": "not-verified",
+      "type": "automation-toolkit-candidate",
+      "domains": [
+        "automation",
+        "offensive-security",
+        "research"
+      ],
+      "source": "catalog.yaml"
+    },
+    {
+      "id": "ghidra",
+      "name": "Ghidra",
+      "status": "verified",
+      "type": "reverse-engineering-platform",
+      "domains": [
+        "malware-analysis",
+        "reverse-engineering",
+        "software-security"
+      ],
+      "source": "catalog.yaml"
+    },
+    {
+      "id": "gloamfire",
+      "name": "gloamfire",
+      "status": "not-verified",
+      "type": "detection-validation-candidate",
+      "domains": [
+        "attack-replay",
+        "detection-validation",
+        "purple-team",
+        "research"
+      ],
+      "source": "catalog.yaml"
+    },
+    {
+      "id": "gosecops",
+      "name": "GoSecOps",
+      "status": "not-verified",
+      "type": "automation-toolkit-candidate",
+      "domains": [
+        "automation",
+        "offensive-security",
+        "research"
+      ],
+      "source": "catalog.yaml"
+    },
+    {
+      "id": "havoc",
+      "name": "Havoc",
+      "status": "legacy",
+      "type": "operational-platform",
+      "domains": [
+        "adversary-emulation"
+      ],
+      "source": "catalog.yaml"
+    },
+    {
+      "id": "hexstrike-redteam",
+      "name": "Hexstrike-redteam",
+      "status": "not-verified",
+      "type": "automation-toolkit-candidate",
+      "domains": [
+        "automation",
+        "offensive-security",
+        "research"
+      ],
+      "source": "catalog.yaml"
+    },
+    {
+      "id": "highflame-red",
+      "name": "Highflame RED",
+      "status": "not-verified",
+      "type": "ai-security-candidate",
+      "domains": [
+        "ai-genai",
+        "research"
+      ],
+      "source": "catalog.yaml"
+    },
+    {
+      "id": "hos-vortex",
+      "name": "hos_vortex",
+      "status": "not-verified",
+      "type": "automation-toolkit-candidate",
+      "domains": [
+        "automation",
+        "offensive-security",
+        "research"
+      ],
+      "source": "catalog.yaml"
+    },
+    {
+      "id": "hunterx",
+      "name": "HunterX",
+      "status": "not-verified",
+      "type": "ai-security-candidate",
+      "domains": [
+        "ai-genai",
+        "research"
+      ],
+      "source": "catalog.yaml"
+    },
+    {
+      "id": "infection-monkey",
+      "name": "Infection Monkey",
+      "status": "verified",
+      "type": "adversary-emulation-platform",
+      "domains": [
+        "enterprise",
+        "network",
+        "security-validation"
+      ],
+      "source": "catalog.yaml"
+    },
+    {
+      "id": "intsploit",
+      "name": "intsploit",
+      "status": "not-verified",
+      "type": "security-framework-candidate",
+      "domains": [
+        "automation",
+        "research",
+        "security-assessment",
+        "toolkit"
+      ],
+      "source": "catalog.yaml"
+    },
+    {
+      "id": "iothackbot",
+      "name": "IoTHackBot",
+      "status": "not-verified",
+      "type": "iot-embedded-candidate",
+      "domains": [
+        "embedded",
+        "iot",
+        "research"
+      ],
+      "source": "catalog.yaml"
+    },
+    {
+      "id": "iotptf",
+      "name": "iotptf",
+      "status": "not-verified",
+      "type": "iot-security-candidate",
+      "domains": [
+        "embedded",
+        "firmware",
+        "iot",
+        "research"
+      ],
+      "source": "catalog.yaml"
+    },
+    {
+      "id": "iso-iec-27001-2022",
+      "name": "ISO/IEC 27001:2022",
+      "status": "verified",
+      "type": "information-security-management-standard",
+      "domains": [
+        "assurance",
+        "enterprise",
+        "governance",
+        "risk-management"
+      ],
+      "source": "frameworks.yaml"
+    },
+    {
+      "id": "iso-iec-27005-2022",
+      "name": "ISO/IEC 27005:2022",
+      "status": "verified",
+      "type": "information-security-risk-guidance",
+      "domains": [
+        "enterprise",
+        "governance",
+        "risk-management"
+      ],
+      "source": "frameworks.yaml"
+    },
+    {
+      "id": "koadic",
+      "name": "Koadic",
+      "status": "not-verified",
+      "type": "operational-platform-candidate",
+      "domains": [
+        "adversary-emulation",
+        "research"
+      ],
+      "source": "catalog.yaml"
+    },
+    {
+      "id": "kraken",
+      "name": "Kraken",
+      "status": "not-verified",
+      "type": "cloud-security-candidate",
+      "domains": [
+        "cloud",
+        "kubernetes",
+        "research"
+      ],
+      "source": "catalog.yaml"
+    },
+    {
+      "id": "kube-bench",
+      "name": "kube-bench",
+      "status": "verified",
+      "type": "kubernetes-benchmark-assessment",
+      "domains": [
+        "cloud-native",
+        "configuration",
+        "kubernetes"
+      ],
+      "source": "catalog.yaml"
+    },
+    {
+      "id": "kubehound",
+      "name": "KubeHound",
+      "status": "verified",
+      "type": "attack-path-analysis",
+      "domains": [
+        "kubernetes"
+      ],
+      "source": "catalog.yaml"
+    },
+    {
+      "id": "kubesploit",
+      "name": "Kubesploit",
+      "status": "not-verified",
+      "type": "cloud-security-candidate",
+      "domains": [
+        "cloud",
+        "kubernetes",
+        "research"
+      ],
+      "source": "catalog.yaml"
+    },
+    {
+      "id": "laccolith",
+      "name": "laccolith",
+      "status": "not-verified",
+      "type": "adversary-emulation-research-candidate",
+      "domains": [
+        "adversary-emulation",
+        "research",
+        "virtualization"
+      ],
+      "source": "catalog.yaml"
+    },
+    {
+      "id": "lazyown",
+      "name": "LazyOwn",
+      "status": "not-verified",
+      "type": "operational-platform-candidate",
+      "domains": [
+        "adversary-emulation",
+        "research"
+      ],
+      "source": "catalog.yaml"
+    },
+    {
+      "id": "maliab",
+      "name": "MALIAB",
+      "status": "not-verified",
+      "type": "adversary-simulation-research-candidate",
+      "domains": [
+        "adversary-emulation",
+        "automation",
+        "cti",
+        "research"
+      ],
+      "source": "catalog.yaml"
+    },
+    {
+      "id": "metasploit-framework",
+      "name": "Metasploit Framework",
+      "status": "verified",
+      "type": "assessment-framework",
+      "domains": [
+        "application-security",
+        "enterprise",
+        "network"
+      ],
+      "source": "catalog.yaml"
+    },
+    {
+      "id": "microburst",
+      "name": "MicroBurst",
+      "status": "verified",
+      "type": "cloud-assessment-toolkit",
+      "domains": [
+        "azure",
+        "cloud"
+      ],
+      "source": "catalog.yaml"
+    },
+    {
+      "id": "misp-galaxy",
+      "name": "MISP Galaxy",
+      "status": "verified",
+      "type": "threat-intelligence-knowledge-model",
+      "domains": [
+        "adversary-analysis",
+        "information-sharing",
+        "threat-intelligence"
+      ],
+      "source": "frameworks.yaml"
+    },
+    {
+      "id": "mitre-atlas",
+      "name": "MITRE ATLAS",
+      "status": "verified",
+      "type": "knowledge-base",
+      "domains": [
+        "ai-genai"
+      ],
+      "source": "frameworks.yaml"
+    },
+    {
+      "id": "mitre-attack",
+      "name": "MITRE ATT&CK",
+      "status": "verified",
+      "type": "knowledge-base",
+      "domains": [
+        "cloud",
+        "enterprise",
+        "mobile"
+      ],
+      "source": "frameworks.yaml"
+    },
+    {
+      "id": "mitre-caldera",
+      "name": "MITRE CALDERA",
+      "status": "verified",
+      "type": "emulation-automation",
+      "domains": [
+        "enterprise"
+      ],
+      "source": "frameworks.yaml"
+    },
+    {
+      "id": "mitre-capec",
+      "name": "MITRE CAPEC",
+      "status": "verified",
+      "type": "attack-pattern-knowledge-base",
+      "domains": [
+        "application-security",
+        "software-security",
+        "threat-modeling"
+      ],
+      "source": "frameworks.yaml"
+    },
+    {
+      "id": "mitre-car",
+      "name": "MITRE Cyber Analytics Repository",
+      "status": "verified",
+      "type": "detection-analytics-knowledge-base",
+      "domains": [
+        "detection",
+        "enterprise",
+        "threat-hunting"
+      ],
+      "source": "frameworks.yaml"
+    },
+    {
+      "id": "mitre-cwe",
+      "name": "MITRE CWE",
+      "status": "verified",
+      "type": "weakness-knowledge-base",
+      "domains": [
+        "application-security",
+        "hardware-security",
+        "software-security"
+      ],
+      "source": "frameworks.yaml"
+    },
+    {
+      "id": "mitre-d3fend",
+      "name": "MITRE D3FEND",
+      "status": "verified",
+      "type": "defensive-knowledge-base",
+      "domains": [
+        "detection",
+        "enterprise"
+      ],
+      "source": "frameworks.yaml"
+    },
+    {
+      "id": "mitre-engage",
+      "name": "MITRE Engage",
+      "status": "verified",
+      "type": "adversary-engagement-framework",
+      "domains": [
+        "deception",
+        "enterprise"
+      ],
+      "source": "frameworks.yaml"
+    },
+    {
+      "id": "mobsf",
+      "name": "MobSF",
+      "status": "verified",
+      "type": "mobile-assessment-platform",
+      "domains": [
+        "android",
+        "ios",
+        "mobile"
+      ],
+      "source": "catalog.yaml"
+    },
+    {
+      "id": "mythic",
+      "name": "Mythic",
+      "status": "community",
+      "type": "operational-platform",
+      "domains": [
+        "adversary-emulation"
+      ],
+      "source": "catalog.yaml"
+    },
+    {
+      "id": "nishang",
+      "name": "Nishang",
+      "status": "not-verified",
+      "type": "legacy-review-candidate",
+      "domains": [
+        "legacy-review",
+        "research"
+      ],
+      "source": "catalog.yaml"
+    },
+    {
+      "id": "nist-ai-rmf-genai",
+      "name": "NIST AI RMF Generative AI Profile",
+      "status": "verified",
+      "type": "risk-management-guidance",
+      "domains": [
+        "ai-genai"
+      ],
+      "source": "frameworks.yaml"
+    },
+    {
+      "id": "nist-csf-2",
+      "name": "NIST Cybersecurity Framework 2.0",
+      "status": "verified",
+      "type": "cybersecurity-risk-framework",
+      "domains": [
+        "enterprise",
+        "governance",
+        "risk-management"
+      ],
+      "source": "frameworks.yaml"
+    },
+    {
+      "id": "nist-nice",
+      "name": "NIST NICE Workforce Framework for Cybersecurity",
+      "status": "verified",
+      "type": "workforce-framework",
+      "domains": [
+        "education",
+        "governance",
+        "workforce"
+      ],
+      "source": "frameworks.yaml"
+    },
+    {
+      "id": "nist-sp-800-115",
+      "name": "NIST SP 800-115",
+      "status": "verified",
+      "type": "assessment-guidance",
+      "domains": [
+        "enterprise"
+      ],
+      "source": "frameworks.yaml"
+    },
+    {
+      "id": "nist-sp-800-160-v2-r1",
+      "name": "NIST SP 800-160 Vol. 2 Rev. 1",
+      "status": "verified",
+      "type": "cyber-resilience-engineering",
+      "domains": [
+        "advanced-threats",
+        "resilience",
+        "security-engineering"
+      ],
+      "source": "frameworks.yaml"
+    },
+    {
+      "id": "nist-sp-800-161-r1",
+      "name": "NIST SP 800-161 Rev. 1",
+      "status": "verified",
+      "type": "supply-chain-risk-framework",
+      "domains": [
+        "governance",
+        "software-supply-chain",
+        "third-party-risk"
+      ],
+      "source": "frameworks.yaml"
+    },
+    {
+      "id": "nist-sp-800-190",
+      "name": "NIST SP 800-190 Application Container Security Guide",
+      "status": "verified",
+      "type": "container-security-guidance",
+      "domains": [
+        "application-security",
+        "cloud-native",
+        "containers"
+      ],
+      "source": "frameworks.yaml"
+    },
+    {
+      "id": "nist-sp-800-207",
+      "name": "NIST SP 800-207 Zero Trust Architecture",
+      "status": "verified",
+      "type": "security-architecture-framework",
+      "domains": [
+        "enterprise",
+        "identity",
+        "zero-trust"
+      ],
+      "source": "frameworks.yaml"
+    },
+    {
+      "id": "nist-sp-800-53-r5",
+      "name": "NIST SP 800-53 Rev. 5",
+      "status": "verified",
+      "type": "security-control-catalog",
+      "domains": [
+        "controls",
+        "enterprise",
+        "governance"
+      ],
+      "source": "frameworks.yaml"
+    },
+    {
+      "id": "nist-sp-800-61-r3",
+      "name": "NIST SP 800-61 Rev. 3",
+      "status": "verified",
+      "type": "incident-response-guidance",
+      "domains": [
+        "csf",
+        "governance",
+        "incident-response"
+      ],
+      "source": "frameworks.yaml"
+    },
+    {
+      "id": "nist-sp-800-63-4",
+      "name": "NIST SP 800-63-4 Digital Identity Guidelines",
+      "status": "verified",
+      "type": "digital-identity-framework",
+      "domains": [
+        "authentication",
+        "federation",
+        "identity"
+      ],
+      "source": "frameworks.yaml"
+    },
+    {
+      "id": "nist-ssdf",
+      "name": "NIST Secure Software Development Framework",
+      "status": "verified",
+      "type": "secure-development-framework",
+      "domains": [
+        "application-security",
+        "secure-development",
+        "software-supply-chain"
+      ],
+      "source": "frameworks.yaml"
+    },
+    {
+      "id": "nuclei",
+      "name": "Nuclei",
+      "status": "verified",
+      "type": "template-driven-assessment-tool",
+      "domains": [
+        "application-security",
+        "cloud",
+        "network",
+        "web"
+      ],
+      "source": "catalog.yaml"
+    },
+    {
+      "id": "oasis-cacao-2",
+      "name": "OASIS CACAO Security Playbooks",
+      "status": "verified",
+      "type": "security-playbook-standard",
+      "domains": [
+        "incident-response",
+        "orchestration",
+        "threat-intelligence"
+      ],
+      "source": "frameworks.yaml"
+    },
+    {
+      "id": "oasis-csaf-2",
+      "name": "OASIS Common Security Advisory Framework",
+      "status": "verified",
+      "type": "security-advisory-standard",
+      "domains": [
+        "information-sharing",
+        "software-supply-chain",
+        "vulnerability-management"
+      ],
+      "source": "frameworks.yaml"
+    },
+    {
+      "id": "oasis-stix-2-1",
+      "name": "OASIS STIX 2.1",
+      "status": "verified",
+      "type": "threat-intelligence-data-model",
+      "domains": [
+        "information-sharing",
+        "interoperability",
+        "threat-intelligence"
+      ],
+      "source": "frameworks.yaml"
+    },
+    {
+      "id": "oasis-taxii-2-1",
+      "name": "OASIS TAXII 2.1",
+      "status": "verified",
+      "type": "threat-intelligence-transport-standard",
+      "domains": [
+        "information-sharing",
+        "interoperability",
+        "threat-intelligence"
+      ],
+      "source": "frameworks.yaml"
+    },
+    {
+      "id": "ocsf",
+      "name": "Open Cybersecurity Schema Framework",
+      "status": "verified",
+      "type": "security-data-schema",
+      "domains": [
+        "data-engineering",
+        "detection",
+        "telemetry"
+      ],
+      "source": "frameworks.yaml"
+    },
+    {
+      "id": "offensivecloud",
+      "name": "OffensiveCloud",
+      "status": "not-verified",
+      "type": "cloud-security-candidate",
+      "domains": [
+        "cloud",
+        "kubernetes",
+        "research"
+      ],
+      "source": "catalog.yaml"
+    },
+    {
+      "id": "offsec-toolkit",
+      "name": "offsec-toolkit",
+      "status": "not-verified",
+      "type": "automation-toolkit-candidate",
+      "domains": [
+        "automation",
+        "offensive-security",
+        "research"
+      ],
+      "source": "catalog.yaml"
+    },
+    {
+      "id": "onist-framework",
+      "name": "ONIST Framework",
+      "status": "not-verified",
+      "type": "automation-toolkit-candidate",
+      "domains": [
+        "automation",
+        "offensive-security",
+        "research"
+      ],
+      "source": "catalog.yaml"
+    },
+    {
+      "id": "openaev",
+      "name": "OpenAEV",
+      "status": "verified",
+      "type": "adversarial-exposure-validation",
+      "domains": [
+        "aev",
+        "bas",
+        "enterprise",
+        "purple-team"
+      ],
+      "source": "catalog.yaml"
+    },
+    {
+      "id": "openart",
+      "name": "OpenART",
+      "status": "not-verified",
+      "type": "ai-security-candidate",
+      "domains": [
+        "ai-genai",
+        "research"
+      ],
+      "source": "catalog.yaml"
+    },
+    {
+      "id": "openssf-osps-baseline",
+      "name": "OpenSSF Open Source Project Security Baseline",
+      "status": "verified",
+      "type": "open-source-security-baseline",
+      "domains": [
+        "open-source",
+        "secure-development",
+        "software-supply-chain"
+      ],
+      "source": "frameworks.yaml"
+    },
+    {
+      "id": "openssf-scorecard",
+      "name": "OpenSSF Scorecard",
+      "status": "verified",
+      "type": "software-supply-chain-assessment",
+      "domains": [
+        "open-source",
+        "secure-development",
+        "software-supply-chain"
+      ],
+      "source": "frameworks.yaml"
+    },
+    {
+      "id": "opfor",
+      "name": "opfor",
+      "status": "not-verified",
+      "type": "adversary-emulation-candidate",
+      "domains": [
+        "adversary-emulation",
+        "automation",
+        "research",
+        "threat-informed-testing"
+      ],
+      "source": "catalog.yaml"
+    },
+    {
+      "id": "osquery",
+      "name": "osquery",
+      "status": "verified",
+      "type": "endpoint-telemetry-platform",
+      "domains": [
+        "endpoint",
+        "telemetry",
+        "threat-hunting"
+      ],
+      "source": "catalog.yaml"
+    },
+    {
+      "id": "owasp-api-top10",
+      "name": "OWASP API Security Top 10",
+      "status": "verified",
+      "type": "application-risk-framework",
+      "domains": [
+        "api",
+        "application-security",
+        "web"
+      ],
+      "source": "frameworks.yaml"
+    },
+    {
+      "id": "owasp-asvs",
+      "name": "OWASP Application Security Verification Standard",
+      "status": "verified",
+      "type": "application-security-standard",
+      "domains": [
+        "application-security",
+        "secure-development",
+        "web"
+      ],
+      "source": "frameworks.yaml"
+    },
+    {
+      "id": "owasp-genai",
+      "name": "OWASP GenAI Security Project",
+      "status": "verified",
+      "type": "application-security-guidance",
+      "domains": [
+        "ai-genai"
+      ],
+      "source": "frameworks.yaml"
+    },
+    {
+      "id": "owasp-iot-istg",
+      "name": "OWASP IoT Security Testing Guide",
+      "status": "verified",
+      "type": "domain-testing-guide",
+      "domains": [
+        "embedded",
+        "iot"
+      ],
+      "source": "frameworks.yaml"
+    },
+    {
+      "id": "owasp-isvs",
+      "name": "OWASP IoT Security Verification Standard",
+      "status": "verified",
+      "type": "iot-security-standard",
+      "domains": [
+        "embedded",
+        "iot",
+        "product-security"
+      ],
+      "source": "frameworks.yaml"
+    },
+    {
+      "id": "owasp-mastg",
+      "name": "OWASP Mobile Application Security Testing Guide",
+      "status": "verified",
+      "type": "domain-testing-guide",
+      "domains": [
+        "mobile"
+      ],
+      "source": "frameworks.yaml"
+    },
+    {
+      "id": "owasp-masvs",
+      "name": "OWASP Mobile Application Security Verification Standard",
+      "status": "verified",
+      "type": "mobile-security-standard",
+      "domains": [
+        "android",
+        "ios",
+        "mobile"
+      ],
+      "source": "frameworks.yaml"
+    },
+    {
+      "id": "owasp-samm",
+      "name": "OWASP Software Assurance Maturity Model",
+      "status": "verified",
+      "type": "software-security-maturity-model",
+      "domains": [
+        "application-security",
+        "governance",
+        "secure-development"
+      ],
+      "source": "frameworks.yaml"
+    },
+    {
+      "id": "owasp-scvs",
+      "name": "OWASP Software Component Verification Standard",
+      "status": "verified",
+      "type": "software-supply-chain-standard",
+      "domains": [
+        "sbom",
+        "secure-development",
+        "software-supply-chain"
+      ],
+      "source": "frameworks.yaml"
+    },
+    {
+      "id": "owasp-top10-2025",
+      "name": "OWASP Top 10:2025",
+      "status": "verified",
+      "type": "application-risk-framework",
+      "domains": [
+        "application-security",
+        "secure-development",
+        "web"
+      ],
+      "source": "frameworks.yaml"
+    },
+    {
+      "id": "owasp-wstg",
+      "name": "OWASP Web Security Testing Guide",
+      "status": "verified",
+      "type": "domain-testing-guide",
+      "domains": [
+        "web"
+      ],
+      "source": "frameworks.yaml"
+    },
+    {
+      "id": "owasp-zap",
+      "name": "OWASP ZAP",
+      "status": "verified",
+      "type": "web-assessment-platform",
+      "domains": [
+        "api",
+        "application-security",
+        "web"
+      ],
+      "source": "catalog.yaml"
+    },
+    {
+      "id": "pacu",
+      "name": "Pacu",
+      "status": "verified",
+      "type": "assessment-framework",
+      "domains": [
+        "aws"
+      ],
+      "source": "catalog.yaml"
+    },
+    {
+      "id": "peekaboo",
+      "name": "peekaboo",
+      "status": "not-verified",
+      "type": "safe-emulation-candidate",
+      "domains": [
+        "adversary-emulation",
+        "purple-team",
+        "research",
+        "sandbox"
+      ],
+      "source": "catalog.yaml"
+    },
+    {
+      "id": "pentera",
+      "name": "Pentera",
+      "status": "commercial",
+      "type": "security-validation-platform",
+      "domains": [
+        "automated-validation"
+      ],
+      "source": "catalog.yaml"
+    },
+    {
+      "id": "pentester-playbook",
+      "name": "pentester-playbook",
+      "status": "not-verified",
+      "type": "methodology-toolkit-candidate",
+      "domains": [
+        "methodology",
+        "reference",
+        "research",
+        "security-assessment"
+      ],
+      "source": "catalog.yaml"
+    },
+    {
+      "id": "pexpagent",
+      "name": "pexpagent",
+      "status": "not-verified",
+      "type": "ai-operational-research-candidate",
+      "domains": [
+        "adversary-emulation",
+        "ai-security",
+        "automation",
+        "research"
+      ],
+      "source": "catalog.yaml"
+    },
+    {
+      "id": "phantomstrike",
+      "name": "phantomstrike",
+      "status": "not-verified",
+      "type": "operational-platform-candidate",
+      "domains": [
+        "adversary-emulation",
+        "operational-platform",
+        "research"
+      ],
+      "source": "catalog.yaml"
+    },
+    {
+      "id": "picus",
+      "name": "Picus Security",
+      "status": "commercial",
+      "type": "security-validation-platform",
+      "domains": [
+        "bas",
+        "purple-team"
+      ],
+      "source": "catalog.yaml"
+    },
+    {
+      "id": "poshc2",
+      "name": "PoshC2",
+      "status": "community",
+      "type": "operational-platform",
+      "domains": [
+        "adversary-emulation"
+      ],
+      "source": "catalog.yaml"
+    },
+    {
+      "id": "powersploit",
+      "name": "PowerSploit",
+      "status": "not-verified",
+      "type": "legacy-review-candidate",
+      "domains": [
+        "legacy-review",
+        "research"
+      ],
+      "source": "catalog.yaml"
+    },
+    {
+      "id": "powerzure",
+      "name": "PowerZure",
+      "status": "not-verified",
+      "type": "cloud-security-candidate",
+      "domains": [
+        "cloud",
+        "kubernetes",
+        "research"
+      ],
+      "source": "catalog.yaml"
+    },
+    {
+      "id": "prowler",
+      "name": "Prowler",
+      "status": "verified",
+      "type": "cloud-security-assessment",
+      "domains": [
+        "aws",
+        "azure",
+        "cloud",
+        "gcp"
+      ],
+      "source": "catalog.yaml"
+    },
+    {
+      "id": "ptes",
+      "name": "Penetration Testing Execution Standard",
+      "status": "verified",
+      "type": "methodology",
+      "domains": [
+        "enterprise"
+      ],
+      "source": "frameworks.yaml"
+    },
+    {
+      "id": "pupy",
+      "name": "Pupy",
+      "status": "not-verified",
+      "type": "operational-platform-candidate",
+      "domains": [
+        "adversary-emulation",
+        "research"
+      ],
+      "source": "catalog.yaml"
+    },
+    {
+      "id": "purple-team-playground",
+      "name": "Purple Team Playground",
+      "status": "not-verified",
+      "type": "purple-team-testbed-candidate",
+      "domains": [
+        "purple-team",
+        "research",
+        "security-validation",
+        "testbed"
+      ],
+      "source": "catalog.yaml"
+    },
+    {
+      "id": "pyrit",
+      "name": "Microsoft PyRIT",
+      "status": "verified",
+      "type": "ai-red-team-framework",
+      "domains": [
+        "ai-genai"
+      ],
+      "source": "catalog.yaml"
+    },
+    {
+      "id": "realm",
+      "name": "Realm",
+      "status": "verified",
+      "type": "adversary-emulation-platform",
+      "domains": [
+        "adversary-emulation",
+        "automation",
+        "enterprise"
+      ],
+      "source": "catalog.yaml"
+    },
+    {
+      "id": "redamon",
+      "name": "redamon",
+      "status": "not-verified",
+      "type": "autonomous-security-research-candidate",
+      "domains": [
+        "ai-security",
+        "automation",
+        "research",
+        "security-assessment"
+      ],
+      "source": "catalog.yaml"
+    },
+    {
+      "id": "redcloudos",
+      "name": "RedCloudOS",
+      "status": "not-verified",
+      "type": "cloud-security-candidate",
+      "domains": [
+        "cloud",
+        "kubernetes",
+        "research"
+      ],
+      "source": "catalog.yaml"
+    },
+    {
+      "id": "redguard-suite",
+      "name": "RedGuard Suite",
+      "status": "not-verified",
+      "type": "automation-toolkit-candidate",
+      "domains": [
+        "automation",
+        "offensive-security",
+        "research"
+      ],
+      "source": "catalog.yaml"
+    },
+    {
+      "id": "redstack",
+      "name": "redStack",
+      "status": "not-verified",
+      "type": "automation-toolkit-candidate",
+      "domains": [
+        "automation",
+        "offensive-security",
+        "research"
+      ],
+      "source": "catalog.yaml"
+    },
+    {
+      "id": "roadtools",
+      "name": "ROADtools",
+      "status": "verified",
+      "type": "identity-assessment-toolkit",
+      "domains": [
+        "azure",
+        "entra-id",
+        "identity"
+      ],
+      "source": "catalog.yaml"
+    },
+    {
+      "id": "routersploit",
+      "name": "RouterSploit",
+      "status": "community",
+      "type": "embedded-assessment-framework",
+      "domains": [
+        "embedded",
+        "iot",
+        "network"
+      ],
+      "source": "catalog.yaml"
+    },
+    {
+      "id": "rtosploit",
+      "name": "rtosploit",
+      "status": "not-verified",
+      "type": "rtos-security-candidate",
+      "domains": [
+        "embedded",
+        "firmware",
+        "iot",
+        "research",
+        "rtos"
+      ],
+      "source": "catalog.yaml"
+    },
+    {
+      "id": "rust-bucket",
+      "name": "Rust Bucket",
+      "status": "not-verified",
+      "type": "operational-platform-research-candidate",
+      "domains": [
+        "operational-platform",
+        "red-team",
+        "research"
+      ],
+      "source": "catalog.yaml"
+    },
+    {
+      "id": "safebreach",
+      "name": "SafeBreach",
+      "status": "commercial",
+      "type": "security-validation-platform",
+      "domains": [
+        "bas",
+        "purple-team"
+      ],
+      "source": "catalog.yaml"
+    },
+    {
+      "id": "sandevistan",
+      "name": "sandevistan",
+      "status": "not-verified",
+      "type": "security-toolkit-candidate",
+      "domains": [
+        "automation",
+        "research",
+        "security-assessment",
+        "toolkit"
+      ],
+      "source": "catalog.yaml"
+    },
+    {
+      "id": "scoutsuite",
+      "name": "ScoutSuite",
+      "status": "verified",
+      "type": "cloud-security-auditing",
+      "domains": [
+        "aws",
+        "azure",
+        "cloud",
+        "gcp"
+      ],
+      "source": "catalog.yaml"
+    },
+    {
+      "id": "secops-chaos",
+      "name": "secops-chaos",
+      "status": "not-verified",
+      "type": "cloud-security-candidate",
+      "domains": [
+        "cloud",
+        "kubernetes",
+        "research"
+      ],
+      "source": "catalog.yaml"
+    },
+    {
+      "id": "seersx",
+      "name": "SeersX",
+      "status": "not-verified",
+      "type": "operational-platform-candidate",
+      "domains": [
+        "adversary-emulation",
+        "research"
+      ],
+      "source": "catalog.yaml"
+    },
+    {
+      "id": "semgrep",
+      "name": "Semgrep",
+      "status": "verified",
+      "type": "static-analysis-platform",
+      "domains": [
+        "application-security",
+        "code-analysis",
+        "secure-development"
+      ],
+      "source": "catalog.yaml"
+    },
+    {
+      "id": "sharpsploit",
+      "name": "SharpSploit",
+      "status": "not-verified",
+      "type": "legacy-review-candidate",
+      "domains": [
+        "legacy-review",
+        "research"
+      ],
+      "source": "catalog.yaml"
+    },
+    {
+      "id": "sigma",
+      "name": "Sigma",
+      "status": "verified",
+      "type": "detection-format",
+      "domains": [
+        "detection",
+        "siem"
+      ],
+      "source": "catalog.yaml"
+    },
+    {
+      "id": "silenttrinity",
+      "name": "silenttrinity",
+      "status": "not-verified",
+      "type": "operational-platform-candidate",
+      "domains": [
+        "adversary-emulation",
+        "legacy-review",
+        "operational-platform",
+        "research"
+      ],
+      "source": "catalog.yaml"
+    },
+    {
+      "id": "simple-ics-testbed",
+      "name": "SIMPLE-ICS Testbed",
+      "status": "not-verified",
+      "type": "industrial-security-testbed-candidate",
+      "domains": [
+        "adversary-emulation",
+        "ics",
+        "ot",
+        "research",
+        "testbed"
+      ],
+      "source": "catalog.yaml"
+    },
+    {
+      "id": "skyhawk-security-autonomous-purple-team",
+      "name": "skyhawk-security-autonomous-purple-team",
+      "status": "not-verified",
+      "type": "commercial-purple-team-candidate",
+      "domains": [
+        "ai-security",
+        "cloud",
+        "purple-team",
+        "research",
+        "security-validation"
+      ],
+      "source": "catalog.yaml"
+    },
+    {
+      "id": "sliver",
+      "name": "Sliver",
+      "status": "community",
+      "type": "operational-platform",
+      "domains": [
+        "adversary-emulation"
+      ],
+      "source": "catalog.yaml"
+    },
+    {
+      "id": "slsa",
+      "name": "SLSA",
+      "status": "verified",
+      "type": "software-supply-chain-framework",
+      "domains": [
+        "provenance",
+        "secure-development",
+        "software-supply-chain"
+      ],
+      "source": "frameworks.yaml"
+    },
+    {
+      "id": "splunk-attack-range",
+      "name": "Splunk Attack Range",
+      "status": "verified",
+      "type": "detection-lab-platform",
+      "domains": [
+        "aws",
+        "azure",
+        "detection",
+        "gcp",
+        "purple-team"
+      ],
+      "source": "catalog.yaml"
+    },
+    {
+      "id": "ssvc",
+      "name": "Stakeholder-Specific Vulnerability Categorization",
+      "status": "verified",
+      "type": "vulnerability-prioritization-framework",
+      "domains": [
+        "decision-support",
+        "risk",
+        "vulnerability-management"
+      ],
+      "source": "frameworks.yaml"
+    },
+    {
+      "id": "stormspotter",
+      "name": "Stormspotter",
+      "status": "community",
+      "type": "attack-path-analysis",
+      "domains": [
+        "azure",
+        "cloud",
+        "graph"
+      ],
+      "source": "catalog.yaml"
+    },
+    {
+      "id": "stratus-red-team",
+      "name": "Stratus Red Team",
+      "status": "verified",
+      "type": "emulation-tool",
+      "domains": [
+        "aws",
+        "azure",
+        "entra-id",
+        "gcp",
+        "kubernetes"
+      ],
+      "source": "catalog.yaml"
+    },
+    {
+      "id": "strix",
+      "name": "strix",
+      "status": "not-verified",
+      "type": "agentic-assessment-candidate",
+      "domains": [
+        "ai-security",
+        "automation",
+        "research",
+        "security-assessment"
+      ],
+      "source": "catalog.yaml"
+    },
+    {
+      "id": "suijin",
+      "name": "Suijin",
+      "status": "not-verified",
+      "type": "automation-toolkit-candidate",
+      "domains": [
+        "automation",
+        "offensive-security",
+        "research"
+      ],
+      "source": "catalog.yaml"
+    },
+    {
+      "id": "suricata",
+      "name": "Suricata",
+      "status": "verified",
+      "type": "network-detection-platform",
+      "domains": [
+        "detection",
+        "ids",
+        "network"
+      ],
+      "source": "catalog.yaml"
+    },
+    {
+      "id": "t3mp3st",
+      "name": "T3MP3ST",
+      "status": "not-verified",
+      "type": "automation-toolkit-candidate",
+      "domains": [
+        "automation",
+        "offensive-security",
+        "research"
+      ],
+      "source": "catalog.yaml"
+    },
+    {
+      "id": "temperance",
+      "name": "temperance",
+      "status": "not-verified",
+      "type": "adversary-emulation-candidate",
+      "domains": [
+        "adversary-emulation",
+        "research",
+        "security-validation"
+      ],
+      "source": "catalog.yaml"
+    },
+    {
+      "id": "the-360-cyber-shield",
+      "name": "The 360 Cyber Shield",
+      "status": "not-verified",
+      "type": "purple-team-candidate",
+      "domains": [
+        "purple-team",
+        "research",
+        "security-validation"
+      ],
+      "source": "catalog.yaml"
+    },
+    {
+      "id": "tiber-eu",
+      "name": "TIBER-EU",
+      "status": "verified",
+      "type": "threat-led-testing-framework",
+      "domains": [
+        "financial",
+        "regulated"
+      ],
+      "source": "frameworks.yaml"
+    },
+    {
+      "id": "trevorc2",
+      "name": "TrevorC2",
+      "status": "not-verified",
+      "type": "operational-platform-candidate",
+      "domains": [
+        "adversary-emulation",
+        "research"
+      ],
+      "source": "catalog.yaml"
+    },
+    {
+      "id": "trivy",
+      "name": "Trivy",
+      "status": "verified",
+      "type": "vulnerability-and-misconfiguration-scanner",
+      "domains": [
+        "cloud-native",
+        "containers",
+        "kubernetes",
+        "software-supply-chain"
+      ],
+      "source": "catalog.yaml"
+    },
+    {
+      "id": "ttpforge",
+      "name": "TTPForge",
+      "status": "verified",
+      "type": "attack-simulation-framework",
+      "domains": [
+        "detection",
+        "enterprise",
+        "purple-team"
+      ],
+      "source": "catalog.yaml"
+    },
+    {
+      "id": "vanguard",
+      "name": "vanguard",
+      "status": "not-verified",
+      "type": "agentic-purple-team-candidate",
+      "domains": [
+        "ai-security",
+        "detection-validation",
+        "purple-team",
+        "research"
+      ],
+      "source": "catalog.yaml"
+    },
+    {
+      "id": "vectr",
+      "name": "VECTR",
+      "status": "verified",
+      "type": "purple-team-platform",
+      "domains": [
+        "detection",
+        "measurement",
+        "purple-team"
+      ],
+      "source": "catalog.yaml"
+    },
+    {
+      "id": "velociraptor",
+      "name": "Velociraptor",
+      "status": "verified",
+      "type": "dfir-hunting-platform",
+      "domains": [
+        "dfir",
+        "endpoint",
+        "threat-hunting"
+      ],
+      "source": "catalog.yaml"
+    },
+    {
+      "id": "veris",
+      "name": "VERIS",
+      "status": "verified",
+      "type": "incident-data-framework",
+      "domains": [
+        "data-modeling",
+        "incident-response",
+        "risk",
+        "threat-intelligence"
+      ],
+      "source": "frameworks.yaml"
+    },
+    {
+      "id": "vigilant",
+      "name": "VIGILANT",
+      "status": "not-verified",
+      "type": "ai-security-candidate",
+      "domains": [
+        "ai-genai",
+        "research"
+      ],
+      "source": "catalog.yaml"
+    },
+    {
+      "id": "volatility3",
+      "name": "Volatility 3",
+      "status": "verified",
+      "type": "memory-forensics-framework",
+      "domains": [
+        "dfir",
+        "malware-analysis",
+        "memory-forensics"
+      ],
+      "source": "catalog.yaml"
+    },
+    {
+      "id": "wireshark",
+      "name": "Wireshark",
+      "status": "verified",
+      "type": "network-analysis-tool",
+      "domains": [
+        "dfir",
+        "network",
+        "protocol-analysis"
+      ],
+      "source": "catalog.yaml"
+    },
+    {
+      "id": "woodpecker",
+      "name": "Woodpecker",
+      "status": "not-verified",
+      "type": "adversary-emulation-candidate",
+      "domains": [
+        "adversary-emulation",
+        "research"
+      ],
+      "source": "catalog.yaml"
+    },
+    {
+      "id": "wyrm",
+      "name": "wyrm",
+      "status": "not-verified",
+      "type": "operational-platform-candidate",
+      "domains": [
+        "adversary-emulation",
+        "operational-platform",
+        "research"
+      ],
+      "source": "catalog.yaml"
+    },
+    {
+      "id": "yara-x",
+      "name": "YARA-X",
+      "status": "verified",
+      "type": "pattern-matching-platform",
+      "domains": [
+        "detection",
+        "malware-analysis",
+        "threat-hunting"
+      ],
+      "source": "catalog.yaml"
+    },
+    {
+      "id": "zeek",
+      "name": "Zeek",
+      "status": "verified",
+      "type": "network-security-monitoring",
+      "domains": [
+        "network",
+        "telemetry",
+        "threat-hunting"
+      ],
+      "source": "catalog.yaml"
+    }
+  ],
+  "relationships": [
+    {
+      "from": "atomic-red-team",
+      "to": "splunk-attack-range",
+      "relation": "simulation-to-telemetry",
+      "confidence": "high",
+      "provenance": "curated-crosswalk"
+    },
+    {
+      "from": "bloodhound",
+      "to": "azurehound",
+      "relation": "graph-to-data-collection",
+      "confidence": "high",
+      "provenance": "curated-crosswalk"
+    },
+    {
+      "from": "bloodhound",
+      "to": "roadtools",
+      "relation": "identity-graph-to-research",
+      "confidence": "medium",
+      "provenance": "curated-crosswalk"
+    },
+    {
+      "from": "cbest",
+      "to": "attack-flow",
+      "relation": "threat-led-scenario-modeling",
+      "confidence": "high",
+      "provenance": "curated-crosswalk"
+    },
+    {
+      "from": "cis-controls",
+      "to": "suricata",
+      "relation": "safeguard-to-network-detection",
+      "confidence": "medium",
+      "provenance": "curated-crosswalk"
+    },
+    {
+      "from": "cis-controls",
+      "to": "falco",
+      "relation": "safeguard-to-runtime-detection",
+      "confidence": "medium",
+      "provenance": "curated-crosswalk"
+    },
+    {
+      "from": "cisa-ztmm-2",
+      "to": "nist-sp-800-207",
+      "relation": "maturity-model-to-zero-trust-architecture",
+      "confidence": "high",
+      "provenance": "curated-crosswalk"
+    },
+    {
+      "from": "cloudfox",
+      "to": "pacu",
+      "relation": "discovery-to-assessment",
+      "confidence": "medium",
+      "provenance": "curated-crosswalk"
+    },
+    {
+      "from": "cloudfox",
+      "to": "stratus-red-team",
+      "relation": "discovery-to-validation",
+      "confidence": "medium",
+      "provenance": "curated-crosswalk"
+    },
+    {
+      "from": "crest-tlpt",
+      "to": "attack-flow",
+      "relation": "assurance-to-scenario-modeling",
+      "confidence": "medium",
+      "provenance": "curated-crosswalk"
+    },
+    {
+      "from": "csa-ccm",
+      "to": "prowler",
+      "relation": "cloud-control-to-assessment",
+      "confidence": "medium",
+      "provenance": "curated-crosswalk"
+    },
+    {
+      "from": "csa-ccm",
+      "to": "scoutsuite",
+      "relation": "cloud-control-to-assessment",
+      "confidence": "medium",
+      "provenance": "curated-crosswalk"
+    },
+    {
+      "from": "csa-security-guidance-v5",
+      "to": "csa-ccm",
+      "relation": "cloud-guidance-to-control-matrix",
+      "confidence": "high",
+      "provenance": "curated-crosswalk"
+    },
+    {
+      "from": "cyber-kill-chain",
+      "to": "mitre-attack",
+      "relation": "intrusion-lifecycle-to-behavior-model",
+      "confidence": "medium",
+      "provenance": "curated-crosswalk"
+    },
+    {
+      "from": "etsi-en-303-645",
+      "to": "owasp-isvs",
+      "relation": "consumer-iot-to-iot-verification",
+      "confidence": "medium",
+      "provenance": "curated-crosswalk"
+    },
+    {
+      "from": "first-csirt-services",
+      "to": "nist-sp-800-61-r3",
+      "relation": "csirt-services-to-incident-response",
+      "confidence": "high",
+      "provenance": "curated-crosswalk"
+    },
+    {
+      "from": "first-cvss",
+      "to": "first-epss",
+      "relation": "severity-to-exploitation-likelihood-context",
+      "confidence": "medium",
+      "provenance": "curated-crosswalk"
+    },
+    {
+      "from": "first-tlp-2",
+      "to": "oasis-stix-2-1",
+      "relation": "sharing-marking-to-cti-exchange",
+      "confidence": "high",
+      "provenance": "curated-crosswalk"
+    },
+    {
+      "from": "infection-monkey",
+      "to": "mitre-attack",
+      "relation": "emulation-to-behavior",
+      "confidence": "high",
+      "provenance": "curated-crosswalk"
+    },
+    {
+      "from": "iso-iec-27001-2022",
+      "to": "nist-csf-2",
+      "relation": "isms-to-cyber-risk-framework",
+      "confidence": "medium",
+      "provenance": "curated-crosswalk"
+    },
+    {
+      "from": "iso-iec-27001-2022",
+      "to": "iso-iec-27005-2022",
+      "relation": "isms-to-risk-management",
+      "confidence": "high",
+      "provenance": "curated-crosswalk"
+    },
+    {
+      "from": "kubehound",
+      "to": "stratus-red-team",
+      "relation": "attack-path-to-validation",
+      "confidence": "medium",
+      "provenance": "curated-crosswalk"
+    },
+    {
+      "from": "microburst",
+      "to": "stormspotter",
+      "relation": "azure-assessment-to-graph-context",
+      "confidence": "medium",
+      "provenance": "curated-crosswalk"
+    },
+    {
+      "from": "misp-galaxy",
+      "to": "oasis-stix-2-1",
+      "relation": "knowledge-model-to-cti-representation",
+      "confidence": "medium",
+      "provenance": "curated-crosswalk"
+    },
+    {
+      "from": "misp-galaxy",
+      "to": "mitre-attack",
+      "relation": "threat-actor-context-to-behavior-model",
+      "confidence": "high",
+      "provenance": "curated-crosswalk"
+    },
+    {
+      "from": "mitre-atlas",
+      "to": "owasp-genai",
+      "relation": "ai-threat-model-to-application-risk",
+      "confidence": "medium",
+      "provenance": "curated-crosswalk"
+    },
+    {
+      "from": "mitre-atlas",
+      "to": "pyrit",
+      "relation": "ai-threat-model-to-assessment",
+      "confidence": "high",
+      "provenance": "curated-crosswalk"
+    },
+    {
+      "from": "mitre-atlas",
+      "to": "garak",
+      "relation": "ai-threat-model-to-evaluation",
+      "confidence": "high",
+      "provenance": "curated-crosswalk"
+    },
+    {
+      "from": "mitre-atlas",
+      "to": "nist-ai-rmf-genai",
+      "relation": "ai-threat-model-to-risk-governance",
+      "confidence": "medium",
+      "provenance": "curated-crosswalk"
+    },
+    {
+      "from": "mitre-attack",
+      "to": "oasis-stix-2-1",
+      "relation": "behavior-model-to-cti-representation",
+      "confidence": "high",
+      "provenance": "curated-crosswalk"
+    },
+    {
+      "from": "mitre-attack",
+      "to": "mitre-d3fend",
+      "relation": "behavior-to-countermeasure",
+      "confidence": "high",
+      "provenance": "curated-crosswalk"
+    },
+    {
+      "from": "mitre-attack",
+      "to": "sigma",
+      "relation": "behavior-to-detection",
+      "confidence": "high",
+      "provenance": "curated-crosswalk"
+    },
+    {
+      "from": "mitre-attack",
+      "to": "mitre-caldera",
+      "relation": "behavior-to-emulation",
+      "confidence": "high",
+      "provenance": "curated-crosswalk"
+    },
+    {
+      "from": "mitre-attack",
+      "to": "ctid-adversary-emulation",
+      "relation": "behavior-to-emulation-plan",
+      "confidence": "high",
+      "provenance": "curated-crosswalk"
+    },
+    {
+      "from": "mitre-attack",
+      "to": "vectr",
+      "relation": "behavior-to-measurement",
+      "confidence": "high",
+      "provenance": "curated-crosswalk"
+    },
+    {
+      "from": "mitre-attack",
+      "to": "attack-flow",
+      "relation": "behavior-to-sequencing",
+      "confidence": "high",
+      "provenance": "curated-crosswalk"
+    },
+    {
+      "from": "mitre-attack",
+      "to": "ttpforge",
+      "relation": "behavior-to-simulation",
+      "confidence": "high",
+      "provenance": "curated-crosswalk"
+    },
+    {
+      "from": "mitre-attack",
+      "to": "atomic-red-team",
+      "relation": "behavior-to-validation",
+      "confidence": "high",
+      "provenance": "curated-crosswalk"
+    },
+    {
+      "from": "mitre-attack",
+      "to": "mitre-atlas",
+      "relation": "enterprise-to-ai-context-bridge",
+      "confidence": "medium",
+      "provenance": "curated-crosswalk"
+    },
+    {
+      "from": "mitre-capec",
+      "to": "mitre-attack",
+      "relation": "attack-pattern-to-behavior",
+      "confidence": "high",
+      "provenance": "curated-crosswalk"
+    },
+    {
+      "from": "mitre-car",
+      "to": "osquery",
+      "relation": "analytics-to-endpoint-telemetry",
+      "confidence": "medium",
+      "provenance": "curated-crosswalk"
+    },
+    {
+      "from": "mitre-car",
+      "to": "zeek",
+      "relation": "analytics-to-network-telemetry",
+      "confidence": "medium",
+      "provenance": "curated-crosswalk"
+    },
+    {
+      "from": "mitre-cwe",
+      "to": "semgrep",
+      "relation": "weakness-model-to-static-analysis",
+      "confidence": "medium",
+      "provenance": "curated-crosswalk"
+    },
+    {
+      "from": "mitre-d3fend",
+      "to": "sigma",
+      "relation": "countermeasure-to-detection-context",
+      "confidence": "medium",
+      "provenance": "curated-crosswalk"
+    },
+    {
+      "from": "mobsf",
+      "to": "frida",
+      "relation": "static-dynamic-to-instrumentation",
+      "confidence": "medium",
+      "provenance": "curated-crosswalk"
+    },
+    {
+      "from": "nist-csf-2",
+      "to": "mitre-attack",
+      "relation": "risk-framework-to-threat-behavior-context",
+      "confidence": "medium",
+      "provenance": "curated-crosswalk"
+    },
+    {
+      "from": "nist-sp-800-160-v2-r1",
+      "to": "cisa-cpg",
+      "relation": "resilience-engineering-to-security-outcomes",
+      "confidence": "medium",
+      "provenance": "curated-crosswalk"
+    },
+    {
+      "from": "nist-sp-800-161-r1",
+      "to": "slsa",
+      "relation": "supply-chain-risk-to-build-provenance",
+      "confidence": "medium",
+      "provenance": "curated-crosswalk"
+    },
+    {
+      "from": "nist-sp-800-161-r1",
+      "to": "nist-ssdf",
+      "relation": "supply-chain-risk-to-secure-development",
+      "confidence": "high",
+      "provenance": "curated-crosswalk"
+    },
+    {
+      "from": "nist-sp-800-190",
+      "to": "kube-bench",
+      "relation": "container-guidance-to-kubernetes-benchmark",
+      "confidence": "medium",
+      "provenance": "curated-crosswalk"
+    },
+    {
+      "from": "nist-sp-800-190",
+      "to": "trivy",
+      "relation": "container-guidance-to-workload-assessment",
+      "confidence": "medium",
+      "provenance": "curated-crosswalk"
+    },
+    {
+      "from": "nist-sp-800-207",
+      "to": "bloodhound",
+      "relation": "zero-trust-to-identity-attack-path-analysis",
+      "confidence": "medium",
+      "provenance": "curated-crosswalk"
+    },
+    {
+      "from": "nist-sp-800-63-4",
+      "to": "nist-sp-800-207",
+      "relation": "digital-identity-to-zero-trust",
+      "confidence": "high",
+      "provenance": "curated-crosswalk"
+    },
+    {
+      "from": "nist-sp-800-63-4",
+      "to": "bloodhound",
+      "relation": "identity-assurance-to-attack-path-context",
+      "confidence": "medium",
+      "provenance": "curated-crosswalk"
+    },
+    {
+      "from": "nist-ssdf",
+      "to": "semgrep",
+      "relation": "secure-development-to-static-analysis",
+      "confidence": "medium",
+      "provenance": "curated-crosswalk"
+    },
+    {
+      "from": "nist-ssdf",
+      "to": "slsa",
+      "relation": "secure-development-to-supply-chain-assurance",
+      "confidence": "medium",
+      "provenance": "curated-crosswalk"
+    },
+    {
+      "from": "oasis-cacao-2",
+      "to": "mitre-d3fend",
+      "relation": "playbook-to-defensive-action-context",
+      "confidence": "medium",
+      "provenance": "curated-crosswalk"
+    },
+    {
+      "from": "oasis-cacao-2",
+      "to": "nist-sp-800-61-r3",
+      "relation": "playbook-to-incident-response",
+      "confidence": "high",
+      "provenance": "curated-crosswalk"
+    },
+    {
+      "from": "oasis-csaf-2",
+      "to": "ssvc",
+      "relation": "security-advisory-to-response-prioritization",
+      "confidence": "medium",
+      "provenance": "curated-crosswalk"
+    },
+    {
+      "from": "oasis-stix-2-1",
+      "to": "oasis-taxii-2-1",
+      "relation": "intelligence-model-to-transport",
+      "confidence": "high",
+      "provenance": "curated-crosswalk"
+    },
+    {
+      "from": "ocsf",
+      "to": "osquery",
+      "relation": "schema-to-endpoint-telemetry",
+      "confidence": "medium",
+      "provenance": "curated-crosswalk"
+    },
+    {
+      "from": "ocsf",
+      "to": "zeek",
+      "relation": "schema-to-network-telemetry",
+      "confidence": "medium",
+      "provenance": "curated-crosswalk"
+    },
+    {
+      "from": "openaev",
+      "to": "mitre-attack",
+      "relation": "validation-to-behavior",
+      "confidence": "high",
+      "provenance": "curated-crosswalk"
+    },
+    {
+      "from": "openaev",
+      "to": "vectr",
+      "relation": "validation-to-measurement",
+      "confidence": "medium",
+      "provenance": "curated-crosswalk"
+    },
+    {
+      "from": "openssf-osps-baseline",
+      "to": "openssf-scorecard",
+      "relation": "project-baseline-to-repository-assessment",
+      "confidence": "high",
+      "provenance": "curated-crosswalk"
+    },
+    {
+      "from": "openssf-osps-baseline",
+      "to": "slsa",
+      "relation": "project-baseline-to-supply-chain-assurance",
+      "confidence": "medium",
+      "provenance": "curated-crosswalk"
+    },
+    {
+      "from": "openssf-scorecard",
+      "to": "checkov",
+      "relation": "project-posture-to-iac-assessment",
+      "confidence": "medium",
+      "provenance": "curated-crosswalk"
+    },
+    {
+      "from": "owasp-api-top10",
+      "to": "burp-suite",
+      "relation": "risk-model-to-assessment-platform",
+      "confidence": "high",
+      "provenance": "curated-crosswalk"
+    },
+    {
+      "from": "owasp-api-top10",
+      "to": "owasp-zap",
+      "relation": "risk-model-to-assessment-platform",
+      "confidence": "high",
+      "provenance": "curated-crosswalk"
+    },
+    {
+      "from": "owasp-asvs",
+      "to": "burp-suite",
+      "relation": "standard-to-assessment-platform",
+      "confidence": "high",
+      "provenance": "curated-crosswalk"
+    },
+    {
+      "from": "owasp-asvs",
+      "to": "owasp-zap",
+      "relation": "standard-to-assessment-platform",
+      "confidence": "high",
+      "provenance": "curated-crosswalk"
+    },
+    {
+      "from": "owasp-genai",
+      "to": "pyrit",
+      "relation": "application-risk-to-assessment",
+      "confidence": "medium",
+      "provenance": "curated-crosswalk"
+    },
+    {
+      "from": "owasp-iot-istg",
+      "to": "expliot",
+      "relation": "testing-guide-to-assessment-framework",
+      "confidence": "medium",
+      "provenance": "curated-crosswalk"
+    },
+    {
+      "from": "owasp-iot-istg",
+      "to": "routersploit",
+      "relation": "testing-guide-to-embedded-assessment",
+      "confidence": "medium",
+      "provenance": "curated-crosswalk"
+    },
+    {
+      "from": "owasp-isvs",
+      "to": "owasp-iot-istg",
+      "relation": "verification-standard-to-testing-guide",
+      "confidence": "high",
+      "provenance": "curated-crosswalk"
+    },
+    {
+      "from": "owasp-mastg",
+      "to": "mobsf",
+      "relation": "testing-guide-to-assessment-platform",
+      "confidence": "medium",
+      "provenance": "curated-crosswalk"
+    },
+    {
+      "from": "owasp-masvs",
+      "to": "owasp-mastg",
+      "relation": "verification-standard-to-testing-guide",
+      "confidence": "high",
+      "provenance": "curated-crosswalk"
+    },
+    {
+      "from": "owasp-samm",
+      "to": "nist-ssdf",
+      "relation": "maturity-model-to-secure-development",
+      "confidence": "medium",
+      "provenance": "curated-crosswalk"
+    },
+    {
+      "from": "owasp-scvs",
+      "to": "nist-ssdf",
+      "relation": "component-verification-to-secure-development",
+      "confidence": "high",
+      "provenance": "curated-crosswalk"
+    },
+    {
+      "from": "owasp-top10-2025",
+      "to": "owasp-asvs",
+      "relation": "risk-awareness-to-verification-standard",
+      "confidence": "high",
+      "provenance": "curated-crosswalk"
+    },
+    {
+      "from": "realm",
+      "to": "mitre-attack",
+      "relation": "emulation-to-behavior",
+      "confidence": "high",
+      "provenance": "curated-crosswalk"
+    },
+    {
+      "from": "sigma",
+      "to": "velociraptor",
+      "relation": "detection-to-investigation",
+      "confidence": "medium",
+      "provenance": "curated-crosswalk"
+    },
+    {
+      "from": "slsa",
+      "to": "trivy",
+      "relation": "supply-chain-assurance-to-artifact-assessment",
+      "confidence": "medium",
+      "provenance": "curated-crosswalk"
+    },
+    {
+      "from": "slsa",
+      "to": "openssf-scorecard",
+      "relation": "supply-chain-assurance-to-project-posture",
+      "confidence": "medium",
+      "provenance": "curated-crosswalk"
+    },
+    {
+      "from": "ssvc",
+      "to": "first-epss",
+      "relation": "decision-prioritization-to-exploitation-likelihood",
+      "confidence": "medium",
+      "provenance": "curated-crosswalk"
+    },
+    {
+      "from": "ssvc",
+      "to": "first-cvss",
+      "relation": "decision-prioritization-to-severity-context",
+      "confidence": "medium",
+      "provenance": "curated-crosswalk"
+    },
+    {
+      "from": "tiber-eu",
+      "to": "attack-flow",
+      "relation": "threat-led-scenario-modeling",
+      "confidence": "high",
+      "provenance": "curated-crosswalk"
+    },
+    {
+      "from": "tiber-eu",
+      "to": "ctid-adversary-emulation",
+      "relation": "threat-led-to-emulation-planning",
+      "confidence": "medium",
+      "provenance": "curated-crosswalk"
+    },
+    {
+      "from": "veris",
+      "to": "nist-sp-800-61-r3",
+      "relation": "incident-data-to-response-governance",
+      "confidence": "medium",
+      "provenance": "curated-crosswalk"
+    }
+  ]
+}
