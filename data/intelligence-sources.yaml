@@ -1,0 +1,107 @@
+updated: "2026-09-29"
+schema_version: "1.0"
+
+sources:
+  - id: mitre-attack-groups
+    name: "MITRE ATT&CK Groups"
+    category: "primary-curated"
+    focus: ["adversary groups", "aliases", "campaigns", "ATT&CK relationships"]
+    url: "https://attack.mitre.org/groups/"
+    source_tier: "A"
+    note: "Primary adversary-cluster reference used by RedFrameworks profiles."
+
+  - id: misp-galaxy
+    name: "MISP Galaxy"
+    category: "community-knowledge-base"
+    focus: ["threat actors", "ransomware", "tools", "frameworks", "relationships"]
+    url: "https://www.misp-project.org/galaxy.html"
+    source_tier: "A"
+    note: "Structured CTI clusters and relationships suitable for enrichment and cross-checking."
+
+  - id: cisa-advisories
+    name: "CISA Cybersecurity Advisories"
+    category: "government-advisory"
+    focus: ["threat actor advisories", "critical infrastructure", "defensive guidance"]
+    url: "https://www.cisa.gov/news-events/cybersecurity-advisories"
+    source_tier: "A"
+    note: "Government advisories and joint publications with defensive context."
+
+  - id: microsoft-threat-intelligence
+    name: "Microsoft Threat Intelligence"
+    category: "vendor-research"
+    focus: ["activity groups", "identity", "cloud", "campaign analysis"]
+    url: "https://www.microsoft.com/en-us/security/security-insider/intelligence-reports"
+    source_tier: "B"
+    note: "Vendor research and naming-system context for tracked activity groups."
+
+  - id: google-threat-intelligence
+    name: "Google Threat Intelligence"
+    category: "vendor-research"
+    focus: ["APT research", "campaign analysis", "threat trends"]
+    url: "https://cloud.google.com/blog/topics/threat-intelligence"
+    source_tier: "B"
+    note: "Public threat-intelligence reporting including Mandiant research."
+
+  - id: unit42
+    name: "Palo Alto Networks Unit 42"
+    category: "vendor-research"
+    focus: ["threat actors", "campaigns", "cloud threats", "incident research"]
+    url: "https://unit42.paloaltonetworks.com/"
+    source_tier: "B"
+    note: "Threat research useful for corroborating actor aliases, targeting and campaign context."
+
+  - id: eset-research
+    name: "ESET Research"
+    category: "vendor-research"
+    focus: ["APT activity", "malware research", "campaign analysis"]
+    url: "https://www.welivesecurity.com/en/eset-research/"
+    source_tier: "B"
+    note: "Long-running public research on espionage and financially motivated clusters."
+
+  - id: securelist-apt
+    name: "Kaspersky Securelist APT Reports"
+    category: "vendor-research"
+    focus: ["APT activity", "threat landscape", "campaign research"]
+    url: "https://securelist.com/apt-reports/"
+    source_tier: "B"
+    note: "Public APT reporting and threat-landscape analysis."
+
+  - id: cisco-talos
+    name: "Cisco Talos Intelligence"
+    category: "vendor-research"
+    focus: ["threat actors", "malware", "network threats", "campaign research"]
+    url: "https://blog.talosintelligence.com/"
+    source_tier: "B"
+    note: "Threat research with strong network and infrastructure context."
+
+  - id: trend-micro-research
+    name: "Trend Micro Research"
+    category: "vendor-research"
+    focus: ["APT activity", "cloud", "ransomware", "threat trends"]
+    url: "https://www.trendmicro.com/en_us/research.html"
+    source_tier: "B"
+    note: "Public research covering adversary activity and security trends."
+
+  - id: sentinel-labs
+    name: "SentinelLABS"
+    category: "vendor-research"
+    focus: ["APT activity", "malware", "campaign research"]
+    url: "https://www.sentinelone.com/labs/"
+    source_tier: "B"
+    note: "Public threat research and adversary-focused investigations."
+
+  - id: elastic-security-labs
+    name: "Elastic Security Labs"
+    category: "vendor-research"
+    focus: ["threat research", "detection engineering", "malware", "campaigns"]
+    url: "https://www.elastic.co/security-labs"
+    source_tier: "B"
+    note: "Threat research with detection and telemetry context."
+
+  - id: crowdstrike-global-threat-report
+    name: "CrowdStrike Global Threat Report"
+    category: "annual-report"
+    focus: ["threat landscape", "actor naming", "industry targeting", "trends"]
+    url: "https://www.crowdstrike.com/en-us/global-threat-report/"
+    source_tier: "B"
+    note: "Annual public threat-landscape report and actor taxonomy context."
