@@ -36,3 +36,28 @@ relationships:
   - {from: mobsf, to: frida, relation: static-dynamic-to-instrumentation, confidence: medium, provenance: curated-crosswalk, source_refs: [mobsf, frida]}
   - {from: owasp-iot-istg, to: expliot, relation: testing-guide-to-assessment-framework, confidence: medium, provenance: curated-crosswalk, source_refs: [owasp-iot-istg, expliot]}
   - {from: owasp-iot-istg, to: routersploit, relation: testing-guide-to-embedded-assessment, confidence: medium, provenance: curated-crosswalk, source_refs: [owasp-iot-istg, routersploit]}
+  - {from: owasp-asvs, to: burp-suite, relation: standard-to-assessment-platform, confidence: high, provenance: curated-crosswalk, source_refs: [owasp-asvs, burp-suite]}
+  - {from: owasp-asvs, to: owasp-zap, relation: standard-to-assessment-platform, confidence: high, provenance: curated-crosswalk, source_refs: [owasp-asvs, owasp-zap]}
+  - {from: owasp-api-top10, to: burp-suite, relation: risk-model-to-assessment-platform, confidence: high, provenance: curated-crosswalk, source_refs: [owasp-api-top10, burp-suite]}
+  - {from: owasp-api-top10, to: owasp-zap, relation: risk-model-to-assessment-platform, confidence: high, provenance: curated-crosswalk, source_refs: [owasp-api-top10, owasp-zap]}
+  - {from: owasp-samm, to: nist-ssdf, relation: maturity-model-to-secure-development, confidence: medium, provenance: curated-crosswalk, source_refs: [owasp-samm, nist-ssdf]}
+  - {from: owasp-masvs, to: owasp-mastg, relation: verification-standard-to-testing-guide, confidence: high, provenance: curated-crosswalk, source_refs: [owasp-masvs, owasp-mastg]}
+  - {from: owasp-isvs, to: owasp-iot-istg, relation: verification-standard-to-testing-guide, confidence: high, provenance: curated-crosswalk, source_refs: [owasp-isvs, owasp-iot-istg]}
+  - {from: nist-ssdf, to: semgrep, relation: secure-development-to-static-analysis, confidence: medium, provenance: curated-crosswalk, source_refs: [nist-ssdf, semgrep]}
+  - {from: nist-ssdf, to: slsa, relation: secure-development-to-supply-chain-assurance, confidence: medium, provenance: curated-crosswalk, source_refs: [nist-ssdf, slsa]}
+  - {from: slsa, to: trivy, relation: supply-chain-assurance-to-artifact-assessment, confidence: medium, provenance: curated-crosswalk, source_refs: [slsa, trivy]}
+  - {from: slsa, to: openssf-scorecard, relation: supply-chain-assurance-to-project-posture, confidence: medium, provenance: curated-crosswalk, source_refs: [slsa, openssf-scorecard]}
+  - {from: csa-ccm, to: prowler, relation: cloud-control-to-assessment, confidence: medium, provenance: curated-crosswalk, source_refs: [csa-ccm, prowler]}
+  - {from: csa-ccm, to: scoutsuite, relation: cloud-control-to-assessment, confidence: medium, provenance: curated-crosswalk, source_refs: [csa-ccm, scoutsuite]}
+  - {from: mitre-cwe, to: semgrep, relation: weakness-model-to-static-analysis, confidence: medium, provenance: curated-crosswalk, source_refs: [mitre-cwe, semgrep]}
+  - {from: mitre-capec, to: mitre-attack, relation: attack-pattern-to-behavior, confidence: high, provenance: curated-crosswalk, source_refs: [mitre-capec, mitre-attack]}
+  - {from: mitre-car, to: zeek, relation: analytics-to-network-telemetry, confidence: medium, provenance: curated-crosswalk, source_refs: [mitre-car, zeek]}
+  - {from: mitre-car, to: osquery, relation: analytics-to-endpoint-telemetry, confidence: medium, provenance: curated-crosswalk, source_refs: [mitre-car, osquery]}
+  - {from: ocsf, to: zeek, relation: schema-to-network-telemetry, confidence: medium, provenance: curated-crosswalk, source_refs: [ocsf, zeek]}
+  - {from: ocsf, to: osquery, relation: schema-to-endpoint-telemetry, confidence: medium, provenance: curated-crosswalk, source_refs: [ocsf, osquery]}
+  - {from: cis-controls, to: falco, relation: safeguard-to-runtime-detection, confidence: medium, provenance: curated-crosswalk, source_refs: [cis-controls, falco]}
+  - {from: cis-controls, to: suricata, relation: safeguard-to-network-detection, confidence: medium, provenance: curated-crosswalk, source_refs: [cis-controls, suricata]}
+  - {from: first-cvss, to: first-epss, relation: severity-to-exploitation-likelihood-context, confidence: medium, provenance: curated-crosswalk, source_refs: [first-cvss, first-epss]}
+  - {from: nist-sp-800-207, to: bloodhound, relation: zero-trust-to-identity-attack-path-analysis, confidence: medium, provenance: curated-crosswalk, source_refs: [nist-sp-800-207, bloodhound]}
+  - {from: nist-csf-2, to: mitre-attack, relation: risk-framework-to-threat-behavior-context, confidence: medium, provenance: curated-crosswalk, source_refs: [nist-csf-2, mitre-attack]}
+  - {from: openssf-scorecard, to: checkov, relation: project-posture-to-iac-assessment, confidence: medium, provenance: curated-crosswalk, source_refs: [openssf-scorecard, checkov]}
