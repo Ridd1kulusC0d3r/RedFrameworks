@@ -1,0 +1,32 @@
+{
+  "version": "5.2.0",
+  "date": "2026-09-30",
+  "codename": "Graph Intelligence",
+  "status": "release-manifest",
+  "counts": {
+    "frameworks": 62,
+    "catalog_entries": 125,
+    "adversaries": 42,
+    "canonical_relationships": 89,
+    "resources": 23
+  },
+  "capabilities": [
+    "embedded 1-2 hop graph workbench",
+    "full-screen graph explorer",
+    "pan and zoom",
+    "force and radial layouts",
+    "framework tool and adversary layers",
+    "11 additional verified frameworks",
+    "20 additional ATT&CK adversary profiles",
+    "15 additional curated relationships",
+    "portable static Pages fallback",
+    "dynamic portable detail pages",
+    "expanded README visual system"
+  ],
+  "compatibility": {
+    "api_v1": true,
+    "api_v2": true,
+    "api_v3": "current"
+  },
+  "safety": "Adversary and offensive-security material remains descriptive and focused on authorized testing, defensive validation, resilience, detection and evidence."
+}

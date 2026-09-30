@@ -13,6 +13,9 @@ on:
       - "examples/**"
       - "sdk/**"
       - "site/**"
+      - "graph/**"
+      - "index.html"
+      - ".nojekyll"
       - "scripts/**"
       - ".github/workflows/pages.yml"
   workflow_dispatch:

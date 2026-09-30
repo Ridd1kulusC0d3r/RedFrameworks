@@ -97,7 +97,7 @@ function resolveBookmark(key){
   const [kind,id]=key.split(":");
   if(kind==="item"){
     const item=state.items.find(row=>row.id===id);
-    return item?{name:item.name,href:"entity/"+encodeURIComponent(id)+"/"}:null;
+    return item?{name:item.name,href:"detail.html?type=entity&id="+encodeURIComponent(id)}:null;
   }
   if(kind==="book"){
     const item=state.resources.books.find(row=>row.id===id);
@@ -157,7 +157,7 @@ function itemCard(item){
     (item.verification_note?'<p class="verify-note">'+esc(item.verification_note)+'</p>':"")+
     '<div class="tag-row">'+tags+'</div>'+
     '<div class="entry-bottom"><div class="entry-score"><strong>'+esc(item.provenance_score??"—")+'</strong><small>provenance · tier '+esc(item.evidence_tier||"—")+'</small></div>'+
-    '<div class="entry-actions">'+source+'<a href="entity/'+encodeURIComponent(item.id)+'/">entity →</a>'+
+    '<div class="entry-actions">'+source+'<a href="detail.html?type=entity&id='+encodeURIComponent(item.id)+'">entity →</a>'+
     '<button class="compare-toggle" data-id="'+esc(item.id)+'" aria-pressed="'+state.compare.has(item.id)+'">'+(state.compare.has(item.id)?"selected":"compare")+'</button></div></div>'+
     '</article>';
 }
@@ -260,7 +260,7 @@ function renderTechniques(){
   const rows=state.techniques.filter(item=>!q||(item.id+" "+item.name).toLowerCase().includes(q));
   $("technique-count").textContent=rows.length+" techniques";
   $("technique-grid").innerHTML=rows.map(item=>
-    '<a class="technique-card" href="technique/'+esc(item.id.toLowerCase())+'/"><b>'+esc(item.id)+'</b><h3>'+esc(item.name)+'</h3>'+
+    '<a class="technique-card" href="detail.html?type=technique&id='+encodeURIComponent(item.id)+'"><b>'+esc(item.id)+'</b><h3>'+esc(item.name)+'</h3>'+
     '<p>'+((item.scenarios||[]).length+(item.scorecards||[]).length)+' validation refs · '+(item.defensive_context||[]).length+' defensive mappings</p></a>'
   ).join("");
 }
@@ -281,7 +281,7 @@ function renderAdversaries(){
   ].map(([label,value])=>'<div class="adversary-metric"><strong>'+value+'</strong><span>'+esc(label)+'</span></div>').join("");
 
   $("adversary-grid").innerHTML=rows.map(item=>
-    '<article class="adversary-card"><div class="adversary-head"><div><span class="kind-badge">'+esc(item.attack_id)+'</span><span class="status-badge verified">'+esc(item.actor_type)+'</span></div><a href="adversary/'+esc(item.id)+'/">profile →</a></div>'+
+    '<article class="adversary-card"><div class="adversary-head"><div><span class="kind-badge">'+esc(item.attack_id)+'</span><span class="status-badge verified">'+esc(item.actor_type)+'</span></div><a href="detail.html?type=adversary&id='+encodeURIComponent(item.id)+'">profile →</a></div>'+
     '<h3>'+esc(item.name)+'</h3><p>'+esc(item.attribution)+'</p>'+
     '<div class="alias-row">'+(item.aliases||[]).slice(0,5).map(v=>'<span class="tag">'+esc(v)+'</span>').join("")+'</div>'+
     '<div class="adversary-meta"><div><b>Motivation</b><span>'+esc((item.motivation||[]).join(" · "))+'</span></div>'+
@@ -440,7 +440,7 @@ function renderGraph(){
   const rels=direct.slice(0,14).map(edge=>{
     const other=edge.from===focus?edge.to:edge.from,otherItem=map.get(other);
     return '<div class="graph-relation"><div><b>'+esc(edge.relation.replaceAll("-"," "))+'</b><span>'+esc(edge.confidence||"unrated")+' confidence</span></div>'+
-      '<a href="entity/'+encodeURIComponent(other)+'/">'+esc(otherItem?.name||other)+' →</a><small>'+esc(edge.provenance||"curated")+'</small></div>';
+      '<a href="detail.html?type=entity&id='+encodeURIComponent(other)+'">'+esc(otherItem?.name||other)+' →</a><small>'+esc(edge.provenance||"curated")+'</small></div>';
   }).join("");
 
   $("graph-detail").innerHTML='<p class="section-kicker">'+esc(item?.kind||"entity")+' · '+esc(item?.status||"")+'</p>'+
@@ -613,12 +613,12 @@ function renderTimeline(){
 
 function buildCommandIndex(){
   const list=[];
-  for(const item of state.items)list.push({kind:item.kind,label:item.name,detail:(item.domains||[]).join(" · "),href:"entity/"+item.id+"/"});
+  for(const item of state.items)list.push({kind:item.kind,label:item.name,detail:(item.domains||[]).join(" · "),href:"detail.html?type=entity&id="+encodeURIComponent(item.id)});
   for(const item of state.resources.books)list.push({kind:"book",label:item.title,detail:(item.authors||[]).join(", "),href:item.url});
   for(const item of state.resources.certifications)list.push({kind:"cert",label:item.name,detail:item.provider+" · "+item.level,href:item.url});
   for(const path of state.learningPaths)list.push({kind:"path",label:path.name,detail:path.audience+" · "+(path.domains||[]).join(" · "),href:"#paths"});
-  for(const item of state.techniques)list.push({kind:"technique",label:item.id+" · "+item.name,detail:"ATT&CK technique intelligence",href:"technique/"+item.id.toLowerCase()+"/"});
-  for(const item of state.adversaries)list.push({kind:"adversary",label:item.name,detail:item.attack_id+" · "+item.actor_type+" · "+(item.aliases||[]).slice(0,3).join(" · "),href:"adversary/"+item.id+"/"});
+  for(const item of state.techniques)list.push({kind:"technique",label:item.id+" · "+item.name,detail:"ATT&CK technique intelligence",href:"detail.html?type=technique&id="+encodeURIComponent(item.id)});
+  for(const item of state.adversaries)list.push({kind:"adversary",label:item.name,detail:item.attack_id+" · "+item.actor_type+" · "+(item.aliases||[]).slice(0,3).join(" · "),href:"detail.html?type=adversary&id="+encodeURIComponent(item.id)});
   for(const item of state.intelligenceSources)list.push({kind:"source",label:item.name,detail:item.category+" · "+(item.focus||[]).slice(0,3).join(" · "),href:item.url});
   state.commandItems=list;
 }
