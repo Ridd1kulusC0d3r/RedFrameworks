@@ -1132,4 +1132,202 @@ entries:
     evidence_tier: "D"
     last_reviewed: "2026-09-29"
 
+  - id: nuclei
+    name: "Nuclei"
+    type: "template-driven-assessment-tool"
+    domains: ["web", "network", "cloud", "application-security"]
+    status: "verified"
+    model: "open-source"
+    url: "https://github.com/projectdiscovery/nuclei"
+    role: "template-driven security assessment and exposure validation"
+    evidence_tier: "B"
+    last_reviewed: "2026-09-29"
+
+  - id: owasp-zap
+    name: "OWASP ZAP"
+    type: "web-assessment-platform"
+    domains: ["web", "api", "application-security"]
+    status: "verified"
+    model: "open-source"
+    url: "https://www.zaproxy.org/"
+    role: "web application security testing proxy and automation platform"
+    evidence_tier: "A"
+    last_reviewed: "2026-09-29"
+
+  - id: burp-suite
+    name: "Burp Suite"
+    type: "web-assessment-platform"
+    domains: ["web", "api", "application-security"]
+    status: "verified"
+    model: "commercial-community"
+    url: "https://portswigger.net/burp"
+    role: "interactive web application security assessment platform"
+    evidence_tier: "A"
+    last_reviewed: "2026-09-29"
+
+  - id: semgrep
+    name: "Semgrep"
+    type: "static-analysis-platform"
+    domains: ["application-security", "secure-development", "code-analysis"]
+    status: "verified"
+    model: "open-source-commercial"
+    url: "https://semgrep.dev/"
+    role: "static analysis and code security rule engine"
+    evidence_tier: "B"
+    last_reviewed: "2026-09-29"
+
+  - id: trivy
+    name: "Trivy"
+    type: "vulnerability-and-misconfiguration-scanner"
+    domains: ["containers", "kubernetes", "cloud-native", "software-supply-chain"]
+    status: "verified"
+    model: "open-source"
+    url: "https://github.com/aquasecurity/trivy"
+    role: "vulnerability, misconfiguration, secret and SBOM assessment for cloud-native assets"
+    evidence_tier: "B"
+    last_reviewed: "2026-09-29"
+
+  - id: prowler
+    name: "Prowler"
+    type: "cloud-security-assessment"
+    domains: ["aws", "azure", "gcp", "cloud"]
+    status: "verified"
+    model: "open-source-commercial"
+    url: "https://prowler.com/"
+    role: "multi-cloud security posture and control assessment"
+    evidence_tier: "B"
+    last_reviewed: "2026-09-29"
+
+  - id: scoutsuite
+    name: "ScoutSuite"
+    type: "cloud-security-auditing"
+    domains: ["aws", "azure", "gcp", "cloud"]
+    status: "verified"
+    model: "open-source"
+    url: "https://github.com/nccgroup/ScoutSuite"
+    role: "multi-cloud configuration and attack-surface auditing"
+    evidence_tier: "B"
+    last_reviewed: "2026-09-29"
+
+  - id: cartography
+    name: "Cartography"
+    type: "security-graph-platform"
+    domains: ["cloud", "identity", "attack-path-analysis"]
+    status: "verified"
+    model: "open-source"
+    url: "https://github.com/lyft/cartography"
+    role: "asset relationship graphing for security and exposure analysis"
+    evidence_tier: "B"
+    last_reviewed: "2026-09-29"
+
+  - id: osquery
+    name: "osquery"
+    type: "endpoint-telemetry-platform"
+    domains: ["endpoint", "telemetry", "threat-hunting"]
+    status: "verified"
+    model: "open-source"
+    url: "https://www.osquery.io/"
+    role: "SQL-based endpoint instrumentation and security telemetry"
+    evidence_tier: "B"
+    last_reviewed: "2026-09-29"
+
+  - id: falco
+    name: "Falco"
+    type: "runtime-detection-platform"
+    domains: ["cloud-native", "containers", "kubernetes", "detection"]
+    status: "verified"
+    model: "open-source"
+    url: "https://falco.org/"
+    role: "runtime security detection for cloud-native environments"
+    evidence_tier: "A"
+    last_reviewed: "2026-09-29"
+
+  - id: zeek
+    name: "Zeek"
+    type: "network-security-monitoring"
+    domains: ["network", "telemetry", "threat-hunting"]
+    status: "verified"
+    model: "open-source"
+    url: "https://zeek.org/"
+    role: "network security monitoring and high-fidelity protocol telemetry"
+    evidence_tier: "A"
+    last_reviewed: "2026-09-29"
+
+  - id: suricata
+    name: "Suricata"
+    type: "network-detection-platform"
+    domains: ["network", "ids", "detection"]
+    status: "verified"
+    model: "open-source"
+    url: "https://suricata.io/"
+    role: "network threat detection, IDS/IPS and security monitoring"
+    evidence_tier: "A"
+    last_reviewed: "2026-09-29"
+
+  - id: wireshark
+    name: "Wireshark"
+    type: "network-analysis-tool"
+    domains: ["network", "protocol-analysis", "dfir"]
+    status: "verified"
+    model: "open-source"
+    url: "https://www.wireshark.org/"
+    role: "packet analysis and protocol-level investigation"
+    evidence_tier: "A"
+    last_reviewed: "2026-09-29"
+
+  - id: ghidra
+    name: "Ghidra"
+    type: "reverse-engineering-platform"
+    domains: ["reverse-engineering", "malware-analysis", "software-security"]
+    status: "verified"
+    model: "open-source"
+    url: "https://github.com/NationalSecurityAgency/ghidra"
+    role: "software reverse engineering and binary analysis"
+    evidence_tier: "A"
+    last_reviewed: "2026-09-29"
+
+  - id: yara-x
+    name: "YARA-X"
+    type: "pattern-matching-platform"
+    domains: ["malware-analysis", "detection", "threat-hunting"]
+    status: "verified"
+    model: "open-source"
+    url: "https://github.com/VirusTotal/yara-x"
+    role: "modern rule-based pattern matching for malware research and detection"
+    evidence_tier: "B"
+    last_reviewed: "2026-09-29"
+
+  - id: volatility3
+    name: "Volatility 3"
+    type: "memory-forensics-framework"
+    domains: ["dfir", "memory-forensics", "malware-analysis"]
+    status: "verified"
+    model: "open-source"
+    url: "https://github.com/volatilityfoundation/volatility3"
+    role: "volatile-memory artifact extraction and forensic analysis"
+    evidence_tier: "B"
+    last_reviewed: "2026-09-29"
+
+  - id: checkov
+    name: "Checkov"
+    type: "iac-security-scanner"
+    domains: ["infrastructure-as-code", "cloud", "secure-development"]
+    status: "verified"
+    model: "open-source-commercial"
+    url: "https://www.checkov.io/"
+    role: "policy and misconfiguration analysis for infrastructure-as-code"
+    evidence_tier: "B"
+    last_reviewed: "2026-09-29"
+
+  - id: kube-bench
+    name: "kube-bench"
+    type: "kubernetes-benchmark-assessment"
+    domains: ["kubernetes", "cloud-native", "configuration"]
+    status: "verified"
+    model: "open-source"
+    url: "https://github.com/aquasecurity/kube-bench"
+    role: "Kubernetes configuration assessment against CIS benchmark guidance"
+    evidence_tier: "B"
+    last_reviewed: "2026-09-29"
+
 watchlist: []
