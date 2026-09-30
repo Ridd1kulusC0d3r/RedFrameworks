@@ -39,6 +39,9 @@ def main():
         upstream = health_by_id.get(entry["id"])
         if upstream:
             checks["upstream_reachable"] = upstream.get("health") not in {"unreachable", "archived"}
+            checks["canonical_not_fork"] = not upstream.get("fork", False)
+            checks["maintainer_identity"] = bool(upstream.get("owner"))
+            checks["license_metadata"] = bool(upstream.get("license_spdx") and upstream.get("license_spdx") != "NOASSERTION")
         passed = sum(1 for value in checks.values() if value)
         total = len(checks)
         queue.append({
@@ -48,6 +51,11 @@ def main():
             "readiness_percent": round(passed / total * 100),
             "checks": checks,
             "upstream_health": upstream.get("health") if upstream else "not-checked",
+            "repository": upstream.get("repository") if upstream else None,
+            "owner": upstream.get("owner") if upstream else None,
+            "owner_type": upstream.get("owner_type") if upstream else None,
+            "license_spdx": upstream.get("license_spdx") if upstream else None,
+            "latest_release": upstream.get("latest_release") if upstream else None,
             "next_actions": [name for name, ok in checks.items() if not ok],
         })
 
