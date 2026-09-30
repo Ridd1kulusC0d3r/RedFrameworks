@@ -1,0 +1,1996 @@
+{
+  "count": 70,
+  "entries": [
+    {
+      "id": "advanced-iot-exploitation-framework-v2-0",
+      "name": "Advanced IoT Exploitation Framework v2.0",
+      "domains": [
+        "iot",
+        "embedded",
+        "research"
+      ],
+      "readiness_percent": 50,
+      "checks": {
+        "canonical_url": false,
+        "model": false,
+        "evidence_tier": false,
+        "review_date": true,
+        "domains": true,
+        "verification_note": true
+      },
+      "upstream_health": "not-checked",
+      "repository": null,
+      "owner": null,
+      "owner_type": null,
+      "license_spdx": null,
+      "latest_release": null,
+      "next_actions": [
+        "canonical_url",
+        "model",
+        "evidence_tier"
+      ]
+    },
+    {
+      "id": "advent-prompt-pwn",
+      "name": "advent-prompt-pwn",
+      "domains": [
+        "ai-genai",
+        "research"
+      ],
+      "readiness_percent": 50,
+      "checks": {
+        "canonical_url": false,
+        "model": false,
+        "evidence_tier": false,
+        "review_date": true,
+        "domains": true,
+        "verification_note": true
+      },
+      "upstream_health": "not-checked",
+      "repository": null,
+      "owner": null,
+      "owner_type": null,
+      "license_spdx": null,
+      "latest_release": null,
+      "next_actions": [
+        "canonical_url",
+        "model",
+        "evidence_tier"
+      ]
+    },
+    {
+      "id": "aptsimulator",
+      "name": "APTSimulator",
+      "domains": [
+        "adversary-emulation",
+        "research"
+      ],
+      "readiness_percent": 50,
+      "checks": {
+        "canonical_url": false,
+        "model": false,
+        "evidence_tier": false,
+        "review_date": true,
+        "domains": true,
+        "verification_note": true
+      },
+      "upstream_health": "not-checked",
+      "repository": null,
+      "owner": null,
+      "owner_type": null,
+      "license_spdx": null,
+      "latest_release": null,
+      "next_actions": [
+        "canonical_url",
+        "model",
+        "evidence_tier"
+      ]
+    },
+    {
+      "id": "arsenal",
+      "name": "Arsenal",
+      "domains": [
+        "automation",
+        "offensive-security",
+        "research"
+      ],
+      "readiness_percent": 50,
+      "checks": {
+        "canonical_url": false,
+        "model": false,
+        "evidence_tier": false,
+        "review_date": true,
+        "domains": true,
+        "verification_note": true
+      },
+      "upstream_health": "not-checked",
+      "repository": null,
+      "owner": null,
+      "owner_type": null,
+      "license_spdx": null,
+      "latest_release": null,
+      "next_actions": [
+        "canonical_url",
+        "model",
+        "evidence_tier"
+      ]
+    },
+    {
+      "id": "autopt",
+      "name": "AutoPT",
+      "domains": [
+        "ai-genai",
+        "research"
+      ],
+      "readiness_percent": 50,
+      "checks": {
+        "canonical_url": false,
+        "model": false,
+        "evidence_tier": false,
+        "review_date": true,
+        "domains": true,
+        "verification_note": true
+      },
+      "upstream_health": "not-checked",
+      "repository": null,
+      "owner": null,
+      "owner_type": null,
+      "license_spdx": null,
+      "latest_release": null,
+      "next_actions": [
+        "canonical_url",
+        "model",
+        "evidence_tier"
+      ]
+    },
+    {
+      "id": "autopwn",
+      "name": "Autopwn",
+      "domains": [
+        "ai-genai",
+        "research"
+      ],
+      "readiness_percent": 50,
+      "checks": {
+        "canonical_url": false,
+        "model": false,
+        "evidence_tier": false,
+        "review_date": true,
+        "domains": true,
+        "verification_note": true
+      },
+      "upstream_health": "not-checked",
+      "repository": null,
+      "owner": null,
+      "owner_type": null,
+      "license_spdx": null,
+      "latest_release": null,
+      "next_actions": [
+        "canonical_url",
+        "model",
+        "evidence_tier"
+      ]
+    },
+    {
+      "id": "ax-framework",
+      "name": "Ax Framework",
+      "domains": [
+        "cloud",
+        "kubernetes",
+        "research"
+      ],
+      "readiness_percent": 50,
+      "checks": {
+        "canonical_url": false,
+        "model": false,
+        "evidence_tier": false,
+        "review_date": true,
+        "domains": true,
+        "verification_note": true
+      },
+      "upstream_health": "not-checked",
+      "repository": null,
+      "owner": null,
+      "owner_type": null,
+      "license_spdx": null,
+      "latest_release": null,
+      "next_actions": [
+        "canonical_url",
+        "model",
+        "evidence_tier"
+      ]
+    },
+    {
+      "id": "basilisk",
+      "name": "Basilisk",
+      "domains": [
+        "ai-genai",
+        "research"
+      ],
+      "readiness_percent": 50,
+      "checks": {
+        "canonical_url": false,
+        "model": false,
+        "evidence_tier": false,
+        "review_date": true,
+        "domains": true,
+        "verification_note": true
+      },
+      "upstream_health": "not-checked",
+      "repository": null,
+      "owner": null,
+      "owner_type": null,
+      "license_spdx": null,
+      "latest_release": null,
+      "next_actions": [
+        "canonical_url",
+        "model",
+        "evidence_tier"
+      ]
+    },
+    {
+      "id": "bear-c2",
+      "name": "BEAR-C2",
+      "domains": [
+        "adversary-emulation",
+        "research"
+      ],
+      "readiness_percent": 50,
+      "checks": {
+        "canonical_url": false,
+        "model": false,
+        "evidence_tier": false,
+        "review_date": true,
+        "domains": true,
+        "verification_note": true
+      },
+      "upstream_health": "not-checked",
+      "repository": null,
+      "owner": null,
+      "owner_type": null,
+      "license_spdx": null,
+      "latest_release": null,
+      "next_actions": [
+        "canonical_url",
+        "model",
+        "evidence_tier"
+      ]
+    },
+    {
+      "id": "bounty-hunter",
+      "name": "Bounty Hunter",
+      "domains": [
+        "adversary-emulation",
+        "research"
+      ],
+      "readiness_percent": 50,
+      "checks": {
+        "canonical_url": false,
+        "model": false,
+        "evidence_tier": false,
+        "review_date": true,
+        "domains": true,
+        "verification_note": true
+      },
+      "upstream_health": "not-checked",
+      "repository": null,
+      "owner": null,
+      "owner_type": null,
+      "license_spdx": null,
+      "latest_release": null,
+      "next_actions": [
+        "canonical_url",
+        "model",
+        "evidence_tier"
+      ]
+    },
+    {
+      "id": "cloudtoolkit",
+      "name": "Cloudtoolkit",
+      "domains": [
+        "cloud",
+        "kubernetes",
+        "research"
+      ],
+      "readiness_percent": 50,
+      "checks": {
+        "canonical_url": false,
+        "model": false,
+        "evidence_tier": false,
+        "review_date": true,
+        "domains": true,
+        "verification_note": true
+      },
+      "upstream_health": "not-checked",
+      "repository": null,
+      "owner": null,
+      "owner_type": null,
+      "license_spdx": null,
+      "latest_release": null,
+      "next_actions": [
+        "canonical_url",
+        "model",
+        "evidence_tier"
+      ]
+    },
+    {
+      "id": "cosmos-orbit",
+      "name": "Cosmos Orbit",
+      "domains": [
+        "adversary-emulation",
+        "research"
+      ],
+      "readiness_percent": 50,
+      "checks": {
+        "canonical_url": false,
+        "model": false,
+        "evidence_tier": false,
+        "review_date": true,
+        "domains": true,
+        "verification_note": true
+      },
+      "upstream_health": "not-checked",
+      "repository": null,
+      "owner": null,
+      "owner_type": null,
+      "license_spdx": null,
+      "latest_release": null,
+      "next_actions": [
+        "canonical_url",
+        "model",
+        "evidence_tier"
+      ]
+    },
+    {
+      "id": "covenant",
+      "name": "Covenant",
+      "domains": [
+        "adversary-emulation",
+        "research"
+      ],
+      "readiness_percent": 50,
+      "checks": {
+        "canonical_url": false,
+        "model": false,
+        "evidence_tier": false,
+        "review_date": true,
+        "domains": true,
+        "verification_note": true
+      },
+      "upstream_health": "not-checked",
+      "repository": null,
+      "owner": null,
+      "owner_type": null,
+      "license_spdx": null,
+      "latest_release": null,
+      "next_actions": [
+        "canonical_url",
+        "model",
+        "evidence_tier"
+      ]
+    },
+    {
+      "id": "cptf-arm-edition",
+      "name": "CPTF ARM Edition",
+      "domains": [
+        "cloud",
+        "kubernetes",
+        "research"
+      ],
+      "readiness_percent": 50,
+      "checks": {
+        "canonical_url": false,
+        "model": false,
+        "evidence_tier": false,
+        "review_date": true,
+        "domains": true,
+        "verification_note": true
+      },
+      "upstream_health": "not-checked",
+      "repository": null,
+      "owner": null,
+      "owner_type": null,
+      "license_spdx": null,
+      "latest_release": null,
+      "next_actions": [
+        "canonical_url",
+        "model",
+        "evidence_tier"
+      ]
+    },
+    {
+      "id": "crackmapexec",
+      "name": "CrackMapExec",
+      "domains": [
+        "legacy-review",
+        "research"
+      ],
+      "readiness_percent": 50,
+      "checks": {
+        "canonical_url": false,
+        "model": false,
+        "evidence_tier": false,
+        "review_date": true,
+        "domains": true,
+        "verification_note": true
+      },
+      "upstream_health": "not-checked",
+      "repository": null,
+      "owner": null,
+      "owner_type": null,
+      "license_spdx": null,
+      "latest_release": null,
+      "next_actions": [
+        "canonical_url",
+        "model",
+        "evidence_tier"
+      ]
+    },
+    {
+      "id": "ctrsploit",
+      "name": "ctrsploit",
+      "domains": [
+        "cloud",
+        "kubernetes",
+        "research"
+      ],
+      "readiness_percent": 50,
+      "checks": {
+        "canonical_url": false,
+        "model": false,
+        "evidence_tier": false,
+        "review_date": true,
+        "domains": true,
+        "verification_note": true
+      },
+      "upstream_health": "not-checked",
+      "repository": null,
+      "owner": null,
+      "owner_type": null,
+      "license_spdx": null,
+      "latest_release": null,
+      "next_actions": [
+        "canonical_url",
+        "model",
+        "evidence_tier"
+      ]
+    },
+    {
+      "id": "deepteam",
+      "name": "DeepTeam",
+      "domains": [
+        "ai-genai",
+        "research"
+      ],
+      "readiness_percent": 50,
+      "checks": {
+        "canonical_url": false,
+        "model": false,
+        "evidence_tier": false,
+        "review_date": true,
+        "domains": true,
+        "verification_note": true
+      },
+      "upstream_health": "not-checked",
+      "repository": null,
+      "owner": null,
+      "owner_type": null,
+      "license_spdx": null,
+      "latest_release": null,
+      "next_actions": [
+        "canonical_url",
+        "model",
+        "evidence_tier"
+      ]
+    },
+    {
+      "id": "dnscat2",
+      "name": "DNSCat2",
+      "domains": [
+        "adversary-emulation",
+        "research"
+      ],
+      "readiness_percent": 50,
+      "checks": {
+        "canonical_url": false,
+        "model": false,
+        "evidence_tier": false,
+        "review_date": true,
+        "domains": true,
+        "verification_note": true
+      },
+      "upstream_health": "not-checked",
+      "repository": null,
+      "owner": null,
+      "owner_type": null,
+      "license_spdx": null,
+      "latest_release": null,
+      "next_actions": [
+        "canonical_url",
+        "model",
+        "evidence_tier"
+      ]
+    },
+    {
+      "id": "elaina-c2",
+      "name": "Elaina-C2",
+      "domains": [
+        "adversary-emulation",
+        "research"
+      ],
+      "readiness_percent": 50,
+      "checks": {
+        "canonical_url": false,
+        "model": false,
+        "evidence_tier": false,
+        "review_date": true,
+        "domains": true,
+        "verification_note": true
+      },
+      "upstream_health": "not-checked",
+      "repository": null,
+      "owner": null,
+      "owner_type": null,
+      "license_spdx": null,
+      "latest_release": null,
+      "next_actions": [
+        "canonical_url",
+        "model",
+        "evidence_tier"
+      ]
+    },
+    {
+      "id": "embedxpl-forge",
+      "name": "EmbedXPL-Forge",
+      "domains": [
+        "iot",
+        "embedded",
+        "research"
+      ],
+      "readiness_percent": 50,
+      "checks": {
+        "canonical_url": false,
+        "model": false,
+        "evidence_tier": false,
+        "review_date": true,
+        "domains": true,
+        "verification_note": true
+      },
+      "upstream_health": "not-checked",
+      "repository": null,
+      "owner": null,
+      "owner_type": null,
+      "license_spdx": null,
+      "latest_release": null,
+      "next_actions": [
+        "canonical_url",
+        "model",
+        "evidence_tier"
+      ]
+    },
+    {
+      "id": "faction-c2",
+      "name": "Faction C2",
+      "domains": [
+        "adversary-emulation",
+        "research"
+      ],
+      "readiness_percent": 50,
+      "checks": {
+        "canonical_url": false,
+        "model": false,
+        "evidence_tier": false,
+        "review_date": true,
+        "domains": true,
+        "verification_note": true
+      },
+      "upstream_health": "not-checked",
+      "repository": null,
+      "owner": null,
+      "owner_type": null,
+      "license_spdx": null,
+      "latest_release": null,
+      "next_actions": [
+        "canonical_url",
+        "model",
+        "evidence_tier"
+      ]
+    },
+    {
+      "id": "foojank",
+      "name": "Foojank",
+      "domains": [
+        "adversary-emulation",
+        "research"
+      ],
+      "readiness_percent": 50,
+      "checks": {
+        "canonical_url": false,
+        "model": false,
+        "evidence_tier": false,
+        "review_date": true,
+        "domains": true,
+        "verification_note": true
+      },
+      "upstream_health": "not-checked",
+      "repository": null,
+      "owner": null,
+      "owner_type": null,
+      "license_spdx": null,
+      "latest_release": null,
+      "next_actions": [
+        "canonical_url",
+        "model",
+        "evidence_tier"
+      ]
+    },
+    {
+      "id": "gharf",
+      "name": "GHARF",
+      "domains": [
+        "automation",
+        "offensive-security",
+        "research"
+      ],
+      "readiness_percent": 50,
+      "checks": {
+        "canonical_url": false,
+        "model": false,
+        "evidence_tier": false,
+        "review_date": true,
+        "domains": true,
+        "verification_note": true
+      },
+      "upstream_health": "not-checked",
+      "repository": null,
+      "owner": null,
+      "owner_type": null,
+      "license_spdx": null,
+      "latest_release": null,
+      "next_actions": [
+        "canonical_url",
+        "model",
+        "evidence_tier"
+      ]
+    },
+    {
+      "id": "gloamfire",
+      "name": "Gloamfire",
+      "domains": [
+        "adversary-emulation",
+        "research"
+      ],
+      "readiness_percent": 50,
+      "checks": {
+        "canonical_url": false,
+        "model": false,
+        "evidence_tier": false,
+        "review_date": true,
+        "domains": true,
+        "verification_note": true
+      },
+      "upstream_health": "not-checked",
+      "repository": null,
+      "owner": null,
+      "owner_type": null,
+      "license_spdx": null,
+      "latest_release": null,
+      "next_actions": [
+        "canonical_url",
+        "model",
+        "evidence_tier"
+      ]
+    },
+    {
+      "id": "gosecops",
+      "name": "GoSecOps",
+      "domains": [
+        "automation",
+        "offensive-security",
+        "research"
+      ],
+      "readiness_percent": 50,
+      "checks": {
+        "canonical_url": false,
+        "model": false,
+        "evidence_tier": false,
+        "review_date": true,
+        "domains": true,
+        "verification_note": true
+      },
+      "upstream_health": "not-checked",
+      "repository": null,
+      "owner": null,
+      "owner_type": null,
+      "license_spdx": null,
+      "latest_release": null,
+      "next_actions": [
+        "canonical_url",
+        "model",
+        "evidence_tier"
+      ]
+    },
+    {
+      "id": "hexstrike-redteam",
+      "name": "Hexstrike-redteam",
+      "domains": [
+        "automation",
+        "offensive-security",
+        "research"
+      ],
+      "readiness_percent": 50,
+      "checks": {
+        "canonical_url": false,
+        "model": false,
+        "evidence_tier": false,
+        "review_date": true,
+        "domains": true,
+        "verification_note": true
+      },
+      "upstream_health": "not-checked",
+      "repository": null,
+      "owner": null,
+      "owner_type": null,
+      "license_spdx": null,
+      "latest_release": null,
+      "next_actions": [
+        "canonical_url",
+        "model",
+        "evidence_tier"
+      ]
+    },
+    {
+      "id": "highflame-red",
+      "name": "Highflame RED",
+      "domains": [
+        "ai-genai",
+        "research"
+      ],
+      "readiness_percent": 50,
+      "checks": {
+        "canonical_url": false,
+        "model": false,
+        "evidence_tier": false,
+        "review_date": true,
+        "domains": true,
+        "verification_note": true
+      },
+      "upstream_health": "not-checked",
+      "repository": null,
+      "owner": null,
+      "owner_type": null,
+      "license_spdx": null,
+      "latest_release": null,
+      "next_actions": [
+        "canonical_url",
+        "model",
+        "evidence_tier"
+      ]
+    },
+    {
+      "id": "hos-vortex",
+      "name": "hos_vortex",
+      "domains": [
+        "automation",
+        "offensive-security",
+        "research"
+      ],
+      "readiness_percent": 50,
+      "checks": {
+        "canonical_url": false,
+        "model": false,
+        "evidence_tier": false,
+        "review_date": true,
+        "domains": true,
+        "verification_note": true
+      },
+      "upstream_health": "not-checked",
+      "repository": null,
+      "owner": null,
+      "owner_type": null,
+      "license_spdx": null,
+      "latest_release": null,
+      "next_actions": [
+        "canonical_url",
+        "model",
+        "evidence_tier"
+      ]
+    },
+    {
+      "id": "hunterx",
+      "name": "HunterX",
+      "domains": [
+        "ai-genai",
+        "research"
+      ],
+      "readiness_percent": 50,
+      "checks": {
+        "canonical_url": false,
+        "model": false,
+        "evidence_tier": false,
+        "review_date": true,
+        "domains": true,
+        "verification_note": true
+      },
+      "upstream_health": "not-checked",
+      "repository": null,
+      "owner": null,
+      "owner_type": null,
+      "license_spdx": null,
+      "latest_release": null,
+      "next_actions": [
+        "canonical_url",
+        "model",
+        "evidence_tier"
+      ]
+    },
+    {
+      "id": "intsploit",
+      "name": "intSpLoiT",
+      "domains": [
+        "automation",
+        "offensive-security",
+        "research"
+      ],
+      "readiness_percent": 50,
+      "checks": {
+        "canonical_url": false,
+        "model": false,
+        "evidence_tier": false,
+        "review_date": true,
+        "domains": true,
+        "verification_note": true
+      },
+      "upstream_health": "not-checked",
+      "repository": null,
+      "owner": null,
+      "owner_type": null,
+      "license_spdx": null,
+      "latest_release": null,
+      "next_actions": [
+        "canonical_url",
+        "model",
+        "evidence_tier"
+      ]
+    },
+    {
+      "id": "iothackbot",
+      "name": "IoTHackBot",
+      "domains": [
+        "iot",
+        "embedded",
+        "research"
+      ],
+      "readiness_percent": 50,
+      "checks": {
+        "canonical_url": false,
+        "model": false,
+        "evidence_tier": false,
+        "review_date": true,
+        "domains": true,
+        "verification_note": true
+      },
+      "upstream_health": "not-checked",
+      "repository": null,
+      "owner": null,
+      "owner_type": null,
+      "license_spdx": null,
+      "latest_release": null,
+      "next_actions": [
+        "canonical_url",
+        "model",
+        "evidence_tier"
+      ]
+    },
+    {
+      "id": "iotptf",
+      "name": "IoTPTF",
+      "domains": [
+        "iot",
+        "embedded",
+        "research"
+      ],
+      "readiness_percent": 50,
+      "checks": {
+        "canonical_url": false,
+        "model": false,
+        "evidence_tier": false,
+        "review_date": true,
+        "domains": true,
+        "verification_note": true
+      },
+      "upstream_health": "not-checked",
+      "repository": null,
+      "owner": null,
+      "owner_type": null,
+      "license_spdx": null,
+      "latest_release": null,
+      "next_actions": [
+        "canonical_url",
+        "model",
+        "evidence_tier"
+      ]
+    },
+    {
+      "id": "koadic",
+      "name": "Koadic",
+      "domains": [
+        "adversary-emulation",
+        "research"
+      ],
+      "readiness_percent": 50,
+      "checks": {
+        "canonical_url": false,
+        "model": false,
+        "evidence_tier": false,
+        "review_date": true,
+        "domains": true,
+        "verification_note": true
+      },
+      "upstream_health": "not-checked",
+      "repository": null,
+      "owner": null,
+      "owner_type": null,
+      "license_spdx": null,
+      "latest_release": null,
+      "next_actions": [
+        "canonical_url",
+        "model",
+        "evidence_tier"
+      ]
+    },
+    {
+      "id": "kraken",
+      "name": "Kraken",
+      "domains": [
+        "cloud",
+        "kubernetes",
+        "research"
+      ],
+      "readiness_percent": 50,
+      "checks": {
+        "canonical_url": false,
+        "model": false,
+        "evidence_tier": false,
+        "review_date": true,
+        "domains": true,
+        "verification_note": true
+      },
+      "upstream_health": "not-checked",
+      "repository": null,
+      "owner": null,
+      "owner_type": null,
+      "license_spdx": null,
+      "latest_release": null,
+      "next_actions": [
+        "canonical_url",
+        "model",
+        "evidence_tier"
+      ]
+    },
+    {
+      "id": "kubesploit",
+      "name": "Kubesploit",
+      "domains": [
+        "cloud",
+        "kubernetes",
+        "research"
+      ],
+      "readiness_percent": 50,
+      "checks": {
+        "canonical_url": false,
+        "model": false,
+        "evidence_tier": false,
+        "review_date": true,
+        "domains": true,
+        "verification_note": true
+      },
+      "upstream_health": "not-checked",
+      "repository": null,
+      "owner": null,
+      "owner_type": null,
+      "license_spdx": null,
+      "latest_release": null,
+      "next_actions": [
+        "canonical_url",
+        "model",
+        "evidence_tier"
+      ]
+    },
+    {
+      "id": "laccolith",
+      "name": "Laccolith",
+      "domains": [
+        "adversary-emulation",
+        "research"
+      ],
+      "readiness_percent": 50,
+      "checks": {
+        "canonical_url": false,
+        "model": false,
+        "evidence_tier": false,
+        "review_date": true,
+        "domains": true,
+        "verification_note": true
+      },
+      "upstream_health": "not-checked",
+      "repository": null,
+      "owner": null,
+      "owner_type": null,
+      "license_spdx": null,
+      "latest_release": null,
+      "next_actions": [
+        "canonical_url",
+        "model",
+        "evidence_tier"
+      ]
+    },
+    {
+      "id": "lazyown",
+      "name": "LazyOwn",
+      "domains": [
+        "adversary-emulation",
+        "research"
+      ],
+      "readiness_percent": 50,
+      "checks": {
+        "canonical_url": false,
+        "model": false,
+        "evidence_tier": false,
+        "review_date": true,
+        "domains": true,
+        "verification_note": true
+      },
+      "upstream_health": "not-checked",
+      "repository": null,
+      "owner": null,
+      "owner_type": null,
+      "license_spdx": null,
+      "latest_release": null,
+      "next_actions": [
+        "canonical_url",
+        "model",
+        "evidence_tier"
+      ]
+    },
+    {
+      "id": "nishang",
+      "name": "Nishang",
+      "domains": [
+        "legacy-review",
+        "research"
+      ],
+      "readiness_percent": 50,
+      "checks": {
+        "canonical_url": false,
+        "model": false,
+        "evidence_tier": false,
+        "review_date": true,
+        "domains": true,
+        "verification_note": true
+      },
+      "upstream_health": "not-checked",
+      "repository": null,
+      "owner": null,
+      "owner_type": null,
+      "license_spdx": null,
+      "latest_release": null,
+      "next_actions": [
+        "canonical_url",
+        "model",
+        "evidence_tier"
+      ]
+    },
+    {
+      "id": "offensivecloud",
+      "name": "OffensiveCloud",
+      "domains": [
+        "cloud",
+        "kubernetes",
+        "research"
+      ],
+      "readiness_percent": 50,
+      "checks": {
+        "canonical_url": false,
+        "model": false,
+        "evidence_tier": false,
+        "review_date": true,
+        "domains": true,
+        "verification_note": true
+      },
+      "upstream_health": "not-checked",
+      "repository": null,
+      "owner": null,
+      "owner_type": null,
+      "license_spdx": null,
+      "latest_release": null,
+      "next_actions": [
+        "canonical_url",
+        "model",
+        "evidence_tier"
+      ]
+    },
+    {
+      "id": "offsec-toolkit",
+      "name": "offsec-toolkit",
+      "domains": [
+        "automation",
+        "offensive-security",
+        "research"
+      ],
+      "readiness_percent": 50,
+      "checks": {
+        "canonical_url": false,
+        "model": false,
+        "evidence_tier": false,
+        "review_date": true,
+        "domains": true,
+        "verification_note": true
+      },
+      "upstream_health": "not-checked",
+      "repository": null,
+      "owner": null,
+      "owner_type": null,
+      "license_spdx": null,
+      "latest_release": null,
+      "next_actions": [
+        "canonical_url",
+        "model",
+        "evidence_tier"
+      ]
+    },
+    {
+      "id": "onist-framework",
+      "name": "ONIST Framework",
+      "domains": [
+        "automation",
+        "offensive-security",
+        "research"
+      ],
+      "readiness_percent": 50,
+      "checks": {
+        "canonical_url": false,
+        "model": false,
+        "evidence_tier": false,
+        "review_date": true,
+        "domains": true,
+        "verification_note": true
+      },
+      "upstream_health": "not-checked",
+      "repository": null,
+      "owner": null,
+      "owner_type": null,
+      "license_spdx": null,
+      "latest_release": null,
+      "next_actions": [
+        "canonical_url",
+        "model",
+        "evidence_tier"
+      ]
+    },
+    {
+      "id": "openart",
+      "name": "OpenART",
+      "domains": [
+        "ai-genai",
+        "research"
+      ],
+      "readiness_percent": 50,
+      "checks": {
+        "canonical_url": false,
+        "model": false,
+        "evidence_tier": false,
+        "review_date": true,
+        "domains": true,
+        "verification_note": true
+      },
+      "upstream_health": "not-checked",
+      "repository": null,
+      "owner": null,
+      "owner_type": null,
+      "license_spdx": null,
+      "latest_release": null,
+      "next_actions": [
+        "canonical_url",
+        "model",
+        "evidence_tier"
+      ]
+    },
+    {
+      "id": "opfor",
+      "name": "OPFOR",
+      "domains": [
+        "adversary-emulation",
+        "research"
+      ],
+      "readiness_percent": 50,
+      "checks": {
+        "canonical_url": false,
+        "model": false,
+        "evidence_tier": false,
+        "review_date": true,
+        "domains": true,
+        "verification_note": true
+      },
+      "upstream_health": "not-checked",
+      "repository": null,
+      "owner": null,
+      "owner_type": null,
+      "license_spdx": null,
+      "latest_release": null,
+      "next_actions": [
+        "canonical_url",
+        "model",
+        "evidence_tier"
+      ]
+    },
+    {
+      "id": "peekaboo",
+      "name": "Peekaboo",
+      "domains": [
+        "adversary-emulation",
+        "research"
+      ],
+      "readiness_percent": 50,
+      "checks": {
+        "canonical_url": false,
+        "model": false,
+        "evidence_tier": false,
+        "review_date": true,
+        "domains": true,
+        "verification_note": true
+      },
+      "upstream_health": "not-checked",
+      "repository": null,
+      "owner": null,
+      "owner_type": null,
+      "license_spdx": null,
+      "latest_release": null,
+      "next_actions": [
+        "canonical_url",
+        "model",
+        "evidence_tier"
+      ]
+    },
+    {
+      "id": "pentester-playbook",
+      "name": "Pentester Playbook",
+      "domains": [
+        "automation",
+        "offensive-security",
+        "research"
+      ],
+      "readiness_percent": 50,
+      "checks": {
+        "canonical_url": false,
+        "model": false,
+        "evidence_tier": false,
+        "review_date": true,
+        "domains": true,
+        "verification_note": true
+      },
+      "upstream_health": "not-checked",
+      "repository": null,
+      "owner": null,
+      "owner_type": null,
+      "license_spdx": null,
+      "latest_release": null,
+      "next_actions": [
+        "canonical_url",
+        "model",
+        "evidence_tier"
+      ]
+    },
+    {
+      "id": "pexpagent",
+      "name": "PExpAgent",
+      "domains": [
+        "adversary-emulation",
+        "research"
+      ],
+      "readiness_percent": 50,
+      "checks": {
+        "canonical_url": false,
+        "model": false,
+        "evidence_tier": false,
+        "review_date": true,
+        "domains": true,
+        "verification_note": true
+      },
+      "upstream_health": "not-checked",
+      "repository": null,
+      "owner": null,
+      "owner_type": null,
+      "license_spdx": null,
+      "latest_release": null,
+      "next_actions": [
+        "canonical_url",
+        "model",
+        "evidence_tier"
+      ]
+    },
+    {
+      "id": "phantomstrike",
+      "name": "PhantomStrike",
+      "domains": [
+        "adversary-emulation",
+        "research"
+      ],
+      "readiness_percent": 50,
+      "checks": {
+        "canonical_url": false,
+        "model": false,
+        "evidence_tier": false,
+        "review_date": true,
+        "domains": true,
+        "verification_note": true
+      },
+      "upstream_health": "not-checked",
+      "repository": null,
+      "owner": null,
+      "owner_type": null,
+      "license_spdx": null,
+      "latest_release": null,
+      "next_actions": [
+        "canonical_url",
+        "model",
+        "evidence_tier"
+      ]
+    },
+    {
+      "id": "powersploit",
+      "name": "PowerSploit",
+      "domains": [
+        "legacy-review",
+        "research"
+      ],
+      "readiness_percent": 50,
+      "checks": {
+        "canonical_url": false,
+        "model": false,
+        "evidence_tier": false,
+        "review_date": true,
+        "domains": true,
+        "verification_note": true
+      },
+      "upstream_health": "not-checked",
+      "repository": null,
+      "owner": null,
+      "owner_type": null,
+      "license_spdx": null,
+      "latest_release": null,
+      "next_actions": [
+        "canonical_url",
+        "model",
+        "evidence_tier"
+      ]
+    },
+    {
+      "id": "powerzure",
+      "name": "PowerZure",
+      "domains": [
+        "cloud",
+        "kubernetes",
+        "research"
+      ],
+      "readiness_percent": 50,
+      "checks": {
+        "canonical_url": false,
+        "model": false,
+        "evidence_tier": false,
+        "review_date": true,
+        "domains": true,
+        "verification_note": true
+      },
+      "upstream_health": "not-checked",
+      "repository": null,
+      "owner": null,
+      "owner_type": null,
+      "license_spdx": null,
+      "latest_release": null,
+      "next_actions": [
+        "canonical_url",
+        "model",
+        "evidence_tier"
+      ]
+    },
+    {
+      "id": "pupy",
+      "name": "Pupy",
+      "domains": [
+        "adversary-emulation",
+        "research"
+      ],
+      "readiness_percent": 50,
+      "checks": {
+        "canonical_url": false,
+        "model": false,
+        "evidence_tier": false,
+        "review_date": true,
+        "domains": true,
+        "verification_note": true
+      },
+      "upstream_health": "not-checked",
+      "repository": null,
+      "owner": null,
+      "owner_type": null,
+      "license_spdx": null,
+      "latest_release": null,
+      "next_actions": [
+        "canonical_url",
+        "model",
+        "evidence_tier"
+      ]
+    },
+    {
+      "id": "redcloudos",
+      "name": "RedCloudOS",
+      "domains": [
+        "cloud",
+        "kubernetes",
+        "research"
+      ],
+      "readiness_percent": 50,
+      "checks": {
+        "canonical_url": false,
+        "model": false,
+        "evidence_tier": false,
+        "review_date": true,
+        "domains": true,
+        "verification_note": true
+      },
+      "upstream_health": "not-checked",
+      "repository": null,
+      "owner": null,
+      "owner_type": null,
+      "license_spdx": null,
+      "latest_release": null,
+      "next_actions": [
+        "canonical_url",
+        "model",
+        "evidence_tier"
+      ]
+    },
+    {
+      "id": "redguard-suite",
+      "name": "RedGuard Suite",
+      "domains": [
+        "automation",
+        "offensive-security",
+        "research"
+      ],
+      "readiness_percent": 50,
+      "checks": {
+        "canonical_url": false,
+        "model": false,
+        "evidence_tier": false,
+        "review_date": true,
+        "domains": true,
+        "verification_note": true
+      },
+      "upstream_health": "not-checked",
+      "repository": null,
+      "owner": null,
+      "owner_type": null,
+      "license_spdx": null,
+      "latest_release": null,
+      "next_actions": [
+        "canonical_url",
+        "model",
+        "evidence_tier"
+      ]
+    },
+    {
+      "id": "redstack",
+      "name": "redStack",
+      "domains": [
+        "automation",
+        "offensive-security",
+        "research"
+      ],
+      "readiness_percent": 50,
+      "checks": {
+        "canonical_url": false,
+        "model": false,
+        "evidence_tier": false,
+        "review_date": true,
+        "domains": true,
+        "verification_note": true
+      },
+      "upstream_health": "not-checked",
+      "repository": null,
+      "owner": null,
+      "owner_type": null,
+      "license_spdx": null,
+      "latest_release": null,
+      "next_actions": [
+        "canonical_url",
+        "model",
+        "evidence_tier"
+      ]
+    },
+    {
+      "id": "rtosploit",
+      "name": "RTOSploit",
+      "domains": [
+        "iot",
+        "embedded",
+        "research"
+      ],
+      "readiness_percent": 50,
+      "checks": {
+        "canonical_url": false,
+        "model": false,
+        "evidence_tier": false,
+        "review_date": true,
+        "domains": true,
+        "verification_note": true
+      },
+      "upstream_health": "not-checked",
+      "repository": null,
+      "owner": null,
+      "owner_type": null,
+      "license_spdx": null,
+      "latest_release": null,
+      "next_actions": [
+        "canonical_url",
+        "model",
+        "evidence_tier"
+      ]
+    },
+    {
+      "id": "sandevistan",
+      "name": "SANDEVISTAN",
+      "domains": [
+        "automation",
+        "offensive-security",
+        "research"
+      ],
+      "readiness_percent": 50,
+      "checks": {
+        "canonical_url": false,
+        "model": false,
+        "evidence_tier": false,
+        "review_date": true,
+        "domains": true,
+        "verification_note": true
+      },
+      "upstream_health": "not-checked",
+      "repository": null,
+      "owner": null,
+      "owner_type": null,
+      "license_spdx": null,
+      "latest_release": null,
+      "next_actions": [
+        "canonical_url",
+        "model",
+        "evidence_tier"
+      ]
+    },
+    {
+      "id": "secops-chaos",
+      "name": "secops-chaos",
+      "domains": [
+        "cloud",
+        "kubernetes",
+        "research"
+      ],
+      "readiness_percent": 50,
+      "checks": {
+        "canonical_url": false,
+        "model": false,
+        "evidence_tier": false,
+        "review_date": true,
+        "domains": true,
+        "verification_note": true
+      },
+      "upstream_health": "not-checked",
+      "repository": null,
+      "owner": null,
+      "owner_type": null,
+      "license_spdx": null,
+      "latest_release": null,
+      "next_actions": [
+        "canonical_url",
+        "model",
+        "evidence_tier"
+      ]
+    },
+    {
+      "id": "seersx",
+      "name": "SeersX",
+      "domains": [
+        "adversary-emulation",
+        "research"
+      ],
+      "readiness_percent": 50,
+      "checks": {
+        "canonical_url": false,
+        "model": false,
+        "evidence_tier": false,
+        "review_date": true,
+        "domains": true,
+        "verification_note": true
+      },
+      "upstream_health": "not-checked",
+      "repository": null,
+      "owner": null,
+      "owner_type": null,
+      "license_spdx": null,
+      "latest_release": null,
+      "next_actions": [
+        "canonical_url",
+        "model",
+        "evidence_tier"
+      ]
+    },
+    {
+      "id": "sharpsploit",
+      "name": "SharpSploit",
+      "domains": [
+        "legacy-review",
+        "research"
+      ],
+      "readiness_percent": 50,
+      "checks": {
+        "canonical_url": false,
+        "model": false,
+        "evidence_tier": false,
+        "review_date": true,
+        "domains": true,
+        "verification_note": true
+      },
+      "upstream_health": "not-checked",
+      "repository": null,
+      "owner": null,
+      "owner_type": null,
+      "license_spdx": null,
+      "latest_release": null,
+      "next_actions": [
+        "canonical_url",
+        "model",
+        "evidence_tier"
+      ]
+    },
+    {
+      "id": "silenttrinity",
+      "name": "SilentTrinity",
+      "domains": [
+        "adversary-emulation",
+        "research"
+      ],
+      "readiness_percent": 50,
+      "checks": {
+        "canonical_url": false,
+        "model": false,
+        "evidence_tier": false,
+        "review_date": true,
+        "domains": true,
+        "verification_note": true
+      },
+      "upstream_health": "not-checked",
+      "repository": null,
+      "owner": null,
+      "owner_type": null,
+      "license_spdx": null,
+      "latest_release": null,
+      "next_actions": [
+        "canonical_url",
+        "model",
+        "evidence_tier"
+      ]
+    },
+    {
+      "id": "skyhawk-security-autonomous-purple-team",
+      "name": "Skyhawk Security Autonomous Purple Team",
+      "domains": [
+        "purple-team",
+        "security-validation",
+        "research"
+      ],
+      "readiness_percent": 50,
+      "checks": {
+        "canonical_url": false,
+        "model": false,
+        "evidence_tier": false,
+        "review_date": true,
+        "domains": true,
+        "verification_note": true
+      },
+      "upstream_health": "not-checked",
+      "repository": null,
+      "owner": null,
+      "owner_type": null,
+      "license_spdx": null,
+      "latest_release": null,
+      "next_actions": [
+        "canonical_url",
+        "model",
+        "evidence_tier"
+      ]
+    },
+    {
+      "id": "strix",
+      "name": "Strix",
+      "domains": [
+        "ai-genai",
+        "research"
+      ],
+      "readiness_percent": 50,
+      "checks": {
+        "canonical_url": false,
+        "model": false,
+        "evidence_tier": false,
+        "review_date": true,
+        "domains": true,
+        "verification_note": true
+      },
+      "upstream_health": "not-checked",
+      "repository": null,
+      "owner": null,
+      "owner_type": null,
+      "license_spdx": null,
+      "latest_release": null,
+      "next_actions": [
+        "canonical_url",
+        "model",
+        "evidence_tier"
+      ]
+    },
+    {
+      "id": "suijin",
+      "name": "Suijin",
+      "domains": [
+        "automation",
+        "offensive-security",
+        "research"
+      ],
+      "readiness_percent": 50,
+      "checks": {
+        "canonical_url": false,
+        "model": false,
+        "evidence_tier": false,
+        "review_date": true,
+        "domains": true,
+        "verification_note": true
+      },
+      "upstream_health": "not-checked",
+      "repository": null,
+      "owner": null,
+      "owner_type": null,
+      "license_spdx": null,
+      "latest_release": null,
+      "next_actions": [
+        "canonical_url",
+        "model",
+        "evidence_tier"
+      ]
+    },
+    {
+      "id": "t3mp3st",
+      "name": "T3MP3ST",
+      "domains": [
+        "automation",
+        "offensive-security",
+        "research"
+      ],
+      "readiness_percent": 50,
+      "checks": {
+        "canonical_url": false,
+        "model": false,
+        "evidence_tier": false,
+        "review_date": true,
+        "domains": true,
+        "verification_note": true
+      },
+      "upstream_health": "not-checked",
+      "repository": null,
+      "owner": null,
+      "owner_type": null,
+      "license_spdx": null,
+      "latest_release": null,
+      "next_actions": [
+        "canonical_url",
+        "model",
+        "evidence_tier"
+      ]
+    },
+    {
+      "id": "temperance",
+      "name": "Temperance",
+      "domains": [
+        "adversary-emulation",
+        "research"
+      ],
+      "readiness_percent": 50,
+      "checks": {
+        "canonical_url": false,
+        "model": false,
+        "evidence_tier": false,
+        "review_date": true,
+        "domains": true,
+        "verification_note": true
+      },
+      "upstream_health": "not-checked",
+      "repository": null,
+      "owner": null,
+      "owner_type": null,
+      "license_spdx": null,
+      "latest_release": null,
+      "next_actions": [
+        "canonical_url",
+        "model",
+        "evidence_tier"
+      ]
+    },
+    {
+      "id": "the-360-cyber-shield",
+      "name": "The 360 Cyber Shield",
+      "domains": [
+        "purple-team",
+        "security-validation",
+        "research"
+      ],
+      "readiness_percent": 50,
+      "checks": {
+        "canonical_url": false,
+        "model": false,
+        "evidence_tier": false,
+        "review_date": true,
+        "domains": true,
+        "verification_note": true
+      },
+      "upstream_health": "not-checked",
+      "repository": null,
+      "owner": null,
+      "owner_type": null,
+      "license_spdx": null,
+      "latest_release": null,
+      "next_actions": [
+        "canonical_url",
+        "model",
+        "evidence_tier"
+      ]
+    },
+    {
+      "id": "trevorc2",
+      "name": "TrevorC2",
+      "domains": [
+        "adversary-emulation",
+        "research"
+      ],
+      "readiness_percent": 50,
+      "checks": {
+        "canonical_url": false,
+        "model": false,
+        "evidence_tier": false,
+        "review_date": true,
+        "domains": true,
+        "verification_note": true
+      },
+      "upstream_health": "not-checked",
+      "repository": null,
+      "owner": null,
+      "owner_type": null,
+      "license_spdx": null,
+      "latest_release": null,
+      "next_actions": [
+        "canonical_url",
+        "model",
+        "evidence_tier"
+      ]
+    },
+    {
+      "id": "vanguard",
+      "name": "VANGUARD",
+      "domains": [
+        "ai-genai",
+        "research"
+      ],
+      "readiness_percent": 50,
+      "checks": {
+        "canonical_url": false,
+        "model": false,
+        "evidence_tier": false,
+        "review_date": true,
+        "domains": true,
+        "verification_note": true
+      },
+      "upstream_health": "not-checked",
+      "repository": null,
+      "owner": null,
+      "owner_type": null,
+      "license_spdx": null,
+      "latest_release": null,
+      "next_actions": [
+        "canonical_url",
+        "model",
+        "evidence_tier"
+      ]
+    },
+    {
+      "id": "vigilant",
+      "name": "VIGILANT",
+      "domains": [
+        "ai-genai",
+        "research"
+      ],
+      "readiness_percent": 50,
+      "checks": {
+        "canonical_url": false,
+        "model": false,
+        "evidence_tier": false,
+        "review_date": true,
+        "domains": true,
+        "verification_note": true
+      },
+      "upstream_health": "not-checked",
+      "repository": null,
+      "owner": null,
+      "owner_type": null,
+      "license_spdx": null,
+      "latest_release": null,
+      "next_actions": [
+        "canonical_url",
+        "model",
+        "evidence_tier"
+      ]
+    },
+    {
+      "id": "woodpecker",
+      "name": "Woodpecker",
+      "domains": [
+        "adversary-emulation",
+        "research"
+      ],
+      "readiness_percent": 50,
+      "checks": {
+        "canonical_url": false,
+        "model": false,
+        "evidence_tier": false,
+        "review_date": true,
+        "domains": true,
+        "verification_note": true
+      },
+      "upstream_health": "not-checked",
+      "repository": null,
+      "owner": null,
+      "owner_type": null,
+      "license_spdx": null,
+      "latest_release": null,
+      "next_actions": [
+        "canonical_url",
+        "model",
+        "evidence_tier"
+      ]
+    },
+    {
+      "id": "wyrm",
+      "name": "Wyrm",
+      "domains": [
+        "adversary-emulation",
+        "research"
+      ],
+      "readiness_percent": 50,
+      "checks": {
+        "canonical_url": false,
+        "model": false,
+        "evidence_tier": false,
+        "review_date": true,
+        "domains": true,
+        "verification_note": true
+      },
+      "upstream_health": "not-checked",
+      "repository": null,
+      "owner": null,
+      "owner_type": null,
+      "license_spdx": null,
+      "latest_release": null,
+      "next_actions": [
+        "canonical_url",
+        "model",
+        "evidence_tier"
+      ]
+    }
+  ]
+}

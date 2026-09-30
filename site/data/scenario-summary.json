@@ -1,0 +1,38 @@
+{
+  "scenarios": [
+    {
+      "scenario_id": "PT-EXAMPLE-001",
+      "name": "Identity telemetry validation",
+      "domain": "identity",
+      "latest_date": "2026-09-29",
+      "latest_phase": "example",
+      "composite": 74.4,
+      "scores": {
+        "telemetry": 85,
+        "detection": 68,
+        "analyst_response": 72,
+        "containment": 70,
+        "evidence": 80
+      },
+      "evidence_level": "E2",
+      "result": "partial"
+    },
+    {
+      "scenario_id": "PT-IDENTITY-001",
+      "name": "Identity telemetry validation",
+      "domain": "identity",
+      "latest_date": "2026-09-29",
+      "latest_phase": "retest",
+      "composite": 83.7,
+      "scores": {
+        "telemetry": 92,
+        "detection": 84,
+        "analyst_response": 78,
+        "containment": 76,
+        "evidence": 90
+      },
+      "evidence_level": "E3",
+      "result": "pass"
+    }
+  ]
+}

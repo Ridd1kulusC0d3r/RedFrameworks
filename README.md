@@ -2,7 +2,7 @@
 
 # RedFrameworks
 
-### Threat-Informed Offensive Security Knowledge Graph
+### OffSec · CTI · Adversary Intelligence Knowledge Graph
 
 **Methodologies · Threat Intelligence · Adversary Intelligence · OffSec · Cloud · AI Security · Purple Team · Detection Validation · Evidence Engineering**
 
@@ -12,8 +12,8 @@
 [![ATT&CK](https://img.shields.io/badge/knowledge-MITRE%20ATT%26CK-6f42c1)](https://attack.mitre.org/)
 [![STIX 2.1](https://img.shields.io/badge/export-STIX%202.1-blue)](docs/api.md)
 [![API v3](https://img.shields.io/badge/API-v3-7fbcff)](docs/api.md)
-[![OffSec Portal](https://img.shields.io/badge/platform-v5.1-f04f67)](docs/next-evolutions.md)
-[![Adversary Intel](https://img.shields.io/badge/adversaries-22-efbd67)](docs/adversary-intelligence.md)
+[![OffSec Portal](https://img.shields.io/badge/platform-v5.2-f04f67)](docs/next-evolutions.md)
+[![Adversary Intel](https://img.shields.io/badge/adversaries-42-efbd67)](docs/adversary-intelligence.md)
 
 [**Live Knowledge Base**](https://ridd1kulusc0d3r.github.io/RedFrameworks/) ·
 [**Roadmaps**](docs/roadmaps/README.md) ·
@@ -24,6 +24,16 @@
 </div>
 
 <p align="center"><img src="site/assets/redframeworks-intelligence-hero.svg" alt="RedFrameworks intelligence architecture" width="100%"></p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/frameworks-62-79b9ff" alt="62 frameworks">
+  <img src="https://img.shields.io/badge/catalog-125-f24861" alt="125 catalog entries">
+  <img src="https://img.shields.io/badge/adversaries-42-efbd67" alt="42 adversaries">
+  <img src="https://img.shields.io/badge/graph_edges-89-63d89a" alt="89 graph edges">
+  <img src="https://img.shields.io/badge/books_+_certs-23-a997ff" alt="23 books and certifications">
+</p>
+
+<p align="center"><img src="site/assets/ecosystem-coverage.svg" alt="RedFrameworks ecosystem coverage" width="100%"></p>
 
 ---
 
@@ -59,7 +69,12 @@ The public site is generated directly from the repository data and includes:
 - scorecard and retest-regression dashboards;
 - versioned Static API v3;
 - reproducible snapshots and semantic diffs;
-- books, certifications and objective-driven learning paths;\n- command palette, bookmarks and graph path queries;\n- Verification Engine and Research Workspace;\n- Neo4j, MISP and ATT&CK Navigator exports;\n- technique intelligence pages;\n- STIX 2.1 export.
+- books, certifications and objective-driven learning paths;
+- command palette, bookmarks and graph path queries;
+- Verification Engine and Research Workspace;
+- Neo4j, MISP and ATT&CK Navigator exports;
+- technique intelligence pages;
+- STIX 2.1 export.
 
 ---
 
@@ -69,7 +84,7 @@ The public site is generated directly from the repository data and includes:
 
 APT and cybercrime profiles are a **secondary analytical layer**. They connect public threat context to defensive priorities without turning the repository into an offensive playbook.
 
-Current coverage includes 22 ATT&CK-tracked groups such as APT28, APT29, APT41, Sandworm, Turla, Lazarus Group, Kimsuky, MuddyWater, OilRig, Volt Typhoon, Salt Typhoon, Mustang Panda, Scattered Spider and FIN7.
+Current coverage includes **42 ATT&CK-tracked groups**, spanning state-sponsored, suspected state-linked, cyber-espionage and cybercrime clusters. Coverage now includes APT1, APT3, APT5, APT12, APT16, APT17, APT18, APT19, APT28, APT29, APT30, APT33, APT37, APT38, APT39, APT41, APT42, Sandworm, Turla, Lazarus Group, Kimsuky, MuddyWater, Volt Typhoon, Salt Typhoon, Mustang Panda, Scattered Spider, FIN7 and others.
 
 Each profile records:
 
@@ -88,7 +103,9 @@ See [Adversary Intelligence](docs/adversary-intelligence.md) · [Adversary Matri
 
 <p align="center"><img src="site/assets/framework-cti-stack.svg" alt="RedFrameworks CTI framework ecosystem" width="100%"></p>
 
-v5.1 adds STIX 2.1, TAXII 2.1, CACAO 2.0, FIRST TLP 2.0, FIRST CSIRT Services Framework 2.1, VERIS 1.3.1, NIST SP 800-61 Rev. 3, NIST SP 800-160 Vol. 2 Rev. 1, CISA CPGs, Cyber Kill Chain, MISP Galaxy, SSVC and CSAF 2.0.
+The CTI/IR layer includes STIX 2.1, TAXII 2.1, CACAO 2.0, FIRST TLP 2.0, FIRST CSIRT Services Framework 2.1, VERIS 1.3.1, NIST SP 800-61 Rev. 3, NIST SP 800-160 Vol. 2 Rev. 1, CISA CPGs, Cyber Kill Chain, MISP Galaxy, SSVC and CSAF 2.0.
+
+v5.2 expands the broader catalog with **OWASP Top 10:2025, NIST SP 800-63-4, NIST SP 800-161 Rev. 1, NIST SP 800-190, CISA Zero Trust Maturity Model 2.0, OpenSSF OSPS Baseline, OWASP SCVS, CSA Security Guidance v5, ETSI EN 303 645 v3.1.3, ISO/IEC 27001:2022 and ISO/IEC 27005:2022**.
 
 ---
 
@@ -147,6 +164,10 @@ flowchart TD
     style ATLAS fill:#1c2433,stroke:#8fc5ff,color:#fff
     style D3FEND fill:#14281e,stroke:#5dd59a,color:#fff
 ~~~
+
+<p align="center"><img src="site/assets/graph-intelligence.svg" alt="RedFrameworks Graph Intelligence" width="100%"></p>
+
+**Graph Explorer:** https://ridd1kulusc0d3r.github.io/RedFrameworks/graph/
 
 Canonical graph data: [relationships.yaml](relationships.yaml)
 
@@ -214,7 +235,9 @@ flowchart LR
 |---|---|
 | [frameworks.yaml](frameworks.yaml) | methodologies, standards and knowledge models |
 | [catalog.yaml](catalog.yaml) | verified, community, commercial, legacy and NOT VERIFIED research entries |
-| [relationships.yaml](relationships.yaml) | curated graph edges |\n| [resources.yaml](resources.yaml) | books and certifications |\n| [learning-paths.yaml](learning-paths.yaml) | objective-driven paths across frameworks, tools and resources |
+| [relationships.yaml](relationships.yaml) | curated graph edges |
+| [resources.yaml](resources.yaml) | books and certifications |
+| [learning-paths.yaml](learning-paths.yaml) | objective-driven paths across frameworks, tools and resources |
 | [data/adversaries.yaml](data/adversaries.yaml) | source-attributed adversary intelligence profiles |
 | [data/intelligence-sources.yaml](data/intelligence-sources.yaml) | curated CTI research sources |
 | [data/lifecycle.yaml](data/lifecycle.yaml) | renames, legacy transitions and lifecycle events |
@@ -370,7 +393,7 @@ The repository focuses on **methodology, modeling, evidence and defensive valida
 
 ## Project status
 
-### Platform v5.1 · OffSec + Adversary Intelligence Portal
+### Platform v5.2 · Graph Intelligence + Expanded Research Portal
 
 | Capability | Status |
 |---|---|
@@ -384,10 +407,20 @@ The repository focuses on **methodology, modeling, evidence and defensive valida
 | Retest regression detection | ✅ |
 | Reproducible snapshots | ✅ |
 | Semantic release diffs | ✅ |
-| Static API v3 + v1/v2 compatibility | ✅ |\n| Books & certifications | ✅ |\n| Learning paths | ✅ |\n| Verification Engine | ✅ |\n| Graph path queries | ✅ |\n| Technique Intelligence | ✅ |
-| Adversary Intelligence profiles | ✅ |
+| Static API v3 + v1/v2 compatibility | ✅ |
+| Books & certifications | ✅ |
+| Learning paths | ✅ |
+| Verification Engine | ✅ |
+| Graph path queries | ✅ |
+| Technique Intelligence | ✅ |
+| Adversary Intelligence profiles (42) | ✅ |
 | CTI source library | ✅ |
-| 13 additional CTI / IR / resilience frameworks | ✅ |\n| Neo4j / MISP / Navigator exports | ✅ |\n| Command palette & bookmarks | ✅ |
+| CTI / IR / resilience frameworks | ✅ |
+| Identity / supply-chain / cloud / IoT framework expansion | ✅ |
+| Full-screen Graph Intelligence explorer | ✅ |
+| GitHub Pages Actions-only deployment guard | ✅ |
+| Neo4j / MISP / Navigator exports | ✅ |
+| Command palette & bookmarks | ✅ |
 | OpenCTI interoperability | ✅ |
 | Redesigned Pages UI | ✅ |
 

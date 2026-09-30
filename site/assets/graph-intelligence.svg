@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="560" viewBox="0 0 1400 560">
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#07090d"/><stop offset="1" stop-color="#111926"/></linearGradient>
+  <filter id="g"><feGaussianBlur stdDeviation="6" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+</defs>
+<rect width="1400" height="560" rx="28" fill="url(#bg)"/>
+<g stroke="#202a38" opacity=".55"><path d="M0 70H1400M0 140H1400M0 210H1400M0 280H1400M0 350H1400M0 420H1400M0 490H1400"/><path d="M140 0V560M280 0V560M420 0V560M560 0V560M700 0V560M840 0V560M980 0V560M1120 0V560M1260 0V560"/></g>
+<text x="60" y="68" fill="#f24861" font-family="monospace" font-size="17" font-weight="700">GRAPH INTELLIGENCE · v5.2</text>
+<text x="60" y="112" fill="#f4f7fb" font-family="Arial" font-size="34" font-weight="800">Security knowledge as a navigable graph</text>
+<g stroke-width="2" fill="#101620">
+  <line x1="670" y1="290" x2="360" y2="190" stroke="#46546a"/>
+  <line x1="670" y1="290" x2="390" y2="390" stroke="#46546a"/>
+  <line x1="670" y1="290" x2="940" y2="180" stroke="#46546a"/>
+  <line x1="670" y1="290" x2="990" y2="390" stroke="#46546a"/>
+  <line x1="360" y1="190" x2="210" y2="300" stroke="#334052"/>
+  <line x1="390" y1="390" x2="230" y2="465" stroke="#334052"/>
+  <line x1="940" y1="180" x2="1160" y2="250" stroke="#334052"/>
+  <line x1="990" y1="390" x2="1180" y2="455" stroke="#334052"/>
+  <circle cx="670" cy="290" r="72" stroke="#f24861" stroke-width="3" filter="url(#g)"/>
+  <circle cx="360" cy="190" r="52" stroke="#79b9ff"/><circle cx="390" cy="390" r="52" stroke="#79b9ff"/>
+  <circle cx="940" cy="180" r="46" stroke="#63d89a"/><circle cx="990" cy="390" r="46" stroke="#63d89a"/>
+  <circle cx="210" cy="300" r="38" stroke="#efbd67"/><circle cx="230" cy="465" r="38" stroke="#efbd67"/>
+  <circle cx="1160" cy="250" r="38" stroke="#a997ff"/><circle cx="1180" cy="455" r="38" stroke="#a997ff"/>
+</g>
+<g font-family="Arial" fill="#f4f7fb" text-anchor="middle">
+  <text x="670" y="286" font-size="18" font-weight="800">MITRE</text><text x="670" y="309" font-size="18" font-weight="800">ATT&amp;CK</text>
+  <text x="360" y="196" font-size="14" font-weight="700">Frameworks</text><text x="390" y="396" font-size="14" font-weight="700">Standards</text>
+  <text x="940" y="186" font-size="14" font-weight="700">Tools</text><text x="990" y="396" font-size="14" font-weight="700">Detection</text>
+  <text x="210" y="305" font-size="12" font-weight="700">Adversaries</text><text x="230" y="470" font-size="12" font-weight="700">CTI</text>
+  <text x="1160" y="255" font-size="12" font-weight="700">Evidence</text><text x="1180" y="460" font-size="12" font-weight="700">Retest</text>
+</g>
+<g font-family="monospace" font-size="13">
+  <rect x="60" y="162" width="190" height="36" rx="8" fill="#121a26" stroke="#2e3a4c"/><text x="79" y="185" fill="#79b9ff">1–2 HOP EXPLORATION</text>
+  <rect x="60" y="208" width="190" height="36" rx="8" fill="#121a26" stroke="#2e3a4c"/><text x="79" y="231" fill="#63d89a">SHORTEST PATH</text>
+  <rect x="60" y="254" width="190" height="36" rx="8" fill="#121a26" stroke="#2e3a4c"/><text x="79" y="277" fill="#efbd67">PROVENANCE</text>
+  <rect x="60" y="300" width="190" height="36" rx="8" fill="#121a26" stroke="#2e3a4c"/><text x="79" y="323" fill="#a997ff">PAN · ZOOM · FILTER</text>
+</g>
+<text x="60" y="520" fill="#687486" font-family="monospace" font-size="13">Framework → Tool → Behavior → Detection → Evidence · with confidence and provenance on every curated edge</text>
+</svg>

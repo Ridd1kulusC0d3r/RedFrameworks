@@ -1,0 +1,229 @@
+{
+  "schema_version": "1.0",
+  "releases": [
+    {
+      "version": "5.2.0",
+      "date": "2026-09-30",
+      "changes": [
+        {
+          "type": "changed",
+          "area": "graph-intelligence",
+          "items": [
+            "1-2 hop workbench",
+            "full-screen explorer",
+            "pan/zoom",
+            "force and radial layouts",
+            "adversary graph layer"
+          ]
+        },
+        {
+          "type": "added",
+          "area": "framework-expansion",
+          "items": [
+            "11 verified frameworks",
+            "identity",
+            "supply chain",
+            "cloud",
+            "IoT",
+            "governance"
+          ]
+        },
+        {
+          "type": "added",
+          "area": "adversary-intelligence",
+          "items": [
+            "20 additional ATT&CK group profiles",
+            "42 total profiles"
+          ]
+        },
+        {
+          "type": "added",
+          "area": "knowledge-graph",
+          "items": [
+            "15 curated relationships",
+            "89 total canonical edges"
+          ]
+        },
+        {
+          "type": "changed",
+          "area": "pages",
+          "items": [
+            "Actions-source hardening",
+            "portable fallback data paths",
+            "README visual redesign"
+          ]
+        }
+      ]
+    },
+    {
+      "version": "5.1.0",
+      "date": "2026-09-29",
+      "changes": [
+        {
+          "type": "added",
+          "area": "adversary-intelligence",
+          "items": [
+            "22 ATT&CK group profiles",
+            "alias context",
+            "defensive focus",
+            "CTI source library"
+          ]
+        },
+        {
+          "type": "added",
+          "area": "framework-expansion",
+          "items": [
+            "13 CTI / IR / resilience frameworks",
+            "14 new knowledge-graph relationships"
+          ]
+        },
+        {
+          "type": "changed",
+          "area": "web",
+          "items": [
+            "adversary workspace",
+            "adversary profile pages",
+            "three original SVG visuals"
+          ]
+        },
+        {
+          "type": "changed",
+          "area": "api",
+          "items": [
+            "adversaries endpoint",
+            "intelligence-sources endpoint"
+          ]
+        }
+      ]
+    },
+    {
+      "version": "4.0.0",
+      "date": "2026-09-29",
+      "changes": [
+        {
+          "type": "added",
+          "area": "standards-intelligence",
+          "items": [
+            "primary-source version registry",
+            "standards watcher",
+            "successor/deprecation tracking"
+          ]
+        },
+        {
+          "type": "changed",
+          "area": "research-catalog",
+          "items": [
+            "70 watchlist candidates exposed as NOT VERIFIED entries",
+            "Tier D verification notes"
+          ]
+        },
+        {
+          "type": "added",
+          "area": "relationship-intelligence",
+          "items": [
+            "per-edge provenance",
+            "source references",
+            "ATT&CK-D3FEND examples",
+            "AI crosswalks"
+          ]
+        },
+        {
+          "type": "added",
+          "area": "measurement-intelligence",
+          "items": [
+            "scorecard aggregation",
+            "regression detection",
+            "evidence trend"
+          ]
+        },
+        {
+          "type": "added",
+          "area": "interoperability",
+          "items": [
+            "API v2",
+            "reproducible snapshots",
+            "semantic release diffs",
+            "consumer examples"
+          ]
+        },
+        {
+          "type": "changed",
+          "area": "web",
+          "items": [
+            "complete GitHub Pages redesign",
+            "standards dashboard",
+            "measurement dashboard"
+          ]
+        }
+      ]
+    },
+    {
+      "version": "3.0.0",
+      "date": "2026-09-29",
+      "changes": [
+        {
+          "type": "added",
+          "area": "data-integrity",
+          "items": [
+            "JSON Schema validation",
+            "duplicate ID checks",
+            "broken relationship checks"
+          ]
+        },
+        {
+          "type": "added",
+          "area": "knowledge-graph",
+          "items": [
+            "entity pages",
+            "relationship confidence",
+            "static API",
+            "STIX 2.1 export"
+          ]
+        },
+        {
+          "type": "added",
+          "area": "analyst-experience",
+          "items": [
+            "URL-persisted filters",
+            "factual comparison",
+            "CSV export",
+            "JSON export",
+            "EN/PT/ES UI"
+          ]
+        },
+        {
+          "type": "added",
+          "area": "evidence-engineering",
+          "items": [
+            "scenario schema",
+            "E3 evidence bundle",
+            "coverage trend example"
+          ]
+        },
+        {
+          "type": "added",
+          "area": "automation",
+          "items": [
+            "upstream health review",
+            "contributor review",
+            "versioned release workflow"
+          ]
+        },
+        {
+          "type": "changed",
+          "entity": "openaev",
+          "from": "OpenBAS",
+          "to": "OpenAEV"
+        },
+        {
+          "type": "status-change",
+          "entities": [
+            "DetectionLab",
+            "Havoc"
+          ],
+          "to": "legacy"
+        }
+      ]
+    }
+  ]
+}

@@ -75,3 +75,18 @@ relationships:
   - {from: ssvc, to: first-epss, relation: decision-prioritization-to-exploitation-likelihood, confidence: medium, provenance: curated-crosswalk, source_refs: [ssvc, first-epss]}
   - {from: ssvc, to: first-cvss, relation: decision-prioritization-to-severity-context, confidence: medium, provenance: curated-crosswalk, source_refs: [ssvc, first-cvss]}
   - {from: oasis-csaf-2, to: ssvc, relation: security-advisory-to-response-prioritization, confidence: medium, provenance: curated-crosswalk, source_refs: [oasis-csaf-2, ssvc]}
+  - {from: owasp-top10-2025, to: owasp-asvs, relation: risk-awareness-to-verification-standard, confidence: high, provenance: curated-crosswalk, source_refs: [owasp-top10-2025, owasp-asvs]}
+  - {from: nist-sp-800-63-4, to: nist-sp-800-207, relation: digital-identity-to-zero-trust, confidence: high, provenance: curated-crosswalk, source_refs: [nist-sp-800-63-4, nist-sp-800-207]}
+  - {from: nist-sp-800-63-4, to: bloodhound, relation: identity-assurance-to-attack-path-context, confidence: medium, provenance: curated-crosswalk, source_refs: [nist-sp-800-63-4, bloodhound]}
+  - {from: nist-sp-800-161-r1, to: nist-ssdf, relation: supply-chain-risk-to-secure-development, confidence: high, provenance: curated-crosswalk, source_refs: [nist-sp-800-161-r1, nist-ssdf]}
+  - {from: nist-sp-800-161-r1, to: slsa, relation: supply-chain-risk-to-build-provenance, confidence: medium, provenance: curated-crosswalk, source_refs: [nist-sp-800-161-r1, slsa]}
+  - {from: nist-sp-800-190, to: trivy, relation: container-guidance-to-workload-assessment, confidence: medium, provenance: curated-crosswalk, source_refs: [nist-sp-800-190, trivy]}
+  - {from: nist-sp-800-190, to: kube-bench, relation: container-guidance-to-kubernetes-benchmark, confidence: medium, provenance: curated-crosswalk, source_refs: [nist-sp-800-190, kube-bench]}
+  - {from: cisa-ztmm-2, to: nist-sp-800-207, relation: maturity-model-to-zero-trust-architecture, confidence: high, provenance: curated-crosswalk, source_refs: [cisa-ztmm-2, nist-sp-800-207]}
+  - {from: openssf-osps-baseline, to: openssf-scorecard, relation: project-baseline-to-repository-assessment, confidence: high, provenance: curated-crosswalk, source_refs: [openssf-osps-baseline, openssf-scorecard]}
+  - {from: openssf-osps-baseline, to: slsa, relation: project-baseline-to-supply-chain-assurance, confidence: medium, provenance: curated-crosswalk, source_refs: [openssf-osps-baseline, slsa]}
+  - {from: owasp-scvs, to: nist-ssdf, relation: component-verification-to-secure-development, confidence: high, provenance: curated-crosswalk, source_refs: [owasp-scvs, nist-ssdf]}
+  - {from: csa-security-guidance-v5, to: csa-ccm, relation: cloud-guidance-to-control-matrix, confidence: high, provenance: curated-crosswalk, source_refs: [csa-security-guidance-v5, csa-ccm]}
+  - {from: etsi-en-303-645, to: owasp-isvs, relation: consumer-iot-to-iot-verification, confidence: medium, provenance: curated-crosswalk, source_refs: [etsi-en-303-645, owasp-isvs]}
+  - {from: iso-iec-27001-2022, to: iso-iec-27005-2022, relation: isms-to-risk-management, confidence: high, provenance: curated-crosswalk, source_refs: [iso-iec-27001-2022, iso-iec-27005-2022]}
+  - {from: iso-iec-27001-2022, to: nist-csf-2, relation: isms-to-cyber-risk-framework, confidence: medium, provenance: curated-crosswalk, source_refs: [iso-iec-27001-2022, nist-csf-2]}

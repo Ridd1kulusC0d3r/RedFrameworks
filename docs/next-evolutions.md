@@ -79,6 +79,19 @@ RedFrameworks v5 is the **OffSec Intelligence Portal** release.
 - [x] original SVG architecture and intelligence visuals
 - [x] adversary and CTI datasets in API v3
 
+## Platform v5.2 — Graph Intelligence & coverage expansion
+
+- [x] full-screen graph explorer
+- [x] 1–2 hop embedded graph workbench
+- [x] force and radial graph layouts
+- [x] pan / zoom / node filters
+- [x] adversary graph layer
+- [x] 11 additional verified frameworks
+- [x] 20 additional ATT&CK adversary profiles
+- [x] 15 additional curated graph relationships
+- [x] visual README coverage dashboard
+- [x] Pages deployment hardening and portable fallback data path
+
 ## Platform v6 — collaborative intelligence
 
 ### Knowledge expansion

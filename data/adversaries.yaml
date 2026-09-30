@@ -332,3 +332,263 @@ adversaries:
     last_modified: "2026-07-31"
     source: "https://attack.mitre.org/groups/G0092/"
     source_tier: "A"
+
+  - id: agrius
+    name: "Agrius"
+    attack_id: "G1030"
+    aliases: ["Pink Sandstorm", "AMERICIUM", "Agonizing Serpens", "BlackShadow"]
+    actor_type: "state-sponsored"
+    attribution: "MITRE ATT&CK describes Agrius as an Iranian threat actor publicly linked to Iran's Ministry of Intelligence and Security."
+    motivation: ["disruption", "strategic objectives"]
+    focus_regions: ["Middle East"]
+    sectors: ["government", "technology", "critical services"]
+    defensive_focus: ["resilience", "identity security", "endpoint telemetry", "recovery engineering"]
+    source: "https://attack.mitre.org/groups/G1030/"
+    source_tier: "A"
+
+  - id: andariel
+    name: "Andariel"
+    attack_id: "G0138"
+    aliases: ["Silent Chollima", "PLUTONIUM", "Onyx Sleet"]
+    actor_type: "state-sponsored"
+    attribution: "MITRE ATT&CK describes Andariel as a North Korean state-sponsored group associated with the broader Lazarus Group umbrella."
+    motivation: ["espionage", "financial", "strategic objectives"]
+    focus_regions: ["South Korea", "global"]
+    sectors: ["government", "military", "financial services", "technology"]
+    defensive_focus: ["identity security", "endpoint telemetry", "financial monitoring", "resilience"]
+    source: "https://attack.mitre.org/groups/G0138/"
+    source_tier: "A"
+
+  - id: aoqin-dragon
+    name: "Aoqin Dragon"
+    attack_id: "G1007"
+    aliases: []
+    actor_type: "suspected-state-linked"
+    attribution: "MITRE ATT&CK describes Aoqin Dragon as a suspected Chinese cyber espionage group."
+    motivation: ["espionage"]
+    focus_regions: ["Australia", "Cambodia", "Hong Kong", "Singapore", "Vietnam"]
+    sectors: ["government", "education", "telecommunications"]
+    defensive_focus: ["email security", "identity security", "endpoint telemetry", "network monitoring"]
+    source: "https://attack.mitre.org/groups/G1007/"
+    source_tier: "A"
+
+  - id: apt1
+    name: "APT1"
+    attack_id: "G0006"
+    aliases: ["Comment Crew", "Comment Group", "Comment Panda"]
+    actor_type: "state-sponsored"
+    attribution: "MITRE ATT&CK reports attribution of APT1 to PLA Unit 61398."
+    motivation: ["espionage"]
+    focus_regions: ["global"]
+    sectors: ["government", "technology", "industrial", "professional services"]
+    defensive_focus: ["identity security", "endpoint telemetry", "email security", "network visibility"]
+    source: "https://attack.mitre.org/groups/G0006/"
+    source_tier: "A"
+
+  - id: apt3
+    name: "APT3"
+    attack_id: "G0022"
+    aliases: ["Gothic Panda", "Pirpi", "UPS Team", "Buckeye", "Threat Group-0110"]
+    actor_type: "state-sponsored"
+    attribution: "MITRE ATT&CK describes APT3 as a China-based group attributed by researchers to China's Ministry of State Security."
+    motivation: ["espionage"]
+    focus_regions: ["United States", "Hong Kong", "global"]
+    sectors: ["government", "political organizations", "technology"]
+    defensive_focus: ["web telemetry", "endpoint visibility", "identity monitoring", "email security"]
+    source: "https://attack.mitre.org/groups/G0022/"
+    source_tier: "A"
+
+  - id: apt5
+    name: "APT5"
+    attack_id: "G1023"
+    aliases: ["Mulberry Typhoon", "MANGANESE", "BRONZE FLEETWOOD", "Keyhole Panda", "UNC2630"]
+    actor_type: "state-sponsored"
+    attribution: "MITRE ATT&CK describes APT5 as a China-based espionage actor."
+    motivation: ["espionage"]
+    focus_regions: ["United States", "Europe", "Asia"]
+    sectors: ["telecommunications", "aerospace", "defense"]
+    defensive_focus: ["network-device monitoring", "edge security", "asset inventory", "identity security"]
+    source: "https://attack.mitre.org/groups/G1023/"
+    source_tier: "A"
+
+  - id: apt12
+    name: "APT12"
+    attack_id: "G0005"
+    aliases: ["IXESHE", "DynCalc", "Numbered Panda", "DNSCALC"]
+    actor_type: "state-sponsored"
+    attribution: "MITRE ATT&CK describes APT12 as a threat group attributed to China."
+    motivation: ["espionage"]
+    focus_regions: ["Asia", "global"]
+    sectors: ["media", "technology", "government"]
+    defensive_focus: ["email security", "endpoint telemetry", "web monitoring", "identity security"]
+    source: "https://attack.mitre.org/groups/G0005/"
+    source_tier: "A"
+
+  - id: apt16
+    name: "APT16"
+    attack_id: "G0023"
+    aliases: []
+    actor_type: "suspected-state-linked"
+    attribution: "MITRE ATT&CK describes APT16 as a China-based threat group."
+    motivation: ["espionage"]
+    focus_regions: ["Japan", "Taiwan"]
+    sectors: ["government", "private sector", "regional organizations"]
+    defensive_focus: ["email security", "identity monitoring", "endpoint telemetry"]
+    source: "https://attack.mitre.org/groups/G0023/"
+    source_tier: "A"
+
+  - id: apt17
+    name: "APT17"
+    attack_id: "G0025"
+    aliases: ["Deputy Dog"]
+    actor_type: "suspected-state-linked"
+    attribution: "MITRE ATT&CK describes APT17 as a China-based threat group."
+    motivation: ["espionage"]
+    focus_regions: ["United States", "global"]
+    sectors: ["government", "defense", "legal", "technology", "mining", "non-governmental organizations"]
+    defensive_focus: ["web telemetry", "endpoint visibility", "identity security", "email security"]
+    source: "https://attack.mitre.org/groups/G0025/"
+    source_tier: "A"
+
+  - id: apt18
+    name: "APT18"
+    attack_id: "G0026"
+    aliases: ["TG-0416", "Dynamite Panda", "Threat Group-0416"]
+    actor_type: "suspected-state-linked"
+    attribution: "MITRE ATT&CK describes APT18 as a long-running threat group."
+    motivation: ["espionage"]
+    focus_regions: ["global"]
+    sectors: ["technology", "manufacturing", "human rights", "government", "healthcare"]
+    defensive_focus: ["email security", "endpoint telemetry", "identity monitoring", "network visibility"]
+    source: "https://attack.mitre.org/groups/G0026/"
+    source_tier: "A"
+
+  - id: apt19
+    name: "APT19"
+    attack_id: "G0073"
+    aliases: ["Codoso", "C0d0so0", "Codoso Team", "Sunshop Group"]
+    actor_type: "suspected-state-linked"
+    attribution: "MITRE ATT&CK describes APT19 as a China-based threat group."
+    motivation: ["espionage"]
+    focus_regions: ["global"]
+    sectors: ["defense", "finance", "energy", "pharmaceutical", "telecommunications", "technology", "education", "legal"]
+    defensive_focus: ["email security", "identity monitoring", "endpoint telemetry", "web telemetry"]
+    source: "https://attack.mitre.org/groups/G0073/"
+    source_tier: "A"
+
+  - id: apt30
+    name: "APT30"
+    attack_id: "G0013"
+    aliases: []
+    actor_type: "suspected-state-linked"
+    attribution: "MITRE ATT&CK describes APT30 as a threat group suspected to be associated with the Chinese government."
+    motivation: ["espionage"]
+    focus_regions: ["Asia", "global"]
+    sectors: ["government", "political organizations", "regional institutions"]
+    defensive_focus: ["email security", "endpoint telemetry", "identity monitoring"]
+    source: "https://attack.mitre.org/groups/G0013/"
+    source_tier: "A"
+
+  - id: apt33
+    name: "APT33"
+    attack_id: "G0064"
+    aliases: ["HOLMIUM", "Elfin", "Peach Sandstorm"]
+    actor_type: "suspected-state-linked"
+    attribution: "MITRE ATT&CK describes APT33 as a suspected Iranian threat group."
+    motivation: ["espionage", "strategic intelligence"]
+    focus_regions: ["United States", "Saudi Arabia", "South Korea"]
+    sectors: ["aviation", "energy", "industrial"]
+    defensive_focus: ["email security", "identity security", "endpoint telemetry", "industrial resilience"]
+    source: "https://attack.mitre.org/groups/G0064/"
+    source_tier: "A"
+
+  - id: apt37
+    name: "APT37"
+    attack_id: "G0067"
+    aliases: ["InkySquid", "ScarCruft", "Reaper", "Group123", "Ricochet Chollima"]
+    actor_type: "state-sponsored"
+    attribution: "MITRE ATT&CK describes APT37 as a North Korean state-sponsored cyber espionage group."
+    motivation: ["espionage"]
+    focus_regions: ["South Korea", "Japan", "Asia", "Middle East", "Europe"]
+    sectors: ["government", "media", "research", "technology"]
+    defensive_focus: ["email security", "endpoint telemetry", "identity monitoring", "document-analysis workflows"]
+    source: "https://attack.mitre.org/groups/G0067/"
+    source_tier: "A"
+
+  - id: apt38
+    name: "APT38"
+    attack_id: "G0082"
+    aliases: ["NICKEL GLADSTONE", "BeagleBoyz", "Bluenoroff", "Sapphire Sleet", "COPERNICIUM"]
+    actor_type: "state-sponsored"
+    attribution: "MITRE ATT&CK describes APT38 as a North Korean state-sponsored group specializing in financial cyber operations."
+    motivation: ["financial", "strategic objectives"]
+    focus_regions: ["global"]
+    sectors: ["banks", "financial institutions", "cryptocurrency", "payment infrastructure"]
+    defensive_focus: ["financial monitoring", "identity security", "endpoint telemetry", "transaction-system resilience"]
+    source: "https://attack.mitre.org/groups/G0082/"
+    source_tier: "A"
+
+  - id: apt39
+    name: "APT39"
+    attack_id: "G0087"
+    aliases: ["ITG07", "Chafer", "Remix Kitten"]
+    actor_type: "state-sponsored"
+    attribution: "MITRE ATT&CK describes APT39 as cyber espionage activity conducted by Iran's Ministry of Intelligence and Security."
+    motivation: ["espionage", "surveillance"]
+    focus_regions: ["Middle East", "Asia", "Africa", "Europe", "North America"]
+    sectors: ["travel", "hospitality", "academic", "telecommunications"]
+    defensive_focus: ["identity monitoring", "email security", "endpoint telemetry", "telecommunications security"]
+    source: "https://attack.mitre.org/groups/G0087/"
+    source_tier: "A"
+
+  - id: apt42
+    name: "APT42"
+    attack_id: "G1044"
+    aliases: []
+    actor_type: "state-sponsored"
+    attribution: "MITRE ATT&CK describes APT42 as an Iranian-sponsored threat group focused on cyber espionage and surveillance."
+    motivation: ["espionage", "surveillance"]
+    focus_regions: ["Middle East", "global"]
+    sectors: ["government", "civil society", "research", "media"]
+    defensive_focus: ["email security", "identity protection", "mobile security", "endpoint telemetry"]
+    source: "https://attack.mitre.org/groups/G1044/"
+    source_tier: "A"
+
+  - id: axiom
+    name: "Axiom"
+    attack_id: "G0001"
+    aliases: ["Group 72"]
+    actor_type: "suspected-state-linked"
+    attribution: "MITRE ATT&CK describes Axiom as a suspected Chinese cyber espionage group."
+    motivation: ["espionage"]
+    focus_regions: ["global"]
+    sectors: ["aerospace", "defense", "government", "manufacturing", "media"]
+    defensive_focus: ["identity security", "endpoint telemetry", "network monitoring", "email security"]
+    source: "https://attack.mitre.org/groups/G0001/"
+    source_tier: "A"
+
+  - id: backdoordiplomacy
+    name: "BackdoorDiplomacy"
+    attack_id: "G0135"
+    aliases: []
+    actor_type: "cyber-espionage"
+    attribution: "MITRE ATT&CK describes BackdoorDiplomacy as a cyber espionage threat group active since at least 2017."
+    motivation: ["espionage"]
+    focus_regions: ["Africa", "Europe", "Middle East", "Asia"]
+    sectors: ["foreign affairs", "government", "telecommunications"]
+    defensive_focus: ["network monitoring", "identity security", "endpoint visibility", "telecommunications security"]
+    source: "https://attack.mitre.org/groups/G0135/"
+    source_tier: "A"
+
+  - id: bitter
+    name: "BITTER"
+    attack_id: "G1002"
+    aliases: ["T-APT-17"]
+    actor_type: "suspected-state-linked"
+    attribution: "MITRE ATT&CK describes BITTER as a suspected South Asian cyber espionage group."
+    motivation: ["espionage"]
+    focus_regions: ["Pakistan", "China", "Bangladesh", "Saudi Arabia"]
+    sectors: ["government", "energy", "engineering"]
+    defensive_focus: ["email security", "endpoint telemetry", "identity monitoring", "document-analysis workflows"]
+    source: "https://attack.mitre.org/groups/G1002/"
+    source_tier: "A"

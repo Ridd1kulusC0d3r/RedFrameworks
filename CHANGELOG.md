@@ -2,6 +2,26 @@
 
 All notable RedFrameworks platform changes are recorded here. Machine-readable changes live in `data/changelog.yaml`.
 
+## 5.2.0 — 2026-09-30
+
+### Graph Intelligence
+
+- rebuilt the embedded knowledge graph as an analyst workbench with 1–2 hop exploration, node modes, relationship statistics, provenance context and quick routes;
+- added a dedicated full-screen graph explorer with pan, zoom, force/radial layouts, node filtering and an adversary layer;
+- added a new Graph Intelligence architecture visual.
+
+### Ecosystem expansion
+
+- added 11 verified frameworks across identity, supply chain, cloud, IoT, governance and application security;
+- expanded adversary intelligence by 20 ATT&CK-tracked groups, bringing public coverage to 42 profiles;
+- added 15 curated framework relationships, bringing the canonical graph to 89 edges.
+
+### GitHub & Pages
+
+- redesigned the README around live project counts and visual coverage;
+- added a portable static-data path to support fallback hosting;
+- hardened Pages deployment against legacy branch/root rendering.
+
 ## 5.1.0 — 2026-09-29
 
 ### Adversary intelligence
