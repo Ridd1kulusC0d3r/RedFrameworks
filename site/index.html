@@ -23,11 +23,12 @@
         <a class="nav-link" href="#explore"><span>02</span>Explore</a>
         <a class="nav-link" href="#paths"><span>03</span>Learning Paths</a>
         <a class="nav-link" href="#techniques"><span>04</span>Techniques</a>
-        <a class="nav-link" href="#graph"><span>05</span>Graph</a>
-        <a class="nav-link" href="#research"><span>06</span>Research</a>
-        <a class="nav-link" href="#resources"><span>07</span>Resources</a>
-        <a class="nav-link" href="#measurement"><span>08</span>Measurement</a>
-        <a class="nav-link" href="#timeline"><span>09</span>Timeline</a>
+        <a class="nav-link" href="#adversaries"><span>05</span>Adversaries</a>
+        <a class="nav-link" href="#graph"><span>06</span>Graph</a>
+        <a class="nav-link" href="#research"><span>07</span>Research</a>
+        <a class="nav-link" href="#resources"><span>08</span>Resources</a>
+        <a class="nav-link" href="#measurement"><span>09</span>Measurement</a>
+        <a class="nav-link" href="#timeline"><span>10</span>Timeline</a>
       </nav>
 
       <div class="sidebar-bookmarks">
@@ -89,6 +90,10 @@
         </aside>
       </section>
 
+      <figure class="portal-visual hero-visual">
+        <img src="assets/redframeworks-intelligence-hero.svg" alt="RedFrameworks OffSec intelligence architecture">
+      </figure>
+
       <section id="overview-metrics" class="metric-strip" aria-label="Platform metrics"></section>
 
       <section class="intel-ribbon" aria-label="Standards intelligence">
@@ -149,7 +154,36 @@
         <div id="technique-grid" class="technique-grid"></div>
       </section>
 
-      <section id="graph" class="content-section section-alt">
+
+      <section id="adversaries" class="content-section section-alt">
+        <div class="section-heading">
+          <div><span class="section-index">05</span><div><p class="section-kicker">Adversary intelligence</p><h2>Actor context for defensive decisions</h2></div></div>
+          <p>Source-attributed profiles connect aliases, motivation, sectors and broad targeting context to defensive priorities. Actor names are overlapping analytic labels, not perfect identities.</p>
+        </div>
+
+        <figure class="portal-visual">
+          <img src="assets/adversary-intelligence.svg" alt="Defensive adversary intelligence model">
+        </figure>
+
+        <div id="adversary-summary" class="adversary-summary"></div>
+        <div class="adversary-toolbar">
+          <input id="adversary-search" type="search" placeholder="Search actor, alias, sector, region…">
+          <select id="adversary-type"><option value="">All actor types</option></select>
+          <select id="adversary-motivation"><option value="">All motivations</option></select>
+          <select id="adversary-sector"><option value="">All sectors</option></select>
+        </div>
+        <div id="adversary-grid" class="adversary-grid"></div>
+
+        <div class="source-library">
+          <div class="section-heading compact-heading">
+            <div><div><p class="section-kicker">Research sources</p><h3>CTI source library</h3></div></div>
+            <p>Primary and vendor research sources used to corroborate group naming, lifecycle and targeting context.</p>
+          </div>
+          <div id="intel-source-grid" class="intel-source-grid"></div>
+        </div>
+      </section>
+
+      <section id="graph" class="content-section">
         <div class="section-heading">
           <div><span class="section-index">05</span><div><p class="section-kicker">Graph intelligence</p><h2>Trace context, not hype</h2></div></div>
           <p>Explore clusters, inspect provenance or ask for the shortest curated path between two entities.</p>
@@ -237,7 +271,8 @@
           <article class="roadmap-stage complete"><span>v2</span><b>Interactive Catalog</b><small>search · Pages</small></article>
           <article class="roadmap-stage complete"><span>v3</span><b>Knowledge Graph</b><small>API · STIX · provenance</small></article>
           <article class="roadmap-stage complete"><span>v4</span><b>Continuous Intel</b><small>versions · diffs · metrics</small></article>
-          <article class="roadmap-stage active"><span>v5</span><b>OffSec Portal</b><small>paths · resources · queries</small></article>
+          <article class="roadmap-stage complete"><span>v5</span><b>OffSec Portal</b><small>paths · resources · queries</small></article>
+          <article class="roadmap-stage active"><span>v5.1</span><b>Adversary Intel</b><small>APT context · CTI sources</small></article>
         </div>
       </section>
 

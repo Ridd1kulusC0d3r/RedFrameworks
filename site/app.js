@@ -1,5 +1,6 @@
 const state={
   items:[],relationships:[],resources:{books:[],certifications:[]},learningPaths:[],techniques:[],
+  adversaries:[],intelligenceSources:[],
   verification:{count:0,entries:[]},standards:[],coverage:[],regressions:[],evidence:[],
   lifecycle:{events:[]},changelog:{releases:[]},heatmap:[],scenarioSummary:[],filtered:[],compare:new Set(),compact:false,
   lang:"en",resourceMode:"books",bookmarks:new Set(),graphPath:{nodes:new Set(),edges:new Set()},
@@ -124,6 +125,8 @@ function renderMetrics(){
     ["Books",state.resources.books.length],
     ["Certifications",state.resources.certifications.length],
     ["Techniques",state.techniques.length],
+    ["Adversaries",state.adversaries.length],
+    ["CTI Sources",state.intelligenceSources.length],
     ["Relationships",state.relationships.length],
     ["NOT VERIFIED",state.items.filter(i=>i.status==="not-verified").length]
   ];
@@ -259,6 +262,38 @@ function renderTechniques(){
   $("technique-grid").innerHTML=rows.map(item=>
     '<a class="technique-card" href="technique/'+esc(item.id.toLowerCase())+'/"><b>'+esc(item.id)+'</b><h3>'+esc(item.name)+'</h3>'+
     '<p>'+((item.scenarios||[]).length+(item.scorecards||[]).length)+' validation refs · '+(item.defensive_context||[]).length+' defensive mappings</p></a>'
+  ).join("");
+}
+
+function renderAdversaries(){
+  const q=$("adversary-search").value.trim().toLowerCase();
+  const type=$("adversary-type").value,motivation=$("adversary-motivation").value,sector=$("adversary-sector").value;
+  const rows=state.adversaries.filter(item=>{
+    const hay=[item.name,item.attack_id,item.actor_type,item.attribution,...(item.aliases||[]),...(item.motivation||[]),...(item.focus_regions||[]),...(item.sectors||[]),...(item.defensive_focus||[])].join(" ").toLowerCase();
+    return(!q||hay.includes(q))&&(!type||item.actor_type===type)&&(!motivation||(item.motivation||[]).includes(motivation))&&(!sector||(item.sectors||[]).includes(sector));
+  });
+
+  const stateCount=state.adversaries.filter(i=>i.actor_type==="state-sponsored").length;
+  const crimeCount=state.adversaries.filter(i=>i.actor_type==="cybercrime").length;
+  const mixedCount=state.adversaries.filter(i=>!["state-sponsored","cybercrime"].includes(i.actor_type)).length;
+  $("adversary-summary").innerHTML=[
+    ["Tracked profiles",state.adversaries.length],["State-sponsored",stateCount],["Cybercrime",crimeCount],["Other / unresolved",mixedCount]
+  ].map(([label,value])=>'<div class="adversary-metric"><strong>'+value+'</strong><span>'+esc(label)+'</span></div>').join("");
+
+  $("adversary-grid").innerHTML=rows.map(item=>
+    '<article class="adversary-card"><div class="adversary-head"><div><span class="kind-badge">'+esc(item.attack_id)+'</span><span class="status-badge verified">'+esc(item.actor_type)+'</span></div><a href="adversary/'+esc(item.id)+'/">profile →</a></div>'+
+    '<h3>'+esc(item.name)+'</h3><p>'+esc(item.attribution)+'</p>'+
+    '<div class="alias-row">'+(item.aliases||[]).slice(0,5).map(v=>'<span class="tag">'+esc(v)+'</span>').join("")+'</div>'+
+    '<div class="adversary-meta"><div><b>Motivation</b><span>'+esc((item.motivation||[]).join(" · "))+'</span></div>'+
+    '<div><b>Sectors</b><span>'+esc((item.sectors||[]).slice(0,4).join(" · "))+'</span></div>'+
+    '<div><b>Defensive focus</b><span>'+esc((item.defensive_focus||[]).slice(0,4).join(" · "))+'</span></div></div>'+
+    '<div class="adversary-foot"><span>ATT&CK profile v'+esc(item.profile_version||"—")+'</span><a href="'+esc(item.source)+'" target="_blank" rel="noopener">source ↗</a></div></article>'
+  ).join("")||'<article class="adversary-card"><h3>No matching profiles</h3><p>Broaden the filters.</p></article>';
+}
+
+function renderIntelSources(){
+  $("intel-source-grid").innerHTML=state.intelligenceSources.map(item=>
+    '<a class="intel-source-card" href="'+esc(item.url)+'" target="_blank" rel="noopener"><span>'+esc(item.source_tier)+' · '+esc(item.category)+'</span><strong>'+esc(item.name)+'</strong><p>'+esc(item.note)+'</p><small>'+esc((item.focus||[]).join(" · "))+'</small></a>'
   ).join("");
 }
 
@@ -484,6 +519,8 @@ function buildCommandIndex(){
   for(const item of state.resources.certifications)list.push({kind:"cert",label:item.name,detail:item.provider+" · "+item.level,href:item.url});
   for(const path of state.learningPaths)list.push({kind:"path",label:path.name,detail:path.audience+" · "+(path.domains||[]).join(" · "),href:"#paths"});
   for(const item of state.techniques)list.push({kind:"technique",label:item.id+" · "+item.name,detail:"ATT&CK technique intelligence",href:"technique/"+item.id.toLowerCase()+"/"});
+  for(const item of state.adversaries)list.push({kind:"adversary",label:item.name,detail:item.attack_id+" · "+item.actor_type+" · "+(item.aliases||[]).slice(0,3).join(" · "),href:"adversary/"+item.id+"/"});
+  for(const item of state.intelligenceSources)list.push({kind:"source",label:item.name,detail:item.category+" · "+(item.focus||[]).slice(0,3).join(" · "),href:item.url});
   state.commandItems=list;
 }
 
@@ -527,11 +564,13 @@ function setupNavigation(){
 
 async function init(){
   applyTheme();
-  const [catalog,resources,paths,techniques,verification,standards,coverage,regressions,evidence,heatmap,scenarioSummary,lifecycle,changelog]=await Promise.all([
+  const [catalog,resources,paths,techniques,adversaries,intelligenceSources,verification,standards,coverage,regressions,evidence,heatmap,scenarioSummary,lifecycle,changelog]=await Promise.all([
     loadJson("data/catalog.json",{items:[],relationships:[],updated:""}),
     loadJson("data/resources.json",{books:[],certifications:[]}),
     loadJson("data/learning-paths.json",{paths:[]}),
     loadJson("data/techniques.json",[]),
+    loadJson("data/adversaries.json",{adversaries:[]}),
+    loadJson("data/intelligence-sources.json",{sources:[]}),
     loadJson("data/verification-queue.json",{count:0,entries:[]}),
     loadJson("data/standards-intelligence.json",{standards:[]}),
     loadJson("data/coverage-series.json",{records:[]}),
@@ -543,16 +582,19 @@ async function init(){
     loadJson("api/v3/changelog.json",{releases:[]})
   ]);
   state.items=catalog.items||[];state.relationships=catalog.relationships||[];state.resources=resources;
-  state.learningPaths=paths.paths||[];state.techniques=techniques||[];state.verification=verification;
+  state.learningPaths=paths.paths||[];state.techniques=techniques||[];state.adversaries=adversaries.adversaries||[];state.intelligenceSources=intelligenceSources.sources||[];state.verification=verification;
   state.standards=standards.standards||[];state.coverage=coverage.records||[];state.regressions=regressions.regressions||[];
   state.evidence=evidence.records||[];state.heatmap=heatmap.domains||[];state.scenarioSummary=scenarioSummary.scenarios||[];state.lifecycle=lifecycle;state.changelog=changelog;
 
   optionize($("domain-filter"),unique(state.items.flatMap(i=>i.domains||[])));
   optionize($("status-filter"),unique(state.items.map(i=>i.status)));
+  optionize($("adversary-type"),unique(state.adversaries.map(i=>i.actor_type)));
+  optionize($("adversary-motivation"),unique(state.adversaries.flatMap(i=>i.motivation||[])));
+  optionize($("adversary-sector"),unique(state.adversaries.flatMap(i=>i.sectors||[])));
   readLocalState();
   $("sidebar-updated").textContent="reviewed "+(catalog.updated||"—");
 
-  renderMetrics();renderStandardsTicker();renderBookmarks();renderLearningPaths();renderTechniques();
+  renderMetrics();renderStandardsTicker();renderBookmarks();renderLearningPaths();renderTechniques();renderAdversaries();renderIntelSources();
   setupGraph();renderResearch();renderResources();renderCoverage();renderEvidence();renderRegressions();renderHeatmap();renderScenarioSummary();renderTimeline();
   buildCommandIndex();setupCommandPalette();setupNavigation();
 
@@ -566,7 +608,12 @@ async function init(){
   });
   $("density").addEventListener("click",()=>{state.compact=!state.compact;$("catalog-grid").classList.toggle("compact",state.compact);$("density").textContent=state.compact?"Cards":"Compact";syncUrl()});
   $("export-json").addEventListener("click",()=>downloadFiltered("json"));$("export-csv").addEventListener("click",()=>downloadFiltered("csv"));
-  $("technique-search").addEventListener("input",renderTechniques);$("graph-select").addEventListener("change",renderGraph);$("find-path").addEventListener("click",findGraphPath);
+  $("technique-search").addEventListener("input",renderTechniques);
+  $("adversary-search").addEventListener("input",renderAdversaries);
+  $("adversary-type").addEventListener("change",renderAdversaries);
+  $("adversary-motivation").addEventListener("change",renderAdversaries);
+  $("adversary-sector").addEventListener("change",renderAdversaries);
+  $("graph-select").addEventListener("change",renderGraph);$("find-path").addEventListener("click",findGraphPath);
   $("research-search").addEventListener("input",renderResearch);$("research-readiness").addEventListener("change",renderResearch);
   document.querySelectorAll(".resource-tab").forEach(btn=>btn.addEventListener("click",()=>{state.resourceMode=btn.dataset.resource;document.querySelectorAll(".resource-tab").forEach(b=>b.classList.toggle("active",b===btn));renderResources()}));
   $("resource-search").addEventListener("input",renderResources);$("resource-level").addEventListener("change",renderResources);

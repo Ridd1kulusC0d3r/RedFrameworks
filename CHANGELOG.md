@@ -2,6 +2,25 @@
 
 All notable RedFrameworks platform changes are recorded here. Machine-readable changes live in `data/changelog.yaml`.
 
+## 5.1.0 — 2026-09-29
+
+### Adversary intelligence
+
+- added 22 source-attributed ATT&CK adversary profiles;
+- added aliases, actor type, motivation, sector, region, defensive-focus and profile-version metadata;
+- added a curated CTI source library and dedicated adversary profile pages;
+- added adversary search/filtering and command-palette integration.
+
+### Framework expansion
+
+- added 13 CTI, incident-response, resilience and vulnerability-management frameworks and standards;
+- connected the new frameworks to the knowledge graph with provenance-aware relationships.
+
+### Visual system
+
+- added original RedFrameworks intelligence, adversary and CTI-stack SVG visuals;
+- expanded the README and public portal with richer visual storytelling.
+
 ## 4.0.0 — 2026-09-29
 
 ### Continuous intelligence

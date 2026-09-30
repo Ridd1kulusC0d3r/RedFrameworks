@@ -61,6 +61,8 @@ jobs:
           python -m json.tool _site-test/api/v3/learning-paths.json >/dev/null
           python -m json.tool _site-test/api/v3/verification-queue.json >/dev/null
           python -m json.tool _site-test/api/v3/techniques.json >/dev/null
+          python -m json.tool _site-test/api/v3/adversaries.json >/dev/null
+          python -m json.tool _site-test/api/v3/intelligence-sources.json >/dev/null
           python - <<'PY'
           import json
           from jsonschema import Draft202012Validator
