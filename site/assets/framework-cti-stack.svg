@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="560" viewBox="0 0 1400 560">
+<rect width="1400" height="560" rx="28" fill="#090c12"/>
+<text x="60" y="64" fill="#f24861" font-family="monospace" font-size="17" font-weight="700">FRAMEWORK ECOSYSTEM</text>
+<text x="60" y="105" fill="#f4f7fb" font-family="Arial" font-size="32" font-weight="800">CTI → Threat Model → Validation → Response</text>
+<g font-family="Arial" font-size="15" font-weight="700">
+  <rect x="65" y="170" width="270" height="80" rx="14" fill="#131b27" stroke="#79b9ff"/><text x="94" y="205" fill="#79b9ff">INTELLIGENCE MODEL</text><text x="94" y="230" fill="#dfe6ee" font-weight="400">STIX · TAXII · MISP · TLP</text>
+  <rect x="385" y="170" width="270" height="80" rx="14" fill="#19141b" stroke="#f24861"/><text x="414" y="205" fill="#f24861">ADVERSARY MODEL</text><text x="414" y="230" fill="#dfe6ee" font-weight="400">ATT&amp;CK · Kill Chain · CAPEC</text>
+  <rect x="705" y="170" width="270" height="80" rx="14" fill="#141b17" stroke="#63d89a"/><text x="734" y="205" fill="#63d89a">DEFENSE + RESPONSE</text><text x="734" y="230" fill="#dfe6ee" font-weight="400">D3FEND · CACAO · 800-61</text>
+  <rect x="1025" y="170" width="310" height="80" rx="14" fill="#1d1a12" stroke="#efbd67"/><text x="1054" y="205" fill="#efbd67">RESILIENCE + PRIORITY</text><text x="1054" y="230" fill="#dfe6ee" font-weight="400">800-160 · SSVC · CPG · CSAF</text>
+</g>
+<g stroke="#3c4859" stroke-width="2"><path d="M335 210H385"/><path d="M655 210H705"/><path d="M975 210H1025"/></g>
+<g font-family="monospace" font-size="13">
+  <rect x="95" y="335" width="235" height="95" rx="12" fill="#101620" stroke="#283447"/><text x="118" y="369" fill="#97a3b2">WHAT HAPPENED?</text><text x="118" y="399" fill="#f4f7fb">VERIS · Incident data</text>
+  <rect x="390" y="335" width="235" height="95" rx="12" fill="#101620" stroke="#283447"/><text x="413" y="369" fill="#97a3b2">WHO / WHY?</text><text x="413" y="399" fill="#f4f7fb">Actor profiles · CTI</text>
+  <rect x="685" y="335" width="235" height="95" rx="12" fill="#101620" stroke="#283447"/><text x="708" y="369" fill="#97a3b2">CAN WE SEE IT?</text><text x="708" y="399" fill="#f4f7fb">Telemetry · detection</text>
+  <rect x="980" y="335" width="235" height="95" rx="12" fill="#101620" stroke="#283447"/><text x="1003" y="369" fill="#97a3b2">DID WE IMPROVE?</text><text x="1003" y="399" fill="#f4f7fb">Evidence · retest</text>
+</g>
+</svg>
