@@ -33,8 +33,8 @@ paths:
     name: "Purple Team & Detection Engineering"
     audience: "intermediate-advanced"
     domains: ["purple-team", "detection", "threat-hunting"]
-    frameworks: ["mitre-attack", "mitre-d3fend", "mitre-car", "ocsf"]
-    tools: ["atomic-red-team", "vectr", "sigma", "velociraptor", "osquery", "zeek", "suricata", "falco"]
+    frameworks: ["mitre-attack", "mitre-d3fend", "mitre-car", "ocsf", "atomic-red-team"]
+    tools: ["vectr", "sigma", "velociraptor", "osquery", "zeek", "suricata", "falco"]
     books: ["intelligence-driven-ir-2e", "practical-packet-analysis-3e"]
     certifications: ["giac-gpen"]
 
