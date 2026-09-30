@@ -5,6 +5,8 @@ on:
       - "v*"
 permissions:
   contents: write
+  id-token: write
+  attestations: write
 jobs:
   release:
     runs-on: ubuntu-latest
@@ -15,13 +17,17 @@ jobs:
           python-version: "3.13"
       - name: Install dependencies
         run: python -m pip install --disable-pip-version-check PyYAML jsonschema
-      - name: Validate and build assets
+      - name: Validate and build v5 assets
         run: |
           python scripts/validate_data.py
           python scripts/validate_examples.py
           python scripts/aggregate_scorecards.py --output-dir generated-metrics
+          python scripts/build_verification_queue.py --json verification-queue.json --report verification-queue.md
           python scripts/build_site.py --output _site-release
-          python scripts/export_stix.py --output-dir exports
+          python scripts/export_stix.py --output-dir exports/stix
+          python scripts/export_neo4j.py --output-dir exports/neo4j
+          python scripts/export_navigator.py --output exports/attack-navigator/redframeworks.json
+          python scripts/export_misp.py --output exports/misp/redframeworks-reference-event.json
           python scripts/snapshot_catalog.py --version "${GITHUB_REF_NAME}" --output "exports/catalog-snapshot-${GITHUB_REF_NAME}.json"
       - name: Generate semantic diff from previous release when available
         env:
@@ -37,9 +43,15 @@ jobs:
               python scripts/catalog_diff.py "$BEFORE" "exports/catalog-snapshot-${GITHUB_REF_NAME}.json" --json exports/catalog-diff.json --report exports/catalog-diff.md
             fi
           fi
-      - name: Package release
-        run: tar -czf "redframeworks-${GITHUB_REF_NAME}.tar.gz" frameworks.yaml catalog.yaml relationships.yaml data schemas exports _site-release/api docs examples
+      - name: Package release and checksums
+        run: |
+          tar -czf "redframeworks-${GITHUB_REF_NAME}.tar.gz" frameworks.yaml catalog.yaml relationships.yaml resources.yaml learning-paths.yaml data schemas sdk exports _site-release/api docs examples
+          sha256sum "redframeworks-${GITHUB_REF_NAME}.tar.gz" exports/catalog-snapshot-*.json > SHA256SUMS.txt
+      - name: Attest release provenance
+        uses: actions/attest-build-provenance@v2
+        with:
+          subject-path: "redframeworks-${{ github.ref_name }}.tar.gz"
       - name: Publish GitHub release
         env:
           GH_TOKEN: ${{ github.token }}
-        run: gh release create "${GITHUB_REF_NAME}" "redframeworks-${GITHUB_REF_NAME}.tar.gz" exports/* --generate-notes --title "RedFrameworks ${GITHUB_REF_NAME}"
+        run: gh release create "${GITHUB_REF_NAME}" "redframeworks-${GITHUB_REF_NAME}.tar.gz" SHA256SUMS.txt exports/**/* --generate-notes --title "RedFrameworks ${GITHUB_REF_NAME}"
