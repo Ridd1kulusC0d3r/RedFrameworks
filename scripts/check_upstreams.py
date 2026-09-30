@@ -90,6 +90,11 @@ def main():
             "id": entry["id"], "name": entry["name"], "repository": payload.get("full_name"),
             "health": health, "archived": bool(payload.get("archived")), "pushed_at": pushed,
             "age_days": age, "default_branch": payload.get("default_branch"), "html_url": payload.get("html_url"),
+            "owner": (payload.get("owner") or {}).get("login"),
+            "owner_type": (payload.get("owner") or {}).get("type"),
+            "fork": bool(payload.get("fork")),
+            "license_spdx": (payload.get("license") or {}).get("spdx_id"),
+            "description": payload.get("description"),
             "latest_release": latest_release
         })
 
@@ -98,10 +103,10 @@ def main():
     data = {"generated_at": now.isoformat(), "checked": len(rows), "actionable_count": len(actionable), "stale_count": len(stale), "repositories": rows}
     Path(args.json).write_text(json.dumps(data, indent=2) + "\n", encoding="utf-8")
 
-    lines = ["# Upstream health report", "", f"- Checked: **{len(rows)}**", f"- Actionable: **{len(actionable)}**", f"- Stale: **{len(stale)}**", "", "| Project | Repository | Health | Last push | Latest release |", "|---|---|---|---|---|"]
+    lines = ["# Upstream health report", "", f"- Checked: **{len(rows)}**", f"- Actionable: **{len(actionable)}**", f"- Stale: **{len(stale)}**", "", "| Project | Repository | Health | License | Owner | Last push | Latest release |", "|---|---|---|---|---|---|---|"]
     for row in rows:
         release = row.get("latest_release") or {}
-        lines.append(f"| {row['name']} | {row['repository']} | {row['health']} | {row.get('pushed_at') or '—'} | {release.get('tag') or '—'} |")
+        lines.append(f"| {row['name']} | {row['repository']} | {row['health']} | {row.get('license_spdx') or '—'} | {row.get('owner') or '—'} | {row.get('pushed_at') or '—'} | {release.get('tag') or '—'} |")
     Path(args.report).write_text("\n".join(lines) + "\n", encoding="utf-8")
     print(json.dumps({"checked": len(rows), "actionable_count": len(actionable), "stale_count": len(stale)}))
 
