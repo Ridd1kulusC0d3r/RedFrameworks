@@ -1,45 +1,48 @@
-# Gap Analysis — What is still outside the verified core
+# Verification Backlog
 
-The Platform v3 engineering roadmap is being implemented, but not every researched project should be promoted into the verified catalog.
+The RedFrameworks catalog is now intentionally **complete but confidence-aware**.
 
-## Deliberately outside the verified core
+Previously, dozens of research candidates lived outside the visible core. In v4 they are included directly in the catalog as **NOT VERIFIED / Tier D**.
 
-These groups remain in the research watchlist until canonical provenance, maintenance, licensing and scope are sufficiently clear.
+## Nothing is hidden
 
-### AI / autonomous security
+A candidate can now be:
 
-OpenART, Basilisk, VIGILANT, AutoPT, Highflame RED, DeepTeam, advent-prompt-pwn, Strix, Autopwn, HunterX and VANGUARD.
+| Status | Meaning |
+|---|---|
+| verified | reviewed and supported by strong provenance |
+| community | traceable ecosystem project with community context |
+| commercial | identifiable commercial platform |
+| legacy | historically relevant but archived, superseded or no longer current |
+| not-verified | visible research candidate awaiting sufficient provenance |
 
-### Adversary emulation / simulation
+## The remaining gap is verification quality
 
-APTSimulator, Laccolith, BEAR-C2, Gloamfire, Woodpecker, OPFOR, Bounty Hunter, Temperance and Peekaboo.
+The work remaining for NOT VERIFIED entries is not "add them to the site". They are already there.
 
-### Operational platforms
+The remaining work is to confirm, per entry:
 
-Foojank, LazyOwn, SeersX, Cosmos Orbit, Elaina-C2, Wyrm, PExpAgent, PhantomStrike, Covenant, Koadic, SilentTrinity, Pupy, TrevorC2, DNSCat2 and Faction C2.
+- canonical upstream;
+- ownership / maintainer;
+- license;
+- maintenance state;
+- archive status;
+- current documentation;
+- correct taxonomy;
+- domains;
+- successor / rename status;
+- useful relationship edges.
 
-### Infrastructure / automation
+## Why keep low-confidence entries visible?
 
-redStack, Suijin, GHARF, T3MP3ST, Hexstrike-redteam, ONIST Framework, offsec-toolkit, RedGuard Suite, GoSecOps, hos_vortex, SANDEVISTAN, intSpLoiT, Pentester Playbook and Arsenal.
+Because a research catalog should distinguish:
 
-### Cloud / Kubernetes
+~~~text
+unknown != nonexistent
+unverified != recommended
+legacy != useless
+commercial != standard
+tool != methodology
+~~~
 
-PowerZure, Kraken, ctrsploit, Kubesploit, RedCloudOS, CPTF ARM Edition, OffensiveCloud, Cloudtoolkit, Ax Framework and secops-chaos.
-
-### IoT / embedded
-
-EmbedXPL-Forge, IoTPTF, IoTHackBot, Advanced IoT Exploitation Framework v2.0 and RTOSploit.
-
-### Purple / validation
-
-The 360 Cyber Shield and Skyhawk Security Autonomous Purple Team remain research candidates.
-
-### Legacy / maintenance review
-
-PowerSploit, Nishang, SharpSploit and CrackMapExec remain historically important names that need explicit successor/maintenance review before any catalog promotion.
-
-## What “outside” means
-
-Outside does not mean bad or useless. It means RedFrameworks does not yet have enough evidence to present the entry as part of its current verified core.
-
-The project intentionally prefers an incomplete trustworthy catalog over an enormous confident-looking pile of names.
+The web interface therefore exposes NOT VERIFIED entries in a visually distinct state and provides a dedicated filter for them.

@@ -71,6 +71,7 @@ def normalize():
     catalog_doc = load_yaml(ROOT / "catalog.yaml")
     rel_doc = load_yaml(ROOT / "relationships.yaml")
     standards_doc = load_yaml(ROOT / "data/standards-intelligence.yaml") if (ROOT / "data/standards-intelligence.yaml").exists() else {"standards": []}
+    successors_doc = load_yaml(ROOT / "data/successors.yaml") if (ROOT / "data/successors.yaml").exists() else {"transitions": []}
     ai_crosswalk_doc = load_yaml(ROOT / "data/ai-crosswalk.yaml") if (ROOT / "data/ai-crosswalk.yaml").exists() else {"crosswalks": []}
     d3fend_doc = load_yaml(ROOT / "data/attack-d3fend-examples.yaml") if (ROOT / "data/attack-d3fend-examples.yaml").exists() else {"examples": []}
     health_path = ROOT / "upstream-health.json"
@@ -154,6 +155,7 @@ def normalize():
         "_catalog_doc": catalog_doc,
         "_relationships_doc": rel_doc,
         "_standards_doc": standards_doc,
+        "_successors_doc": successors_doc,
         "_ai_crosswalk_doc": ai_crosswalk_doc,
         "_d3fend_doc": d3fend_doc,
     }
@@ -175,6 +177,11 @@ def entity_page(item, relationships, item_map):
         f'<a class="button primary" href="{html.escape(item["url"])}" rel="noopener">Upstream ↗</a>'
         if item.get("url") else ""
     )
+    verification = (
+        f'<div class="notice-card"><div class="notice-icon">!</div><div><strong>NOT VERIFIED</strong>'
+        f'<p>{html.escape(item.get("verification_note") or "Research candidate only; provenance not yet confirmed.")}</p></div></div>'
+        if item.get("status") == "not-verified" else ""
+    )
     return f"""<!doctype html>
 <html lang="en">
 <head>
@@ -194,6 +201,7 @@ def entity_page(item, relationships, item_map):
       <p class="lede">{html.escape(item.get("summary") or "")}</p>
       <div class="badges"><span class="badge {html.escape(item["status"])}">{html.escape(item["status"])}</span>{domains}</div>
       <div class="hero-actions">{upstream}</div>
+      {verification}
     </section>
     <section class="entity-grid">
       <article class="panel"><p class="kicker">Provenance</p><h2>{item["provenance_score"]}/100</h2><p>Evidence tier {html.escape(item["evidence_tier"])} · reviewed {html.escape(str(item["last_reviewed"]))}</p></article>
@@ -229,6 +237,7 @@ def write_api(output, payload):
     write_json(v2 / "frameworks.json", payload["_framework_doc"])
     write_json(v2 / "not-verified.json", not_verified)
     write_json(v2 / "standards.json", payload["_standards_doc"])
+    write_json(v2 / "successors.json", payload["_successors_doc"])
     write_json(v2 / "ai-crosswalk.json", payload["_ai_crosswalk_doc"])
     write_json(v2 / "attack-d3fend.json", payload["_d3fend_doc"])
 
@@ -267,7 +276,7 @@ def write_api(output, payload):
             "v1": ["catalog.json", "relationships.json"],
             "v2": [
                 "catalog.json", "relationships.json", "frameworks.json",
-                "not-verified.json", "standards.json", "ai-crosswalk.json",
+                "not-verified.json", "standards.json", "successors.json", "ai-crosswalk.json",
                 "attack-d3fend.json", "lifecycle.json", "changelog.json", "releases/"
             ]
         }
@@ -292,6 +301,7 @@ def main():
     catalog_doc = payload.pop("_catalog_doc")
     relationships_doc = payload.pop("_relationships_doc")
     standards_doc = payload.pop("_standards_doc")
+    successors_doc = payload.pop("_successors_doc")
     ai_crosswalk_doc = payload.pop("_ai_crosswalk_doc")
     d3fend_doc = payload.pop("_d3fend_doc")
     private_docs = {
@@ -299,6 +309,7 @@ def main():
         "_catalog_doc": catalog_doc,
         "_relationships_doc": relationships_doc,
         "_standards_doc": standards_doc,
+        "_successors_doc": successors_doc,
         "_ai_crosswalk_doc": ai_crosswalk_doc,
         "_d3fend_doc": d3fend_doc,
     }

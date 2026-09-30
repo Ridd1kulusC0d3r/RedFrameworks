@@ -1,6 +1,12 @@
 updated: "2026-09-29"
 schema_version: "1.0"
 events:
+  - entity: research-registry
+    event: visibility-model-changed
+    status: not-verified
+    reviewed: "2026-09-29"
+    note: "70 research candidates moved from hidden watchlist entries to visible NOT VERIFIED Tier D catalog entries."
+
   - entity: openaev
     event: renamed
     previous_name: "OpenBAS"

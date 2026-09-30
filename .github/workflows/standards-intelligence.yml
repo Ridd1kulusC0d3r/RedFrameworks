@@ -1,0 +1,47 @@
+name: Standards intelligence
+on:
+  schedule:
+    - cron: "31 11 * * 1"
+  workflow_dispatch:
+permissions:
+  contents: read
+  issues: write
+jobs:
+  watch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.13"
+      - name: Install dependency
+        run: python -m pip install --disable-pip-version-check PyYAML
+      - name: Probe primary sources
+        id: standards
+        shell: bash
+        run: |
+          python scripts/check_standards.py --json standards-watch.json --report standards-watch.md
+          echo "changed=$(python -c 'import json; print(json.load(open("standards-watch.json"))["changed_count"])')" >> "$GITHUB_OUTPUT"
+          cat standards-watch.md >> "$GITHUB_STEP_SUMMARY"
+      - name: Open or update version-change issue
+        if: steps.standards.outputs.changed != '0'
+        uses: actions/github-script@v8
+        with:
+          script: |
+            const fs = require("fs");
+            const title = "[automation] Standards version change detected";
+            const marker = "<!-- redframeworks-standards-watch -->";
+            const body = marker + "\n" + fs.readFileSync("standards-watch.md", "utf8");
+            const { data: issues } = await github.rest.issues.listForRepo({...context.repo, state:"open", per_page:100});
+            const existing = issues.find(issue => issue.title === title);
+            if (existing) await github.rest.issues.update({...context.repo, issue_number:existing.number, body});
+            else await github.rest.issues.create({...context.repo, title, body});
+      - name: Close resolved version-change issue
+        if: steps.standards.outputs.changed == '0'
+        uses: actions/github-script@v8
+        with:
+          script: |
+            const title = "[automation] Standards version change detected";
+            const { data: issues } = await github.rest.issues.listForRepo({...context.repo, state:"open", per_page:100});
+            const existing = issues.find(issue => issue.title === title);
+            if (existing) await github.rest.issues.update({...context.repo, issue_number:existing.number, state:"closed"});

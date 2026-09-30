@@ -2,6 +2,42 @@
 
 All notable RedFrameworks platform changes are recorded here. Machine-readable changes live in `data/changelog.yaml`.
 
+## 4.0.0 — 2026-09-29
+
+### Continuous intelligence
+
+- added primary-source version intelligence for ATT&CK, ATLAS, D3FEND, OWASP GenAI and NIST AI 600-1;
+- added scheduled standards-change detection;
+- added successor, rename and deprecation tracking;
+- added reproducible catalog snapshots and semantic release diffs.
+
+### Research catalog
+
+- moved all 70 previously hidden research candidates into the visible catalog;
+- every research candidate is explicitly marked **NOT VERIFIED**, Tier D and non-recommended pending provenance review;
+- retired the hidden-watchlist experience while preserving the verification boundary.
+
+### Relationship intelligence
+
+- added per-edge provenance and source references;
+- added selected ATT&CK ↔ D3FEND defensive-context examples;
+- added conceptual ATLAS ↔ OWASP ↔ NIST AI crosswalks with explicit non-equivalence warnings.
+
+### Measurement intelligence
+
+- added scorecard aggregation;
+- added longitudinal defensive-coverage trends;
+- added retest regression detection;
+- added evidence-maturity trend data.
+
+### Platform
+
+- replaced the GitHub Pages UI with a new intelligence-product layout;
+- added API v2 while retaining v1 compatibility;
+- added Python, TypeScript and shell API consumers;
+- added OpenCTI interoperability guidance;
+- added versioned release snapshots.
+
 ## 3.0.0 — 2026-09-29
 
 ### Knowledge graph

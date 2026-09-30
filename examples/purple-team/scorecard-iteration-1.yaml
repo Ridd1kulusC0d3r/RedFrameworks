@@ -25,3 +25,11 @@ scores:
 
 evidence_level: "E2"
 result: "partial"
+
+techniques:
+  - id: "T1078"
+    relevance: "high"
+    validation_focus: "identity telemetry and defensive response"
+  - id: "T1087"
+    relevance: "medium"
+    validation_focus: "account-discovery telemetry and analyst context"

@@ -55,6 +55,9 @@ def main():
     for edge in relationships_doc.get("relationships", []):
         if edge["from"] not in known or edge["to"] not in known:
             raise SystemExit("Broken relationship: " + json.dumps(edge))
+        for source_ref in edge.get("source_refs", []) or []:
+            if source_ref not in known:
+                raise SystemExit("Broken relationship source_ref: " + json.dumps(edge))
         if edge["from"] == edge["to"]:
             raise SystemExit("Self relationship: " + json.dumps(edge))
         key = (edge["from"], edge["to"], edge["relation"])
