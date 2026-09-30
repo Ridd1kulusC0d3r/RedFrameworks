@@ -1,7 +1,7 @@
 const state={
   items:[],relationships:[],resources:{books:[],certifications:[]},learningPaths:[],techniques:[],
   verification:{count:0,entries:[]},standards:[],coverage:[],regressions:[],evidence:[],
-  lifecycle:{events:[]},changelog:{releases:[]},filtered:[],compare:new Set(),compact:false,
+  lifecycle:{events:[]},changelog:{releases:[]},heatmap:[],scenarioSummary:[],filtered:[],compare:new Set(),compact:false,
   lang:"en",resourceMode:"books",bookmarks:new Set(),graphPath:{nodes:new Set(),edges:new Set()},
   commandItems:[],commandIndex:0
 };
@@ -424,6 +424,27 @@ function renderRegressions(){
     :'<div class="regression-ok"><strong>0</strong><span>regressions in the loaded repository scorecards</span></div>';
 }
 
+function renderHeatmap(){
+  const metrics=["telemetry","detection","analyst_response","containment","evidence"];
+  if(!state.heatmap.length){$("coverage-heatmap").innerHTML='<span class="empty-mini">No domain heatmap available.</span>';return}
+  let markup='<table class="heatmap-table"><thead><tr><th>Domain</th>'+metrics.map(m=>'<th>'+esc(m.replaceAll("_"," "))+'</th>').join("")+'</tr></thead><tbody>';
+  for(const row of state.heatmap){
+    markup+='<tr><th>'+esc(row.domain)+'</th>'+metrics.map(metric=>{
+      const value=row.metrics?.[metric];
+      return '<td class="heat-cell" style="--heat:'+Number(value||0)+'%">'+(value==null?"—":Number(value).toFixed(0))+'</td>';
+    }).join("")+'</tr>';
+  }
+  $("coverage-heatmap").innerHTML=markup+'</tbody></table>';
+}
+
+function renderScenarioSummary(){
+  const rows=state.scenarioSummary||[];
+  $("scenario-summary").innerHTML=rows.length?rows.map(row=>
+    '<div class="scenario-row"><div><strong>'+esc(row.name||row.scenario_id)+'</strong><span>'+esc(row.domain||"")+" · "+esc(row.latest_phase||"")+'</span></div>'+
+    '<span>'+esc(row.evidence_level||"—")+' · '+esc(row.result||"—")+'</span><span class="scenario-score">'+esc(row.composite??"—")+'</span></div>'
+  ).join(""):'<span class="empty-mini">No scenario comparison available.</span>';
+}
+
 function importScorecard(file){
   if(!file)return;
   const reader=new FileReader();
@@ -506,7 +527,7 @@ function setupNavigation(){
 
 async function init(){
   applyTheme();
-  const [catalog,resources,paths,techniques,verification,standards,coverage,regressions,evidence,lifecycle,changelog]=await Promise.all([
+  const [catalog,resources,paths,techniques,verification,standards,coverage,regressions,evidence,heatmap,scenarioSummary,lifecycle,changelog]=await Promise.all([
     loadJson("data/catalog.json",{items:[],relationships:[],updated:""}),
     loadJson("data/resources.json",{books:[],certifications:[]}),
     loadJson("data/learning-paths.json",{paths:[]}),
@@ -516,13 +537,15 @@ async function init(){
     loadJson("data/coverage-series.json",{records:[]}),
     loadJson("data/regressions.json",{regressions:[]}),
     loadJson("data/evidence-trend.json",{records:[]}),
+    loadJson("data/coverage-heatmap.json",{domains:[]}),
+    loadJson("data/scenario-summary.json",{scenarios:[]}),
     loadJson("api/v3/lifecycle.json",{events:[]}),
     loadJson("api/v3/changelog.json",{releases:[]})
   ]);
   state.items=catalog.items||[];state.relationships=catalog.relationships||[];state.resources=resources;
   state.learningPaths=paths.paths||[];state.techniques=techniques||[];state.verification=verification;
   state.standards=standards.standards||[];state.coverage=coverage.records||[];state.regressions=regressions.regressions||[];
-  state.evidence=evidence.records||[];state.lifecycle=lifecycle;state.changelog=changelog;
+  state.evidence=evidence.records||[];state.heatmap=heatmap.domains||[];state.scenarioSummary=scenarioSummary.scenarios||[];state.lifecycle=lifecycle;state.changelog=changelog;
 
   optionize($("domain-filter"),unique(state.items.flatMap(i=>i.domains||[])));
   optionize($("status-filter"),unique(state.items.map(i=>i.status)));
@@ -530,7 +553,7 @@ async function init(){
   $("sidebar-updated").textContent="reviewed "+(catalog.updated||"—");
 
   renderMetrics();renderStandardsTicker();renderBookmarks();renderLearningPaths();renderTechniques();
-  setupGraph();renderResearch();renderResources();renderCoverage();renderEvidence();renderRegressions();renderTimeline();
+  setupGraph();renderResearch();renderResources();renderCoverage();renderEvidence();renderRegressions();renderHeatmap();renderScenarioSummary();renderTimeline();
   buildCommandIndex();setupCommandPalette();setupNavigation();
 
   for(const id of["search","kind-filter","domain-filter","status-filter","tier-filter","sort"]){
