@@ -1,0 +1,114 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ridd1kulusc0d3r.github.io/RedFrameworks/schemas/adversaries.schema.json",
+  "title": "RedFrameworks adversary intelligence",
+  "type": "object",
+  "required": [
+    "updated",
+    "schema_version",
+    "source_model",
+    "adversaries"
+  ],
+  "properties": {
+    "updated": {
+      "type": "string",
+      "format": "date"
+    },
+    "schema_version": {
+      "type": "string"
+    },
+    "source_model": {
+      "type": "string"
+    },
+    "adversaries": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "name",
+          "attack_id",
+          "aliases",
+          "actor_type",
+          "attribution",
+          "motivation",
+          "focus_regions",
+          "sectors",
+          "defensive_focus",
+          "source",
+          "source_tier"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z0-9][a-z0-9-]*$"
+          },
+          "name": {
+            "type": "string"
+          },
+          "attack_id": {
+            "type": "string",
+            "pattern": "^G[0-9]{4}$"
+          },
+          "aliases": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "actor_type": {
+            "type": "string"
+          },
+          "attribution": {
+            "type": "string"
+          },
+          "motivation": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "focus_regions": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "sectors": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "defensive_focus": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "profile_version": {
+            "type": "string"
+          },
+          "last_modified": {
+            "type": "string",
+            "format": "date"
+          },
+          "source": {
+            "type": "string",
+            "format": "uri"
+          },
+          "source_tier": {
+            "enum": [
+              "A",
+              "B",
+              "C",
+              "D"
+            ]
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}
