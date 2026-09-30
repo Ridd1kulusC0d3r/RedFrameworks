@@ -11,8 +11,8 @@
 [![Freshness](https://github.com/Ridd1kulusC0d3r/RedFrameworks/actions/workflows/freshness.yml/badge.svg)](https://github.com/Ridd1kulusC0d3r/RedFrameworks/actions/workflows/freshness.yml)
 [![ATT&CK](https://img.shields.io/badge/knowledge-MITRE%20ATT%26CK-6f42c1)](https://attack.mitre.org/)
 [![STIX 2.1](https://img.shields.io/badge/export-STIX%202.1-blue)](docs/api.md)
-[![API v2](https://img.shields.io/badge/API-v2-7fbcff)](docs/api.md)
-[![Continuous Intelligence](https://img.shields.io/badge/platform-v4-f04f67)](docs/next-evolutions.md)
+[![API v3](https://img.shields.io/badge/API-v3-7fbcff)](docs/api.md)
+[![OffSec Portal](https://img.shields.io/badge/platform-v5-f04f67)](docs/next-evolutions.md)
 
 [**Live Knowledge Base**](https://ridd1kulusc0d3r.github.io/RedFrameworks/) ·
 [**Roadmaps**](docs/roadmaps/README.md) ·
@@ -54,9 +54,9 @@ The public site is generated directly from the repository data and includes:
 - standards/version intelligence;
 - visible NOT VERIFIED research registry;
 - scorecard and retest-regression dashboards;
-- versioned Static API v2;
+- versioned Static API v3;
 - reproducible snapshots and semantic diffs;
-- STIX 2.1 export.
+- books, certifications and objective-driven learning paths;\n- command palette, bookmarks and graph path queries;\n- Verification Engine and Research Workspace;\n- Neo4j, MISP and ATT&CK Navigator exports;\n- technique intelligence pages;\n- STIX 2.1 export.
 
 ---
 
@@ -182,7 +182,7 @@ flowchart LR
 |---|---|
 | [frameworks.yaml](frameworks.yaml) | methodologies, standards and knowledge models |
 | [catalog.yaml](catalog.yaml) | verified, community, commercial, legacy and NOT VERIFIED research entries |
-| [relationships.yaml](relationships.yaml) | curated graph edges |
+| [relationships.yaml](relationships.yaml) | curated graph edges |\n| [resources.yaml](resources.yaml) | books and certifications |\n| [learning-paths.yaml](learning-paths.yaml) | objective-driven paths across frameworks, tools and resources |
 | [data/lifecycle.yaml](data/lifecycle.yaml) | renames, legacy transitions and lifecycle events |
 | [data/changelog.yaml](data/changelog.yaml) | machine-readable platform history |
 | [schemas/](schemas/) | JSON Schemas and validation contracts |
@@ -303,7 +303,7 @@ See [Research Registry](docs/watchlist.md) and [Verification Backlog](docs/gap-a
 
 ---
 
-## Static API v2 & STIX
+## Static API v3 & interoperability
 
 Documentation: [docs/api.md](docs/api.md)
 
@@ -336,7 +336,7 @@ The repository focuses on **methodology, modeling, evidence and defensive valida
 
 ## Project status
 
-### Platform v4 · Continuous Intelligence
+### Platform v5 · OffSec Intelligence Portal
 
 | Capability | Status |
 |---|---|
@@ -350,11 +350,11 @@ The repository focuses on **methodology, modeling, evidence and defensive valida
 | Retest regression detection | ✅ |
 | Reproducible snapshots | ✅ |
 | Semantic release diffs | ✅ |
-| Static API v2 + v1 compatibility | ✅ |
+| Static API v3 + v1/v2 compatibility | ✅ |\n| Books & certifications | ✅ |\n| Learning paths | ✅ |\n| Verification Engine | ✅ |\n| Graph path queries | ✅ |\n| Technique Intelligence | ✅ |\n| Neo4j / MISP / Navigator exports | ✅ |\n| Command palette & bookmarks | ✅ |
 | OpenCTI interoperability | ✅ |
 | Redesigned Pages UI | ✅ |
 
-See [CHANGELOG.md](CHANGELOG.md) and [v5 roadmap](docs/next-evolutions.md).
+See [CHANGELOG.md](CHANGELOG.md) and [v6 roadmap](docs/next-evolutions.md).
 
 ---
 
