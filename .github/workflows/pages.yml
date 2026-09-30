@@ -60,7 +60,8 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         shell: bash
         run: |
-          gh api --method PUT "repos/${GITHUB_REPOSITORY}/pages" -f build_type=workflow
+          gh api --method PUT "repos/${GITHUB_REPOSITORY}/pages" -f build_type=workflow \
+            || echo "::warning::Pages settings could not be switched automatically; portable branch fallback remains available."
       - name: Configure Pages
         uses: actions/configure-pages@v5
         with:
