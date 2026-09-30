@@ -1,0 +1,66 @@
+updated: "2026-09-29"
+schema_version: "1.0"
+
+paths:
+  - id: offsec-foundations
+    name: "OffSec Foundations"
+    audience: "beginner-intermediate"
+    domains: ["penetration-testing", "network", "reporting"]
+    frameworks: ["ptes", "nist-sp-800-115", "mitre-attack"]
+    tools: ["wireshark", "nuclei", "owasp-zap", "burp-suite"]
+    books: ["practical-packet-analysis-3e", "security-engineering-3e"]
+    certifications: ["htb-cpts", "giac-gpen", "offsec-oscp"]
+
+  - id: web-appsec
+    name: "Web & Application Security"
+    audience: "intermediate-advanced"
+    domains: ["web", "api", "application-security"]
+    frameworks: ["owasp-wstg", "owasp-asvs", "owasp-api-top10", "owasp-samm"]
+    tools: ["burp-suite", "owasp-zap", "nuclei", "semgrep"]
+    books: ["bug-bounty-bootcamp", "threat-modeling-shostack"]
+    certifications: ["htb-cwes", "htb-cwee", "giac-gwapt", "offsec-oswe", "portswigger-bscp"]
+
+  - id: cloud-identity
+    name: "Cloud & Identity Assessment"
+    audience: "intermediate-advanced"
+    domains: ["cloud", "identity", "kubernetes"]
+    frameworks: ["csa-ccm", "nist-csf-2", "nist-sp-800-207", "mitre-attack"]
+    tools: ["cloudfox", "prowler", "scoutsuite", "cartography", "kubehound", "kube-bench", "trivy"]
+    books: ["security-engineering-3e", "threat-modeling-shostack"]
+    certifications: ["offsec-oscp", "offsec-osep", "giac-gpen"]
+
+  - id: purple-detection
+    name: "Purple Team & Detection Engineering"
+    audience: "intermediate-advanced"
+    domains: ["purple-team", "detection", "threat-hunting"]
+    frameworks: ["mitre-attack", "mitre-d3fend", "mitre-car", "ocsf", "atomic-red-team"]
+    tools: ["vectr", "sigma", "velociraptor", "osquery", "zeek", "suricata", "falco"]
+    books: ["intelligence-driven-ir-2e", "practical-packet-analysis-3e"]
+    certifications: ["giac-gpen"]
+
+  - id: reverse-malware
+    name: "Reverse Engineering & Malware Research"
+    audience: "advanced"
+    domains: ["reverse-engineering", "malware-analysis", "dfir"]
+    frameworks: ["mitre-attack", "mitre-cwe", "mitre-capec"]
+    tools: ["ghidra", "yara-x", "volatility3", "frida"]
+    books: ["ghidra-book-2e", "practical-malware-analysis", "malware-data-science"]
+    certifications: ["offsec-osed", "giac-gxpn"]
+
+  - id: ai-security
+    name: "AI / GenAI Security"
+    audience: "intermediate-advanced"
+    domains: ["ai-genai", "ai-security"]
+    frameworks: ["mitre-atlas", "owasp-genai", "nist-ai-rmf-genai"]
+    tools: ["pyrit", "garak"]
+    books: ["threat-modeling-shostack", "security-engineering-3e"]
+    certifications: ["offsec-osai"]
+
+  - id: secure-supply-chain
+    name: "Secure Software & Supply Chain"
+    audience: "intermediate"
+    domains: ["secure-development", "software-supply-chain"]
+    frameworks: ["nist-ssdf", "slsa", "openssf-scorecard", "owasp-samm", "owasp-asvs"]
+    tools: ["semgrep", "trivy", "checkov"]
+    books: ["security-engineering-3e", "threat-modeling-shostack"]
+    certifications: []

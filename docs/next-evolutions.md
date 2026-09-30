@@ -1,95 +1,100 @@
-# Platform v4 Complete & v5 Roadmap
+# Platform v5 Complete & v6 Roadmap
 
-RedFrameworks v4 turns the project into a **Continuous Security Intelligence Catalog**.
+RedFrameworks v5 is the **OffSec Intelligence Portal** release.
 
-## Platform v4 — complete
+## Platform v5 — complete
 
-### Standards intelligence
+### Ecosystem expansion
 
-- [x] ATT&CK version intelligence
-- [x] ATLAS monthly content intelligence
-- [x] D3FEND ontology version intelligence
-- [x] OWASP GenAI / Agentic edition tracking
-- [x] NIST AI 600-1 registry
-- [x] primary-source standards watcher
-- [x] successor / rename / deprecation dataset
-
-### Catalog intelligence
-
-- [x] all previously omitted candidates included
-- [x] explicit NOT VERIFIED status
-- [x] Tier D verification boundary
-- [x] research candidates exposed in web/API/entity pages
-- [x] provenance score preserved separately from verification state
-
-### Relationship intelligence
-
-- [x] per-edge confidence
-- [x] per-edge provenance
-- [x] source references
-- [x] ATT&CK ↔ D3FEND defensive-context examples
-- [x] ATLAS ↔ OWASP ↔ NIST conceptual AI crosswalk
-
-### Measurement intelligence
-
-- [x] scorecard aggregation
-- [x] longitudinal coverage series
-- [x] retest regression detection
-- [x] evidence maturity trend
-- [x] dashboard-ready JSON outputs
-
-### Release intelligence
-
-- [x] reproducible catalog snapshots
-- [x] semantic catalog diff engine
-- [x] tag-driven release snapshots
-- [x] release-to-release diff generation
-- [x] machine-readable changelog
-
-### Platform
-
-- [x] API v2
-- [x] v1 compatibility
-- [x] Python consumer
-- [x] TypeScript consumer
-- [x] shell consumer
-- [x] OpenCTI interoperability example
-- [x] complete GitHub Pages redesign
-
-## Platform v5 — ecosystem platform
-
-### Data contracts
-
-- [ ] stable public JSON Schema for API v2 payloads
-- [ ] signed release manifests
-- [ ] dataset integrity verification examples
-- [ ] formal deprecation policy for API versions
+- [x] 20 additional verified frameworks / standards
+- [x] expanded OffSec, AppSec, cloud, detection and reverse-engineering tooling
+- [x] curated book catalog
+- [x] certification catalog
+- [x] objective-driven learning paths
 
 ### Research automation
 
-- [ ] source discovery queue for NOT VERIFIED entries
-- [ ] maintainer / license metadata enrichment
-- [ ] automated archive / successor suggestions
-- [ ] evidence-assisted promotion PRs requiring human review
+- [x] source-discovery queue through missing canonical-source signals
+- [x] maintainer / owner metadata enrichment
+- [x] SPDX license metadata enrichment
+- [x] archive / lifecycle signals
+- [x] verification-readiness scoring
+- [x] evidence-assisted, human-gated promotion PR workflow
 
-### Graph evolution
+### Graph intelligence
 
-- [ ] graph clustering by domain
-- [ ] graph path queries
-- [ ] relationship provenance explorer
-- [ ] ATT&CK / ATLAS technique pages connected to defensive evidence
+- [x] domain-aware graph styling
+- [x] shortest curated path query
+- [x] per-edge confidence and provenance explorer
+- [x] technique intelligence pages
+- [x] framework ↔ tool relationship expansion
 
-### Integrations
+### Interoperability
 
-- [ ] OpenCTI enrichment package
-- [ ] MISP-compatible export
-- [ ] ATT&CK Navigator generation from catalog queries
-- [ ] optional Neo4j export
-- [ ] reusable client package for Python and TypeScript
+- [x] STIX / OpenCTI
+- [x] MISP-compatible non-IOC reference export
+- [x] ATT&CK Navigator generator
+- [x] Neo4j node / relationship export
+- [x] Python API client
+- [x] TypeScript API client
 
 ### Measurement platform
 
-- [ ] import analyst scorecards through a documented schema
-- [ ] compare multiple scenarios / domains
-- [ ] regression history across releases
-- [ ] evidence-quality heatmaps
+- [x] scorecard JSON Schema
+- [x] local browser scorecard import
+- [x] multi-scenario summary
+- [x] regression history
+- [x] evidence maturity
+- [x] domain evidence heatmap
+
+### Public experience
+
+- [x] dynamic GitHub Pages portal
+- [x] Ctrl/Cmd+K command palette
+- [x] local bookmarks
+- [x] shareable Query Builder state
+- [x] learning-path explorer
+- [x] books / certification explorer
+- [x] Research Workspace
+- [x] intelligence timeline
+- [x] light / dark presentation
+- [x] responsive OffSec-oriented visual system
+
+### Data contracts & release integrity
+
+- [x] API v3 JSON Schemas
+- [x] formal API deprecation policy
+- [x] release SHA-256 checksums
+- [x] GitHub build-provenance attestation
+- [x] reproducible snapshots and semantic diffs
+
+## Platform v6 — collaborative intelligence
+
+### Knowledge expansion
+
+- [ ] larger technique-level ATT&CK / ATLAS knowledge graph
+- [ ] richer D3FEND and detection-source mappings
+- [ ] public framework version-diff viewer
+- [ ] contributor-curated domain packs
+
+### Research operations
+
+- [ ] external-source evidence attachments
+- [ ] reviewer assignment and promotion SLA
+- [ ] confidence history per catalog entity
+- [ ] provenance change notifications
+
+### Interoperability
+
+- [ ] packaged Python SDK release
+- [ ] packaged TypeScript SDK release
+- [ ] MISP galaxy / object templates
+- [ ] optional Neo4j deployment reference
+- [ ] OpenCTI enrichment connector reference
+
+### Measurement
+
+- [ ] organization-local workspace import/export
+- [ ] signed evidence bundles
+- [ ] scenario portfolios
+- [ ] coverage change alerts

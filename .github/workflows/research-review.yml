@@ -1,0 +1,41 @@
+name: Research promotion packet
+on:
+  workflow_dispatch:
+    inputs:
+      candidate_id:
+        description: "NOT VERIFIED catalog ID"
+        required: true
+        type: string
+permissions:
+  contents: write
+  pull-requests: write
+jobs:
+  packet:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.13"
+      - name: Install dependency
+        run: python -m pip install --disable-pip-version-check PyYAML
+      - name: Collect provenance signals
+        run: |
+          python scripts/check_upstreams.py --json upstream-health.json --report upstream-health.md
+          python scripts/build_verification_queue.py --json verification-queue.json --report verification-queue.md
+      - name: Generate human-review packet
+        run: python scripts/create_review_packet.py --id "${{ inputs.candidate_id }}" --verification verification-queue.json --output "research/reviews/${{ inputs.candidate_id }}.md"
+      - name: Open evidence-assistance pull request
+        env:
+          GH_TOKEN: ${{ github.token }}
+          CANDIDATE: ${{ inputs.candidate_id }}
+        shell: bash
+        run: |
+          BRANCH="research-review/${CANDIDATE}-${GITHUB_RUN_ID}"
+          git config user.name "redframeworks-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout -b "$BRANCH"
+          git add "research/reviews/${CANDIDATE}.md"
+          git commit -m "research: add evidence packet for ${CANDIDATE}"
+          git push origin "$BRANCH"
+          gh pr create --base main --head "$BRANCH" --title "Research review: ${CANDIDATE}" --body "Automated evidence packet for human provenance and promotion review. This PR does not change catalog verification status."

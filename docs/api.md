@@ -1,56 +1,61 @@
-# Static API v2
+# Static API v3
 
-RedFrameworks publishes a read-only API generated from the canonical repository data.
+RedFrameworks v5 publishes a read-only API generated from the canonical repository data.
 
-Base URL:
+Base:
 
 `https://ridd1kulusc0d3r.github.io/RedFrameworks/`
 
+## Discovery
+
+`/api/version.json` describes the current contract, supported versions, counts and v3 endpoints.
+
 ## Version contract
 
-| Path | Status | Purpose |
+| Version | Status | Scope |
 |---|---|---|
-| `/api/version.json` | current | API discovery and supported versions |
-| `/api/v1/` | compatibility | original catalog + relationship contract |
-| `/api/v2/` | current | enriched v4 intelligence contract |
-| `/api/` | compatibility alias | convenient unversioned access |
+| v1 | compatibility | catalog + relationships |
+| v2 | compatibility | provenance + continuous intelligence |
+| v3 | current | ecosystem portal, resources, learning paths, research and technique intelligence |
 
-## v2 endpoints
+## v3 endpoints
 
 | Endpoint | Purpose |
 |---|---|
-| `/api/v2/catalog.json` | normalized frameworks, platforms, tools and NOT VERIFIED research candidates |
-| `/api/v2/not-verified.json` | research candidates requiring verification |
-| `/api/v2/frameworks.json` | canonical frameworks dataset |
-| `/api/v2/relationships.json` | graph edges with confidence and provenance |
-| `/api/v2/standards.json` | standards/version intelligence |
-| `/api/v2/successors.json` | renames, successors and deprecations |
-| `/api/v2/ai-crosswalk.json` | conceptual AI security crosswalk |
-| `/api/v2/attack-d3fend.json` | selected defensive relationship examples |
-| `/api/v2/lifecycle.json` | renames, legacy transitions and lifecycle events |
-| `/api/v2/changelog.json` | machine-readable platform changes |
-| `/api/v2/releases/` | release manifests |
+| `/api/v3/index.json` | API discovery and object counts |
+| `/api/v3/catalog.json` | normalized frameworks and tools |
+| `/api/v3/frameworks.json` | canonical frameworks dataset |
+| `/api/v3/relationships.json` | graph edges with confidence and provenance |
+| `/api/v3/not-verified.json` | visible research candidates |
+| `/api/v3/resources.json` | books and certifications |
+| `/api/v3/learning-paths.json` | objective-driven learning paths |
+| `/api/v3/verification-queue.json` | NOT VERIFIED promotion-readiness signals |
+| `/api/v3/techniques.json` | ATT&CK technique intelligence derived from validation examples |
+| `/api/v3/standards.json` | standards/version intelligence |
+| `/api/v3/successors.json` | renames, successors and deprecations |
+| `/api/v3/ai-crosswalk.json` | conceptual AI security crosswalk |
+| `/api/v3/attack-d3fend.json` | selected ATT&CK ↔ D3FEND defensive context |
+| `/api/v3/lifecycle.json` | lifecycle events |
+| `/api/v3/changelog.json` | machine-readable platform changes |
+| `/api/v3/releases/` | release manifests |
 
-Additional generated artifacts:
+## Interoperability exports
 
-- `/api/redframeworks-stix-2.1.json`
-- `/api/opencti-import-manifest.json`
-- `/data/upstream-health.json`
-- `/data/coverage-series.json`
-- `/data/regressions.json`
-- `/data/evidence-trend.json`
+Pages also publishes:
 
-## Consumer examples
+- STIX 2.1;
+- OpenCTI import manifest;
+- Neo4j nodes and relationships;
+- ATT&CK Navigator layer;
+- non-IOC MISP reference event;
+- reproducible catalog snapshot.
 
-See:
+## Client examples
 
-- `examples/consumers/python.py`
-- `examples/consumers/typescript.ts`
-- `examples/consumers/shell.sh`
-- `examples/opencti/README.md`
-
-## Stability
+- `sdk/python/redframeworks.py`
+- `sdk/typescript/redframeworks.ts`
+- `examples/consumers/`
 
 Stable integration keys are entity IDs, not display names.
 
-The v2 contract adds provenance, verification-state, standards intelligence and measurement datasets without silently redefining v1.
+See [API deprecation policy](api-deprecation-policy.md).

@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ridd1kulusc0d3r.github.io/RedFrameworks/schemas/api-v3-index.schema.json",
+  "title": "RedFrameworks API v3 index",
+  "type": "object",
+  "required": [
+    "api",
+    "current",
+    "supported",
+    "updated",
+    "counts",
+    "endpoints"
+  ],
+  "properties": {
+    "api": {
+      "const": "RedFrameworks Static API"
+    },
+    "current": {
+      "const": "v3"
+    },
+    "supported": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "updated": {
+      "type": "string"
+    },
+    "counts": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "integer",
+        "minimum": 0
+      }
+    },
+    "endpoints": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "string"
+      }
+    }
+  },
+  "additionalProperties": false
+}

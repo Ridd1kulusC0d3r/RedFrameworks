@@ -5,54 +5,39 @@ flowchart LR
   V1["v1 · Knowledge Base"] --> V2["v2 · Interactive Catalog"]
   V2 --> V3["v3 · Knowledge Graph"]
   V3 --> V4["v4 · Continuous Intelligence"]
-  V4 --> V5["v5 · Ecosystem Platform"]
+  V4 --> V5["v5 · OffSec Intelligence Portal"]
+  V5 --> V6["v6 · Collaborative Intelligence"]
 ~~~
 
 ## v1 — Knowledge Base
-
 Status: **complete**
-
-Taxonomy, methodologies, evidence model, templates and machine-readable catalogs.
 
 ## v2 — Interactive Catalog
-
 Status: **complete**
-
-GitHub Pages, search/filtering, ATT&CK Navigator examples, Attack Flow examples, freshness automation and relationship explorer.
 
 ## v3 — Knowledge Graph
-
 Status: **complete**
-
-Schemas, provenance, STIX, entity pages, API, comparison, multilingual UI and evidence engineering.
 
 ## v4 — Continuous Intelligence
-
 Status: **complete**
 
-- visible NOT VERIFIED research registry;
-- standards/version intelligence;
-- primary-source version watcher;
-- successor/deprecation tracking;
-- relationship provenance;
-- ATT&CK ↔ D3FEND examples;
-- AI security crosswalks;
-- scorecard aggregation;
-- retest regression detection;
-- evidence trends;
-- reproducible snapshots;
-- semantic release diffs;
-- Static API v2;
-- OpenCTI interoperability;
-- complete public-site redesign.
+## v5 — OffSec Intelligence Portal
+Status: **complete**
 
-## v5 — Ecosystem Platform
+- expanded verified framework and tool catalog;
+- books and certification resources;
+- learning paths;
+- Verification Engine;
+- research review PR workflow;
+- graph path queries and provenance explorer;
+- ATT&CK technique intelligence pages;
+- Neo4j / MISP / Navigator exports;
+- API v3 and SDKs;
+- scorecard schema, heatmaps and scenario comparison;
+- command palette, local bookmarks and dynamic public portal;
+- release checksums and provenance attestations.
 
+## v6 — Collaborative Intelligence
 Status: **next**
 
-- signed data contracts;
-- research enrichment workflows;
-- graph clustering and path queries;
-- Neo4j / MISP export options;
-- reusable client packages;
-- multi-scenario measurement ingestion.
+See `docs/next-evolutions.md` for the detailed v6 roadmap.

@@ -79,6 +79,39 @@ def main():
                         "delta": after - before,
                     })
 
+    domain_rollup = {}
+    for record in records:
+        domain = record["domain"]
+        domain_rollup.setdefault(domain, {metric: [] for metric in METRICS})
+        for metric in METRICS:
+            if metric in record["scores"]:
+                domain_rollup[domain][metric].append(float(record["scores"][metric]))
+
+    heatmap = []
+    for domain, metrics in sorted(domain_rollup.items()):
+        heatmap.append({
+            "domain": domain,
+            "metrics": {
+                metric: round(sum(values) / len(values), 2) if values else None
+                for metric, values in metrics.items()
+            },
+        })
+
+    scenario_summary = []
+    for scenario_id, series in sorted(by_scenario.items()):
+        latest = sorted(series, key=lambda item: item["date"] or "")[-1]
+        scenario_summary.append({
+            "scenario_id": scenario_id,
+            "name": latest["name"],
+            "domain": latest["domain"],
+            "latest_date": latest["date"],
+            "latest_phase": latest["phase"],
+            "composite": latest["composite"],
+            "scores": latest["scores"],
+            "evidence_level": latest["evidence_level"],
+            "result": latest["result"],
+        })
+
     evidence_trend = [{
         "scenario_id": item["scenario_id"],
         "date": item["date"],
@@ -90,7 +123,9 @@ def main():
     (out / "coverage-series.json").write_text(json.dumps({"records": records}, indent=2) + "\n", encoding="utf-8")
     (out / "regressions.json").write_text(json.dumps({"regressions": regressions}, indent=2) + "\n", encoding="utf-8")
     (out / "evidence-trend.json").write_text(json.dumps({"records": evidence_trend}, indent=2) + "\n", encoding="utf-8")
-    print(json.dumps({"records": len(records), "regressions": len(regressions)}))
+    (out / "coverage-heatmap.json").write_text(json.dumps({"domains": heatmap}, indent=2) + "\n", encoding="utf-8")
+    (out / "scenario-summary.json").write_text(json.dumps({"scenarios": scenario_summary}, indent=2) + "\n", encoding="utf-8")
+    print(json.dumps({"records": len(records), "regressions": len(regressions), "domains": len(heatmap), "scenarios": len(scenario_summary)}))
 
 if __name__ == "__main__":
     main()

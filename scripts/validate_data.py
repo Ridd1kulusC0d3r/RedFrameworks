@@ -36,6 +36,8 @@ def main():
     framework_doc = validate_schema("frameworks.yaml", "schemas/frameworks.schema.json")
     catalog_doc = validate_schema("catalog.yaml", "schemas/catalog.schema.json")
     relationships_doc = validate_schema("relationships.yaml", "schemas/relationships.schema.json")
+    resources_doc = validate_schema("resources.yaml", "schemas/resources.schema.json")
+    learning_doc = validate_schema("learning-paths.yaml", "schemas/learning-paths.schema.json")
 
     entries = list(framework_doc.get("frameworks", [])) + list(catalog_doc.get("entries", []))
     ids = [entry["id"] for entry in entries]
@@ -81,6 +83,43 @@ def main():
         if parsed.scheme not in {"http", "https"} or not parsed.netloc:
             raise SystemExit(f"Invalid URL for {entry['id']}: {url}")
 
+    framework_ids = {entry["id"] for entry in framework_doc.get("frameworks", [])}
+    tool_ids = {entry["id"] for entry in catalog_doc.get("entries", [])}
+    book_ids = {entry["id"] for entry in resources_doc.get("books", [])}
+    cert_ids = {entry["id"] for entry in resources_doc.get("certifications", [])}
+
+    resource_ids = list(book_ids) + list(cert_ids)
+    resource_duplicates = sorted({value for value in resource_ids if resource_ids.count(value) > 1})
+    if resource_duplicates:
+        raise SystemExit("Duplicate resource IDs: " + ", ".join(resource_duplicates))
+
+    for path in learning_doc.get("paths", []):
+        checks = [
+            ("frameworks", framework_ids),
+            ("tools", tool_ids),
+            ("books", book_ids),
+            ("certifications", cert_ids),
+        ]
+        for field, known_set in checks:
+            missing = sorted(set(path.get(field, [])) - known_set)
+            if missing:
+                raise SystemExit(f"Learning path {path['id']} has unknown {field}: {', '.join(missing)}")
+
+    scorecard_schema = load_json(ROOT / "schemas/scorecard.schema.json")
+    scorecard_validator = Draft202012Validator(scorecard_schema, format_checker=FormatChecker())
+    scorecard_count = 0
+    for path in sorted((ROOT / "examples/purple-team").glob("scorecard-*.yaml")):
+        scorecard = load_yaml(path)
+        errors = sorted(scorecard_validator.iter_errors(scorecard), key=lambda e: list(e.absolute_path))
+        if errors:
+            lines = []
+            for error in errors:
+                location = ".".join(str(x) for x in error.absolute_path) or "<root>"
+                lines.append(f"{path.relative_to(ROOT)}:{location}: {error.message}")
+            raise SystemExit("\n".join(lines))
+        scorecard_count += 1
+        print(f"OK scorecard schema: {path.relative_to(ROOT)}")
+
     scenario_schema = load_json(ROOT / "schemas/scenario.schema.json")
     scenario_validator = Draft202012Validator(scenario_schema, format_checker=FormatChecker())
     scenario_count = 0
@@ -96,7 +135,11 @@ def main():
         scenario_count += 1
         print(f"OK scenario schema: {path.relative_to(ROOT)}")
 
-    print(f"OK integrity: {len(entries)} entries, {len(seen)} relationships, {len(watch)} watchlist candidates, {scenario_count} scenarios")
+    print(
+        f"OK integrity: {len(entries)} entries, {len(seen)} relationships, "
+        f"{len(resources_doc.get('books', []))} books, {len(resources_doc.get('certifications', []))} certifications, "
+        f"{len(learning_doc.get('paths', []))} learning paths, {scenario_count} scenarios, {scorecard_count} scorecards"
+    )
 
 if __name__ == "__main__":
     main()

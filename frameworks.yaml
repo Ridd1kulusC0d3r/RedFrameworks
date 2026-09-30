@@ -146,3 +146,217 @@ frameworks:
     status: "verified"
     url: "https://caldera.mitre.org/"
     best_for: ["automated adversary emulation", "repeatable assessment workflows"]
+
+  - id: owasp-asvs
+    name: "OWASP Application Security Verification Standard"
+    type: "application-security-standard"
+    domain: ["web", "application-security", "secure-development"]
+    status: "verified"
+    version: "5.0.0"
+    url: "https://owasp.org/www-project-application-security-verification-standard/"
+    best_for: ["application security requirements", "technical control verification", "security testing baselines"]
+    evidence_tier: "A"
+    last_reviewed: "2026-09-29"
+
+  - id: owasp-samm
+    name: "OWASP Software Assurance Maturity Model"
+    type: "software-security-maturity-model"
+    domain: ["application-security", "secure-development", "governance"]
+    status: "verified"
+    version: "2.2.0"
+    url: "https://owasp.org/www-project-samm/"
+    best_for: ["software security maturity assessment", "secure SDLC improvement", "program measurement"]
+    evidence_tier: "A"
+    last_reviewed: "2026-09-29"
+
+  - id: owasp-api-top10
+    name: "OWASP API Security Top 10"
+    type: "application-risk-framework"
+    domain: ["api", "web", "application-security"]
+    status: "verified"
+    version: "2023"
+    url: "https://owasp.org/www-project-api-security/"
+    best_for: ["API risk awareness", "API assessment scoping", "API security requirements"]
+    evidence_tier: "A"
+    last_reviewed: "2026-09-29"
+
+  - id: owasp-masvs
+    name: "OWASP Mobile Application Security Verification Standard"
+    type: "mobile-security-standard"
+    domain: ["mobile", "android", "ios"]
+    status: "verified"
+    version: "2.1.0"
+    url: "https://mas.owasp.org/MASVS/"
+    best_for: ["mobile security requirements", "mobile application assurance", "mobile assessment criteria"]
+    evidence_tier: "A"
+    last_reviewed: "2026-09-29"
+
+  - id: owasp-isvs
+    name: "OWASP IoT Security Verification Standard"
+    type: "iot-security-standard"
+    domain: ["iot", "embedded", "product-security"]
+    status: "verified"
+    url: "https://owasp.org/www-project-iot-security-verification-standard/"
+    best_for: ["IoT security requirements", "embedded-system assurance", "IoT product testing scope"]
+    evidence_tier: "A"
+    last_reviewed: "2026-09-29"
+
+  - id: nist-csf-2
+    name: "NIST Cybersecurity Framework 2.0"
+    type: "cybersecurity-risk-framework"
+    domain: ["enterprise", "governance", "risk-management"]
+    status: "verified"
+    version: "2.0"
+    url: "https://www.nist.gov/cyberframework"
+    best_for: ["cybersecurity risk governance", "capability mapping", "security program communication"]
+    evidence_tier: "A"
+    last_reviewed: "2026-09-29"
+
+  - id: nist-sp-800-53-r5
+    name: "NIST SP 800-53 Rev. 5"
+    type: "security-control-catalog"
+    domain: ["enterprise", "governance", "controls"]
+    status: "verified"
+    version: "Rev. 5 / Release 5.2.0"
+    url: "https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final"
+    best_for: ["security and privacy control baselines", "control assessment planning", "assurance mapping"]
+    evidence_tier: "A"
+    last_reviewed: "2026-09-29"
+
+  - id: nist-sp-800-207
+    name: "NIST SP 800-207 Zero Trust Architecture"
+    type: "security-architecture-framework"
+    domain: ["identity", "enterprise", "zero-trust"]
+    status: "verified"
+    version: "SP 800-207"
+    url: "https://csrc.nist.gov/pubs/sp/800/207/final"
+    best_for: ["zero trust architecture", "identity-centric security design", "security architecture assessment"]
+    evidence_tier: "A"
+    last_reviewed: "2026-09-29"
+
+  - id: nist-ssdf
+    name: "NIST Secure Software Development Framework"
+    type: "secure-development-framework"
+    domain: ["secure-development", "software-supply-chain", "application-security"]
+    status: "verified"
+    version: "1.1"
+    url: "https://csrc.nist.gov/pubs/sp/800/218/final"
+    best_for: ["secure SDLC practices", "software producer assurance", "software supply-chain risk reduction"]
+    evidence_tier: "A"
+    last_reviewed: "2026-09-29"
+
+  - id: cis-controls
+    name: "CIS Critical Security Controls"
+    type: "security-control-framework"
+    domain: ["enterprise", "defense", "governance"]
+    status: "verified"
+    version: "8.1"
+    url: "https://www.cisecurity.org/controls/v8-1"
+    best_for: ["prioritized security safeguards", "defensive capability assessment", "security program baselining"]
+    evidence_tier: "A"
+    last_reviewed: "2026-09-29"
+
+  - id: csa-ccm
+    name: "CSA Cloud Controls Matrix"
+    type: "cloud-control-framework"
+    domain: ["cloud", "governance", "assurance"]
+    status: "verified"
+    version: "4.1"
+    url: "https://cloudsecurityalliance.org/research/cloud-controls-matrix"
+    best_for: ["cloud security assurance", "cloud control assessment", "cloud compliance mapping"]
+    evidence_tier: "A"
+    last_reviewed: "2026-09-29"
+
+  - id: mitre-capec
+    name: "MITRE CAPEC"
+    type: "attack-pattern-knowledge-base"
+    domain: ["application-security", "threat-modeling", "software-security"]
+    status: "verified"
+    url: "https://capec.mitre.org/"
+    best_for: ["attack pattern modeling", "threat modeling", "weakness-to-attack reasoning"]
+    evidence_tier: "A"
+    last_reviewed: "2026-09-29"
+
+  - id: mitre-cwe
+    name: "MITRE CWE"
+    type: "weakness-knowledge-base"
+    domain: ["application-security", "software-security", "hardware-security"]
+    status: "verified"
+    version: "4.20"
+    url: "https://cwe.mitre.org/"
+    best_for: ["weakness classification", "root-cause mapping", "software security analysis"]
+    evidence_tier: "A"
+    last_reviewed: "2026-09-29"
+
+  - id: mitre-car
+    name: "MITRE Cyber Analytics Repository"
+    type: "detection-analytics-knowledge-base"
+    domain: ["detection", "threat-hunting", "enterprise"]
+    status: "verified"
+    url: "https://car.mitre.org/"
+    best_for: ["ATT&CK-aligned analytics", "detection engineering", "analytic rationale"]
+    evidence_tier: "A"
+    last_reviewed: "2026-09-29"
+
+  - id: first-cvss
+    name: "FIRST Common Vulnerability Scoring System"
+    type: "vulnerability-scoring-framework"
+    domain: ["vulnerability-management", "risk", "product-security"]
+    status: "verified"
+    version: "4.0"
+    url: "https://www.first.org/cvss/v4.0/"
+    best_for: ["vulnerability severity communication", "environmental context", "vulnerability assessment"]
+    evidence_tier: "A"
+    last_reviewed: "2026-09-29"
+
+  - id: first-epss
+    name: "FIRST Exploit Prediction Scoring System"
+    type: "vulnerability-prioritization-model"
+    domain: ["vulnerability-management", "threat-intelligence", "risk"]
+    status: "verified"
+    url: "https://www.first.org/epss/"
+    best_for: ["exploitation-likelihood estimation", "vulnerability prioritization", "risk-based remediation"]
+    evidence_tier: "A"
+    last_reviewed: "2026-09-29"
+
+  - id: nist-nice
+    name: "NIST NICE Workforce Framework for Cybersecurity"
+    type: "workforce-framework"
+    domain: ["workforce", "education", "governance"]
+    status: "verified"
+    version: "SP 800-181 Rev. 1"
+    url: "https://csrc.nist.gov/pubs/sp/800/181/r1/final"
+    best_for: ["cybersecurity work roles", "skills and knowledge mapping", "learning-path design"]
+    evidence_tier: "A"
+    last_reviewed: "2026-09-29"
+
+  - id: slsa
+    name: "SLSA"
+    type: "software-supply-chain-framework"
+    domain: ["software-supply-chain", "secure-development", "provenance"]
+    status: "verified"
+    version: "1.2"
+    url: "https://slsa.dev/spec/v1.2/"
+    best_for: ["software artifact provenance", "supply-chain integrity", "source and build assurance"]
+    evidence_tier: "A"
+    last_reviewed: "2026-09-29"
+
+  - id: ocsf
+    name: "Open Cybersecurity Schema Framework"
+    type: "security-data-schema"
+    domain: ["detection", "telemetry", "data-engineering"]
+    status: "verified"
+    url: "https://ocsf.io/"
+    best_for: ["security event normalization", "telemetry interoperability", "detection data engineering"]
+    evidence_tier: "A"
+    last_reviewed: "2026-09-29"
+
+  - id: openssf-scorecard
+    name: "OpenSSF Scorecard"
+    type: "software-supply-chain-assessment"
+    domain: ["software-supply-chain", "open-source", "secure-development"]
+    status: "verified"
+    url: "https://openssf.org/scorecard/"
+    best_for: ["open-source project security posture", "supply-chain risk signals", "repository assurance"]
+    evidence_tier: "A"
+    last_reviewed: "2026-09-29"

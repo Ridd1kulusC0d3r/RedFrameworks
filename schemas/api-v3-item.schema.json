@@ -1,0 +1,75 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ridd1kulusc0d3r.github.io/RedFrameworks/schemas/api-v3-item.schema.json",
+  "title": "RedFrameworks normalized catalog item",
+  "type": "object",
+  "required": [
+    "id",
+    "name",
+    "type",
+    "domains",
+    "status",
+    "model",
+    "summary",
+    "source",
+    "evidence_tier",
+    "provenance_score"
+  ],
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "aliases": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "type": {
+      "type": "string"
+    },
+    "domains": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "status": {
+      "type": "string"
+    },
+    "model": {
+      "type": "string"
+    },
+    "url": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "summary": {
+      "type": "string"
+    },
+    "source": {
+      "type": "string"
+    },
+    "evidence_tier": {
+      "type": "string"
+    },
+    "last_reviewed": {},
+    "provenance_score": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 100
+    },
+    "upstream_health": {
+      "type": "string"
+    },
+    "last_activity": {},
+    "latest_release": {},
+    "verification_note": {}
+  },
+  "additionalProperties": true
+}

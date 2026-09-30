@@ -1,0 +1,232 @@
+updated: "2026-09-29"
+schema_version: "1.0"
+
+books:
+  - id: ghidra-book-2e
+    title: "The Ghidra Book, 2nd Edition"
+    authors: ["Kara Nance", "Chris Eagle"]
+    publisher: "No Starch Press"
+    year: 2026
+    level: "intermediate-advanced"
+    domains: ["reverse-engineering", "malware-analysis"]
+    status: "current"
+    url: "https://nostarch.com/node/831"
+    note: "Reference for Ghidra-based reverse engineering and software analysis."
+
+  - id: intelligence-driven-ir-2e
+    title: "Intelligence-Driven Incident Response, 2nd Edition"
+    authors: ["Rebekah Brown", "Scott J. Roberts"]
+    publisher: "O'Reilly Media"
+    year: 2023
+    level: "intermediate-advanced"
+    domains: ["threat-intelligence", "incident-response", "dfir"]
+    status: "current"
+    url: "https://www.oreilly.com/library/view/intelligence-driven-incident-response/9781098120672/"
+    note: "Connects intelligence analysis and incident response."
+
+  - id: security-engineering-3e
+    title: "Security Engineering, 3rd Edition"
+    authors: ["Ross Anderson"]
+    publisher: "Wiley"
+    year: 2020
+    level: "intermediate-advanced"
+    domains: ["security-engineering", "architecture", "risk"]
+    status: "current-reference"
+    url: "https://www.oreilly.com/library/view/security-engineering-3rd/9781119642787/"
+    note: "Broad systems-security and security-engineering reference."
+
+  - id: threat-modeling-shostack
+    title: "Threat Modeling: Designing for Security"
+    authors: ["Adam Shostack"]
+    publisher: "Wiley"
+    year: 2014
+    level: "intermediate"
+    domains: ["threat-modeling", "architecture", "secure-development"]
+    status: "classic-reference"
+    url: "https://www.oreilly.com/library/view/threat-modeling/9781118810057/"
+    note: "Foundational reference for practical threat modeling and STRIDE."
+
+  - id: bug-bounty-bootcamp
+    title: "Bug Bounty Bootcamp"
+    authors: ["Vickie Li"]
+    publisher: "No Starch Press"
+    year: 2021
+    level: "intermediate"
+    domains: ["web", "application-security", "reporting"]
+    status: "current-reference"
+    url: "https://nostarch.com/node/614"
+    note: "Web vulnerability research and professional reporting reference."
+
+  - id: black-hat-python-2e
+    title: "Black Hat Python, 2nd Edition"
+    authors: ["Justin Seitz", "Tim Arnold"]
+    publisher: "No Starch Press"
+    year: 2021
+    level: "intermediate"
+    domains: ["python", "security-automation", "research"]
+    status: "reference"
+    url: "https://nostarch.com/node/583"
+    note: "Python security-programming reference for controlled lab learning."
+
+  - id: practical-packet-analysis-3e
+    title: "Practical Packet Analysis, 3rd Edition"
+    authors: ["Chris Sanders"]
+    publisher: "No Starch Press"
+    year: 2017
+    level: "beginner-intermediate"
+    domains: ["network", "wireshark", "dfir"]
+    status: "classic-reference"
+    url: "https://nostarch.com/node/392"
+    note: "Packet-analysis and network-investigation reference."
+
+  - id: malware-data-science
+    title: "Malware Data Science"
+    authors: ["Joshua Saxe", "Hillary Sanders"]
+    publisher: "No Starch Press"
+    year: 2018
+    level: "intermediate-advanced"
+    domains: ["malware-analysis", "data-science", "threat-intelligence"]
+    status: "reference"
+    url: "https://nostarch.com/node/460"
+    note: "Data-science methods for malware detection and analysis."
+
+  - id: practical-malware-analysis
+    title: "Practical Malware Analysis"
+    authors: ["Michael Sikorski", "Andrew Honig"]
+    publisher: "No Starch Press"
+    year: 2012
+    level: "intermediate-advanced"
+    domains: ["malware-analysis", "reverse-engineering"]
+    status: "legacy-classic"
+    url: "https://nostarch.com/malware"
+    note: "Classic malware-analysis reference; some tooling details are historically dated."
+
+  - id: red-team-development-operations
+    title: "Red Team Development and Operations"
+    authors: ["Joe Vest", "James Tubberville"]
+    publisher: "Red Team Journal / Independent"
+    year: 2020
+    level: "intermediate"
+    domains: ["red-team", "operations", "methodology"]
+    status: "reference"
+    url: "https://redteam.guide/"
+    note: "Methodology and program-development reference focused on red-team operations."
+
+certifications:
+  - id: offsec-oscp
+    name: "OffSec Certified Professional / OSCP+"
+    provider: "OffSec"
+    level: "intermediate"
+    domains: ["penetration-testing", "active-directory", "web", "cloud-basics"]
+    status: "active"
+    url: "https://www.offsec.com/courses/pen-200/"
+    note: "Hands-on penetration-testing certification path based on PEN-200."
+
+  - id: offsec-osep
+    name: "OffSec Experienced Penetration Tester"
+    provider: "OffSec"
+    level: "advanced"
+    domains: ["penetration-testing", "enterprise", "red-team"]
+    status: "active"
+    url: "https://www.offsec.com/courses/pen-300/"
+    note: "Advanced enterprise penetration-testing certification path."
+
+  - id: offsec-oswe
+    name: "OffSec Web Expert"
+    provider: "OffSec"
+    level: "advanced"
+    domains: ["web", "application-security", "code-review"]
+    status: "active"
+    url: "https://www.offsec.com/courses/web-300/"
+    note: "Advanced web application assessment certification path."
+
+  - id: offsec-osed
+    name: "OffSec Exploit Developer"
+    provider: "OffSec"
+    level: "advanced"
+    domains: ["reverse-engineering", "vulnerability-research", "exploit-development"]
+    status: "active"
+    url: "https://www.offsec.com/courses/exp-301/"
+    note: "Advanced Windows user-mode vulnerability research and exploit-development credential."
+
+  - id: offsec-osai
+    name: "OffSec AI Red Teamer"
+    provider: "OffSec"
+    level: "advanced"
+    domains: ["ai-genai", "ai-security", "red-team"]
+    status: "active"
+    url: "https://www.offsec.com/courses/"
+    note: "OffSec AI red-team certification path (AI-300)."
+
+  - id: htb-cpts
+    name: "HTB Certified Penetration Testing Specialist"
+    provider: "Hack The Box"
+    level: "intermediate"
+    domains: ["penetration-testing", "reporting", "enterprise"]
+    status: "active"
+    url: "https://academy.hackthebox.com/preview/certifications/htb-certified-penetration-testing-specialist"
+    note: "Hands-on penetration-testing certification."
+
+  - id: htb-cwes
+    name: "HTB Certified Web Exploitation Specialist"
+    provider: "Hack The Box"
+    level: "intermediate"
+    domains: ["web", "application-security", "api"]
+    status: "active"
+    url: "https://www.hackthebox.com/certificates"
+    note: "Current HTB web certification that replaced CBBH naming."
+
+  - id: htb-cwee
+    name: "HTB Certified Web Exploitation Expert"
+    provider: "Hack The Box"
+    level: "advanced"
+    domains: ["web", "application-security", "advanced-web"]
+    status: "active"
+    url: "https://academy.hackthebox.com/news/launching-htb-cwee-htb-certified-web-exploitation-expert"
+    note: "Advanced web application security certification."
+
+  - id: giac-gpen
+    name: "GIAC Penetration Tester"
+    provider: "GIAC"
+    level: "intermediate"
+    domains: ["penetration-testing", "enterprise", "reporting"]
+    status: "active"
+    url: "https://www.giac.org/certifications/penetration-tester-gpen"
+    note: "Process-oriented penetration-testing certification."
+
+  - id: giac-gxpn
+    name: "GIAC Exploit Researcher and Advanced Penetration Tester"
+    provider: "GIAC"
+    level: "advanced"
+    domains: ["vulnerability-research", "advanced-pentesting", "reverse-engineering"]
+    status: "active"
+    url: "https://www.giac.org/certifications/exploit-researcher-advanced-penetration-tester-gxpn"
+    note: "Advanced penetration testing and exploit-research certification."
+
+  - id: giac-gwapt
+    name: "GIAC Web Application Penetration Tester"
+    provider: "GIAC"
+    level: "intermediate"
+    domains: ["web", "application-security"]
+    status: "active"
+    url: "https://www.giac.org/certifications/web-application-penetration-tester-gwapt"
+    note: "Web application penetration-testing certification."
+
+  - id: tcm-pnpt
+    name: "Practical Network Penetration Tester"
+    provider: "TCM Security"
+    level: "intermediate"
+    domains: ["penetration-testing", "network", "active-directory", "reporting"]
+    status: "active"
+    url: "https://certifications.tcm-sec.com/pnpt/"
+    note: "Practical network penetration-testing and reporting certification."
+
+  - id: portswigger-bscp
+    name: "Burp Suite Certified Practitioner"
+    provider: "PortSwigger"
+    level: "advanced"
+    domains: ["web", "application-security", "burp-suite"]
+    status: "active"
+    url: "https://portswigger.net/web-security/certification"
+    note: "Practical web-security certification from PortSwigger."
+
