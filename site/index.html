@@ -183,26 +183,63 @@
         </div>
       </section>
 
-      <section id="graph" class="content-section">
+      <section id="graph" class="content-section graph-section">
         <div class="section-heading">
-          <div><span class="section-index">05</span><div><p class="section-kicker">Graph intelligence</p><h2>Trace context, not hype</h2></div></div>
-          <p>Explore clusters, inspect provenance or ask for the shortest curated path between two entities.</p>
+          <div><span class="section-index">06</span><div><p class="section-kicker">Graph intelligence</p><h2>Explore the security knowledge graph</h2></div></div>
+          <div class="heading-actions">
+            <p>Move from standards to tools, behaviors, detection and evidence. Every visible edge carries relationship type, confidence and provenance.</p>
+            <a class="primary-button" href="graph/">Open full graph ↗</a>
+          </div>
         </div>
 
-        <div class="graph-query">
-          <label><span>FROM</span><select id="path-from"></select></label>
-          <span class="path-arrow">→</span>
-          <label><span>TO</span><select id="path-to"></select></label>
-          <button id="find-path" class="primary-button" type="button">Find path</button>
-          <div id="path-result" class="path-result">Select two entities to query the graph.</div>
-        </div>
+        <div id="graph-stats" class="graph-stats"></div>
 
-        <div class="graph-layout">
-          <div class="graph-canvas"><svg id="relationship-graph" viewBox="0 0 1000 580" role="img" aria-label="Knowledge graph"></svg></div>
-          <aside class="graph-sidebar">
-            <label class="graph-select-wrap"><span>FOCUS ENTITY</span><select id="graph-select"></select></label>
-            <div id="graph-detail" class="graph-detail"></div>
-          </aside>
+        <div class="graph-workbench">
+          <div class="graph-toolbar">
+            <label class="graph-control graph-control-wide"><span>FOCUS ENTITY</span><select id="graph-select"></select></label>
+            <label class="graph-control"><span>DEPTH</span><select id="graph-depth"><option value="1">1 hop</option><option value="2">2 hops</option></select></label>
+            <label class="graph-control"><span>MODE</span><select id="graph-mode"><option value="ecosystem">Ecosystem</option><option value="frameworks">Frameworks</option><option value="tools">Tools</option><option value="verified">Verified only</option></select></label>
+            <button id="graph-fit" class="ghost-button" type="button">Fit view</button>
+          </div>
+
+          <div class="graph-route-presets">
+            <span>QUICK ROUTES</span>
+            <button data-route-from="mitre-attack" data-route-to="sigma">ATT&CK → Sigma</button>
+            <button data-route-from="mitre-atlas" data-route-to="pyrit">ATLAS → PyRIT</button>
+            <button data-route-from="nist-ssdf" data-route-to="slsa">SSDF → SLSA</button>
+            <button data-route-from="csa-ccm" data-route-to="prowler">CSA CCM → Prowler</button>
+          </div>
+
+          <div class="graph-query graph-query-v2">
+            <label><span>PATH FROM</span><select id="path-from"></select></label>
+            <span class="path-arrow">→</span>
+            <label><span>PATH TO</span><select id="path-to"></select></label>
+            <button id="find-path" class="primary-button" type="button">Find shortest path</button>
+            <div id="path-result" class="path-result">Select two entities to query the curated graph.</div>
+          </div>
+
+          <div class="graph-layout graph-layout-v2">
+            <div class="graph-stage">
+              <div class="graph-legend">
+                <span><i class="legend-dot framework"></i>Framework</span>
+                <span><i class="legend-dot tool"></i>Tool</span>
+                <span><i class="legend-dot verified"></i>Path</span>
+                <span><i class="legend-line high"></i>High confidence</span>
+                <span><i class="legend-line medium"></i>Medium</span>
+              </div>
+              <div class="graph-canvas">
+                <svg id="relationship-graph" viewBox="0 0 1200 720" role="img" aria-label="Interactive RedFrameworks knowledge graph"></svg>
+              </div>
+            </div>
+            <aside class="graph-sidebar">
+              <div class="graph-side-head"><span>ENTITY INTELLIGENCE</span><a href="graph/">full-screen ↗</a></div>
+              <div id="graph-detail" class="graph-detail"></div>
+              <div class="graph-side-section">
+                <span class="section-kicker">Relationship types</span>
+                <div id="graph-rel-types" class="graph-rel-types"></div>
+              </div>
+            </aside>
+          </div>
         </div>
       </section>
 
