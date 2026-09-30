@@ -65,6 +65,7 @@ jobs:
           python -m json.tool _site-test/api/v3/techniques.json >/dev/null
           python -m json.tool _site-test/api/v3/adversaries.json >/dev/null
           python -m json.tool _site-test/api/v3/intelligence-sources.json >/dev/null
+          python -m json.tool _site-test/api/v3/emulation-plans.json >/dev/null
           python - <<'PY'
           import json
           from jsonschema import Draft202012Validator
@@ -77,5 +78,19 @@ jobs:
               validator.validate(item)
           print("API v3 schemas: OK")
           PY
+      - name: Validate legacy Pages root synchronization
+        run: |
+          rm -rf _pages-root-test
+          mkdir -p _pages-root-test/data
+          python scripts/sync_pages_root.py --source _site-test --target _pages-root-test
+          test -f _pages-root-test/index.html
+          test -f _pages-root-test/styles.css
+          test -f _pages-root-test/app.js
+          test -f _pages-root-test/detail.html
+          test -f _pages-root-test/detail.js
+          test -f _pages-root-test/graph/index.html
+          test -f _pages-root-test/.nojekyll
+          test -f _pages-root-test/api/v3/index.json
+          test -f _pages-root-test/data/catalog.json
       - name: Validate freshness metadata
         run: python scripts/check_freshness.py --report freshness-report.md --json freshness-report.json

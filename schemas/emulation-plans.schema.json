@@ -1,0 +1,91 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ridd1kulusc0d3r.github.io/RedFrameworks/schemas/emulation-plans.schema.json",
+  "title": "RedFrameworks adversary emulation plan metadata",
+  "type": "object",
+  "required": [
+    "updated",
+    "schema_version",
+    "policy",
+    "plans"
+  ],
+  "properties": {
+    "updated": {
+      "type": "string",
+      "format": "date"
+    },
+    "schema_version": {
+      "type": "string"
+    },
+    "policy": {
+      "type": "string"
+    },
+    "plans": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "name",
+          "actor",
+          "attack_group_id",
+          "plan_type",
+          "status",
+          "provider",
+          "source",
+          "purpose",
+          "defensive_focus",
+          "source_tier"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z0-9][a-z0-9-]*$"
+          },
+          "name": {
+            "type": "string"
+          },
+          "actor": {
+            "type": "string"
+          },
+          "attack_group_id": {
+            "type": "string",
+            "pattern": "^(G[0-9]{4})?$"
+          },
+          "plan_type": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string"
+          },
+          "provider": {
+            "type": "string"
+          },
+          "source": {
+            "type": "string",
+            "format": "uri"
+          },
+          "purpose": {
+            "type": "string"
+          },
+          "defensive_focus": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "source_tier": {
+            "enum": [
+              "A",
+              "B",
+              "C",
+              "D"
+            ]
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

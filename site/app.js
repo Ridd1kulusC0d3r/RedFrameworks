@@ -1,6 +1,6 @@
 const state={
   items:[],relationships:[],resources:{books:[],certifications:[]},learningPaths:[],techniques:[],
-  adversaries:[],intelligenceSources:[],
+  adversaries:[],intelligenceSources:[],emulationPlans:[],
   verification:{count:0,entries:[]},standards:[],coverage:[],regressions:[],evidence:[],
   lifecycle:{events:[]},changelog:{releases:[]},heatmap:[],scenarioSummary:[],filtered:[],compare:new Set(),compact:false,
   lang:"en",resourceMode:"books",bookmarks:new Set(),graphPath:{nodes:new Set(),edges:new Set()},
@@ -126,6 +126,7 @@ function renderMetrics(){
     ["Certifications",state.resources.certifications.length],
     ["Techniques",state.techniques.length],
     ["Adversaries",state.adversaries.length],
+    ["Emulation plans",state.emulationPlans.length],
     ["CTI Sources",state.intelligenceSources.length],
     ["Relationships",state.relationships.length],
     ["NOT VERIFIED",state.items.filter(i=>i.status==="not-verified").length]
@@ -291,6 +292,21 @@ function renderAdversaries(){
   ).join("")||'<article class="adversary-card"><h3>No matching profiles</h3><p>Broaden the filters.</p></article>';
 }
 
+function renderEmulationPlans(){
+  const q=$("plan-search").value.trim().toLowerCase();
+  const type=$("plan-type").value;
+  const rows=state.emulationPlans.filter(item=>{
+    const hay=[item.name,item.actor,item.attack_group_id,item.plan_type,item.provider,item.purpose,...(item.defensive_focus||[])].join(" ").toLowerCase();
+    return(!q||hay.includes(q))&&(!type||item.plan_type===type);
+  });
+  $("emulation-plan-grid").innerHTML=rows.map(item=>
+    '<article class="emulation-plan-card"><div class="plan-card-head"><span>'+esc(item.source_tier)+' · '+esc(item.plan_type)+'</span><b>'+esc(item.attack_group_id||"multi")+'</b></div>'+
+    '<h4>'+esc(item.name)+'</h4><p>'+esc(item.purpose)+'</p>'+
+    '<div class="tag-row">'+(item.defensive_focus||[]).slice(0,5).map(v=>'<span class="tag">'+esc(v)+'</span>').join("")+'</div>'+
+    '<div class="plan-card-foot"><span>'+esc(item.provider)+'</span><a href="'+esc(item.source)+'" target="_blank" rel="noopener">official source ↗</a></div></article>'
+  ).join("")||'<article class="emulation-plan-card"><h4>No matching plans</h4><p>Broaden the filters.</p></article>';
+}
+
 function renderIntelSources(){
   $("intel-source-grid").innerHTML=state.intelligenceSources.map(item=>
     '<a class="intel-source-card" href="'+esc(item.url)+'" target="_blank" rel="noopener"><span>'+esc(item.source_tier)+' · '+esc(item.category)+'</span><strong>'+esc(item.name)+'</strong><p>'+esc(item.note)+'</p><small>'+esc((item.focus||[]).join(" · "))+'</small></a>'
@@ -298,164 +314,249 @@ function renderIntelSources(){
 }
 
 function graphEntities(){
-  const ids=new Set(state.relationships.flatMap(edge=>[edge.from,edge.to]));
-  return state.items.filter(item=>ids.has(item.id)).sort((a,b)=>a.name.localeCompare(b.name));
+  return [...state.items].sort((a,b)=>(a.name||"").localeCompare(b.name||""));
 }
 
-function graphAllowed(item,mode){
-  if(!item)return false;
-  if(mode==="frameworks")return item.kind==="framework";
-  if(mode==="tools")return item.kind==="tool";
-  if(mode==="verified")return item.status==="verified";
-  return true;
+function graphCluster(item){
+  const text=[item?.type,...(item?.domains||[])].join(" ").toLowerCase();
+  if(/ai|genai|llm|atlas/.test(text))return "AI / GenAI";
+  if(/cloud|aws|azure|gcp|kubernetes|container|identity/.test(text))return "Cloud / Identity";
+  if(/detection|telemetry|purple|hunting|siem|response/.test(text))return "Detection / Purple";
+  if(/iot|ics|ot|embedded|mobile|firmware/.test(text))return "Edge / IoT / OT";
+  if(/web|api|application|appsec|software|supply-chain/.test(text))return "AppSec / Software";
+  if(/threat-intelligence|adversary|attack|emulation|cti|behavior/.test(text))return "Threat / Emulation";
+  if(item?.kind==="framework")return "Frameworks";
+  return "Operations / Research";
 }
 
-function graphNeighborhood(focus,depth,mode){
-  const map=new Map(state.items.map(item=>[item.id,item]));
-  const degree=new Map();
-  for(const edge of state.relationships){
-    degree.set(edge.from,(degree.get(edge.from)||0)+1);
-    degree.set(edge.to,(degree.get(edge.to)||0)+1);
-  }
+function graphClusterColor(name){
+  return {
+    "Threat / Emulation":"#f24861","Frameworks":"#a997ff","Detection / Purple":"#63d89a",
+    "Cloud / Identity":"#79b9ff","AI / GenAI":"#efbd67","Edge / IoT / OT":"#67d8df",
+    "AppSec / Software":"#ff8d65","Operations / Research":"#8b96a7"
+  }[name]||"#8b96a7";
+}
 
-  const visible=new Set([focus]),depthMap=new Map([[focus,0]]);
-  let frontier=[focus];
-  for(let d=1;d<=depth;d++){
-    const next=[];
-    for(const node of frontier){
-      for(const edge of state.relationships){
-        const neighbor=edge.from===node?edge.to:edge.to===node?edge.from:null;
-        if(!neighbor||visible.has(neighbor))continue;
-        const item=map.get(neighbor);
-        if(!graphAllowed(item,mode))continue;
-        visible.add(neighbor);depthMap.set(neighbor,d);next.push(neighbor);
-      }
+function graphFilteredEdges(){
+  const confidence=$("graph-confidence")?.value||"";
+  const domain=$("graph-domain")?.value||"";
+  const map=new Map(state.items.map(i=>[i.id,i]));
+  return state.relationships.filter(edge=>{
+    if(confidence&&edge.confidence!==confidence)return false;
+    if(domain){
+      const a=map.get(edge.from),b=map.get(edge.to);
+      if(!(a?.domains||[]).includes(domain)&&!(b?.domains||[]).includes(domain))return false;
     }
-    frontier=next;
-  }
-
-  const ranked=[...visible].filter(id=>id!==focus).sort((a,b)=>{
-    const da=depthMap.get(a)||9,db=depthMap.get(b)||9;
-    if(da!==db)return da-db;
-    const deg=(degree.get(b)||0)-(degree.get(a)||0);
-    if(deg)return deg;
-    return(map.get(a)?.name||a).localeCompare(map.get(b)?.name||b);
-  }).slice(0,41);
-  const kept=new Set([focus,...ranked]);
-  const edges=state.relationships.filter(edge=>kept.has(edge.from)&&kept.has(edge.to));
-  return{nodes:[focus,...ranked],edges,depthMap,map};
+    return true;
+  });
 }
 
 function setupGraph(){
   const entities=graphEntities();
   for(const select of[$("graph-select"),$("path-from"),$("path-to")]){
-    select.innerHTML="";optionize(select,entities.map(i=>i.id),id=>entities.find(i=>i.id===id)?.name||id);
+    select.innerHTML="";
+    optionize(select,entities.map(i=>i.id),id=>entities.find(i=>i.id===id)?.name||id);
   }
+  const domains=unique(entities.flatMap(item=>item.domains||[]));
+  $("graph-domain").innerHTML='<option value="">All domains</option>';
+  optionize($("graph-domain"),domains);
   $("graph-select").value=entities.some(i=>i.id==="mitre-attack")?"mitre-attack":entities[0]?.id||"";
   $("path-from").value=entities.some(i=>i.id==="mitre-attack")?"mitre-attack":entities[0]?.id||"";
   $("path-to").value=entities.some(i=>i.id==="sigma")?"sigma":entities.at(-1)?.id||"";
-  renderGraphStats();renderGraph();
+  renderGraph();
 }
 
-function renderGraphStats(){
-  const entities=graphEntities();
-  const domains=unique(entities.flatMap(item=>item.domains||[]));
-  const high=state.relationships.filter(edge=>edge.confidence==="high").length;
-  const types=unique(state.relationships.map(edge=>edge.relation));
-  const metrics=[
-    ["Nodes",entities.length],
-    ["Edges",state.relationships.length],
-    ["Relationship types",types.length],
-    ["Domains",domains.length],
-    ["High confidence",high]
+function renderGraphKpis(edges,nodes){
+  const high=edges.filter(e=>e.confidence==="high").length;
+  const medium=edges.filter(e=>e.confidence==="medium").length;
+  const research=state.items.filter(i=>i.status==="not-verified").length;
+  const values=[
+    ["Visible nodes",nodes.length],["Visible edges",edges.length],["High confidence",high],
+    ["Medium confidence",medium],["Research frontier",research]
   ];
-  $("graph-stats").innerHTML=metrics.map(([label,value])=>
-    '<div class="graph-stat"><strong>'+value+'</strong><span>'+esc(label)+'</span></div>'
+  $("graph-kpis").innerHTML=values.map(([label,value])=>
+    '<div class="graph-kpi"><strong>'+value+'</strong><span>'+esc(label)+'</span></div>'
   ).join("");
 }
 
-function renderGraphRelTypes(edges){
-  const counts=new Map();
-  for(const edge of edges||state.relationships)counts.set(edge.relation,(counts.get(edge.relation)||0)+1);
-  const rows=[...counts.entries()].sort((a,b)=>b[1]-a[1]).slice(0,12);
-  $("graph-rel-types").innerHTML=rows.map(([name,count])=>
-    '<span title="'+esc(name)+'">'+esc(name.replaceAll("-"," "))+' <b>'+count+'</b></span>'
-  ).join("");
+function graphNodeMarkup(item,x,y,radius,classes=""){
+  const label=(item?.name||item?.id||"unknown");
+  const short=label.length>22?label.slice(0,20)+"…":label;
+  const color=graphClusterColor(graphCluster(item));
+  return '<g tabindex="0" role="button" class="graph-node '+classes+'" data-id="'+esc(item.id)+'" transform="translate('+x+' '+y+')">'+
+    '<circle r="'+radius+'" style="stroke:'+color+'"></circle>'+
+    '<text text-anchor="middle" dy="3">'+esc(short)+'</text>'+
+    '<title>'+esc(label+" · "+graphCluster(item))+'</title></g>';
 }
 
-function domainColor(item,index){
-  const palette=["#f24861","#79b9ff","#63d89a","#efbd67","#a997ff","#67d8df","#f58fd5","#8bd16d"];
-  const domain=(item?.domains||[])[0]||"unknown";
-  let hash=0;for(const ch of domain)hash=(hash*31+ch.charCodeAt(0))>>>0;
-  return palette[(hash+index)%palette.length];
+function bindGraphNodes(svg){
+  svg.querySelectorAll(".graph-node").forEach(node=>{
+    const activate=()=>{
+      $("graph-select").value=node.dataset.id;
+      $("graph-mode").value="neighborhood";
+      renderGraph();
+    };
+    node.addEventListener("click",activate);
+    node.addEventListener("keydown",event=>{
+      if(event.key==="Enter"||event.key===" "){event.preventDefault();activate()}
+    });
+  });
+}
+
+function renderNeighborhoodGraph(svg,focus,edges,map){
+  const related=edges.filter(e=>e.from===focus||e.to===focus);
+  const neighbors=unique(related.map(e=>e.from===focus?e.to:e.from)).slice(0,28);
+  const cx=600,cy=340,r=Math.min(245+neighbors.length*2.4,300);
+  let markup="";
+  neighbors.forEach((id,index)=>{
+    const angle=Math.PI*2*index/Math.max(neighbors.length,1)-Math.PI/2;
+    const x=cx+Math.cos(angle)*r,y=cy+Math.sin(angle)*r;
+    const edge=related.find(e=>(e.from===focus&&e.to===id)||(e.to===focus&&e.from===id));
+    const pathClass=state.graphPath.edges.has(edgeKey(focus,id))?" path":"";
+    markup+='<line class="graph-edge '+esc(edge?.confidence||"")+pathClass+'" x1="'+cx+'" y1="'+cy+'" x2="'+x+'" y2="'+y+'"><title>'+esc(edge?.relation||"relationship")+'</title></line>';
+  });
+  const focusItem=map.get(focus);
+  markup+=graphNodeMarkup(focusItem,cx,cy,60,"center"+(state.graphPath.nodes.has(focus)?" path":""));
+  neighbors.forEach((id,index)=>{
+    const angle=Math.PI*2*index/Math.max(neighbors.length,1)-Math.PI/2;
+    const x=cx+Math.cos(angle)*r,y=cy+Math.sin(angle)*r;
+    markup+=graphNodeMarkup(map.get(id),x,y,40,state.graphPath.nodes.has(id)?"path":"");
+  });
+  svg.innerHTML=markup;
+  bindGraphNodes(svg);
+  $("graph-view-label").textContent="FOCUSED NEIGHBORHOOD";
+  $("graph-view-title").textContent=focusItem?.name||focus;
+  return [focusItem,...neighbors.map(id=>map.get(id)).filter(Boolean)];
+}
+
+function renderClusterGraph(svg,edges,map,researchOnly=false){
+  const degree=new Map();
+  for(const edge of edges){
+    degree.set(edge.from,(degree.get(edge.from)||0)+1);
+    degree.set(edge.to,(degree.get(edge.to)||0)+1);
+  }
+  let candidates=researchOnly
+    ?state.items.filter(i=>i.status==="not-verified")
+    :[...degree.keys()].map(id=>map.get(id)).filter(Boolean);
+  const domain=$("graph-domain").value;
+  if(domain)candidates=candidates.filter(i=>(i.domains||[]).includes(domain));
+  candidates.sort((a,b)=>(degree.get(b.id)||0)-(degree.get(a.id)||0)||a.name.localeCompare(b.name));
+  candidates=candidates.slice(0,researchOnly?64:56);
+
+  const groups=new Map();
+  for(const item of candidates){
+    const cluster=graphCluster(item);
+    if(!groups.has(cluster))groups.set(cluster,[]);
+    groups.get(cluster).push(item);
+  }
+  const centers={
+    "Threat / Emulation":[220,170],"Frameworks":[600,125],"AppSec / Software":[990,180],
+    "Cloud / Identity":[1010,500],"Detection / Purple":[610,560],"Edge / IoT / OT":[210,505],
+    "AI / GenAI":[860,335],"Operations / Research":[420,335]
+  };
+  const positions=new Map();
+  for(const [cluster,items] of groups){
+    const [cx,cy]=centers[cluster]||[600,340];
+    const rr=Math.min(42+items.length*3.6,112);
+    items.forEach((item,index)=>{
+      const angle=Math.PI*2*index/Math.max(items.length,1)-Math.PI/2;
+      positions.set(item.id,[cx+Math.cos(angle)*rr,cy+Math.sin(angle)*rr]);
+    });
+  }
+
+  const visible=new Set(candidates.map(i=>i.id));
+  let markup="";
+  for(const edge of edges){
+    if(!visible.has(edge.from)||!visible.has(edge.to))continue;
+    const a=positions.get(edge.from),b=positions.get(edge.to);
+    if(!a||!b)continue;
+    const pathClass=state.graphPath.edges.has(edgeKey(edge.from,edge.to))?" path":"";
+    markup+='<line class="graph-edge '+esc(edge.confidence||"")+pathClass+'" x1="'+a[0]+'" y1="'+a[1]+'" x2="'+b[0]+'" y2="'+b[1]+'"><title>'+esc(edge.relation)+'</title></line>';
+  }
+  for(const item of candidates){
+    const pos=positions.get(item.id);
+    markup+=graphNodeMarkup(item,pos[0],pos[1],researchOnly?30:34,
+      (item.status==="not-verified"?"research-node ":"")+(state.graphPath.nodes.has(item.id)?"path":""));
+  }
+  for(const [cluster,items] of groups){
+    const [cx,cy]=centers[cluster]||[600,340];
+    markup+='<text class="graph-cluster-label" x="'+cx+'" y="'+(cy-128)+'" text-anchor="middle">'+esc(cluster)+' · '+items.length+'</text>';
+  }
+  svg.innerHTML=markup;
+  bindGraphNodes(svg);
+  $("graph-view-label").textContent=researchOnly?"RESEARCH FRONTIER":"DOMAIN CLUSTERS";
+  $("graph-view-title").textContent=researchOnly?state.items.filter(i=>i.status==="not-verified").length+" NOT VERIFIED candidates":groups.size+" ecosystem clusters";
+  return candidates;
+}
+
+function renderGraphDetail(focus,map,edges){
+  const item=map.get(focus);
+  if(!item){$("graph-detail").innerHTML="";return}
+  const related=edges.filter(e=>e.from===focus||e.to===focus);
+  const rels=related.slice(0,18).map(edge=>{
+    const other=edge.from===focus?edge.to:edge.from,otherItem=map.get(other);
+    const refs=(edge.source_refs||[]).join(", ");
+    return '<div class="graph-relation"><div class="graph-relation-top"><b>'+esc(edge.relation)+'</b><span class="confidence-pill '+esc(edge.confidence||"")+'">'+esc(edge.confidence||"unrated")+'</span></div>'+
+      '<span>'+esc(edge.provenance||"curated")+(refs?' · refs: '+esc(refs):'')+'</span><br>'+
+      '<a href="detail.html?type=entity&id='+encodeURIComponent(other)+'">'+esc(otherItem?.name||other)+' →</a></div>';
+  }).join("");
+  $("graph-detail").innerHTML=
+    '<p class="section-kicker">'+esc(graphCluster(item))+'</p><h3>'+esc(item.name||focus)+'</h3>'+
+    '<p>'+esc(item.summary||"Curated relationship context.")+'</p>'+
+    '<div class="graph-entity-meta"><span class="status-badge '+statusClass(item.status)+'">'+esc(item.status)+'</span>'+
+    '<span class="tag">Tier '+esc(item.evidence_tier||"—")+'</span><span class="tag">Provenance '+esc(item.provenance_score??"—")+'</span></div>'+
+    '<div class="tag-row">'+(item.domains||[]).slice(0,7).map(d=>'<span class="tag">'+esc(d)+'</span>').join("")+'</div>'+
+    '<div class="graph-relations">'+(rels||'<span class="empty-mini">No relationship survives the current filters.</span>')+'</div>';
 }
 
 function renderGraph(){
+  const mode=$("graph-mode").value;
+  const map=new Map(state.items.map(i=>[i.id,i]));
+  const edges=graphFilteredEdges();
+  const svg=$("relationship-graph");
   const focus=$("graph-select").value;
-  if(!focus)return;
-  const depth=Number($("graph-depth")?.value||1),mode=$("graph-mode")?.value||"ecosystem";
-  const {nodes,edges,depthMap,map}=graphNeighborhood(focus,depth,mode);
-  const svg=$("relationship-graph"),cx=600,cy=360;
-  const ring1=nodes.filter(id=>(depthMap.get(id)||0)===1);
-  const ring2=nodes.filter(id=>(depthMap.get(id)||0)>=2);
-  const positions=new Map([[focus,{x:cx,y:cy}]]);
-  const place=(ids,radius,offset=0)=>{
-    ids.forEach((id,index)=>{
-      const angle=Math.PI*2*index/Math.max(ids.length,1)-Math.PI/2+offset;
-      positions.set(id,{x:cx+Math.cos(angle)*radius,y:cy+Math.sin(angle)*radius});
-    });
-  };
-  place(ring1,220,0);
-  place(ring2,325,Math.PI/Math.max(ring2.length,1));
+  let visible=[];
+  if(mode==="clusters")visible=renderClusterGraph(svg,edges,map,false);
+  else if(mode==="research")visible=renderClusterGraph(svg,edges,map,true);
+  else visible=renderNeighborhoodGraph(svg,focus,edges,map);
 
-  let markup='<defs><filter id="nodeGlow"><feGaussianBlur stdDeviation="5" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>';
-  for(const edge of edges){
-    const a=positions.get(edge.from),b=positions.get(edge.to);if(!a||!b)continue;
-    const pathClass=state.graphPath.edges.has(edgeKey(edge.from,edge.to))?" path":"";
-    markup+='<line class="graph-edge '+esc(edge.confidence||"") + pathClass+'" x1="'+a.x+'" y1="'+a.y+'" x2="'+b.x+'" y2="'+b.y+'"></line>';
-  }
+  renderGraphKpis(edges,visible);
+  renderGraphDetail(focus,map,edges);
 
-  nodes.forEach((id,index)=>{
-    const pos=positions.get(id);if(!pos)return;
-    const item=map.get(id),name=item?.name||id;
-    const label=name.length>22?name.slice(0,20)+"…":name;
-    const isCenter=id===focus,pathClass=state.graphPath.nodes.has(id)?" path":"";
-    const statusClass=item?.status==="not-verified"?" unverified":"";
-    const kindClass=" kind-"+esc(item?.kind||"entity");
-    const radius=isCenter?55:(item?.kind==="framework"?34:29);
-    markup+='<g tabindex="0" role="button" class="graph-node '+(isCenter?"center":"")+pathClass+statusClass+kindClass+'" data-id="'+esc(id)+'" transform="translate('+pos.x+' '+pos.y+')">'+
-      '<circle r="'+radius+'" style="--node-color:'+domainColor(item,index)+'"></circle>'+
-      '<text text-anchor="middle" dy="'+(isCenter?4:3)+'">'+esc(label)+'</text></g>';
-  });
-  svg.innerHTML=markup;
+  const clusters=unique(visible.filter(Boolean).map(graphCluster));
+  $("graph-legend").innerHTML=clusters.slice(0,8).map(name=>
+    '<span><i style="--legend:'+graphClusterColor(name)+'"></i>'+esc(name)+'</span>'
+  ).join("");
+}
 
-  svg.querySelectorAll(".graph-node").forEach(node=>{
-    const activate=()=>{if(node.dataset.id!==focus){$("graph-select").value=node.dataset.id;renderGraph()}};
-    node.addEventListener("click",activate);
-    node.addEventListener("keydown",e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();activate()}});
-  });
+function findGraphEntity(){
+  const q=$("graph-search").value.trim().toLowerCase();
+  if(!q)return;
+  const item=state.items.find(i=>
+    i.id.toLowerCase()===q||(i.name||"").toLowerCase().includes(q)||(i.aliases||[]).some(a=>a.toLowerCase().includes(q))
+  );
+  if(!item){$("path-result").textContent="Entity not found in the current catalog.";return}
+  $("graph-select").value=item.id;
+  $("graph-mode").value="neighborhood";
+  renderGraph();
+  $("path-result").innerHTML='<strong>Focused:</strong>&nbsp;'+esc(item.name);
+}
 
-  const item=map.get(focus);
-  const direct=state.relationships.filter(edge=>edge.from===focus||edge.to===focus);
-  const rels=direct.slice(0,14).map(edge=>{
-    const other=edge.from===focus?edge.to:edge.from,otherItem=map.get(other);
-    return '<div class="graph-relation"><div><b>'+esc(edge.relation.replaceAll("-"," "))+'</b><span>'+esc(edge.confidence||"unrated")+' confidence</span></div>'+
-      '<a href="detail.html?type=entity&id='+encodeURIComponent(other)+'">'+esc(otherItem?.name||other)+' →</a><small>'+esc(edge.provenance||"curated")+'</small></div>';
-  }).join("");
-
-  $("graph-detail").innerHTML='<p class="section-kicker">'+esc(item?.kind||"entity")+' · '+esc(item?.status||"")+'</p>'+
-    '<h3>'+esc(item?.name||focus)+'</h3><p>'+esc(item?.summary||"Curated relationship context.")+'</p>'+
-    '<div class="graph-scoreline"><span>Provenance <b>'+esc(item?.provenance_score??"—")+'</b></span><span>Direct edges <b>'+direct.length+'</b></span></div>'+
-    '<div class="tag-row">'+(item?.domains||[]).slice(0,6).map(d=>'<span class="tag">'+esc(d)+'</span>').join("")+'</div>'+
-    '<div class="graph-relations">'+rels+'</div>';
-  renderGraphRelTypes(edges);
+function resetGraph(){
+  $("graph-mode").value="neighborhood";$("graph-domain").value="";$("graph-confidence").value="";$("graph-search").value="";
+  const entities=graphEntities();
+  $("graph-select").value=entities.some(i=>i.id==="mitre-attack")?"mitre-attack":entities[0]?.id||"";
+  state.graphPath={nodes:new Set(),edges:new Set()};
+  $("path-result").textContent="Select two entities to trace a relationship path.";
+  renderGraph();
 }
 
 function findGraphPath(){
   const start=$("path-from").value,target=$("path-to").value;
   const adj=new Map();
   for(const edge of state.relationships){
-    if(!adj.has(edge.from))adj.set(edge.from,[]);if(!adj.has(edge.to))adj.set(edge.to,[]);
+    if(!adj.has(edge.from))adj.set(edge.from,[]);
+    if(!adj.has(edge.to))adj.set(edge.to,[]);
     adj.get(edge.from).push(edge.to);adj.get(edge.to).push(edge.from);
   }
   const queue=[[start]],seen=new Set([start]);let found=null;
@@ -469,12 +570,10 @@ function findGraphPath(){
     found.forEach(id=>state.graphPath.nodes.add(id));
     for(let i=0;i<found.length-1;i++)state.graphPath.edges.add(edgeKey(found[i],found[i+1]));
     const map=new Map(state.items.map(i=>[i.id,i]));
-    $("path-result").innerHTML='<strong>'+found.length+' nodes</strong>&nbsp; '+found.map(id=>esc(map.get(id)?.name||id)).join(" → ");
-    $("graph-select").value=start;
-    if(found.length>2&&$("graph-depth"))$("graph-depth").value="2";
-    renderGraph();
+    $("path-result").innerHTML='<strong>'+Math.max(found.length-1,0)+' hops</strong>&nbsp; '+found.map(id=>esc(map.get(id)?.name||id)).join(" → ");
+    $("graph-select").value=start;$("graph-mode").value="neighborhood";renderGraph();
   }else{
-    $("path-result").textContent="No curated path exists between those entities yet.";renderGraph();
+    $("path-result").textContent="No curated relationship path exists between those entities yet.";renderGraph();
   }
 }
 
@@ -620,6 +719,7 @@ function buildCommandIndex(){
   for(const item of state.techniques)list.push({kind:"technique",label:item.id+" · "+item.name,detail:"ATT&CK technique intelligence",href:"detail.html?type=technique&id="+encodeURIComponent(item.id)});
   for(const item of state.adversaries)list.push({kind:"adversary",label:item.name,detail:item.attack_id+" · "+item.actor_type+" · "+(item.aliases||[]).slice(0,3).join(" · "),href:"detail.html?type=adversary&id="+encodeURIComponent(item.id)});
   for(const item of state.intelligenceSources)list.push({kind:"source",label:item.name,detail:item.category+" · "+(item.focus||[]).slice(0,3).join(" · "),href:item.url});
+  for(const item of state.emulationPlans)list.push({kind:"plan",label:item.name,detail:item.actor+" · "+item.plan_type+" · "+(item.defensive_focus||[]).slice(0,3).join(" · "),href:item.source});
   state.commandItems=list;
 }
 
@@ -663,13 +763,14 @@ function setupNavigation(){
 
 async function init(){
   applyTheme();
-  const [catalog,resources,paths,techniques,adversaries,intelligenceSources,verification,standards,coverage,regressions,evidence,heatmap,scenarioSummary,lifecycle,changelog]=await Promise.all([
+  const [catalog,resources,paths,techniques,adversaries,intelligenceSources,emulationPlans,verification,standards,coverage,regressions,evidence,heatmap,scenarioSummary,lifecycle,changelog]=await Promise.all([
     loadJson("data/catalog.json",{items:[],relationships:[],updated:""}),
     loadJson("data/resources.json",{books:[],certifications:[]}),
     loadJson("data/learning-paths.json",{paths:[]}),
     loadJson("data/techniques.json",[]),
     loadJson("data/adversaries.json",{adversaries:[]}),
     loadJson("data/intelligence-sources.json",{sources:[]}),
+    loadJson("data/emulation-plans.json",{plans:[]}),
     loadJson("data/verification-queue.json",{count:0,entries:[]}),
     loadJson("data/standards-intelligence.json",{standards:[]}),
     loadJson("data/coverage-series.json",{records:[]}),
@@ -677,11 +778,11 @@ async function init(){
     loadJson("data/evidence-trend.json",{records:[]}),
     loadJson("data/coverage-heatmap.json",{domains:[]}),
     loadJson("data/scenario-summary.json",{scenarios:[]}),
-    loadJson("data/lifecycle.json",{events:[]}),
-    loadJson("data/changelog.json",{releases:[]})
+    loadJson("api/v3/lifecycle.json",{events:[]}),
+    loadJson("api/v3/changelog.json",{releases:[]})
   ]);
   state.items=catalog.items||[];state.relationships=catalog.relationships||[];state.resources=resources;
-  state.learningPaths=paths.paths||[];state.techniques=techniques||[];state.adversaries=adversaries.adversaries||[];state.intelligenceSources=intelligenceSources.sources||[];state.verification=verification;
+  state.learningPaths=paths.paths||[];state.techniques=techniques||[];state.adversaries=adversaries.adversaries||[];state.intelligenceSources=intelligenceSources.sources||[];state.emulationPlans=emulationPlans.plans||[];state.verification=verification;
   state.standards=standards.standards||[];state.coverage=coverage.records||[];state.regressions=regressions.regressions||[];
   state.evidence=evidence.records||[];state.heatmap=heatmap.domains||[];state.scenarioSummary=scenarioSummary.scenarios||[];state.lifecycle=lifecycle;state.changelog=changelog;
 
@@ -690,10 +791,11 @@ async function init(){
   optionize($("adversary-type"),unique(state.adversaries.map(i=>i.actor_type)));
   optionize($("adversary-motivation"),unique(state.adversaries.flatMap(i=>i.motivation||[])));
   optionize($("adversary-sector"),unique(state.adversaries.flatMap(i=>i.sectors||[])));
+  optionize($("plan-type"),unique(state.emulationPlans.map(i=>i.plan_type)));
   readLocalState();
   $("sidebar-updated").textContent="reviewed "+(catalog.updated||"—");
 
-  renderMetrics();renderStandardsTicker();renderBookmarks();renderLearningPaths();renderTechniques();renderAdversaries();renderIntelSources();
+  renderMetrics();renderStandardsTicker();renderBookmarks();renderLearningPaths();renderTechniques();renderAdversaries();renderEmulationPlans();renderIntelSources();
   setupGraph();renderResearch();renderResources();renderCoverage();renderEvidence();renderRegressions();renderHeatmap();renderScenarioSummary();renderTimeline();
   buildCommandIndex();setupCommandPalette();setupNavigation();
 
@@ -708,15 +810,20 @@ async function init(){
   $("density").addEventListener("click",()=>{state.compact=!state.compact;$("catalog-grid").classList.toggle("compact",state.compact);$("density").textContent=state.compact?"Cards":"Compact";syncUrl()});
   $("export-json").addEventListener("click",()=>downloadFiltered("json"));$("export-csv").addEventListener("click",()=>downloadFiltered("csv"));
   $("technique-search").addEventListener("input",renderTechniques);
-  $("graph-depth").addEventListener("change",renderGraph);
-  $("graph-mode").addEventListener("change",renderGraph);
-  $("graph-fit").addEventListener("click",()=>{state.graphPath={nodes:new Set(),edges:new Set()};$("graph-depth").value="1";$("graph-mode").value="ecosystem";$("graph-select").value="mitre-attack";renderGraph()});
-  document.querySelectorAll("[data-route-from]").forEach(btn=>btn.addEventListener("click",()=>{$("path-from").value=btn.dataset.routeFrom;$("path-to").value=btn.dataset.routeTo;findGraphPath()}));
   $("adversary-search").addEventListener("input",renderAdversaries);
   $("adversary-type").addEventListener("change",renderAdversaries);
   $("adversary-motivation").addEventListener("change",renderAdversaries);
   $("adversary-sector").addEventListener("change",renderAdversaries);
-  $("graph-select").addEventListener("change",renderGraph);$("find-path").addEventListener("click",findGraphPath);
+  $("plan-search").addEventListener("input",renderEmulationPlans);
+  $("plan-type").addEventListener("change",renderEmulationPlans);
+  $("graph-select").addEventListener("change",renderGraph);
+  $("graph-mode").addEventListener("change",renderGraph);
+  $("graph-domain").addEventListener("change",renderGraph);
+  $("graph-confidence").addEventListener("change",renderGraph);
+  $("graph-search").addEventListener("keydown",event=>{if(event.key==="Enter"){event.preventDefault();findGraphEntity()}});
+  $("graph-search").addEventListener("search",()=>{if(!$("graph-search").value)renderGraph()});
+  $("graph-reset").addEventListener("click",resetGraph);
+  $("find-path").addEventListener("click",findGraphPath);
   $("research-search").addEventListener("input",renderResearch);$("research-readiness").addEventListener("change",renderResearch);
   document.querySelectorAll(".resource-tab").forEach(btn=>btn.addEventListener("click",()=>{state.resourceMode=btn.dataset.resource;document.querySelectorAll(".resource-tab").forEach(b=>b.classList.toggle("active",b===btn));renderResources()}));
   $("resource-search").addEventListener("input",renderResources);$("resource-level").addEventListener("change",renderResources);

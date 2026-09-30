@@ -5,28 +5,34 @@
   "status": "release-manifest",
   "counts": {
     "frameworks": 62,
-    "catalog_entries": 125,
+    "catalog_entries": 134,
     "adversaries": 42,
     "canonical_relationships": 89,
-    "resources": 23
+    "resources": 23,
+    "emulation_plans": 13
   },
   "capabilities": [
-    "embedded 1-2 hop graph workbench",
+    "Graph Intelligence v2 with focused neighborhood, domain clusters and research frontier",
     "full-screen graph explorer",
     "pan and zoom",
-    "force and radial layouts",
-    "framework tool and adversary layers",
-    "11 additional verified frameworks",
+    "force and radial graph layouts",
+    "framework tool and adversary graph layers",
+    "confidence and domain filters",
+    "graph entity search and curated pathfinding",
+    "11 additional verified frameworks and standards",
     "20 additional ATT&CK adversary profiles",
     "15 additional curated relationships",
-    "portable static Pages fallback",
-    "dynamic portable detail pages",
-    "expanded README visual system"
+    "9 additional NOT VERIFIED adversary-simulation research candidates",
+    "13 authoritative adversary-emulation plan references",
+    "five-layer adversary-emulation maturity model",
+    "portable dynamic detail pages",
+    "deterministic legacy Pages root synchronization",
+    "README visual and metrics redesign"
   ],
   "compatibility": {
     "api_v1": true,
     "api_v2": true,
     "api_v3": "current"
   },
-  "safety": "Adversary and offensive-security material remains descriptive and focused on authorized testing, defensive validation, resilience, detection and evidence."
+  "safety": "Adversary and operational-platform material is descriptive and intended for authorized testing, controlled labs, defensive validation, detection, resilience and research."
 }

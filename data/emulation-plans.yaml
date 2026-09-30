@@ -1,0 +1,160 @@
+updated: "2026-09-30"
+schema_version: "1.0"
+policy: "Defensive metadata only. RedFrameworks links to authoritative plan sources but does not reproduce command-level procedures."
+
+plans:
+  - id: mitre-apt3
+    name: "MITRE APT3 Adversary Emulation Plan"
+    actor: "APT3"
+    attack_group_id: "G0022"
+    plan_type: "historical-full-emulation"
+    status: "verified-source"
+    provider: "MITRE ATT&CK"
+    source: "https://attack.mitre.org/resources/adversary-emulation-plans/"
+    purpose: "Historical reference for intelligence-driven adversary emulation and defensive measurement."
+    defensive_focus: ["behavior-based validation", "ATT&CK mapping", "detection engineering"]
+    source_tier: "A"
+
+  - id: ctid-apt29
+    name: "CTID APT29 Emulation Plan"
+    actor: "APT29"
+    attack_group_id: "G0016"
+    plan_type: "full-emulation"
+    status: "verified-source"
+    provider: "Center for Threat-Informed Defense"
+    source: "https://ctid.mitre.org/resources/adversary-emulation-library"
+    purpose: "Threat-informed defensive validation using publicly attributed APT29 behavior."
+    defensive_focus: ["identity", "endpoint", "cloud", "behavioral detection"]
+    source_tier: "A"
+
+  - id: ctid-blind-eagle
+    name: "CTID Blind Eagle Emulation Plan"
+    actor: "Blind Eagle"
+    attack_group_id: ""
+    plan_type: "full-emulation"
+    status: "verified-source"
+    provider: "Center for Threat-Informed Defense"
+    source: "https://ctid.mitre.org/resources/adversary-emulation-library"
+    purpose: "Threat-informed defensive validation using a published Blind Eagle emulation plan."
+    defensive_focus: ["email", "endpoint", "identity", "behavioral detection"]
+    source_tier: "A"
+
+  - id: ctid-carbanak
+    name: "CTID Carbanak Emulation Plan"
+    actor: "Carbanak Group"
+    attack_group_id: "G0008"
+    plan_type: "full-emulation"
+    status: "verified-source"
+    provider: "Center for Threat-Informed Defense"
+    source: "https://ctid.mitre.org/resources/adversary-emulation-library"
+    purpose: "Threat-informed defensive validation for financially motivated enterprise behavior."
+    defensive_focus: ["endpoint", "identity", "financial systems", "response"]
+    source_tier: "A"
+
+  - id: ctid-fin6
+    name: "CTID FIN6 Emulation Plan"
+    actor: "FIN6"
+    attack_group_id: "G0037"
+    plan_type: "full-emulation"
+    status: "verified-source"
+    provider: "Center for Threat-Informed Defense"
+    source: "https://ctid.mitre.org/resources/adversary-emulation-library"
+    purpose: "Threat-informed defensive validation for financially motivated threat behavior."
+    defensive_focus: ["identity", "endpoint", "payment environments", "detection"]
+    source_tier: "A"
+
+  - id: ctid-fin7
+    name: "CTID FIN7 Emulation Plan"
+    actor: "FIN7"
+    attack_group_id: "G0046"
+    plan_type: "full-emulation"
+    status: "verified-source"
+    provider: "Center for Threat-Informed Defense"
+    source: "https://ctid.mitre.org/resources/adversary-emulation-library"
+    purpose: "Threat-informed defensive validation for FIN7-associated behavior."
+    defensive_focus: ["identity", "endpoint", "cloud", "financial services"]
+    source_tier: "A"
+
+  - id: ctid-menupass
+    name: "CTID menuPass Emulation Plan"
+    actor: "menuPass"
+    attack_group_id: "G0045"
+    plan_type: "full-emulation"
+    status: "verified-source"
+    provider: "Center for Threat-Informed Defense"
+    source: "https://ctid.mitre.org/projects/menupass-adversary-emulation-plan/"
+    purpose: "Intelligence-driven validation based on publicly reported menuPass behavior."
+    defensive_focus: ["managed services", "identity", "endpoint", "behavioral detection"]
+    source_tier: "A"
+
+  - id: ctid-ocean-lotus
+    name: "CTID OceanLotus Emulation Plan"
+    actor: "OceanLotus / APT32"
+    attack_group_id: "G0050"
+    plan_type: "full-emulation"
+    status: "verified-source"
+    provider: "Center for Threat-Informed Defense"
+    source: "https://ctid.mitre.org/resources/adversary-emulation-library"
+    purpose: "Threat-informed defensive validation for OceanLotus-associated behavior."
+    defensive_focus: ["web", "email", "endpoint", "identity"]
+    source_tier: "A"
+
+  - id: ctid-oilrig
+    name: "CTID OilRig Emulation Plan"
+    actor: "OilRig"
+    attack_group_id: "G0049"
+    plan_type: "full-emulation"
+    status: "verified-source"
+    provider: "Center for Threat-Informed Defense"
+    source: "https://ctid.mitre.org/resources/adversary-emulation-library"
+    purpose: "Threat-informed defensive validation for OilRig-associated behavior."
+    defensive_focus: ["identity", "email", "cloud", "response"]
+    source_tier: "A"
+
+  - id: ctid-sandworm
+    name: "CTID Sandworm Emulation Plan"
+    actor: "Sandworm Team"
+    attack_group_id: "G0034"
+    plan_type: "full-emulation"
+    status: "verified-source"
+    provider: "Center for Threat-Informed Defense"
+    source: "https://ctid.mitre.org/resources/adversary-emulation-library"
+    purpose: "Threat-informed defensive validation emphasizing resilience against disruptive activity."
+    defensive_focus: ["resilience", "critical infrastructure", "identity", "recovery"]
+    source_tier: "A"
+
+  - id: ctid-turla
+    name: "CTID Turla Emulation Plan"
+    actor: "Turla"
+    attack_group_id: "G0010"
+    plan_type: "full-emulation"
+    status: "verified-source"
+    provider: "Center for Threat-Informed Defense"
+    source: "https://ctid.mitre.org/resources/adversary-emulation-library"
+    purpose: "Threat-informed defensive validation for Turla-associated behavior."
+    defensive_focus: ["network telemetry", "endpoint", "identity", "behavioral detection"]
+    source_tier: "A"
+
+  - id: ctid-wizard-spider
+    name: "CTID Wizard Spider Emulation Plan"
+    actor: "Wizard Spider"
+    attack_group_id: "G0102"
+    plan_type: "full-emulation"
+    status: "verified-source"
+    provider: "Center for Threat-Informed Defense"
+    source: "https://ctid.mitre.org/resources/adversary-emulation-library"
+    purpose: "Threat-informed defensive validation with emphasis on financially motivated and ransomware-associated behavior."
+    defensive_focus: ["identity", "endpoint", "ransomware resilience", "recovery"]
+    source_tier: "A"
+
+  - id: ctid-micro-emulation
+    name: "CTID Micro Emulation Plans"
+    actor: "multi-adversary"
+    attack_group_id: ""
+    plan_type: "micro-emulation"
+    status: "verified-source"
+    provider: "Center for Threat-Informed Defense"
+    source: "https://ctid.mitre.org/resources/adversary-emulation-library"
+    purpose: "Focused validation of compound behaviors observed across multiple adversaries."
+    defensive_focus: ["behavioral detection", "telemetry", "repeatable testing"]
+    source_tier: "A"

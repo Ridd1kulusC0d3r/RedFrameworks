@@ -1,27 +1,69 @@
 # GitHub Pages Deployment
 
-The repository contains a GitHub Pages pipeline in `.github/workflows/pages.yml`.
+RedFrameworks currently has GitHub's legacy branch-root Pages build enabled. That legacy build can run at the same time as a custom Pages workflow.
 
-## Automated flow
+The previous architecture allowed two successful deployments for the same commit:
 
-The workflow checks out the repository, installs Python/PyYAML, builds the static catalog from `frameworks.yaml`, `catalog.yaml` and `relationships.yaml`, configures Pages, uploads the artifact and deploys it.
+1. the repository's dynamic `pages build and deployment` workflow, which built the repository root with Jekyll;
+2. the RedFrameworks custom workflow, which built the dynamic portal into `_site`.
 
-The regular documentation CI also builds the site before merge.
+Whichever deployment finished last could become public. This explains why the public URL could occasionally show README-derived content instead of the portal.
 
-## Expected public address
+## v5.2 deployment model
 
-`https://ridd1kulusc0d3r.github.io/RedFrameworks/`
+The custom workflow no longer competes for the Pages deployment environment.
 
-## Enablement behavior
+Instead it:
 
-The workflow now uses `actions/configure-pages@v5` with `enablement: true`, so it attempts to enable Pages automatically.
+1. validates and builds the canonical portal into `_site`;
+2. generates API, entity pages, adversary pages and interoperability exports;
+3. runs `scripts/sync_pages_root.py`;
+4. synchronizes the generated public site into the branch-root source;
+5. commits the generated root artifacts;
+6. lets the repository's existing legacy Pages build publish that exact output.
 
-If the repository token is not allowed to perform the administrative enablement, the fallback is one manual repository setting:
+Generated branch-root artifacts include:
 
-**Settings → Pages → Build and deployment → Source: GitHub Actions**
+~~~text
+.nojekyll
+index.html
+styles.css
+app.js
+assets/
+api/
+entity/
+technique/
+adversary/
+exports/
+data/*.json
+~~~
 
-No long-lived privileged token should be added merely to automate that one switch.
+Canonical YAML source files remain unchanged under `data/`.
 
-## Deployment triggers
+## Why this is deterministic
 
-Deployment runs when `main` changes catalog data, relationship data, site code, the build script or the Pages workflow. It can also be triggered manually.
+Both the repository root and the generated portal now represent the same web application.
+
+There is no longer a race between:
+
+~~~text
+Jekyll README site
+vs.
+custom portal artifact
+~~~
+
+The legacy Pages build simply publishes the synchronized portal.
+
+## CI guard
+
+The Documentation Quality workflow builds the portal into a temporary directory and then runs:
+
+~~~bash
+python scripts/sync_pages_root.py --source _site-test --target _pages-root-test
+~~~
+
+CI verifies that the synchronized root contains the expected index, assets, API and data files.
+
+## Future simplification
+
+If repository settings are later changed to **Pages → GitHub Actions**, the branch-root synchronization can be removed and the custom deployment model can be restored cleanly.
