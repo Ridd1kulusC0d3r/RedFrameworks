@@ -1,4 +1,5 @@
-name: Build and deploy knowledge base
+name: Build and sync public portal
+
 on:
   push:
     branches: [main]
@@ -8,78 +9,75 @@ on:
       - "relationships.yaml"
       - "resources.yaml"
       - "learning-paths.yaml"
-      - "data/**"
+      - "data/**/*.yaml"
+      - "data/releases/*.json"
       - "schemas/**"
       - "examples/**"
       - "sdk/**"
       - "site/**"
-      - "graph/**"
-      - "index.html"
-      - ".nojekyll"
       - "scripts/**"
       - ".github/workflows/pages.yml"
   workflow_dispatch:
+
 permissions:
-  contents: read
-  pages: write
-  id-token: write
+  contents: write
+
 concurrency:
-  group: "pages"
+  group: "pages-source-sync"
   cancel-in-progress: false
+
 jobs:
-  build:
+  build-and-sync:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v6
+        with:
+          ref: main
+          fetch-depth: 0
+
       - name: Set up Python
         uses: actions/setup-python@v6
         with:
           python-version: "3.13"
+
       - name: Install build dependencies
         run: python -m pip install --disable-pip-version-check PyYAML
+
       - name: Collect public upstream health signals
         run: python scripts/check_upstreams.py --json upstream-health.json --report upstream-health.md
+
       - name: Build measurement and research datasets
         run: |
           python scripts/aggregate_scorecards.py --output-dir generated-metrics
           python scripts/build_verification_queue.py --json verification-queue.json --report verification-queue.md
           python scripts/check_standards.py --json standards-watch.json --report standards-watch.md
-      - name: Build dynamic OffSec portal and API v3
+
+      - name: Build portal and API v3
         run: python scripts/build_site.py --output _site
-      - name: Generate v5 interoperability exports
+
+      - name: Generate interoperability exports
         run: |
           python scripts/snapshot_catalog.py --version current --output _site/api/v3/snapshots/current.json
           python scripts/export_stix.py --output-dir _site/exports/stix
           python scripts/export_neo4j.py --output-dir _site/exports/neo4j
           python scripts/export_navigator.py --output _site/exports/attack-navigator/redframeworks-v5.json
           python scripts/export_misp.py --output _site/exports/misp/redframeworks-reference-event.json
-      - name: Publish health and watcher data
-        run: |
           cp upstream-health.json _site/data/upstream-health.json
           cp standards-watch.json _site/data/standards-watch.json
-      - name: Force Pages source to GitHub Actions
-        env:
-          GH_TOKEN: ${{ github.token }}
+
+      - name: Sync generated portal into branch-root Pages source
+        run: python scripts/sync_pages_root.py --source _site --target .
+
+      - name: Commit generated public portal
         shell: bash
         run: |
-          gh api --method PUT "repos/${GITHUB_REPOSITORY}/pages" -f build_type=workflow \
-            || echo "::warning::Pages settings could not be switched automatically; portable branch fallback remains available."
-      - name: Configure Pages
-        uses: actions/configure-pages@v5
-        with:
-          enablement: true
-      - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v4
-        with:
-          path: "_site"
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    needs: build
-    steps:
-      - name: Deploy
-        id: deployment
-        uses: actions/deploy-pages@v4
+          git config user.name "redframeworks-pages-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add .nojekyll index.html styles.css app.js detail.html detail.js assets api entity technique adversary exports graph data/*.json
+          if git diff --cached --quiet; then
+            echo "Public portal already synchronized."
+            exit 0
+          fi
+          git commit -m "chore(pages): sync generated public portal"
+          git push origin HEAD:main

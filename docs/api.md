@@ -33,6 +33,7 @@ Base:
 | `/api/v3/techniques.json` | ATT&CK technique intelligence derived from validation examples |
 | `/api/v3/adversaries.json` | source-attributed adversary intelligence profiles |
 | `/api/v3/intelligence-sources.json` | CTI research and corroboration source library |
+| `/api/v3/emulation-plans.json` | defensive metadata for MITRE / CTID adversary emulation plans |
 | `/api/v3/standards.json` | standards/version intelligence |
 | `/api/v3/successors.json` | renames, successors and deprecations |
 | `/api/v3/ai-crosswalk.json` | conceptual AI security crosswalk |

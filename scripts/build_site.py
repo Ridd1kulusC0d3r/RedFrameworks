@@ -128,6 +128,7 @@ def normalize():
     learning_doc = load_yaml(ROOT / "learning-paths.yaml")
     adversary_doc = load_yaml(ROOT / "data/adversaries.yaml") if (ROOT / "data/adversaries.yaml").exists() else {"adversaries": []}
     intelligence_sources_doc = load_yaml(ROOT / "data/intelligence-sources.yaml") if (ROOT / "data/intelligence-sources.yaml").exists() else {"sources": []}
+    emulation_plans_doc = load_yaml(ROOT / "data/emulation-plans.yaml") if (ROOT / "data/emulation-plans.yaml").exists() else {"plans": []}
     standards_doc = load_yaml(ROOT / "data/standards-intelligence.yaml") if (ROOT / "data/standards-intelligence.yaml").exists() else {"standards": []}
     successors_doc = load_yaml(ROOT / "data/successors.yaml") if (ROOT / "data/successors.yaml").exists() else {"transitions": []}
     ai_crosswalk_doc = load_yaml(ROOT / "data/ai-crosswalk.yaml") if (ROOT / "data/ai-crosswalk.yaml").exists() else {"crosswalks": []}
@@ -192,6 +193,7 @@ def normalize():
         str(learning_doc.get("updated", "")),
         str(adversary_doc.get("updated", "")),
         str(intelligence_sources_doc.get("updated", "")),
+        str(emulation_plans_doc.get("updated", "")),
     )
     return {
         "generated_from": ["frameworks.yaml", "catalog.yaml", "relationships.yaml", "resources.yaml", "learning-paths.yaml"],
@@ -202,6 +204,7 @@ def normalize():
         "learning_paths": learning_doc,
         "adversaries": adversary_doc,
         "intelligence_sources": intelligence_sources_doc,
+        "emulation_plans": emulation_plans_doc,
         "techniques": techniques,
         "_framework_doc": framework_doc,
         "_catalog_doc": catalog_doc,
@@ -352,6 +355,7 @@ def write_api(output, payload):
     write_json(v3 / "learning-paths.json", payload["learning_paths"])
     write_json(v3 / "adversaries.json", payload["adversaries"])
     write_json(v3 / "intelligence-sources.json", payload["intelligence_sources"])
+    write_json(v3 / "emulation-plans.json", payload["emulation_plans"])
     write_json(v3 / "verification-queue.json", verification)
     write_json(v3 / "techniques.json", payload["techniques"])
 
@@ -382,6 +386,7 @@ def write_api(output, payload):
         "learning_paths": len(payload["learning_paths"].get("paths", [])),
         "adversaries": len(payload["adversaries"].get("adversaries", [])),
         "intelligence_sources": len(payload["intelligence_sources"].get("sources", [])),
+        "emulation_plans": len(payload["emulation_plans"].get("plans", [])),
         "not_verified": len(not_verified),
         "relationships": len(relationships),
         "techniques": len(payload["techniques"]),
@@ -400,6 +405,7 @@ def write_api(output, payload):
             "learning_paths": "learning-paths.json",
             "adversaries": "adversaries.json",
             "intelligence_sources": "intelligence-sources.json",
+            "emulation_plans": "emulation-plans.json",
             "verification_queue": "verification-queue.json",
             "techniques": "techniques.json",
             "standards": "standards.json",
@@ -417,6 +423,7 @@ def write_api(output, payload):
         "learning-paths.json": payload["learning_paths"],
         "adversaries.json": payload["adversaries"],
         "intelligence-sources.json": payload["intelligence_sources"],
+        "emulation-plans.json": payload["emulation_plans"],
         "techniques.json": payload["techniques"],
         "verification-queue.json": verification,
     }.items():
@@ -454,14 +461,11 @@ def main():
     write_json(data_dir / "learning-paths.json", payload["learning_paths"])
     write_json(data_dir / "adversaries.json", payload["adversaries"])
     write_json(data_dir / "intelligence-sources.json", payload["intelligence_sources"])
+    write_json(data_dir / "emulation-plans.json", payload["emulation_plans"])
     write_json(data_dir / "techniques.json", payload["techniques"])
     write_json(data_dir / "standards-intelligence.json", private["_standards_doc"])
     write_json(data_dir / "ai-crosswalk.json", private["_ai_crosswalk_doc"])
     write_json(data_dir / "attack-d3fend.json", private["_d3fend_doc"])
-    lifecycle_path = ROOT / "data/lifecycle.yaml"
-    changelog_path = ROOT / "data/changelog.yaml"
-    write_json(data_dir / "lifecycle.json", load_yaml(lifecycle_path) if lifecycle_path.exists() else {"events": []})
-    write_json(data_dir / "changelog.json", load_yaml(changelog_path) if changelog_path.exists() else {"releases": []})
 
     metrics_dir = ROOT / "generated-metrics"
     if metrics_dir.exists():
@@ -497,6 +501,7 @@ def main():
         f"{len(payload['resources'].get('books', []))} books, "
         f"{len(payload['resources'].get('certifications', []))} certifications, "
         f"{len(payload['adversaries'].get('adversaries', []))} adversary profiles, "
+        f"{len(payload['emulation_plans'].get('plans', []))} emulation plans, "
         f"{len(payload['techniques'])} technique pages and API v3 into {output}"
     )
 

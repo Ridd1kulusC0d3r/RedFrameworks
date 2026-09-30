@@ -4,23 +4,38 @@ All notable RedFrameworks platform changes are recorded here. Machine-readable c
 
 ## 5.2.0 — 2026-09-30
 
-### Graph Intelligence
-
-- rebuilt the embedded knowledge graph as an analyst workbench with 1–2 hop exploration, node modes, relationship statistics, provenance context and quick routes;
-- added a dedicated full-screen graph explorer with pan, zoom, force/radial layouts, node filtering and an adversary layer;
-- added a new Graph Intelligence architecture visual.
-
 ### Ecosystem expansion
 
-- added 11 verified frameworks across identity, supply chain, cloud, IoT, governance and application security;
-- expanded adversary intelligence by 20 ATT&CK-tracked groups, bringing public coverage to 42 profiles;
-- added 15 curated framework relationships, bringing the canonical graph to 89 edges.
+- added 11 additional verified frameworks / standards;
+- added 20 additional ATT&CK adversary profiles;
+- added 15 curated graph relationships;
+- added portable dynamic detail pages and a full-screen graph explorer with force/radial layouts.
 
-### GitHub & Pages
+### Graph Intelligence
 
-- redesigned the README around live project counts and visual coverage;
-- added a portable static-data path to support fallback hosting;
-- hardened Pages deployment against legacy branch/root rendering.
+- replaced the single radial graph experience with focused-neighborhood, domain-cluster and research-frontier views;
+- added domain and confidence filters, entity search, graph KPIs, legends and richer provenance details;
+- kept disconnected NOT VERIFIED candidates visible and focusable;
+- retained shortest curated path queries.
+
+### Adversary emulation research
+
+- added nine additional research candidates as NOT VERIFIED / Tier D;
+- enriched existing research candidates with capability-oriented descriptions and domains;
+- added defensive metadata for 13 authoritative MITRE / CTID emulation-plan references;
+- added a five-layer adversary-emulation maturity model.
+
+### Pages reliability
+
+- replaced competing custom-vs-legacy Pages deployment behavior with deterministic branch-root synchronization;
+- generated root index, API, data, entity pages and assets now match the canonical portal build;
+- added root-sync validation to CI.
+
+### GitHub experience
+
+- redesigned README around current dataset metrics;
+- added Graph Intelligence and adversary-emulation architecture visuals;
+- cleaned legacy escaped newline artifacts.
 
 ## 5.1.0 — 2026-09-29
 

@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="description" content="RedFrameworks v5: dynamic OffSec intelligence portal for frameworks, tools, learning paths, certifications, books, defensive validation and threat-informed research.">
   <meta name="theme-color" content="#07090d">
-  <title>RedFrameworks v5.2 · OffSec Intelligence Portal</title>
+  <title>RedFrameworks v5 · OffSec Intelligence Portal</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -15,7 +15,7 @@
     <aside class="sidebar" aria-label="Primary navigation">
       <a class="brand" href="#home">
         <span class="brand-mark">RF</span>
-        <span class="brand-copy"><strong>RedFrameworks</strong><small>OFFSEC INTELLIGENCE · v5.2</small></span>
+        <span class="brand-copy"><strong>RedFrameworks</strong><small>OFFSEC INTELLIGENCE · v5</small></span>
       </a>
 
       <nav class="side-nav">
@@ -174,6 +174,21 @@
         </div>
         <div id="adversary-grid" class="adversary-grid"></div>
 
+        <div class="emulation-library">
+          <figure class="portal-visual embedded-visual">
+            <img src="assets/emulation-maturity.svg" alt="Five-layer adversary emulation maturity model">
+          </figure>
+          <div class="section-heading compact-heading">
+            <div><div><p class="section-kicker">Threat-informed validation</p><h3>Adversary emulation plan library</h3></div></div>
+            <p>High-level metadata for authoritative emulation plans. RedFrameworks keeps the defensive purpose and provenance, not command-level procedures.</p>
+          </div>
+          <div class="plan-toolbar">
+            <input id="plan-search" type="search" placeholder="Search actor, plan, defensive focus…">
+            <select id="plan-type"><option value="">All plan types</option></select>
+          </div>
+          <div id="emulation-plan-grid" class="emulation-plan-grid"></div>
+        </div>
+
         <div class="source-library">
           <div class="section-heading compact-heading">
             <div><div><p class="section-kicker">Research sources</p><h3>CTI source library</h3></div></div>
@@ -183,63 +198,53 @@
         </div>
       </section>
 
-      <section id="graph" class="content-section graph-section">
+      <section id="graph" class="content-section">
         <div class="section-heading">
-          <div><span class="section-index">06</span><div><p class="section-kicker">Graph intelligence</p><h2>Explore the security knowledge graph</h2></div></div>
-          <div class="heading-actions">
-            <p>Move from standards to tools, behaviors, detection and evidence. Every visible edge carries relationship type, confidence and provenance.</p>
-            <a class="primary-button" href="graph/">Open full graph ↗</a>
-          </div>
+          <div><span class="section-index">06</span><div><p class="section-kicker">Graph intelligence</p><h2>Explore the security ecosystem as relationships</h2></div></div>
+          <div class="heading-actions"><p>Switch between focused neighborhoods, domain clusters and the NOT VERIFIED research frontier. Every curated edge carries confidence and provenance.</p><a class="primary-button" href="graph/">Open full graph ↗</a></div>
         </div>
 
-        <div id="graph-stats" class="graph-stats"></div>
+        <figure class="portal-visual embedded-visual">
+          <img src="assets/graph-intelligence.svg" alt="RedFrameworks Graph Intelligence v2 analytical views">
+        </figure>
 
-        <div class="graph-workbench">
-          <div class="graph-toolbar">
-            <label class="graph-control graph-control-wide"><span>FOCUS ENTITY</span><select id="graph-select"></select></label>
-            <label class="graph-control"><span>DEPTH</span><select id="graph-depth"><option value="1">1 hop</option><option value="2">2 hops</option></select></label>
-            <label class="graph-control"><span>MODE</span><select id="graph-mode"><option value="ecosystem">Ecosystem</option><option value="frameworks">Frameworks</option><option value="tools">Tools</option><option value="verified">Verified only</option></select></label>
-            <button id="graph-fit" class="ghost-button" type="button">Fit view</button>
-          </div>
+        <div class="graph-kpis" id="graph-kpis"></div>
 
-          <div class="graph-route-presets">
-            <span>QUICK ROUTES</span>
-            <button data-route-from="mitre-attack" data-route-to="sigma">ATT&CK → Sigma</button>
-            <button data-route-from="mitre-atlas" data-route-to="pyrit">ATLAS → PyRIT</button>
-            <button data-route-from="nist-ssdf" data-route-to="slsa">SSDF → SLSA</button>
-            <button data-route-from="csa-ccm" data-route-to="prowler">CSA CCM → Prowler</button>
-          </div>
+        <div class="graph-controls">
+          <label><span>VIEW</span><select id="graph-mode">
+            <option value="neighborhood">Focused neighborhood</option>
+            <option value="clusters">Domain clusters</option>
+            <option value="research">Research frontier</option>
+          </select></label>
+          <label><span>DOMAIN</span><select id="graph-domain"><option value="">All domains</option></select></label>
+          <label><span>CONFIDENCE</span><select id="graph-confidence">
+            <option value="">All confidence</option>
+            <option value="high">High</option><option value="medium">Medium</option><option value="low">Low</option>
+          </select></label>
+          <label class="graph-search-control"><span>FIND ENTITY</span><input id="graph-search" type="search" placeholder="ATT&CK, CloudFox, VECTR…"></label>
+          <button id="graph-reset" class="ghost-button" type="button">Reset graph</button>
+        </div>
 
-          <div class="graph-query graph-query-v2">
-            <label><span>PATH FROM</span><select id="path-from"></select></label>
-            <span class="path-arrow">→</span>
-            <label><span>PATH TO</span><select id="path-to"></select></label>
-            <button id="find-path" class="primary-button" type="button">Find shortest path</button>
-            <div id="path-result" class="path-result">Select two entities to query the curated graph.</div>
-          </div>
+        <div class="graph-query">
+          <label><span>FROM</span><select id="path-from"></select></label>
+          <span class="path-arrow">→</span>
+          <label><span>TO</span><select id="path-to"></select></label>
+          <button id="find-path" class="primary-button" type="button">Find curated path</button>
+          <div id="path-result" class="path-result">Select two entities to trace a relationship path.</div>
+        </div>
 
-          <div class="graph-layout graph-layout-v2">
-            <div class="graph-stage">
-              <div class="graph-legend">
-                <span><i class="legend-dot framework"></i>Framework</span>
-                <span><i class="legend-dot tool"></i>Tool</span>
-                <span><i class="legend-dot verified"></i>Path</span>
-                <span><i class="legend-line high"></i>High confidence</span>
-                <span><i class="legend-line medium"></i>Medium</span>
-              </div>
-              <div class="graph-canvas">
-                <svg id="relationship-graph" viewBox="0 0 1200 720" role="img" aria-label="Interactive RedFrameworks knowledge graph"></svg>
-              </div>
+        <div class="graph-layout graph-layout-v2">
+          <div class="graph-canvas">
+            <div class="graph-canvas-head">
+              <div><span id="graph-view-label">FOCUSED NEIGHBORHOOD</span><strong id="graph-view-title">MITRE ATT&CK</strong></div>
+              <div id="graph-legend" class="graph-legend"></div>
             </div>
-            <aside class="graph-sidebar">
-              <div class="graph-side-head"><span>ENTITY INTELLIGENCE</span><a href="graph/">full-screen ↗</a></div>
-              <div id="graph-detail" class="graph-detail"></div>
-              <div class="graph-side-section">
-                <span class="section-kicker">Relationship types</span>
-                <div id="graph-rel-types" class="graph-rel-types"></div>
-              </div>
-            </aside>
+            <svg id="relationship-graph" viewBox="0 0 1200 680" role="img" aria-label="RedFrameworks security knowledge graph"></svg>
           </div>
+          <aside class="graph-sidebar">
+            <label class="graph-select-wrap"><span>FOCUS ENTITY</span><select id="graph-select"></select></label>
+            <div id="graph-detail" class="graph-detail"></div>
+          </aside>
         </div>
       </section>
 
@@ -309,13 +314,12 @@
           <article class="roadmap-stage complete"><span>v3</span><b>Knowledge Graph</b><small>API · STIX · provenance</small></article>
           <article class="roadmap-stage complete"><span>v4</span><b>Continuous Intel</b><small>versions · diffs · metrics</small></article>
           <article class="roadmap-stage complete"><span>v5</span><b>OffSec Portal</b><small>paths · resources · queries</small></article>
-          <article class="roadmap-stage complete"><span>v5.1</span><b>Adversary Intel</b><small>APT context · CTI sources</small></article>
-          <article class="roadmap-stage active"><span>v5.2</span><b>Graph Intelligence</b><small>full graph · expanded catalog</small></article>
+          <article class="roadmap-stage active"><span>v5.1</span><b>Adversary Intel</b><small>APT context · CTI sources</small></article>
         </div>
       </section>
 
       <footer class="footer">
-        <div><strong>RedFrameworks v5.2</strong><span>Threat → Behavior → Validation → Detection → Evidence → Retest</span></div>
+        <div><strong>RedFrameworks v5</strong><span>Threat → Behavior → Validation → Detection → Evidence → Retest</span></div>
         <div><a href="api/v3/index.json">API v3</a><a href="exports/stix/">STIX</a><a href="exports/neo4j/">Neo4j</a><a href="exports/misp/">MISP</a><a href="https://github.com/Ridd1kulusC0d3r/RedFrameworks">GitHub</a></div>
       </footer>
     </main>

@@ -3,21 +3,21 @@ releases:
   - version: "5.2.0"
     date: "2026-09-30"
     changes:
+      - type: added
+        area: ecosystem-expansion
+        items: ["11 verified frameworks", "20 adversary profiles", "15 graph relationships", "full-screen graph", "portable detail pages"]
       - type: changed
         area: graph-intelligence
-        items: ["1-2 hop workbench", "full-screen explorer", "pan/zoom", "force and radial layouts", "adversary graph layer"]
+        items: ["focused neighborhood", "domain clusters", "research frontier", "confidence filters", "entity search"]
       - type: added
-        area: framework-expansion
-        items: ["11 verified frameworks", "identity", "supply chain", "cloud", "IoT", "governance"]
-      - type: added
-        area: adversary-intelligence
-        items: ["20 additional ATT&CK group profiles", "42 total profiles"]
-      - type: added
-        area: knowledge-graph
-        items: ["15 curated relationships", "89 total canonical edges"]
-      - type: changed
+        area: adversary-emulation
+        items: ["9 NOT VERIFIED research candidates", "13 authoritative emulation-plan references", "maturity model"]
+      - type: fixed
         area: pages
-        items: ["Actions-source hardening", "portable fallback data paths", "README visual redesign"]
+        items: ["branch-root portal synchronization", "legacy Jekyll overwrite prevention", "root sync CI validation"]
+      - type: changed
+        area: github
+        items: ["README redesign", "real dataset metrics", "two additional SVG visuals"]
 
   - version: "5.1.0"
     date: "2026-09-29"

@@ -40,6 +40,7 @@ def main():
     learning_doc = validate_schema("learning-paths.yaml", "schemas/learning-paths.schema.json")
     adversary_doc = validate_schema("data/adversaries.yaml", "schemas/adversaries.schema.json")
     intelligence_sources_doc = validate_schema("data/intelligence-sources.yaml", "schemas/intelligence-sources.schema.json")
+    emulation_plans_doc = validate_schema("data/emulation-plans.yaml", "schemas/emulation-plans.schema.json")
 
     entries = list(framework_doc.get("frameworks", [])) + list(catalog_doc.get("entries", []))
     ids = [entry["id"] for entry in entries]
@@ -101,6 +102,10 @@ def main():
     if len(source_ids) != len(set(source_ids)):
         raise SystemExit("Duplicate intelligence source IDs")
 
+    plan_ids = [entry["id"] for entry in emulation_plans_doc.get("plans", [])]
+    if len(plan_ids) != len(set(plan_ids)):
+        raise SystemExit("Duplicate emulation plan IDs")
+
     resource_ids = list(book_ids) + list(cert_ids)
     resource_duplicates = sorted({value for value in resource_ids if resource_ids.count(value) > 1})
     if resource_duplicates:
@@ -153,7 +158,7 @@ def main():
         f"{len(resources_doc.get('books', []))} books, {len(resources_doc.get('certifications', []))} certifications, "
         f"{len(learning_doc.get('paths', []))} learning paths, "
         f"{len(adversary_doc.get('adversaries', []))} adversaries, {len(intelligence_sources_doc.get('sources', []))} CTI sources, "
-        f"{scenario_count} scenarios, {scorecard_count} scorecards"
+        f"{len(emulation_plans_doc.get('plans', []))} emulation plans, {scenario_count} scenarios, {scorecard_count} scorecards"
     )
 
 if __name__ == "__main__":
