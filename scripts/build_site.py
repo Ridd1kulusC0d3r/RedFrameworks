@@ -458,6 +458,10 @@ def main():
     write_json(data_dir / "standards-intelligence.json", private["_standards_doc"])
     write_json(data_dir / "ai-crosswalk.json", private["_ai_crosswalk_doc"])
     write_json(data_dir / "attack-d3fend.json", private["_d3fend_doc"])
+    lifecycle_path = ROOT / "data/lifecycle.yaml"
+    changelog_path = ROOT / "data/changelog.yaml"
+    write_json(data_dir / "lifecycle.json", load_yaml(lifecycle_path) if lifecycle_path.exists() else {"events": []})
+    write_json(data_dir / "changelog.json", load_yaml(changelog_path) if changelog_path.exists() else {"releases": []})
 
     metrics_dir = ROOT / "generated-metrics"
     if metrics_dir.exists():
