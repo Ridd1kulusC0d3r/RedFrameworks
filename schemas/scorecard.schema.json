@@ -1,0 +1,133 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ridd1kulusc0d3r.github.io/RedFrameworks/schemas/scorecard.schema.json",
+  "title": "RedFrameworks defensive validation scorecard",
+  "type": "object",
+  "required": [
+    "scenario",
+    "scores",
+    "evidence_level",
+    "result"
+  ],
+  "properties": {
+    "scenario": {
+      "type": "object",
+      "required": [
+        "id",
+        "name",
+        "execution_date",
+        "phase",
+        "domain"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "execution_date": {
+          "type": "string",
+          "format": "date"
+        },
+        "phase": {
+          "type": "string"
+        },
+        "domain": {
+          "type": "string"
+        },
+        "authorization": {
+          "type": "string"
+        },
+        "attack_version": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": true
+    },
+    "weights": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "number",
+        "minimum": 0
+      }
+    },
+    "scores": {
+      "type": "object",
+      "required": [
+        "telemetry",
+        "detection",
+        "analyst_response",
+        "containment",
+        "evidence"
+      ],
+      "properties": {
+        "telemetry": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "detection": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "analyst_response": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "containment": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "evidence": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        }
+      },
+      "additionalProperties": false
+    },
+    "evidence_level": {
+      "enum": [
+        "E0",
+        "E1",
+        "E2",
+        "E3"
+      ]
+    },
+    "result": {
+      "enum": [
+        "fail",
+        "partial",
+        "pass"
+      ]
+    },
+    "techniques": {
+      "type": "array",
+      "items": {
+        "oneOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object",
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string",
+                "pattern": "^T[0-9]{4}(\\.[0-9]{3})?$"
+              }
+            },
+            "additionalProperties": true
+          }
+        ]
+      }
+    }
+  },
+  "additionalProperties": true
+}
