@@ -499,3 +499,124 @@ frameworks:
     best_for: ["machine-readable security advisories", "product vulnerability status", "remediation information exchange"]
     evidence_tier: "A"
     last_reviewed: "2026-09-29"
+
+  - id: owasp-top10-2025
+    name: "OWASP Top 10:2025"
+    type: "application-risk-framework"
+    domain: ["web", "application-security", "secure-development"]
+    status: "verified"
+    version: "2025"
+    url: "https://top10.owasp.org/2025/"
+    best_for: ["web application risk awareness", "application security prioritization", "secure-development education"]
+    evidence_tier: "A"
+    last_reviewed: "2026-09-30"
+
+  - id: nist-sp-800-63-4
+    name: "NIST SP 800-63-4 Digital Identity Guidelines"
+    type: "digital-identity-framework"
+    domain: ["identity", "authentication", "federation"]
+    status: "verified"
+    version: "Rev. 4"
+    url: "https://csrc.nist.gov/pubs/sp/800/63/4/final"
+    best_for: ["identity proofing", "authentication assurance", "federation requirements"]
+    evidence_tier: "A"
+    last_reviewed: "2026-09-30"
+
+  - id: nist-sp-800-161-r1
+    name: "NIST SP 800-161 Rev. 1"
+    type: "supply-chain-risk-framework"
+    domain: ["software-supply-chain", "third-party-risk", "governance"]
+    status: "verified"
+    version: "Rev. 1 / Update 1"
+    url: "https://csrc.nist.gov/pubs/sp/800/161/r1/upd1/final"
+    best_for: ["cybersecurity supply-chain risk management", "supplier assurance", "acquisition risk"]
+    evidence_tier: "A"
+    last_reviewed: "2026-09-30"
+
+  - id: nist-sp-800-190
+    name: "NIST SP 800-190 Application Container Security Guide"
+    type: "container-security-guidance"
+    domain: ["containers", "cloud-native", "application-security"]
+    status: "verified"
+    version: "SP 800-190"
+    url: "https://csrc.nist.gov/pubs/sp/800/190/final"
+    best_for: ["container security architecture", "container threat analysis", "container security recommendations"]
+    evidence_tier: "A"
+    last_reviewed: "2026-09-30"
+
+  - id: cisa-ztmm-2
+    name: "CISA Zero Trust Maturity Model"
+    type: "zero-trust-maturity-model"
+    domain: ["zero-trust", "identity", "devices", "network", "applications", "data"]
+    status: "verified"
+    version: "2.0"
+    url: "https://www.cisa.gov/sites/default/files/2023-04/zero_trust_maturity_model_v2_508.pdf"
+    best_for: ["zero trust maturity planning", "identity and device modernization", "visibility and analytics planning"]
+    evidence_tier: "A"
+    last_reviewed: "2026-09-30"
+
+  - id: openssf-osps-baseline
+    name: "OpenSSF Open Source Project Security Baseline"
+    type: "open-source-security-baseline"
+    domain: ["open-source", "software-supply-chain", "secure-development"]
+    status: "verified"
+    version: "2026.08.28"
+    url: "https://baseline.openssf.org/versions/2026-08-28"
+    best_for: ["open-source project security controls", "repository assurance", "maturity-based project security"]
+    evidence_tier: "A"
+    last_reviewed: "2026-09-30"
+
+  - id: owasp-scvs
+    name: "OWASP Software Component Verification Standard"
+    type: "software-supply-chain-standard"
+    domain: ["software-supply-chain", "secure-development", "sbom"]
+    status: "verified"
+    version: "1.0"
+    url: "https://scvs.owasp.org/"
+    best_for: ["component assurance", "SBOM maturity", "software supply-chain verification"]
+    evidence_tier: "A"
+    last_reviewed: "2026-09-30"
+
+  - id: csa-security-guidance-v5
+    name: "CSA Security Guidance for Cloud Computing"
+    type: "cloud-security-guidance"
+    domain: ["cloud", "identity", "workload-security", "incident-response", "resilience"]
+    status: "verified"
+    version: "5"
+    url: "https://cloudsecurityalliance.org/artifacts/security-guidance-v5"
+    best_for: ["cloud security architecture", "cloud governance", "cloud monitoring and resilience"]
+    evidence_tier: "A"
+    last_reviewed: "2026-09-30"
+
+  - id: etsi-en-303-645
+    name: "ETSI EN 303 645 Consumer IoT Security"
+    type: "iot-security-standard"
+    domain: ["iot", "consumer-iot", "product-security", "privacy"]
+    status: "verified"
+    version: "3.1.3"
+    url: "https://www.etsi.org/deliver/etsi_en/303600_303699/303645/03.01.03_60/en_303645v030103p.pdf"
+    best_for: ["consumer IoT baseline security", "secure product development", "IoT outcome-focused assurance"]
+    evidence_tier: "A"
+    last_reviewed: "2026-09-30"
+
+  - id: iso-iec-27001-2022
+    name: "ISO/IEC 27001:2022"
+    type: "information-security-management-standard"
+    domain: ["governance", "risk-management", "enterprise", "assurance"]
+    status: "verified"
+    version: "2022"
+    url: "https://www.iso.org/standard/27001"
+    best_for: ["information security management systems", "risk-based security governance", "continuous improvement"]
+    evidence_tier: "A"
+    last_reviewed: "2026-09-30"
+
+  - id: iso-iec-27005-2022
+    name: "ISO/IEC 27005:2022"
+    type: "information-security-risk-guidance"
+    domain: ["risk-management", "governance", "enterprise"]
+    status: "verified"
+    version: "2022"
+    url: "https://www.iso.org/standard/80585.html"
+    best_for: ["information security risk identification", "risk assessment", "risk treatment"]
+    evidence_tier: "A"
+    last_reviewed: "2026-09-30"
