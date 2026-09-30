@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#07090d">
+  <meta name="description" content="RedFrameworks full-screen security knowledge graph explorer.">
+  <title>Graph Intelligence · RedFrameworks</title>
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body class="graph-page">
+  <div class="graph-page-shell">
+    <header class="graph-page-topbar">
+      <a class="graph-page-brand" href="../#graph">
+        <span class="brand-mark">RF</span>
+        <div><strong>Graph Intelligence</strong><small>REDFRAMEWORKS · v5.2</small></div>
+      </a>
+      <div class="graph-page-search">
+        <input id="graph-global-search" type="search" placeholder="Search node, framework, tool or adversary…">
+        <select id="full-kind-filter">
+          <option value="">All node types</option>
+          <option value="framework">Frameworks</option>
+          <option value="tool">Tools</option>
+          <option value="adversary">Adversaries</option>
+        </select>
+        <select id="full-status-filter"><option value="">All statuses</option></select>
+      </div>
+      <div class="graph-page-actions">
+        <button id="full-theme" class="icon-button" title="Theme">◐</button>
+        <a class="ghost-button" href="../">Portal</a>
+      </div>
+    </header>
+
+    <main class="graph-page-main">
+      <aside class="graph-page-panel">
+        <p class="section-kicker">Graph controls</p>
+        <h2>Explore the ecosystem</h2>
+        <label><span>LAYOUT</span><select id="full-layout"><option value="force">Force graph</option><option value="radial">Radial clusters</option></select></label>
+        <label><span>EDGE CONFIDENCE</span><select id="full-confidence"><option value="">All confidence</option><option value="high">High only</option><option value="medium">Medium + high</option></select></label>
+        <label><span>RELATION TYPE</span><select id="full-relation"><option value="">All relations</option></select></label>
+        <label><span>DOMAIN</span><select id="full-domain"><option value="">All domains</option></select></label>
+        <button id="full-reset" class="ghost-button" type="button">Reset graph</button>
+
+        <div id="full-stats" class="graph-cluster-list"></div>
+
+        <div class="graph-side-section">
+          <span class="section-kicker">Layers</span>
+          <label class="graph-check"><input id="layer-frameworks" type="checkbox" checked> Frameworks</label>
+          <label class="graph-check"><input id="layer-tools" type="checkbox" checked> Tools</label>
+          <label class="graph-check"><input id="layer-adversaries" type="checkbox" checked> Adversaries</label>
+        </div>
+      </aside>
+
+      <section class="full-graph-stage" id="full-stage">
+        <div class="graph-float-tools">
+          <button id="zoom-in" title="Zoom in">+</button>
+          <button id="zoom-out" title="Zoom out">−</button>
+          <button id="zoom-fit" title="Fit">⌂</button>
+        </div>
+        <svg id="full-graph" viewBox="0 0 1400 900" role="img" aria-label="Full RedFrameworks knowledge graph">
+          <g id="full-viewport"></g>
+        </svg>
+      </section>
+
+      <aside class="graph-page-panel right">
+        <p class="section-kicker">Entity intelligence</p>
+        <div id="full-detail">
+          <h2>Select a node</h2>
+          <p>Click a node to inspect provenance, domains and relationships.</p>
+        </div>
+      </aside>
+    </main>
+  </div>
+  <script src="graph.js"></script>
+</body>
+</html>
