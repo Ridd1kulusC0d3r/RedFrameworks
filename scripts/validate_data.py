@@ -38,6 +38,8 @@ def main():
     relationships_doc = validate_schema("relationships.yaml", "schemas/relationships.schema.json")
     resources_doc = validate_schema("resources.yaml", "schemas/resources.schema.json")
     learning_doc = validate_schema("learning-paths.yaml", "schemas/learning-paths.schema.json")
+    adversary_doc = validate_schema("data/adversaries.yaml", "schemas/adversaries.schema.json")
+    intelligence_sources_doc = validate_schema("data/intelligence-sources.yaml", "schemas/intelligence-sources.schema.json")
 
     entries = list(framework_doc.get("frameworks", [])) + list(catalog_doc.get("entries", []))
     ids = [entry["id"] for entry in entries]
@@ -87,6 +89,17 @@ def main():
     tool_ids = {entry["id"] for entry in catalog_doc.get("entries", [])}
     book_ids = {entry["id"] for entry in resources_doc.get("books", [])}
     cert_ids = {entry["id"] for entry in resources_doc.get("certifications", [])}
+
+    adversary_ids = [entry["id"] for entry in adversary_doc.get("adversaries", [])]
+    adversary_attack_ids = [entry["attack_id"] for entry in adversary_doc.get("adversaries", [])]
+    if len(adversary_ids) != len(set(adversary_ids)):
+        raise SystemExit("Duplicate adversary IDs")
+    if len(adversary_attack_ids) != len(set(adversary_attack_ids)):
+        raise SystemExit("Duplicate adversary ATT&CK IDs")
+
+    source_ids = [entry["id"] for entry in intelligence_sources_doc.get("sources", [])]
+    if len(source_ids) != len(set(source_ids)):
+        raise SystemExit("Duplicate intelligence source IDs")
 
     resource_ids = list(book_ids) + list(cert_ids)
     resource_duplicates = sorted({value for value in resource_ids if resource_ids.count(value) > 1})
@@ -138,7 +151,9 @@ def main():
     print(
         f"OK integrity: {len(entries)} entries, {len(seen)} relationships, "
         f"{len(resources_doc.get('books', []))} books, {len(resources_doc.get('certifications', []))} certifications, "
-        f"{len(learning_doc.get('paths', []))} learning paths, {scenario_count} scenarios, {scorecard_count} scorecards"
+        f"{len(learning_doc.get('paths', []))} learning paths, "
+        f"{len(adversary_doc.get('adversaries', []))} adversaries, {len(intelligence_sources_doc.get('sources', []))} CTI sources, "
+        f"{scenario_count} scenarios, {scorecard_count} scorecards"
     )
 
 if __name__ == "__main__":

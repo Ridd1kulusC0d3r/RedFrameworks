@@ -126,6 +126,8 @@ def normalize():
     rel_doc = load_yaml(ROOT / "relationships.yaml")
     resources_doc = load_yaml(ROOT / "resources.yaml")
     learning_doc = load_yaml(ROOT / "learning-paths.yaml")
+    adversary_doc = load_yaml(ROOT / "data/adversaries.yaml") if (ROOT / "data/adversaries.yaml").exists() else {"adversaries": []}
+    intelligence_sources_doc = load_yaml(ROOT / "data/intelligence-sources.yaml") if (ROOT / "data/intelligence-sources.yaml").exists() else {"sources": []}
     standards_doc = load_yaml(ROOT / "data/standards-intelligence.yaml") if (ROOT / "data/standards-intelligence.yaml").exists() else {"standards": []}
     successors_doc = load_yaml(ROOT / "data/successors.yaml") if (ROOT / "data/successors.yaml").exists() else {"transitions": []}
     ai_crosswalk_doc = load_yaml(ROOT / "data/ai-crosswalk.yaml") if (ROOT / "data/ai-crosswalk.yaml").exists() else {"crosswalks": []}
@@ -188,6 +190,8 @@ def normalize():
         str(rel_doc.get("updated", "")),
         str(resources_doc.get("updated", "")),
         str(learning_doc.get("updated", "")),
+        str(adversary_doc.get("updated", "")),
+        str(intelligence_sources_doc.get("updated", "")),
     )
     return {
         "generated_from": ["frameworks.yaml", "catalog.yaml", "relationships.yaml", "resources.yaml", "learning-paths.yaml"],
@@ -196,6 +200,8 @@ def normalize():
         "relationships": relationships,
         "resources": resources_doc,
         "learning_paths": learning_doc,
+        "adversaries": adversary_doc,
+        "intelligence_sources": intelligence_sources_doc,
         "techniques": techniques,
         "_framework_doc": framework_doc,
         "_catalog_doc": catalog_doc,
@@ -282,6 +288,37 @@ def technique_page(item):
 <section class="entity-panel"><span>D3FEND context</span><ul>{''.join(defensive) or '<li>No curated D3FEND context yet.</li>'}</ul></section>
 </main></body></html>"""
 
+def adversary_page(item):
+    aliases = "".join(f'<span class="badge">{html.escape(value)}</span>' for value in item.get("aliases", []))
+    sectors = "".join(f'<span class="badge">{html.escape(value)}</span>' for value in item.get("sectors", []))
+    focus = "".join(f'<span class="badge">{html.escape(value)}</span>' for value in item.get("defensive_focus", []))
+    motivation = ", ".join(item.get("motivation", []))
+    regions = ", ".join(item.get("focus_regions", []))
+    return f"""<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Defensive adversary intelligence profile for {html.escape(item['name'])}.">
+<title>{html.escape(item['name'])} · Adversary Intelligence · RedFrameworks</title>
+<link rel="stylesheet" href="../../styles.css"></head>
+<body><main class="entity-main">
+<a class="back-link" href="../../#adversaries">← Adversary Intelligence</a>
+<section class="entity-hero">
+<p class="section-kicker">ADVERSARY INTELLIGENCE · {html.escape(item['attack_id'])}</p>
+<h1>{html.escape(item['name'])}</h1>
+<p class="hero-summary">{html.escape(item['attribution'])}</p>
+<div class="badges">{aliases}</div>
+<div class="hero-actions"><a class="primary-button" href="{html.escape(item['source'])}" rel="noopener">MITRE ATT&CK profile ↗</a></div>
+</section>
+<section class="entity-grid">
+<article class="entity-panel"><span>Actor type</span><strong>{html.escape(item['actor_type'])}</strong><small>{html.escape(motivation)}</small></article>
+<article class="entity-panel"><span>Focus regions</span><strong>{html.escape(regions or '—')}</strong><small>Source-attributed targeting context</small></article>
+</section>
+<section class="entity-panel"><span>Sectors</span><div class="badges">{sectors}</div></section>
+<section class="entity-panel"><span>Defensive focus</span><div class="badges">{focus}</div><p>RedFrameworks presents actor context for defensive prioritization, detection validation, resilience and evidence planning. It does not provide operational attack instructions.</p></section>
+<section class="entity-panel"><span>Provenance</span><p>Source tier {html.escape(item['source_tier'])} · ATT&CK profile version {html.escape(item.get('profile_version') or '—')} · last modified {html.escape(item.get('last_modified') or '—')}</p></section>
+</main></body></html>"""
+
+
 def write_json(path, value):
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(json.dumps(value, indent=2, ensure_ascii=False, default=str) + "\n", encoding="utf-8")
@@ -313,6 +350,8 @@ def write_api(output, payload):
 
     write_json(v3 / "resources.json", payload["resources"])
     write_json(v3 / "learning-paths.json", payload["learning_paths"])
+    write_json(v3 / "adversaries.json", payload["adversaries"])
+    write_json(v3 / "intelligence-sources.json", payload["intelligence_sources"])
     write_json(v3 / "verification-queue.json", verification)
     write_json(v3 / "techniques.json", payload["techniques"])
 
@@ -341,6 +380,8 @@ def write_api(output, payload):
         "books": len(payload["resources"].get("books", [])),
         "certifications": len(payload["resources"].get("certifications", [])),
         "learning_paths": len(payload["learning_paths"].get("paths", [])),
+        "adversaries": len(payload["adversaries"].get("adversaries", [])),
+        "intelligence_sources": len(payload["intelligence_sources"].get("sources", [])),
         "not_verified": len(not_verified),
         "relationships": len(relationships),
         "techniques": len(payload["techniques"]),
@@ -357,6 +398,8 @@ def write_api(output, payload):
             "frameworks": "frameworks.json",
             "resources": "resources.json",
             "learning_paths": "learning-paths.json",
+            "adversaries": "adversaries.json",
+            "intelligence_sources": "intelligence-sources.json",
             "verification_queue": "verification-queue.json",
             "techniques": "techniques.json",
             "standards": "standards.json",
@@ -372,6 +415,8 @@ def write_api(output, payload):
         "frameworks.json": payload["_framework_doc"],
         "resources.json": payload["resources"],
         "learning-paths.json": payload["learning_paths"],
+        "adversaries.json": payload["adversaries"],
+        "intelligence-sources.json": payload["intelligence_sources"],
         "techniques.json": payload["techniques"],
         "verification-queue.json": verification,
     }.items():
@@ -407,6 +452,8 @@ def main():
     })
     write_json(data_dir / "resources.json", payload["resources"])
     write_json(data_dir / "learning-paths.json", payload["learning_paths"])
+    write_json(data_dir / "adversaries.json", payload["adversaries"])
+    write_json(data_dir / "intelligence-sources.json", payload["intelligence_sources"])
     write_json(data_dir / "techniques.json", payload["techniques"])
     write_json(data_dir / "standards-intelligence.json", private["_standards_doc"])
     write_json(data_dir / "ai-crosswalk.json", private["_ai_crosswalk_doc"])
@@ -435,11 +482,17 @@ def main():
         target.mkdir(parents=True, exist_ok=True)
         (target / "index.html").write_text(technique_page(item), encoding="utf-8")
 
+    for item in payload["adversaries"].get("adversaries", []):
+        target = output / "adversary" / item["id"]
+        target.mkdir(parents=True, exist_ok=True)
+        (target / "index.html").write_text(adversary_page(item), encoding="utf-8")
+
     (output / ".nojekyll").write_text("", encoding="utf-8")
     print(
         f"Built {len(payload['items'])} catalog entries, {len(payload['relationships'])} relationships, "
         f"{len(payload['resources'].get('books', []))} books, "
         f"{len(payload['resources'].get('certifications', []))} certifications, "
+        f"{len(payload['adversaries'].get('adversaries', []))} adversary profiles, "
         f"{len(payload['techniques'])} technique pages and API v3 into {output}"
     )
 

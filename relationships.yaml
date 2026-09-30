@@ -61,3 +61,17 @@ relationships:
   - {from: nist-sp-800-207, to: bloodhound, relation: zero-trust-to-identity-attack-path-analysis, confidence: medium, provenance: curated-crosswalk, source_refs: [nist-sp-800-207, bloodhound]}
   - {from: nist-csf-2, to: mitre-attack, relation: risk-framework-to-threat-behavior-context, confidence: medium, provenance: curated-crosswalk, source_refs: [nist-csf-2, mitre-attack]}
   - {from: openssf-scorecard, to: checkov, relation: project-posture-to-iac-assessment, confidence: medium, provenance: curated-crosswalk, source_refs: [openssf-scorecard, checkov]}
+  - {from: oasis-stix-2-1, to: oasis-taxii-2-1, relation: intelligence-model-to-transport, confidence: high, provenance: curated-crosswalk, source_refs: [oasis-stix-2-1, oasis-taxii-2-1]}
+  - {from: mitre-attack, to: oasis-stix-2-1, relation: behavior-model-to-cti-representation, confidence: high, provenance: curated-crosswalk, source_refs: [mitre-attack, oasis-stix-2-1]}
+  - {from: misp-galaxy, to: oasis-stix-2-1, relation: knowledge-model-to-cti-representation, confidence: medium, provenance: curated-crosswalk, source_refs: [misp-galaxy, oasis-stix-2-1]}
+  - {from: misp-galaxy, to: mitre-attack, relation: threat-actor-context-to-behavior-model, confidence: high, provenance: curated-crosswalk, source_refs: [misp-galaxy, mitre-attack]}
+  - {from: cyber-kill-chain, to: mitre-attack, relation: intrusion-lifecycle-to-behavior-model, confidence: medium, provenance: curated-crosswalk, source_refs: [cyber-kill-chain, mitre-attack]}
+  - {from: oasis-cacao-2, to: mitre-d3fend, relation: playbook-to-defensive-action-context, confidence: medium, provenance: curated-crosswalk, source_refs: [oasis-cacao-2, mitre-d3fend]}
+  - {from: oasis-cacao-2, to: nist-sp-800-61-r3, relation: playbook-to-incident-response, confidence: high, provenance: curated-crosswalk, source_refs: [oasis-cacao-2, nist-sp-800-61-r3]}
+  - {from: veris, to: nist-sp-800-61-r3, relation: incident-data-to-response-governance, confidence: medium, provenance: curated-crosswalk, source_refs: [veris, nist-sp-800-61-r3]}
+  - {from: first-tlp-2, to: oasis-stix-2-1, relation: sharing-marking-to-cti-exchange, confidence: high, provenance: curated-crosswalk, source_refs: [first-tlp-2, oasis-stix-2-1]}
+  - {from: first-csirt-services, to: nist-sp-800-61-r3, relation: csirt-services-to-incident-response, confidence: high, provenance: curated-crosswalk, source_refs: [first-csirt-services, nist-sp-800-61-r3]}
+  - {from: nist-sp-800-160-v2-r1, to: cisa-cpg, relation: resilience-engineering-to-security-outcomes, confidence: medium, provenance: curated-crosswalk, source_refs: [nist-sp-800-160-v2-r1, cisa-cpg]}
+  - {from: ssvc, to: first-epss, relation: decision-prioritization-to-exploitation-likelihood, confidence: medium, provenance: curated-crosswalk, source_refs: [ssvc, first-epss]}
+  - {from: ssvc, to: first-cvss, relation: decision-prioritization-to-severity-context, confidence: medium, provenance: curated-crosswalk, source_refs: [ssvc, first-cvss]}
+  - {from: oasis-csaf-2, to: ssvc, relation: security-advisory-to-response-prioritization, confidence: medium, provenance: curated-crosswalk, source_refs: [oasis-csaf-2, ssvc]}

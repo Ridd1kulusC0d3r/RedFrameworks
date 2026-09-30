@@ -1,5 +1,21 @@
 schema_version: "1.0"
 releases:
+  - version: "5.1.0"
+    date: "2026-09-29"
+    changes:
+      - type: added
+        area: adversary-intelligence
+        items: ["22 ATT&CK group profiles", "alias context", "defensive focus", "CTI source library"]
+      - type: added
+        area: framework-expansion
+        items: ["13 CTI / IR / resilience frameworks", "14 new knowledge-graph relationships"]
+      - type: changed
+        area: web
+        items: ["adversary workspace", "adversary profile pages", "three original SVG visuals"]
+      - type: changed
+        area: api
+        items: ["adversaries endpoint", "intelligence-sources endpoint"]
+
   - version: "4.0.0"
     date: "2026-09-29"
     changes:

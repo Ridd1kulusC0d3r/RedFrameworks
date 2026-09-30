@@ -31,6 +31,8 @@ Base:
 | `/api/v3/learning-paths.json` | objective-driven learning paths |
 | `/api/v3/verification-queue.json` | NOT VERIFIED promotion-readiness signals |
 | `/api/v3/techniques.json` | ATT&CK technique intelligence derived from validation examples |
+| `/api/v3/adversaries.json` | source-attributed adversary intelligence profiles |
+| `/api/v3/intelligence-sources.json` | CTI research and corroboration source library |
 | `/api/v3/standards.json` | standards/version intelligence |
 | `/api/v3/successors.json` | renames, successors and deprecations |
 | `/api/v3/ai-crosswalk.json` | conceptual AI security crosswalk |
@@ -49,6 +51,8 @@ Pages also publishes:
 - ATT&CK Navigator layer;
 - non-IOC MISP reference event;
 - reproducible catalog snapshot.
+
+Dedicated adversary profile pages are published under `/adversary/<id>/`.
 
 ## Client examples
 

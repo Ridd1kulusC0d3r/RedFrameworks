@@ -68,6 +68,17 @@ RedFrameworks v5 is the **OffSec Intelligence Portal** release.
 - [x] GitHub build-provenance attestation
 - [x] reproducible snapshots and semantic diffs
 
+## Platform v5.1 — adversary intelligence expansion
+
+- [x] 13 additional CTI / IR / resilience frameworks
+- [x] 22 source-attributed adversary profiles
+- [x] ATT&CK alias and profile-version metadata
+- [x] CTI source library
+- [x] dedicated adversary pages
+- [x] adversary filters and command-palette search
+- [x] original SVG architecture and intelligence visuals
+- [x] adversary and CTI datasets in API v3
+
 ## Platform v6 — collaborative intelligence
 
 ### Knowledge expansion
