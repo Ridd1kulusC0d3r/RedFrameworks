@@ -677,8 +677,8 @@ async function init(){
     loadJson("data/evidence-trend.json",{records:[]}),
     loadJson("data/coverage-heatmap.json",{domains:[]}),
     loadJson("data/scenario-summary.json",{scenarios:[]}),
-    loadJson("api/v3/lifecycle.json",{events:[]}),
-    loadJson("api/v3/changelog.json",{releases:[]})
+    loadJson("data/lifecycle.json",{events:[]}),
+    loadJson("data/changelog.json",{releases:[]})
   ]);
   state.items=catalog.items||[];state.relationships=catalog.relationships||[];state.resources=resources;
   state.learningPaths=paths.paths||[];state.techniques=techniques||[];state.adversaries=adversaries.adversaries||[];state.intelligenceSources=intelligenceSources.sources||[];state.verification=verification;
