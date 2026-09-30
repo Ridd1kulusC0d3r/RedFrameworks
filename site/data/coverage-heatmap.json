@@ -1,0 +1,14 @@
+{
+  "domains": [
+    {
+      "domain": "identity",
+      "metrics": {
+        "telemetry": 76.75,
+        "detection": 62.25,
+        "analyst_response": 62.0,
+        "containment": 57.0,
+        "evidence": 73.0
+      }
+    }
+  ]
+}

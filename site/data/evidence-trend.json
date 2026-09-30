@@ -1,0 +1,32 @@
+{
+  "records": [
+    {
+      "scenario_id": "PT-EXAMPLE-001",
+      "date": "2026-09-29",
+      "domain": "identity",
+      "evidence_level": "E2",
+      "evidence_score": 65
+    },
+    {
+      "scenario_id": "PT-IDENTITY-001",
+      "date": "2026-07-15",
+      "domain": "identity",
+      "evidence_level": "E1",
+      "evidence_score": 25
+    },
+    {
+      "scenario_id": "PT-IDENTITY-001",
+      "date": "2026-08-20",
+      "domain": "identity",
+      "evidence_level": "E2",
+      "evidence_score": 65
+    },
+    {
+      "scenario_id": "PT-IDENTITY-001",
+      "date": "2026-09-29",
+      "domain": "identity",
+      "evidence_level": "E3",
+      "evidence_score": 100
+    }
+  ]
+}
