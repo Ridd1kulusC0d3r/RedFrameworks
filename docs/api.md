@@ -24,6 +24,7 @@ Base URL:
 | `/api/v2/frameworks.json` | canonical frameworks dataset |
 | `/api/v2/relationships.json` | graph edges with confidence and provenance |
 | `/api/v2/standards.json` | standards/version intelligence |
+| `/api/v2/successors.json` | renames, successors and deprecations |
 | `/api/v2/ai-crosswalk.json` | conceptual AI security crosswalk |
 | `/api/v2/attack-d3fend.json` | selected defensive relationship examples |
 | `/api/v2/lifecycle.json` | renames, legacy transitions and lifecycle events |

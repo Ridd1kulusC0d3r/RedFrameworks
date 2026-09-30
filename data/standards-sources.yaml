@@ -16,7 +16,7 @@ sources:
   - id: mitre-d3fend
     probe: "html-regex"
     url: "https://d3fend.mitre.org/resources/"
-    pattern: "Version - ([0-9]+\\.[0-9]+\\.[0-9]+)"
+    pattern: "D3FEND Ontology Change Log[\\s\\S]{0,5000}?Version - ([0-9]+\\.[0-9]+\\.[0-9]+)"
     expected: "1.6.0"
 
   - id: owasp-genai-llm-top10

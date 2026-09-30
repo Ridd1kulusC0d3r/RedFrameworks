@@ -1,33 +1,45 @@
 name: Versioned catalog release
-
 on:
   push:
     tags:
       - "v*"
-
 permissions:
   contents: write
-
 jobs:
   release:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v6
-      - name: Set up Python
-        uses: actions/setup-python@v6
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
         with:
           python-version: "3.13"
       - name: Install dependencies
         run: python -m pip install --disable-pip-version-check PyYAML jsonschema
-      - name: Validate and build release assets
+      - name: Validate and build assets
         run: |
           python scripts/validate_data.py
           python scripts/validate_examples.py
+          python scripts/aggregate_scorecards.py --output-dir generated-metrics
           python scripts/build_site.py --output _site-release
           python scripts/export_stix.py --output-dir exports
-          tar -czf "redframeworks-${GITHUB_REF_NAME}.tar.gz" frameworks.yaml catalog.yaml relationships.yaml data schemas exports _site-release/api docs examples
+          python scripts/snapshot_catalog.py --version "${GITHUB_REF_NAME}" --output "exports/catalog-snapshot-${GITHUB_REF_NAME}.json"
+      - name: Generate semantic diff from previous release when available
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          mkdir -p previous
+          PREV=$(gh release list --limit 1 --json tagName --jq '.[0].tagName // empty')
+          if [ -n "$PREV" ]; then
+            gh release download "$PREV" --pattern 'catalog-snapshot-*.json' --dir previous || true
+            BEFORE=$(find previous -name 'catalog-snapshot-*.json' | head -1)
+            if [ -n "$BEFORE" ]; then
+              python scripts/catalog_diff.py "$BEFORE" "exports/catalog-snapshot-${GITHUB_REF_NAME}.json" --json exports/catalog-diff.json --report exports/catalog-diff.md
+            fi
+          fi
+      - name: Package release
+        run: tar -czf "redframeworks-${GITHUB_REF_NAME}.tar.gz" frameworks.yaml catalog.yaml relationships.yaml data schemas exports _site-release/api docs examples
       - name: Publish GitHub release
         env:
           GH_TOKEN: ${{ github.token }}
-        run: gh release create "${GITHUB_REF_NAME}" "redframeworks-${GITHUB_REF_NAME}.tar.gz" exports/*.json --generate-notes --title "RedFrameworks ${GITHUB_REF_NAME}"
+        run: gh release create "${GITHUB_REF_NAME}" "redframeworks-${GITHUB_REF_NAME}.tar.gz" exports/* --generate-notes --title "RedFrameworks ${GITHUB_REF_NAME}"

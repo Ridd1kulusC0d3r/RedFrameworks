@@ -8,11 +8,9 @@ on:
       - "relationships.yaml"
       - "data/**"
       - "schemas/**"
-      - "examples/trends/**"
+      - "examples/**"
       - "site/**"
-      - "scripts/build_site.py"
-      - "scripts/export_stix.py"
-      - "scripts/check_upstreams.py"
+      - "scripts/**"
       - ".github/workflows/pages.yml"
   workflow_dispatch:
 permissions:
@@ -32,17 +30,25 @@ jobs:
         uses: actions/setup-python@v6
         with:
           python-version: "3.13"
-      - name: Install build dependency
+      - name: Install build dependencies
         run: python -m pip install --disable-pip-version-check PyYAML
       - name: Collect public upstream health signals
         run: python scripts/check_upstreams.py --json upstream-health.json --report upstream-health.md
+      - name: Aggregate scorecards
+        run: python scripts/aggregate_scorecards.py --output-dir generated-metrics
+      - name: Probe standards versions
+        run: python scripts/check_standards.py --json standards-watch.json --report standards-watch.md
       - name: Build catalog site, entity pages and API
         run: python scripts/build_site.py --output _site
+      - name: Generate current reproducible snapshot
+        run: python scripts/snapshot_catalog.py --version current --output _site/api/v2/snapshots/current.json
       - name: Generate STIX/OpenCTI export
         run: python scripts/export_stix.py --output-dir _site/api
-      - name: Publish upstream health dataset
-        run: cp upstream-health.json _site/data/upstream-health.json
-      - name: Configure or enable Pages
+      - name: Publish health and standards-watch datasets
+        run: |
+          cp upstream-health.json _site/data/upstream-health.json
+          cp standards-watch.json _site/data/standards-watch.json
+      - name: Configure Pages
         uses: actions/configure-pages@v5
         with:
           enablement: true

@@ -1,85 +1,95 @@
-# Platform v3 Completion & v4 Roadmap
+# Platform v4 Complete & v5 Roadmap
 
-Platform v3 turns RedFrameworks into a schema-driven Offensive Security Knowledge Graph.
+RedFrameworks v4 turns the project into a **Continuous Security Intelligence Catalog**.
 
-## Platform v3 — complete
-
-### Data integrity
-
-- [x] Browsable catalog generated from YAML
-- [x] Interactive filters and status model
-- [x] Curated relationship dataset
-- [x] Evidence tiers and expanded watchlist
-- [x] Freshness automation
-- [x] GitHub Pages deployment
-- [x] JSON Schema validation
-- [x] Duplicate-ID / duplicate-name / broken-reference validation
-- [x] Canonical upstream checks for archive, staleness and availability
-
-### Knowledge graph
-
-- [x] Relationship explorer
-- [x] STIX 2.1 export
-- [x] OpenCTI-oriented import manifest
-- [x] ATT&CK ↔ ATLAS ↔ D3FEND ecosystem enrichment
-- [x] Per-entity pages with inbound / outbound relationships
-- [x] Analyst decision-path presets
-
-### Intelligence & provenance
-
-- [x] Upstream release metadata
-- [x] Archive state and last activity
-- [x] Provenance scoring
-- [x] Meaningful lifecycle-change issue automation
-- [x] Rename / legacy tracking
-
-### Analyst experience
-
-- [x] Filters persisted in URL
-- [x] Factual side-by-side comparison
-- [x] CSV / JSON export
-- [x] EN / PT-BR / ES presentation
-- [x] Keyboard-accessible graph controls
-- [x] Domain and trend visuals
-
-### Evidence engineering
-
-- [x] Detection-to-validation scenario example
-- [x] Reusable scenario schema
-- [x] E3 evidence bundle example
-- [x] Coverage / retest trend dataset
-
-### Ecosystem
-
-- [x] Versioned release manifest and tag-driven release workflow
-- [x] Contributor review automation
-- [x] Static read-only API
-- [x] Machine-readable changelog
-- [x] Lifecycle dataset
-
-## Platform v4 — continuous intelligence
+## Platform v4 — complete
 
 ### Standards intelligence
 
-- [ ] Track ATT&CK / ATLAS / OWASP / NIST version changes as first-class events
-- [ ] Generate semantic diffs between catalog releases
-- [ ] Track framework successors and official deprecations from primary sources
+- [x] ATT&CK version intelligence
+- [x] ATLAS monthly content intelligence
+- [x] D3FEND ontology version intelligence
+- [x] OWASP GenAI / Agentic edition tracking
+- [x] NIST AI 600-1 registry
+- [x] primary-source standards watcher
+- [x] successor / rename / deprecation dataset
+
+### Catalog intelligence
+
+- [x] all previously omitted candidates included
+- [x] explicit NOT VERIFIED status
+- [x] Tier D verification boundary
+- [x] research candidates exposed in web/API/entity pages
+- [x] provenance score preserved separately from verification state
 
 ### Relationship intelligence
 
-- [ ] Add technique-level ATT&CK ↔ D3FEND examples backed by primary mappings
-- [ ] Add richer AI security crosswalks without implying false equivalence
-- [ ] Add relationship provenance / source references per edge
+- [x] per-edge confidence
+- [x] per-edge provenance
+- [x] source references
+- [x] ATT&CK ↔ D3FEND defensive-context examples
+- [x] ATLAS ↔ OWASP ↔ NIST conceptual AI crosswalk
 
 ### Measurement intelligence
 
-- [ ] Generate longitudinal coverage dashboards from imported scorecards
-- [ ] Add retest-regression comparison views
-- [ ] Add evidence-quality trend visualization by scenario and domain
+- [x] scorecard aggregation
+- [x] longitudinal coverage series
+- [x] retest regression detection
+- [x] evidence maturity trend
+- [x] dashboard-ready JSON outputs
 
-### Ecosystem integration
+### Release intelligence
 
-- [ ] Version the static API formally
-- [ ] Publish reproducible catalog snapshots
-- [ ] Add OpenCTI enrichment examples
-- [ ] Add consumer examples for Python, TypeScript and shell
+- [x] reproducible catalog snapshots
+- [x] semantic catalog diff engine
+- [x] tag-driven release snapshots
+- [x] release-to-release diff generation
+- [x] machine-readable changelog
+
+### Platform
+
+- [x] API v2
+- [x] v1 compatibility
+- [x] Python consumer
+- [x] TypeScript consumer
+- [x] shell consumer
+- [x] OpenCTI interoperability example
+- [x] complete GitHub Pages redesign
+
+## Platform v5 — ecosystem platform
+
+### Data contracts
+
+- [ ] stable public JSON Schema for API v2 payloads
+- [ ] signed release manifests
+- [ ] dataset integrity verification examples
+- [ ] formal deprecation policy for API versions
+
+### Research automation
+
+- [ ] source discovery queue for NOT VERIFIED entries
+- [ ] maintainer / license metadata enrichment
+- [ ] automated archive / successor suggestions
+- [ ] evidence-assisted promotion PRs requiring human review
+
+### Graph evolution
+
+- [ ] graph clustering by domain
+- [ ] graph path queries
+- [ ] relationship provenance explorer
+- [ ] ATT&CK / ATLAS technique pages connected to defensive evidence
+
+### Integrations
+
+- [ ] OpenCTI enrichment package
+- [ ] MISP-compatible export
+- [ ] ATT&CK Navigator generation from catalog queries
+- [ ] optional Neo4j export
+- [ ] reusable client package for Python and TypeScript
+
+### Measurement platform
+
+- [ ] import analyst scorecards through a documented schema
+- [ ] compare multiple scenarios / domains
+- [ ] regression history across releases
+- [ ] evidence-quality heatmaps

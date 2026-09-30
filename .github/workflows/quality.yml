@@ -1,5 +1,4 @@
 name: Documentation quality
-
 on:
   pull_request:
   push:
@@ -7,35 +6,27 @@ on:
   workflow_dispatch:
   schedule:
     - cron: "17 8 * * 1"
-
 permissions:
   contents: read
-
 jobs:
   links:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v6
+      - uses: actions/checkout@v6
       - name: Check Markdown links
         uses: lycheeverse/lychee-action@v2
         with:
           args: >-
-            --verbose
-            --no-progress
-            --accept 200,204,206,429
+            --verbose --no-progress --accept 200,204,206,429
             --exclude "https://attackflow\\.org/.*"
             --exclude "https://www\\.pentest-standard\\.org/.*"
             "**/*.md"
           fail: true
-
   structure:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v6
-      - name: Set up Python
-        uses: actions/setup-python@v6
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
         with:
           python-version: "3.13"
       - name: Install validation dependencies
@@ -48,16 +39,21 @@ jobs:
         run: python scripts/validate_data.py
       - name: Validate machine-readable examples
         run: python scripts/validate_examples.py
+      - name: Aggregate scorecards
+        run: python scripts/aggregate_scorecards.py --output-dir generated-metrics
+      - name: Generate reproducible snapshot
+        run: python scripts/snapshot_catalog.py --version ci --output _snapshots/ci.json
       - name: Validate STIX / OpenCTI export
         run: python scripts/export_stix.py --output-dir _exports-test
-      - name: Build browsable catalog and static API
+      - name: Build browsable catalog and API v2
         run: python scripts/build_site.py --output _site-test
-      - name: Validate generated API
+      - name: Validate generated JSON
         run: |
           python -m json.tool _site-test/api/version.json >/dev/null
-          python -m json.tool _site-test/api/catalog.json >/dev/null
-          python -m json.tool _site-test/api/relationships.json >/dev/null
+          python -m json.tool _site-test/api/v2/catalog.json >/dev/null
+          python -m json.tool _site-test/api/v2/relationships.json >/dev/null
+          python -m json.tool _site-test/api/v2/standards.json >/dev/null
+          python -m json.tool _site-test/data/coverage-series.json >/dev/null
+          python -m json.tool _snapshots/ci.json >/dev/null
       - name: Validate freshness metadata
-        run: |
-          python scripts/check_freshness.py --report freshness-report.md --json freshness-report.json
-          cat freshness-report.md >> "$GITHUB_STEP_SUMMARY"
+        run: python scripts/check_freshness.py --report freshness-report.md --json freshness-report.json

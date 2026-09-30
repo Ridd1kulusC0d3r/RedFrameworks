@@ -11,6 +11,8 @@
 [![Freshness](https://github.com/Ridd1kulusC0d3r/RedFrameworks/actions/workflows/freshness.yml/badge.svg)](https://github.com/Ridd1kulusC0d3r/RedFrameworks/actions/workflows/freshness.yml)
 [![ATT&CK](https://img.shields.io/badge/knowledge-MITRE%20ATT%26CK-6f42c1)](https://attack.mitre.org/)
 [![STIX 2.1](https://img.shields.io/badge/export-STIX%202.1-blue)](docs/api.md)
+[![API v2](https://img.shields.io/badge/API-v2-7fbcff)](docs/api.md)
+[![Continuous Intelligence](https://img.shields.io/badge/platform-v4-f04f67)](docs/next-evolutions.md)
 
 [**Live Knowledge Base**](https://ridd1kulusc0d3r.github.io/RedFrameworks/) ·
 [**Roadmaps**](docs/roadmaps/README.md) ·
@@ -49,7 +51,11 @@ The public site is generated directly from the repository data and includes:
 - provenance scores;
 - knowledge-graph relationships;
 - distribution and coverage visuals;
-- static JSON API;
+- standards/version intelligence;
+- visible NOT VERIFIED research registry;
+- scorecard and retest-regression dashboards;
+- versioned Static API v2;
+- reproducible snapshots and semantic diffs;
 - STIX 2.1 export.
 
 ---
@@ -175,7 +181,7 @@ flowchart LR
 | File | Purpose |
 |---|---|
 | [frameworks.yaml](frameworks.yaml) | methodologies, standards and knowledge models |
-| [catalog.yaml](catalog.yaml) | tools, platforms, commercial products and watchlist |
+| [catalog.yaml](catalog.yaml) | verified, community, commercial, legacy and NOT VERIFIED research entries |
 | [relationships.yaml](relationships.yaml) | curated graph edges |
 | [data/lifecycle.yaml](data/lifecycle.yaml) | renames, legacy transitions and lifecycle events |
 | [data/changelog.yaml](data/changelog.yaml) | machine-readable platform history |
@@ -265,14 +271,21 @@ flowchart LR
 
 ---
 
-## Research watchlist
+## Research registry
 
-Candidates requiring additional verification remain in:
+All previously separate research candidates are now included directly in the catalog.
 
-- [Research watchlist](docs/watchlist.md)
-- [Gap analysis](docs/gap-analysis.md)
+They are explicitly marked:
 
-Promotion requires a canonical upstream, maintenance state, license/commercial model, correct taxonomy, clear use case and review date.
+~~~yaml
+status: "not-verified"
+evidence_tier: "D"
+verification_note: "NOT VERIFIED — research candidate only."
+~~~
+
+This makes the catalog complete without converting unverified names into recommendations.
+
+See [Research Registry](docs/watchlist.md) and [Verification Backlog](docs/gap-analysis.md).
 
 ---
 
@@ -282,6 +295,7 @@ Promotion requires a canonical upstream, maintenance state, license/commercial m
 |---|---|
 | **Documentation quality** | links, schemas, integrity, examples, STIX and site build |
 | **Catalog freshness** | review-date cadence |
+| **Standards intelligence** | primary-source ATT&CK / ATLAS / D3FEND / OWASP / NIST version change detection |
 | **Upstream health review** | archive, availability, activity and release signals |
 | **Catalog contribution review** | PR taxonomy / schema / reference validation |
 | **Build and deploy knowledge base** | Pages, API, entity pages and STIX |
@@ -289,28 +303,24 @@ Promotion requires a canonical upstream, maintenance state, license/commercial m
 
 ---
 
-## Static API & STIX
+## Static API v2 & STIX
 
 Documentation: [docs/api.md](docs/api.md)
 
-Public base:
-
-~~~text
-https://ridd1kulusc0d3r.github.io/RedFrameworks/
-~~~
-
-Generated endpoints:
-
 ~~~text
 /api/version.json
-/api/catalog.json
-/api/frameworks.json
-/api/relationships.json
-/api/watchlist.json
+/api/v1/catalog.json
+/api/v2/catalog.json
+/api/v2/not-verified.json
+/api/v2/standards.json
+/api/v2/successors.json
+/api/v2/relationships.json
+/api/v2/ai-crosswalk.json
+/api/v2/attack-d3fend.json
 /api/redframeworks-stix-2.1.json
-/api/opencti-import-manifest.json
-/data/upstream-health.json
 ~~~
+
+Consumer examples are available for Python, TypeScript and shell.
 
 ---
 
@@ -326,25 +336,25 @@ The repository focuses on **methodology, modeling, evidence and defensive valida
 
 ## Project status
 
-### Platform v3 · Knowledge Graph
+### Platform v4 · Continuous Intelligence
 
 | Capability | Status |
 |---|---|
-| Schema-driven data | ✅ |
-| Cross-file integrity validation | ✅ |
-| Knowledge graph | ✅ |
-| Entity pages | ✅ |
-| Provenance scoring | ✅ |
-| Static API | ✅ |
-| STIX 2.1 export | ✅ |
-| Upstream lifecycle review | ✅ |
-| Factual comparison | ✅ |
-| CSV / JSON export | ✅ |
-| EN / PT-BR / ES UI | ✅ |
-| Evidence engineering | ✅ |
-| Versioned release workflow | ✅ |
+| Complete visible catalog incl. NOT VERIFIED | ✅ |
+| Standards/version intelligence | ✅ |
+| Primary-source version watcher | ✅ |
+| Relationship provenance | ✅ |
+| ATT&CK ↔ D3FEND examples | ✅ |
+| AI security crosswalks | ✅ |
+| Longitudinal scorecard metrics | ✅ |
+| Retest regression detection | ✅ |
+| Reproducible snapshots | ✅ |
+| Semantic release diffs | ✅ |
+| Static API v2 + v1 compatibility | ✅ |
+| OpenCTI interoperability | ✅ |
+| Redesigned Pages UI | ✅ |
 
-See [CHANGELOG.md](CHANGELOG.md).
+See [CHANGELOG.md](CHANGELOG.md) and [v5 roadmap](docs/next-evolutions.md).
 
 ---
 

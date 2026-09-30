@@ -1,5 +1,27 @@
 schema_version: "1.0"
 releases:
+  - version: "4.0.0"
+    date: "2026-09-29"
+    changes:
+      - type: added
+        area: standards-intelligence
+        items: ["primary-source version registry", "standards watcher", "successor/deprecation tracking"]
+      - type: changed
+        area: research-catalog
+        items: ["70 watchlist candidates exposed as NOT VERIFIED entries", "Tier D verification notes"]
+      - type: added
+        area: relationship-intelligence
+        items: ["per-edge provenance", "source references", "ATT&CK-D3FEND examples", "AI crosswalks"]
+      - type: added
+        area: measurement-intelligence
+        items: ["scorecard aggregation", "regression detection", "evidence trend"]
+      - type: added
+        area: interoperability
+        items: ["API v2", "reproducible snapshots", "semantic release diffs", "consumer examples"]
+      - type: changed
+        area: web
+        items: ["complete GitHub Pages redesign", "standards dashboard", "measurement dashboard"]
+
   - version: "3.0.0"
     date: "2026-09-29"
     changes:
