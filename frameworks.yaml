@@ -360,3 +360,142 @@ frameworks:
     best_for: ["open-source project security posture", "supply-chain risk signals", "repository assurance"]
     evidence_tier: "A"
     last_reviewed: "2026-09-29"
+
+  - id: oasis-stix-2-1
+    name: "OASIS STIX 2.1"
+    type: "threat-intelligence-data-model"
+    domain: ["threat-intelligence", "information-sharing", "interoperability"]
+    status: "verified"
+    version: "2.1 / Errata 01"
+    url: "https://docs.oasis-open.org/cti/stix/v2.1/stix-v2.1.html"
+    best_for: ["machine-readable cyber threat intelligence", "actor and campaign modeling", "CTI interoperability"]
+    evidence_tier: "A"
+    last_reviewed: "2026-09-29"
+
+  - id: oasis-taxii-2-1
+    name: "OASIS TAXII 2.1"
+    type: "threat-intelligence-transport-standard"
+    domain: ["threat-intelligence", "information-sharing", "interoperability"]
+    status: "verified"
+    version: "2.1"
+    url: "https://docs.oasis-open.org/cti/taxii/v2.1/taxii-v2.1.html"
+    best_for: ["CTI exchange APIs", "collection-based intelligence sharing", "STIX transport workflows"]
+    evidence_tier: "A"
+    last_reviewed: "2026-09-29"
+
+  - id: oasis-cacao-2
+    name: "OASIS CACAO Security Playbooks"
+    type: "security-playbook-standard"
+    domain: ["incident-response", "orchestration", "threat-intelligence"]
+    status: "verified"
+    version: "2.0 CS01"
+    url: "https://docs.oasis-open.org/cacao/security-playbooks/v2.0/security-playbooks-v2.0.html"
+    best_for: ["structured security playbooks", "response workflow exchange", "orchestration documentation"]
+    evidence_tier: "A"
+    last_reviewed: "2026-09-29"
+
+  - id: first-tlp-2
+    name: "FIRST Traffic Light Protocol"
+    type: "information-sharing-standard"
+    domain: ["threat-intelligence", "information-sharing", "csirt"]
+    status: "verified"
+    version: "2.0"
+    url: "https://www.first.org/tlp/"
+    best_for: ["sharing-boundary markings", "CTI dissemination handling", "CSIRT collaboration"]
+    evidence_tier: "A"
+    last_reviewed: "2026-09-29"
+
+  - id: first-csirt-services
+    name: "FIRST CSIRT Services Framework"
+    type: "incident-response-services-framework"
+    domain: ["incident-response", "csirt", "operations"]
+    status: "verified"
+    version: "2.1"
+    url: "https://www.first.org/standards/frameworks/csirts/csirt_services_framework_v2-1"
+    best_for: ["CSIRT service portfolios", "incident management capability design", "team maturity planning"]
+    evidence_tier: "A"
+    last_reviewed: "2026-09-29"
+
+  - id: veris
+    name: "VERIS"
+    type: "incident-data-framework"
+    domain: ["incident-response", "risk", "data-modeling", "threat-intelligence"]
+    status: "verified"
+    version: "1.3.1"
+    url: "https://verisframework.org/"
+    best_for: ["structured incident recording", "incident data analysis", "repeatable breach classification"]
+    evidence_tier: "A"
+    last_reviewed: "2026-09-29"
+
+  - id: nist-sp-800-61-r3
+    name: "NIST SP 800-61 Rev. 3"
+    type: "incident-response-guidance"
+    domain: ["incident-response", "governance", "csf"]
+    status: "verified"
+    version: "Rev. 3"
+    url: "https://csrc.nist.gov/pubs/sp/800/61/r3/final"
+    best_for: ["incident response governance", "CSF 2.0 incident-response integration", "detection-response-recovery planning"]
+    evidence_tier: "A"
+    last_reviewed: "2026-09-29"
+
+  - id: nist-sp-800-160-v2-r1
+    name: "NIST SP 800-160 Vol. 2 Rev. 1"
+    type: "cyber-resilience-engineering"
+    domain: ["resilience", "security-engineering", "advanced-threats"]
+    status: "verified"
+    version: "Vol. 2 Rev. 1"
+    url: "https://csrc.nist.gov/pubs/sp/800/160/v2/r1/final"
+    best_for: ["cyber resilience engineering", "advanced threat resilience", "survivable system design"]
+    evidence_tier: "A"
+    last_reviewed: "2026-09-29"
+
+  - id: cisa-cpg
+    name: "CISA Cross-Sector Cybersecurity Performance Goals"
+    type: "security-outcomes-framework"
+    domain: ["critical-infrastructure", "defense", "governance"]
+    status: "verified"
+    url: "https://www.cisa.gov/cybersecurity-performance-goals"
+    best_for: ["high-impact security outcomes", "critical-infrastructure baselines", "security maturity improvement"]
+    evidence_tier: "A"
+    last_reviewed: "2026-09-29"
+
+  - id: cyber-kill-chain
+    name: "Cyber Kill Chain"
+    type: "intrusion-lifecycle-model"
+    domain: ["threat-intelligence", "adversary-analysis", "detection"]
+    status: "verified"
+    url: "https://www.lockheedmartin.com/en-us/capabilities/cyber/cyber-kill-chain.html"
+    best_for: ["intrusion lifecycle analysis", "adversary campaign framing", "defensive intervention points"]
+    evidence_tier: "A"
+    last_reviewed: "2026-09-29"
+
+  - id: misp-galaxy
+    name: "MISP Galaxy"
+    type: "threat-intelligence-knowledge-model"
+    domain: ["threat-intelligence", "adversary-analysis", "information-sharing"]
+    status: "verified"
+    url: "https://www.misp-project.org/galaxy.html"
+    best_for: ["threat actor clusters", "structured CTI vocabularies", "cross-platform intelligence enrichment"]
+    evidence_tier: "A"
+    last_reviewed: "2026-09-29"
+
+  - id: ssvc
+    name: "Stakeholder-Specific Vulnerability Categorization"
+    type: "vulnerability-prioritization-framework"
+    domain: ["vulnerability-management", "risk", "decision-support"]
+    status: "verified"
+    url: "https://certcc.github.io/SSVC/"
+    best_for: ["contextual vulnerability prioritization", "stakeholder-specific response decisions", "transparent remediation triage"]
+    evidence_tier: "A"
+    last_reviewed: "2026-09-29"
+
+  - id: oasis-csaf-2
+    name: "OASIS Common Security Advisory Framework"
+    type: "security-advisory-standard"
+    domain: ["vulnerability-management", "information-sharing", "software-supply-chain"]
+    status: "verified"
+    version: "2.0 / Errata 01"
+    url: "https://docs.oasis-open.org/csaf/csaf/v2.0/csaf-v2.0.html"
+    best_for: ["machine-readable security advisories", "product vulnerability status", "remediation information exchange"]
+    evidence_tier: "A"
+    last_reviewed: "2026-09-29"
