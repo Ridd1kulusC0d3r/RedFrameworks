@@ -302,56 +302,153 @@ function graphEntities(){
   return state.items.filter(item=>ids.has(item.id)).sort((a,b)=>a.name.localeCompare(b.name));
 }
 
+function graphAllowed(item,mode){
+  if(!item)return false;
+  if(mode==="frameworks")return item.kind==="framework";
+  if(mode==="tools")return item.kind==="tool";
+  if(mode==="verified")return item.status==="verified";
+  return true;
+}
+
+function graphNeighborhood(focus,depth,mode){
+  const map=new Map(state.items.map(item=>[item.id,item]));
+  const degree=new Map();
+  for(const edge of state.relationships){
+    degree.set(edge.from,(degree.get(edge.from)||0)+1);
+    degree.set(edge.to,(degree.get(edge.to)||0)+1);
+  }
+
+  const visible=new Set([focus]),depthMap=new Map([[focus,0]]);
+  let frontier=[focus];
+  for(let d=1;d<=depth;d++){
+    const next=[];
+    for(const node of frontier){
+      for(const edge of state.relationships){
+        const neighbor=edge.from===node?edge.to:edge.to===node?edge.from:null;
+        if(!neighbor||visible.has(neighbor))continue;
+        const item=map.get(neighbor);
+        if(!graphAllowed(item,mode))continue;
+        visible.add(neighbor);depthMap.set(neighbor,d);next.push(neighbor);
+      }
+    }
+    frontier=next;
+  }
+
+  const ranked=[...visible].filter(id=>id!==focus).sort((a,b)=>{
+    const da=depthMap.get(a)||9,db=depthMap.get(b)||9;
+    if(da!==db)return da-db;
+    const deg=(degree.get(b)||0)-(degree.get(a)||0);
+    if(deg)return deg;
+    return(map.get(a)?.name||a).localeCompare(map.get(b)?.name||b);
+  }).slice(0,41);
+  const kept=new Set([focus,...ranked]);
+  const edges=state.relationships.filter(edge=>kept.has(edge.from)&&kept.has(edge.to));
+  return{nodes:[focus,...ranked],edges,depthMap,map};
+}
+
 function setupGraph(){
   const entities=graphEntities();
   for(const select of[$("graph-select"),$("path-from"),$("path-to")]){
     select.innerHTML="";optionize(select,entities.map(i=>i.id),id=>entities.find(i=>i.id===id)?.name||id);
   }
   $("graph-select").value=entities.some(i=>i.id==="mitre-attack")?"mitre-attack":entities[0]?.id||"";
-  $("path-from").value="mitre-attack";
+  $("path-from").value=entities.some(i=>i.id==="mitre-attack")?"mitre-attack":entities[0]?.id||"";
   $("path-to").value=entities.some(i=>i.id==="sigma")?"sigma":entities.at(-1)?.id||"";
-  renderGraph();
+  renderGraphStats();renderGraph();
+}
+
+function renderGraphStats(){
+  const entities=graphEntities();
+  const domains=unique(entities.flatMap(item=>item.domains||[]));
+  const high=state.relationships.filter(edge=>edge.confidence==="high").length;
+  const types=unique(state.relationships.map(edge=>edge.relation));
+  const metrics=[
+    ["Nodes",entities.length],
+    ["Edges",state.relationships.length],
+    ["Relationship types",types.length],
+    ["Domains",domains.length],
+    ["High confidence",high]
+  ];
+  $("graph-stats").innerHTML=metrics.map(([label,value])=>
+    '<div class="graph-stat"><strong>'+value+'</strong><span>'+esc(label)+'</span></div>'
+  ).join("");
+}
+
+function renderGraphRelTypes(edges){
+  const counts=new Map();
+  for(const edge of edges||state.relationships)counts.set(edge.relation,(counts.get(edge.relation)||0)+1);
+  const rows=[...counts.entries()].sort((a,b)=>b[1]-a[1]).slice(0,12);
+  $("graph-rel-types").innerHTML=rows.map(([name,count])=>
+    '<span title="'+esc(name)+'">'+esc(name.replaceAll("-"," "))+' <b>'+count+'</b></span>'
+  ).join("");
 }
 
 function domainColor(item,index){
-  const palette=["#f24861","#79b9ff","#63d89a","#efbd67","#a997ff","#67d8df"];
+  const palette=["#f24861","#79b9ff","#63d89a","#efbd67","#a997ff","#67d8df","#f58fd5","#8bd16d"];
   const domain=(item?.domains||[])[0]||"unknown";
   let hash=0;for(const ch of domain)hash=(hash*31+ch.charCodeAt(0))>>>0;
   return palette[(hash+index)%palette.length];
 }
 
 function renderGraph(){
-  const focus=$("graph-select").value,map=new Map(state.items.map(i=>[i.id,i]));
-  const edges=state.relationships.filter(e=>e.from===focus||e.to===focus);
-  const neighbors=unique(edges.map(e=>e.from===focus?e.to:e.from)).slice(0,18);
-  const svg=$("relationship-graph"),cx=500,cy=290,r=Math.min(205+neighbors.length*3,245);
-  let markup="";
-  neighbors.forEach((id,index)=>{
-    const angle=Math.PI*2*index/Math.max(neighbors.length,1)-Math.PI/2,x=cx+Math.cos(angle)*r,y=cy+Math.sin(angle)*r;
-    const edge=edges.find(e=>(e.from===focus&&e.to===id)||(e.to===focus&&e.from===id));
-    const pathClass=state.graphPath.edges.has(edgeKey(focus,id))?" path":"";
-    markup+='<line class="graph-edge '+esc(edge?.confidence||"") + pathClass+'" x1="'+cx+'" y1="'+cy+'" x2="'+x+'" y2="'+y+'"></line>';
-  });
-  [focus,...neighbors].forEach((id,index)=>{
-    let x=cx,y=cy;if(index){const angle=Math.PI*2*(index-1)/Math.max(neighbors.length,1)-Math.PI/2;x=cx+Math.cos(angle)*r;y=cy+Math.sin(angle)*r}
-    const item=map.get(id),name=item?.name||id,label=name.length>23?name.slice(0,21)+"…":name,color=domainColor(item,index);
-    const pathClass=state.graphPath.nodes.has(id)?" path":"";
-    markup+='<g tabindex="0" role="button" class="graph-node '+(index===0?"center":"")+pathClass+'" data-id="'+esc(id)+'" transform="translate('+x+' '+y+')">'+
-      '<circle r="'+(index===0?54:38)+'" style="stroke:'+color+'"></circle><text text-anchor="middle" dy="4">'+esc(label)+'</text></g>';
+  const focus=$("graph-select").value;
+  if(!focus)return;
+  const depth=Number($("graph-depth")?.value||1),mode=$("graph-mode")?.value||"ecosystem";
+  const {nodes,edges,depthMap,map}=graphNeighborhood(focus,depth,mode);
+  const svg=$("relationship-graph"),cx=600,cy=360;
+  const ring1=nodes.filter(id=>(depthMap.get(id)||0)===1);
+  const ring2=nodes.filter(id=>(depthMap.get(id)||0)>=2);
+  const positions=new Map([[focus,{x:cx,y:cy}]]);
+  const place=(ids,radius,offset=0)=>{
+    ids.forEach((id,index)=>{
+      const angle=Math.PI*2*index/Math.max(ids.length,1)-Math.PI/2+offset;
+      positions.set(id,{x:cx+Math.cos(angle)*radius,y:cy+Math.sin(angle)*radius});
+    });
+  };
+  place(ring1,220,0);
+  place(ring2,325,Math.PI/Math.max(ring2.length,1));
+
+  let markup='<defs><filter id="nodeGlow"><feGaussianBlur stdDeviation="5" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>';
+  for(const edge of edges){
+    const a=positions.get(edge.from),b=positions.get(edge.to);if(!a||!b)continue;
+    const pathClass=state.graphPath.edges.has(edgeKey(edge.from,edge.to))?" path":"";
+    markup+='<line class="graph-edge '+esc(edge.confidence||"") + pathClass+'" x1="'+a.x+'" y1="'+a.y+'" x2="'+b.x+'" y2="'+b.y+'"></line>';
+  }
+
+  nodes.forEach((id,index)=>{
+    const pos=positions.get(id);if(!pos)return;
+    const item=map.get(id),name=item?.name||id;
+    const label=name.length>22?name.slice(0,20)+"…":name;
+    const isCenter=id===focus,pathClass=state.graphPath.nodes.has(id)?" path":"";
+    const statusClass=item?.status==="not-verified"?" unverified":"";
+    const kindClass=" kind-"+esc(item?.kind||"entity");
+    const radius=isCenter?55:(item?.kind==="framework"?34:29);
+    markup+='<g tabindex="0" role="button" class="graph-node '+(isCenter?"center":"")+pathClass+statusClass+kindClass+'" data-id="'+esc(id)+'" transform="translate('+pos.x+' '+pos.y+')">'+
+      '<circle r="'+radius+'" style="--node-color:'+domainColor(item,index)+'"></circle>'+
+      '<text text-anchor="middle" dy="'+(isCenter?4:3)+'">'+esc(label)+'</text></g>';
   });
   svg.innerHTML=markup;
+
   svg.querySelectorAll(".graph-node").forEach(node=>{
     const activate=()=>{if(node.dataset.id!==focus){$("graph-select").value=node.dataset.id;renderGraph()}};
-    node.addEventListener("click",activate);node.addEventListener("keydown",e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();activate()}});
+    node.addEventListener("click",activate);
+    node.addEventListener("keydown",e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();activate()}});
   });
+
   const item=map.get(focus);
-  const rels=edges.map(edge=>{
+  const direct=state.relationships.filter(edge=>edge.from===focus||edge.to===focus);
+  const rels=direct.slice(0,14).map(edge=>{
     const other=edge.from===focus?edge.to:edge.from,otherItem=map.get(other);
-    return '<div class="graph-relation"><b>'+esc(edge.relation)+'</b><span>'+esc(edge.confidence||"unrated")+' · '+esc(edge.provenance||"curated")+'</span><br>'+
-      '<a href="entity/'+encodeURIComponent(other)+'/">'+esc(otherItem?.name||other)+' →</a></div>';
+    return '<div class="graph-relation"><div><b>'+esc(edge.relation.replaceAll("-"," "))+'</b><span>'+esc(edge.confidence||"unrated")+' confidence</span></div>'+
+      '<a href="entity/'+encodeURIComponent(other)+'/">'+esc(otherItem?.name||other)+' →</a><small>'+esc(edge.provenance||"curated")+'</small></div>';
   }).join("");
-  $("graph-detail").innerHTML='<p class="section-kicker">Focused entity</p><h3>'+esc(item?.name||focus)+'</h3><p>'+esc(item?.summary||"Curated relationship context.")+'</p><div class="tag-row">'+
-    (item?.domains||[]).slice(0,5).map(d=>'<span class="tag">'+esc(d)+'</span>').join("")+'</div><div class="graph-relations">'+rels+'</div>';
+
+  $("graph-detail").innerHTML='<p class="section-kicker">'+esc(item?.kind||"entity")+' · '+esc(item?.status||"")+'</p>'+
+    '<h3>'+esc(item?.name||focus)+'</h3><p>'+esc(item?.summary||"Curated relationship context.")+'</p>'+
+    '<div class="graph-scoreline"><span>Provenance <b>'+esc(item?.provenance_score??"—")+'</b></span><span>Direct edges <b>'+direct.length+'</b></span></div>'+
+    '<div class="tag-row">'+(item?.domains||[]).slice(0,6).map(d=>'<span class="tag">'+esc(d)+'</span>').join("")+'</div>'+
+    '<div class="graph-relations">'+rels+'</div>';
+  renderGraphRelTypes(edges);
 }
 
 function findGraphPath(){
@@ -373,7 +470,9 @@ function findGraphPath(){
     for(let i=0;i<found.length-1;i++)state.graphPath.edges.add(edgeKey(found[i],found[i+1]));
     const map=new Map(state.items.map(i=>[i.id,i]));
     $("path-result").innerHTML='<strong>'+found.length+' nodes</strong>&nbsp; '+found.map(id=>esc(map.get(id)?.name||id)).join(" → ");
-    $("graph-select").value=start;renderGraph();
+    $("graph-select").value=start;
+    if(found.length>2&&$("graph-depth"))$("graph-depth").value="2";
+    renderGraph();
   }else{
     $("path-result").textContent="No curated path exists between those entities yet.";renderGraph();
   }
@@ -609,6 +708,10 @@ async function init(){
   $("density").addEventListener("click",()=>{state.compact=!state.compact;$("catalog-grid").classList.toggle("compact",state.compact);$("density").textContent=state.compact?"Cards":"Compact";syncUrl()});
   $("export-json").addEventListener("click",()=>downloadFiltered("json"));$("export-csv").addEventListener("click",()=>downloadFiltered("csv"));
   $("technique-search").addEventListener("input",renderTechniques);
+  $("graph-depth").addEventListener("change",renderGraph);
+  $("graph-mode").addEventListener("change",renderGraph);
+  $("graph-fit").addEventListener("click",()=>{state.graphPath={nodes:new Set(),edges:new Set()};$("graph-depth").value="1";$("graph-mode").value="ecosystem";$("graph-select").value="mitre-attack";renderGraph()});
+  document.querySelectorAll("[data-route-from]").forEach(btn=>btn.addEventListener("click",()=>{$("path-from").value=btn.dataset.routeFrom;$("path-to").value=btn.dataset.routeTo;findGraphPath()}));
   $("adversary-search").addEventListener("input",renderAdversaries);
   $("adversary-type").addEventListener("change",renderAdversaries);
   $("adversary-motivation").addEventListener("change",renderAdversaries);
