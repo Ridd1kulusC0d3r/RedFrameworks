@@ -29,7 +29,7 @@
   <img src="https://img.shields.io/badge/frameworks-62-79b9ff" alt="62 frameworks">
   <img src="https://img.shields.io/badge/catalog-125-f24861" alt="125 catalog entries">
   <img src="https://img.shields.io/badge/adversaries-42-efbd67" alt="42 adversaries">
-  <img src="https://img.shields.io/badge/graph_edges-74-63d89a" alt="74 graph edges">
+  <img src="https://img.shields.io/badge/graph_edges-89-63d89a" alt="89 graph edges">
   <img src="https://img.shields.io/badge/books_+_certs-23-a997ff" alt="23 books and certifications">
 </p>
 
