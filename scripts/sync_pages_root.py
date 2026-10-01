@@ -6,7 +6,7 @@ import shutil
 from pathlib import Path
 
 ROOT_FILES = ("index.html", "styles.css", "app.js", "detail.html", "detail.js", ".nojekyll")
-GENERATED_DIRS = ("api", "entity", "technique", "adversary", "exports", "assets", "graph")
+GENERATED_DIRS = ("api", "entity", "technique", "adversary", "exports", "assets", "graph", "planner", "intelligence")
 
 def replace_dir(source: Path, target: Path) -> None:
     if target.exists():
