@@ -17,12 +17,16 @@ jobs:
           python-version: "3.13"
       - name: Install dependencies
         run: python -m pip install --disable-pip-version-check PyYAML jsonschema
-      - name: Validate and build v5 assets
+      - name: Validate and build v6 intelligence assets
         run: |
           python scripts/validate_data.py
           python scripts/validate_examples.py
           python scripts/aggregate_scorecards.py --output-dir generated-metrics
           python scripts/build_verification_queue.py --json verification-queue.json --report verification-queue.md
+          python scripts/build_verification_v2.py --health upstream-health.json --output generated-metrics/verification-v2.json
+          python scripts/build_knowledge_graph.py --output generated-metrics/knowledge-graph-v3.json
+          python scripts/build_visual_intelligence.py --output generated-metrics/visual-intelligence.json
+          python scripts/build_research_corpus.py --output generated-metrics/research-corpus.jsonl
           python scripts/build_site.py --output _site-release
           python scripts/export_stix.py --output-dir exports/stix
           python scripts/export_neo4j.py --output-dir exports/neo4j
@@ -45,7 +49,7 @@ jobs:
           fi
       - name: Package release and checksums
         run: |
-          tar -czf "redframeworks-${GITHUB_REF_NAME}.tar.gz" frameworks.yaml catalog.yaml relationships.yaml resources.yaml learning-paths.yaml data schemas sdk exports _site-release/api docs examples
+          tar -czf "redframeworks-${GITHUB_REF_NAME}.tar.gz" frameworks.yaml catalog.yaml relationships.yaml resources.yaml learning-paths.yaml data packs schemas sdk exports _site-release/api docs examples
           sha256sum "redframeworks-${GITHUB_REF_NAME}.tar.gz" exports/catalog-snapshot-*.json > SHA256SUMS.txt
       - name: Attest release provenance
         uses: actions/attest-build-provenance@v2
