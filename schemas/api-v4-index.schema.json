@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ridd1kulusc0d3r.github.io/RedFrameworks/schemas/api-v4-index.schema.json",
+  "type": "object",
+  "required": [
+    "api",
+    "current",
+    "supported",
+    "updated",
+    "counts",
+    "endpoints"
+  ],
+  "properties": {
+    "api": {
+      "type": "string"
+    },
+    "current": {
+      "const": "v4"
+    },
+    "supported": {
+      "type": "array",
+      "contains": {
+        "const": "v4"
+      }
+    },
+    "updated": {
+      "type": "string"
+    },
+    "counts": {
+      "type": "object"
+    },
+    "endpoints": {
+      "type": "object",
+      "required": [
+        "catalog",
+        "adversaries",
+        "campaigns",
+        "detections",
+        "domain_packs",
+        "knowledge_graph",
+        "verification_v2",
+        "visual_intelligence",
+        "research_corpus"
+      ]
+    }
+  },
+  "additionalProperties": true
+}
