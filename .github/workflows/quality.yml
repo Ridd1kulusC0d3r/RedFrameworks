@@ -81,12 +81,16 @@ jobs:
           python -m json.tool _site-test/api/v4/verification-v2.json >/dev/null
           python -m json.tool _site-test/api/v4/visual-intelligence.json >/dev/null
           test -s _site-test/api/v4/research-corpus.jsonl
+          test -s _site-test/data/research-corpus.jsonl
           python - <<'PY'
           import json
           from jsonschema import Draft202012Validator
           index=json.load(open("_site-test/api/v3/index.json"))
           schema=json.load(open("schemas/api-v3-index.schema.json"))
           Draft202012Validator(schema).validate(index)
+          v4=json.load(open("_site-test/api/v4/index.json"))
+          v4_schema=json.load(open("schemas/api-v4-index.schema.json"))
+          Draft202012Validator(v4_schema).validate(v4)
           item_schema=json.load(open("schemas/api-v3-item.schema.json"))
           validator=Draft202012Validator(item_schema)
           for item in json.load(open("_site-test/api/v3/catalog.json")):
