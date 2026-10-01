@@ -1,0 +1,124 @@
+updated: "2026-09-30"
+schema_version: "1.0"
+policy: "Detection hypotheses and telemetry requirements only. This dataset does not provide offensive execution procedures."
+
+detections:
+  - id: det-valid-accounts
+    attack_id: "T1078"
+    name: "Valid Accounts"
+    telemetry: ["identity-provider sign-in logs", "VPN authentication", "cloud audit logs", "privilege changes"]
+    analytics: ["unusual account context", "new device or location", "unexpected privilege use", "service-account interactive use"]
+    evidence: ["source authentication event", "correlated identity alert", "analyst disposition", "containment record"]
+    defensive_actions: ["model", "harden", "detect", "isolate", "evict", "restore"]
+    source: "https://d3fend.mitre.org/offensive-technique/attack/T1078/"
+    source_tier: "A"
+
+  - id: det-account-discovery
+    attack_id: "T1087"
+    name: "Account Discovery"
+    telemetry: ["process creation", "directory-service queries", "identity administration logs"]
+    analytics: ["unexpected account enumeration", "high-volume directory queries", "enumeration from unusual hosts"]
+    evidence: ["process or query event", "detection record", "analyst triage", "retest result"]
+    defensive_actions: ["model", "harden", "detect"]
+    source: "https://d3fend.mitre.org/offensive-technique/attack/T1087/"
+    source_tier: "A"
+
+  - id: det-command-scripting
+    attack_id: "T1059"
+    name: "Command and Scripting Interpreter"
+    telemetry: ["process creation", "script-block or shell telemetry", "endpoint command lineage"]
+    analytics: ["unexpected interpreter ancestry", "rare administrative scripting context", "encoded or anomalous script execution"]
+    evidence: ["process tree", "script telemetry", "alert", "analyst outcome"]
+    defensive_actions: ["harden", "detect", "isolate"]
+    source: "https://attack.mitre.org/techniques/T1059/"
+    source_tier: "A"
+
+  - id: det-public-facing-app
+    attack_id: "T1190"
+    name: "Exploit Public-Facing Application"
+    telemetry: ["web application logs", "WAF events", "reverse-proxy logs", "server process telemetry", "vulnerability inventory"]
+    analytics: ["exploit-like request patterns", "unexpected child processes", "new server-side artifacts", "post-request authentication anomalies"]
+    evidence: ["request trace", "server telemetry", "detection record", "remediation and retest"]
+    defensive_actions: ["harden", "detect", "isolate", "restore"]
+    source: "https://attack.mitre.org/techniques/T1190/"
+    source_tier: "A"
+
+  - id: det-external-remote-services
+    attack_id: "T1133"
+    name: "External Remote Services"
+    telemetry: ["VPN logs", "SSH or remote-service authentication", "identity-provider events", "network gateway logs"]
+    analytics: ["new source network", "unusual remote-service time", "rare account-to-service combination", "unexpected privilege context"]
+    evidence: ["authentication event", "network session", "alert", "analyst decision"]
+    defensive_actions: ["harden", "detect", "isolate"]
+    source: "https://attack.mitre.org/techniques/T1133/"
+    source_tier: "A"
+
+  - id: det-phishing
+    attack_id: "T1566"
+    name: "Phishing"
+    telemetry: ["email gateway", "mailbox audit", "URL click telemetry", "attachment sandbox results", "identity sign-ins"]
+    analytics: ["sender or domain anomalies", "suspicious redirect chains", "post-click sign-in changes", "attachment risk correlation"]
+    evidence: ["message trace", "URL or attachment verdict", "identity telemetry", "analyst disposition"]
+    defensive_actions: ["harden", "detect", "evict"]
+    source: "https://attack.mitre.org/techniques/T1566/"
+    source_tier: "A"
+
+  - id: det-credential-access
+    attack_id: "T1003"
+    name: "OS Credential Dumping"
+    telemetry: ["endpoint process telemetry", "security subsystem access", "EDR alerts", "privileged process activity"]
+    analytics: ["unexpected access to credential material", "rare process-to-security-subsystem access", "credential-theft alert correlation"]
+    evidence: ["endpoint event", "alert", "credential reset record", "retest"]
+    defensive_actions: ["harden", "detect", "isolate", "evict"]
+    source: "https://attack.mitre.org/techniques/T1003/"
+    source_tier: "A"
+
+  - id: det-remote-services
+    attack_id: "T1021"
+    name: "Remote Services"
+    telemetry: ["remote-service authentication", "network connection logs", "process creation", "endpoint login events"]
+    analytics: ["new lateral connection pattern", "rare admin share or remote-service use", "unusual source-target pair"]
+    evidence: ["authentication", "network session", "process lineage", "analyst decision"]
+    defensive_actions: ["harden", "detect", "isolate"]
+    source: "https://attack.mitre.org/techniques/T1021/"
+    source_tier: "A"
+
+  - id: det-password-guessing
+    attack_id: "T1110"
+    name: "Brute Force"
+    telemetry: ["identity-provider logs", "VPN authentication", "application authentication", "lockout events"]
+    analytics: ["high failure rate", "distributed failures against one account", "one source against many accounts", "success after failure burst"]
+    evidence: ["authentication sequence", "identity alert", "account action", "retest"]
+    defensive_actions: ["harden", "detect", "evict"]
+    source: "https://attack.mitre.org/techniques/T1110/"
+    source_tier: "A"
+
+  - id: det-alt-auth-material
+    attack_id: "T1550"
+    name: "Use Alternate Authentication Material"
+    telemetry: ["token issuance and use", "cloud audit", "Kerberos authentication", "identity-provider logs"]
+    analytics: ["token use from new context", "unexpected token lifetime or audience", "authentication without expected interactive flow"]
+    evidence: ["token or authentication event", "cloud audit event", "alert", "revocation record"]
+    defensive_actions: ["harden", "detect", "evict"]
+    source: "https://attack.mitre.org/techniques/T1550/"
+    source_tier: "A"
+
+  - id: det-account-manipulation
+    attack_id: "T1098"
+    name: "Account Manipulation"
+    telemetry: ["identity administration logs", "cloud role changes", "group membership changes", "service principal changes"]
+    analytics: ["unexpected role grant", "new authentication method", "new delegated permission", "privilege change outside workflow"]
+    evidence: ["administrative event", "change ticket comparison", "alert", "rollback record"]
+    defensive_actions: ["harden", "detect", "evict", "restore"]
+    source: "https://attack.mitre.org/techniques/T1098/"
+    source_tier: "A"
+
+  - id: det-supply-chain
+    attack_id: "T1195"
+    name: "Supply Chain Compromise"
+    telemetry: ["build provenance", "artifact signatures", "CI/CD audit logs", "dependency inventory", "release metadata"]
+    analytics: ["unexpected build identity", "artifact hash drift", "unsigned or newly signed artifact", "dependency provenance change"]
+    evidence: ["build attestation", "artifact digest", "CI/CD event", "rebuild and retest"]
+    defensive_actions: ["model", "harden", "detect", "restore"]
+    source: "https://attack.mitre.org/techniques/T1195/"
+    source_tier: "A"
