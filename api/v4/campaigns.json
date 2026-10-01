@@ -1,0 +1,273 @@
+{
+  "updated": "2026-09-30",
+  "schema_version": "1.0",
+  "source_model": "MITRE ATT&CK campaign pages",
+  "policy": "Defensive campaign metadata only; no command-level procedures are reproduced.",
+  "campaigns": [
+    {
+      "id": "solarwinds-compromise",
+      "name": "SolarWinds Compromise",
+      "attack_id": "C0024",
+      "actor_ids": [
+        "apt29"
+      ],
+      "first_seen": "2019-08",
+      "last_seen": "2021-01",
+      "regions": [
+        "North America",
+        "Europe",
+        "Asia",
+        "Middle East"
+      ],
+      "sectors": [
+        "government",
+        "consulting",
+        "technology",
+        "telecommunications"
+      ],
+      "themes": [
+        "supply-chain",
+        "identity",
+        "cloud",
+        "strategic espionage"
+      ],
+      "defensive_focus": [
+        "software-supply-chain",
+        "identity telemetry",
+        "cloud audit",
+        "trust relationships"
+      ],
+      "source": "https://attack.mitre.org/campaigns/C0024/",
+      "source_tier": "A"
+    },
+    {
+      "id": "operation-dream-job",
+      "name": "Operation Dream Job",
+      "attack_id": "C0022",
+      "actor_ids": [
+        "lazarus"
+      ],
+      "first_seen": "2019-09",
+      "last_seen": "2020-08",
+      "regions": [
+        "United States",
+        "Israel",
+        "Australia",
+        "Russia",
+        "India"
+      ],
+      "sectors": [
+        "defense",
+        "aerospace",
+        "government"
+      ],
+      "themes": [
+        "espionage",
+        "social engineering",
+        "strategic targeting"
+      ],
+      "defensive_focus": [
+        "email security",
+        "identity telemetry",
+        "endpoint visibility",
+        "user-risk signals"
+      ],
+      "source": "https://attack.mitre.org/campaigns/C0022/",
+      "source_tier": "A"
+    },
+    {
+      "id": "operation-wocao",
+      "name": "Operation Wocao",
+      "attack_id": "C0014",
+      "actor_ids": [],
+      "first_seen": "2017-12",
+      "last_seen": "2019-12",
+      "regions": [
+        "Brazil",
+        "China",
+        "France",
+        "Germany",
+        "Italy",
+        "Mexico",
+        "Portugal",
+        "Spain",
+        "United Kingdom",
+        "United States"
+      ],
+      "sectors": [
+        "government",
+        "managed services",
+        "aviation",
+        "construction",
+        "energy",
+        "finance",
+        "healthcare",
+        "software",
+        "transportation"
+      ],
+      "themes": [
+        "espionage",
+        "managed-services",
+        "enterprise intrusion"
+      ],
+      "defensive_focus": [
+        "identity",
+        "remote access",
+        "endpoint telemetry",
+        "network telemetry"
+      ],
+      "source": "https://attack.mitre.org/campaigns/C0014/",
+      "source_tier": "A"
+    },
+    {
+      "id": "operation-cuckoobees",
+      "name": "Operation CuckooBees",
+      "attack_id": "C0012",
+      "actor_ids": [
+        "apt41"
+      ],
+      "first_seen": "2019-12",
+      "last_seen": "2022-05",
+      "regions": [
+        "East Asia",
+        "Western Europe",
+        "North America"
+      ],
+      "sectors": [
+        "technology",
+        "manufacturing"
+      ],
+      "themes": [
+        "espionage",
+        "intellectual-property",
+        "research-and-development"
+      ],
+      "defensive_focus": [
+        "internet-facing services",
+        "identity",
+        "endpoint telemetry",
+        "data access monitoring"
+      ],
+      "source": "https://attack.mitre.org/campaigns/C0012/",
+      "source_tier": "A"
+    },
+    {
+      "id": "apt41-dust",
+      "name": "APT41 DUST",
+      "attack_id": "C0040",
+      "actor_ids": [
+        "apt41"
+      ],
+      "first_seen": "2023-01",
+      "last_seen": "2024-06",
+      "regions": [
+        "Europe",
+        "Asia",
+        "Middle East"
+      ],
+      "sectors": [
+        "shipping",
+        "logistics",
+        "media"
+      ],
+      "themes": [
+        "espionage",
+        "cloud services",
+        "database targeting"
+      ],
+      "defensive_focus": [
+        "cloud audit",
+        "database monitoring",
+        "identity",
+        "endpoint telemetry"
+      ],
+      "source": "https://attack.mitre.org/campaigns/C0040/",
+      "source_tier": "A"
+    },
+    {
+      "id": "homeland-justice",
+      "name": "HomeLand Justice",
+      "attack_id": "C0038",
+      "actor_ids": [],
+      "first_seen": "2021-05",
+      "last_seen": "2022-09",
+      "regions": [
+        "Albania"
+      ],
+      "sectors": [
+        "government"
+      ],
+      "themes": [
+        "disruption",
+        "destructive activity",
+        "data leak"
+      ],
+      "defensive_focus": [
+        "resilience",
+        "recovery",
+        "identity",
+        "endpoint and network telemetry"
+      ],
+      "source": "https://attack.mitre.org/campaigns/C0038/",
+      "source_tier": "A"
+    },
+    {
+      "id": "costaricto",
+      "name": "CostaRicto",
+      "attack_id": "C0004",
+      "actor_ids": [],
+      "first_seen": "2019-10",
+      "last_seen": "2020-11",
+      "regions": [
+        "Europe",
+        "Americas",
+        "Asia",
+        "Australia",
+        "Africa"
+      ],
+      "sectors": [
+        "finance",
+        "multi-sector"
+      ],
+      "themes": [
+        "espionage",
+        "hacker-for-hire",
+        "global targeting"
+      ],
+      "defensive_focus": [
+        "network telemetry",
+        "identity",
+        "remote access",
+        "endpoint visibility"
+      ],
+      "source": "https://attack.mitre.org/campaigns/C0004/",
+      "source_tier": "A"
+    },
+    {
+      "id": "frankenstein",
+      "name": "Frankenstein",
+      "attack_id": "C0001",
+      "actor_ids": [],
+      "first_seen": "2019-01",
+      "last_seen": "2019-04",
+      "regions": [
+        "global"
+      ],
+      "sectors": [
+        "targeted organizations"
+      ],
+      "themes": [
+        "espionage",
+        "open-source-tooling",
+        "targeted activity"
+      ],
+      "defensive_focus": [
+        "endpoint telemetry",
+        "script execution visibility",
+        "network telemetry"
+      ],
+      "source": "https://attack.mitre.org/campaigns/C0001/",
+      "source_tier": "A"
+    }
+  ]
+}

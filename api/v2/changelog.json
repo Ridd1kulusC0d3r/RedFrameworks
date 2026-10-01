@@ -2,6 +2,68 @@
   "schema_version": "1.0",
   "releases": [
     {
+      "version": "6.0.0",
+      "date": "2026-09-30",
+      "changes": [
+        {
+          "type": "added",
+          "area": "knowledge-graph",
+          "items": [
+            "Knowledge Graph 3.0",
+            "campaign nodes",
+            "detection nodes",
+            "sector nodes",
+            "domain-pack nodes"
+          ]
+        },
+        {
+          "type": "added",
+          "area": "threat-intelligence",
+          "items": [
+            "Campaign Intelligence",
+            "Continuous CTI proposal workflow",
+            "APT Ecosystem Index"
+          ]
+        },
+        {
+          "type": "added",
+          "area": "detection",
+          "items": [
+            "Detection Intelligence",
+            "telemetry hypotheses",
+            "evidence requirements"
+          ]
+        },
+        {
+          "type": "added",
+          "area": "research",
+          "items": [
+            "Verification Engine 2.0",
+            "RAG research corpus",
+            "domain packs",
+            "AI security surface taxonomy"
+          ]
+        },
+        {
+          "type": "added",
+          "area": "web",
+          "items": [
+            "Adversary Validation Planner",
+            "Visual Intelligence dashboard"
+          ]
+        },
+        {
+          "type": "changed",
+          "area": "api",
+          "items": [
+            "API v4",
+            "Python client v4",
+            "TypeScript client v4"
+          ]
+        }
+      ]
+    },
+    {
       "version": "5.2.0",
       "date": "2026-09-30",
       "changes": [

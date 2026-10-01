@@ -1,0 +1,453 @@
+{
+  "actor_types": {
+    "state-sponsored": 22,
+    "suspected-state-linked": 13,
+    "cybercrime": 4,
+    "mixed": 1,
+    "unresolved-attribution": 1,
+    "cyber-espionage": 1
+  },
+  "top_sectors": [
+    {
+      "sector": "government",
+      "count": 28,
+      "actors": [
+        "agrius",
+        "andariel",
+        "aoqin-dragon",
+        "apt1",
+        "apt12",
+        "apt16",
+        "apt17",
+        "apt18",
+        "apt28",
+        "apt29",
+        "apt3",
+        "apt30",
+        "apt32",
+        "apt37",
+        "apt42",
+        "axiom",
+        "backdoordiplomacy",
+        "bitter",
+        "gamaredon",
+        "kimsuky",
+        "lazarus",
+        "muddywater",
+        "mustang-panda",
+        "oilrig",
+        "patchwork",
+        "sandworm",
+        "sidewinder",
+        "turla"
+      ]
+    },
+    {
+      "sector": "technology",
+      "count": 13,
+      "actors": [
+        "agrius",
+        "andariel",
+        "apt1",
+        "apt12",
+        "apt17",
+        "apt18",
+        "apt19",
+        "apt29",
+        "apt3",
+        "apt37",
+        "apt41",
+        "lazarus",
+        "scattered-spider"
+      ]
+    },
+    {
+      "sector": "telecommunications",
+      "count": 10,
+      "actors": [
+        "aoqin-dragon",
+        "apt19",
+        "apt39",
+        "apt41",
+        "apt5",
+        "backdoordiplomacy",
+        "muddywater",
+        "oilrig",
+        "salt-typhoon",
+        "scattered-spider"
+      ]
+    },
+    {
+      "sector": "defense",
+      "count": 9,
+      "actors": [
+        "apt17",
+        "apt19",
+        "apt28",
+        "apt5",
+        "axiom",
+        "lazarus",
+        "muddywater",
+        "transparent-tribe",
+        "turla"
+      ]
+    },
+    {
+      "sector": "finance",
+      "count": 8,
+      "actors": [
+        "apt19",
+        "apt41",
+        "blacktech",
+        "fin7",
+        "muddywater",
+        "oilrig",
+        "scattered-spider",
+        "ta505"
+      ]
+    },
+    {
+      "sector": "research",
+      "count": 7,
+      "actors": [
+        "apt28",
+        "apt29",
+        "apt37",
+        "apt42",
+        "mustang-panda",
+        "transparent-tribe",
+        "turla"
+      ]
+    },
+    {
+      "sector": "energy",
+      "count": 6,
+      "actors": [
+        "apt19",
+        "apt33",
+        "bitter",
+        "muddywater",
+        "oilrig",
+        "sandworm"
+      ]
+    },
+    {
+      "sector": "education",
+      "count": 6,
+      "actors": [
+        "aoqin-dragon",
+        "apt19",
+        "apt41",
+        "kimsuky",
+        "transparent-tribe",
+        "turla"
+      ]
+    },
+    {
+      "sector": "media",
+      "count": 6,
+      "actors": [
+        "apt12",
+        "apt32",
+        "apt37",
+        "apt42",
+        "axiom",
+        "blacktech"
+      ]
+    },
+    {
+      "sector": "diplomatic",
+      "count": 4,
+      "actors": [
+        "mustang-panda",
+        "patchwork",
+        "transparent-tribe",
+        "turla"
+      ]
+    },
+    {
+      "sector": "manufacturing",
+      "count": 4,
+      "actors": [
+        "apt18",
+        "axiom",
+        "kimsuky",
+        "scattered-spider"
+      ]
+    },
+    {
+      "sector": "think tanks",
+      "count": 3,
+      "actors": [
+        "apt29",
+        "kimsuky",
+        "patchwork"
+      ]
+    },
+    {
+      "sector": "pharmaceutical",
+      "count": 3,
+      "actors": [
+        "apt19",
+        "fin7",
+        "turla"
+      ]
+    },
+    {
+      "sector": "military",
+      "count": 3,
+      "actors": [
+        "andariel",
+        "gamaredon",
+        "sidewinder"
+      ]
+    },
+    {
+      "sector": "non-governmental organizations",
+      "count": 3,
+      "actors": [
+        "apt17",
+        "gamaredon",
+        "mustang-panda"
+      ]
+    },
+    {
+      "sector": "healthcare",
+      "count": 3,
+      "actors": [
+        "apt18",
+        "apt41",
+        "wizard-spider"
+      ]
+    },
+    {
+      "sector": "retail",
+      "count": 3,
+      "actors": [
+        "apt41",
+        "fin7",
+        "scattered-spider"
+      ]
+    },
+    {
+      "sector": "hospitality",
+      "count": 3,
+      "actors": [
+        "apt39",
+        "fin7",
+        "scattered-spider"
+      ]
+    },
+    {
+      "sector": "international organizations",
+      "count": 2,
+      "actors": [
+        "apt28",
+        "sandworm"
+      ]
+    },
+    {
+      "sector": "critical infrastructure",
+      "count": 2,
+      "actors": [
+        "sandworm",
+        "volt-typhoon"
+      ]
+    },
+    {
+      "sector": "engineering",
+      "count": 2,
+      "actors": [
+        "bitter",
+        "blacktech"
+      ]
+    },
+    {
+      "sector": "financial services",
+      "count": 2,
+      "actors": [
+        "andariel",
+        "lazarus"
+      ]
+    },
+    {
+      "sector": "cryptocurrency",
+      "count": 2,
+      "actors": [
+        "apt38",
+        "lazarus"
+      ]
+    },
+    {
+      "sector": "private sector",
+      "count": 2,
+      "actors": [
+        "apt16",
+        "apt32"
+      ]
+    },
+    {
+      "sector": "civil society",
+      "count": 2,
+      "actors": [
+        "apt32",
+        "apt42"
+      ]
+    },
+    {
+      "sector": "critical services",
+      "count": 2,
+      "actors": [
+        "agrius",
+        "wizard-spider"
+      ]
+    },
+    {
+      "sector": "industrial",
+      "count": 2,
+      "actors": [
+        "apt1",
+        "apt33"
+      ]
+    },
+    {
+      "sector": "political organizations",
+      "count": 2,
+      "actors": [
+        "apt3",
+        "apt30"
+      ]
+    },
+    {
+      "sector": "aerospace",
+      "count": 2,
+      "actors": [
+        "apt5",
+        "axiom"
+      ]
+    },
+    {
+      "sector": "legal",
+      "count": 2,
+      "actors": [
+        "apt17",
+        "apt19"
+      ]
+    }
+  ],
+  "campaign_timeline": [
+    {
+      "id": "operation-wocao",
+      "name": "Operation Wocao",
+      "attack_id": "C0014",
+      "first_seen": "2017-12",
+      "last_seen": "2019-12",
+      "sectors": [
+        "government",
+        "managed services",
+        "aviation",
+        "construction",
+        "energy",
+        "finance",
+        "healthcare",
+        "software",
+        "transportation"
+      ],
+      "actors": []
+    },
+    {
+      "id": "frankenstein",
+      "name": "Frankenstein",
+      "attack_id": "C0001",
+      "first_seen": "2019-01",
+      "last_seen": "2019-04",
+      "sectors": [
+        "targeted organizations"
+      ],
+      "actors": []
+    },
+    {
+      "id": "solarwinds-compromise",
+      "name": "SolarWinds Compromise",
+      "attack_id": "C0024",
+      "first_seen": "2019-08",
+      "last_seen": "2021-01",
+      "sectors": [
+        "government",
+        "consulting",
+        "technology",
+        "telecommunications"
+      ],
+      "actors": [
+        "apt29"
+      ]
+    },
+    {
+      "id": "operation-dream-job",
+      "name": "Operation Dream Job",
+      "attack_id": "C0022",
+      "first_seen": "2019-09",
+      "last_seen": "2020-08",
+      "sectors": [
+        "defense",
+        "aerospace",
+        "government"
+      ],
+      "actors": [
+        "lazarus"
+      ]
+    },
+    {
+      "id": "costaricto",
+      "name": "CostaRicto",
+      "attack_id": "C0004",
+      "first_seen": "2019-10",
+      "last_seen": "2020-11",
+      "sectors": [
+        "finance",
+        "multi-sector"
+      ],
+      "actors": []
+    },
+    {
+      "id": "operation-cuckoobees",
+      "name": "Operation CuckooBees",
+      "attack_id": "C0012",
+      "first_seen": "2019-12",
+      "last_seen": "2022-05",
+      "sectors": [
+        "technology",
+        "manufacturing"
+      ],
+      "actors": [
+        "apt41"
+      ]
+    },
+    {
+      "id": "homeland-justice",
+      "name": "HomeLand Justice",
+      "attack_id": "C0038",
+      "first_seen": "2021-05",
+      "last_seen": "2022-09",
+      "sectors": [
+        "government"
+      ],
+      "actors": []
+    },
+    {
+      "id": "apt41-dust",
+      "name": "APT41 DUST",
+      "attack_id": "C0040",
+      "first_seen": "2023-01",
+      "last_seen": "2024-06",
+      "sectors": [
+        "shipping",
+        "logistics",
+        "media"
+      ],
+      "actors": [
+        "apt41"
+      ]
+    }
+  ]
+}

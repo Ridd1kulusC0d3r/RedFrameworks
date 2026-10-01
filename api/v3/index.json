@@ -4,7 +4,8 @@
   "supported": [
     "v1",
     "v2",
-    "v3"
+    "v3",
+    "v4"
   ],
   "updated": "2026-09-30",
   "counts": {
@@ -19,7 +20,11 @@
     "emulation_plans": 13,
     "not_verified": 79,
     "relationships": 89,
-    "techniques": 2
+    "techniques": 2,
+    "campaigns": 8,
+    "detections": 12,
+    "domain_packs": 8,
+    "ai_security_surfaces": 9
   },
   "endpoints": {
     "catalog": "catalog.json",

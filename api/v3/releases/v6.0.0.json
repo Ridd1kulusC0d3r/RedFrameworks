@@ -1,0 +1,27 @@
+{
+  "version": "6.0.0",
+  "date": "2026-09-30",
+  "codename": "Collaborative Intelligence",
+  "status": "release-manifest",
+  "capabilities": [
+    "Knowledge Graph 3.0",
+    "Campaign Intelligence",
+    "Detection Intelligence",
+    "Verification Engine 2.0",
+    "proposal-only continuous ATT&CK discovery",
+    "domain intelligence packs",
+    "Shadow AI security surface taxonomy",
+    "RAG-ready research corpus",
+    "Adversary Validation Planner",
+    "Visual Intelligence dashboard",
+    "API v4",
+    "Python and TypeScript API v4 clients"
+  ],
+  "compatibility": {
+    "api_v1": true,
+    "api_v2": true,
+    "api_v3": true,
+    "api_v4": "current"
+  },
+  "safety": "Threat, adversary and emulation content is descriptive and oriented to authorized testing, defensive validation, detection, resilience and research."
+}

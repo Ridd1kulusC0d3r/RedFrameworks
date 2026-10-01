@@ -1,0 +1,6600 @@
+{
+  "schema_version": "3.0",
+  "generated_from": [
+    "frameworks.yaml",
+    "catalog.yaml",
+    "relationships.yaml",
+    "data/adversaries.yaml",
+    "data/campaigns.yaml",
+    "data/detection-intelligence.yaml",
+    "data/emulation-plans.yaml",
+    "packs/index.yaml",
+    "data/ai-security-surface.yaml"
+  ],
+  "stats": {
+    "nodes": 367,
+    "edges": 409,
+    "by_kind": {
+      "framework": 62,
+      "tool": 134,
+      "adversary": 42,
+      "sector": 67,
+      "campaign": 8,
+      "technique": 12,
+      "detection": 12,
+      "emulation-plan": 13,
+      "domain-pack": 8,
+      "ai-security-surface": 9
+    }
+  },
+  "nodes": [
+    {
+      "id": "adversary:agrius",
+      "kind": "adversary",
+      "name": "Agrius",
+      "attack_id": "G1030",
+      "actor_type": "state-sponsored"
+    },
+    {
+      "id": "adversary:andariel",
+      "kind": "adversary",
+      "name": "Andariel",
+      "attack_id": "G0138",
+      "actor_type": "state-sponsored"
+    },
+    {
+      "id": "adversary:aoqin-dragon",
+      "kind": "adversary",
+      "name": "Aoqin Dragon",
+      "attack_id": "G1007",
+      "actor_type": "suspected-state-linked"
+    },
+    {
+      "id": "adversary:apt1",
+      "kind": "adversary",
+      "name": "APT1",
+      "attack_id": "G0006",
+      "actor_type": "state-sponsored"
+    },
+    {
+      "id": "adversary:apt12",
+      "kind": "adversary",
+      "name": "APT12",
+      "attack_id": "G0005",
+      "actor_type": "state-sponsored"
+    },
+    {
+      "id": "adversary:apt16",
+      "kind": "adversary",
+      "name": "APT16",
+      "attack_id": "G0023",
+      "actor_type": "suspected-state-linked"
+    },
+    {
+      "id": "adversary:apt17",
+      "kind": "adversary",
+      "name": "APT17",
+      "attack_id": "G0025",
+      "actor_type": "suspected-state-linked"
+    },
+    {
+      "id": "adversary:apt18",
+      "kind": "adversary",
+      "name": "APT18",
+      "attack_id": "G0026",
+      "actor_type": "suspected-state-linked"
+    },
+    {
+      "id": "adversary:apt19",
+      "kind": "adversary",
+      "name": "APT19",
+      "attack_id": "G0073",
+      "actor_type": "suspected-state-linked"
+    },
+    {
+      "id": "adversary:apt28",
+      "kind": "adversary",
+      "name": "APT28",
+      "attack_id": "G0007",
+      "actor_type": "state-sponsored"
+    },
+    {
+      "id": "adversary:apt29",
+      "kind": "adversary",
+      "name": "APT29",
+      "attack_id": "G0016",
+      "actor_type": "state-sponsored"
+    },
+    {
+      "id": "adversary:apt3",
+      "kind": "adversary",
+      "name": "APT3",
+      "attack_id": "G0022",
+      "actor_type": "state-sponsored"
+    },
+    {
+      "id": "adversary:apt30",
+      "kind": "adversary",
+      "name": "APT30",
+      "attack_id": "G0013",
+      "actor_type": "suspected-state-linked"
+    },
+    {
+      "id": "adversary:apt32",
+      "kind": "adversary",
+      "name": "APT32",
+      "attack_id": "G0050",
+      "actor_type": "suspected-state-linked"
+    },
+    {
+      "id": "adversary:apt33",
+      "kind": "adversary",
+      "name": "APT33",
+      "attack_id": "G0064",
+      "actor_type": "suspected-state-linked"
+    },
+    {
+      "id": "adversary:apt37",
+      "kind": "adversary",
+      "name": "APT37",
+      "attack_id": "G0067",
+      "actor_type": "state-sponsored"
+    },
+    {
+      "id": "adversary:apt38",
+      "kind": "adversary",
+      "name": "APT38",
+      "attack_id": "G0082",
+      "actor_type": "state-sponsored"
+    },
+    {
+      "id": "adversary:apt39",
+      "kind": "adversary",
+      "name": "APT39",
+      "attack_id": "G0087",
+      "actor_type": "state-sponsored"
+    },
+    {
+      "id": "adversary:apt41",
+      "kind": "adversary",
+      "name": "APT41",
+      "attack_id": "G0096",
+      "actor_type": "mixed"
+    },
+    {
+      "id": "adversary:apt42",
+      "kind": "adversary",
+      "name": "APT42",
+      "attack_id": "G1044",
+      "actor_type": "state-sponsored"
+    },
+    {
+      "id": "adversary:apt5",
+      "kind": "adversary",
+      "name": "APT5",
+      "attack_id": "G1023",
+      "actor_type": "state-sponsored"
+    },
+    {
+      "id": "adversary:axiom",
+      "kind": "adversary",
+      "name": "Axiom",
+      "attack_id": "G0001",
+      "actor_type": "suspected-state-linked"
+    },
+    {
+      "id": "adversary:backdoordiplomacy",
+      "kind": "adversary",
+      "name": "BackdoorDiplomacy",
+      "attack_id": "G0135",
+      "actor_type": "cyber-espionage"
+    },
+    {
+      "id": "adversary:bitter",
+      "kind": "adversary",
+      "name": "BITTER",
+      "attack_id": "G1002",
+      "actor_type": "suspected-state-linked"
+    },
+    {
+      "id": "adversary:blacktech",
+      "kind": "adversary",
+      "name": "BlackTech",
+      "attack_id": "G0098",
+      "actor_type": "suspected-state-linked"
+    },
+    {
+      "id": "adversary:fin7",
+      "kind": "adversary",
+      "name": "FIN7",
+      "attack_id": "G0046",
+      "actor_type": "cybercrime"
+    },
+    {
+      "id": "adversary:gamaredon",
+      "kind": "adversary",
+      "name": "Gamaredon Group",
+      "attack_id": "G0047",
+      "actor_type": "state-sponsored"
+    },
+    {
+      "id": "adversary:kimsuky",
+      "kind": "adversary",
+      "name": "Kimsuky",
+      "attack_id": "G0094",
+      "actor_type": "state-sponsored"
+    },
+    {
+      "id": "adversary:lazarus",
+      "kind": "adversary",
+      "name": "Lazarus Group",
+      "attack_id": "G0032",
+      "actor_type": "state-sponsored"
+    },
+    {
+      "id": "adversary:muddywater",
+      "kind": "adversary",
+      "name": "MuddyWater",
+      "attack_id": "G0069",
+      "actor_type": "state-sponsored"
+    },
+    {
+      "id": "adversary:mustang-panda",
+      "kind": "adversary",
+      "name": "Mustang Panda",
+      "attack_id": "G0129",
+      "actor_type": "state-sponsored"
+    },
+    {
+      "id": "adversary:oilrig",
+      "kind": "adversary",
+      "name": "OilRig",
+      "attack_id": "G0049",
+      "actor_type": "state-sponsored"
+    },
+    {
+      "id": "adversary:patchwork",
+      "kind": "adversary",
+      "name": "Patchwork",
+      "attack_id": "G0040",
+      "actor_type": "unresolved-attribution"
+    },
+    {
+      "id": "adversary:salt-typhoon",
+      "kind": "adversary",
+      "name": "Salt Typhoon",
+      "attack_id": "G1045",
+      "actor_type": "state-sponsored"
+    },
+    {
+      "id": "adversary:sandworm",
+      "kind": "adversary",
+      "name": "Sandworm Team",
+      "attack_id": "G0034",
+      "actor_type": "state-sponsored"
+    },
+    {
+      "id": "adversary:scattered-spider",
+      "kind": "adversary",
+      "name": "Scattered Spider",
+      "attack_id": "G1015",
+      "actor_type": "cybercrime"
+    },
+    {
+      "id": "adversary:sidewinder",
+      "kind": "adversary",
+      "name": "Sidewinder",
+      "attack_id": "G0121",
+      "actor_type": "suspected-state-linked"
+    },
+    {
+      "id": "adversary:ta505",
+      "kind": "adversary",
+      "name": "TA505",
+      "attack_id": "G0092",
+      "actor_type": "cybercrime"
+    },
+    {
+      "id": "adversary:transparent-tribe",
+      "kind": "adversary",
+      "name": "Transparent Tribe",
+      "attack_id": "G0134",
+      "actor_type": "suspected-state-linked"
+    },
+    {
+      "id": "adversary:turla",
+      "kind": "adversary",
+      "name": "Turla",
+      "attack_id": "G0010",
+      "actor_type": "state-sponsored"
+    },
+    {
+      "id": "adversary:volt-typhoon",
+      "kind": "adversary",
+      "name": "Volt Typhoon",
+      "attack_id": "G1017",
+      "actor_type": "state-sponsored"
+    },
+    {
+      "id": "adversary:wizard-spider",
+      "kind": "adversary",
+      "name": "Wizard Spider",
+      "attack_id": "G0102",
+      "actor_type": "cybercrime"
+    },
+    {
+      "id": "ai-surface:agent",
+      "kind": "ai-security-surface",
+      "name": "Agent",
+      "risks": [
+        "over-broad authority",
+        "unbounded tool access",
+        "identity ambiguity"
+      ],
+      "evidence": [
+        "agent owner",
+        "runtime identity",
+        "allowed actions",
+        "audit trail"
+      ]
+    },
+    {
+      "id": "ai-surface:pipeline",
+      "kind": "ai-security-surface",
+      "name": "AI Supply Chain",
+      "risks": [
+        "artifact tampering",
+        "dependency drift",
+        "unverified model assets"
+      ],
+      "evidence": [
+        "attestation",
+        "hash",
+        "SBOM",
+        "release source"
+      ]
+    },
+    {
+      "id": "ai-surface:telemetry",
+      "kind": "ai-security-surface",
+      "name": "AI Telemetry",
+      "risks": [
+        "missing auditability",
+        "incomplete prompt/tool traces",
+        "privacy leakage"
+      ],
+      "evidence": [
+        "request logs",
+        "tool calls",
+        "policy decisions",
+        "retention"
+      ]
+    },
+    {
+      "id": "ai-surface:connector",
+      "kind": "ai-security-surface",
+      "name": "Connector / Plugin",
+      "risks": [
+        "data overexposure",
+        "credential misuse",
+        "third-party trust"
+      ],
+      "evidence": [
+        "connector inventory",
+        "scopes",
+        "owner",
+        "review date"
+      ]
+    },
+    {
+      "id": "ai-surface:identity",
+      "kind": "ai-security-surface",
+      "name": "Machine Identity",
+      "risks": [
+        "shared credentials",
+        "long-lived secrets",
+        "privilege sprawl"
+      ],
+      "evidence": [
+        "principal",
+        "credential type",
+        "rotation",
+        "privileges"
+      ]
+    },
+    {
+      "id": "ai-surface:mcp",
+      "kind": "ai-security-surface",
+      "name": "MCP / Tool Server",
+      "risks": [
+        "untrusted tool exposure",
+        "excessive permissions",
+        "supply-chain drift"
+      ],
+      "evidence": [
+        "server inventory",
+        "publisher",
+        "permissions",
+        "version"
+      ]
+    },
+    {
+      "id": "ai-surface:model",
+      "kind": "ai-security-surface",
+      "name": "Model",
+      "risks": [
+        "unapproved models",
+        "model provenance",
+        "unsafe capability exposure"
+      ],
+      "evidence": [
+        "model inventory",
+        "provider",
+        "version",
+        "approval state"
+      ]
+    },
+    {
+      "id": "ai-surface:dataset",
+      "kind": "ai-security-surface",
+      "name": "Training / Evaluation Dataset",
+      "risks": [
+        "data provenance",
+        "sensitive content",
+        "poisoning"
+      ],
+      "evidence": [
+        "source",
+        "license",
+        "classification",
+        "quality checks"
+      ]
+    },
+    {
+      "id": "ai-surface:vector-store",
+      "kind": "ai-security-surface",
+      "name": "Vector Store / Retrieval",
+      "risks": [
+        "sensitive-data retrieval",
+        "poisoned context",
+        "cross-tenant exposure"
+      ],
+      "evidence": [
+        "dataset owner",
+        "classification",
+        "access policy",
+        "ingest provenance"
+      ]
+    },
+    {
+      "id": "campaign:apt41-dust",
+      "kind": "campaign",
+      "name": "APT41 DUST",
+      "attack_id": "C0040",
+      "first_seen": "2023-01",
+      "last_seen": "2024-06"
+    },
+    {
+      "id": "campaign:costaricto",
+      "kind": "campaign",
+      "name": "CostaRicto",
+      "attack_id": "C0004",
+      "first_seen": "2019-10",
+      "last_seen": "2020-11"
+    },
+    {
+      "id": "campaign:frankenstein",
+      "kind": "campaign",
+      "name": "Frankenstein",
+      "attack_id": "C0001",
+      "first_seen": "2019-01",
+      "last_seen": "2019-04"
+    },
+    {
+      "id": "campaign:homeland-justice",
+      "kind": "campaign",
+      "name": "HomeLand Justice",
+      "attack_id": "C0038",
+      "first_seen": "2021-05",
+      "last_seen": "2022-09"
+    },
+    {
+      "id": "campaign:operation-cuckoobees",
+      "kind": "campaign",
+      "name": "Operation CuckooBees",
+      "attack_id": "C0012",
+      "first_seen": "2019-12",
+      "last_seen": "2022-05"
+    },
+    {
+      "id": "campaign:operation-dream-job",
+      "kind": "campaign",
+      "name": "Operation Dream Job",
+      "attack_id": "C0022",
+      "first_seen": "2019-09",
+      "last_seen": "2020-08"
+    },
+    {
+      "id": "campaign:operation-wocao",
+      "kind": "campaign",
+      "name": "Operation Wocao",
+      "attack_id": "C0014",
+      "first_seen": "2017-12",
+      "last_seen": "2019-12"
+    },
+    {
+      "id": "campaign:solarwinds-compromise",
+      "kind": "campaign",
+      "name": "SolarWinds Compromise",
+      "attack_id": "C0024",
+      "first_seen": "2019-08",
+      "last_seen": "2021-01"
+    },
+    {
+      "id": "detection:det-account-discovery",
+      "kind": "detection",
+      "name": "Account Discovery detection intelligence",
+      "telemetry": [
+        "process creation",
+        "directory-service queries",
+        "identity administration logs"
+      ]
+    },
+    {
+      "id": "detection:det-account-manipulation",
+      "kind": "detection",
+      "name": "Account Manipulation detection intelligence",
+      "telemetry": [
+        "identity administration logs",
+        "cloud role changes",
+        "group membership changes",
+        "service principal changes"
+      ]
+    },
+    {
+      "id": "detection:det-password-guessing",
+      "kind": "detection",
+      "name": "Brute Force detection intelligence",
+      "telemetry": [
+        "identity-provider logs",
+        "VPN authentication",
+        "application authentication",
+        "lockout events"
+      ]
+    },
+    {
+      "id": "detection:det-command-scripting",
+      "kind": "detection",
+      "name": "Command and Scripting Interpreter detection intelligence",
+      "telemetry": [
+        "process creation",
+        "script-block or shell telemetry",
+        "endpoint command lineage"
+      ]
+    },
+    {
+      "id": "detection:det-public-facing-app",
+      "kind": "detection",
+      "name": "Exploit Public-Facing Application detection intelligence",
+      "telemetry": [
+        "web application logs",
+        "WAF events",
+        "reverse-proxy logs",
+        "server process telemetry",
+        "vulnerability inventory"
+      ]
+    },
+    {
+      "id": "detection:det-external-remote-services",
+      "kind": "detection",
+      "name": "External Remote Services detection intelligence",
+      "telemetry": [
+        "VPN logs",
+        "SSH or remote-service authentication",
+        "identity-provider events",
+        "network gateway logs"
+      ]
+    },
+    {
+      "id": "detection:det-credential-access",
+      "kind": "detection",
+      "name": "OS Credential Dumping detection intelligence",
+      "telemetry": [
+        "endpoint process telemetry",
+        "security subsystem access",
+        "EDR alerts",
+        "privileged process activity"
+      ]
+    },
+    {
+      "id": "detection:det-phishing",
+      "kind": "detection",
+      "name": "Phishing detection intelligence",
+      "telemetry": [
+        "email gateway",
+        "mailbox audit",
+        "URL click telemetry",
+        "attachment sandbox results",
+        "identity sign-ins"
+      ]
+    },
+    {
+      "id": "detection:det-remote-services",
+      "kind": "detection",
+      "name": "Remote Services detection intelligence",
+      "telemetry": [
+        "remote-service authentication",
+        "network connection logs",
+        "process creation",
+        "endpoint login events"
+      ]
+    },
+    {
+      "id": "detection:det-supply-chain",
+      "kind": "detection",
+      "name": "Supply Chain Compromise detection intelligence",
+      "telemetry": [
+        "build provenance",
+        "artifact signatures",
+        "CI/CD audit logs",
+        "dependency inventory",
+        "release metadata"
+      ]
+    },
+    {
+      "id": "detection:det-alt-auth-material",
+      "kind": "detection",
+      "name": "Use Alternate Authentication Material detection intelligence",
+      "telemetry": [
+        "token issuance and use",
+        "cloud audit",
+        "Kerberos authentication",
+        "identity-provider logs"
+      ]
+    },
+    {
+      "id": "detection:det-valid-accounts",
+      "kind": "detection",
+      "name": "Valid Accounts detection intelligence",
+      "telemetry": [
+        "identity-provider sign-in logs",
+        "VPN authentication",
+        "cloud audit logs",
+        "privilege changes"
+      ]
+    },
+    {
+      "id": "pack:ai-genai",
+      "kind": "domain-pack",
+      "name": "AI / GenAI Security",
+      "outcomes": [
+        "model inventory",
+        "agent identity",
+        "connector governance",
+        "AI supply-chain evidence"
+      ]
+    },
+    {
+      "id": "pack:cloud",
+      "kind": "domain-pack",
+      "name": "Cloud & Multi-Cloud",
+      "outcomes": [
+        "cloud audit",
+        "identity context",
+        "control-plane monitoring",
+        "evidence"
+      ]
+    },
+    {
+      "id": "pack:ics-ot",
+      "kind": "domain-pack",
+      "name": "ICS / OT",
+      "outcomes": [
+        "asset visibility",
+        "network segmentation",
+        "resilience",
+        "recovery evidence"
+      ]
+    },
+    {
+      "id": "pack:identity",
+      "kind": "domain-pack",
+      "name": "Identity & Access",
+      "outcomes": [
+        "identity telemetry",
+        "privilege visibility",
+        "authentication assurance",
+        "retest evidence"
+      ]
+    },
+    {
+      "id": "pack:iot-embedded",
+      "kind": "domain-pack",
+      "name": "IoT & Embedded",
+      "outcomes": [
+        "device inventory",
+        "firmware assurance",
+        "network visibility",
+        "evidence"
+      ]
+    },
+    {
+      "id": "pack:purple-detection",
+      "kind": "domain-pack",
+      "name": "Purple Team & Detection",
+      "outcomes": [
+        "telemetry coverage",
+        "detection coverage",
+        "analyst response",
+        "retest evidence"
+      ]
+    },
+    {
+      "id": "pack:supply-chain",
+      "kind": "domain-pack",
+      "name": "Software Supply Chain",
+      "outcomes": [
+        "build provenance",
+        "artifact integrity",
+        "dependency visibility",
+        "rebuild evidence"
+      ]
+    },
+    {
+      "id": "pack:web-api",
+      "kind": "domain-pack",
+      "name": "Web & API",
+      "outcomes": [
+        "application telemetry",
+        "control validation",
+        "remediation evidence"
+      ]
+    },
+    {
+      "id": "plan:ctid-apt29",
+      "kind": "emulation-plan",
+      "name": "CTID APT29 Emulation Plan",
+      "provider": "Center for Threat-Informed Defense",
+      "plan_type": "full-emulation"
+    },
+    {
+      "id": "plan:ctid-blind-eagle",
+      "kind": "emulation-plan",
+      "name": "CTID Blind Eagle Emulation Plan",
+      "provider": "Center for Threat-Informed Defense",
+      "plan_type": "full-emulation"
+    },
+    {
+      "id": "plan:ctid-carbanak",
+      "kind": "emulation-plan",
+      "name": "CTID Carbanak Emulation Plan",
+      "provider": "Center for Threat-Informed Defense",
+      "plan_type": "full-emulation"
+    },
+    {
+      "id": "plan:ctid-fin6",
+      "kind": "emulation-plan",
+      "name": "CTID FIN6 Emulation Plan",
+      "provider": "Center for Threat-Informed Defense",
+      "plan_type": "full-emulation"
+    },
+    {
+      "id": "plan:ctid-fin7",
+      "kind": "emulation-plan",
+      "name": "CTID FIN7 Emulation Plan",
+      "provider": "Center for Threat-Informed Defense",
+      "plan_type": "full-emulation"
+    },
+    {
+      "id": "plan:ctid-menupass",
+      "kind": "emulation-plan",
+      "name": "CTID menuPass Emulation Plan",
+      "provider": "Center for Threat-Informed Defense",
+      "plan_type": "full-emulation"
+    },
+    {
+      "id": "plan:ctid-micro-emulation",
+      "kind": "emulation-plan",
+      "name": "CTID Micro Emulation Plans",
+      "provider": "Center for Threat-Informed Defense",
+      "plan_type": "micro-emulation"
+    },
+    {
+      "id": "plan:ctid-ocean-lotus",
+      "kind": "emulation-plan",
+      "name": "CTID OceanLotus Emulation Plan",
+      "provider": "Center for Threat-Informed Defense",
+      "plan_type": "full-emulation"
+    },
+    {
+      "id": "plan:ctid-oilrig",
+      "kind": "emulation-plan",
+      "name": "CTID OilRig Emulation Plan",
+      "provider": "Center for Threat-Informed Defense",
+      "plan_type": "full-emulation"
+    },
+    {
+      "id": "plan:ctid-sandworm",
+      "kind": "emulation-plan",
+      "name": "CTID Sandworm Emulation Plan",
+      "provider": "Center for Threat-Informed Defense",
+      "plan_type": "full-emulation"
+    },
+    {
+      "id": "plan:ctid-turla",
+      "kind": "emulation-plan",
+      "name": "CTID Turla Emulation Plan",
+      "provider": "Center for Threat-Informed Defense",
+      "plan_type": "full-emulation"
+    },
+    {
+      "id": "plan:ctid-wizard-spider",
+      "kind": "emulation-plan",
+      "name": "CTID Wizard Spider Emulation Plan",
+      "provider": "Center for Threat-Informed Defense",
+      "plan_type": "full-emulation"
+    },
+    {
+      "id": "plan:mitre-apt3",
+      "kind": "emulation-plan",
+      "name": "MITRE APT3 Adversary Emulation Plan",
+      "provider": "MITRE ATT&CK",
+      "plan_type": "historical-full-emulation"
+    },
+    {
+      "id": "atomic-red-team",
+      "kind": "framework",
+      "name": "Atomic Red Team",
+      "domains": [
+        "enterprise",
+        "detection"
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "attack-flow",
+      "kind": "framework",
+      "name": "Attack Flow",
+      "domains": [
+        "enterprise",
+        "cloud"
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "cbest",
+      "kind": "framework",
+      "name": "CBEST",
+      "domains": [
+        "regulated",
+        "financial",
+        "uk"
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "cis-controls",
+      "kind": "framework",
+      "name": "CIS Critical Security Controls",
+      "domains": [
+        "enterprise",
+        "defense",
+        "governance"
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "cisa-cpg",
+      "kind": "framework",
+      "name": "CISA Cross-Sector Cybersecurity Performance Goals",
+      "domains": [
+        "critical-infrastructure",
+        "defense",
+        "governance"
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "cisa-ztmm-2",
+      "kind": "framework",
+      "name": "CISA Zero Trust Maturity Model",
+      "domains": [
+        "zero-trust",
+        "identity",
+        "devices",
+        "network",
+        "applications",
+        "data"
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "crest-tlpt",
+      "kind": "framework",
+      "name": "CREST Threat-Led Penetration Testing",
+      "domains": [
+        "enterprise",
+        "regulated"
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "csa-ccm",
+      "kind": "framework",
+      "name": "CSA Cloud Controls Matrix",
+      "domains": [
+        "cloud",
+        "governance",
+        "assurance"
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "csa-security-guidance-v5",
+      "kind": "framework",
+      "name": "CSA Security Guidance for Cloud Computing",
+      "domains": [
+        "cloud",
+        "identity",
+        "workload-security",
+        "incident-response",
+        "resilience"
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "ctid-adversary-emulation",
+      "kind": "framework",
+      "name": "CTID Adversary Emulation Library",
+      "domains": [
+        "enterprise"
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "cyber-kill-chain",
+      "kind": "framework",
+      "name": "Cyber Kill Chain",
+      "domains": [
+        "threat-intelligence",
+        "adversary-analysis",
+        "detection"
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "etsi-en-303-645",
+      "kind": "framework",
+      "name": "ETSI EN 303 645 Consumer IoT Security",
+      "domains": [
+        "iot",
+        "consumer-iot",
+        "product-security",
+        "privacy"
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "first-cvss",
+      "kind": "framework",
+      "name": "FIRST Common Vulnerability Scoring System",
+      "domains": [
+        "vulnerability-management",
+        "risk",
+        "product-security"
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "first-csirt-services",
+      "kind": "framework",
+      "name": "FIRST CSIRT Services Framework",
+      "domains": [
+        "incident-response",
+        "csirt",
+        "operations"
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "first-epss",
+      "kind": "framework",
+      "name": "FIRST Exploit Prediction Scoring System",
+      "domains": [
+        "vulnerability-management",
+        "threat-intelligence",
+        "risk"
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "first-tlp-2",
+      "kind": "framework",
+      "name": "FIRST Traffic Light Protocol",
+      "domains": [
+        "threat-intelligence",
+        "information-sharing",
+        "csirt"
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "iso-iec-27001-2022",
+      "kind": "framework",
+      "name": "ISO/IEC 27001:2022",
+      "domains": [
+        "governance",
+        "risk-management",
+        "enterprise",
+        "assurance"
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "iso-iec-27005-2022",
+      "kind": "framework",
+      "name": "ISO/IEC 27005:2022",
+      "domains": [
+        "risk-management",
+        "governance",
+        "enterprise"
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "misp-galaxy",
+      "kind": "framework",
+      "name": "MISP Galaxy",
+      "domains": [
+        "threat-intelligence",
+        "adversary-analysis",
+        "information-sharing"
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "mitre-atlas",
+      "kind": "framework",
+      "name": "MITRE ATLAS",
+      "domains": [
+        "ai-genai"
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "mitre-attack",
+      "kind": "framework",
+      "name": "MITRE ATT&CK",
+      "domains": [
+        "enterprise",
+        "cloud",
+        "mobile"
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "mitre-caldera",
+      "kind": "framework",
+      "name": "MITRE CALDERA",
+      "domains": [
+        "enterprise"
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "mitre-capec",
+      "kind": "framework",
+      "name": "MITRE CAPEC",
+      "domains": [
+        "application-security",
+        "threat-modeling",
+        "software-security"
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "mitre-cwe",
+      "kind": "framework",
+      "name": "MITRE CWE",
+      "domains": [
+        "application-security",
+        "software-security",
+        "hardware-security"
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "mitre-car",
+      "kind": "framework",
+      "name": "MITRE Cyber Analytics Repository",
+      "domains": [
+        "detection",
+        "threat-hunting",
+        "enterprise"
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "mitre-d3fend",
+      "kind": "framework",
+      "name": "MITRE D3FEND",
+      "domains": [
+        "enterprise",
+        "detection"
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "mitre-engage",
+      "kind": "framework",
+      "name": "MITRE Engage",
+      "domains": [
+        "enterprise",
+        "deception"
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "nist-ai-rmf-genai",
+      "kind": "framework",
+      "name": "NIST AI RMF Generative AI Profile",
+      "domains": [
+        "ai-genai"
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "nist-csf-2",
+      "kind": "framework",
+      "name": "NIST Cybersecurity Framework 2.0",
+      "domains": [
+        "enterprise",
+        "governance",
+        "risk-management"
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "nist-nice",
+      "kind": "framework",
+      "name": "NIST NICE Workforce Framework for Cybersecurity",
+      "domains": [
+        "workforce",
+        "education",
+        "governance"
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "nist-ssdf",
+      "kind": "framework",
+      "name": "NIST Secure Software Development Framework",
+      "domains": [
+        "secure-development",
+        "software-supply-chain",
+        "application-security"
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "nist-sp-800-115",
+      "kind": "framework",
+      "name": "NIST SP 800-115",
+      "domains": [
+        "enterprise"
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "nist-sp-800-160-v2-r1",
+      "kind": "framework",
+      "name": "NIST SP 800-160 Vol. 2 Rev. 1",
+      "domains": [
+        "resilience",
+        "security-engineering",
+        "advanced-threats"
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "nist-sp-800-161-r1",
+      "kind": "framework",
+      "name": "NIST SP 800-161 Rev. 1",
+      "domains": [
+        "software-supply-chain",
+        "third-party-risk",
+        "governance"
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "nist-sp-800-190",
+      "kind": "framework",
+      "name": "NIST SP 800-190 Application Container Security Guide",
+      "domains": [
+        "containers",
+        "cloud-native",
+        "application-security"
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "nist-sp-800-207",
+      "kind": "framework",
+      "name": "NIST SP 800-207 Zero Trust Architecture",
+      "domains": [
+        "identity",
+        "enterprise",
+        "zero-trust"
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "nist-sp-800-53-r5",
+      "kind": "framework",
+      "name": "NIST SP 800-53 Rev. 5",
+      "domains": [
+        "enterprise",
+        "governance",
+        "controls"
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "nist-sp-800-61-r3",
+      "kind": "framework",
+      "name": "NIST SP 800-61 Rev. 3",
+      "domains": [
+        "incident-response",
+        "governance",
+        "csf"
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "nist-sp-800-63-4",
+      "kind": "framework",
+      "name": "NIST SP 800-63-4 Digital Identity Guidelines",
+      "domains": [
+        "identity",
+        "authentication",
+        "federation"
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "oasis-cacao-2",
+      "kind": "framework",
+      "name": "OASIS CACAO Security Playbooks",
+      "domains": [
+        "incident-response",
+        "orchestration",
+        "threat-intelligence"
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "oasis-csaf-2",
+      "kind": "framework",
+      "name": "OASIS Common Security Advisory Framework",
+      "domains": [
+        "vulnerability-management",
+        "information-sharing",
+        "software-supply-chain"
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "oasis-stix-2-1",
+      "kind": "framework",
+      "name": "OASIS STIX 2.1",
+      "domains": [
+        "threat-intelligence",
+        "information-sharing",
+        "interoperability"
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "oasis-taxii-2-1",
+      "kind": "framework",
+      "name": "OASIS TAXII 2.1",
+      "domains": [
+        "threat-intelligence",
+        "information-sharing",
+        "interoperability"
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "ocsf",
+      "kind": "framework",
+      "name": "Open Cybersecurity Schema Framework",
+      "domains": [
+        "detection",
+        "telemetry",
+        "data-engineering"
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "openssf-osps-baseline",
+      "kind": "framework",
+      "name": "OpenSSF Open Source Project Security Baseline",
+      "domains": [
+        "open-source",
+        "software-supply-chain",
+        "secure-development"
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "openssf-scorecard",
+      "kind": "framework",
+      "name": "OpenSSF Scorecard",
+      "domains": [
+        "software-supply-chain",
+        "open-source",
+        "secure-development"
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "owasp-api-top10",
+      "kind": "framework",
+      "name": "OWASP API Security Top 10",
+      "domains": [
+        "api",
+        "web",
+        "application-security"
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "owasp-asvs",
+      "kind": "framework",
+      "name": "OWASP Application Security Verification Standard",
+      "domains": [
+        "web",
+        "application-security",
+        "secure-development"
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "owasp-genai",
+      "kind": "framework",
+      "name": "OWASP GenAI Security Project",
+      "domains": [
+        "ai-genai"
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "owasp-iot-istg",
+      "kind": "framework",
+      "name": "OWASP IoT Security Testing Guide",
+      "domains": [
+        "iot",
+        "embedded"
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "owasp-isvs",
+      "kind": "framework",
+      "name": "OWASP IoT Security Verification Standard",
+      "domains": [
+        "iot",
+        "embedded",
+        "product-security"
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "owasp-mastg",
+      "kind": "framework",
+      "name": "OWASP Mobile Application Security Testing Guide",
+      "domains": [
+        "mobile"
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "owasp-masvs",
+      "kind": "framework",
+      "name": "OWASP Mobile Application Security Verification Standard",
+      "domains": [
+        "mobile",
+        "android",
+        "ios"
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "owasp-samm",
+      "kind": "framework",
+      "name": "OWASP Software Assurance Maturity Model",
+      "domains": [
+        "application-security",
+        "secure-development",
+        "governance"
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "owasp-scvs",
+      "kind": "framework",
+      "name": "OWASP Software Component Verification Standard",
+      "domains": [
+        "software-supply-chain",
+        "secure-development",
+        "sbom"
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "owasp-top10-2025",
+      "kind": "framework",
+      "name": "OWASP Top 10:2025",
+      "domains": [
+        "web",
+        "application-security",
+        "secure-development"
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "owasp-wstg",
+      "kind": "framework",
+      "name": "OWASP Web Security Testing Guide",
+      "domains": [
+        "web"
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "ptes",
+      "kind": "framework",
+      "name": "Penetration Testing Execution Standard",
+      "domains": [
+        "enterprise"
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "slsa",
+      "kind": "framework",
+      "name": "SLSA",
+      "domains": [
+        "software-supply-chain",
+        "secure-development",
+        "provenance"
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "ssvc",
+      "kind": "framework",
+      "name": "Stakeholder-Specific Vulnerability Categorization",
+      "domains": [
+        "vulnerability-management",
+        "risk",
+        "decision-support"
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "tiber-eu",
+      "kind": "framework",
+      "name": "TIBER-EU",
+      "domains": [
+        "regulated",
+        "financial"
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "veris",
+      "kind": "framework",
+      "name": "VERIS",
+      "domains": [
+        "incident-response",
+        "risk",
+        "data-modeling",
+        "threat-intelligence"
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "sector:academic",
+      "kind": "sector",
+      "name": "academic"
+    },
+    {
+      "id": "sector:aerospace",
+      "kind": "sector",
+      "name": "aerospace"
+    },
+    {
+      "id": "sector:aviation",
+      "kind": "sector",
+      "name": "aviation"
+    },
+    {
+      "id": "sector:banks",
+      "kind": "sector",
+      "name": "banks"
+    },
+    {
+      "id": "sector:business",
+      "kind": "sector",
+      "name": "business"
+    },
+    {
+      "id": "sector:business-services",
+      "kind": "sector",
+      "name": "business services"
+    },
+    {
+      "id": "sector:chemical",
+      "kind": "sector",
+      "name": "chemical"
+    },
+    {
+      "id": "sector:civil-society",
+      "kind": "sector",
+      "name": "civil society"
+    },
+    {
+      "id": "sector:cloud-services",
+      "kind": "sector",
+      "name": "cloud services"
+    },
+    {
+      "id": "sector:commercial-organizations",
+      "kind": "sector",
+      "name": "commercial organizations"
+    },
+    {
+      "id": "sector:communications",
+      "kind": "sector",
+      "name": "communications"
+    },
+    {
+      "id": "sector:construction",
+      "kind": "sector",
+      "name": "construction"
+    },
+    {
+      "id": "sector:consulting",
+      "kind": "sector",
+      "name": "consulting"
+    },
+    {
+      "id": "sector:critical-infrastructure",
+      "kind": "sector",
+      "name": "critical infrastructure"
+    },
+    {
+      "id": "sector:critical-services",
+      "kind": "sector",
+      "name": "critical services"
+    },
+    {
+      "id": "sector:cryptocurrency",
+      "kind": "sector",
+      "name": "cryptocurrency"
+    },
+    {
+      "id": "sector:defense",
+      "kind": "sector",
+      "name": "defense"
+    },
+    {
+      "id": "sector:diplomatic",
+      "kind": "sector",
+      "name": "diplomatic"
+    },
+    {
+      "id": "sector:education",
+      "kind": "sector",
+      "name": "education"
+    },
+    {
+      "id": "sector:electronics",
+      "kind": "sector",
+      "name": "electronics"
+    },
+    {
+      "id": "sector:energy",
+      "kind": "sector",
+      "name": "energy"
+    },
+    {
+      "id": "sector:engineering",
+      "kind": "sector",
+      "name": "engineering"
+    },
+    {
+      "id": "sector:enterprise",
+      "kind": "sector",
+      "name": "enterprise"
+    },
+    {
+      "id": "sector:finance",
+      "kind": "sector",
+      "name": "finance"
+    },
+    {
+      "id": "sector:financial-institutions",
+      "kind": "sector",
+      "name": "financial institutions"
+    },
+    {
+      "id": "sector:financial-services",
+      "kind": "sector",
+      "name": "financial services"
+    },
+    {
+      "id": "sector:foreign-affairs",
+      "kind": "sector",
+      "name": "foreign affairs"
+    },
+    {
+      "id": "sector:gaming",
+      "kind": "sector",
+      "name": "gaming"
+    },
+    {
+      "id": "sector:government",
+      "kind": "sector",
+      "name": "government"
+    },
+    {
+      "id": "sector:healthcare",
+      "kind": "sector",
+      "name": "healthcare"
+    },
+    {
+      "id": "sector:hospitality",
+      "kind": "sector",
+      "name": "hospitality"
+    },
+    {
+      "id": "sector:human-rights",
+      "kind": "sector",
+      "name": "human rights"
+    },
+    {
+      "id": "sector:industrial",
+      "kind": "sector",
+      "name": "industrial"
+    },
+    {
+      "id": "sector:international-organizations",
+      "kind": "sector",
+      "name": "international organizations"
+    },
+    {
+      "id": "sector:internet-service-providers",
+      "kind": "sector",
+      "name": "internet service providers"
+    },
+    {
+      "id": "sector:large-enterprises",
+      "kind": "sector",
+      "name": "large enterprises"
+    },
+    {
+      "id": "sector:law-enforcement",
+      "kind": "sector",
+      "name": "law enforcement"
+    },
+    {
+      "id": "sector:legal",
+      "kind": "sector",
+      "name": "legal"
+    },
+    {
+      "id": "sector:logistics",
+      "kind": "sector",
+      "name": "logistics"
+    },
+    {
+      "id": "sector:managed-services",
+      "kind": "sector",
+      "name": "managed services"
+    },
+    {
+      "id": "sector:manufacturing",
+      "kind": "sector",
+      "name": "manufacturing"
+    },
+    {
+      "id": "sector:media",
+      "kind": "sector",
+      "name": "media"
+    },
+    {
+      "id": "sector:military",
+      "kind": "sector",
+      "name": "military"
+    },
+    {
+      "id": "sector:mining",
+      "kind": "sector",
+      "name": "mining"
+    },
+    {
+      "id": "sector:multi-sector",
+      "kind": "sector",
+      "name": "multi-sector"
+    },
+    {
+      "id": "sector:network-infrastructure",
+      "kind": "sector",
+      "name": "network infrastructure"
+    },
+    {
+      "id": "sector:non-governmental-organizations",
+      "kind": "sector",
+      "name": "non-governmental organizations"
+    },
+    {
+      "id": "sector:operational-technology",
+      "kind": "sector",
+      "name": "operational technology"
+    },
+    {
+      "id": "sector:payment-infrastructure",
+      "kind": "sector",
+      "name": "payment infrastructure"
+    },
+    {
+      "id": "sector:pharmaceutical",
+      "kind": "sector",
+      "name": "pharmaceutical"
+    },
+    {
+      "id": "sector:political-organizations",
+      "kind": "sector",
+      "name": "political organizations"
+    },
+    {
+      "id": "sector:private-sector",
+      "kind": "sector",
+      "name": "private sector"
+    },
+    {
+      "id": "sector:professional-services",
+      "kind": "sector",
+      "name": "professional services"
+    },
+    {
+      "id": "sector:regional-institutions",
+      "kind": "sector",
+      "name": "regional institutions"
+    },
+    {
+      "id": "sector:regional-organizations",
+      "kind": "sector",
+      "name": "regional organizations"
+    },
+    {
+      "id": "sector:religious-institutions",
+      "kind": "sector",
+      "name": "religious institutions"
+    },
+    {
+      "id": "sector:research",
+      "kind": "sector",
+      "name": "research"
+    },
+    {
+      "id": "sector:retail",
+      "kind": "sector",
+      "name": "retail"
+    },
+    {
+      "id": "sector:shipping",
+      "kind": "sector",
+      "name": "shipping"
+    },
+    {
+      "id": "sector:software",
+      "kind": "sector",
+      "name": "software"
+    },
+    {
+      "id": "sector:targeted-organizations",
+      "kind": "sector",
+      "name": "targeted organizations"
+    },
+    {
+      "id": "sector:technology",
+      "kind": "sector",
+      "name": "technology"
+    },
+    {
+      "id": "sector:telecommunications",
+      "kind": "sector",
+      "name": "telecommunications"
+    },
+    {
+      "id": "sector:think-tanks",
+      "kind": "sector",
+      "name": "think tanks"
+    },
+    {
+      "id": "sector:transportation",
+      "kind": "sector",
+      "name": "transportation"
+    },
+    {
+      "id": "sector:travel",
+      "kind": "sector",
+      "name": "travel"
+    },
+    {
+      "id": "sector:utilities",
+      "kind": "sector",
+      "name": "utilities"
+    },
+    {
+      "id": "technique:T1087",
+      "kind": "technique",
+      "name": "Account Discovery",
+      "attack_id": "T1087"
+    },
+    {
+      "id": "technique:T1098",
+      "kind": "technique",
+      "name": "Account Manipulation",
+      "attack_id": "T1098"
+    },
+    {
+      "id": "technique:T1110",
+      "kind": "technique",
+      "name": "Brute Force",
+      "attack_id": "T1110"
+    },
+    {
+      "id": "technique:T1059",
+      "kind": "technique",
+      "name": "Command and Scripting Interpreter",
+      "attack_id": "T1059"
+    },
+    {
+      "id": "technique:T1190",
+      "kind": "technique",
+      "name": "Exploit Public-Facing Application",
+      "attack_id": "T1190"
+    },
+    {
+      "id": "technique:T1133",
+      "kind": "technique",
+      "name": "External Remote Services",
+      "attack_id": "T1133"
+    },
+    {
+      "id": "technique:T1003",
+      "kind": "technique",
+      "name": "OS Credential Dumping",
+      "attack_id": "T1003"
+    },
+    {
+      "id": "technique:T1566",
+      "kind": "technique",
+      "name": "Phishing",
+      "attack_id": "T1566"
+    },
+    {
+      "id": "technique:T1021",
+      "kind": "technique",
+      "name": "Remote Services",
+      "attack_id": "T1021"
+    },
+    {
+      "id": "technique:T1195",
+      "kind": "technique",
+      "name": "Supply Chain Compromise",
+      "attack_id": "T1195"
+    },
+    {
+      "id": "technique:T1550",
+      "kind": "technique",
+      "name": "Use Alternate Authentication Material",
+      "attack_id": "T1550"
+    },
+    {
+      "id": "technique:T1078",
+      "kind": "technique",
+      "name": "Valid Accounts",
+      "attack_id": "T1078"
+    },
+    {
+      "id": "adaptixc2",
+      "kind": "tool",
+      "name": "AdaptixC2",
+      "domains": [
+        "adversary-emulation"
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "advanced-iot-exploitation-framework-v2-0",
+      "kind": "tool",
+      "name": "advanced-iot-exploitation-framework-v2-0",
+      "domains": [
+        "iot",
+        "embedded",
+        "device-security",
+        "research"
+      ],
+      "status": "not-verified"
+    },
+    {
+      "id": "advent-prompt-pwn",
+      "kind": "tool",
+      "name": "advent-prompt-pwn",
+      "domains": [
+        "ai-genai",
+        "research"
+      ],
+      "status": "not-verified"
+    },
+    {
+      "id": "aegis-adversary-emulation",
+      "kind": "tool",
+      "name": "AEGIS",
+      "domains": [
+        "adversary-emulation",
+        "ai-security",
+        "automation",
+        "research"
+      ],
+      "status": "not-verified"
+    },
+    {
+      "id": "aibas360",
+      "kind": "tool",
+      "name": "aiBAS360",
+      "domains": [
+        "breach-attack-simulation",
+        "purple-team",
+        "ai-security",
+        "research"
+      ],
+      "status": "not-verified"
+    },
+    {
+      "id": "aptsimulator",
+      "kind": "tool",
+      "name": "APTSimulator",
+      "domains": [
+        "adversary-emulation",
+        "research"
+      ],
+      "status": "not-verified"
+    },
+    {
+      "id": "arsenal",
+      "kind": "tool",
+      "name": "arsenal",
+      "domains": [
+        "security-assessment",
+        "reference",
+        "toolkit",
+        "research"
+      ],
+      "status": "not-verified"
+    },
+    {
+      "id": "attackiq",
+      "kind": "tool",
+      "name": "AttackIQ",
+      "domains": [
+        "bas",
+        "purple-team"
+      ],
+      "status": "commercial"
+    },
+    {
+      "id": "autopt",
+      "kind": "tool",
+      "name": "AutoPT",
+      "domains": [
+        "ai-genai",
+        "research"
+      ],
+      "status": "not-verified"
+    },
+    {
+      "id": "autopwn",
+      "kind": "tool",
+      "name": "autopwn",
+      "domains": [
+        "ai-security",
+        "vulnerability-research",
+        "automation",
+        "research"
+      ],
+      "status": "not-verified"
+    },
+    {
+      "id": "ax-framework",
+      "kind": "tool",
+      "name": "ax-framework",
+      "domains": [
+        "cloud",
+        "automation",
+        "assessment-infrastructure",
+        "research"
+      ],
+      "status": "not-verified"
+    },
+    {
+      "id": "azurehound",
+      "kind": "tool",
+      "name": "AzureHound",
+      "domains": [
+        "azure",
+        "entra-id",
+        "identity"
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "basilisk",
+      "kind": "tool",
+      "name": "Basilisk",
+      "domains": [
+        "ai-genai",
+        "research"
+      ],
+      "status": "not-verified"
+    },
+    {
+      "id": "bear-c2",
+      "kind": "tool",
+      "name": "bear-c2",
+      "domains": [
+        "adversary-emulation",
+        "operational-platform",
+        "research"
+      ],
+      "status": "not-verified"
+    },
+    {
+      "id": "blindspot-adversary-simulator",
+      "kind": "tool",
+      "name": "BlindSpot",
+      "domains": [
+        "security-validation",
+        "purple-team",
+        "adversary-emulation",
+        "research"
+      ],
+      "status": "not-verified"
+    },
+    {
+      "id": "bloodhound",
+      "kind": "tool",
+      "name": "BloodHound",
+      "domains": [
+        "identity",
+        "active-directory",
+        "entra-id"
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "bounty-hunter",
+      "kind": "tool",
+      "name": "bounty-hunter",
+      "domains": [
+        "adversary-emulation",
+        "caldera",
+        "automation",
+        "research"
+      ],
+      "status": "not-verified"
+    },
+    {
+      "id": "burp-suite",
+      "kind": "tool",
+      "name": "Burp Suite",
+      "domains": [
+        "web",
+        "api",
+        "application-security"
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "cartography",
+      "kind": "tool",
+      "name": "Cartography",
+      "domains": [
+        "cloud",
+        "identity",
+        "attack-path-analysis"
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "checkov",
+      "kind": "tool",
+      "name": "Checkov",
+      "domains": [
+        "infrastructure-as-code",
+        "cloud",
+        "secure-development"
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "cloudfox",
+      "kind": "tool",
+      "name": "CloudFox",
+      "domains": [
+        "aws",
+        "azure",
+        "gcp"
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "cloudtoolkit",
+      "kind": "tool",
+      "name": "cloudtoolkit",
+      "domains": [
+        "cloud",
+        "multi-cloud",
+        "security-assessment",
+        "research"
+      ],
+      "status": "not-verified"
+    },
+    {
+      "id": "cobalt-strike",
+      "kind": "tool",
+      "name": "Cobalt Strike",
+      "domains": [
+        "adversary-emulation"
+      ],
+      "status": "commercial"
+    },
+    {
+      "id": "cosmos-orbit",
+      "kind": "tool",
+      "name": "Cosmos Orbit",
+      "domains": [
+        "adversary-emulation",
+        "research"
+      ],
+      "status": "not-verified"
+    },
+    {
+      "id": "covenant",
+      "kind": "tool",
+      "name": "Covenant",
+      "domains": [
+        "adversary-emulation",
+        "research"
+      ],
+      "status": "not-verified"
+    },
+    {
+      "id": "cptf-arm-edition",
+      "kind": "tool",
+      "name": "cptf-arm-edition",
+      "domains": [
+        "cloud",
+        "arm64",
+        "lab-environment",
+        "research"
+      ],
+      "status": "not-verified"
+    },
+    {
+      "id": "crackmapexec",
+      "kind": "tool",
+      "name": "CrackMapExec",
+      "domains": [
+        "legacy-review",
+        "research"
+      ],
+      "status": "not-verified"
+    },
+    {
+      "id": "ctrsploit",
+      "kind": "tool",
+      "name": "ctrsploit",
+      "domains": [
+        "cloud",
+        "kubernetes",
+        "research"
+      ],
+      "status": "not-verified"
+    },
+    {
+      "id": "cymulate",
+      "kind": "tool",
+      "name": "Cymulate",
+      "domains": [
+        "bas",
+        "exposure-validation"
+      ],
+      "status": "commercial"
+    },
+    {
+      "id": "deepattacker",
+      "kind": "tool",
+      "name": "DeepAttacker",
+      "domains": [
+        "adversary-emulation",
+        "ai-security",
+        "multi-agent",
+        "research"
+      ],
+      "status": "not-verified"
+    },
+    {
+      "id": "deepteam",
+      "kind": "tool",
+      "name": "DeepTeam",
+      "domains": [
+        "ai-genai",
+        "research"
+      ],
+      "status": "not-verified"
+    },
+    {
+      "id": "detectionlab",
+      "kind": "tool",
+      "name": "DetectionLab",
+      "domains": [
+        "purple-team",
+        "detection",
+        "lab"
+      ],
+      "status": "legacy"
+    },
+    {
+      "id": "dnscat2",
+      "kind": "tool",
+      "name": "DNSCat2",
+      "domains": [
+        "adversary-emulation",
+        "research"
+      ],
+      "status": "not-verified"
+    },
+    {
+      "id": "elaina-c2",
+      "kind": "tool",
+      "name": "Elaina-C2",
+      "domains": [
+        "adversary-emulation",
+        "research"
+      ],
+      "status": "not-verified"
+    },
+    {
+      "id": "embedxpl-forge",
+      "kind": "tool",
+      "name": "embedxpl-forge",
+      "domains": [
+        "iot",
+        "embedded",
+        "device-security",
+        "research"
+      ],
+      "status": "not-verified"
+    },
+    {
+      "id": "empire",
+      "kind": "tool",
+      "name": "Empire",
+      "domains": [
+        "adversary-emulation",
+        "post-exploitation"
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "expliot",
+      "kind": "tool",
+      "name": "EXPLIoT",
+      "domains": [
+        "iot",
+        "embedded"
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "faction-c2",
+      "kind": "tool",
+      "name": "Faction C2",
+      "domains": [
+        "adversary-emulation",
+        "research"
+      ],
+      "status": "not-verified"
+    },
+    {
+      "id": "falco",
+      "kind": "tool",
+      "name": "Falco",
+      "domains": [
+        "cloud-native",
+        "containers",
+        "kubernetes",
+        "detection"
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "foojank",
+      "kind": "tool",
+      "name": "foojank",
+      "domains": [
+        "adversary-emulation",
+        "operational-platform",
+        "research"
+      ],
+      "status": "not-verified"
+    },
+    {
+      "id": "frida",
+      "kind": "tool",
+      "name": "Frida",
+      "domains": [
+        "mobile",
+        "desktop",
+        "reverse-engineering"
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "gharf",
+      "kind": "tool",
+      "name": "GHARF",
+      "domains": [
+        "automation",
+        "offensive-security",
+        "research"
+      ],
+      "status": "not-verified"
+    },
+    {
+      "id": "ghidra",
+      "kind": "tool",
+      "name": "Ghidra",
+      "domains": [
+        "reverse-engineering",
+        "malware-analysis",
+        "software-security"
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "gloamfire",
+      "kind": "tool",
+      "name": "gloamfire",
+      "domains": [
+        "purple-team",
+        "detection-validation",
+        "attack-replay",
+        "research"
+      ],
+      "status": "not-verified"
+    },
+    {
+      "id": "gosecops",
+      "kind": "tool",
+      "name": "GoSecOps",
+      "domains": [
+        "automation",
+        "offensive-security",
+        "research"
+      ],
+      "status": "not-verified"
+    },
+    {
+      "id": "havoc",
+      "kind": "tool",
+      "name": "Havoc",
+      "domains": [
+        "adversary-emulation"
+      ],
+      "status": "legacy"
+    },
+    {
+      "id": "hexstrike-redteam",
+      "kind": "tool",
+      "name": "Hexstrike-redteam",
+      "domains": [
+        "automation",
+        "offensive-security",
+        "research"
+      ],
+      "status": "not-verified"
+    },
+    {
+      "id": "highflame-red",
+      "kind": "tool",
+      "name": "Highflame RED",
+      "domains": [
+        "ai-genai",
+        "research"
+      ],
+      "status": "not-verified"
+    },
+    {
+      "id": "hos-vortex",
+      "kind": "tool",
+      "name": "hos_vortex",
+      "domains": [
+        "automation",
+        "offensive-security",
+        "research"
+      ],
+      "status": "not-verified"
+    },
+    {
+      "id": "hunterx",
+      "kind": "tool",
+      "name": "HunterX",
+      "domains": [
+        "ai-genai",
+        "research"
+      ],
+      "status": "not-verified"
+    },
+    {
+      "id": "infection-monkey",
+      "kind": "tool",
+      "name": "Infection Monkey",
+      "domains": [
+        "enterprise",
+        "network",
+        "security-validation"
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "intsploit",
+      "kind": "tool",
+      "name": "intsploit",
+      "domains": [
+        "security-assessment",
+        "toolkit",
+        "automation",
+        "research"
+      ],
+      "status": "not-verified"
+    },
+    {
+      "id": "iothackbot",
+      "kind": "tool",
+      "name": "IoTHackBot",
+      "domains": [
+        "iot",
+        "embedded",
+        "research"
+      ],
+      "status": "not-verified"
+    },
+    {
+      "id": "iotptf",
+      "kind": "tool",
+      "name": "iotptf",
+      "domains": [
+        "iot",
+        "embedded",
+        "firmware",
+        "research"
+      ],
+      "status": "not-verified"
+    },
+    {
+      "id": "koadic",
+      "kind": "tool",
+      "name": "Koadic",
+      "domains": [
+        "adversary-emulation",
+        "research"
+      ],
+      "status": "not-verified"
+    },
+    {
+      "id": "kraken",
+      "kind": "tool",
+      "name": "Kraken",
+      "domains": [
+        "cloud",
+        "kubernetes",
+        "research"
+      ],
+      "status": "not-verified"
+    },
+    {
+      "id": "kube-bench",
+      "kind": "tool",
+      "name": "kube-bench",
+      "domains": [
+        "kubernetes",
+        "cloud-native",
+        "configuration"
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "kubehound",
+      "kind": "tool",
+      "name": "KubeHound",
+      "domains": [
+        "kubernetes"
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "kubesploit",
+      "kind": "tool",
+      "name": "Kubesploit",
+      "domains": [
+        "cloud",
+        "kubernetes",
+        "research"
+      ],
+      "status": "not-verified"
+    },
+    {
+      "id": "laccolith",
+      "kind": "tool",
+      "name": "laccolith",
+      "domains": [
+        "adversary-emulation",
+        "virtualization",
+        "research"
+      ],
+      "status": "not-verified"
+    },
+    {
+      "id": "lazyown",
+      "kind": "tool",
+      "name": "LazyOwn",
+      "domains": [
+        "adversary-emulation",
+        "research"
+      ],
+      "status": "not-verified"
+    },
+    {
+      "id": "maliab",
+      "kind": "tool",
+      "name": "MALIAB",
+      "domains": [
+        "adversary-emulation",
+        "cti",
+        "automation",
+        "research"
+      ],
+      "status": "not-verified"
+    },
+    {
+      "id": "metasploit-framework",
+      "kind": "tool",
+      "name": "Metasploit Framework",
+      "domains": [
+        "enterprise",
+        "network",
+        "application-security"
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "microburst",
+      "kind": "tool",
+      "name": "MicroBurst",
+      "domains": [
+        "azure",
+        "cloud"
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "pyrit",
+      "kind": "tool",
+      "name": "Microsoft PyRIT",
+      "domains": [
+        "ai-genai"
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "mobsf",
+      "kind": "tool",
+      "name": "MobSF",
+      "domains": [
+        "android",
+        "ios",
+        "mobile"
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "mythic",
+      "kind": "tool",
+      "name": "Mythic",
+      "domains": [
+        "adversary-emulation"
+      ],
+      "status": "community"
+    },
+    {
+      "id": "nishang",
+      "kind": "tool",
+      "name": "Nishang",
+      "domains": [
+        "legacy-review",
+        "research"
+      ],
+      "status": "not-verified"
+    },
+    {
+      "id": "nuclei",
+      "kind": "tool",
+      "name": "Nuclei",
+      "domains": [
+        "web",
+        "network",
+        "cloud",
+        "application-security"
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "garak",
+      "kind": "tool",
+      "name": "NVIDIA garak",
+      "domains": [
+        "ai-genai"
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "offensivecloud",
+      "kind": "tool",
+      "name": "OffensiveCloud",
+      "domains": [
+        "cloud",
+        "kubernetes",
+        "research"
+      ],
+      "status": "not-verified"
+    },
+    {
+      "id": "offsec-toolkit",
+      "kind": "tool",
+      "name": "offsec-toolkit",
+      "domains": [
+        "automation",
+        "offensive-security",
+        "research"
+      ],
+      "status": "not-verified"
+    },
+    {
+      "id": "onist-framework",
+      "kind": "tool",
+      "name": "ONIST Framework",
+      "domains": [
+        "automation",
+        "offensive-security",
+        "research"
+      ],
+      "status": "not-verified"
+    },
+    {
+      "id": "openaev",
+      "kind": "tool",
+      "name": "OpenAEV",
+      "domains": [
+        "purple-team",
+        "bas",
+        "aev",
+        "enterprise"
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "openart",
+      "kind": "tool",
+      "name": "OpenART",
+      "domains": [
+        "ai-genai",
+        "research"
+      ],
+      "status": "not-verified"
+    },
+    {
+      "id": "opfor",
+      "kind": "tool",
+      "name": "opfor",
+      "domains": [
+        "adversary-emulation",
+        "threat-informed-testing",
+        "automation",
+        "research"
+      ],
+      "status": "not-verified"
+    },
+    {
+      "id": "osquery",
+      "kind": "tool",
+      "name": "osquery",
+      "domains": [
+        "endpoint",
+        "telemetry",
+        "threat-hunting"
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "owasp-zap",
+      "kind": "tool",
+      "name": "OWASP ZAP",
+      "domains": [
+        "web",
+        "api",
+        "application-security"
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "pacu",
+      "kind": "tool",
+      "name": "Pacu",
+      "domains": [
+        "aws"
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "peekaboo",
+      "kind": "tool",
+      "name": "peekaboo",
+      "domains": [
+        "adversary-emulation",
+        "sandbox",
+        "purple-team",
+        "research"
+      ],
+      "status": "not-verified"
+    },
+    {
+      "id": "pentera",
+      "kind": "tool",
+      "name": "Pentera",
+      "domains": [
+        "automated-validation"
+      ],
+      "status": "commercial"
+    },
+    {
+      "id": "pentester-playbook",
+      "kind": "tool",
+      "name": "pentester-playbook",
+      "domains": [
+        "methodology",
+        "security-assessment",
+        "reference",
+        "research"
+      ],
+      "status": "not-verified"
+    },
+    {
+      "id": "pexpagent",
+      "kind": "tool",
+      "name": "pexpagent",
+      "domains": [
+        "adversary-emulation",
+        "ai-security",
+        "automation",
+        "research"
+      ],
+      "status": "not-verified"
+    },
+    {
+      "id": "phantomstrike",
+      "kind": "tool",
+      "name": "phantomstrike",
+      "domains": [
+        "adversary-emulation",
+        "operational-platform",
+        "research"
+      ],
+      "status": "not-verified"
+    },
+    {
+      "id": "picus",
+      "kind": "tool",
+      "name": "Picus Security",
+      "domains": [
+        "bas",
+        "purple-team"
+      ],
+      "status": "commercial"
+    },
+    {
+      "id": "poshc2",
+      "kind": "tool",
+      "name": "PoshC2",
+      "domains": [
+        "adversary-emulation"
+      ],
+      "status": "community"
+    },
+    {
+      "id": "powersploit",
+      "kind": "tool",
+      "name": "PowerSploit",
+      "domains": [
+        "legacy-review",
+        "research"
+      ],
+      "status": "not-verified"
+    },
+    {
+      "id": "powerzure",
+      "kind": "tool",
+      "name": "PowerZure",
+      "domains": [
+        "cloud",
+        "kubernetes",
+        "research"
+      ],
+      "status": "not-verified"
+    },
+    {
+      "id": "prowler",
+      "kind": "tool",
+      "name": "Prowler",
+      "domains": [
+        "aws",
+        "azure",
+        "gcp",
+        "cloud"
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "pupy",
+      "kind": "tool",
+      "name": "Pupy",
+      "domains": [
+        "adversary-emulation",
+        "research"
+      ],
+      "status": "not-verified"
+    },
+    {
+      "id": "purple-team-playground",
+      "kind": "tool",
+      "name": "Purple Team Playground",
+      "domains": [
+        "purple-team",
+        "testbed",
+        "security-validation",
+        "research"
+      ],
+      "status": "not-verified"
+    },
+    {
+      "id": "realm",
+      "kind": "tool",
+      "name": "Realm",
+      "domains": [
+        "enterprise",
+        "adversary-emulation",
+        "automation"
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "redamon",
+      "kind": "tool",
+      "name": "redamon",
+      "domains": [
+        "security-assessment",
+        "automation",
+        "ai-security",
+        "research"
+      ],
+      "status": "not-verified"
+    },
+    {
+      "id": "redcloudos",
+      "kind": "tool",
+      "name": "RedCloudOS",
+      "domains": [
+        "cloud",
+        "kubernetes",
+        "research"
+      ],
+      "status": "not-verified"
+    },
+    {
+      "id": "redguard-suite",
+      "kind": "tool",
+      "name": "RedGuard Suite",
+      "domains": [
+        "automation",
+        "offensive-security",
+        "research"
+      ],
+      "status": "not-verified"
+    },
+    {
+      "id": "redstack",
+      "kind": "tool",
+      "name": "redStack",
+      "domains": [
+        "automation",
+        "offensive-security",
+        "research"
+      ],
+      "status": "not-verified"
+    },
+    {
+      "id": "roadtools",
+      "kind": "tool",
+      "name": "ROADtools",
+      "domains": [
+        "entra-id",
+        "azure",
+        "identity"
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "routersploit",
+      "kind": "tool",
+      "name": "RouterSploit",
+      "domains": [
+        "iot",
+        "embedded",
+        "network"
+      ],
+      "status": "community"
+    },
+    {
+      "id": "rtosploit",
+      "kind": "tool",
+      "name": "rtosploit",
+      "domains": [
+        "iot",
+        "embedded",
+        "rtos",
+        "firmware",
+        "research"
+      ],
+      "status": "not-verified"
+    },
+    {
+      "id": "rust-bucket",
+      "kind": "tool",
+      "name": "Rust Bucket",
+      "domains": [
+        "operational-platform",
+        "red-team",
+        "research"
+      ],
+      "status": "not-verified"
+    },
+    {
+      "id": "safebreach",
+      "kind": "tool",
+      "name": "SafeBreach",
+      "domains": [
+        "bas",
+        "purple-team"
+      ],
+      "status": "commercial"
+    },
+    {
+      "id": "sandevistan",
+      "kind": "tool",
+      "name": "sandevistan",
+      "domains": [
+        "security-assessment",
+        "toolkit",
+        "automation",
+        "research"
+      ],
+      "status": "not-verified"
+    },
+    {
+      "id": "scoutsuite",
+      "kind": "tool",
+      "name": "ScoutSuite",
+      "domains": [
+        "aws",
+        "azure",
+        "gcp",
+        "cloud"
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "secops-chaos",
+      "kind": "tool",
+      "name": "secops-chaos",
+      "domains": [
+        "cloud",
+        "kubernetes",
+        "research"
+      ],
+      "status": "not-verified"
+    },
+    {
+      "id": "seersx",
+      "kind": "tool",
+      "name": "SeersX",
+      "domains": [
+        "adversary-emulation",
+        "research"
+      ],
+      "status": "not-verified"
+    },
+    {
+      "id": "semgrep",
+      "kind": "tool",
+      "name": "Semgrep",
+      "domains": [
+        "application-security",
+        "secure-development",
+        "code-analysis"
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "sharpsploit",
+      "kind": "tool",
+      "name": "SharpSploit",
+      "domains": [
+        "legacy-review",
+        "research"
+      ],
+      "status": "not-verified"
+    },
+    {
+      "id": "sigma",
+      "kind": "tool",
+      "name": "Sigma",
+      "domains": [
+        "detection",
+        "siem"
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "silenttrinity",
+      "kind": "tool",
+      "name": "silenttrinity",
+      "domains": [
+        "adversary-emulation",
+        "operational-platform",
+        "legacy-review",
+        "research"
+      ],
+      "status": "not-verified"
+    },
+    {
+      "id": "simple-ics-testbed",
+      "kind": "tool",
+      "name": "SIMPLE-ICS Testbed",
+      "domains": [
+        "ics",
+        "ot",
+        "testbed",
+        "adversary-emulation",
+        "research"
+      ],
+      "status": "not-verified"
+    },
+    {
+      "id": "skyhawk-security-autonomous-purple-team",
+      "kind": "tool",
+      "name": "skyhawk-security-autonomous-purple-team",
+      "domains": [
+        "cloud",
+        "purple-team",
+        "security-validation",
+        "ai-security",
+        "research"
+      ],
+      "status": "not-verified"
+    },
+    {
+      "id": "sliver",
+      "kind": "tool",
+      "name": "Sliver",
+      "domains": [
+        "adversary-emulation"
+      ],
+      "status": "community"
+    },
+    {
+      "id": "splunk-attack-range",
+      "kind": "tool",
+      "name": "Splunk Attack Range",
+      "domains": [
+        "purple-team",
+        "detection",
+        "aws",
+        "azure",
+        "gcp"
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "stormspotter",
+      "kind": "tool",
+      "name": "Stormspotter",
+      "domains": [
+        "azure",
+        "cloud",
+        "graph"
+      ],
+      "status": "community"
+    },
+    {
+      "id": "stratus-red-team",
+      "kind": "tool",
+      "name": "Stratus Red Team",
+      "domains": [
+        "aws",
+        "azure",
+        "gcp",
+        "entra-id",
+        "kubernetes"
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "strix",
+      "kind": "tool",
+      "name": "strix",
+      "domains": [
+        "ai-security",
+        "security-assessment",
+        "automation",
+        "research"
+      ],
+      "status": "not-verified"
+    },
+    {
+      "id": "suijin",
+      "kind": "tool",
+      "name": "Suijin",
+      "domains": [
+        "automation",
+        "offensive-security",
+        "research"
+      ],
+      "status": "not-verified"
+    },
+    {
+      "id": "suricata",
+      "kind": "tool",
+      "name": "Suricata",
+      "domains": [
+        "network",
+        "ids",
+        "detection"
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "t3mp3st",
+      "kind": "tool",
+      "name": "T3MP3ST",
+      "domains": [
+        "automation",
+        "offensive-security",
+        "research"
+      ],
+      "status": "not-verified"
+    },
+    {
+      "id": "temperance",
+      "kind": "tool",
+      "name": "temperance",
+      "domains": [
+        "adversary-emulation",
+        "security-validation",
+        "research"
+      ],
+      "status": "not-verified"
+    },
+    {
+      "id": "the-360-cyber-shield",
+      "kind": "tool",
+      "name": "The 360 Cyber Shield",
+      "domains": [
+        "purple-team",
+        "security-validation",
+        "research"
+      ],
+      "status": "not-verified"
+    },
+    {
+      "id": "trevorc2",
+      "kind": "tool",
+      "name": "TrevorC2",
+      "domains": [
+        "adversary-emulation",
+        "research"
+      ],
+      "status": "not-verified"
+    },
+    {
+      "id": "trivy",
+      "kind": "tool",
+      "name": "Trivy",
+      "domains": [
+        "containers",
+        "kubernetes",
+        "cloud-native",
+        "software-supply-chain"
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "ttpforge",
+      "kind": "tool",
+      "name": "TTPForge",
+      "domains": [
+        "purple-team",
+        "detection",
+        "enterprise"
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "vanguard",
+      "kind": "tool",
+      "name": "vanguard",
+      "domains": [
+        "ai-security",
+        "purple-team",
+        "detection-validation",
+        "research"
+      ],
+      "status": "not-verified"
+    },
+    {
+      "id": "vectr",
+      "kind": "tool",
+      "name": "VECTR",
+      "domains": [
+        "purple-team",
+        "detection",
+        "measurement"
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "velociraptor",
+      "kind": "tool",
+      "name": "Velociraptor",
+      "domains": [
+        "endpoint",
+        "dfir",
+        "threat-hunting"
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "vigilant",
+      "kind": "tool",
+      "name": "VIGILANT",
+      "domains": [
+        "ai-genai",
+        "research"
+      ],
+      "status": "not-verified"
+    },
+    {
+      "id": "volatility3",
+      "kind": "tool",
+      "name": "Volatility 3",
+      "domains": [
+        "dfir",
+        "memory-forensics",
+        "malware-analysis"
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "wireshark",
+      "kind": "tool",
+      "name": "Wireshark",
+      "domains": [
+        "network",
+        "protocol-analysis",
+        "dfir"
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "woodpecker",
+      "kind": "tool",
+      "name": "Woodpecker",
+      "domains": [
+        "adversary-emulation",
+        "research"
+      ],
+      "status": "not-verified"
+    },
+    {
+      "id": "wyrm",
+      "kind": "tool",
+      "name": "wyrm",
+      "domains": [
+        "adversary-emulation",
+        "operational-platform",
+        "research"
+      ],
+      "status": "not-verified"
+    },
+    {
+      "id": "yara-x",
+      "kind": "tool",
+      "name": "YARA-X",
+      "domains": [
+        "malware-analysis",
+        "detection",
+        "threat-hunting"
+      ],
+      "status": "verified"
+    },
+    {
+      "id": "zeek",
+      "kind": "tool",
+      "name": "Zeek",
+      "domains": [
+        "network",
+        "telemetry",
+        "threat-hunting"
+      ],
+      "status": "verified"
+    }
+  ],
+  "edges": [
+    {
+      "from": "adversary:agrius",
+      "to": "sector:critical-services",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "adversary-profile"
+    },
+    {
+      "from": "adversary:agrius",
+      "to": "sector:government",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "adversary-profile"
+    },
+    {
+      "from": "adversary:agrius",
+      "to": "sector:technology",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "adversary-profile"
+    },
+    {
+      "from": "adversary:andariel",
+      "to": "sector:financial-services",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "adversary-profile"
+    },
+    {
+      "from": "adversary:andariel",
+      "to": "sector:government",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "adversary-profile"
+    },
+    {
+      "from": "adversary:andariel",
+      "to": "sector:military",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "adversary-profile"
+    },
+    {
+      "from": "adversary:andariel",
+      "to": "sector:technology",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "adversary-profile"
+    },
+    {
+      "from": "adversary:aoqin-dragon",
+      "to": "sector:education",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "adversary-profile"
+    },
+    {
+      "from": "adversary:aoqin-dragon",
+      "to": "sector:government",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "adversary-profile"
+    },
+    {
+      "from": "adversary:aoqin-dragon",
+      "to": "sector:telecommunications",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "adversary-profile"
+    },
+    {
+      "from": "adversary:apt1",
+      "to": "sector:government",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "adversary-profile"
+    },
+    {
+      "from": "adversary:apt1",
+      "to": "sector:industrial",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "adversary-profile"
+    },
+    {
+      "from": "adversary:apt1",
+      "to": "sector:professional-services",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "adversary-profile"
+    },
+    {
+      "from": "adversary:apt1",
+      "to": "sector:technology",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "adversary-profile"
+    },
+    {
+      "from": "adversary:apt12",
+      "to": "sector:government",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "adversary-profile"
+    },
+    {
+      "from": "adversary:apt12",
+      "to": "sector:media",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "adversary-profile"
+    },
+    {
+      "from": "adversary:apt12",
+      "to": "sector:technology",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "adversary-profile"
+    },
+    {
+      "from": "adversary:apt16",
+      "to": "sector:government",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "adversary-profile"
+    },
+    {
+      "from": "adversary:apt16",
+      "to": "sector:private-sector",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "adversary-profile"
+    },
+    {
+      "from": "adversary:apt16",
+      "to": "sector:regional-organizations",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "adversary-profile"
+    },
+    {
+      "from": "adversary:apt17",
+      "to": "sector:defense",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "adversary-profile"
+    },
+    {
+      "from": "adversary:apt17",
+      "to": "sector:government",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "adversary-profile"
+    },
+    {
+      "from": "adversary:apt17",
+      "to": "sector:legal",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "adversary-profile"
+    },
+    {
+      "from": "adversary:apt17",
+      "to": "sector:mining",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "adversary-profile"
+    },
+    {
+      "from": "adversary:apt17",
+      "to": "sector:non-governmental-organizations",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "adversary-profile"
+    },
+    {
+      "from": "adversary:apt17",
+      "to": "sector:technology",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "adversary-profile"
+    },
+    {
+      "from": "adversary:apt18",
+      "to": "sector:government",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "adversary-profile"
+    },
+    {
+      "from": "adversary:apt18",
+      "to": "sector:healthcare",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "adversary-profile"
+    },
+    {
+      "from": "adversary:apt18",
+      "to": "sector:human-rights",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "adversary-profile"
+    },
+    {
+      "from": "adversary:apt18",
+      "to": "sector:manufacturing",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "adversary-profile"
+    },
+    {
+      "from": "adversary:apt18",
+      "to": "sector:technology",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "adversary-profile"
+    },
+    {
+      "from": "adversary:apt19",
+      "to": "sector:defense",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "adversary-profile"
+    },
+    {
+      "from": "adversary:apt19",
+      "to": "sector:education",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "adversary-profile"
+    },
+    {
+      "from": "adversary:apt19",
+      "to": "sector:energy",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "adversary-profile"
+    },
+    {
+      "from": "adversary:apt19",
+      "to": "sector:finance",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "adversary-profile"
+    },
+    {
+      "from": "adversary:apt19",
+      "to": "sector:legal",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "adversary-profile"
+    },
+    {
+      "from": "adversary:apt19",
+      "to": "sector:pharmaceutical",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "adversary-profile"
+    },
+    {
+      "from": "adversary:apt19",
+      "to": "sector:technology",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "adversary-profile"
+    },
+    {
+      "from": "adversary:apt19",
+      "to": "sector:telecommunications",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "adversary-profile"
+    },
+    {
+      "from": "adversary:apt28",
+      "to": "sector:defense",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "adversary-profile"
+    },
+    {
+      "from": "adversary:apt28",
+      "to": "sector:government",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "adversary-profile"
+    },
+    {
+      "from": "adversary:apt28",
+      "to": "sector:international-organizations",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "adversary-profile"
+    },
+    {
+      "from": "adversary:apt28",
+      "to": "sector:research",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "adversary-profile"
+    },
+    {
+      "from": "adversary:apt29",
+      "to": "sector:government",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "adversary-profile"
+    },
+    {
+      "from": "adversary:apt29",
+      "to": "sector:research",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "adversary-profile"
+    },
+    {
+      "from": "adversary:apt29",
+      "to": "sector:technology",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "adversary-profile"
+    },
+    {
+      "from": "adversary:apt29",
+      "to": "sector:think-tanks",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "adversary-profile"
+    },
+    {
+      "from": "adversary:apt3",
+      "to": "sector:government",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "adversary-profile"
+    },
+    {
+      "from": "adversary:apt3",
+      "to": "sector:political-organizations",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "adversary-profile"
+    },
+    {
+      "from": "adversary:apt3",
+      "to": "sector:technology",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "adversary-profile"
+    },
+    {
+      "from": "adversary:apt30",
+      "to": "sector:government",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "adversary-profile"
+    },
+    {
+      "from": "adversary:apt30",
+      "to": "sector:political-organizations",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "adversary-profile"
+    },
+    {
+      "from": "adversary:apt30",
+      "to": "sector:regional-institutions",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "adversary-profile"
+    },
+    {
+      "from": "adversary:apt32",
+      "to": "sector:civil-society",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "adversary-profile"
+    },
+    {
+      "from": "adversary:apt32",
+      "to": "sector:government",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "adversary-profile"
+    },
+    {
+      "from": "adversary:apt32",
+      "to": "sector:media",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "adversary-profile"
+    },
+    {
+      "from": "adversary:apt32",
+      "to": "sector:private-sector",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "adversary-profile"
+    },
+    {
+      "from": "adversary:apt33",
+      "to": "sector:aviation",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "adversary-profile"
+    },
+    {
+      "from": "adversary:apt33",
+      "to": "sector:energy",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "adversary-profile"
+    },
+    {
+      "from": "adversary:apt33",
+      "to": "sector:industrial",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "adversary-profile"
+    },
+    {
+      "from": "adversary:apt37",
+      "to": "sector:government",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "adversary-profile"
+    },
+    {
+      "from": "adversary:apt37",
+      "to": "sector:media",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "adversary-profile"
+    },
+    {
+      "from": "adversary:apt37",
+      "to": "sector:research",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "adversary-profile"
+    },
+    {
+      "from": "adversary:apt37",
+      "to": "sector:technology",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "adversary-profile"
+    },
+    {
+      "from": "adversary:apt38",
+      "to": "sector:banks",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "adversary-profile"
+    },
+    {
+      "from": "adversary:apt38",
+      "to": "sector:cryptocurrency",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "adversary-profile"
+    },
+    {
+      "from": "adversary:apt38",
+      "to": "sector:financial-institutions",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "adversary-profile"
+    },
+    {
+      "from": "adversary:apt38",
+      "to": "sector:payment-infrastructure",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "adversary-profile"
+    },
+    {
+      "from": "adversary:apt39",
+      "to": "sector:academic",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "adversary-profile"
+    },
+    {
+      "from": "adversary:apt39",
+      "to": "sector:hospitality",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "adversary-profile"
+    },
+    {
+      "from": "adversary:apt39",
+      "to": "sector:telecommunications",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "adversary-profile"
+    },
+    {
+      "from": "adversary:apt39",
+      "to": "sector:travel",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "adversary-profile"
+    },
+    {
+      "from": "adversary:apt41",
+      "to": "sector:education",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "adversary-profile"
+    },
+    {
+      "from": "adversary:apt41",
+      "to": "sector:finance",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "adversary-profile"
+    },
+    {
+      "from": "adversary:apt41",
+      "to": "sector:gaming",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "adversary-profile"
+    },
+    {
+      "from": "adversary:apt41",
+      "to": "sector:healthcare",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "adversary-profile"
+    },
+    {
+      "from": "adversary:apt41",
+      "to": "sector:retail",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "adversary-profile"
+    },
+    {
+      "from": "adversary:apt41",
+      "to": "sector:technology",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "adversary-profile"
+    },
+    {
+      "from": "adversary:apt41",
+      "to": "sector:telecommunications",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "adversary-profile"
+    },
+    {
+      "from": "adversary:apt42",
+      "to": "sector:civil-society",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "adversary-profile"
+    },
+    {
+      "from": "adversary:apt42",
+      "to": "sector:government",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "adversary-profile"
+    },
+    {
+      "from": "adversary:apt42",
+      "to": "sector:media",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "adversary-profile"
+    },
+    {
+      "from": "adversary:apt42",
+      "to": "sector:research",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "adversary-profile"
+    },
+    {
+      "from": "adversary:apt5",
+      "to": "sector:aerospace",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "adversary-profile"
+    },
+    {
+      "from": "adversary:apt5",
+      "to": "sector:defense",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "adversary-profile"
+    },
+    {
+      "from": "adversary:apt5",
+      "to": "sector:telecommunications",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "adversary-profile"
+    },
+    {
+      "from": "adversary:axiom",
+      "to": "sector:aerospace",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "adversary-profile"
+    },
+    {
+      "from": "adversary:axiom",
+      "to": "sector:defense",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "adversary-profile"
+    },
+    {
+      "from": "adversary:axiom",
+      "to": "sector:government",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "adversary-profile"
+    },
+    {
+      "from": "adversary:axiom",
+      "to": "sector:manufacturing",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "adversary-profile"
+    },
+    {
+      "from": "adversary:axiom",
+      "to": "sector:media",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "adversary-profile"
+    },
+    {
+      "from": "adversary:backdoordiplomacy",
+      "to": "sector:foreign-affairs",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "adversary-profile"
+    },
+    {
+      "from": "adversary:backdoordiplomacy",
+      "to": "sector:government",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "adversary-profile"
+    },
+    {
+      "from": "adversary:backdoordiplomacy",
+      "to": "sector:telecommunications",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "adversary-profile"
+    },
+    {
+      "from": "adversary:bitter",
+      "to": "sector:energy",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "adversary-profile"
+    },
+    {
+      "from": "adversary:bitter",
+      "to": "sector:engineering",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "adversary-profile"
+    },
+    {
+      "from": "adversary:bitter",
+      "to": "sector:government",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "adversary-profile"
+    },
+    {
+      "from": "adversary:blacktech",
+      "to": "sector:construction",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "adversary-profile"
+    },
+    {
+      "from": "adversary:blacktech",
+      "to": "sector:electronics",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "adversary-profile"
+    },
+    {
+      "from": "adversary:blacktech",
+      "to": "sector:engineering",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "adversary-profile"
+    },
+    {
+      "from": "adversary:blacktech",
+      "to": "sector:finance",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "adversary-profile"
+    },
+    {
+      "from": "adversary:blacktech",
+      "to": "sector:media",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "adversary-profile"
+    },
+    {
+      "from": "adversary:fin7",
+      "to": "sector:cloud-services",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "adversary-profile"
+    },
+    {
+      "from": "adversary:fin7",
+      "to": "sector:finance",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "adversary-profile"
+    },
+    {
+      "from": "adversary:fin7",
+      "to": "sector:hospitality",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "adversary-profile"
+    },
+    {
+      "from": "adversary:fin7",
+      "to": "sector:pharmaceutical",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "adversary-profile"
+    },
+    {
+      "from": "adversary:fin7",
+      "to": "sector:retail",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "adversary-profile"
+    },
+    {
+      "from": "adversary:fin7",
+      "to": "sector:transportation",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "adversary-profile"
+    },
+    {
+      "from": "adversary:fin7",
+      "to": "sector:utilities",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "adversary-profile"
+    },
+    {
+      "from": "adversary:gamaredon",
+      "to": "sector:government",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "adversary-profile"
+    },
+    {
+      "from": "adversary:gamaredon",
+      "to": "sector:law-enforcement",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "adversary-profile"
+    },
+    {
+      "from": "adversary:gamaredon",
+      "to": "sector:military",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "adversary-profile"
+    },
+    {
+      "from": "adversary:gamaredon",
+      "to": "sector:non-governmental-organizations",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "adversary-profile"
+    },
+    {
+      "from": "adversary:kimsuky",
+      "to": "sector:business-services",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "adversary-profile"
+    },
+    {
+      "from": "adversary:kimsuky",
+      "to": "sector:education",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "adversary-profile"
+    },
+    {
+      "from": "adversary:kimsuky",
+      "to": "sector:government",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "adversary-profile"
+    },
+    {
+      "from": "adversary:kimsuky",
+      "to": "sector:manufacturing",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "adversary-profile"
+    },
+    {
+      "from": "adversary:kimsuky",
+      "to": "sector:think-tanks",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "adversary-profile"
+    },
+    {
+      "from": "adversary:lazarus",
+      "to": "sector:cryptocurrency",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "adversary-profile"
+    },
+    {
+      "from": "adversary:lazarus",
+      "to": "sector:defense",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "adversary-profile"
+    },
+    {
+      "from": "adversary:lazarus",
+      "to": "sector:financial-services",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "adversary-profile"
+    },
+    {
+      "from": "adversary:lazarus",
+      "to": "sector:government",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "adversary-profile"
+    },
+    {
+      "from": "adversary:lazarus",
+      "to": "sector:technology",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "adversary-profile"
+    },
+    {
+      "from": "adversary:muddywater",
+      "to": "sector:defense",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "adversary-profile"
+    },
+    {
+      "from": "adversary:muddywater",
+      "to": "sector:energy",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "adversary-profile"
+    },
+    {
+      "from": "adversary:muddywater",
+      "to": "sector:finance",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "adversary-profile"
+    },
+    {
+      "from": "adversary:muddywater",
+      "to": "sector:government",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "adversary-profile"
+    },
+    {
+      "from": "adversary:muddywater",
+      "to": "sector:telecommunications",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "adversary-profile"
+    },
+    {
+      "from": "adversary:mustang-panda",
+      "to": "sector:diplomatic",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "adversary-profile"
+    },
+    {
+      "from": "adversary:mustang-panda",
+      "to": "sector:government",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "adversary-profile"
+    },
+    {
+      "from": "adversary:mustang-panda",
+      "to": "sector:non-governmental-organizations",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "adversary-profile"
+    },
+    {
+      "from": "adversary:mustang-panda",
+      "to": "sector:religious-institutions",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "adversary-profile"
+    },
+    {
+      "from": "adversary:mustang-panda",
+      "to": "sector:research",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "adversary-profile"
+    },
+    {
+      "from": "adversary:oilrig",
+      "to": "sector:chemical",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "adversary-profile"
+    },
+    {
+      "from": "adversary:oilrig",
+      "to": "sector:energy",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "adversary-profile"
+    },
+    {
+      "from": "adversary:oilrig",
+      "to": "sector:finance",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "adversary-profile"
+    },
+    {
+      "from": "adversary:oilrig",
+      "to": "sector:government",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "adversary-profile"
+    },
+    {
+      "from": "adversary:oilrig",
+      "to": "sector:telecommunications",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "adversary-profile"
+    },
+    {
+      "from": "adversary:patchwork",
+      "to": "sector:diplomatic",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "adversary-profile"
+    },
+    {
+      "from": "adversary:patchwork",
+      "to": "sector:government",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "adversary-profile"
+    },
+    {
+      "from": "adversary:patchwork",
+      "to": "sector:think-tanks",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "adversary-profile"
+    },
+    {
+      "from": "adversary:salt-typhoon",
+      "to": "sector:internet-service-providers",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "adversary-profile"
+    },
+    {
+      "from": "adversary:salt-typhoon",
+      "to": "sector:network-infrastructure",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "adversary-profile"
+    },
+    {
+      "from": "adversary:salt-typhoon",
+      "to": "sector:telecommunications",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "adversary-profile"
+    },
+    {
+      "from": "adversary:sandworm",
+      "to": "sector:critical-infrastructure",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "adversary-profile"
+    },
+    {
+      "from": "adversary:sandworm",
+      "to": "sector:energy",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "adversary-profile"
+    },
+    {
+      "from": "adversary:sandworm",
+      "to": "sector:government",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "adversary-profile"
+    },
+    {
+      "from": "adversary:sandworm",
+      "to": "sector:international-organizations",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "adversary-profile"
+    },
+    {
+      "from": "adversary:scattered-spider",
+      "to": "sector:finance",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "adversary-profile"
+    },
+    {
+      "from": "adversary:scattered-spider",
+      "to": "sector:hospitality",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "adversary-profile"
+    },
+    {
+      "from": "adversary:scattered-spider",
+      "to": "sector:managed-services",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "adversary-profile"
+    },
+    {
+      "from": "adversary:scattered-spider",
+      "to": "sector:manufacturing",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "adversary-profile"
+    },
+    {
+      "from": "adversary:scattered-spider",
+      "to": "sector:retail",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "adversary-profile"
+    },
+    {
+      "from": "adversary:scattered-spider",
+      "to": "sector:technology",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "adversary-profile"
+    },
+    {
+      "from": "adversary:scattered-spider",
+      "to": "sector:telecommunications",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "adversary-profile"
+    },
+    {
+      "from": "adversary:sidewinder",
+      "to": "sector:business",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "adversary-profile"
+    },
+    {
+      "from": "adversary:sidewinder",
+      "to": "sector:government",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "adversary-profile"
+    },
+    {
+      "from": "adversary:sidewinder",
+      "to": "sector:military",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "adversary-profile"
+    },
+    {
+      "from": "adversary:ta505",
+      "to": "sector:commercial-organizations",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "adversary-profile"
+    },
+    {
+      "from": "adversary:ta505",
+      "to": "sector:enterprise",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "adversary-profile"
+    },
+    {
+      "from": "adversary:ta505",
+      "to": "sector:finance",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "adversary-profile"
+    },
+    {
+      "from": "adversary:transparent-tribe",
+      "to": "sector:defense",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "adversary-profile"
+    },
+    {
+      "from": "adversary:transparent-tribe",
+      "to": "sector:diplomatic",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "adversary-profile"
+    },
+    {
+      "from": "adversary:transparent-tribe",
+      "to": "sector:education",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "adversary-profile"
+    },
+    {
+      "from": "adversary:transparent-tribe",
+      "to": "sector:research",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "adversary-profile"
+    },
+    {
+      "from": "adversary:turla",
+      "to": "sector:defense",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "adversary-profile"
+    },
+    {
+      "from": "adversary:turla",
+      "to": "sector:diplomatic",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "adversary-profile"
+    },
+    {
+      "from": "adversary:turla",
+      "to": "sector:education",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "adversary-profile"
+    },
+    {
+      "from": "adversary:turla",
+      "to": "sector:government",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "adversary-profile"
+    },
+    {
+      "from": "adversary:turla",
+      "to": "sector:pharmaceutical",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "adversary-profile"
+    },
+    {
+      "from": "adversary:turla",
+      "to": "sector:research",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "adversary-profile"
+    },
+    {
+      "from": "adversary:volt-typhoon",
+      "to": "sector:communications",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "adversary-profile"
+    },
+    {
+      "from": "adversary:volt-typhoon",
+      "to": "sector:critical-infrastructure",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "adversary-profile"
+    },
+    {
+      "from": "adversary:volt-typhoon",
+      "to": "sector:operational-technology",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "adversary-profile"
+    },
+    {
+      "from": "adversary:wizard-spider",
+      "to": "sector:critical-services",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "adversary-profile"
+    },
+    {
+      "from": "adversary:wizard-spider",
+      "to": "sector:healthcare",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "adversary-profile"
+    },
+    {
+      "from": "adversary:wizard-spider",
+      "to": "sector:large-enterprises",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "adversary-profile"
+    },
+    {
+      "from": "atomic-red-team",
+      "to": "splunk-attack-range",
+      "relation": "simulation-to-telemetry",
+      "confidence": "high",
+      "provenance": "curated-crosswalk",
+      "source_refs": [
+        "atomic-red-team",
+        "splunk-attack-range"
+      ]
+    },
+    {
+      "from": "bloodhound",
+      "to": "azurehound",
+      "relation": "graph-to-data-collection",
+      "confidence": "high",
+      "provenance": "curated-crosswalk",
+      "source_refs": [
+        "bloodhound",
+        "azurehound"
+      ]
+    },
+    {
+      "from": "bloodhound",
+      "to": "roadtools",
+      "relation": "identity-graph-to-research",
+      "confidence": "medium",
+      "provenance": "curated-crosswalk",
+      "source_refs": [
+        "bloodhound",
+        "roadtools"
+      ]
+    },
+    {
+      "from": "campaign:apt41-dust",
+      "to": "adversary:apt41",
+      "relation": "attributed-to",
+      "confidence": "high",
+      "provenance": "mitre-campaign"
+    },
+    {
+      "from": "campaign:apt41-dust",
+      "to": "sector:logistics",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "mitre-campaign"
+    },
+    {
+      "from": "campaign:apt41-dust",
+      "to": "sector:media",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "mitre-campaign"
+    },
+    {
+      "from": "campaign:apt41-dust",
+      "to": "sector:shipping",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "mitre-campaign"
+    },
+    {
+      "from": "campaign:costaricto",
+      "to": "sector:finance",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "mitre-campaign"
+    },
+    {
+      "from": "campaign:costaricto",
+      "to": "sector:multi-sector",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "mitre-campaign"
+    },
+    {
+      "from": "campaign:frankenstein",
+      "to": "sector:targeted-organizations",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "mitre-campaign"
+    },
+    {
+      "from": "campaign:homeland-justice",
+      "to": "sector:government",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "mitre-campaign"
+    },
+    {
+      "from": "campaign:operation-cuckoobees",
+      "to": "adversary:apt41",
+      "relation": "attributed-to",
+      "confidence": "high",
+      "provenance": "mitre-campaign"
+    },
+    {
+      "from": "campaign:operation-cuckoobees",
+      "to": "sector:manufacturing",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "mitre-campaign"
+    },
+    {
+      "from": "campaign:operation-cuckoobees",
+      "to": "sector:technology",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "mitre-campaign"
+    },
+    {
+      "from": "campaign:operation-dream-job",
+      "to": "adversary:lazarus",
+      "relation": "attributed-to",
+      "confidence": "high",
+      "provenance": "mitre-campaign"
+    },
+    {
+      "from": "campaign:operation-dream-job",
+      "to": "sector:aerospace",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "mitre-campaign"
+    },
+    {
+      "from": "campaign:operation-dream-job",
+      "to": "sector:defense",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "mitre-campaign"
+    },
+    {
+      "from": "campaign:operation-dream-job",
+      "to": "sector:government",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "mitre-campaign"
+    },
+    {
+      "from": "campaign:operation-wocao",
+      "to": "sector:aviation",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "mitre-campaign"
+    },
+    {
+      "from": "campaign:operation-wocao",
+      "to": "sector:construction",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "mitre-campaign"
+    },
+    {
+      "from": "campaign:operation-wocao",
+      "to": "sector:energy",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "mitre-campaign"
+    },
+    {
+      "from": "campaign:operation-wocao",
+      "to": "sector:finance",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "mitre-campaign"
+    },
+    {
+      "from": "campaign:operation-wocao",
+      "to": "sector:government",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "mitre-campaign"
+    },
+    {
+      "from": "campaign:operation-wocao",
+      "to": "sector:healthcare",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "mitre-campaign"
+    },
+    {
+      "from": "campaign:operation-wocao",
+      "to": "sector:managed-services",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "mitre-campaign"
+    },
+    {
+      "from": "campaign:operation-wocao",
+      "to": "sector:software",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "mitre-campaign"
+    },
+    {
+      "from": "campaign:operation-wocao",
+      "to": "sector:transportation",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "mitre-campaign"
+    },
+    {
+      "from": "campaign:solarwinds-compromise",
+      "to": "adversary:apt29",
+      "relation": "attributed-to",
+      "confidence": "high",
+      "provenance": "mitre-campaign"
+    },
+    {
+      "from": "campaign:solarwinds-compromise",
+      "to": "sector:consulting",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "mitre-campaign"
+    },
+    {
+      "from": "campaign:solarwinds-compromise",
+      "to": "sector:government",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "mitre-campaign"
+    },
+    {
+      "from": "campaign:solarwinds-compromise",
+      "to": "sector:technology",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "mitre-campaign"
+    },
+    {
+      "from": "campaign:solarwinds-compromise",
+      "to": "sector:telecommunications",
+      "relation": "targets-sector",
+      "confidence": "medium",
+      "provenance": "mitre-campaign"
+    },
+    {
+      "from": "cbest",
+      "to": "attack-flow",
+      "relation": "threat-led-scenario-modeling",
+      "confidence": "high",
+      "provenance": "curated-crosswalk",
+      "source_refs": [
+        "cbest",
+        "attack-flow"
+      ]
+    },
+    {
+      "from": "cis-controls",
+      "to": "falco",
+      "relation": "safeguard-to-runtime-detection",
+      "confidence": "medium",
+      "provenance": "curated-crosswalk",
+      "source_refs": [
+        "cis-controls",
+        "falco"
+      ]
+    },
+    {
+      "from": "cis-controls",
+      "to": "suricata",
+      "relation": "safeguard-to-network-detection",
+      "confidence": "medium",
+      "provenance": "curated-crosswalk",
+      "source_refs": [
+        "cis-controls",
+        "suricata"
+      ]
+    },
+    {
+      "from": "cisa-ztmm-2",
+      "to": "nist-sp-800-207",
+      "relation": "maturity-model-to-zero-trust-architecture",
+      "confidence": "high",
+      "provenance": "curated-crosswalk",
+      "source_refs": [
+        "cisa-ztmm-2",
+        "nist-sp-800-207"
+      ]
+    },
+    {
+      "from": "cloudfox",
+      "to": "pacu",
+      "relation": "discovery-to-assessment",
+      "confidence": "medium",
+      "provenance": "curated-crosswalk",
+      "source_refs": [
+        "cloudfox",
+        "pacu"
+      ]
+    },
+    {
+      "from": "cloudfox",
+      "to": "stratus-red-team",
+      "relation": "discovery-to-validation",
+      "confidence": "medium",
+      "provenance": "curated-crosswalk",
+      "source_refs": [
+        "cloudfox",
+        "stratus-red-team"
+      ]
+    },
+    {
+      "from": "crest-tlpt",
+      "to": "attack-flow",
+      "relation": "assurance-to-scenario-modeling",
+      "confidence": "medium",
+      "provenance": "curated-crosswalk",
+      "source_refs": [
+        "crest-tlpt",
+        "attack-flow"
+      ]
+    },
+    {
+      "from": "csa-ccm",
+      "to": "prowler",
+      "relation": "cloud-control-to-assessment",
+      "confidence": "medium",
+      "provenance": "curated-crosswalk",
+      "source_refs": [
+        "csa-ccm",
+        "prowler"
+      ]
+    },
+    {
+      "from": "csa-ccm",
+      "to": "scoutsuite",
+      "relation": "cloud-control-to-assessment",
+      "confidence": "medium",
+      "provenance": "curated-crosswalk",
+      "source_refs": [
+        "csa-ccm",
+        "scoutsuite"
+      ]
+    },
+    {
+      "from": "csa-security-guidance-v5",
+      "to": "csa-ccm",
+      "relation": "cloud-guidance-to-control-matrix",
+      "confidence": "high",
+      "provenance": "curated-crosswalk",
+      "source_refs": [
+        "csa-security-guidance-v5",
+        "csa-ccm"
+      ]
+    },
+    {
+      "from": "cyber-kill-chain",
+      "to": "mitre-attack",
+      "relation": "intrusion-lifecycle-to-behavior-model",
+      "confidence": "medium",
+      "provenance": "curated-crosswalk",
+      "source_refs": [
+        "cyber-kill-chain",
+        "mitre-attack"
+      ]
+    },
+    {
+      "from": "detection:det-account-discovery",
+      "to": "technique:T1087",
+      "relation": "detects-behavior",
+      "confidence": "high",
+      "provenance": "redframeworks-detection-intelligence"
+    },
+    {
+      "from": "detection:det-account-manipulation",
+      "to": "technique:T1098",
+      "relation": "detects-behavior",
+      "confidence": "high",
+      "provenance": "redframeworks-detection-intelligence"
+    },
+    {
+      "from": "detection:det-alt-auth-material",
+      "to": "technique:T1550",
+      "relation": "detects-behavior",
+      "confidence": "high",
+      "provenance": "redframeworks-detection-intelligence"
+    },
+    {
+      "from": "detection:det-command-scripting",
+      "to": "technique:T1059",
+      "relation": "detects-behavior",
+      "confidence": "high",
+      "provenance": "redframeworks-detection-intelligence"
+    },
+    {
+      "from": "detection:det-credential-access",
+      "to": "technique:T1003",
+      "relation": "detects-behavior",
+      "confidence": "high",
+      "provenance": "redframeworks-detection-intelligence"
+    },
+    {
+      "from": "detection:det-external-remote-services",
+      "to": "technique:T1133",
+      "relation": "detects-behavior",
+      "confidence": "high",
+      "provenance": "redframeworks-detection-intelligence"
+    },
+    {
+      "from": "detection:det-password-guessing",
+      "to": "technique:T1110",
+      "relation": "detects-behavior",
+      "confidence": "high",
+      "provenance": "redframeworks-detection-intelligence"
+    },
+    {
+      "from": "detection:det-phishing",
+      "to": "technique:T1566",
+      "relation": "detects-behavior",
+      "confidence": "high",
+      "provenance": "redframeworks-detection-intelligence"
+    },
+    {
+      "from": "detection:det-public-facing-app",
+      "to": "technique:T1190",
+      "relation": "detects-behavior",
+      "confidence": "high",
+      "provenance": "redframeworks-detection-intelligence"
+    },
+    {
+      "from": "detection:det-remote-services",
+      "to": "technique:T1021",
+      "relation": "detects-behavior",
+      "confidence": "high",
+      "provenance": "redframeworks-detection-intelligence"
+    },
+    {
+      "from": "detection:det-supply-chain",
+      "to": "technique:T1195",
+      "relation": "detects-behavior",
+      "confidence": "high",
+      "provenance": "redframeworks-detection-intelligence"
+    },
+    {
+      "from": "detection:det-valid-accounts",
+      "to": "technique:T1078",
+      "relation": "detects-behavior",
+      "confidence": "high",
+      "provenance": "redframeworks-detection-intelligence"
+    },
+    {
+      "from": "etsi-en-303-645",
+      "to": "owasp-isvs",
+      "relation": "consumer-iot-to-iot-verification",
+      "confidence": "medium",
+      "provenance": "curated-crosswalk",
+      "source_refs": [
+        "etsi-en-303-645",
+        "owasp-isvs"
+      ]
+    },
+    {
+      "from": "first-csirt-services",
+      "to": "nist-sp-800-61-r3",
+      "relation": "csirt-services-to-incident-response",
+      "confidence": "high",
+      "provenance": "curated-crosswalk",
+      "source_refs": [
+        "first-csirt-services",
+        "nist-sp-800-61-r3"
+      ]
+    },
+    {
+      "from": "first-cvss",
+      "to": "first-epss",
+      "relation": "severity-to-exploitation-likelihood-context",
+      "confidence": "medium",
+      "provenance": "curated-crosswalk",
+      "source_refs": [
+        "first-cvss",
+        "first-epss"
+      ]
+    },
+    {
+      "from": "first-tlp-2",
+      "to": "oasis-stix-2-1",
+      "relation": "sharing-marking-to-cti-exchange",
+      "confidence": "high",
+      "provenance": "curated-crosswalk",
+      "source_refs": [
+        "first-tlp-2",
+        "oasis-stix-2-1"
+      ]
+    },
+    {
+      "from": "infection-monkey",
+      "to": "mitre-attack",
+      "relation": "emulation-to-behavior",
+      "confidence": "high",
+      "provenance": "curated-crosswalk",
+      "source_refs": [
+        "infection-monkey",
+        "mitre-attack"
+      ]
+    },
+    {
+      "from": "iso-iec-27001-2022",
+      "to": "iso-iec-27005-2022",
+      "relation": "isms-to-risk-management",
+      "confidence": "high",
+      "provenance": "curated-crosswalk",
+      "source_refs": [
+        "iso-iec-27001-2022",
+        "iso-iec-27005-2022"
+      ]
+    },
+    {
+      "from": "iso-iec-27001-2022",
+      "to": "nist-csf-2",
+      "relation": "isms-to-cyber-risk-framework",
+      "confidence": "medium",
+      "provenance": "curated-crosswalk",
+      "source_refs": [
+        "iso-iec-27001-2022",
+        "nist-csf-2"
+      ]
+    },
+    {
+      "from": "kubehound",
+      "to": "stratus-red-team",
+      "relation": "attack-path-to-validation",
+      "confidence": "medium",
+      "provenance": "curated-crosswalk",
+      "source_refs": [
+        "kubehound",
+        "stratus-red-team"
+      ]
+    },
+    {
+      "from": "microburst",
+      "to": "stormspotter",
+      "relation": "azure-assessment-to-graph-context",
+      "confidence": "medium",
+      "provenance": "curated-crosswalk",
+      "source_refs": [
+        "microburst",
+        "stormspotter"
+      ]
+    },
+    {
+      "from": "misp-galaxy",
+      "to": "mitre-attack",
+      "relation": "threat-actor-context-to-behavior-model",
+      "confidence": "high",
+      "provenance": "curated-crosswalk",
+      "source_refs": [
+        "misp-galaxy",
+        "mitre-attack"
+      ]
+    },
+    {
+      "from": "misp-galaxy",
+      "to": "oasis-stix-2-1",
+      "relation": "knowledge-model-to-cti-representation",
+      "confidence": "medium",
+      "provenance": "curated-crosswalk",
+      "source_refs": [
+        "misp-galaxy",
+        "oasis-stix-2-1"
+      ]
+    },
+    {
+      "from": "mitre-atlas",
+      "to": "ai-surface:agent",
+      "relation": "models-ai-security-surface",
+      "confidence": "medium",
+      "provenance": "redframeworks-ai-taxonomy"
+    },
+    {
+      "from": "mitre-atlas",
+      "to": "ai-surface:connector",
+      "relation": "models-ai-security-surface",
+      "confidence": "medium",
+      "provenance": "redframeworks-ai-taxonomy"
+    },
+    {
+      "from": "mitre-atlas",
+      "to": "ai-surface:dataset",
+      "relation": "models-ai-security-surface",
+      "confidence": "medium",
+      "provenance": "redframeworks-ai-taxonomy"
+    },
+    {
+      "from": "mitre-atlas",
+      "to": "ai-surface:identity",
+      "relation": "models-ai-security-surface",
+      "confidence": "medium",
+      "provenance": "redframeworks-ai-taxonomy"
+    },
+    {
+      "from": "mitre-atlas",
+      "to": "ai-surface:mcp",
+      "relation": "models-ai-security-surface",
+      "confidence": "medium",
+      "provenance": "redframeworks-ai-taxonomy"
+    },
+    {
+      "from": "mitre-atlas",
+      "to": "ai-surface:model",
+      "relation": "models-ai-security-surface",
+      "confidence": "medium",
+      "provenance": "redframeworks-ai-taxonomy"
+    },
+    {
+      "from": "mitre-atlas",
+      "to": "ai-surface:pipeline",
+      "relation": "models-ai-security-surface",
+      "confidence": "medium",
+      "provenance": "redframeworks-ai-taxonomy"
+    },
+    {
+      "from": "mitre-atlas",
+      "to": "ai-surface:telemetry",
+      "relation": "models-ai-security-surface",
+      "confidence": "medium",
+      "provenance": "redframeworks-ai-taxonomy"
+    },
+    {
+      "from": "mitre-atlas",
+      "to": "ai-surface:vector-store",
+      "relation": "models-ai-security-surface",
+      "confidence": "medium",
+      "provenance": "redframeworks-ai-taxonomy"
+    },
+    {
+      "from": "mitre-atlas",
+      "to": "garak",
+      "relation": "ai-threat-model-to-evaluation",
+      "confidence": "high",
+      "provenance": "curated-crosswalk",
+      "source_refs": [
+        "mitre-atlas",
+        "garak"
+      ]
+    },
+    {
+      "from": "mitre-atlas",
+      "to": "nist-ai-rmf-genai",
+      "relation": "ai-threat-model-to-risk-governance",
+      "confidence": "medium",
+      "provenance": "curated-crosswalk",
+      "source_refs": [
+        "mitre-atlas",
+        "nist-ai-rmf-genai"
+      ]
+    },
+    {
+      "from": "mitre-atlas",
+      "to": "owasp-genai",
+      "relation": "ai-threat-model-to-application-risk",
+      "confidence": "medium",
+      "provenance": "curated-crosswalk",
+      "source_refs": [
+        "mitre-atlas",
+        "owasp-genai"
+      ]
+    },
+    {
+      "from": "mitre-atlas",
+      "to": "pyrit",
+      "relation": "ai-threat-model-to-assessment",
+      "confidence": "high",
+      "provenance": "curated-crosswalk",
+      "source_refs": [
+        "mitre-atlas",
+        "pyrit"
+      ]
+    },
+    {
+      "from": "mitre-attack",
+      "to": "atomic-red-team",
+      "relation": "behavior-to-validation",
+      "confidence": "high",
+      "provenance": "curated-crosswalk",
+      "source_refs": [
+        "mitre-attack",
+        "atomic-red-team"
+      ]
+    },
+    {
+      "from": "mitre-attack",
+      "to": "attack-flow",
+      "relation": "behavior-to-sequencing",
+      "confidence": "high",
+      "provenance": "curated-crosswalk",
+      "source_refs": [
+        "mitre-attack",
+        "attack-flow"
+      ]
+    },
+    {
+      "from": "mitre-attack",
+      "to": "ctid-adversary-emulation",
+      "relation": "behavior-to-emulation-plan",
+      "confidence": "high",
+      "provenance": "curated-crosswalk",
+      "source_refs": [
+        "mitre-attack",
+        "ctid-adversary-emulation"
+      ]
+    },
+    {
+      "from": "mitre-attack",
+      "to": "mitre-atlas",
+      "relation": "enterprise-to-ai-context-bridge",
+      "confidence": "medium",
+      "provenance": "curated-crosswalk",
+      "source_refs": [
+        "mitre-attack",
+        "mitre-atlas"
+      ]
+    },
+    {
+      "from": "mitre-attack",
+      "to": "mitre-caldera",
+      "relation": "behavior-to-emulation",
+      "confidence": "high",
+      "provenance": "curated-crosswalk",
+      "source_refs": [
+        "mitre-attack",
+        "mitre-caldera"
+      ]
+    },
+    {
+      "from": "mitre-attack",
+      "to": "mitre-d3fend",
+      "relation": "behavior-to-countermeasure",
+      "confidence": "high",
+      "provenance": "curated-crosswalk",
+      "source_refs": [
+        "mitre-attack",
+        "mitre-d3fend"
+      ]
+    },
+    {
+      "from": "mitre-attack",
+      "to": "oasis-stix-2-1",
+      "relation": "behavior-model-to-cti-representation",
+      "confidence": "high",
+      "provenance": "curated-crosswalk",
+      "source_refs": [
+        "mitre-attack",
+        "oasis-stix-2-1"
+      ]
+    },
+    {
+      "from": "mitre-attack",
+      "to": "sigma",
+      "relation": "behavior-to-detection",
+      "confidence": "high",
+      "provenance": "curated-crosswalk",
+      "source_refs": [
+        "mitre-attack",
+        "sigma"
+      ]
+    },
+    {
+      "from": "mitre-attack",
+      "to": "ttpforge",
+      "relation": "behavior-to-simulation",
+      "confidence": "high",
+      "provenance": "curated-crosswalk",
+      "source_refs": [
+        "mitre-attack",
+        "ttpforge"
+      ]
+    },
+    {
+      "from": "mitre-attack",
+      "to": "vectr",
+      "relation": "behavior-to-measurement",
+      "confidence": "high",
+      "provenance": "curated-crosswalk",
+      "source_refs": [
+        "mitre-attack",
+        "vectr"
+      ]
+    },
+    {
+      "from": "mitre-capec",
+      "to": "mitre-attack",
+      "relation": "attack-pattern-to-behavior",
+      "confidence": "high",
+      "provenance": "curated-crosswalk",
+      "source_refs": [
+        "mitre-capec",
+        "mitre-attack"
+      ]
+    },
+    {
+      "from": "mitre-car",
+      "to": "osquery",
+      "relation": "analytics-to-endpoint-telemetry",
+      "confidence": "medium",
+      "provenance": "curated-crosswalk",
+      "source_refs": [
+        "mitre-car",
+        "osquery"
+      ]
+    },
+    {
+      "from": "mitre-car",
+      "to": "zeek",
+      "relation": "analytics-to-network-telemetry",
+      "confidence": "medium",
+      "provenance": "curated-crosswalk",
+      "source_refs": [
+        "mitre-car",
+        "zeek"
+      ]
+    },
+    {
+      "from": "mitre-cwe",
+      "to": "semgrep",
+      "relation": "weakness-model-to-static-analysis",
+      "confidence": "medium",
+      "provenance": "curated-crosswalk",
+      "source_refs": [
+        "mitre-cwe",
+        "semgrep"
+      ]
+    },
+    {
+      "from": "mitre-d3fend",
+      "to": "sigma",
+      "relation": "countermeasure-to-detection-context",
+      "confidence": "medium",
+      "provenance": "curated-crosswalk",
+      "source_refs": [
+        "mitre-d3fend",
+        "sigma"
+      ]
+    },
+    {
+      "from": "mobsf",
+      "to": "frida",
+      "relation": "static-dynamic-to-instrumentation",
+      "confidence": "medium",
+      "provenance": "curated-crosswalk",
+      "source_refs": [
+        "mobsf",
+        "frida"
+      ]
+    },
+    {
+      "from": "nist-csf-2",
+      "to": "mitre-attack",
+      "relation": "risk-framework-to-threat-behavior-context",
+      "confidence": "medium",
+      "provenance": "curated-crosswalk",
+      "source_refs": [
+        "nist-csf-2",
+        "mitre-attack"
+      ]
+    },
+    {
+      "from": "nist-sp-800-160-v2-r1",
+      "to": "cisa-cpg",
+      "relation": "resilience-engineering-to-security-outcomes",
+      "confidence": "medium",
+      "provenance": "curated-crosswalk",
+      "source_refs": [
+        "nist-sp-800-160-v2-r1",
+        "cisa-cpg"
+      ]
+    },
+    {
+      "from": "nist-sp-800-161-r1",
+      "to": "nist-ssdf",
+      "relation": "supply-chain-risk-to-secure-development",
+      "confidence": "high",
+      "provenance": "curated-crosswalk",
+      "source_refs": [
+        "nist-sp-800-161-r1",
+        "nist-ssdf"
+      ]
+    },
+    {
+      "from": "nist-sp-800-161-r1",
+      "to": "slsa",
+      "relation": "supply-chain-risk-to-build-provenance",
+      "confidence": "medium",
+      "provenance": "curated-crosswalk",
+      "source_refs": [
+        "nist-sp-800-161-r1",
+        "slsa"
+      ]
+    },
+    {
+      "from": "nist-sp-800-190",
+      "to": "kube-bench",
+      "relation": "container-guidance-to-kubernetes-benchmark",
+      "confidence": "medium",
+      "provenance": "curated-crosswalk",
+      "source_refs": [
+        "nist-sp-800-190",
+        "kube-bench"
+      ]
+    },
+    {
+      "from": "nist-sp-800-190",
+      "to": "trivy",
+      "relation": "container-guidance-to-workload-assessment",
+      "confidence": "medium",
+      "provenance": "curated-crosswalk",
+      "source_refs": [
+        "nist-sp-800-190",
+        "trivy"
+      ]
+    },
+    {
+      "from": "nist-sp-800-207",
+      "to": "bloodhound",
+      "relation": "zero-trust-to-identity-attack-path-analysis",
+      "confidence": "medium",
+      "provenance": "curated-crosswalk",
+      "source_refs": [
+        "nist-sp-800-207",
+        "bloodhound"
+      ]
+    },
+    {
+      "from": "nist-sp-800-63-4",
+      "to": "bloodhound",
+      "relation": "identity-assurance-to-attack-path-context",
+      "confidence": "medium",
+      "provenance": "curated-crosswalk",
+      "source_refs": [
+        "nist-sp-800-63-4",
+        "bloodhound"
+      ]
+    },
+    {
+      "from": "nist-sp-800-63-4",
+      "to": "nist-sp-800-207",
+      "relation": "digital-identity-to-zero-trust",
+      "confidence": "high",
+      "provenance": "curated-crosswalk",
+      "source_refs": [
+        "nist-sp-800-63-4",
+        "nist-sp-800-207"
+      ]
+    },
+    {
+      "from": "nist-ssdf",
+      "to": "semgrep",
+      "relation": "secure-development-to-static-analysis",
+      "confidence": "medium",
+      "provenance": "curated-crosswalk",
+      "source_refs": [
+        "nist-ssdf",
+        "semgrep"
+      ]
+    },
+    {
+      "from": "nist-ssdf",
+      "to": "slsa",
+      "relation": "secure-development-to-supply-chain-assurance",
+      "confidence": "medium",
+      "provenance": "curated-crosswalk",
+      "source_refs": [
+        "nist-ssdf",
+        "slsa"
+      ]
+    },
+    {
+      "from": "oasis-cacao-2",
+      "to": "mitre-d3fend",
+      "relation": "playbook-to-defensive-action-context",
+      "confidence": "medium",
+      "provenance": "curated-crosswalk",
+      "source_refs": [
+        "oasis-cacao-2",
+        "mitre-d3fend"
+      ]
+    },
+    {
+      "from": "oasis-cacao-2",
+      "to": "nist-sp-800-61-r3",
+      "relation": "playbook-to-incident-response",
+      "confidence": "high",
+      "provenance": "curated-crosswalk",
+      "source_refs": [
+        "oasis-cacao-2",
+        "nist-sp-800-61-r3"
+      ]
+    },
+    {
+      "from": "oasis-csaf-2",
+      "to": "ssvc",
+      "relation": "security-advisory-to-response-prioritization",
+      "confidence": "medium",
+      "provenance": "curated-crosswalk",
+      "source_refs": [
+        "oasis-csaf-2",
+        "ssvc"
+      ]
+    },
+    {
+      "from": "oasis-stix-2-1",
+      "to": "oasis-taxii-2-1",
+      "relation": "intelligence-model-to-transport",
+      "confidence": "high",
+      "provenance": "curated-crosswalk",
+      "source_refs": [
+        "oasis-stix-2-1",
+        "oasis-taxii-2-1"
+      ]
+    },
+    {
+      "from": "ocsf",
+      "to": "osquery",
+      "relation": "schema-to-endpoint-telemetry",
+      "confidence": "medium",
+      "provenance": "curated-crosswalk",
+      "source_refs": [
+        "ocsf",
+        "osquery"
+      ]
+    },
+    {
+      "from": "ocsf",
+      "to": "zeek",
+      "relation": "schema-to-network-telemetry",
+      "confidence": "medium",
+      "provenance": "curated-crosswalk",
+      "source_refs": [
+        "ocsf",
+        "zeek"
+      ]
+    },
+    {
+      "from": "openaev",
+      "to": "mitre-attack",
+      "relation": "validation-to-behavior",
+      "confidence": "high",
+      "provenance": "curated-crosswalk",
+      "source_refs": [
+        "openaev",
+        "mitre-attack"
+      ]
+    },
+    {
+      "from": "openaev",
+      "to": "vectr",
+      "relation": "validation-to-measurement",
+      "confidence": "medium",
+      "provenance": "curated-crosswalk",
+      "source_refs": [
+        "openaev",
+        "vectr"
+      ]
+    },
+    {
+      "from": "openssf-osps-baseline",
+      "to": "openssf-scorecard",
+      "relation": "project-baseline-to-repository-assessment",
+      "confidence": "high",
+      "provenance": "curated-crosswalk",
+      "source_refs": [
+        "openssf-osps-baseline",
+        "openssf-scorecard"
+      ]
+    },
+    {
+      "from": "openssf-osps-baseline",
+      "to": "slsa",
+      "relation": "project-baseline-to-supply-chain-assurance",
+      "confidence": "medium",
+      "provenance": "curated-crosswalk",
+      "source_refs": [
+        "openssf-osps-baseline",
+        "slsa"
+      ]
+    },
+    {
+      "from": "openssf-scorecard",
+      "to": "checkov",
+      "relation": "project-posture-to-iac-assessment",
+      "confidence": "medium",
+      "provenance": "curated-crosswalk",
+      "source_refs": [
+        "openssf-scorecard",
+        "checkov"
+      ]
+    },
+    {
+      "from": "owasp-api-top10",
+      "to": "burp-suite",
+      "relation": "risk-model-to-assessment-platform",
+      "confidence": "high",
+      "provenance": "curated-crosswalk",
+      "source_refs": [
+        "owasp-api-top10",
+        "burp-suite"
+      ]
+    },
+    {
+      "from": "owasp-api-top10",
+      "to": "owasp-zap",
+      "relation": "risk-model-to-assessment-platform",
+      "confidence": "high",
+      "provenance": "curated-crosswalk",
+      "source_refs": [
+        "owasp-api-top10",
+        "owasp-zap"
+      ]
+    },
+    {
+      "from": "owasp-asvs",
+      "to": "burp-suite",
+      "relation": "standard-to-assessment-platform",
+      "confidence": "high",
+      "provenance": "curated-crosswalk",
+      "source_refs": [
+        "owasp-asvs",
+        "burp-suite"
+      ]
+    },
+    {
+      "from": "owasp-asvs",
+      "to": "owasp-zap",
+      "relation": "standard-to-assessment-platform",
+      "confidence": "high",
+      "provenance": "curated-crosswalk",
+      "source_refs": [
+        "owasp-asvs",
+        "owasp-zap"
+      ]
+    },
+    {
+      "from": "owasp-genai",
+      "to": "pyrit",
+      "relation": "application-risk-to-assessment",
+      "confidence": "medium",
+      "provenance": "curated-crosswalk",
+      "source_refs": [
+        "owasp-genai",
+        "pyrit"
+      ]
+    },
+    {
+      "from": "owasp-iot-istg",
+      "to": "expliot",
+      "relation": "testing-guide-to-assessment-framework",
+      "confidence": "medium",
+      "provenance": "curated-crosswalk",
+      "source_refs": [
+        "owasp-iot-istg",
+        "expliot"
+      ]
+    },
+    {
+      "from": "owasp-iot-istg",
+      "to": "routersploit",
+      "relation": "testing-guide-to-embedded-assessment",
+      "confidence": "medium",
+      "provenance": "curated-crosswalk",
+      "source_refs": [
+        "owasp-iot-istg",
+        "routersploit"
+      ]
+    },
+    {
+      "from": "owasp-isvs",
+      "to": "owasp-iot-istg",
+      "relation": "verification-standard-to-testing-guide",
+      "confidence": "high",
+      "provenance": "curated-crosswalk",
+      "source_refs": [
+        "owasp-isvs",
+        "owasp-iot-istg"
+      ]
+    },
+    {
+      "from": "owasp-mastg",
+      "to": "mobsf",
+      "relation": "testing-guide-to-assessment-platform",
+      "confidence": "medium",
+      "provenance": "curated-crosswalk",
+      "source_refs": [
+        "owasp-mastg",
+        "mobsf"
+      ]
+    },
+    {
+      "from": "owasp-masvs",
+      "to": "owasp-mastg",
+      "relation": "verification-standard-to-testing-guide",
+      "confidence": "high",
+      "provenance": "curated-crosswalk",
+      "source_refs": [
+        "owasp-masvs",
+        "owasp-mastg"
+      ]
+    },
+    {
+      "from": "owasp-samm",
+      "to": "nist-ssdf",
+      "relation": "maturity-model-to-secure-development",
+      "confidence": "medium",
+      "provenance": "curated-crosswalk",
+      "source_refs": [
+        "owasp-samm",
+        "nist-ssdf"
+      ]
+    },
+    {
+      "from": "owasp-scvs",
+      "to": "nist-ssdf",
+      "relation": "component-verification-to-secure-development",
+      "confidence": "high",
+      "provenance": "curated-crosswalk",
+      "source_refs": [
+        "owasp-scvs",
+        "nist-ssdf"
+      ]
+    },
+    {
+      "from": "owasp-top10-2025",
+      "to": "owasp-asvs",
+      "relation": "risk-awareness-to-verification-standard",
+      "confidence": "high",
+      "provenance": "curated-crosswalk",
+      "source_refs": [
+        "owasp-top10-2025",
+        "owasp-asvs"
+      ]
+    },
+    {
+      "from": "pack:ai-genai",
+      "to": "detection:det-supply-chain",
+      "relation": "includes-detection",
+      "confidence": "high",
+      "provenance": "domain-pack"
+    },
+    {
+      "from": "pack:ai-genai",
+      "to": "detection:det-valid-accounts",
+      "relation": "includes-detection",
+      "confidence": "high",
+      "provenance": "domain-pack"
+    },
+    {
+      "from": "pack:ai-genai",
+      "to": "mitre-atlas",
+      "relation": "includes",
+      "confidence": "high",
+      "provenance": "domain-pack"
+    },
+    {
+      "from": "pack:ai-genai",
+      "to": "nist-ai-rmf-genai",
+      "relation": "includes",
+      "confidence": "high",
+      "provenance": "domain-pack"
+    },
+    {
+      "from": "pack:ai-genai",
+      "to": "owasp-genai",
+      "relation": "includes",
+      "confidence": "high",
+      "provenance": "domain-pack"
+    },
+    {
+      "from": "pack:cloud",
+      "to": "adversary:apt29",
+      "relation": "prioritizes-adversary",
+      "confidence": "medium",
+      "provenance": "domain-pack"
+    },
+    {
+      "from": "pack:cloud",
+      "to": "adversary:apt41",
+      "relation": "prioritizes-adversary",
+      "confidence": "medium",
+      "provenance": "domain-pack"
+    },
+    {
+      "from": "pack:cloud",
+      "to": "adversary:scattered-spider",
+      "relation": "prioritizes-adversary",
+      "confidence": "medium",
+      "provenance": "domain-pack"
+    },
+    {
+      "from": "pack:cloud",
+      "to": "cisa-cpg",
+      "relation": "includes",
+      "confidence": "high",
+      "provenance": "domain-pack"
+    },
+    {
+      "from": "pack:cloud",
+      "to": "cloudfox",
+      "relation": "includes",
+      "confidence": "high",
+      "provenance": "domain-pack"
+    },
+    {
+      "from": "pack:cloud",
+      "to": "detection:det-account-manipulation",
+      "relation": "includes-detection",
+      "confidence": "high",
+      "provenance": "domain-pack"
+    },
+    {
+      "from": "pack:cloud",
+      "to": "detection:det-alt-auth-material",
+      "relation": "includes-detection",
+      "confidence": "high",
+      "provenance": "domain-pack"
+    },
+    {
+      "from": "pack:cloud",
+      "to": "detection:det-external-remote-services",
+      "relation": "includes-detection",
+      "confidence": "high",
+      "provenance": "domain-pack"
+    },
+    {
+      "from": "pack:cloud",
+      "to": "detection:det-valid-accounts",
+      "relation": "includes-detection",
+      "confidence": "high",
+      "provenance": "domain-pack"
+    },
+    {
+      "from": "pack:cloud",
+      "to": "mitre-attack",
+      "relation": "includes",
+      "confidence": "high",
+      "provenance": "domain-pack"
+    },
+    {
+      "from": "pack:cloud",
+      "to": "nist-sp-800-207",
+      "relation": "includes",
+      "confidence": "high",
+      "provenance": "domain-pack"
+    },
+    {
+      "from": "pack:cloud",
+      "to": "prowler",
+      "relation": "includes",
+      "confidence": "high",
+      "provenance": "domain-pack"
+    },
+    {
+      "from": "pack:cloud",
+      "to": "roadtools",
+      "relation": "includes",
+      "confidence": "high",
+      "provenance": "domain-pack"
+    },
+    {
+      "from": "pack:cloud",
+      "to": "scoutsuite",
+      "relation": "includes",
+      "confidence": "high",
+      "provenance": "domain-pack"
+    },
+    {
+      "from": "pack:ics-ot",
+      "to": "adversary:sandworm",
+      "relation": "prioritizes-adversary",
+      "confidence": "medium",
+      "provenance": "domain-pack"
+    },
+    {
+      "from": "pack:ics-ot",
+      "to": "adversary:volt-typhoon",
+      "relation": "prioritizes-adversary",
+      "confidence": "medium",
+      "provenance": "domain-pack"
+    },
+    {
+      "from": "pack:ics-ot",
+      "to": "cisa-cpg",
+      "relation": "includes",
+      "confidence": "high",
+      "provenance": "domain-pack"
+    },
+    {
+      "from": "pack:ics-ot",
+      "to": "detection:det-external-remote-services",
+      "relation": "includes-detection",
+      "confidence": "high",
+      "provenance": "domain-pack"
+    },
+    {
+      "from": "pack:ics-ot",
+      "to": "detection:det-remote-services",
+      "relation": "includes-detection",
+      "confidence": "high",
+      "provenance": "domain-pack"
+    },
+    {
+      "from": "pack:ics-ot",
+      "to": "detection:det-valid-accounts",
+      "relation": "includes-detection",
+      "confidence": "high",
+      "provenance": "domain-pack"
+    },
+    {
+      "from": "pack:ics-ot",
+      "to": "mitre-attack",
+      "relation": "includes",
+      "confidence": "high",
+      "provenance": "domain-pack"
+    },
+    {
+      "from": "pack:ics-ot",
+      "to": "nist-sp-800-160-v2-r1",
+      "relation": "includes",
+      "confidence": "high",
+      "provenance": "domain-pack"
+    },
+    {
+      "from": "pack:identity",
+      "to": "adversary:apt29",
+      "relation": "prioritizes-adversary",
+      "confidence": "medium",
+      "provenance": "domain-pack"
+    },
+    {
+      "from": "pack:identity",
+      "to": "adversary:scattered-spider",
+      "relation": "prioritizes-adversary",
+      "confidence": "medium",
+      "provenance": "domain-pack"
+    },
+    {
+      "from": "pack:identity",
+      "to": "adversary:volt-typhoon",
+      "relation": "prioritizes-adversary",
+      "confidence": "medium",
+      "provenance": "domain-pack"
+    },
+    {
+      "from": "pack:identity",
+      "to": "bloodhound",
+      "relation": "includes",
+      "confidence": "high",
+      "provenance": "domain-pack"
+    },
+    {
+      "from": "pack:identity",
+      "to": "cisa-ztmm-2",
+      "relation": "includes",
+      "confidence": "high",
+      "provenance": "domain-pack"
+    },
+    {
+      "from": "pack:identity",
+      "to": "detection:det-account-discovery",
+      "relation": "includes-detection",
+      "confidence": "high",
+      "provenance": "domain-pack"
+    },
+    {
+      "from": "pack:identity",
+      "to": "detection:det-account-manipulation",
+      "relation": "includes-detection",
+      "confidence": "high",
+      "provenance": "domain-pack"
+    },
+    {
+      "from": "pack:identity",
+      "to": "detection:det-alt-auth-material",
+      "relation": "includes-detection",
+      "confidence": "high",
+      "provenance": "domain-pack"
+    },
+    {
+      "from": "pack:identity",
+      "to": "detection:det-password-guessing",
+      "relation": "includes-detection",
+      "confidence": "high",
+      "provenance": "domain-pack"
+    },
+    {
+      "from": "pack:identity",
+      "to": "detection:det-valid-accounts",
+      "relation": "includes-detection",
+      "confidence": "high",
+      "provenance": "domain-pack"
+    },
+    {
+      "from": "pack:identity",
+      "to": "mitre-attack",
+      "relation": "includes",
+      "confidence": "high",
+      "provenance": "domain-pack"
+    },
+    {
+      "from": "pack:identity",
+      "to": "nist-sp-800-207",
+      "relation": "includes",
+      "confidence": "high",
+      "provenance": "domain-pack"
+    },
+    {
+      "from": "pack:identity",
+      "to": "roadtools",
+      "relation": "includes",
+      "confidence": "high",
+      "provenance": "domain-pack"
+    },
+    {
+      "from": "pack:iot-embedded",
+      "to": "detection:det-public-facing-app",
+      "relation": "includes-detection",
+      "confidence": "high",
+      "provenance": "domain-pack"
+    },
+    {
+      "from": "pack:iot-embedded",
+      "to": "detection:det-valid-accounts",
+      "relation": "includes-detection",
+      "confidence": "high",
+      "provenance": "domain-pack"
+    },
+    {
+      "from": "pack:iot-embedded",
+      "to": "etsi-en-303-645",
+      "relation": "includes",
+      "confidence": "high",
+      "provenance": "domain-pack"
+    },
+    {
+      "from": "pack:iot-embedded",
+      "to": "expliot",
+      "relation": "includes",
+      "confidence": "high",
+      "provenance": "domain-pack"
+    },
+    {
+      "from": "pack:iot-embedded",
+      "to": "owasp-iot-istg",
+      "relation": "includes",
+      "confidence": "high",
+      "provenance": "domain-pack"
+    },
+    {
+      "from": "pack:iot-embedded",
+      "to": "owasp-isvs",
+      "relation": "includes",
+      "confidence": "high",
+      "provenance": "domain-pack"
+    },
+    {
+      "from": "pack:purple-detection",
+      "to": "adversary:apt28",
+      "relation": "prioritizes-adversary",
+      "confidence": "medium",
+      "provenance": "domain-pack"
+    },
+    {
+      "from": "pack:purple-detection",
+      "to": "adversary:apt29",
+      "relation": "prioritizes-adversary",
+      "confidence": "medium",
+      "provenance": "domain-pack"
+    },
+    {
+      "from": "pack:purple-detection",
+      "to": "adversary:apt41",
+      "relation": "prioritizes-adversary",
+      "confidence": "medium",
+      "provenance": "domain-pack"
+    },
+    {
+      "from": "pack:purple-detection",
+      "to": "adversary:lazarus",
+      "relation": "prioritizes-adversary",
+      "confidence": "medium",
+      "provenance": "domain-pack"
+    },
+    {
+      "from": "pack:purple-detection",
+      "to": "adversary:sandworm",
+      "relation": "prioritizes-adversary",
+      "confidence": "medium",
+      "provenance": "domain-pack"
+    },
+    {
+      "from": "pack:purple-detection",
+      "to": "detection:det-command-scripting",
+      "relation": "includes-detection",
+      "confidence": "high",
+      "provenance": "domain-pack"
+    },
+    {
+      "from": "pack:purple-detection",
+      "to": "detection:det-credential-access",
+      "relation": "includes-detection",
+      "confidence": "high",
+      "provenance": "domain-pack"
+    },
+    {
+      "from": "pack:purple-detection",
+      "to": "detection:det-remote-services",
+      "relation": "includes-detection",
+      "confidence": "high",
+      "provenance": "domain-pack"
+    },
+    {
+      "from": "pack:purple-detection",
+      "to": "detection:det-valid-accounts",
+      "relation": "includes-detection",
+      "confidence": "high",
+      "provenance": "domain-pack"
+    },
+    {
+      "from": "pack:purple-detection",
+      "to": "falco",
+      "relation": "includes",
+      "confidence": "high",
+      "provenance": "domain-pack"
+    },
+    {
+      "from": "pack:purple-detection",
+      "to": "mitre-attack",
+      "relation": "includes",
+      "confidence": "high",
+      "provenance": "domain-pack"
+    },
+    {
+      "from": "pack:purple-detection",
+      "to": "mitre-d3fend",
+      "relation": "includes",
+      "confidence": "high",
+      "provenance": "domain-pack"
+    },
+    {
+      "from": "pack:purple-detection",
+      "to": "osquery",
+      "relation": "includes",
+      "confidence": "high",
+      "provenance": "domain-pack"
+    },
+    {
+      "from": "pack:purple-detection",
+      "to": "sigma",
+      "relation": "includes",
+      "confidence": "high",
+      "provenance": "domain-pack"
+    },
+    {
+      "from": "pack:purple-detection",
+      "to": "splunk-attack-range",
+      "relation": "includes",
+      "confidence": "high",
+      "provenance": "domain-pack"
+    },
+    {
+      "from": "pack:purple-detection",
+      "to": "suricata",
+      "relation": "includes",
+      "confidence": "high",
+      "provenance": "domain-pack"
+    },
+    {
+      "from": "pack:purple-detection",
+      "to": "vectr",
+      "relation": "includes",
+      "confidence": "high",
+      "provenance": "domain-pack"
+    },
+    {
+      "from": "pack:purple-detection",
+      "to": "velociraptor",
+      "relation": "includes",
+      "confidence": "high",
+      "provenance": "domain-pack"
+    },
+    {
+      "from": "pack:purple-detection",
+      "to": "zeek",
+      "relation": "includes",
+      "confidence": "high",
+      "provenance": "domain-pack"
+    },
+    {
+      "from": "pack:supply-chain",
+      "to": "adversary:apt29",
+      "relation": "prioritizes-adversary",
+      "confidence": "medium",
+      "provenance": "domain-pack"
+    },
+    {
+      "from": "pack:supply-chain",
+      "to": "adversary:lazarus",
+      "relation": "prioritizes-adversary",
+      "confidence": "medium",
+      "provenance": "domain-pack"
+    },
+    {
+      "from": "pack:supply-chain",
+      "to": "checkov",
+      "relation": "includes",
+      "confidence": "high",
+      "provenance": "domain-pack"
+    },
+    {
+      "from": "pack:supply-chain",
+      "to": "detection:det-supply-chain",
+      "relation": "includes-detection",
+      "confidence": "high",
+      "provenance": "domain-pack"
+    },
+    {
+      "from": "pack:supply-chain",
+      "to": "detection:det-valid-accounts",
+      "relation": "includes-detection",
+      "confidence": "high",
+      "provenance": "domain-pack"
+    },
+    {
+      "from": "pack:supply-chain",
+      "to": "nist-ssdf",
+      "relation": "includes",
+      "confidence": "high",
+      "provenance": "domain-pack"
+    },
+    {
+      "from": "pack:supply-chain",
+      "to": "openssf-osps-baseline",
+      "relation": "includes",
+      "confidence": "high",
+      "provenance": "domain-pack"
+    },
+    {
+      "from": "pack:supply-chain",
+      "to": "openssf-scorecard",
+      "relation": "includes",
+      "confidence": "high",
+      "provenance": "domain-pack"
+    },
+    {
+      "from": "pack:supply-chain",
+      "to": "slsa",
+      "relation": "includes",
+      "confidence": "high",
+      "provenance": "domain-pack"
+    },
+    {
+      "from": "pack:supply-chain",
+      "to": "trivy",
+      "relation": "includes",
+      "confidence": "high",
+      "provenance": "domain-pack"
+    },
+    {
+      "from": "pack:web-api",
+      "to": "adversary:apt41",
+      "relation": "prioritizes-adversary",
+      "confidence": "medium",
+      "provenance": "domain-pack"
+    },
+    {
+      "from": "pack:web-api",
+      "to": "adversary:oilrig",
+      "relation": "prioritizes-adversary",
+      "confidence": "medium",
+      "provenance": "domain-pack"
+    },
+    {
+      "from": "pack:web-api",
+      "to": "burp-suite",
+      "relation": "includes",
+      "confidence": "high",
+      "provenance": "domain-pack"
+    },
+    {
+      "from": "pack:web-api",
+      "to": "detection:det-public-facing-app",
+      "relation": "includes-detection",
+      "confidence": "high",
+      "provenance": "domain-pack"
+    },
+    {
+      "from": "pack:web-api",
+      "to": "detection:det-valid-accounts",
+      "relation": "includes-detection",
+      "confidence": "high",
+      "provenance": "domain-pack"
+    },
+    {
+      "from": "pack:web-api",
+      "to": "owasp-api-top10",
+      "relation": "includes",
+      "confidence": "high",
+      "provenance": "domain-pack"
+    },
+    {
+      "from": "pack:web-api",
+      "to": "owasp-asvs",
+      "relation": "includes",
+      "confidence": "high",
+      "provenance": "domain-pack"
+    },
+    {
+      "from": "pack:web-api",
+      "to": "owasp-top10-2025",
+      "relation": "includes",
+      "confidence": "high",
+      "provenance": "domain-pack"
+    },
+    {
+      "from": "pack:web-api",
+      "to": "owasp-wstg",
+      "relation": "includes",
+      "confidence": "high",
+      "provenance": "domain-pack"
+    },
+    {
+      "from": "pack:web-api",
+      "to": "owasp-zap",
+      "relation": "includes",
+      "confidence": "high",
+      "provenance": "domain-pack"
+    },
+    {
+      "from": "plan:ctid-apt29",
+      "to": "adversary:apt29",
+      "relation": "models-adversary",
+      "confidence": "high",
+      "provenance": "authoritative-emulation-plan"
+    },
+    {
+      "from": "plan:ctid-fin7",
+      "to": "adversary:fin7",
+      "relation": "models-adversary",
+      "confidence": "high",
+      "provenance": "authoritative-emulation-plan"
+    },
+    {
+      "from": "plan:ctid-ocean-lotus",
+      "to": "adversary:apt32",
+      "relation": "models-adversary",
+      "confidence": "high",
+      "provenance": "authoritative-emulation-plan"
+    },
+    {
+      "from": "plan:ctid-oilrig",
+      "to": "adversary:oilrig",
+      "relation": "models-adversary",
+      "confidence": "high",
+      "provenance": "authoritative-emulation-plan"
+    },
+    {
+      "from": "plan:ctid-sandworm",
+      "to": "adversary:sandworm",
+      "relation": "models-adversary",
+      "confidence": "high",
+      "provenance": "authoritative-emulation-plan"
+    },
+    {
+      "from": "plan:ctid-turla",
+      "to": "adversary:turla",
+      "relation": "models-adversary",
+      "confidence": "high",
+      "provenance": "authoritative-emulation-plan"
+    },
+    {
+      "from": "plan:ctid-wizard-spider",
+      "to": "adversary:wizard-spider",
+      "relation": "models-adversary",
+      "confidence": "high",
+      "provenance": "authoritative-emulation-plan"
+    },
+    {
+      "from": "plan:mitre-apt3",
+      "to": "adversary:apt3",
+      "relation": "models-adversary",
+      "confidence": "high",
+      "provenance": "authoritative-emulation-plan"
+    },
+    {
+      "from": "realm",
+      "to": "mitre-attack",
+      "relation": "emulation-to-behavior",
+      "confidence": "high",
+      "provenance": "curated-crosswalk",
+      "source_refs": [
+        "realm",
+        "mitre-attack"
+      ]
+    },
+    {
+      "from": "sigma",
+      "to": "velociraptor",
+      "relation": "detection-to-investigation",
+      "confidence": "medium",
+      "provenance": "curated-crosswalk",
+      "source_refs": [
+        "sigma",
+        "velociraptor"
+      ]
+    },
+    {
+      "from": "slsa",
+      "to": "openssf-scorecard",
+      "relation": "supply-chain-assurance-to-project-posture",
+      "confidence": "medium",
+      "provenance": "curated-crosswalk",
+      "source_refs": [
+        "slsa",
+        "openssf-scorecard"
+      ]
+    },
+    {
+      "from": "slsa",
+      "to": "trivy",
+      "relation": "supply-chain-assurance-to-artifact-assessment",
+      "confidence": "medium",
+      "provenance": "curated-crosswalk",
+      "source_refs": [
+        "slsa",
+        "trivy"
+      ]
+    },
+    {
+      "from": "ssvc",
+      "to": "first-cvss",
+      "relation": "decision-prioritization-to-severity-context",
+      "confidence": "medium",
+      "provenance": "curated-crosswalk",
+      "source_refs": [
+        "ssvc",
+        "first-cvss"
+      ]
+    },
+    {
+      "from": "ssvc",
+      "to": "first-epss",
+      "relation": "decision-prioritization-to-exploitation-likelihood",
+      "confidence": "medium",
+      "provenance": "curated-crosswalk",
+      "source_refs": [
+        "ssvc",
+        "first-epss"
+      ]
+    },
+    {
+      "from": "tiber-eu",
+      "to": "attack-flow",
+      "relation": "threat-led-scenario-modeling",
+      "confidence": "high",
+      "provenance": "curated-crosswalk",
+      "source_refs": [
+        "tiber-eu",
+        "attack-flow"
+      ]
+    },
+    {
+      "from": "tiber-eu",
+      "to": "ctid-adversary-emulation",
+      "relation": "threat-led-to-emulation-planning",
+      "confidence": "medium",
+      "provenance": "curated-crosswalk",
+      "source_refs": [
+        "tiber-eu",
+        "ctid-adversary-emulation"
+      ]
+    },
+    {
+      "from": "veris",
+      "to": "nist-sp-800-61-r3",
+      "relation": "incident-data-to-response-governance",
+      "confidence": "medium",
+      "provenance": "curated-crosswalk",
+      "source_refs": [
+        "veris",
+        "nist-sp-800-61-r3"
+      ]
+    }
+  ]
+}

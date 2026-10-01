@@ -1,0 +1,238 @@
+{
+  "updated": "2026-09-30",
+  "schema_version": "1.0",
+  "packs": [
+    {
+      "id": "identity",
+      "name": "Identity & Access",
+      "description": "Identity, authentication, privilege, attack-path and zero-trust analysis.",
+      "frameworks": [
+        "mitre-attack",
+        "nist-sp-800-207",
+        "cisa-ztmm-2"
+      ],
+      "tools": [
+        "bloodhound",
+        "roadtools"
+      ],
+      "adversaries": [
+        "apt29",
+        "scattered-spider",
+        "volt-typhoon"
+      ],
+      "detections": [
+        "det-valid-accounts",
+        "det-account-discovery",
+        "det-password-guessing",
+        "det-alt-auth-material",
+        "det-account-manipulation"
+      ],
+      "outcomes": [
+        "identity telemetry",
+        "privilege visibility",
+        "authentication assurance",
+        "retest evidence"
+      ]
+    },
+    {
+      "id": "cloud",
+      "name": "Cloud & Multi-Cloud",
+      "description": "Cloud posture, identity, control-plane visibility and attack-path validation.",
+      "frameworks": [
+        "mitre-attack",
+        "nist-sp-800-207",
+        "cisa-cpg"
+      ],
+      "tools": [
+        "cloudfox",
+        "prowler",
+        "scoutsuite",
+        "roadtools"
+      ],
+      "adversaries": [
+        "apt29",
+        "apt41",
+        "scattered-spider"
+      ],
+      "detections": [
+        "det-valid-accounts",
+        "det-alt-auth-material",
+        "det-account-manipulation",
+        "det-external-remote-services"
+      ],
+      "outcomes": [
+        "cloud audit",
+        "identity context",
+        "control-plane monitoring",
+        "evidence"
+      ]
+    },
+    {
+      "id": "ai-genai",
+      "name": "AI / GenAI Security",
+      "description": "AI systems, models, agents, connectors, identity, data and supply-chain risk.",
+      "frameworks": [
+        "mitre-atlas",
+        "owasp-genai",
+        "nist-ai-rmf-genai"
+      ],
+      "tools": [],
+      "adversaries": [],
+      "detections": [
+        "det-valid-accounts",
+        "det-supply-chain"
+      ],
+      "outcomes": [
+        "model inventory",
+        "agent identity",
+        "connector governance",
+        "AI supply-chain evidence"
+      ]
+    },
+    {
+      "id": "web-api",
+      "name": "Web & API",
+      "description": "Application verification, API risk, web telemetry and secure design.",
+      "frameworks": [
+        "owasp-wstg",
+        "owasp-asvs",
+        "owasp-api-top10",
+        "owasp-top10-2025"
+      ],
+      "tools": [
+        "burp-suite",
+        "owasp-zap"
+      ],
+      "adversaries": [
+        "apt41",
+        "oilrig"
+      ],
+      "detections": [
+        "det-public-facing-app",
+        "det-valid-accounts"
+      ],
+      "outcomes": [
+        "application telemetry",
+        "control validation",
+        "remediation evidence"
+      ]
+    },
+    {
+      "id": "supply-chain",
+      "name": "Software Supply Chain",
+      "description": "Build provenance, dependencies, secure development and artifact integrity.",
+      "frameworks": [
+        "nist-ssdf",
+        "slsa",
+        "openssf-scorecard",
+        "openssf-osps-baseline"
+      ],
+      "tools": [
+        "checkov",
+        "trivy"
+      ],
+      "adversaries": [
+        "apt29",
+        "lazarus"
+      ],
+      "detections": [
+        "det-supply-chain",
+        "det-valid-accounts"
+      ],
+      "outcomes": [
+        "build provenance",
+        "artifact integrity",
+        "dependency visibility",
+        "rebuild evidence"
+      ]
+    },
+    {
+      "id": "purple-detection",
+      "name": "Purple Team & Detection",
+      "description": "Threat-informed validation, telemetry, analytics and evidence engineering.",
+      "frameworks": [
+        "mitre-attack",
+        "mitre-d3fend"
+      ],
+      "tools": [
+        "vectr",
+        "splunk-attack-range",
+        "sigma",
+        "velociraptor",
+        "osquery",
+        "zeek",
+        "suricata",
+        "falco"
+      ],
+      "adversaries": [
+        "apt28",
+        "apt29",
+        "apt41",
+        "sandworm",
+        "lazarus"
+      ],
+      "detections": [
+        "det-valid-accounts",
+        "det-command-scripting",
+        "det-remote-services",
+        "det-credential-access"
+      ],
+      "outcomes": [
+        "telemetry coverage",
+        "detection coverage",
+        "analyst response",
+        "retest evidence"
+      ]
+    },
+    {
+      "id": "ics-ot",
+      "name": "ICS / OT",
+      "description": "Industrial resilience, segmentation, monitoring and controlled validation.",
+      "frameworks": [
+        "mitre-attack",
+        "nist-sp-800-160-v2-r1",
+        "cisa-cpg"
+      ],
+      "tools": [],
+      "adversaries": [
+        "sandworm",
+        "volt-typhoon"
+      ],
+      "detections": [
+        "det-valid-accounts",
+        "det-external-remote-services",
+        "det-remote-services"
+      ],
+      "outcomes": [
+        "asset visibility",
+        "network segmentation",
+        "resilience",
+        "recovery evidence"
+      ]
+    },
+    {
+      "id": "iot-embedded",
+      "name": "IoT & Embedded",
+      "description": "Product-security verification, device visibility and embedded-system assurance.",
+      "frameworks": [
+        "owasp-iot-istg",
+        "owasp-isvs",
+        "etsi-en-303-645"
+      ],
+      "tools": [
+        "expliot"
+      ],
+      "adversaries": [],
+      "detections": [
+        "det-public-facing-app",
+        "det-valid-accounts"
+      ],
+      "outcomes": [
+        "device inventory",
+        "firmware assurance",
+        "network visibility",
+        "evidence"
+      ]
+    }
+  ]
+}
