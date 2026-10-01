@@ -99,19 +99,37 @@ RedFrameworks v5 is the **OffSec Intelligence Portal** release.
 
 ## Platform v6 — collaborative intelligence
 
+### v6.0 · complete
+
+- [x] Knowledge Graph 3.0 generated across frameworks, tools, adversaries, campaigns, techniques, detections, sectors, plans and domain packs
+- [x] Campaign Intelligence
+- [x] Detection Intelligence
+- [x] Verification Engine 2.0 with review SLAs
+- [x] proposal-only continuous ATT&CK discovery
+- [x] RAG-ready research corpus
+- [x] Shadow AI security surface taxonomy
+- [x] initial domain packs
+- [x] defensive Adversary Validation Planner
+- [x] Visual Intelligence dashboard
+- [x] API v4
+- [x] Python / TypeScript v4 clients
+- [x] canonical APT Ecosystem Index
+
+### v6.1+ · next refinements
+
 ### Knowledge expansion
 
-- [ ] larger technique-level ATT&CK / ATLAS knowledge graph
-- [ ] richer D3FEND and detection-source mappings
+- [x] larger multi-domain generated knowledge graph
+- [x] richer defensive telemetry and detection mappings
 - [ ] public framework version-diff viewer
-- [ ] contributor-curated domain packs
+- [x] contributor-curated domain-pack foundation
 
 ### Research operations
 
 - [ ] external-source evidence attachments
 - [ ] reviewer assignment and promotion SLA
-- [ ] confidence history per catalog entity
-- [ ] provenance change notifications
+- [x] transparent confidence dimensions; historical release snapshots remain the next persistence step
+- [x] scheduled CTI discovery issues; richer provenance notifications remain a refinement
 
 ### Interoperability
 

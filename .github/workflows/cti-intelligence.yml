@@ -1,0 +1,48 @@
+name: Continuous CTI intelligence
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "23 9 * * 2,5"
+permissions:
+  contents: read
+  issues: write
+jobs:
+  discover:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.13"
+      - name: Install dependency
+        run: python -m pip install --disable-pip-version-check PyYAML
+      - name: Discover ATT&CK group and campaign deltas
+        run: python scripts/collect_attack_delta.py --json cti-delta.json --report cti-delta.md
+      - name: Upload review artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: cti-delta
+          path: |
+            cti-delta.json
+            cti-delta.md
+      - name: Create review issue when candidates exist
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          COUNT=$(python - <<'PY'
+          import json
+          d=json.load(open("cti-delta.json"))
+          print(len(d["new_groups"])+len(d["new_campaigns"]))
+          PY
+          )
+          if [ "$COUNT" -eq 0 ]; then
+            echo "No new ATT&CK entities."
+            exit 0
+          fi
+          EXISTING=$(gh issue list --state open --search '"CTI discovery delta" in:title' --json number --jq 'length')
+          if [ "$EXISTING" -gt 0 ]; then
+            echo "An open CTI discovery issue already exists."
+            exit 0
+          fi
+          gh issue create --title "CTI discovery delta: human review required" --body-file cti-delta.md

@@ -1,0 +1,92 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ridd1kulusc0d3r.github.io/RedFrameworks/schemas/detection-intelligence.schema.json",
+  "title": "RedFrameworks detection intelligence",
+  "type": "object",
+  "required": [
+    "updated",
+    "schema_version",
+    "policy",
+    "detections"
+  ],
+  "properties": {
+    "updated": {
+      "type": "string",
+      "format": "date"
+    },
+    "schema_version": {
+      "type": "string"
+    },
+    "policy": {
+      "type": "string"
+    },
+    "detections": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "attack_id",
+          "name",
+          "telemetry",
+          "analytics",
+          "evidence",
+          "defensive_actions",
+          "source",
+          "source_tier"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z0-9][a-z0-9-]*$"
+          },
+          "attack_id": {
+            "type": "string",
+            "pattern": "^T[0-9]{4}$"
+          },
+          "name": {
+            "type": "string"
+          },
+          "telemetry": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "analytics": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "evidence": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "defensive_actions": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "source": {
+            "type": "string",
+            "format": "uri"
+          },
+          "source_tier": {
+            "enum": [
+              "A",
+              "B",
+              "C",
+              "D"
+            ]
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

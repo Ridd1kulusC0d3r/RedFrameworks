@@ -37,6 +37,8 @@ jobs:
           node --check site/app.js
           node --check site/detail.js
           node --check site/graph/graph.js
+          node --check site/planner/planner.js
+          node --check site/intelligence/intelligence.js
       - name: Validate canonical data and cross references
         run: |
           python scripts/validate_data.py
@@ -45,6 +47,10 @@ jobs:
         run: |
           python scripts/aggregate_scorecards.py --output-dir generated-metrics
           python scripts/build_verification_queue.py --json verification-queue.json --report verification-queue.md
+          python scripts/build_verification_v2.py --health upstream-health.json --output generated-metrics/verification-v2.json
+          python scripts/build_knowledge_graph.py --output generated-metrics/knowledge-graph-v3.json
+          python scripts/build_visual_intelligence.py --output generated-metrics/visual-intelligence.json
+          python scripts/build_research_corpus.py --output generated-metrics/research-corpus.jsonl
           python scripts/snapshot_catalog.py --version ci --output _snapshots/ci.json
       - name: Validate interoperability exports
         run: |
@@ -52,9 +58,9 @@ jobs:
           python scripts/export_neo4j.py --output-dir _exports-test/neo4j
           python scripts/export_navigator.py --output _exports-test/attack-navigator.json
           python scripts/export_misp.py --output _exports-test/misp.json
-      - name: Build OffSec portal and API v3
+      - name: Build intelligence portal and API v4
         run: python scripts/build_site.py --output _site-test
-      - name: Validate generated API v3
+      - name: Validate generated API v3/v4
         run: |
           python -m json.tool _site-test/api/version.json >/dev/null
           python -m json.tool _site-test/api/v3/index.json >/dev/null
@@ -66,12 +72,25 @@ jobs:
           python -m json.tool _site-test/api/v3/adversaries.json >/dev/null
           python -m json.tool _site-test/api/v3/intelligence-sources.json >/dev/null
           python -m json.tool _site-test/api/v3/emulation-plans.json >/dev/null
+          python -m json.tool _site-test/api/v4/index.json >/dev/null
+          python -m json.tool _site-test/api/v4/campaigns.json >/dev/null
+          python -m json.tool _site-test/api/v4/detections.json >/dev/null
+          python -m json.tool _site-test/api/v4/domain-packs.json >/dev/null
+          python -m json.tool _site-test/api/v4/ai-security-surface.json >/dev/null
+          python -m json.tool _site-test/api/v4/knowledge-graph.json >/dev/null
+          python -m json.tool _site-test/api/v4/verification-v2.json >/dev/null
+          python -m json.tool _site-test/api/v4/visual-intelligence.json >/dev/null
+          test -s _site-test/api/v4/research-corpus.jsonl
+          test -s _site-test/data/research-corpus.jsonl
           python - <<'PY'
           import json
           from jsonschema import Draft202012Validator
           index=json.load(open("_site-test/api/v3/index.json"))
           schema=json.load(open("schemas/api-v3-index.schema.json"))
           Draft202012Validator(schema).validate(index)
+          v4=json.load(open("_site-test/api/v4/index.json"))
+          v4_schema=json.load(open("schemas/api-v4-index.schema.json"))
+          Draft202012Validator(v4_schema).validate(v4)
           item_schema=json.load(open("schemas/api-v3-item.schema.json"))
           validator=Draft202012Validator(item_schema)
           for item in json.load(open("_site-test/api/v3/catalog.json")):
@@ -89,6 +108,9 @@ jobs:
           test -f _pages-root-test/detail.html
           test -f _pages-root-test/detail.js
           test -f _pages-root-test/graph/index.html
+          test -f _pages-root-test/planner/index.html
+          test -f _pages-root-test/intelligence/index.html
+          test -f _pages-root-test/api/v4/index.json
           test -f _pages-root-test/.nojekyll
           test -f _pages-root-test/api/v3/index.json
           test -f _pages-root-test/data/catalog.json

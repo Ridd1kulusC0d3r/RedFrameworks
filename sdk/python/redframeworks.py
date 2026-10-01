@@ -4,7 +4,7 @@ import json
 from urllib.request import urlopen
 
 class RedFrameworks:
-    def __init__(self, base="https://ridd1kulusc0d3r.github.io/RedFrameworks/api/v3"):
+    def __init__(self, base="https://ridd1kulusc0d3r.github.io/RedFrameworks/api/v4"):
         self.base = base.rstrip("/")
 
     def get(self, endpoint):
@@ -25,3 +25,21 @@ class RedFrameworks:
 
     def techniques(self):
         return self.get("techniques.json")
+
+    def adversaries(self):
+        return self.get("adversaries.json")
+
+    def campaigns(self):
+        return self.get("campaigns.json")
+
+    def detections(self):
+        return self.get("detections.json")
+
+    def domain_packs(self):
+        return self.get("domain-packs.json")
+
+    def knowledge_graph(self):
+        return self.get("knowledge-graph.json")
+
+    def verification_v2(self):
+        return self.get("verification-v2.json")

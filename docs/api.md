@@ -1,65 +1,60 @@
-# Static API v3
+# Static API v4
 
-RedFrameworks v5 publishes a read-only API generated from the canonical repository data.
+RedFrameworks v6 publishes a read-only static API generated from canonical repository data.
 
 Base:
 
 `https://ridd1kulusc0d3r.github.io/RedFrameworks/`
-
-## Discovery
-
-`/api/version.json` describes the current contract, supported versions, counts and v3 endpoints.
 
 ## Version contract
 
 | Version | Status | Scope |
 |---|---|---|
 | v1 | compatibility | catalog + relationships |
-| v2 | compatibility | provenance + continuous intelligence |
-| v3 | current | ecosystem portal, resources, learning paths, research and technique intelligence |
+| v2 | compatibility | provenance + continuous-intelligence foundations |
+| v3 | compatibility | resources, adversaries, learning paths and technique intelligence |
+| v4 | **current** | campaigns, detections, domain packs, Knowledge Graph 3.0, Verification 2.0 and research corpus |
 
-## v3 endpoints
+## v4 endpoints
 
 | Endpoint | Purpose |
 |---|---|
-| `/api/v3/index.json` | API discovery and object counts |
-| `/api/v3/catalog.json` | normalized frameworks and tools |
-| `/api/v3/frameworks.json` | canonical frameworks dataset |
-| `/api/v3/relationships.json` | graph edges with confidence and provenance |
-| `/api/v3/not-verified.json` | visible research candidates |
-| `/api/v3/resources.json` | books and certifications |
-| `/api/v3/learning-paths.json` | objective-driven learning paths |
-| `/api/v3/verification-queue.json` | NOT VERIFIED promotion-readiness signals |
-| `/api/v3/techniques.json` | ATT&CK technique intelligence derived from validation examples |
-| `/api/v3/adversaries.json` | source-attributed adversary intelligence profiles |
-| `/api/v3/intelligence-sources.json` | CTI research and corroboration source library |
-| `/api/v3/emulation-plans.json` | defensive metadata for MITRE / CTID adversary emulation plans |
-| `/api/v3/standards.json` | standards/version intelligence |
-| `/api/v3/successors.json` | renames, successors and deprecations |
-| `/api/v3/ai-crosswalk.json` | conceptual AI security crosswalk |
-| `/api/v3/attack-d3fend.json` | selected ATT&CK ↔ D3FEND defensive context |
-| `/api/v3/lifecycle.json` | lifecycle events |
-| `/api/v3/changelog.json` | machine-readable platform changes |
-| `/api/v3/releases/` | release manifests |
+| `/api/v4/index.json` | API discovery |
+| `/api/v4/catalog.json` | normalized frameworks and tools |
+| `/api/v4/frameworks.json` | framework / standard dataset |
+| `/api/v4/relationships.json` | curated framework/tool graph edges |
+| `/api/v4/adversaries.json` | adversary profiles |
+| `/api/v4/campaigns.json` | MITRE campaign intelligence |
+| `/api/v4/detections.json` | defensive telemetry and detection intelligence |
+| `/api/v4/emulation-plans.json` | authoritative plan metadata |
+| `/api/v4/domain-packs.json` | domain intelligence packs |
+| `/api/v4/ai-security-surface.json` | Shadow AI / AI system surface taxonomy |
+| `/api/v4/knowledge-graph.json` | generated Knowledge Graph 3.0 |
+| `/api/v4/verification-v2.json` | Verification Engine 2.0 output |
+| `/api/v4/visual-intelligence.json` | sector/adversary and campaign visual data |
+| `/api/v4/research-corpus.jsonl` | RAG-ready canonical research records |
+| `/api/v4/resources.json` | books and certifications |
+| `/api/v4/learning-paths.json` | learning paths |
+| `/api/v4/techniques.json` | technique intelligence |
+| `/api/v4/intelligence-sources.json` | CTI source library |
 
-## Interoperability exports
+## Public applications
 
-Pages also publishes:
+- `/graph/` — full-screen graph explorer
+- `/planner/` — defensive adversary validation planner
+- `/intelligence/` — visual adversary/campaign intelligence
+- `/detail.html` — portable entity detail view
 
-- STIX 2.1;
-- OpenCTI import manifest;
-- Neo4j nodes and relationships;
-- ATT&CK Navigator layer;
-- non-IOC MISP reference event;
-- reproducible catalog snapshot.
-
-Dedicated adversary profile pages are published under `/adversary/<id>/`.
-
-## Client examples
+## Clients
 
 - `sdk/python/redframeworks.py`
 - `sdk/typescript/redframeworks.ts`
-- `examples/consumers/`
+
+Both clients default to API v4.
+
+## Interoperability
+
+RedFrameworks continues to publish STIX 2.1, OpenCTI guidance, Neo4j graph exports, MISP-compatible reference data and ATT&CK Navigator layers.
 
 Stable integration keys are entity IDs, not display names.
 

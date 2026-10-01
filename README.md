@@ -11,14 +11,14 @@
 [![Freshness](https://github.com/Ridd1kulusC0d3r/RedFrameworks/actions/workflows/freshness.yml/badge.svg)](https://github.com/Ridd1kulusC0d3r/RedFrameworks/actions/workflows/freshness.yml)
 [![ATT&CK](https://img.shields.io/badge/knowledge-MITRE%20ATT%26CK-6f42c1)](https://attack.mitre.org/)
 [![STIX 2.1](https://img.shields.io/badge/export-STIX%202.1-blue)](docs/api.md)
-[![API v3](https://img.shields.io/badge/API-v3-7fbcff)](docs/api.md)
-[![Platform v5.2](https://img.shields.io/badge/platform-v5.2-f04f67)](docs/next-evolutions.md)
+[![API v4](https://img.shields.io/badge/API-v4-7fbcff)](docs/api.md)
+[![Platform v6](https://img.shields.io/badge/platform-v6-f04f67)](docs/platform-v6.md)
 [![Adversary Intel](https://img.shields.io/badge/adversaries-42-efbd67)](docs/adversary-intelligence.md)
 
 [**Live Portal**](https://ridd1kulusc0d3r.github.io/RedFrameworks/) ·
 [**Graph Intelligence**](https://ridd1kulusc0d3r.github.io/RedFrameworks/#graph) ·
 [**Adversary Intelligence**](https://ridd1kulusc0d3r.github.io/RedFrameworks/#adversaries) ·
-[**API v3**](docs/api.md) ·
+[**API v4**](docs/api.md) ·
 [**Roadmaps**](docs/roadmaps/README.md)
 
 </div>
@@ -61,7 +61,11 @@ The goal is not to accumulate every repository with the word “security” in i
 | Adversary emulation plan references | **13** |
 | Books | **10** |
 | Certifications | **13** |
-| Static API | **v3** |
+| Static API | **v4** |
+| Campaign Intelligence | **8** |
+| Detection Intelligence mappings | **12** |
+| Domain packs | **8** |
+| AI security surfaces | **9** |
 
 The counts are generated from the current repository state and intentionally distinguish verified material from research candidates.
 
@@ -72,6 +76,27 @@ The counts are generated from the current repository state and intentionally dis
 The current platform also incorporates **11 additional verified standards/frameworks** added in the parallel v5.2 expansion, including OWASP Top 10:2025, NIST SP 800-63-4, NIST SP 800-161 Rev. 1, NIST SP 800-190, CISA Zero Trust Maturity Model 2.0, OpenSSF OSPS Baseline, OWASP SCVS, CSA Security Guidance v5, ETSI EN 303 645 v3.1.3, ISO/IEC 27001:2022 and ISO/IEC 27005:2022.
 
 That expansion also added **20 additional ATT&CK adversary profiles**, a full-screen graph explorer, portable detail pages and **15 curated relationships**. Platform v5.2 combines those additions with Graph Intelligence v2, the adversary-emulation plan library and deterministic Pages publishing.
+
+## Platform v6 · Collaborative Intelligence
+
+RedFrameworks v6 adds a generated multi-domain graph and separates **actor, campaign, behavior, detection, evidence and research confidence** into distinct objects.
+
+New v6 surfaces:
+
+- **Knowledge Graph 3.0** across frameworks, tools, adversaries, campaigns, sectors, techniques, detections, plans and domain packs;
+- **Campaign Intelligence** with ATT&CK campaign IDs, time windows, sectors and defensive focus;
+- **Detection Intelligence** mapping ATT&CK behavior to telemetry, analytics hypotheses and evidence;
+- **Verification Engine 2.0** with transparent confidence dimensions and review SLAs;
+- **Continuous CTI** that discovers ATT&CK deltas but requires human review;
+- **Domain Packs** for identity, cloud, AI/GenAI, web/API, supply chain, purple/detection, ICS/OT and IoT/embedded;
+- **RAG-ready research corpus**;
+- **Adversary Validation Planner**;
+- **Visual Intelligence dashboard**;
+- **API v4 + Python/TypeScript clients**.
+
+See [Platform v6](docs/platform-v6.md) and the [APT Ecosystem Index](docs/apt-ecosystem-index.md).
+
+---
 
 ## Public intelligence portal
 
@@ -93,7 +118,12 @@ The portal is a client-side intelligence application generated from canonical re
 - standards intelligence;
 - measurement, scorecards, evidence maturity and regression tracking;
 - Graph Intelligence v2;
-- API v3;
+- Knowledge Graph 3.0;
+- Campaign & Detection Intelligence;
+- Verification Engine 2.0;
+- Adversary Validation Planner;
+- Visual Intelligence dashboard;
+- API v4;
 - STIX, OpenCTI, Neo4j, MISP and ATT&CK Navigator interoperability.
 
 ---

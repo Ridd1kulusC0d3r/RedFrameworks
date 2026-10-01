@@ -2,6 +2,20 @@
 
 All notable RedFrameworks platform changes are recorded here. Machine-readable changes live in `data/changelog.yaml`.
 
+## 6.0.0 — 2026-09-30
+
+### Collaborative Intelligence
+
+- added Knowledge Graph 3.0 generated from canonical intelligence datasets;
+- added Campaign Intelligence and Detection Intelligence;
+- added Verification Engine 2.0 with transparent confidence dimensions and review SLAs;
+- added proposal-only ATT&CK group/campaign discovery;
+- added eight domain packs and nine AI security surfaces;
+- added RAG-ready research corpus generation;
+- added Adversary Validation Planner and Visual Intelligence dashboard;
+- promoted the static API to v4 and updated Python / TypeScript clients;
+- added a canonical APT Ecosystem Index.
+
 ## 5.2.0 — 2026-09-30
 
 ### Ecosystem expansion
