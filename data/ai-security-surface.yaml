@@ -1,0 +1,13 @@
+updated: "2026-09-30"
+schema_version: "1.0"
+purpose: "Shadow AI and AI-system security inventory taxonomy"
+surfaces:
+  - {id: model, name: "Model", risks: ["unapproved models", "model provenance", "unsafe capability exposure"], evidence: ["model inventory", "provider", "version", "approval state"]}
+  - {id: agent, name: "Agent", risks: ["over-broad authority", "unbounded tool access", "identity ambiguity"], evidence: ["agent owner", "runtime identity", "allowed actions", "audit trail"]}
+  - {id: mcp, name: "MCP / Tool Server", risks: ["untrusted tool exposure", "excessive permissions", "supply-chain drift"], evidence: ["server inventory", "publisher", "permissions", "version"]}
+  - {id: connector, name: "Connector / Plugin", risks: ["data overexposure", "credential misuse", "third-party trust"], evidence: ["connector inventory", "scopes", "owner", "review date"]}
+  - {id: vector-store, name: "Vector Store / Retrieval", risks: ["sensitive-data retrieval", "poisoned context", "cross-tenant exposure"], evidence: ["dataset owner", "classification", "access policy", "ingest provenance"]}
+  - {id: dataset, name: "Training / Evaluation Dataset", risks: ["data provenance", "sensitive content", "poisoning"], evidence: ["source", "license", "classification", "quality checks"]}
+  - {id: identity, name: "Machine Identity", risks: ["shared credentials", "long-lived secrets", "privilege sprawl"], evidence: ["principal", "credential type", "rotation", "privileges"]}
+  - {id: pipeline, name: "AI Supply Chain", risks: ["artifact tampering", "dependency drift", "unverified model assets"], evidence: ["attestation", "hash", "SBOM", "release source"]}
+  - {id: telemetry, name: "AI Telemetry", risks: ["missing auditability", "incomplete prompt/tool traces", "privacy leakage"], evidence: ["request logs", "tool calls", "policy decisions", "retention"]}
