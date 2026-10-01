@@ -129,6 +129,10 @@ def normalize():
     adversary_doc = load_yaml(ROOT / "data/adversaries.yaml") if (ROOT / "data/adversaries.yaml").exists() else {"adversaries": []}
     intelligence_sources_doc = load_yaml(ROOT / "data/intelligence-sources.yaml") if (ROOT / "data/intelligence-sources.yaml").exists() else {"sources": []}
     emulation_plans_doc = load_yaml(ROOT / "data/emulation-plans.yaml") if (ROOT / "data/emulation-plans.yaml").exists() else {"plans": []}
+    campaigns_doc = load_yaml(ROOT / "data/campaigns.yaml") if (ROOT / "data/campaigns.yaml").exists() else {"campaigns": []}
+    detection_doc = load_yaml(ROOT / "data/detection-intelligence.yaml") if (ROOT / "data/detection-intelligence.yaml").exists() else {"detections": []}
+    packs_doc = load_yaml(ROOT / "packs/index.yaml") if (ROOT / "packs/index.yaml").exists() else {"packs": []}
+    ai_surface_doc = load_yaml(ROOT / "data/ai-security-surface.yaml") if (ROOT / "data/ai-security-surface.yaml").exists() else {"surfaces": []}
     standards_doc = load_yaml(ROOT / "data/standards-intelligence.yaml") if (ROOT / "data/standards-intelligence.yaml").exists() else {"standards": []}
     successors_doc = load_yaml(ROOT / "data/successors.yaml") if (ROOT / "data/successors.yaml").exists() else {"transitions": []}
     ai_crosswalk_doc = load_yaml(ROOT / "data/ai-crosswalk.yaml") if (ROOT / "data/ai-crosswalk.yaml").exists() else {"crosswalks": []}
@@ -194,6 +198,10 @@ def normalize():
         str(adversary_doc.get("updated", "")),
         str(intelligence_sources_doc.get("updated", "")),
         str(emulation_plans_doc.get("updated", "")),
+        str(campaigns_doc.get("updated", "")),
+        str(detection_doc.get("updated", "")),
+        str(packs_doc.get("updated", "")),
+        str(ai_surface_doc.get("updated", "")),
     )
     return {
         "generated_from": ["frameworks.yaml", "catalog.yaml", "relationships.yaml", "resources.yaml", "learning-paths.yaml"],
@@ -205,6 +213,10 @@ def normalize():
         "adversaries": adversary_doc,
         "intelligence_sources": intelligence_sources_doc,
         "emulation_plans": emulation_plans_doc,
+        "campaigns": campaigns_doc,
+        "detection_intelligence": detection_doc,
+        "domain_packs": packs_doc,
+        "ai_security_surface": ai_surface_doc,
         "techniques": techniques,
         "_framework_doc": framework_doc,
         "_catalog_doc": catalog_doc,
@@ -328,8 +340,8 @@ def write_json(path, value):
 
 def write_api(output, payload):
     api = output / "api"
-    v1, v2, v3 = api / "v1", api / "v2", api / "v3"
-    for directory in (v1, v2, v3):
+    v1, v2, v3, v4 = api / "v1", api / "v2", api / "v3", api / "v4"
+    for directory in (v1, v2, v3, v4):
         directory.mkdir(parents=True, exist_ok=True)
 
     items = payload["items"]
@@ -358,6 +370,37 @@ def write_api(output, payload):
     write_json(v3 / "emulation-plans.json", payload["emulation_plans"])
     write_json(v3 / "verification-queue.json", verification)
     write_json(v3 / "techniques.json", payload["techniques"])
+
+    # API v4: collaborative intelligence surfaces.
+    for name, value in {
+        "catalog.json": items,
+        "frameworks.json": payload["_framework_doc"],
+        "relationships.json": relationships,
+        "adversaries.json": payload["adversaries"],
+        "campaigns.json": payload["campaigns"],
+        "detections.json": payload["detection_intelligence"],
+        "emulation-plans.json": payload["emulation_plans"],
+        "domain-packs.json": payload["domain_packs"],
+        "ai-security-surface.json": payload["ai_security_surface"],
+        "resources.json": payload["resources"],
+        "learning-paths.json": payload["learning_paths"],
+        "techniques.json": payload["techniques"],
+        "intelligence-sources.json": payload["intelligence_sources"],
+    }.items():
+        write_json(v4 / name, value)
+
+    generated = ROOT / "generated-metrics"
+    for src_name, dst_name in {
+        "knowledge-graph-v3.json": "knowledge-graph.json",
+        "verification-v2.json": "verification-v2.json",
+        "visual-intelligence.json": "visual-intelligence.json",
+    }.items():
+        src = generated / src_name
+        if src.exists():
+            shutil.copy2(src, v4 / dst_name)
+    corpus = generated / "research-corpus.jsonl"
+    if corpus.exists():
+        shutil.copy2(corpus, v4 / "research-corpus.jsonl")
 
     lifecycle_path = ROOT / "data/lifecycle.yaml"
     changelog_path = ROOT / "data/changelog.yaml"
@@ -390,11 +433,15 @@ def write_api(output, payload):
         "not_verified": len(not_verified),
         "relationships": len(relationships),
         "techniques": len(payload["techniques"]),
+        "campaigns": len(payload["campaigns"].get("campaigns", [])),
+        "detections": len(payload["detection_intelligence"].get("detections", [])),
+        "domain_packs": len(payload["domain_packs"].get("packs", [])),
+        "ai_security_surfaces": len(payload["ai_security_surface"].get("surfaces", [])),
     }
     index = {
         "api": "RedFrameworks Static API",
-        "current": "v3",
-        "supported": ["v1", "v2", "v3"],
+        "current": "v4",
+        "supported": ["v1", "v2", "v3", "v4"],
         "updated": payload["updated"],
         "counts": counts,
         "endpoints": {
@@ -412,8 +459,24 @@ def write_api(output, payload):
             "successors": "successors.json",
         },
     }
-    write_json(v3 / "index.json", index)
-    write_json(api / "version.json", index)
+    write_json(v3 / "index.json", {**index, "current": "v3"})
+    v4_index = {
+        **index,
+        "current": "v4",
+        "endpoints": {
+            **index["endpoints"],
+            "campaigns": "campaigns.json",
+            "detections": "detections.json",
+            "domain_packs": "domain-packs.json",
+            "ai_security_surface": "ai-security-surface.json",
+            "knowledge_graph": "knowledge-graph.json",
+            "verification_v2": "verification-v2.json",
+            "visual_intelligence": "visual-intelligence.json",
+            "research_corpus": "research-corpus.jsonl",
+        },
+    }
+    write_json(v4 / "index.json", v4_index)
+    write_json(api / "version.json", v4_index)
 
     for name, value in {
         "catalog.json": items,
@@ -462,6 +525,10 @@ def main():
     write_json(data_dir / "adversaries.json", payload["adversaries"])
     write_json(data_dir / "intelligence-sources.json", payload["intelligence_sources"])
     write_json(data_dir / "emulation-plans.json", payload["emulation_plans"])
+    write_json(data_dir / "campaigns.json", payload["campaigns"])
+    write_json(data_dir / "detection-intelligence.json", payload["detection_intelligence"])
+    write_json(data_dir / "domain-packs.json", payload["domain_packs"])
+    write_json(data_dir / "ai-security-surface.json", payload["ai_security_surface"])
     write_json(data_dir / "techniques.json", payload["techniques"])
     write_json(data_dir / "standards-intelligence.json", private["_standards_doc"])
     write_json(data_dir / "ai-crosswalk.json", private["_ai_crosswalk_doc"])
@@ -471,6 +538,9 @@ def main():
     if metrics_dir.exists():
         for metric_file in metrics_dir.glob("*.json"):
             shutil.copy2(metric_file, data_dir / metric_file.name)
+        corpus = metrics_dir / "research-corpus.jsonl"
+        if corpus.exists():
+            shutil.copy2(corpus, data_dir / corpus.name)
 
     verification_path = ROOT / "verification-queue.json"
     if verification_path.exists():
@@ -502,7 +572,8 @@ def main():
         f"{len(payload['resources'].get('certifications', []))} certifications, "
         f"{len(payload['adversaries'].get('adversaries', []))} adversary profiles, "
         f"{len(payload['emulation_plans'].get('plans', []))} emulation plans, "
-        f"{len(payload['techniques'])} technique pages and API v3 into {output}"
+        f"{len(payload['campaigns'].get('campaigns', []))} campaigns, "
+        f"{len(payload['detection_intelligence'].get('detections', []))} detections and API v4 into {output}"
     )
 
 if __name__ == "__main__":
