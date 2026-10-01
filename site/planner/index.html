@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en" data-theme="dark"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Adversary Validation Planner · RedFrameworks</title>
+<link rel="stylesheet" href="../styles.css"></head>
+<body><main class="entity-main">
+<a class="back-link" href="../">← RedFrameworks</a>
+<section class="entity-hero"><p class="section-kicker">DEFENSIVE PLANNER</p><h1>Adversary Validation Planner</h1>
+<p class="hero-summary">Build a threat-informed validation brief from public actor context, campaigns, domain packs, detection hypotheses and evidence requirements. This planner does not execute techniques.</p></section>
+<section class="entity-panel">
+<div class="planner-controls">
+<label>Adversary<select id="planner-adversary"></select></label>
+<label>Domain pack<select id="planner-pack"></select></label>
+<label>Environment<select id="planner-environment"><option>Enterprise</option><option>Cloud</option><option>Identity</option><option>Web/API</option><option>ICS/OT</option><option>AI/GenAI</option></select></label>
+<button id="planner-build" class="primary-button">Build validation brief</button>
+</div></section>
+<div id="planner-output" class="planner-output"></div>
+<script src="planner.js"></script></main></body></html>
