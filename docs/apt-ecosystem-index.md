@@ -106,8 +106,8 @@ Canonical data: [packs/index.yaml](../packs/index.yaml)
 - [Adversary Intelligence](https://ridd1kulusc0d3r.github.io/RedFrameworks/#adversaries)
 - [Graph Intelligence](https://ridd1kulusc0d3r.github.io/RedFrameworks/#graph)
 - [Full graph explorer](https://ridd1kulusc0d3r.github.io/RedFrameworks/graph/)
-- [Adversary Validation Planner](https://ridd1kulusc0d3r.github.io/RedFrameworks/planner/)
-- [Visual Intelligence](https://ridd1kulusc0d3r.github.io/RedFrameworks/intelligence/)
+- [Adversary Validation Planner](../site/planner/index.html)
+- [Visual Intelligence](../site/intelligence/index.html)
 - [API v4](api.md)
 
 ## 12. Continuous discovery
