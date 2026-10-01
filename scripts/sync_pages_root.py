@@ -38,15 +38,17 @@ def main() -> None:
     target_data.mkdir(parents=True, exist_ok=True)
     generated_names = set()
     if source_data.exists():
-        for src in source_data.glob("*.json"):
-            generated_names.add(src.name)
-            shutil.copy2(src, target_data / src.name)
+        for pattern in ("*.json", "*.jsonl"):
+            for src in source_data.glob(pattern):
+                generated_names.add(src.name)
+                shutil.copy2(src, target_data / src.name)
 
     # Remove stale generated top-level JSON while keeping canonical release manifests under data/releases.
     keep = generated_names
-    for existing in target_data.glob("*.json"):
-        if existing.name not in keep:
-            existing.unlink()
+    for pattern in ("*.json", "*.jsonl"):
+        for existing in target_data.glob(pattern):
+            if existing.name not in keep:
+                existing.unlink()
 
     print(
         f"Synced portal root: {len(ROOT_FILES)} root files, "
