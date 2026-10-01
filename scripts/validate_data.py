@@ -41,6 +41,10 @@ def main():
     adversary_doc = validate_schema("data/adversaries.yaml", "schemas/adversaries.schema.json")
     intelligence_sources_doc = validate_schema("data/intelligence-sources.yaml", "schemas/intelligence-sources.schema.json")
     emulation_plans_doc = validate_schema("data/emulation-plans.yaml", "schemas/emulation-plans.schema.json")
+    campaigns_doc = validate_schema("data/campaigns.yaml", "schemas/campaigns.schema.json")
+    detection_doc = validate_schema("data/detection-intelligence.yaml", "schemas/detection-intelligence.schema.json")
+    packs_doc = validate_schema("packs/index.yaml", "schemas/domain-packs.schema.json")
+    ai_surface_doc = validate_schema("data/ai-security-surface.yaml", "schemas/ai-security-surface.schema.json")
 
     entries = list(framework_doc.get("frameworks", [])) + list(catalog_doc.get("entries", []))
     ids = [entry["id"] for entry in entries]
@@ -106,6 +110,38 @@ def main():
     if len(plan_ids) != len(set(plan_ids)):
         raise SystemExit("Duplicate emulation plan IDs")
 
+    adversary_id_set = set(adversary_ids)
+    campaign_ids = [entry["id"] for entry in campaigns_doc.get("campaigns", [])]
+    campaign_attack_ids = [entry["attack_id"] for entry in campaigns_doc.get("campaigns", [])]
+    if len(campaign_ids) != len(set(campaign_ids)) or len(campaign_attack_ids) != len(set(campaign_attack_ids)):
+        raise SystemExit("Duplicate campaign IDs or ATT&CK campaign IDs")
+    for campaign in campaigns_doc.get("campaigns", []):
+        missing = sorted(set(campaign.get("actor_ids", [])) - adversary_id_set)
+        if missing:
+            raise SystemExit(f"Campaign {campaign['id']} has unknown adversaries: {', '.join(missing)}")
+
+    detection_ids = [entry["id"] for entry in detection_doc.get("detections", [])]
+    if len(detection_ids) != len(set(detection_ids)):
+        raise SystemExit("Duplicate detection IDs")
+    detection_id_set = set(detection_ids)
+
+    pack_ids = [entry["id"] for entry in packs_doc.get("packs", [])]
+    if len(pack_ids) != len(set(pack_ids)):
+        raise SystemExit("Duplicate domain pack IDs")
+    for pack in packs_doc.get("packs", []):
+        missing_fw = sorted(set(pack.get("frameworks", [])) - framework_ids)
+        missing_tools = sorted(set(pack.get("tools", [])) - tool_ids)
+        missing_adv = sorted(set(pack.get("adversaries", [])) - adversary_id_set)
+        missing_det = sorted(set(pack.get("detections", [])) - detection_id_set)
+        missing = {"frameworks": missing_fw, "tools": missing_tools, "adversaries": missing_adv, "detections": missing_det}
+        broken = {key:value for key,value in missing.items() if value}
+        if broken:
+            raise SystemExit(f"Domain pack {pack['id']} has broken references: " + json.dumps(broken))
+
+    surface_ids = [entry["id"] for entry in ai_surface_doc.get("surfaces", [])]
+    if len(surface_ids) != len(set(surface_ids)):
+        raise SystemExit("Duplicate AI security surface IDs")
+
     resource_ids = list(book_ids) + list(cert_ids)
     resource_duplicates = sorted({value for value in resource_ids if resource_ids.count(value) > 1})
     if resource_duplicates:
@@ -158,7 +194,10 @@ def main():
         f"{len(resources_doc.get('books', []))} books, {len(resources_doc.get('certifications', []))} certifications, "
         f"{len(learning_doc.get('paths', []))} learning paths, "
         f"{len(adversary_doc.get('adversaries', []))} adversaries, {len(intelligence_sources_doc.get('sources', []))} CTI sources, "
-        f"{len(emulation_plans_doc.get('plans', []))} emulation plans, {scenario_count} scenarios, {scorecard_count} scorecards"
+        f"{len(emulation_plans_doc.get('plans', []))} emulation plans, "
+        f"{len(campaigns_doc.get('campaigns', []))} campaigns, {len(detection_doc.get('detections', []))} detections, "
+        f"{len(packs_doc.get('packs', []))} domain packs, {len(ai_surface_doc.get('surfaces', []))} AI surfaces, "
+        f"{scenario_count} scenarios, {scorecard_count} scorecards"
     )
 
 if __name__ == "__main__":
