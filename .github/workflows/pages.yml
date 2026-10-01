@@ -51,9 +51,13 @@ jobs:
         run: |
           python scripts/aggregate_scorecards.py --output-dir generated-metrics
           python scripts/build_verification_queue.py --json verification-queue.json --report verification-queue.md
+          python scripts/build_verification_v2.py --health upstream-health.json --output generated-metrics/verification-v2.json
+          python scripts/build_knowledge_graph.py --output generated-metrics/knowledge-graph-v3.json
+          python scripts/build_visual_intelligence.py --output generated-metrics/visual-intelligence.json
+          python scripts/build_research_corpus.py --output generated-metrics/research-corpus.jsonl
           python scripts/check_standards.py --json standards-watch.json --report standards-watch.md
 
-      - name: Build portal and API v3
+      - name: Build portal and API v4
         run: python scripts/build_site.py --output _site
 
       - name: Generate interoperability exports
@@ -74,7 +78,7 @@ jobs:
         run: |
           git config user.name "redframeworks-pages-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add .nojekyll index.html styles.css app.js detail.html detail.js assets api entity technique adversary exports graph data/*.json
+          git add .nojekyll index.html styles.css app.js detail.html detail.js assets api entity technique adversary exports graph planner intelligence data/*.json data/*.jsonl
           if git diff --cached --quiet; then
             echo "Public portal already synchronized."
             exit 0
